@@ -1,0 +1,31 @@
+# O Git ignora os caminhos listados aqui. Ficheiros gerados pela máquina,
+# configuração pessoal do editor e segredos não pertencem ao histórico.
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuração pessoal de editores
+.vscode/
+.idea/
+*.swp
+
+# Compilação de programas em C. O compilador produz estes ficheiros a partir do
+# código: o ficheiro objeto de cada .c e o programa executável já pronto a
+# correr. Não se versionam porque quem clonar o repositório os volta a gerar na
+# sua máquina, e porque um executável compilado num computador pode nem sequer
+# arrancar noutro.
+*.o
+*.out
+# a.out é o nome que o compilador dá ao executável quando não indicamos outro
+a.out
+
+# Cache criada pelo Python ao executar um programa ou ao importar um módulo.
+# Serve para o arranque seguinte ser mais rápido e é sempre recriada.
+__pycache__/
+*.py[cod]
+
+# Segredos: nunca versionar credenciais; versionar apenas o exemplo
+.env
+.env.*
+!.env.example
