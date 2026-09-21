@@ -25,6 +25,10 @@ a.out
 __pycache__/
 *.py[cod]
 
+# Ambiente virtual do Python: cada pessoa cria o seu, e recria-se a partir do código
+.venv/
+venv/
+
 # Segredos: nunca versionar credenciais; versionar apenas o exemplo
 .env
 .env.*
