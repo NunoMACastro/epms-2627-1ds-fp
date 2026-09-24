@@ -29,6 +29,7 @@ cada ficheiro é:
 | Sufixo do nome | O que é |
 | --- | --- |
 | sem sufixo | Os apontamentos da aula, para ler e consultar |
+| `-laboratorio` | Os passos a seguir no computador, com a ferramenta aberta ao lado |
 | `-exercicios` | A ficha de exercícios dessa aula |
 
 O código completo demonstrado na aula fica em `exemplos/`, organizado pelo mesmo
@@ -40,7 +41,9 @@ As resoluções não estão neste repositório. São trabalhadas na aula.
 
 ## Estado atual
 
-Ainda não há materiais publicados. As pastas aparecem à medida que cada aula é
-dada, pela ordem acima.
+Já estão publicados os três primeiros guias de algoritmos, em `01-algoritmos/`.
+O ficheiro [01-algoritmos/README.md](01-algoritmos/README.md) diz o que cada um
+ensina e por que ordem se leem. As outras pastas aparecem à medida que cada aula
+é dada, pela ordem acima.
 
 ![Rodapé](imagens/rodape.png)
