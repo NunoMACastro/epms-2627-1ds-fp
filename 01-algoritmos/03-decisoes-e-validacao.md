@@ -253,7 +253,7 @@ Os erros de decisão concentram-se nas fronteiras. Viste na secção dos operado
 
 Daí a regra para escolher casos de teste numa decisão: para cada fronteira, testar o valor imediatamente abaixo, o próprio valor da fronteira e o valor imediatamente acima. Com números inteiros, os vizinhos são os valores a uma unidade de distância. Para a fronteira do 10, são o 9, o 10 e o 11.
 
-Cada caso apanha erros diferentes. O 9 e o 10 apanham quem trocou `>=` por `>`. O 11 apanha quem escreveu `nota = 10` em vez de `nota >= 10`, porque essa condição acerta no 10 e falha logo a seguir. Nenhum destes erros aparece com 5 ou com 15.
+Cada caso apanha erros diferentes. O 10 apanha quem trocou `>=` por `>`, porque é o único valor em que os dois operadores discordam: o 9 dá negativa com os dois, e por isso sozinho não mostra esse erro. O 9 está nos casos para confirmar o outro lado da fronteira, porque é a nota mais alta que tem de dar negativa. O 11 apanha quem escreveu `nota = 10` em vez de `nota >= 10`, porque essa condição acerta no 10 e falha logo a seguir. O erro do `>` não aparece com 5 nem com 15. O erro do `=` aparece com o 15, que também dá negativa nessa versão, mas o 11 é a nota mais perto da fronteira que o revela.
 
 ## Casos válidos, casos inválidos e validação
 
@@ -524,7 +524,7 @@ Escrever `0 <= nota <= 20` parece-se com a matemática e não funciona nesta con
 
 ### Testar só valores do meio
 
-Todos os erros desta secção têm uma coisa em comum: nenhum aparece se testares só com notas como 5 e 15. Um algoritmo testado apenas no meio das regiões parece sempre certo. Os casos de teste de uma decisão escolhem-se nas fronteiras, e é aí que se encontram os erros.
+Quase todos os erros desta secção têm uma coisa em comum: não aparecem se testares só com notas do meio das regiões, como 5 e 15. A exceção é o igual em vez de maior ou igual, que o 15 também revela, porque essa versão falha todas as positivas menos o 10. Um algoritmo testado apenas no meio das regiões parece quase sempre certo. Os casos de teste de uma decisão escolhem-se nas fronteiras, e é aí que se encontram os erros.
 
 ## Verificar o que aprendeste
 
