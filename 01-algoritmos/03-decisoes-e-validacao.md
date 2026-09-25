@@ -49,13 +49,13 @@ As condições mais simples comparam dois valores. Na convenção desta discipli
 | Operador | Pergunta | Exemplo | Resultado com nota a valer 10 |
 | --- | --- | --- | --- |
 | `=` | é igual a? | `nota = 10` | `verdadeiro` |
-| `<>` | é diferente de? | `nota <> 10` | `falso` |
+| `!=` | é diferente de? | `nota != 10` | `falso` |
 | `<` | é menor do que? | `nota < 10` | `falso` |
 | `<=` | é menor ou igual a? | `nota <= 10` | `verdadeiro` |
 | `>` | é maior do que? | `nota > 10` | `falso` |
 | `>=` | é maior ou igual a? | `nota >= 10` | `verdadeiro` |
 
-Na aula de matemática escreves "menor ou igual" com o sinal ≤, "maior ou igual" com ≥ e "diferente" com ≠. Significam o mesmo. Aqui usam-se `<=`, `>=` e `<>` porque se escrevem com as teclas que existem no teclado, e porque vais encontrar os dois primeiros tal e qual nas linguagens de programação.
+Na aula de matemática escreves "menor ou igual" com o sinal ≤, "maior ou igual" com ≥ e "diferente" com ≠. Significam o mesmo. Aqui usam-se `<=`, `>=` e `!=` porque se escrevem com as teclas que existem no teclado, e porque vais encontrar os três tal e qual nas linguagens de programação desta disciplina, o C e o Python. O `!=` lê-se "diferente de": o ponto de exclamação antes do igual quer dizer "não igual".
 
 Olha com atenção para as linhas de `<` e de `<=`. Com a nota a valer 10, `nota < 10` é falso e `nota <= 10` é verdadeiro. A única diferença entre os dois operadores é o que acontece exatamente no valor 10. Para 9 dão os dois verdadeiro, para 11 dão os dois falso. Guarda esta observação, porque é a razão de ser da secção sobre fronteiras, mais à frente.
 

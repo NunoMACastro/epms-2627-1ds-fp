@@ -221,7 +221,7 @@ A tabela seguinte reúne toda a convenção. As três últimas linhas pertencem 
 | Saída | `ESCREVER`, seguido de texto e variáveis separados por vírgulas | `ESCREVER "Horas: ", horas` |
 | Aritmética | `+`, `-`, `*`, `/`, `DIV`, `RESTO`, parênteses | `(a + b) / 2` |
 | Função predefinida | nome em maiúsculas e valor entre parênteses | `ABS(a - b)` |
-| Comparações | `=`, `<>`, `<`, `<=`, `>`, `>=` | `nota >= 10` |
+| Comparações | `=`, `!=`, `<`, `<=`, `>`, `>=` | `nota >= 10` |
 | Operadores lógicos | `E`, `OU`, `NÃO` | `nota < 0 OU nota > 20` |
 | Seleção | `SE` condição `ENTÃO`, `SENÃO SE` condição `ENTÃO`, `SENÃO`, `FIM SE` | ver o guia seguinte |
 
