@@ -13,8 +13,8 @@ percurso e continua com o assunto, para que se perceba pelo nome o que lá está
 
 ```text
 01-algoritmos/     UC00245    resolver problemas antes de escrever código
-02-c/              UC00606    programação estruturada em C
-03-python/         UC00618    aplicações em Python 3
+02-python/         UC00618    aplicações em Python 3
+03-c/              UC00606    programação estruturada em C
 avaliacoes/                   enunciados de avaliação, publicados na altura própria
 exemplos/                     programas completos demonstrados nas aulas
 laboratorios/                 código de partida dos laboratórios
@@ -22,8 +22,8 @@ imagens/                      cabeçalho e rodapé dos documentos
 ```
 
 Por exemplo, a sexta aula de C tem o ficheiro
-`02-c/06-arrays-e-percursos-seguros.md`. Ao lado dele, quando houver ficha,
-aparece `02-c/06-arrays-e-percursos-seguros-exercicios.md`. Os nomes dizem o que
+`03-c/06-arrays-e-percursos-seguros.md`. Ao lado dele, quando houver ficha,
+aparece `03-c/06-arrays-e-percursos-seguros-exercicios.md`. Os nomes dizem o que
 cada ficheiro é:
 
 | Sufixo do nome | O que é |
