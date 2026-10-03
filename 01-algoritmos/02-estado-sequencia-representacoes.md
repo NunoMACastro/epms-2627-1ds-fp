@@ -10,14 +10,14 @@
 
 ## O que vais aprender
 
-No guia anterior escreveste passos em português, numerados. Funcionou, mas o português deixa passar ambiguidades sem dar sinal. Neste guia vais aprender a escrever algoritmos de duas formas mais rigorosas, o pseudocódigo e o fluxograma, e a acompanhar o que acontece dentro de um algoritmo enquanto ele é executado, com uma tabela de trace.
+No guia anterior escreveste passos em português, numerados. Funcionou, mas o português deixa passar ambiguidades sem dar sinal. Neste guia vais aprender duas formas de escrever algoritmos que ajudam a apanhar essas ambiguidades, o pseudocódigo e o fluxograma, e a acompanhar o que acontece dentro de um algoritmo enquanto ele é executado, com uma tabela de trace.
 
 No fim deves conseguir:
 
 - explicar o que é uma variável, uma constante e um tipo de dados, e escolher o tipo certo para cada valor;
-- distinguir dar um valor a uma variável de perguntar se dois valores são iguais;
-- usar os operadores aritméticos, incluindo a divisão inteira e o resto, e uma função predefinida como ABS;
-- escrever um algoritmo sequencial completo em pseudocódigo, segundo a convenção desta disciplina;
+- distinguir dar um valor a uma variável, com `=`, de perguntar se dois valores são iguais, com `==`;
+- usar os operadores aritméticos, incluindo a divisão inteira e o resto, e uma função predefinida como `abs`;
+- escrever um algoritmo sequencial completo em pseudocódigo, na forma que usamos nas aulas, ou em frases claras que não deixem dúvidas;
 - desenhar o mesmo algoritmo em fluxograma, primeiro em papel e depois numa aplicação de diagramas;
 - executar um algoritmo à mão numa tabela de trace, instrução a instrução, e comparar o estado antes e depois de cada atribuição;
 - confirmar que o pseudocódigo, o fluxograma e o trace dão os mesmos resultados nos mesmos casos de teste.
@@ -26,13 +26,13 @@ No fim deves conseguir:
 
 Do [guia anterior](01-do-enunciado-ao-problema.md) vais usar três ideias. O contrato de entrada e saída, que continua a ser o primeiro passo de qualquer problema: antes de escrever uma instrução, escreves as entradas, as saídas, as restrições e os exemplos. O estado, que era a fotografia da situação num dado momento, como (3, 3, esquerda) nos Missionários e Canibais. E a decomposição, que te ajuda a decidir que passos o algoritmo tem de dar.
 
-Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arruma essas instruções numa convenção única, que vais usar da mesma maneira em todos os guias do percurso de algoritmos, e explica a razão de cada regra.
+Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arruma essas instruções na forma que usamos nas aulas, a mesma em todos os guias do percurso de algoritmos, e explica a razão de cada escolha.
 
-## Uma notação própria para algoritmos
+## Uma forma de escrever algoritmos
 
 Já viste que o português permite frases como "espera um bocado", que parecem instruções e não são. Uma linguagem de programação, como C ou Python, não tem esse problema: cada instrução tem um único significado. Mas tem outro, para quem está a começar: obriga a respeitar regras de escrita muito rígidas, e um ponto e vírgula esquecido impede o programa de funcionar, mesmo que o raciocínio esteja certo.
 
-O **pseudocódigo** fica a meio caminho. É texto, com um conjunto pequeno de palavras reservadas e regras de escrita simples. É suficientemente rigoroso para não deixar passar ambiguidades, e suficientemente simples para que a tua atenção fique no raciocínio e não na pontuação.
+O **pseudocódigo** fica a meio caminho. É texto, escrito com um vocabulário pequeno e sempre igual, que toda a turma lê da mesma maneira. Não é uma linguagem de programação: não há nenhum computador a ler o teu pseudocódigo, e por isso não há erros de escrita que o impeçam de funcionar. Serve para escreveres depressa e sem ambiguidades o raciocínio que resolve o problema, com a tua atenção no raciocínio e não na pontuação.
 
 O **fluxograma** é um desenho do mesmo algoritmo, feito com figuras ligadas por setas. Mostra de relance o caminho que o algoritmo percorre, e é o que se costuma usar para explicar um processo a quem não programa.
 
@@ -64,20 +64,30 @@ Há valores que fazem parte das regras do problema e não dos dados: uma hora te
 
 As constantes escrevem-se em maiúsculas, com as palavras separadas por um traço baixo, como `MINUTOS_POR_HORA`. A forma diferente serve para as distinguires à primeira vista das variáveis.
 
+No pseudocódigo, uma constante escreve-se no início do algoritmo, antes da primeira linha que a usa, com a palavra `const` à frente:
+
+```text
+const MINUTOS_POR_HORA = 60
+```
+
+A palavra `const` é a abreviatura de "constante" e diz a quem lê que este valor fica fixo do princípio ao fim. O sinal `=` quer dizer que o nome `MINUTOS_POR_HORA` fica com o valor 60, e vais ver já a seguir, na secção da atribuição, porque é que se escreve assim. As constantes vão para o início porque são regras do problema: quem lê o algoritmo fica a conhecê-las antes de ver as contas que as usam.
+
 ## Tipos de dados
 
-Cada variável guarda valores de um **tipo**, e o tipo decide que valores são possíveis e o que se pode fazer com eles. Nesta disciplina usam-se quatro tipos:
+Cada variável guarda valores de um **tipo**, e o tipo decide que valores são possíveis e o que se pode fazer com eles. Nas aulas usamos quatro tipos:
 
 | Tipo | Guarda | Exemplos |
 | --- | --- | --- |
-| `inteiro` | números sem parte decimal | `0`, `59`, `-3` |
-| `real` | números com parte decimal | `2.25`, `0.5`, `-1.75` |
-| `texto` | sequências de caracteres, entre aspas | `"Ana"`, `"Quantos minutos?"` |
-| `lógico` | só um de dois valores | `verdadeiro`, `falso` |
+| `int` | números inteiros, sem parte decimal | `0`, `59`, `-3` |
+| `float` | números com parte decimal | `2.25`, `0.5`, `-1.75` |
+| `string` | texto, ou seja, sequências de caracteres, entre aspas | `"Ana"`, `"Quantos minutos?"` |
+| `bool` | só um de dois valores, verdadeiro ou falso | `true`, `false` |
+
+Os nomes vêm do inglês, a língua em que as linguagens de programação são escritas, e vais reencontrá-los, iguais ou muito parecidos, no C e no Python. `int` é o princípio de *integer*, que quer dizer inteiro. `float` vem de *floating point*, "vírgula flutuante", o nome técnico da forma como o computador guarda números com parte decimal. `string` quer dizer "fio" ou "cadeia": um texto é uma cadeia de caracteres, uns atrás dos outros. `bool` vem do apelido de George Boole, o matemático que estudou as contas feitas só com verdadeiro e falso. Os dois valores do tipo `bool` escrevem-se `true`, verdadeiro, e `false`, falso. O professor faz a ligação entre os nomes portugueses e os ingleses na aula, e no pseudocódigo usam-se os ingleses, para já estares habituado a eles quando chegares ao C e ao Python.
 
 Repara que no pseudocódigo a parte decimal de um número se separa com um ponto, `2.25`, tal como nas linguagens de programação. No texto em português continua a escrever-se com vírgula, 2,25. São duas convenções para dois contextos, e não se misturam: dentro do pseudocódigo, ponto; no texto que escreves à volta, vírgula.
 
-Escolher o tipo é uma decisão com consequências, e decide-se pelo que o valor representa. Um número de minutos, de caixas ou de pessoas é `inteiro`, porque não existem 2,5 pessoas. Um peso ou uma média é `real`. Um nome ou uma mensagem é `texto`. A resposta a uma pergunta de sim ou não, como "a nota é positiva?", é `lógico`. Vais usar muito o tipo lógico no guia seguinte, quando o algoritmo tiver de tomar decisões.
+Escolher o tipo é uma decisão com consequências, e decide-se pelo que o valor representa. Um número de minutos, de caixas ou de pessoas é `int`, porque não existem 2,5 pessoas. Um peso ou uma média é `float`. Um nome ou uma mensagem é `string`. A resposta a uma pergunta de sim ou não, como "a nota é positiva?", é `bool`. Vais usar muito o tipo `bool` no guia seguinte, quando o algoritmo tiver de tomar decisões.
 
 A confusão mais frequente é entre o número `12` e o texto `"12"`. No papel parecem iguais e não são. Com o número podes fazer contas. Com o texto não: é uma sequência de dois caracteres, o 1 e o 2, tal como `"ab"` é uma sequência de duas letras. Juntar o texto `"12"` com o texto `"3"` dá `"123"`, e não 15.
 
@@ -91,37 +101,71 @@ Cada instrução que muda o valor de uma variável muda o estado. Se quiseres sa
 
 Esta é a distinção mais importante do guia, e a que mais vezes se troca no início.
 
-**Atribuir** é dar um valor a uma variável. No pseudocódigo desta disciplina escreve-se com uma seta que aponta para a esquerda:
+**Atribuir** é dar um valor a uma variável. No pseudocódigo que usamos nas aulas escreve-se com um sinal de igual, com a variável à esquerda e o valor à direita. Se já existir uma variável chamada `horas`, dar-lhe o valor 2 escreve-se assim:
 
 ```text
-horas ← 2
+horas = 2
 ```
 
-Lê-se "horas recebe 2". É uma ordem, não uma pergunta: a partir deste momento, `horas` vale 2, seja qual for o valor que tinha antes.
+Lê-se "horas recebe 2" ou "horas fica com 2". É uma ordem, não uma pergunta: a partir deste momento, `horas` vale 2, seja qual for o valor que tinha antes.
 
-A atribuição executa-se sempre em duas fases, por esta ordem. Primeiro calcula-se o lado direito da seta, usando os valores que as variáveis têm nesse momento. Depois guarda-se o resultado na variável do lado esquerdo, e o valor antigo dessa variável perde-se.
+Repara que este sinal de igual não quer dizer o mesmo que na matemática. Na matemática, `x = 2` afirma que dois lados são iguais, e podes lê-lo da esquerda para a direita ou da direita para a esquerda. No pseudocódigo, `horas = 2` manda pôr o 2 dentro da caixa `horas`, e só se lê num sentido: o valor da direita vai para a variável da esquerda. O C e o Python, as duas linguagens que vais aprender este ano, escrevem a atribuição com este mesmo sinal, e é por isso que o usamos já.
+
+### A linha onde a variável nasce
+
+A primeira vez que uma variável aparece num algoritmo, é aí que ela nasce: é nessa linha que se cria a caixa com a etiqueta e se lhe põe o primeiro valor. Nessa linha, e só nessa, escreve-se o tipo à frente do nome:
+
+```text
+int horas = 2
+```
+
+Lê-se "cria a variável `horas`, do tipo `int`, e dá-lhe o valor 2". Daí para baixo, a variável já existe, e usa-se só pelo nome, sem o tipo:
+
+```text
+horas = 3
+```
+
+Porque é que o tipo só se escreve uma vez? Porque o tipo é uma característica da caixa, decidida quando ela é criada, e não muda depois. Escrever `int horas = 3` mais abaixo daria a ideia de que estavas a criar uma segunda caixa com o mesmo nome, e isso deixaria qualquer leitor, e a ti próprio daí a uma semana, sem saber de que caixa se fala.
+
+E porque é que o tipo aparece na linha onde a variável nasce, e não numa lista no topo do algoritmo? Porque é aí que ele interessa: quem lê `int horas = 2` fica a saber de uma só vez o nome, o tipo e o primeiro valor, sem ter de andar para cima e para baixo no texto. E porque é também assim que se faz no C, onde se escreve `int horas = 2;`, com um ponto e vírgula no fim. No Python o tipo nem se escreve, mas a variável nasce da mesma maneira, na primeira linha que lhe dá um valor.
+
+Quando o primeiro valor de uma variável é o resultado de uma conta, a conta vai na mesma linha em que ela nasce, por exemplo `int horas = totalMinutos div MINUTOS_POR_HORA`. A operação `div` é explicada na secção seguinte, e esta linha aparece inteira no exemplo guiado.
+
+### Como se executa uma atribuição
+
+A atribuição executa-se sempre em duas fases, por esta ordem. Primeiro calcula-se o lado direito do sinal de igual, usando os valores que as variáveis têm nesse momento. Depois guarda-se o resultado na variável do lado esquerdo, e o valor antigo dessa variável perde-se.
 
 Vê o que isto significa nesta sequência:
 
 ```text
-total ← 10
-total ← total + 5
+int total = 10
+total = total + 5
 ```
 
-Se lesses a segunda linha como uma pergunta, "total é igual a total mais 5?", a resposta seria sempre não: nenhum número é igual a ele próprio mais cinco. Lida como atribuição, faz todo o sentido. Calcula-se o lado direito com o valor atual de `total`, que é 10, e dá 15. Guarda-se 15 em `total`. No fim, `total` vale 15, e o 10 desapareceu.
+A primeira linha cria a variável `total` e dá-lhe 10. A segunda linha já não leva o tipo, porque `total` já existe. Se lesses a segunda linha como uma equação da matemática, "total é igual a total mais 5", seria impossível: nenhum número é igual a ele próprio mais cinco. Lida como atribuição, faz todo o sentido. Calcula-se o lado direito com o valor atual de `total`, que é 10, e dá 15. Guarda-se 15 em `total`. No fim, `total` vale 15, e o 10 desapareceu.
 
-A perda do valor antigo tem consequências que vale a pena ver com números. Imagina duas variáveis, `a` com 4 e `b` com 9, e estas duas instruções:
+A perda do valor antigo tem consequências que vale a pena ver com números. Vê estas quatro linhas, em que as duas primeiras criam `a` com 4 e `b` com 9:
 
 ```text
-a ← b
-b ← a
+int a = 4
+int b = 9
+a = b
+b = a
 ```
 
-A primeira instrução guarda em `a` o valor de `b`, e `a` passa a valer 9. O 4 perdeu-se. A segunda guarda em `b` o valor atual de `a`, que já é 9. No fim, as duas valem 9. Quem esperava que os valores trocassem de lugar esqueceu-se de que, depois da primeira linha, o 4 já não existe em lado nenhum. Pensar no estado antes e depois de cada linha é o que te protege deste tipo de engano.
+A terceira linha guarda em `a` o valor de `b`, e `a` passa a valer 9. O 4 perdeu-se. A quarta guarda em `b` o valor atual de `a`, que já é 9. No fim, as duas valem 9. Quem esperava que os valores trocassem de lugar esqueceu-se de que, depois da terceira linha, o 4 já não existe em lado nenhum. Pensar no estado antes e depois de cada linha é o que te protege deste tipo de engano.
 
-**Comparar** é perguntar se dois valores são iguais, ou se um é maior do que o outro. O resultado de uma comparação é `verdadeiro` ou `falso`, e as comparações escrevem-se com sinais como `=` e `>=`. São o assunto do guia seguinte. Por agora, fixa a regra: a seta manda, o sinal de igual pergunta. Nesta convenção nunca se usa `=` para dar um valor a uma variável.
+Do lado esquerdo do sinal de igual está sempre uma única variável, porque é lá que o valor vai ser guardado. `10 = total` e `total + 5 = total` não fazem sentido: não se pode guardar um valor dentro do número 10, nem dentro de uma conta.
 
-Do lado esquerdo da seta está sempre uma única variável, porque é lá que o valor vai ser guardado. `10 ← total` e `total + 5 ← total` não fazem sentido: não se pode guardar um valor dentro do número 10, nem dentro de uma conta.
+### Perguntar se é igual: dois sinais, `==`
+
+**Comparar** é perguntar se dois valores são iguais, ou se um é maior do que o outro. O resultado de uma comparação é verdadeiro ou falso, ou seja, `true` ou `false`. Como o sinal `=` sozinho já está ocupado a dar valores, a pergunta "é igual?" escreve-se com dois sinais seguidos, `==`:
+
+```text
+horas == 2
+```
+
+Lê-se "horas é igual a 2?". Não muda nada: se `horas` valer 2, a resposta é `true`, e se valer outra coisa, a resposta é `false`, mas em qualquer dos casos `horas` continua com o valor que tinha. As comparações, com `==` e com sinais como `>=`, são o assunto do guia seguinte. Por agora, fixa a regra: um `=` manda, dois `==` perguntam. O C e o Python fazem a mesma distinção, com os mesmos sinais, e trocar um pelo outro é dos enganos mais frequentes de quem começa a programar.
 
 ## Operadores aritméticos
 
@@ -133,99 +177,108 @@ As contas escrevem-se com os operadores que já conheces da matemática, com dua
 | `-` | subtração | `7 - 2` | `5` |
 | `*` | multiplicação | `7 * 2` | `14` |
 | `/` | divisão, com parte decimal | `7 / 2` | `3.5` |
-| `DIV` | divisão inteira: quantas vezes cabe | `7 DIV 2` | `3` |
-| `RESTO` | o que sobra da divisão inteira | `7 RESTO 2` | `1` |
+| `div` | divisão inteira: quantas vezes cabe | `7 div 2` | `3` |
+| `resto` | o que sobra da divisão inteira | `7 resto 2` | `1` |
 
-A multiplicação escreve-se com asterisco porque o "x" é uma letra e podia ser o nome de uma variável.
+A multiplicação escreve-se com asterisco porque o "x" é uma letra e podia ser o nome de uma variável. `div` e `resto` escrevem-se em minúsculas, tal como as outras palavras que aparecem no meio das contas e das condições, como o `e` e o `ou` que vais conhecer no guia seguinte.
 
-`DIV` e `RESTO` são as contas de dividir que aprendeste na primária, antes de haver números decimais. Imagina 17 rebuçados para repartir por 5 amigos, sem partir nenhum. Cada amigo recebe 3, e sobram 2. Em pseudocódigo, `17 DIV 5` dá `3`, que é quanto recebe cada um, e `17 RESTO 5` dá `2`, que é o que sobra. Há uma forma simples de confirmar as duas contas ao mesmo tempo: o divisor vezes a divisão inteira, mais o resto, tem de dar o número de partida. Aqui, 5 vezes 3 mais 2 dá 17.
+`div` e `resto` são as contas de dividir que aprendeste na primária, antes de haver números decimais. Imagina 17 rebuçados para repartir por 5 amigos, sem partir nenhum. Cada amigo recebe 3, e sobram 2. Em pseudocódigo, `17 div 5` dá `3`, que é quanto recebe cada um, e `17 resto 5` dá `2`, que é o que sobra. Há uma forma simples de confirmar as duas contas ao mesmo tempo: o divisor vezes a divisão inteira, mais o resto, tem de dar o número de partida. Aqui, 5 vezes 3 mais 2 dá 17.
 
-A diferença entre `/` e `DIV` não é um pormenor. `7 / 2` dá `3.5`, um número real. `7 DIV 2` dá `3`, um inteiro, e a parte que não cabe vai para o `RESTO`. Usa `DIV` e `RESTO` quando as quantidades são inteiras e a parte decimal não faz sentido, como em pessoas, caixas ou minutos. Usa `/` quando a parte decimal interessa, como numa média. `DIV` e `RESTO` usam-se só com números inteiros e com um divisor maior do que zero.
+A diferença entre `/` e `div` não é um pormenor. `7 / 2` dá `3.5`, um número com parte decimal, que se guardaria numa variável `float`. `7 div 2` dá `3`, um inteiro, e a parte que não cabe vai para o `resto`. Usa `div` e `resto` quando as quantidades são inteiras e a parte decimal não faz sentido, como em pessoas, caixas ou minutos. Usa `/` quando a parte decimal interessa, como numa média. `div` e `resto` usam-se só com números inteiros e com um divisor maior do que zero.
 
-Noutros livros e noutras linguagens vais encontrar o resto escrito como `MOD` ou como `%`. É a mesma operação com outro nome. Nesta disciplina, no pseudocódigo, escreve-se `RESTO`.
+Noutros livros e noutras linguagens vais encontrar o resto escrito como `MOD` ou como `%`. É a mesma operação com outro nome. Nas aulas, no pseudocódigo, escreve-se `resto`.
 
-As contas seguem a ordem que conheces da matemática. Primeiro o que está entre parênteses. Depois multiplicações e divisões, incluindo `DIV` e `RESTO`. Por fim somas e subtrações. Entre operações do mesmo nível, faz-se da esquerda para a direita. Assim, `2 + 3 * 4` dá `14`, porque a multiplicação se faz primeiro, e `(2 + 3) * 4` dá `20`. Quando tiveres dúvidas sobre a ordem, põe parênteses: não custam nada e tiram a dúvida a quem ler.
+As contas seguem a ordem que conheces da matemática. Primeiro o que está entre parênteses. Depois multiplicações e divisões, incluindo `div` e `resto`. Por fim somas e subtrações. Entre operações do mesmo nível, faz-se da esquerda para a direita. Assim, `2 + 3 * 4` dá `14`, porque a multiplicação se faz primeiro, e `(2 + 3) * 4` dá `20`. Quando tiveres dúvidas sobre a ordem, põe parênteses: não custam nada e tiram a dúvida a quem ler.
 
-## Entrada e saída: LER e ESCREVER
+## Entrada e saída: `ler valor` e `Escreve:`
 
-Um algoritmo recebe dados e produz resultados. As entradas e as saídas do contrato têm, no pseudocódigo, instruções próprias.
+Um algoritmo recebe dados e produz resultados. As entradas e as saídas do contrato têm, no pseudocódigo, uma forma própria de se escrever.
 
-`LER variavel` recebe um valor de fora do algoritmo, normalmente escrito por uma pessoa no teclado, e guarda-o na variável. É uma forma de atribuição: o valor que a variável tinha antes perde-se, e passa a ter o valor lido.
+`ler valor` recebe um valor de fora do algoritmo, normalmente escrito por uma pessoa no teclado. Aparece sempre do lado direito de uma atribuição, e o valor que a pessoa escrever fica guardado na variável da esquerda:
 
-`ESCREVER` mostra informação a quem está a usar o algoritmo. Pode mostrar texto e valores de variáveis, separados por vírgulas. O que está entre aspas aparece tal e qual. O que está sem aspas é o nome de uma variável, e o que aparece é o seu valor.
+```text
+int totalMinutos = ler valor
+```
+
+Lê-se "`totalMinutos` recebe o valor que a pessoa escrever". É uma atribuição como as outras, com uma única diferença: do lado direito, em vez de uma conta, está um valor que vem de fora. Como esta é a linha onde `totalMinutos` nasce, leva o tipo à frente, e o tipo diz também que tipo de valor se espera da pessoa, neste caso um número inteiro de minutos. Se mais abaixo fosse preciso ler outro valor para a mesma variável, escrevia-se sem o tipo, `totalMinutos = ler valor`, e o valor antigo perdia-se, como em qualquer atribuição.
+
+`Escreve:` mostra informação a quem está a usar o algoritmo. Depois dos dois pontos vem o que se quer mostrar, que pode ser texto e valores de variáveis, separados por vírgulas. O que está entre aspas aparece tal e qual. O que está sem aspas é o nome de uma variável, e o que aparece é o seu valor.
 
 A diferença entre as duas coisas é uma fonte clássica de erros. Se `horas` valer 2:
 
 | Instrução | O que aparece no ecrã |
 | --- | --- |
-| `ESCREVER "horas"` | horas |
-| `ESCREVER horas` | 2 |
-| `ESCREVER "Passaram ", horas, " horas"` | Passaram 2 horas |
+| `Escreve: "horas"` | horas |
+| `Escreve: horas` | 2 |
+| `Escreve: "Passaram ", horas, " horas"` | Passaram 2 horas |
 
 Repara nos espaços dentro das aspas na última linha. Sem eles, aparecia "Passaram2horas". O algoritmo escreve exatamente o que lhe mandas, incluindo os espaços que te esqueceste de pôr.
 
-Antes de cada `LER`, escreve-se quase sempre um `ESCREVER` com uma pergunta, para quem está do outro lado saber o que tem de escrever. Um `LER` sem pergunta deixa a pessoa a olhar para um ecrã parado, sem saber que o algoritmo está à espera dela.
+Antes de cada `ler valor`, escreve-se quase sempre um `Escreve:` com uma pergunta, para quem está do outro lado saber o que tem de escrever. Um `ler valor` sem pergunta deixa a pessoa a olhar para um ecrã parado, sem saber que o algoritmo está à espera dela.
 
 ## Funções predefinidas
 
 Uma **função predefinida** é um pedaço de algoritmo que já vem feito, com um nome, pronto a usar. Dás-lhe um ou mais valores, entre parênteses, e ela devolve um resultado, que podes usar numa conta ou guardar numa variável.
 
-A primeira que vais usar é `ABS`, o valor absoluto. O seu contrato é este:
+A primeira que vais usar é `abs`, o valor absoluto. O nome vem de "absoluto" e escreve-se em minúsculas. O seu contrato é este:
 
-- entrada: um número, inteiro ou real;
+- entrada: um número, `int` ou `float`;
 - saída: a distância desse número a zero, ou seja, o mesmo número sem sinal;
-- exemplos: `ABS(-7)` dá `7`, `ABS(7)` dá `7` e `ABS(0)` dá `0`.
+- exemplos: `abs(-7)` dá `7`, `abs(7)` dá `7` e `abs(0)` dá `0`.
 
-Onde é que isto serve? Sempre que interessa o tamanho de uma diferença e não o seu sentido. Se o João tem 12 anos e a irmã tem 15, a diferença de idades é 3 anos, seja qual for a ordem em que fazes a conta. `12 - 15` dá `-3` e `15 - 12` dá `3`, mas `ABS(12 - 15)` e `ABS(15 - 12)` dão ambos `3`. Num algoritmo escrevia-se assim:
-
-```text
-diferenca ← ABS(idadeJoao - idadeIrma)
-```
-
-Primeiro calcula-se o que está dentro dos parênteses, depois aplica-se a função a esse resultado, e por fim guarda-se o valor em `diferenca`.
-
-Repara na ligação ao guia anterior. Para usar `ABS` não precisas de saber como ela está feita por dentro, tal como não precisas de saber como funciona uma máquina de venda automática para comprar uma garrafa de água. Chega-te o contrato. Existem outras funções predefinidas, cada uma com o seu contrato, como a raiz quadrada. Quando precisares de uma, o enunciado ou o professor dá-te o nome e o contrato.
-
-## A convenção de pseudocódigo desta disciplina
-
-Há muitas formas de escrever pseudocódigo, e livros diferentes usam palavras diferentes. Nesta disciplina usa-se sempre a mesma, e é esta que vais encontrar em todos os guias do percurso de algoritmos. Se num livro ou num vídeo encontrares outra, não está errada: é outra convenção. Quando escreveres, usa esta.
-
-Um algoritmo tem sempre esta estrutura:
+Onde é que isto serve? Sempre que interessa o tamanho de uma diferença e não o seu sentido. Se o João tem 12 anos e a irmã tem 15, a diferença de idades é 3 anos, seja qual for a ordem em que fazes a conta. `12 - 15` dá `-3` e `15 - 12` dá `3`, mas `abs(12 - 15)` e `abs(15 - 12)` dão ambos `3`. Num algoritmo escrevia-se assim:
 
 ```text
-ALGORITMO NomeDoAlgoritmo
-CONSTANTES
-    NOME_DA_CONSTANTE ← valor
-VARIÁVEIS
-    nomeDaVariavel: tipo
-INÍCIO
-    instruções, uma por linha, pela ordem em que são executadas
-FIM
+int idadeJoao = 12
+int idadeIrma = 15
+int diferenca = abs(idadeJoao - idadeIrma)
 ```
 
-Primeiro dá-se um nome ao algoritmo. Depois declaram-se as constantes, cada uma com o seu valor, e as variáveis, cada uma com o seu tipo. Só depois, entre `INÍCIO` e `FIM`, vêm as instruções. Declarar antes de usar obriga-te a pensar em que dados o algoritmo vai precisar, e isso é, outra vez, o contrato a trabalhar. Se um algoritmo não tiver constantes, a secção `CONSTANTES` omite-se.
+Na terceira linha, primeiro calcula-se o que está dentro dos parênteses, `12 - 15`, que dá `-3`. Depois aplica-se a função a esse resultado, e `abs(-3)` dá `3`. Por fim guarda-se o 3 em `diferenca`, que nasce nesta linha e por isso leva o tipo à frente.
 
-As linhas dentro de cada secção escrevem-se com quatro espaços à esquerda. Esse recuo, a que se chama **indentação**, mostra o que está dentro de quê. Aqui parece decorativo. No guia seguinte, quando houver instruções dentro de decisões, passa a ser indispensável para se perceber o algoritmo.
+Repara na ligação ao guia anterior. Para usar `abs` não precisas de saber como ela está feita por dentro, tal como não precisas de saber como funciona uma máquina de venda automática para comprar uma garrafa de água. Chega-te o contrato. Existem outras funções predefinidas, cada uma com o seu contrato, como a raiz quadrada. Quando precisares de uma, o enunciado ou o professor dá-te o nome e o contrato.
 
-A tabela seguinte reúne toda a convenção. As três últimas linhas pertencem ao guia seguinte e estão aqui para teres a convenção completa num só sítio.
+## A forma de escrever pseudocódigo nas aulas
+
+Há muitas formas de escrever pseudocódigo, e livros diferentes usam palavras diferentes. Nas aulas usamos sempre a mesma, e é essa que vais encontrar em todos os guias do percurso de algoritmos. Se num livro ou num vídeo encontrares outra, não está errada: é outra maneira de escrever a mesma lógica.
+
+Esta forma é um vocabulário pequeno e estável, que serve para escreveres e leres algoritmos depressa e para toda a turma perceber o mesmo quando lê a mesma linha. Não há nela regras que deem erro. Se te esqueceres dos dois pontos de um `Escreve:`, ou escreveres uma palavra com maiúscula onde costuma ir minúscula, o algoritmo continua a dizer o mesmo, e continua certo se a lógica estiver certa. O que tem de estar certo é a lógica: que passos se dão, por que ordem e com que valores.
+
+Por isso, um algoritmo escrito em frases claras, em português, também é válido, desde que não deixe dúvidas a quem o executa. As dúvidas costumam aparecer em três sítios, e uma boa frase responde aos três. Quanto: que valor exatamente, que conta exatamente. Quando: em que momento e por que ordem. E o que acontece se não der: o que fazer quando um valor não serve, uma pergunta que vai ganhar importância no guia seguinte. "Divide os minutos por 60 e mostra o resultado" deixa uma dúvida sobre o quanto: é a divisão com parte decimal, que dá 2.25 para 135 minutos, ou só a parte inteira, que dá 2? "Calcula quantas vezes 60 cabe inteiro nos minutos e mostra esse número como as horas" não deixa nenhuma. Nesta fase, o que importa é que a lógica esteja lá. O pseudocódigo é uma ajuda para a escrever sem ambiguidades, e vais ver no exemplo guiado o mesmo algoritmo escrito das duas maneiras.
+
+A forma que usamos assenta em poucas ideias, que já viste nas secções anteriores:
+
+- O algoritmo começa na primeira linha e acaba na última. Não tem cabeçalho com o nome do algoritmo, nem palavras a marcar onde começa e onde acaba. Quando for preciso dar-lhe um nome, o nome vai no título ou na frase que o apresenta, como "o algoritmo que converte minutos".
+- As constantes escrevem-se no início, antes de serem usadas, com `const` à frente.
+- Cada variável nasce na linha onde aparece pela primeira vez, com o tipo à frente, e daí para baixo usa-se só pelo nome.
+- Um `=` dá um valor a uma variável. Dois `==` perguntam se dois valores são iguais.
+- Escreve-se uma instrução por linha, pela ordem em que são executadas.
+
+Há uma última ideia que neste guia ainda não se vê, mas que convém conheceres já. O recuo de uma linha em relação à margem, a que se chama **indentação**, mostra o que está dentro de quê. Escreve-se com quatro espaços por cada nível. Nos algoritmos deste guia todas as linhas começam encostadas à margem, porque numa sequência nenhuma instrução está dentro de outra: todas se executam, uma depois da outra. No guia seguinte vais escrever instruções que só se executam em certos casos, e são essas que vão quatro espaços mais para dentro. A indentação passa então a ser a única marca de onde começa e onde acaba um bloco de instruções, e mudar uma linha de margem passa a mudar o que o algoritmo faz. O Python, que vais aprender este ano, funciona exatamente assim.
+
+A tabela seguinte reúne toda a forma. As três últimas linhas pertencem ao guia seguinte, e estão marcadas como tal, para teres tudo num só sítio.
 
 | Elemento | Como se escreve | Exemplo |
 | --- | --- | --- |
-| Nome do algoritmo | `ALGORITMO`, seguido do nome, com cada palavra a começar por maiúscula | `ALGORITMO ConverterMinutos` |
-| Constantes | `CONSTANTES`, e depois uma por linha, em maiúsculas | `MINUTOS_POR_HORA ← 60` |
-| Variáveis | `VARIÁVEIS`, e depois uma por linha, com dois pontos e o tipo | `horas: inteiro` |
-| Tipos | `inteiro`, `real`, `texto`, `lógico` | `nome: texto` |
-| Instruções | entre `INÍCIO` e `FIM`, uma por linha | qualquer das instruções das linhas seguintes |
-| Atribuição | variável, seta para a esquerda, expressão | `horas ← totalMinutos DIV MINUTOS_POR_HORA` |
-| Entrada | `LER`, seguido da variável | `LER totalMinutos` |
-| Saída | `ESCREVER`, seguido de texto e variáveis separados por vírgulas | `ESCREVER "Horas: ", horas` |
-| Aritmética | `+`, `-`, `*`, `/`, `DIV`, `RESTO`, parênteses | `(a + b) / 2` |
-| Função predefinida | nome em maiúsculas e valor entre parênteses | `ABS(a - b)` |
-| Comparações | `=`, `!=`, `<`, `<=`, `>`, `>=` | `nota >= 10` |
-| Operadores lógicos | `E`, `OU`, `NÃO` | `nota < 0 OU nota > 20` |
-| Seleção | `SE` condição `ENTÃO`, `SENÃO SE` condição `ENTÃO`, `SENÃO`, `FIM SE` | ver o guia seguinte |
+| Início e fim | não se escrevem: o algoritmo começa na primeira linha e acaba na última | a primeira linha do exemplo guiado é `const MINUTOS_POR_HORA = 60` |
+| Constante | `const`, o nome em maiúsculas, `=` e o valor, no início do algoritmo | `const MINUTOS_POR_HORA = 60` |
+| Variável, na linha onde nasce | o tipo, o nome, `=` e o primeiro valor | `int horas = 0` |
+| Variável, nas linhas seguintes | só o nome, sem o tipo | `horas = horas + 1` |
+| Tipos | `int`, `float`, `string`, `bool` | `string nome = "Ana"` |
+| Valores lógicos | `true`, `false` | `bool terminou = false` |
+| Atribuição | variável, `=`, expressão | `int horas = totalMinutos div MINUTOS_POR_HORA` |
+| Entrada | `ler valor`, do lado direito de uma atribuição | `int totalMinutos = ler valor` |
+| Saída | `Escreve:`, seguido de texto e variáveis separados por vírgulas | `Escreve: "Horas: ", horas` |
+| Aritmética | `+`, `-`, `*`, `/`, `div`, `resto`, parênteses | `(a + b) / 2` |
+| Função predefinida | nome em minúsculas e valor entre parênteses | `abs(a - b)` |
+| Indentação | quatro espaços por nível, para mostrar o que está dentro de quê | neste guia não há nada dentro de nada, e todas as linhas começam na margem |
+| Comparações (guia seguinte) | `==`, `!=`, `<`, `<=`, `>`, `>=` | `nota >= 10` |
+| Operadores lógicos (guia seguinte) | `e`, `ou`, `não` | `nota < 0 ou nota > 20` |
+| Seleção (guia seguinte) | `Se` condição, `Senão se` condição, `Senão`, com as instruções de cada caso indentadas por baixo | ver o guia seguinte |
 
-As palavras da convenção, como `LER`, `ESCREVER` ou `INÍCIO`, escrevem-se sempre em maiúsculas. Chamam-se **palavras reservadas**, porque têm um significado fixo e não podem ser usadas como nomes de variáveis. Os tipos escrevem-se em minúsculas.
+As palavras que começam uma instrução, como `Escreve:` e, no guia seguinte, `Se` e `Senão`, escrevem-se com maiúscula inicial, para se verem logo no princípio da linha. Os tipos, os operadores, como `div`, `resto`, `e` e `ou`, e `ler valor` escrevem-se em minúsculas. Os nomes das variáveis seguem as regras que viste na secção das variáveis, e os das constantes vão em maiúsculas, com traço baixo. Nada disto é para decorar como uma lei: é para que todos escrevam da mesma maneira e cada um leia depressa o que os outros escreveram.
+
+Evita dar a uma variável o nome de uma destas palavras. Uma variável chamada `const` ou `int` deixaria quem lê sem saber se a palavra é uma variável ou parte da forma. Nas linguagens de programação estas palavras chamam-se **palavras reservadas**, e lá são mesmo proibidas como nomes, como vais ver quando passares para o C.
 
 ## Sequência
 
@@ -233,7 +286,7 @@ Uma **estrutura sequencial** é uma sequência de instruções executadas uma de
 
 É a forma mais simples de algoritmo, e é a única que usas neste guia. Uma receita em que todos os passos se fazem sempre, pela mesma ordem, é uma sequência. Uma receita com "se a massa estiver muito mole, junta mais farinha" já não é, porque há um passo que umas vezes se faz e outras não. Esse tipo de instrução é o assunto do guia seguinte.
 
-Numa sequência, a ordem importa. Uma instrução só pode usar valores que já existem no momento em que é executada. Se uma conta precisa de um valor que só é lido duas linhas abaixo, a conta é feita com uma variável que ainda não tem valor, e o resultado não faz sentido. Parece óbvio escrito assim, e é um dos erros mais frequentes de quem começa.
+Numa sequência, a ordem importa. Uma instrução só pode usar valores que já existem no momento em que é executada. Se uma conta precisa de um valor que só é lido duas linhas abaixo, a conta é feita com uma variável que ainda não nasceu e por isso não tem valor, e o resultado não faz sentido. Parece óbvio escrito assim, e é um dos erros mais frequentes de quem começa.
 
 ## Fluxogramas
 
@@ -242,8 +295,8 @@ Um fluxograma representa um algoritmo com figuras ligadas por setas. Cada figura
 | Figura | Para que serve | Como aparece nestes guias |
 | --- | --- | --- |
 | Oval | Início e fim do algoritmo | `( Início )` e `( Fim )` |
-| Paralelogramo | Entrada e saída de dados: `LER` e `ESCREVER` | `/ LER totalMinutos /` |
-| Retângulo | Processamento: atribuições e contas | `[ horas ← totalMinutos DIV MINUTOS_POR_HORA ]` |
+| Paralelogramo | Entrada e saída de dados: `ler valor` e `Escreve:` | `/ int totalMinutos = ler valor /` |
+| Retângulo | Processamento: atribuições e contas | `[ int horas = totalMinutos div MINUTOS_POR_HORA ]` |
 | Losango | Decisão: o caminho divide-se em dois | uma figura de três linhas com pontas à esquerda e à direita, mostrada abaixo |
 | Seta | O sentido do percurso | linhas verticais terminadas em `↓` |
 
@@ -256,6 +309,10 @@ Estes guias são ficheiros de texto e não têm desenhos. Por isso, cada figura 
 ```
 
 Nas decisões, cada saída do losango leva escrito `Sim` ou `Não`, conforme a condição seja verdadeira ou falsa. Quando desenhares no papel ou na aplicação de diagramas, usa as figuras verdadeiras.
+
+Repara que uma linha com `ler valor` vai num paralelogramo, e não num retângulo, apesar de ser escrita como uma atribuição. O que decide a figura é o que a linha faz: se recebe um valor de fora, é entrada, e a entrada desenha-se no paralelogramo.
+
+Repara também que o fluxograma tem um oval de início e um oval de fim, e o pseudocódigo não tem nenhuma palavra para isso. No pseudocódigo não fazem falta, porque se lê de cima para baixo e o algoritmo começa na primeira linha e acaba na última. Num desenho, as figuras podem estar espalhadas pela folha, e os ovais mostram onde se entra e por onde se sai.
 
 Um fluxograma bem feito cumpre sempre estas regras:
 
@@ -275,10 +332,11 @@ Serve para veres o algoritmo por dentro. Um algoritmo só mostra o que escreve n
 Uma tabela de trace constrói-se assim:
 
 1. Faz uma coluna para o número do passo, uma para a instrução executada, uma para cada variável e uma para o que aparece no ecrã.
-2. Na primeira linha, antes de qualquer instrução, escreve "sem valor" em todas as variáveis, porque nenhuma recebeu ainda um valor.
+2. Na primeira linha, antes de qualquer instrução, escreve "sem valor" em todas as variáveis, porque nenhuma nasceu ainda. Cada variável fica "sem valor" até ao passo da linha onde nasce.
 3. Para cada instrução, pela ordem em que é executada, acrescenta uma linha. Copia os valores da linha de cima e muda só o que essa instrução muda.
-4. Numa atribuição ou num `LER`, muda só a coluna da variável que recebe o valor. As outras ficam iguais.
-5. Num `ESCREVER`, nenhuma variável muda. Escreve na coluna do ecrã exatamente o que aparece, com os valores que as variáveis têm nesse momento.
+4. Numa atribuição, incluindo as que usam `ler valor`, muda só a coluna da variável que está à esquerda do `=`. As outras ficam iguais.
+5. Num `Escreve:`, nenhuma variável muda. Escreve na coluna do ecrã exatamente o que aparece, com os valores que as variáveis têm nesse momento.
+6. As constantes não têm coluna nem passo. A linha do `const` dá nome a uma regra do problema, que vale o mesmo do princípio ao fim, e por isso não muda nada no estado.
 
 Há uma forma simples de ler uma tabela destas: o estado antes de uma instrução está na linha de cima, e o estado depois está na própria linha. Comparar as duas linhas mostra o efeito da instrução.
 
@@ -313,94 +371,98 @@ Os casos 59 e 60 estão lado a lado de propósito. São os dois lados do sítio 
 
 A decomposição é curta: ler os minutos, calcular as horas completas, calcular os minutos restantes, mostrar o resultado.
 
-As contas merecem mais atenção. Pensa no caso de 135 minutos. Quantas horas completas cabem em 135 minutos? É perguntar quantas vezes 60 cabe em 135, sem partir nenhuma hora. Cabe 2 vezes, que dão 120 minutos. É exatamente a divisão inteira: `135 DIV 60` dá `2`.
+As contas merecem mais atenção. Pensa no caso de 135 minutos. Quantas horas completas cabem em 135 minutos? É perguntar quantas vezes 60 cabe em 135, sem partir nenhuma hora. Cabe 2 vezes, que dão 120 minutos. É exatamente a divisão inteira: `135 div 60` dá `2`.
 
-E quantos minutos ficam de fora dessas 2 horas? O que sobra: 135 menos 120, que dá 15. É exatamente o resto: `135 RESTO 60` dá `15`.
+E quantos minutos ficam de fora dessas 2 horas? O que sobra: 135 menos 120, que dá 15. É exatamente o resto: `135 resto 60` dá `15`.
 
 Confirma com a verificação que viste na secção dos operadores: 60 vezes 2, mais 15, dá 135. As duas contas estão certas.
 
 ### Passo 4: o pseudocódigo
 
+Este é o algoritmo que converte minutos, na forma que usamos nas aulas:
+
 ```text
-ALGORITMO ConverterMinutos
-CONSTANTES
-    MINUTOS_POR_HORA ← 60
-VARIÁVEIS
-    totalMinutos: inteiro
-    horas: inteiro
-    minutos: inteiro
-INÍCIO
-    ESCREVER "Quantos minutos?"
-    LER totalMinutos
-    horas ← totalMinutos DIV MINUTOS_POR_HORA
-    minutos ← totalMinutos RESTO MINUTOS_POR_HORA
-    ESCREVER horas, " h e ", minutos, " min"
-FIM
+const MINUTOS_POR_HORA = 60
+Escreve: "Quantos minutos?"
+int totalMinutos = ler valor
+int horas = totalMinutos div MINUTOS_POR_HORA
+int minutos = totalMinutos resto MINUTOS_POR_HORA
+Escreve: horas, " h e ", minutos, " min"
 ```
 
 Cada decisão deste pseudocódigo tem uma razão:
 
-1. `MINUTOS_POR_HORA` é uma constante porque o 60 é uma regra do problema e não um dado que mude de atleta para atleta. Assim, cada conta diz o que está a fazer: dividir pelos minutos que tem uma hora.
-2. As três variáveis são do tipo `inteiro`, porque minutos e horas completas não têm parte decimal. Foi o contrato que o decidiu.
+1. `MINUTOS_POR_HORA` é uma constante porque o 60 é uma regra do problema e não um dado que mude de atleta para atleta. Assim, cada conta diz o que está a fazer: dividir pelos minutos que tem uma hora. Vai na primeira linha, com `const`, antes das contas que a usam.
+2. As três variáveis são do tipo `int`, porque minutos e horas completas não têm parte decimal. Foi o contrato que o decidiu. Cada uma leva o tipo na linha onde nasce: `totalMinutos` na linha da leitura, `horas` e `minutos` nas contas que lhes dão o primeiro valor.
 3. `totalMinutos` e `minutos` têm nomes diferentes porque guardam coisas diferentes: o total que foi lido e o que sobra depois de tirar as horas. Se as duas se chamassem `minutos`, não havia forma de as distinguir.
-4. O `ESCREVER` com a pergunta vem antes do `LER`, para quem usa o algoritmo saber o que tem de escrever.
-5. As duas contas vêm depois do `LER`, porque ambas precisam do valor de `totalMinutos`, que só existe depois de ser lido.
-6. O último `ESCREVER` junta valores e texto. Os espaços dentro das aspas estão lá para o resultado aparecer como "2 h e 15 min" e não como "2h e15min".
+4. O `Escreve:` com a pergunta vem antes do `ler valor`, para quem usa o algoritmo saber o que tem de escrever.
+5. As duas contas vêm depois da leitura, porque ambas precisam do valor de `totalMinutos`, que só existe a partir da linha onde nasce.
+6. O último `Escreve:` junta valores e texto. Os espaços dentro das aspas estão lá para o resultado aparecer como "2 h e 15 min" e não como "2h e15min".
+7. Todas as linhas começam encostadas à margem, sem indentação, porque o algoritmo é uma sequência: nenhuma instrução está dentro de outra, e todas se executam uma vez, de cima para baixo.
+
+O mesmo algoritmo também se pode escrever em frases claras, como os passos numerados do guia anterior, e continua a ser válido:
+
+1. Pergunta "Quantos minutos?" e guarda o número inteiro que a pessoa escrever como total de minutos.
+2. Calcula as horas completas: quantas vezes 60 cabe inteiro no total de minutos, sem parte decimal.
+3. Calcula os minutos restantes: o que sobra dessa divisão.
+4. Mostra as horas, seguidas do texto " h e ", dos minutos restantes e do texto " min".
+
+Cada frase diz que valor se usa, que conta se faz e em que momento, e por isso não deixa dúvidas a quem a executa. Compara com a frase vaga da secção sobre a forma de escrever pseudocódigo, "divide os minutos por 60 e mostra o resultado", que não dizia que divisão era. As frases e o pseudocódigo têm a mesma lógica, passo a passo. O pseudocódigo diz o mesmo com menos palavras, e com o tempo vais achá-lo mais rápido de escrever e de ler. Mas se, a resolver um exercício, souberes a lógica e não te lembrares da forma, escreve as frases: nesta fase, o que conta é a lógica.
 
 ### Passo 5: o fluxograma
 
 O mesmo algoritmo, desenhado:
 
 ```text
-                     ( Início )
-                         |
-                         ↓
-          / ESCREVER "Quantos minutos?" /
-                         |
-                         ↓
-                / LER totalMinutos /
-                         |
-                         ↓
-   [ horas ← totalMinutos DIV MINUTOS_POR_HORA ]
-                         |
-                         ↓
- [ minutos ← totalMinutos RESTO MINUTOS_POR_HORA ]
-                         |
-                         ↓
-    / ESCREVER horas, " h e ", minutos, " min" /
-                         |
-                         ↓
-                      ( Fim )
+                      ( Início )
+                           |
+                           ↓
+            / Escreve: "Quantos minutos?" /
+                           |
+                           ↓
+           / int totalMinutos = ler valor /
+                           |
+                           ↓
+   [ int horas = totalMinutos div MINUTOS_POR_HORA ]
+                           |
+                           ↓
+ [ int minutos = totalMinutos resto MINUTOS_POR_HORA ]
+                           |
+                           ↓
+     / Escreve: horas, " h e ", minutos, " min" /
+                           |
+                           ↓
+                        ( Fim )
 ```
 
 Segue o percurso com o dedo, de cima para baixo. Começa no oval de início, passa pelos dois paralelogramos da pergunta e da leitura, faz as duas contas nos retângulos, mostra o resultado noutro paralelogramo e termina no oval de fim. É uma linha única, sem bifurcações, e é isso que significa uma estrutura sequencial.
 
-Agora compara figura a figura com o pseudocódigo. A cada instrução entre `INÍCIO` e `FIM` corresponde uma figura, pela mesma ordem e com o mesmo texto. As declarações de constantes e variáveis não têm figura, porque não são instruções executadas: dizem que dados existem, não o que se faz com eles.
+Agora compara figura a figura com o pseudocódigo. A cada linha do pseudocódigo corresponde uma figura, pela mesma ordem e com o mesmo texto, incluindo o tipo nas linhas onde as variáveis nascem. Há uma exceção: a linha `const MINUTOS_POR_HORA = 60` não tem figura. O fluxograma desenha o caminho que a execução percorre, passo a passo, e a constante não é um passo desse caminho. É uma regra do problema, que vale o mesmo em todas as figuras, do início ao fim. As linhas onde as variáveis nascem têm figura, porque fazem alguma coisa: recebem um valor de fora ou fazem uma conta.
 
 ### Passo 6: o trace, linha a linha
 
-Vais fazer o trace dos três casos de fronteira do contrato. A constante não tem coluna, porque vale 60 do princípio ao fim e nunca muda.
+Vais fazer o trace dos três casos de fronteira do contrato. A constante não tem coluna nem passo, porque vale 60 do princípio ao fim e nunca muda. O passo 1 é, por isso, a primeira linha depois do `const`.
 
 Primeiro caso: a pessoa escreve 60.
 
 | Passo | Instrução executada | totalMinutos | horas | minutos | Ecrã |
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
-| 1 | `ESCREVER "Quantos minutos?"` | sem valor | sem valor | sem valor | Quantos minutos? |
-| 2 | `LER totalMinutos` | 60 | sem valor | sem valor | a pessoa escreve 60 |
-| 3 | `horas ← totalMinutos DIV MINUTOS_POR_HORA` | 60 | 1 | sem valor | nada |
-| 4 | `minutos ← totalMinutos RESTO MINUTOS_POR_HORA` | 60 | 1 | 0 | nada |
-| 5 | `ESCREVER horas, " h e ", minutos, " min"` | 60 | 1 | 0 | 1 h e 0 min |
+| 1 | `Escreve: "Quantos minutos?"` | sem valor | sem valor | sem valor | Quantos minutos? |
+| 2 | `int totalMinutos = ler valor` | 60 | sem valor | sem valor | a pessoa escreve 60 |
+| 3 | `int horas = totalMinutos div MINUTOS_POR_HORA` | 60 | 1 | sem valor | nada |
+| 4 | `int minutos = totalMinutos resto MINUTOS_POR_HORA` | 60 | 1 | 0 | nada |
+| 5 | `Escreve: horas, " h e ", minutos, " min"` | 60 | 1 | 0 | 1 h e 0 min |
 
 Lê a tabela comparando cada linha com a de cima, que é o estado antes da instrução.
 
-No passo 1 nenhuma variável muda, porque `ESCREVER` não mexe no estado: só aparece a pergunta no ecrã.
+No passo 1 nenhuma variável muda, porque `Escreve:` não mexe no estado: só aparece a pergunta no ecrã.
 
-No passo 2, `totalMinutos` passa de "sem valor" para 60. É a única coluna que muda, porque o `LER` só guarda valor na variável que está à frente dele.
+No passo 2, `totalMinutos` nasce e passa de "sem valor" para 60. É a única coluna que muda, porque `ler valor` só guarda o valor na variável que está à esquerda do `=`.
 
-No passo 3 calcula-se o lado direito com o valor que `totalMinutos` tem nesse momento: `60 DIV 60`. O 60 cabe uma vez em 60, e por isso dá 1. Esse 1 é guardado em `horas`, que passa de "sem valor" para 1. `totalMinutos` continua a valer 60: usar o valor de uma variável numa conta não o altera.
+No passo 3 calcula-se o lado direito com o valor que `totalMinutos` tem nesse momento: `60 div 60`. O 60 cabe uma vez em 60, e por isso dá 1. Esse 1 é guardado em `horas`, que nasce neste passo e passa de "sem valor" para 1. `totalMinutos` continua a valer 60: usar o valor de uma variável numa conta não o altera.
 
-No passo 4 calcula-se `60 RESTO 60`. Depois de tirar uma hora de 60 minutos a 60 minutos, não sobra nada, e por isso dá 0. `minutos` passa de "sem valor" para 0.
+No passo 4 calcula-se `60 resto 60`. Depois de tirar uma hora de 60 minutos a 60 minutos, não sobra nada, e por isso dá 0. `minutos` nasce e passa de "sem valor" para 0.
 
 No passo 5 nenhuma variável muda, e aparece no ecrã o resultado, com os valores que as variáveis têm nesse momento.
 
@@ -409,24 +471,24 @@ Segundo caso: a pessoa escreve 59.
 | Passo | Instrução executada | totalMinutos | horas | minutos | Ecrã |
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
-| 1 | `ESCREVER "Quantos minutos?"` | sem valor | sem valor | sem valor | Quantos minutos? |
-| 2 | `LER totalMinutos` | 59 | sem valor | sem valor | a pessoa escreve 59 |
-| 3 | `horas ← totalMinutos DIV MINUTOS_POR_HORA` | 59 | 0 | sem valor | nada |
-| 4 | `minutos ← totalMinutos RESTO MINUTOS_POR_HORA` | 59 | 0 | 59 | nada |
-| 5 | `ESCREVER horas, " h e ", minutos, " min"` | 59 | 0 | 59 | 0 h e 59 min |
+| 1 | `Escreve: "Quantos minutos?"` | sem valor | sem valor | sem valor | Quantos minutos? |
+| 2 | `int totalMinutos = ler valor` | 59 | sem valor | sem valor | a pessoa escreve 59 |
+| 3 | `int horas = totalMinutos div MINUTOS_POR_HORA` | 59 | 0 | sem valor | nada |
+| 4 | `int minutos = totalMinutos resto MINUTOS_POR_HORA` | 59 | 0 | 59 | nada |
+| 5 | `Escreve: horas, " h e ", minutos, " min"` | 59 | 0 | 59 | 0 h e 59 min |
 
-A diferença para o primeiro caso está toda nos passos 3 e 4. O 60 não cabe nenhuma vez em 59, e por isso `59 DIV 60` dá 0. Como não se tirou nenhuma hora, sobram os 59 minutos inteiros, e `59 RESTO 60` dá 59. Repara que os minutos restantes ficaram em 59, o maior valor que o contrato permite, e não passaram de lá.
+A diferença para o primeiro caso está toda nos passos 3 e 4. O 60 não cabe nenhuma vez em 59, e por isso `59 div 60` dá 0. Como não se tirou nenhuma hora, sobram os 59 minutos inteiros, e `59 resto 60` dá 59. Repara que os minutos restantes ficaram em 59, o maior valor que o contrato permite, e não passaram de lá.
 
 Terceiro caso: a pessoa escreve 0.
 
 | Passo | Instrução executada | totalMinutos | horas | minutos | Ecrã |
 | ---: | --- | ---: | ---: | ---: | --- |
 | 0 | antes de começar | sem valor | sem valor | sem valor | nada |
-| 1 | `ESCREVER "Quantos minutos?"` | sem valor | sem valor | sem valor | Quantos minutos? |
-| 2 | `LER totalMinutos` | 0 | sem valor | sem valor | a pessoa escreve 0 |
-| 3 | `horas ← totalMinutos DIV MINUTOS_POR_HORA` | 0 | 0 | sem valor | nada |
-| 4 | `minutos ← totalMinutos RESTO MINUTOS_POR_HORA` | 0 | 0 | 0 | nada |
-| 5 | `ESCREVER horas, " h e ", minutos, " min"` | 0 | 0 | 0 | 0 h e 0 min |
+| 1 | `Escreve: "Quantos minutos?"` | sem valor | sem valor | sem valor | Quantos minutos? |
+| 2 | `int totalMinutos = ler valor` | 0 | sem valor | sem valor | a pessoa escreve 0 |
+| 3 | `int horas = totalMinutos div MINUTOS_POR_HORA` | 0 | 0 | sem valor | nada |
+| 4 | `int minutos = totalMinutos resto MINUTOS_POR_HORA` | 0 | 0 | 0 | nada |
+| 5 | `Escreve: horas, " h e ", minutos, " min"` | 0 | 0 | 0 | 0 h e 0 min |
 
 O 60 não cabe nenhuma vez em 0, e não sobra nada. O algoritmo não precisa de nenhum cuidado especial para o zero: as duas contas tratam-no sozinhas. Foi por isso que valeu a pena testá-lo. Nem sempre é assim, e há algoritmos que falham precisamente no zero.
 
@@ -450,7 +512,7 @@ Os quatro casos coincidem. O fluxograma tem as mesmas instruções pela mesma or
 Depois de desenhares o fluxograma em papel, vais reconstruí-lo numa aplicação de diagramas no computador, a que o professor indicar na aula. O processo é o mesmo em qualquer aplicação:
 
 1. Cria um diagrama novo e procura a biblioteca de figuras de fluxograma. Tem sempre o oval, o paralelogramo, o retângulo e o losango.
-2. Coloca as figuras de cima para baixo, pela ordem do papel, uma instrução por figura, com o texto escrito exatamente como no pseudocódigo.
+2. Coloca as figuras de cima para baixo, pela ordem do papel, uma instrução por figura, com o texto escrito exatamente como no pseudocódigo. A linha do `const` fica de fora, tal como no papel.
 3. Liga as figuras com setas, sempre no sentido da execução. Confirma que cada seta sai de uma figura e chega a outra, sem pontas soltas.
 4. Percorre o diagrama com o dedo no ecrã e compara-o, figura a figura, com o pseudocódigo.
 5. Guarda o ficheiro da aplicação e exporta o diagrama como imagem ou como PDF. Dá ao ficheiro um nome que diga o que ele contém, em minúsculas, com hífenes e sem acentos nem espaços, como `fluxograma-converter-minutos.png`.
@@ -459,51 +521,56 @@ O desenho em papel vem primeiro de propósito. No papel pensas no algoritmo. Na 
 
 ## Erros frequentes
 
-### Usar uma variável antes de ela ser lida
+### Usar uma variável antes da linha onde ela nasce
 
-Imagina que alguém escreveu o corpo do algoritmo com as contas antes da leitura:
+Imagina que alguém escreveu o algoritmo com as contas antes da leitura:
 
 ```text
-INÍCIO
-    horas ← totalMinutos DIV MINUTOS_POR_HORA
-    minutos ← totalMinutos RESTO MINUTOS_POR_HORA
-    ESCREVER "Quantos minutos?"
-    LER totalMinutos
-    ESCREVER horas, " h e ", minutos, " min"
-FIM
+const MINUTOS_POR_HORA = 60
+int horas = totalMinutos div MINUTOS_POR_HORA
+int minutos = totalMinutos resto MINUTOS_POR_HORA
+Escreve: "Quantos minutos?"
+int totalMinutos = ler valor
+Escreve: horas, " h e ", minutos, " min"
 ```
 
-Lido à pressa, parece ter tudo. O trace mostra o problema logo no primeiro passo: a conta de `horas` usa `totalMinutos`, e nesse momento a coluna de `totalMinutos` diz "sem valor". A conta está a ser feita com uma caixa vazia. O valor escrito pela pessoa só chega duas linhas depois, quando as contas já foram feitas, e não é usado em mais nenhuma conta até ao fim.
+Lido à pressa, parece ter tudo. O trace mostra o problema logo no primeiro passo: a conta de `horas` usa `totalMinutos`, e nesse momento a coluna de `totalMinutos` diz "sem valor". A conta está a ser feita com uma caixa que ainda nem existe. O valor escrito pela pessoa só chega na linha do `ler valor`, quando as duas contas já foram feitas, e não é usado em mais nenhuma conta até ao fim.
 
-Como se evita: antes de escreveres uma conta, pergunta-te de onde vem cada valor que ela usa. Tem de vir de um `LER` ou de uma atribuição que está acima dela.
+A forma que usamos ajuda a ver este erro mesmo antes do trace. `totalMinutos` nasce na linha do `int totalMinutos = ler valor`, que é a única com o tipo à frente. Qualquer linha acima dela que use `totalMinutos` está a usar uma variável que ainda não nasceu.
+
+Como se evita: antes de escreveres uma conta, pergunta-te de onde vem cada valor que ela usa. Tem de vir de uma leitura ou de uma atribuição que está acima dela.
 
 ### Fazer uma conta antes de ter todos os dados
 
 É um parente do erro anterior, e aparece quando o algoritmo lê mais do que um valor. Vê este bocado de um algoritmo que devia calcular a média de dois testes:
 
 ```text
-    LER teste1
-    media ← (teste1 + teste2) / 2
-    LER teste2
+float teste1 = ler valor
+float media = (teste1 + teste2) / 2
+float teste2 = ler valor
 ```
 
-A conta está no sítio certo em relação ao primeiro teste e no sítio errado em relação ao segundo. No momento da conta, `teste2` ainda não tem valor, e por isso a média é calculada com um dado que falta. No trace, a coluna de `teste2` diz "sem valor" na linha da conta e só muda na linha seguinte, quando já é tarde.
+As três variáveis são `float` porque as notas dos testes podem ter décimas, e a média também. A conta está no sítio certo em relação ao primeiro teste e no sítio errado em relação ao segundo. No momento da conta, `teste2` ainda não nasceu e não tem valor, e por isso a média é calculada com um dado que falta. No trace, a coluna de `teste2` diz "sem valor" na linha da conta e só muda na linha seguinte, quando já é tarde.
 
 Como se evita: numa sequência, leem-se primeiro todos os dados de que a conta precisa, e só depois se faz a conta. Uma boa regra é agrupar as leituras no início do algoritmo.
 
-### Usar `/` em vez de `DIV`
+### Usar `/` em vez de `div`
 
-Com `horas ← totalMinutos / MINUTOS_POR_HORA`, o caso de 135 minutos dá 2.25. É tentador ler isto como "2 horas e 25 minutos", e está errado. 2,25 horas são 2 horas e um quarto de hora, ou seja, 2 horas e 15 minutos. A parte decimal de um número de horas não são minutos: são frações de hora. Além disso, 2.25 é um real, e o contrato diz que as horas são um inteiro.
+Com `int horas = totalMinutos / MINUTOS_POR_HORA`, o caso de 135 minutos dá 2.25. É tentador ler isto como "2 horas e 25 minutos", e está errado. 2,25 horas são 2 horas e um quarto de hora, ou seja, 2 horas e 15 minutos. A parte decimal de um número de horas não são minutos: são frações de hora. Além disso, a própria linha contradiz-se: o `int` à frente de `horas` promete um número inteiro, que é o que o contrato pede, e a conta com `/` dá 2.25, um número com parte decimal.
 
-Como se evita: pergunta-te se o resultado pode ter parte decimal. Horas completas não podem, e por isso a conta certa é `DIV`.
+Como se evita: pergunta-te se o resultado pode ter parte decimal. Horas completas não podem, e por isso a conta certa é `div`.
 
-### Confundir texto com variável no `ESCREVER`
+### Confundir texto com variável no `Escreve:`
 
-`ESCREVER "horas"` mostra a palavra horas. `ESCREVER horas` mostra o valor da variável, por exemplo 2. Quem troca uma pela outra obtém um ecrã com palavras onde deviam estar números, ou com números sem nenhuma explicação à volta.
+`Escreve: "horas"` mostra a palavra horas. `Escreve: horas` mostra o valor da variável, por exemplo 2. Quem troca uma pela outra obtém um ecrã com palavras onde deviam estar números, ou com números sem nenhuma explicação à volta.
 
-### Usar `=` para atribuir, ou escrever a atribuição ao contrário
+### Trocar `=` por `==`, ou escrever a atribuição ao contrário
 
-`horas = totalMinutos DIV 60` pergunta se `horas` é igual à conta. Não guarda nada. `totalMinutos DIV 60 ← horas` tenta guardar um valor dentro de uma conta, o que não faz sentido. Na atribuição, a seta aponta para a variável que recebe o valor, e essa variável está sempre sozinha do lado esquerdo.
+`horas == totalMinutos div 60` pergunta se `horas` é igual à conta. Não guarda nada, e `horas` fica com o valor que tinha. Para dar um valor usa-se um só sinal: `horas = totalMinutos div 60`. `totalMinutos div 60 = horas` tenta guardar um valor dentro de uma conta, o que não faz sentido. Na atribuição, a variável que recebe o valor está sempre sozinha do lado esquerdo do `=`, e o valor vai sempre da direita para a esquerda.
+
+### Escrever o tipo outra vez
+
+Depois de `int horas = 2`, uma linha mais abaixo como `int horas = horas + 1` volta a escrever o tipo, e parece criar uma segunda variável `horas`. Quem lê fica sem saber se é a mesma caixa ou outra nova. O tipo só se escreve na linha onde a variável nasce. Daí para baixo escreve-se `horas = horas + 1`.
 
 ### Preencher o trace com o que se esperava
 
@@ -511,7 +578,7 @@ Quem já sabe que 60 minutos são 1 hora é tentado a escrever 1 na coluna das h
 
 ### Fluxograma que não corresponde ao pseudocódigo
 
-Os erros mais comuns no fluxograma são uma figura com a forma errada, como um `LER` dentro de um retângulo, uma instrução que existe no pseudocódigo e falta no desenho, e uma seta que não chega a lado nenhum. Todos se apanham da mesma maneira: percorrer o fluxograma com o dedo, ao lado do pseudocódigo, figura a figura e instrução a instrução.
+Os erros mais comuns no fluxograma são uma figura com a forma errada, como uma linha com `ler valor` dentro de um retângulo, uma instrução que existe no pseudocódigo e falta no desenho, e uma seta que não chega a lado nenhum. Todos se apanham da mesma maneira: percorrer o fluxograma com o dedo, ao lado do pseudocódigo, figura a figura e instrução a instrução.
 
 ## Verificar o que aprendeste
 
@@ -519,11 +586,12 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 
 - Consegues explicar a diferença entre uma variável e uma constante, e dar um exemplo de cada que não esteja neste guia.
 - Consegues escolher o tipo certo para um valor e justificar a escolha pelo que o valor representa.
-- Consegues explicar, com um exemplo teu, porque é que `contador ← contador + 1` faz sentido como atribuição e não faria sentido como pergunta.
+- Consegues explicar, com um exemplo teu, porque é que `contador = contador + 1` faz sentido como atribuição e não faria sentido como equação da matemática, e escrever a pergunta "contador é igual a 10?" com `==`.
+- Consegues dizer em que linha nasce cada variável de um algoritmo, e porque é que só essa linha leva o tipo.
 - Consegues prever o estado de duas variáveis depois de uma sequência de atribuições em que uma usa o valor da outra.
-- Consegues calcular à mão `DIV` e `RESTO` de dois inteiros e confirmar o resultado com a verificação do divisor vezes a divisão inteira mais o resto.
-- Consegues escrever o contrato da função `ABS` e usá-la numa atribuição.
-- Consegues escrever um algoritmo sequencial completo segundo a convenção desta disciplina, com constantes, variáveis declaradas com tipo, leituras, contas e escritas.
+- Consegues calcular à mão `div` e `resto` de dois inteiros e confirmar o resultado com a verificação do divisor vezes a divisão inteira mais o resto.
+- Consegues escrever o contrato da função `abs` e usá-la numa atribuição.
+- Consegues escrever um algoritmo sequencial completo na forma que usamos nas aulas, com constantes, variáveis com o tipo na linha onde nascem, leituras, contas e escritas, e escrever o mesmo algoritmo em frases claras que não deixem dúvidas.
 - Consegues desenhar o fluxograma desse algoritmo, primeiro no papel e depois na aplicação de diagramas, e exportá-lo com um nome de ficheiro correto.
 - Consegues fazer o trace completo de um algoritmo, linha a linha, para uma entrada que ninguém testou antes de ti.
 - Consegues mostrar, com casos de teste, que o teu pseudocódigo, o teu fluxograma e o teu trace dão os mesmos resultados, e que esses resultados são os previstos no contrato.
