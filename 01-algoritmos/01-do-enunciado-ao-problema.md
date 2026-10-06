@@ -55,7 +55,7 @@ O erro típico de quem começa é escrever passos vagos. "Junta farinha quanto b
 
 A **algoritmia** é o trabalho de pensar, escrever e verificar algoritmos. Não depende de nenhuma linguagem de programação: um algoritmo escreve-se em português, em passos numerados, em desenhos com setas ou numa notação própria que vais aprender no guia seguinte.
 
-A **programação** é o trabalho de passar um algoritmo para uma linguagem de programação, como C ou Python, que o computador consegue executar. Ao longo deste ano vais aprender as duas coisas, por esta ordem: primeiro algoritmos, depois C, depois Python.
+A **programação** é o trabalho de passar um algoritmo para uma linguagem de programação, como C ou Python, que o computador consegue executar. Ao longo deste ano vais aprender as duas coisas, por esta ordem: primeiro algoritmos, depois Python, depois C.
 
 A ordem não é por acaso. Se não sabes que passos resolvem um problema, nenhuma linguagem te ajuda, porque a linguagem só serve para escrever passos que já conheces. E um erro de raciocínio encontrado no papel custa cinco minutos a corrigir, enquanto o mesmo erro escondido no meio de um programa pode custar uma tarde. Por isso se diz que primeiro se resolve o problema e só depois se escreve o código.
 
@@ -387,6 +387,10 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues refazer a simulação dos Missionários e Canibais numa folha, sem olhar para a tabela, verificando a regra em cada travessia.
 - Consegues explicar porque é que, na travessia 6, a única escolha que faz avançar é levar de volta um missionário e um canibal.
 - Perante um enunciado ambíguo, consegues dizer que informação falta e construir o exemplo mais pequeno em que as duas leituras dão resultados diferentes.
+
+## Praticar
+
+Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md) deste tema. Tem cinco exercícios, do mais simples ao mais completo, e um desafio opcional com os Missionários e Canibais.
 
 ## O que vem a seguir
 

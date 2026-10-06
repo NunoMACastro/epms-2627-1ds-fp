@@ -18,7 +18,7 @@ No fim deves conseguir:
 - distinguir dar um valor a uma variável, com `=`, de perguntar se dois valores são iguais, com `==`;
 - usar os operadores aritméticos, incluindo a divisão inteira e o resto, e uma função predefinida como `abs`;
 - escrever um algoritmo sequencial completo em pseudocódigo, na forma que usamos nas aulas, ou em frases claras que não deixem dúvidas;
-- desenhar o mesmo algoritmo em fluxograma, primeiro em papel e depois numa aplicação de diagramas;
+- ler o mesmo algoritmo em fluxograma e, se o professor o indicar, desenhá-lo em papel e numa aplicação de diagramas;
 - executar um algoritmo à mão numa tabela de trace, instrução a instrução, e comparar o estado antes e depois de cada atribuição;
 - confirmar que o pseudocódigo, o fluxograma e o trace dão os mesmos resultados nos mesmos casos de teste.
 
@@ -323,6 +323,8 @@ Um fluxograma bem feito cumpre sempre estas regras:
 
 Neste guia só vais usar o oval, o paralelogramo e o retângulo, ligados em linha reta, porque os algoritmos sequenciais nunca escolhem entre dois caminhos. O losango fica apresentado porque faz parte da simbologia, e entra em uso no guia seguinte.
 
+Nesta disciplina, os fluxogramas são para saberes o que são e como se leem: o que quer dizer cada figura, como se segue o caminho com o dedo e como se compara um fluxograma com o pseudocódigo. Desenhar fluxogramas, no papel ou numa aplicação, é uma parte opcional, que só fazes quando o professor o indicar. O [laboratório deste tema](02-estado-sequencia-representacoes-laboratorio.md) é essa parte opcional: ensina, passo a passo, a desenhar fluxogramas no diagrams.net, uma aplicação que se usa no browser, sem criar conta.
+
 ## Tabela de trace
 
 Uma **tabela de trace** é uma tabela onde se executa um algoritmo à mão, instrução a instrução, registando em cada linha o valor de todas as variáveis depois dessa instrução. Em inglês chama-se trace table, e vais ouvir muitas vezes dizer apenas "fazer o trace".
@@ -507,9 +509,9 @@ Tens agora três representações do mesmo algoritmo: o pseudocódigo, o fluxogr
 
 Os quatro casos coincidem. O fluxograma tem as mesmas instruções pela mesma ordem que o pseudocódigo, e por isso percorrê-lo com o dedo, com os mesmos valores, produz as mesmas linhas de trace. Se algum caso não coincidisse, o passo seguinte seria procurar no trace a primeira linha onde um valor ficou diferente do esperado.
 
-### Passo 8: desenhar o fluxograma na aplicação de diagramas
+### Passo 8: desenhar o fluxograma na aplicação de diagramas (opcional)
 
-Depois de desenhares o fluxograma em papel, vais reconstruí-lo numa aplicação de diagramas no computador, a que o professor indicar na aula. O processo é o mesmo em qualquer aplicação:
+Este passo é opcional: só o fazes quando o professor o indicar, e o [laboratório deste tema](02-estado-sequencia-representacoes-laboratorio.md) guia-te nele, clique a clique. Depois de desenhares o fluxograma em papel, reconstrói-lo numa aplicação de diagramas no computador, a que o professor indicar na aula. O processo é o mesmo em qualquer aplicação:
 
 1. Cria um diagrama novo e procura a biblioteca de figuras de fluxograma. Tem sempre o oval, o paralelogramo, o retângulo e o losango.
 2. Coloca as figuras de cima para baixo, pela ordem do papel, uma instrução por figura, com o texto escrito exatamente como no pseudocódigo. A linha do `const` fica de fora, tal como no papel.
@@ -592,10 +594,14 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues calcular à mão `div` e `resto` de dois inteiros e confirmar o resultado com a verificação do divisor vezes a divisão inteira mais o resto.
 - Consegues escrever o contrato da função `abs` e usá-la numa atribuição.
 - Consegues escrever um algoritmo sequencial completo na forma que usamos nas aulas, com constantes, variáveis com o tipo na linha onde nascem, leituras, contas e escritas, e escrever o mesmo algoritmo em frases claras que não deixem dúvidas.
-- Consegues desenhar o fluxograma desse algoritmo, primeiro no papel e depois na aplicação de diagramas, e exportá-lo com um nome de ficheiro correto.
+- Consegues ler o fluxograma desse algoritmo e compará-lo, figura a figura, com o pseudocódigo. Se o professor tiver indicado o laboratório, consegues também desenhá-lo na aplicação de diagramas e exportá-lo com um nome de ficheiro correto.
 - Consegues fazer o trace completo de um algoritmo, linha a linha, para uma entrada que ninguém testou antes de ti.
 - Consegues mostrar, com casos de teste, que o teu pseudocódigo, o teu fluxograma e o teu trace dão os mesmos resultados, e que esses resultados são os previstos no contrato.
 - Consegues dar o teu algoritmo a um colega para ele o executar à letra, e perceber, pelo que ele fizer, se alguma instrução ficou ambígua.
+
+## Praticar
+
+Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md) deste tema. Tem seis exercícios, um para cada ideia do guia, e um desafio opcional. Se o professor o indicar, faz também o [laboratório](02-estado-sequencia-representacoes-laboratorio.md), onde desenhas fluxogramas no computador.
 
 ## O que vem a seguir
 

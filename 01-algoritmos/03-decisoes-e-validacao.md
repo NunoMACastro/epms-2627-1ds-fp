@@ -16,7 +16,7 @@ No fim deves conseguir:
 
 - escrever condições com operadores de comparação e prever se são verdadeiras ou falsas para um valor concreto;
 - juntar condições com `e`, `ou` e `não`, e saber qual usar em cada situação;
-- escrever seleções simples, compostas e encadeadas, em pseudocódigo e em fluxograma, usando a indentação para mostrar o que está dentro de cada caso;
+- escrever seleções simples, compostas e encadeadas em pseudocódigo, usando a indentação para mostrar o que está dentro de cada caso, e ler o seu fluxograma;
 - escrever um intervalo de valores como condição, incluindo ou excluindo os extremos conforme o enunciado;
 - verificar que as condições de uma seleção não se sobrepõem e cobrem todos os casos;
 - encontrar as fronteiras de um problema e escolher casos de teste abaixo, na fronteira e acima dela;
@@ -190,6 +190,8 @@ No fluxograma, a seleção é o losango. Tem uma entrada e duas saídas, uma mar
 ```
 
 Numa seleção simples, sem `Senão`, o caminho do `Não` vai diretamente para o ponto de junção, sem passar por nenhuma figura. A cada um destes caminhos chama-se **ramo**.
+
+Tal como no guia anterior, os fluxogramas são para saberes ler: seguir os caminhos com o dedo e compará-los com o pseudocódigo. Desenhá-los numa aplicação é a parte opcional do [laboratório deste tema](03-decisoes-e-validacao-laboratorio.md), que só fazes quando o professor o indicar.
 
 ## Seleção encadeada
 
@@ -568,7 +570,7 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues dizer se uma comparação é verdadeira ou falsa para um valor concreto, incluindo os casos em que o valor é igual ao limite.
 - Consegues preencher de memória as tabelas de verdade do `e` e do `ou`, e explicar a diferença entre o `ou` dos algoritmos e o "ou" de "sopa ou sobremesa".
 - Consegues escrever o contrário de uma comparação, pondo o limite do lado certo.
-- Consegues escrever em pseudocódigo uma seleção simples, uma composta e uma encadeada, com a indentação certa, e desenhar o fluxograma de cada uma.
+- Consegues escrever em pseudocódigo uma seleção simples, uma composta e uma encadeada, com a indentação certa, e ler o fluxograma de cada uma.
 - Consegues explicar, com um exemplo, como muda o que um algoritmo faz quando uma linha passa para dentro ou para fora do bloco de um `Se`.
 - Consegues escrever uma decisão em frases claras que digam o que acontece em cada caso, incluindo quando um valor não serve.
 - Consegues explicar, com um exemplo, o que acontece numa seleção encadeada quando duas condições são verdadeiras para o mesmo valor.
@@ -579,8 +581,12 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Perante uma versão errada de um algoritmo de decisão, consegues encontrar a entrada que mostra o erro e explicar qual foi a condição responsável.
 - Perante um enunciado com uma tabela de valores, consegues usar só as regras que o enunciado dá, sem acrescentar regras que conheces de fora.
 
+## Praticar
+
+Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema. Tem seis exercícios, do mais simples ao mais completo, e um desafio opcional. Se o professor o indicar, faz também o [laboratório](03-decisoes-e-validacao-laboratorio.md), onde desenhas fluxogramas com decisões no computador.
+
 ## O que vem a seguir
 
-No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem. Se a pessoa se enganou, tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida, mas para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No próximo guia do percurso vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
+No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem. Se a pessoa se enganou, tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida, mas para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No [próximo guia](04-repeticao-e-arrays.md) do percurso vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
 
 ![Rodapé](../imagens/rodape.png)
