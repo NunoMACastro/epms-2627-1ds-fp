@@ -386,6 +386,91 @@ Se só precisas dos valores, para os somar, contar ou mostrar, usa `Para cada`. 
 
 Se precisas da posição, usa `Para` com o índice. Precisas dela quando queres dizer em que posição está um valor ("o jogo 3 teve 20 pontos"), quando queres mudar um elemento do array (`pontuacoes[i] = 0`), ou quando queres comparar um elemento com outro do mesmo array, como o seguinte (`pontuacoes[i + 1]`).
 
+### O `Para cada` não muda o array
+
+Há uma razão para a regra da secção anterior, e vale a pena vê-la com calma, porque engana quase toda a gente da primeira vez.
+
+Em cada volta do `Para cada`, a variável do ciclo recebe uma **cópia** do valor do elemento, e não o próprio elemento. Mudar a variável muda a cópia; o array fica como estava. À variável que o `Para cada` vai enchendo chama-se **variável de iteração**, e a esta forma de percorrer um array, em que cada volta trabalha com uma cópia do valor, chama-se **percorrer por valor**. Percorrer com o `Para` e o índice, em que cada volta trabalha diretamente na posição do array, chama-se **percorrer por índice**.
+
+O exemplo seguinte mostra a diferença. O professor decidiu dar mais um valor a todas as notas de um teste, e o algoritmo tem de aumentar 1 a cada nota do array.
+
+#### Primeira tentativa, com `Para cada`
+
+```text
+notas = [12, 8, 15]
+Para cada nota em notas
+    nota = nota + 1
+Escreve: notas[0], " ", notas[1], " ", notas[2]
+```
+
+Antes de leres o trace, prevê o que aparece no ecrã. O trace tem uma coluna para a `nota` e outra para o array `notas`, lado a lado:
+
+| Passo | Instrução executada | nota | notas | Ecrã |
+| ---: | --- | ---: | --- | --- |
+| 0 | antes de começar | sem valor | sem valor | nada |
+| 1 | `notas = [12, 8, 15]` | sem valor | [12, 8, 15] | nada |
+| 2 | `Para cada`, 1.ª volta: `nota` recebe uma cópia de `notas[0]` | 12 | [12, 8, 15] | nada |
+| 3 | `nota = nota + 1` | 13 | [12, 8, 15] | nada |
+| 4 | `Para cada`, 2.ª volta: `nota` recebe uma cópia de `notas[1]` | 8 | [12, 8, 15] | nada |
+| 5 | `nota = nota + 1` | 9 | [12, 8, 15] | nada |
+| 6 | `Para cada`, 3.ª volta: `nota` recebe uma cópia de `notas[2]` | 15 | [12, 8, 15] | nada |
+| 7 | `nota = nota + 1` | 16 | [12, 8, 15] | nada |
+| 8 | `Para cada`: não há mais elementos, o ciclo termina | 16 | [12, 8, 15] | nada |
+| 9 | `Escreve:` das três notas | 16 | [12, 8, 15] | 12 8 15 |
+
+A coluna `nota` muda três vezes. A coluna `notas` nunca muda. O algoritmo não tem nenhum erro de escrita, corre até ao fim, e não fez o que se pedia: as notas continuam 12, 8 e 15.
+
+Faz esta pergunta: no passo 3, a `nota` passou a valer 13; qual das três notas do array passou a 13? Nenhuma. A `nota` é uma cópia, e uma cópia não sabe de que posição veio. Por isso, mesmo que quisesse, não conseguia mudar o elemento certo. Para mudar um elemento do array, o algoritmo precisa de saber a sua posição, e isso é o índice.
+
+#### A versão certa, com o índice
+
+```text
+const N_NOTAS = 3
+
+notas = [12, 8, 15]
+Para i = 0, i < N_NOTAS, i++
+    notas[i] = notas[i] + 1
+Escreve: notas[0], " ", notas[1], " ", notas[2]
+```
+
+Aqui não há variável `nota`. Em cada volta, o algoritmo lê o elemento da posição `i`, soma-lhe 1 e escreve o resultado na mesma posição:
+
+| Passo | Instrução executada | i | Condição e resultado | notas | Ecrã |
+| ---: | --- | ---: | --- | --- | --- |
+| 0 | antes de começar | sem valor | nenhuma | sem valor | nada |
+| 1 | `notas = [12, 8, 15]` | sem valor | nenhuma | [12, 8, 15] | nada |
+| 2 | `i = 0` | 0 | nenhuma | [12, 8, 15] | nada |
+| 3 | teste do `Para` | 0 | `0 < 3` dá `true` | [12, 8, 15] | nada |
+| 4 | `notas[i] = notas[i] + 1`, ou seja 12 + 1 | 0 | nenhuma | [13, 8, 15] | nada |
+| 5 | `i++` | 1 | nenhuma | [13, 8, 15] | nada |
+| 6 | teste do `Para` | 1 | `1 < 3` dá `true` | [13, 8, 15] | nada |
+| 7 | `notas[i] = notas[i] + 1`, ou seja 8 + 1 | 1 | nenhuma | [13, 9, 15] | nada |
+| 8 | `i++` | 2 | nenhuma | [13, 9, 15] | nada |
+| 9 | teste do `Para` | 2 | `2 < 3` dá `true` | [13, 9, 15] | nada |
+| 10 | `notas[i] = notas[i] + 1`, ou seja 15 + 1 | 2 | nenhuma | [13, 9, 16] | nada |
+| 11 | `i++` | 3 | nenhuma | [13, 9, 16] | nada |
+| 12 | teste do `Para` | 3 | `3 < 3` dá `false`: o ciclo termina | [13, 9, 16] | nada |
+| 13 | `Escreve:` das três notas | 3 | nenhuma | [13, 9, 16] | 13 9 16 |
+
+Agora é a coluna `notas` que muda, um elemento por volta. Repara no passo 12, o teste que dá falso: é ele que faz o ciclo dar exatamente três voltas, uma por cada índice válido, 0, 1 e 2. Quando `i` chega a 3, o ciclo termina sem nunca usar `notas[3]`, que não existe.
+
+#### Usar o valor como se fosse a posição
+
+Quem percebe que é preciso o array, mas continua com o `Para cada`, escreve às vezes isto:
+
+```text
+Para cada nota em notas
+    notas[nota] = nota + 1
+```
+
+Na primeira volta, a `nota` vale 12, e o algoritmo tenta escrever em `notas[12]`. Num array com três elementos, os índices válidos são 0, 1 e 2: o 12 é um índice fora do array. O erro está em usar o valor de um elemento como se fosse a sua posição. São duas coisas diferentes: em `notas = [12, 8, 15]`, o elemento de índice 0 vale 12.
+
+#### A regra prática
+
+Quando só precisas de ler os elementos, para os somar, contar, comparar ou mostrar, percorre por valor, com o `Para cada`. Quando precisas de mudar os elementos do array, percorre por índice, com o `Para` e o índice.
+
+Esta regra vale para arrays de números e de textos, como os deste guia. Num array de arrays, a variável do `Para cada` não recebe uma cópia de cada linha, mas a própria linha, e a conversa é outra: vais vê-la em Python, quando aprenderes o que é uma referência. Até lá, sempre que quiseres mudar alguma coisa num array, usa o índice, e a dúvida não se põe.
+
 ## Contadores e acumuladores
 
 Um **padrão** é uma forma de resolver um pequeno problema que aparece vezes sem conta, em algoritmos diferentes. Os padrões desta secção e das seguintes vão aparecer em quase todos os algoritmos que escreveres até ao fim do ano.
@@ -797,6 +882,10 @@ Trocar `<` por `<=`, ou começar em 0 em vez de 1. `Para i = 0, i <= 4, i++` dá
 
 Num array com 4 elementos, `Para i = 0, i <= 4, i++` chega a `pontuacoes[4]`, que não existe. O último índice válido é o número de elementos menos 1, e por isso a condição é `i < 4`. O erro aparece sempre na última volta, e é aí que se testa.
 
+
+### Mudar a variável do `Para cada` para mudar o array
+
+`Para cada nota em notas` seguido de `nota = nota + 1`. A variável de iteração recebe uma cópia de cada elemento, e mudá-la não muda o array. Para mudar os elementos, percorre por índice: `notas[i] = notas[i] + 1`. Ver a secção "O `Para cada` não muda o array".
 ### O contador ou o acumulador inicializado dentro do ciclo
 
 `int total = 0` dentro do corpo faz o total recomeçar em cada volta, e no fim fica só o último valor. Contadores e acumuladores inicializam-se antes do ciclo.
@@ -829,6 +918,7 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 - Consegues escolher entre `Enquanto` e `Para` e justificar a escolha.
 - Consegues criar um array, dizer o elemento de um índice e qual é o último índice válido, e explicar o que é um índice fora do array.
 - Consegues percorrer um array com `Para` e com `Para cada`, e explicar quando é preciso o índice.
+- Consegues explicar porque é que mudar a variável de um `Para cada` não muda o array, e mostrá-lo com uma tabela de trace com a variável e o array lado a lado.
 - Consegues usar um contador e um acumulador no mesmo ciclo e calcular uma média sem dividir por zero.
 - Consegues escrever um ciclo com sentinela, com a leitura antecipada, e escolher uma sentinela que não seja um dado possível.
 - Consegues escrever uma validação repetida e dizer o que se sabe sobre o valor depois do ciclo.
