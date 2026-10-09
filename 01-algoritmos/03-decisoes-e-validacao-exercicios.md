@@ -98,7 +98,7 @@ Usa só as regras da tabela. Não acrescentes descontos, arredondamentos nem out
 
 a) Desenha a reta dos números de cópias, como no passo 3 do guia, e marca as regiões e as fronteiras.
 
-b) Escreve a tabela de casos de teste, com o resultado esperado calculado à mão. Para cada fronteira, testa os dois valores que ficam um de cada lado dela, como o 10 e o 11.
+b) Escreve a tabela de casos de teste, com o resultado esperado calculado à mão. Para cada fronteira, segue a regra do guia: testa o valor imediatamente abaixo, o próprio valor da fronteira e o valor imediatamente acima. Na fronteira entre 10 e 11, por exemplo, o valor da fronteira é o 10, o último número de cópias que ainda custa 0.10 euros cada, e os casos são o 9, o 10 e o 11.
 
 c) Escreve o algoritmo em pseudocódigo, ou em frases claras. Usa constantes para os preços e para os limites.
 

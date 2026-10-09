@@ -2,8 +2,8 @@
 
 # Fundamentos de Programação, 10.º ano de Desenvolvimento de Software
 
-Materiais da disciplina, publicados à medida que as aulas avançam. Aqui só está
-o que já foi dado ou o que vai ser usado na aula seguinte.
+Materiais da disciplina, publicados quando ficam prontos. Podes ler à frente do
+que já foi dado nas aulas.
 
 ## Como está organizado
 
@@ -41,9 +41,11 @@ As resoluções não estão neste repositório. São trabalhadas na aula.
 
 ## Estado atual
 
-Já estão publicados os três primeiros guias de algoritmos, em `01-algoritmos/`.
-O ficheiro [01-algoritmos/README.md](01-algoritmos/README.md) diz o que cada um
-ensina e por que ordem se leem. As outras pastas aparecem à medida que cada aula
+Já estão publicados, em `01-algoritmos/`, os cinco guias de algoritmos, cada um
+com a sua ficha de exercícios, e os laboratórios de fluxogramas do segundo, do
+terceiro e do quarto guias. O ficheiro
+[01-algoritmos/README.md](01-algoritmos/README.md) diz o que cada guia ensina e
+por que ordem se leem. As outras pastas aparecem à medida que cada aula
 é dada, pela ordem acima.
 
 ![Rodapé](imagens/rodape.png)

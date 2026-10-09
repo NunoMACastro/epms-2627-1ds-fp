@@ -30,7 +30,7 @@ Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arr
 
 ## Uma forma de escrever algoritmos
 
-Já viste que o português permite frases como "espera um bocado", que parecem instruções e não são. Uma linguagem de programação, como C ou Python, não tem esse problema: cada instrução tem um único significado. Mas tem outro, para quem está a começar: obriga a respeitar regras de escrita muito rígidas, e um ponto e vírgula esquecido impede o programa de funcionar, mesmo que o raciocínio esteja certo.
+Já viste que o português permite frases como "espera um bocado", que cada pessoa executa à sua maneira, porque não dizem quanto tempo é um bocado. Uma linguagem de programação, como C ou Python, não tem esse problema: cada instrução tem um único significado. Mas tem outro, para quem está a começar: obriga a respeitar regras de escrita muito rígidas, e um ponto e vírgula esquecido impede o programa de funcionar, mesmo que o raciocínio esteja certo.
 
 O **pseudocódigo** fica a meio caminho. É texto, escrito com um vocabulário pequeno e sempre igual, que toda a turma lê da mesma maneira. Não é uma linguagem de programação: não há nenhum computador a ler o teu pseudocódigo, e por isso não há erros de escrita que o impeçam de funcionar. Serve para escreveres depressa e sem ambiguidades o raciocínio que resolve o problema, com a tua atenção no raciocínio e não na pontuação.
 
@@ -89,7 +89,7 @@ Repara que no pseudocódigo a parte decimal de um número se separa com um ponto
 
 Escolher o tipo é uma decisão com consequências, e decide-se pelo que o valor representa. Um número de minutos, de caixas ou de pessoas é `int`, porque não existem 2,5 pessoas. Um peso ou uma média é `float`. Um nome ou uma mensagem é `string`. A resposta a uma pergunta de sim ou não, como "a nota é positiva?", é `bool`. Vais usar muito o tipo `bool` no guia seguinte, quando o algoritmo tiver de tomar decisões.
 
-A confusão mais frequente é entre o número `12` e o texto `"12"`. No papel parecem iguais e não são. Com o número podes fazer contas. Com o texto não: é uma sequência de dois caracteres, o 1 e o 2, tal como `"ab"` é uma sequência de duas letras. Juntar o texto `"12"` com o texto `"3"` dá `"123"`, e não 15.
+A confusão mais frequente é entre o número `12` e o texto `"12"`. No papel escrevem-se com os mesmos dois algarismos, mas são de tipos diferentes, `int` e `string`, e portam-se de maneira diferente. Com o número podes fazer contas. Com o texto não: é uma sequência de dois caracteres, o 1 e o 2, tal como `"ab"` é uma sequência de duas letras. Juntar o texto `"12"` com o texto `"3"` dá `"123"`, e não 15.
 
 ## Estado
 
@@ -443,7 +443,7 @@ Agora compara figura a figura com o pseudocódigo. A cada linha do pseudocódigo
 
 ### Passo 6: o trace, linha a linha
 
-Vais fazer o trace dos três casos de fronteira do contrato. A constante não tem coluna nem passo, porque vale 60 do princípio ao fim e nunca muda. O passo 1 é, por isso, a primeira linha depois do `const`.
+Vais fazer o trace dos três casos do contrato que não são o caso normal: o 60 e o 59, que ficam dos dois lados do sítio onde a resposta muda, e o 0, o valor mais pequeno permitido. A constante não tem coluna nem passo, porque vale 60 do princípio ao fim e nunca muda. O passo 1 é, por isso, a primeira linha depois do `const`.
 
 Primeiro caso: a pessoa escreve 60.
 

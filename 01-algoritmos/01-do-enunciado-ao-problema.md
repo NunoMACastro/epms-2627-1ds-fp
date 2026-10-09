@@ -49,7 +49,7 @@ Usas algoritmos todos os dias sem lhes chamar isso. Uma receita de bolo é um al
 
 A forma mais honesta de testar se um conjunto de passos é mesmo um algoritmo é dá-lo a outra pessoa, que não sabe o que estás a pensar, e ver se ela chega ao mesmo resultado que tu. Se a pessoa tiver de te perguntar alguma coisa, há um passo que não está claro.
 
-O erro típico de quem começa é escrever passos vagos. "Junta farinha quanto baste", "espera um bocado", "vira na rua do costume" parecem instruções e não são. Quanto é "quanto baste"? Quanto tempo é "um bocado"? Qual é "a rua do costume"? Para quem escreveu, a resposta é óbvia, porque a tem na cabeça. Para quem executa, não há resposta nenhuma. Um passo que depende do que está na cabeça de quem o escreveu não é um passo de algoritmo.
+O erro típico de quem começa é escrever passos vagos. "Junta farinha quanto baste", "espera um bocado", "vira na rua do costume" têm a forma de instruções, mas nenhuma diz exatamente o que fazer. Quanto é "quanto baste"? Quanto tempo é "um bocado"? Qual é "a rua do costume"? Para quem escreveu, a resposta é óbvia, porque a tem na cabeça. Para quem executa, não há resposta nenhuma. Um passo que depende do que está na cabeça de quem o escreveu não é um passo de algoritmo.
 
 ## Algoritmia e programação
 
@@ -61,7 +61,7 @@ A ordem não é por acaso. Se não sabes que passos resolvem um problema, nenhum
 
 ## Enunciado, problema e solução
 
-Estas três palavras parecem sinónimas e não são. Confundi-las é a origem de muitos trabalhos bem feitos que resolvem a coisa errada.
+Estas três palavras usam-se no dia a dia umas pelas outras, mas cada uma nomeia uma coisa diferente. Confundi-las é a origem de muitos trabalhos bem feitos que resolvem a coisa errada.
 
 O **enunciado** é o texto que te dão: a descrição da situação, escrita por alguém, com a linguagem e os pormenores que essa pessoa escolheu.
 

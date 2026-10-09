@@ -206,7 +206,7 @@ Senão
     instruções para quando todas as condições anteriores são falsas
 ```
 
-O funcionamento tem três regras, e as três são importantes:
+O funcionamento tem três regras:
 
 1. As condições avaliam-se por ordem, de cima para baixo.
 2. A primeira condição verdadeira ganha: executa-se o seu bloco e salta-se para o fim da cadeia, a primeira linha a seguir ao último bloco. As condições que estão abaixo dela nem chegam a ser avaliadas.
@@ -286,7 +286,7 @@ No dia a dia estás rodeado de validações. Um formulário de inscrição que n
 
 O contrato é o que diz o que é válido. Por isso a validação começa sempre por reler o contrato e transformar cada limite numa condição. E a validação vem sempre antes do resto: não faz sentido calcular, classificar ou decidir com um valor que ainda não se sabe se é aceitável.
 
-Há um limite ao que se valida nesta fase do percurso. Assume-se que, numa linha como `int nota = ler valor`, a pessoa escreve sempre um número inteiro. O que fazer quando alguém escreve letras, ou um número com casas decimais, é um problema que vais tratar quando passares para a linguagem C.
+Há um limite ao que se valida nesta fase do percurso. Assume-se que, numa linha como `int nota = ler valor`, a pessoa escreve sempre um número inteiro. O que fazer quando alguém escreve letras, ou um número com casas decimais, é um problema que vais tratar quando passares para o Python.
 
 ## Exemplo guiado: validar e classificar uma nota
 
@@ -319,15 +319,17 @@ A reta mostra quatro regiões e três fronteiras. Verifica as duas propriedades 
 
 ### Passo 4: escolher os casos de teste e prever os resultados
 
-Para cada fronteira escolhem-se os vizinhos dos dois lados. Na fronteira do limiar acrescenta-se ainda o valor acima, pela razão que viste na teoria. Os resultados esperados escrevem-se agora, antes de haver algoritmo, a partir do enunciado:
+Para cada fronteira aplica-se a regra que viste na teoria: o valor imediatamente abaixo, o próprio valor da fronteira e o valor imediatamente acima. O valor de cada fronteira é o limite que o enunciado dá: o 0 e o 20, que são os extremos da escala, e o 10, que é o limiar. Os resultados esperados escrevem-se agora, antes de haver algoritmo, a partir do enunciado:
 
 | Nota | Resultado esperado | Porque é que este caso foi escolhido |
 | ---: | --- | --- |
 | -1 | Nota inválida | Imediatamente abaixo da escala |
 | 0 | Negativa | O extremo de baixo da escala, que é válido |
+| 1 | Negativa | Imediatamente acima do extremo de baixo da escala |
 | 9 | Negativa | Imediatamente abaixo do limiar |
 | 10 | Positiva | O próprio limiar, que o enunciado diz ser positiva |
 | 11 | Positiva | Imediatamente acima do limiar |
+| 19 | Positiva | Imediatamente abaixo do extremo de cima da escala |
 | 20 | Positiva | O extremo de cima da escala, que é válido |
 | 21 | Nota inválida | Imediatamente acima da escala |
 
@@ -474,31 +476,33 @@ Com a nota 21, acima da escala:
 
 Aqui a primeira condição é verdadeira, executa-se o seu bloco e o algoritmo salta para o fim da cadeia. A condição do `Senão se` nunca é avaliada. Se fosse, `21 >= 10` daria verdadeiro, e é precisamente por ela não ser avaliada que a nota 21 não aparece como positiva.
 
-Os outros cinco casos seguem o mesmo raciocínio. Na tabela seguinte, cada linha resume o trace de uma entrada: o valor de cada comparação, o ramo por onde a execução seguiu e o que apareceu no ecrã.
+Os outros sete casos seguem o mesmo raciocínio. Na tabela seguinte, cada linha resume o trace de uma entrada: o valor de cada comparação, o ramo por onde a execução seguiu e o que apareceu no ecrã.
 
 | nota | `nota < NOTA_MINIMA` | `nota > NOTA_MAXIMA` | Validação (ou) | `nota >= LIMIAR_POSITIVA` | Ramo executado | Ecrã |
 | ---: | --- | --- | --- | --- | --- | --- |
 | -1 | `true` | `false` | `true` | não é avaliada | bloco do `Se` | Nota inválida |
 | 0 | `false` | `false` | `false` | `false` | bloco do `Senão` | Negativa |
+| 1 | `false` | `false` | `false` | `false` | bloco do `Senão` | Negativa |
 | 9 | `false` | `false` | `false` | `false` | bloco do `Senão` | Negativa |
 | 10 | `false` | `false` | `false` | `true` | bloco do `Senão se` | Positiva |
 | 11 | `false` | `false` | `false` | `true` | bloco do `Senão se` | Positiva |
+| 19 | `false` | `false` | `false` | `true` | bloco do `Senão se` | Positiva |
 | 20 | `false` | `false` | `false` | `true` | bloco do `Senão se` | Positiva |
 | 21 | `false` | `true` | `true` | não é avaliada | bloco do `Se` | Nota inválida |
 
 Vale a pena explicar por palavras os casos de fronteira, porque é essa explicação que mostra que percebeste a decisão, e não apenas que acertaste no resultado.
 
-O 0 é negativa, e não inválida, porque `0 < 0` é falso: zero não é menor do que zero. Pertence à escala, a validação deixa-o passar, e depois `0 >= 10` é falso, pelo que cai no `Senão`. O -1 é inválido porque `-1 < 0` é verdadeiro.
+O 0 é negativa, e não inválida, porque `0 < 0` é falso: zero não é menor do que zero. Pertence à escala, a validação deixa-o passar, e depois `0 >= 10` é falso, pelo que cai no `Senão`. O -1 é inválido porque `-1 < 0` é verdadeiro. O 1, do lado de dentro da escala, é negativa pelo mesmo caminho do 0, e confirma que a validação deixa passar as notas logo acima do extremo.
 
 O 10 é positiva, e não negativa, porque o operador é `>=` e não `>`. `10 >= 10` é verdadeiro. O 9 é negativa porque `9 >= 10` é falso.
 
-O 20 é positiva, e não inválida, porque `20 > 20` é falso: vinte não é maior do que vinte. O 21 é inválido porque `21 > 20` é verdadeiro.
+O 20 é positiva, e não inválida, porque `20 > 20` é falso: vinte não é maior do que vinte. O 21 é inválido porque `21 > 20` é verdadeiro. O 19, do lado de dentro da escala, é positiva pelo mesmo caminho do 20, e confirma que a validação deixa passar as notas logo abaixo do extremo.
 
 Em todas as fronteiras, a decisão é tomada por um único operador, e a diferença entre o operador com igual e o operador sem igual é exatamente o valor da fronteira.
 
 ### Passo 10: comparar com o previsto
 
-Compara a coluna "Ecrã" da tabela anterior com a coluna "Resultado esperado" da tabela do passo 4. Coincidem nos sete casos. O algoritmo cumpre o contrato em todas as fronteiras e em todas as regiões da reta. Se algum caso não coincidisse, o trace mostraria qual foi a condição que deu um resultado diferente do que devia, e é essa condição que se corrige.
+Compara a coluna "Ecrã" da tabela anterior com a coluna "Resultado esperado" da tabela do passo 4. Coincidem nos nove casos. O algoritmo cumpre o contrato em todas as fronteiras e em todas as regiões da reta. Se algum caso não coincidisse, o trace mostraria qual foi a condição que deu um resultado diferente do que devia, e é essa condição que se corrige.
 
 ## Erros frequentes
 
@@ -506,7 +510,7 @@ Os erros desta secção são versões erradas do exemplo guiado. Para cada um va
 
 ### Limite do limiar sem o igual
 
-Se a condição de positiva for `nota > LIMIAR_POSITIVA`, a nota 10 aparece como negativa, quando o enunciado diz que é positiva. A entrada que demonstra o erro é o 10, e só o 10: com 9 e com 11 as duas versões dão o mesmo resultado. É o exemplo perfeito de um erro que só se encontra testando o valor da própria fronteira.
+Se a condição de positiva for `nota > LIMIAR_POSITIVA`, a nota 10 aparece como negativa, quando o enunciado diz que é positiva. A entrada que demonstra o erro é o 10, e só o 10: com 9 e com 11 as duas versões dão o mesmo resultado. É um erro que só se encontra testando o valor da própria fronteira.
 
 A correção é voltar ao enunciado. "Igual ou superior" inclui o igual, e por isso o operador é `>=`.
 

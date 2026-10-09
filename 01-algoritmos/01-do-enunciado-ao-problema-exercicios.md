@@ -56,7 +56,7 @@ Lê o enunciado:
 
 a) Escreve o contrato deste problema: as entradas, com a unidade e os limites de cada uma, as saídas e as restrições.
 
-b) Escreve os exemplos concretos do contrato, numa tabela com quatro colunas: alunos inscritos, dinheiro a recolher, professores que vão e porque é que o caso interessa (caso normal, fronteira ou caso extremo). Calcula à mão os casos de 23, 20, 15 e 12 alunos, e escreve as contas.
+b) Escreve os exemplos concretos do contrato, numa tabela com quatro colunas: alunos inscritos, dinheiro a recolher, professores que vão e porque é que o caso interessa (caso normal, caso que fica exatamente no limite de uma regra do enunciado, ou caso extremo). Calcula à mão os casos de 23, 20, 15 e 12 alunos, e escreve as contas.
 
 Um destes quatro casos obriga-te a decidir o que as saídas devem dizer, porque o enunciado não o diz. Descobre qual é, e escreve a decisão que tomaste. Não há uma só decisão certa, mas a tua tem de ficar escrita.
 
@@ -121,7 +121,7 @@ c) No jogo com três e três, o padrão "vão dois, volta um" falhava numa trave
 
 - [ ] Em cada lista do exercício 1 disse se é um algoritmo e, quando não é, que propriedade falha.
 - [ ] Separei os dados do contexto com a pergunta do guia, e não por palpite.
-- [ ] Escrevi um contrato com entradas, saídas, restrições e exemplos concretos calculados à mão, incluindo uma fronteira e um caso extremo.
+- [ ] Escrevi um contrato com entradas, saídas, restrições e exemplos concretos calculados à mão, incluindo um caso exatamente no limite de uma regra e um caso extremo.
 - [ ] Escrevi as decisões que tomei onde o enunciado não dizia o que fazer.
 - [ ] Segui o estado do parque numa tabela, linha a linha.
 - [ ] Encontrei um exemplo mínimo para a falha da fila e corrigi os passos.

@@ -63,7 +63,7 @@ b) Escreve o contrato da função, com exemplos para `[4, 7, 10, 3]`, para `[]` 
 
 c) Faz o trace da chamada `contarPares([4, 7, 10, 3])`, em tabela própria.
 
-Concluíste quando a função devolver 2, 0 e 0 nos três exemplos.
+Concluíste quando tiveres contado à mão, antes de escreveres a função, quantos pares há em cada um dos três exemplos, e a função devolver esses três valores, com o trace da alínea c) a confirmar o primeiro.
 
 ## Exercício 4: Uma função que responde sim ou não (10 min)
 
@@ -73,7 +73,7 @@ b) Escreve as linhas do algoritmo principal que leem uma hora e uns minutos e es
 
 c) Diz o que a função devolve para 23:59, 24:00, 12:60 e 0:00.
 
-Concluíste quando a tua função der `true` para 23:59 e para 0:00, e `false` para os outros dois.
+Concluíste quando tiveres decidido a partir do enunciado, antes de seguires a função, se cada uma das quatro horas é válida, e a tua função der o resultado que previste nas quatro.
 
 ## Exercício 5: Um limiar que muda (15 min)
 
@@ -89,7 +89,7 @@ b) Escreve as linhas do algoritmo principal que mostram quantos dias tiveram mai
 
 c) Explica, numa ou duas frases, o que mudou entre as duas chamadas, e porque é que não foi preciso mudar nada dentro da função.
 
-Concluíste quando as duas chamadas derem 2 e 3, e a tua explicação falar do argumento.
+Concluíste quando tiveres contado à mão, no array, os dias acima de cada limiar, as duas chamadas derem essas contagens, e a tua explicação falar do argumento.
 
 ## Exercício 6: Encontrar o erro (15 min)
 
@@ -121,7 +121,7 @@ Concluíste quando cada alínea tiver as quatro partes e a função corrigida fi
 
 ## Exercício 7: O dossiê da semana de passos (25 min)
 
-Este exercício junta toda a algoritmia, e é o teu dossiê. Usa as funções `media` e `existe`, do guia (a versão corrigida de `existe`, como a secção dos erros frequentes explica), e `contarAcima`, do exercício 5. Não precisas de as escrever outra vez: escreve só o nome e o contrato de cada uma.
+Este exercício junta toda a algoritmia, e é o teu dossiê. Usa a função `media`, do guia, e a função `contarAcima`, do exercício 5. Estas duas já estão escritas, e não precisas de as escrever outra vez: escreve só o nome e o contrato de cada uma. Usa também a função `existe`, na versão corrigida que a secção dos erros frequentes do guia descreve por palavras. Como o guia não a escreve por inteiro, escreve-a tu, com o seu contrato, antes do algoritmo principal.
 
 > Uma aplicação de exercício guardou os passos dados em cada dia de uma semana: `passos = [8200, 0, 10300, 7500, 12000, 6000, 5000]`. O objetivo diário é passar dos 8000 passos. O algoritmo mostra a média de passos por dia, em quantos dias o objetivo foi cumprido e, se houver algum dia com 0 passos, escreve "Houve pelo menos um dia sem passos".
 

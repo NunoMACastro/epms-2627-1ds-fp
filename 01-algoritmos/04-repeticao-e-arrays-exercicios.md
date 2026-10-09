@@ -95,7 +95,7 @@ a) Escreve um algoritmo que mostre o total de minutos e a média por dia. Não u
 
 b) O mesmo algoritmo tem de funcionar se o array estiver vazio, sem fazer nenhuma conta impossível. O que mostra nesse caso?
 
-Concluíste quando o algoritmo mostrar 150 minutos e uma média de 30 para o array do enunciado, e uma mensagem com sentido para o array vazio.
+Concluíste quando o total e a média que o algoritmo mostra para o array do enunciado forem os que calculaste à mão antes de o seguir, e quando o array vazio der uma mensagem com sentido, sem nenhuma conta impossível.
 
 ## Exercício 5: A duração da playlist (15 min)
 
@@ -107,7 +107,7 @@ b) Faz a tabela de iterações para as durações 200, 185 e 240, seguidas do 0.
 
 c) O que mostra o algoritmo se o Rui escrever logo 0?
 
-Concluíste quando a tabela da alínea b) mostrar 3 músicas e 625 segundos, e o ecrã mostrar a duração em minutos e segundos.
+Concluíste quando tiveres calculado à mão, antes de fazeres a tabela, a duração total das três músicas da alínea b), primeiro em segundos e depois em minutos e segundos, e a tabela e o ecrã derem os valores que previste, incluindo o número de músicas, com a duração escrita em minutos e segundos.
 
 ## Exercício 6: Procurar um cacifo (15 min)
 
@@ -121,7 +121,7 @@ a) Escreve um algoritmo que lê um número de cacifo e procura-o no array. Se o 
 
 b) Diz quantas voltas dá o ciclo e o que aparece no ecrã para os cacifos 23, 18 e 40.
 
-Concluíste quando o cacifo 23 for encontrado na posição 2 depois de duas voltas, e o 40 der "Cacifo livre".
+Concluíste quando tiveres previsto, olhando para o array, em que posição está cada um dos três cacifos, ou se está livre, e quantas voltas o ciclo deve dar para cada um, e o teu algoritmo der essas posições, essas voltas e essas mensagens nos três casos.
 
 ## Exercício 7: Encontrar o erro (15 min)
 

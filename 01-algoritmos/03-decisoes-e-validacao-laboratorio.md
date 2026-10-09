@@ -48,14 +48,14 @@ A figura nova deste laboratório é a Decision, o losango. As outras três já a
 
 1. Abre o browser e vai a `https://app.diagrams.net/?lang=pt`. O `?lang=pt` no fim do endereço pede a aplicação em português.
 2. A aplicação abre logo um diagrama em branco, chamado "Diagrama sem nome".
-3. Guarda-o já, antes de desenhares, para não perderes trabalho. Na barra de menus, no topo da aplicação, carrega em **Ficheiro** e depois em **Guardar como...**.
-4. No diálogo que aparece, no campo **Guardar como:**, escreve o nome `fluxograma-classificar-nota.drawio`.
-5. No campo **Onde:**, a aplicação sugere o Google Drive. Muda para **Aparelho**, para o ficheiro ficar no computador. Se a opção Aparelho não funcionar no teu computador, escolhe **Descarregar**, e o ficheiro vai para a pasta de transferências.
-6. Carrega em **Guardar** e escolhe a pasta `algoritmos`, onde guardaste os fluxogramas do laboratório do tema 2.
+3. Guarda-o já, antes de desenhares, para não perderes trabalho. Na barra de menus, no topo da aplicação, carrega em "Ficheiro" e depois em "Guardar como...".
+4. No diálogo que aparece, no campo "Guardar como:", escreve o nome `fluxograma-classificar-nota.drawio`.
+5. No campo "Onde:", a aplicação sugere o Google Drive. Muda para "Aparelho", para o ficheiro ficar no computador. Se a opção "Aparelho" não funcionar no teu computador, escolhe "Descarregar", e o ficheiro vai para a pasta de transferências.
+6. Carrega em "Guardar" e escolhe a pasta `algoritmos`, onde guardaste os fluxogramas do laboratório do tema 2.
 
-A partir daqui, sempre que quiseres guardar, usa Ctrl+S (Cmd+S no Mac), ou **Ficheiro** e **Guardar**, na barra de menus.
+A partir daqui, sempre que quiseres guardar, usa Ctrl+S (Cmd+S no Mac), ou "Ficheiro" e depois "Guardar", na barra de menus.
 
-**Se não vires a barra de menus.** Com o browser maximizado, num ecrã de computador, a aplicação mostra no topo a barra de menus, com Ficheiro, Editar, Visualização, Ordenar, Extras e Ajuda. Se a janela do browser for estreita, a barra desaparece e o menu passa para um **botão redondo com reticências**, no canto superior direito. Maximiza a janela e a barra volta. Se não puderes, usa esse botão: tem as mesmas opções, e lá o **Exportar como** aparece logo ao lado do **Ficheiro**, em vez de estar dentro dele.
+**Se não vires a barra de menus.** Com o browser maximizado, num ecrã de computador, a aplicação mostra no topo a barra de menus, com Ficheiro, Editar, Visualização, Ordenar, Extras e Ajuda. Se a janela do browser for estreita, a barra desaparece e o menu passa para um botão redondo com reticências, no canto superior direito. Maximiza a janela e a barra volta. Se não puderes, usa esse botão: tem as mesmas opções, e lá o "Exportar como" aparece logo ao lado do "Ficheiro", em vez de estar dentro dele.
 
 ## Parte 2: A primeira decisão (10 min)
 
@@ -157,7 +157,7 @@ Se o teu desenho tiver uma figura a mais ou a menos, compara-o figura a figura c
 
 ## Parte 4: Seguir cada caminho com o dedo (10 min)
 
-Um fluxograma de decisões está certo quando cada caso de teste tem um caminho, e um só, do início até ao fim, e esse caminho acaba na mensagem que o enunciado pede. É isso que vais confirmar agora, com os casos de teste do passo 4 do guia e mais dois.
+Um fluxograma de decisões está certo quando cada caso de teste tem um caminho, e um só, do início até ao fim, e esse caminho acaba na mensagem que o enunciado pede. É isso que vais confirmar agora, com os casos de teste do passo 4 do guia.
 
 Copia esta tabela para uma folha. Para cada nota, põe o dedo no Início do teu desenho e segue as setas. Em cada losango, calcula a condição com o valor da nota e sai pelo `Sim` ou pelo `Não` conforme o resultado. Escreve por onde saíste de cada losango e a mensagem a que chegaste. As duas primeiras linhas estão preenchidas para veres como se faz.
 

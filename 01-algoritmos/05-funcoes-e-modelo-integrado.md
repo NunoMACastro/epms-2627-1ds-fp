@@ -30,7 +30,7 @@ Dos guias anteriores vais usar tudo, e de propósito: este é o guia que junta a
 
 Tal como nos guias anteriores, um algoritmo escrito em frases claras também é válido, desde que não deixe dúvidas. Com funções, isso quer dizer sobretudo deixar claro o que cada função recebe, o que devolve e em que casos.
 
-## Porque é que se escrevem funções
+## Razões para escrever funções
 
 No guia 2 usaste a função `abs`. Bastava escrever `abs(-7)` para obter 7, sem saber como a conta era feita por dentro: chegava-te o contrato, "recebe um número e devolve a distância desse número a zero". Uma função é exatamente isso, um pedaço de algoritmo com nome e com contrato, que se usa sem pensar no que tem lá dentro.
 
@@ -38,11 +38,11 @@ As funções predefinidas já vêm feitas. Mas as partes que se repetem nos teus
 
 Há três razões para o fazer, e todas já as sentiste nos guias anteriores.
 
-A primeira é **não repetir**. A validação de uma nota, `nota < 0 ou nota > 20`, apareceu no guia 3, voltou no guia 4 e vai voltar sempre que houver notas. Escrevê-la uma vez, com um nome, e usá-la em todo o lado, quer dizer que, se a escala mudar, se muda num sítio só.
+A primeira é não repetir. A validação de uma nota, `nota < 0 ou nota > 20`, apareceu no guia 3, voltou no guia 4 e vai voltar sempre que houver notas. Escrevê-la uma vez, com um nome, e usá-la em todo o lado, quer dizer que, se a escala mudar, se muda num sítio só.
 
-A segunda é **ler melhor**. Uma linha como `Se notaValida(nota)` lê-se como uma frase. A mesma linha com a condição inteira obriga quem lê a descodificar a condição antes de perceber o que se está a perguntar.
+A segunda é ler melhor. Uma linha como `Se notaValida(nota)` lê-se como uma frase. A mesma linha com a condição inteira obriga quem lê a descodificar a condição antes de perceber o que se está a perguntar.
 
-A terceira é a mais importante: **testar por partes**. Um algoritmo grande, com ciclos dentro de seleções dentro de ciclos, é difícil de testar de uma vez. Se estiver dividido em funções pequenas, cada uma com o seu contrato, testa-se cada função sozinha, com poucos casos, e só depois se junta tudo. Quando aparece um erro, já sabes que as funções estão certas, e o erro está na forma como as juntaste. É a decomposição do guia 1, levada até ao fim.
+A terceira é a mais importante: testar por partes. Um algoritmo grande, com ciclos dentro de seleções dentro de ciclos, é difícil de testar de uma vez. Se estiver dividido em funções pequenas, cada uma com o seu contrato, testa-se cada função sozinha, com poucos casos, e só depois se junta tudo. Quando aparece um erro, já sabes que as funções estão certas, e o erro está na forma como as juntaste. É a decomposição do guia 1, levada até ao fim.
 
 ## Escrever uma função
 
@@ -112,7 +112,7 @@ Os argumentos passam para os parâmetros pela ordem, e não pelo nome. Numa fun�
 
 ### O trace de uma chamada
 
-Uma chamada faz-se no trace com uma regra simples: **cada chamada tem a sua própria tabela**, com as variáveis da função. Na tabela do algoritmo principal, a linha da chamada mostra o valor que regressou.
+Uma chamada faz-se no trace com uma regra simples: cada chamada tem a sua própria tabela, com as variáveis da função. Na tabela do algoritmo principal, a linha da chamada mostra o valor que regressou.
 
 Algoritmo principal:
 
@@ -139,7 +139,7 @@ Isto tem duas consequências que vais usar sempre.
 
 A primeira: uma variável com o mesmo nome dentro e fora de uma função são duas caixas diferentes. Se o algoritmo principal tiver uma variável `total`, e a função tiver também uma variável `total`, mexer numa não mexe na outra. É por isso que, no trace, cada chamada tem a sua tabela.
 
-A segunda é uma regra das aulas: **uma função só usa os seus parâmetros e as suas variáveis locais**. Tudo aquilo de que precisa chega-lhe pelos parâmetros, e tudo o que tem para dar sai pelo `devolver`. Uma função que fosse buscar uma variável do algoritmo principal, sem a receber, deixava de se poder testar sozinha, porque o resultado dependeria de uma coisa que não está no seu contrato. As constantes são a exceção: escrevem-se no início, antes das funções, e valem em todo o lado, porque são regras do problema.
+A segunda é uma regra das aulas: uma função só usa os seus parâmetros e as suas variáveis locais. Tudo aquilo de que precisa chega-lhe pelos parâmetros, e tudo o que tem para dar sai pelo `devolver`. Uma função que fosse buscar uma variável do algoritmo principal, sem a receber, deixava de se poder testar sozinha, porque o resultado dependeria de uma coisa que não está no seu contrato. As constantes são a exceção: escrevem-se no início, antes das funções, e valem em todo o lado, porque são regras do problema.
 
 ## `devolver`
 
@@ -157,13 +157,13 @@ Função maior(a, b)
 
 `maior(3, 8)` devolve 8, e `maior(8, 3)` também. Em cada chamada executa-se exatamente um dos dois `devolver`.
 
-Há uma regra que esta função cumpre e que todas as funções deste guia têm de cumprir: **em todos os caminhos possíveis, a função chega a um `devolver`**. Uma função que, para algum valor, chegasse ao fim do corpo sem passar por nenhum `devolver`, não teria nada para entregar, e a linha que a chamou ficaria com um buraco por tapar. É o erro mais frequente com funções, e vais vê-lo com números na secção dos erros.
+Há uma regra que esta função cumpre e que todas as funções deste guia têm de cumprir: em todos os caminhos possíveis, a função chega a um `devolver`. Uma função que, para algum valor, chegasse ao fim do corpo sem passar por nenhum `devolver`, não teria nada para entregar, e a linha que a chamou ficaria com um buraco por tapar. É o erro mais frequente com funções, e vais vê-lo com números na secção dos erros.
 
 ### `devolver` não é `Escreve:`
 
 As duas parecem dar um resultado, e fazem coisas muito diferentes. `Escreve:` mostra um valor a quem está a usar o algoritmo, no ecrã, e o valor não vai para mais lado nenhum. `devolver` entrega o valor ao algoritmo que chamou a função, que pode guardá-lo, fazer contas com ele ou decidir o que fazer a seguir.
 
-Uma função que calcula uma média e a escreve no ecrã, em vez de a devolver, só serve para mostrar essa média. Não serve para comparar a média com outra coisa, nem para a usar numa conta. Por isso, nas aulas, **as funções que calculam devolvem**, e quem escreve no ecrã é o algoritmo principal. Separar o cálculo da apresentação é o que permite reutilizar a função noutro algoritmo, com outro ecrã.
+Uma função que calcula uma média e a escreve no ecrã, em vez de a devolver, só serve para mostrar essa média. Não serve para comparar a média com outra coisa, nem para a usar numa conta. Por isso, nas aulas, as funções que calculam devolvem, e quem escreve no ecrã é o algoritmo principal. Separar o cálculo da apresentação é o que permite reutilizar a função noutro algoritmo, com outro ecrã.
 
 ## Funções que devolvem `true` ou `false`
 
@@ -180,7 +180,7 @@ Função notaValida(nota)
         devolver false
 ```
 
-O contrato: recebe uma nota, um número inteiro; devolve `true` se estiver na escala de 0 a 20, incluindo os extremos, e `false` se não estiver. Os casos de teste são os das fronteiras do guia 3: `notaValida(-1)` devolve `false`, `notaValida(0)` devolve `true`, `notaValida(20)` devolve `true` e `notaValida(21)` devolve `false`.
+O contrato: recebe uma nota, um número inteiro; devolve `true` se estiver na escala de 0 a 20, incluindo os extremos, e `false` se não estiver. Os casos de teste são os das fronteiras do guia 3: `notaValida(-1)` devolve `false`, `notaValida(0)` devolve `true`, `notaValida(1)` devolve `true`, `notaValida(19)` devolve `true`, `notaValida(20)` devolve `true` e `notaValida(21)` devolve `false`.
 
 Como a condição já dá `true` ou `false`, a função pode devolvê-la diretamente, numa linha só:
 
@@ -276,7 +276,7 @@ A média calcula-se uma vez, antes do ciclo, e guarda-se numa variável. São 6 
 | 6 | 42 | 12 |
 | 10 | 110 | 20 |
 
-Repara como a diferença cresce: com 10 notas, a primeira solução já faz mais de cinco vezes o trabalho da segunda. A regra que daqui sai é simples: **um valor que não muda dentro de um ciclo calcula-se antes do ciclo**. O resultado não muda, e o trabalho diminui.
+Repara como a diferença cresce: com 10 notas, a primeira solução já faz mais de cinco vezes o trabalho da segunda. A regra que daqui sai é simples: um valor que não muda dentro de um ciclo calcula-se antes do ciclo. O resultado não muda, e o trabalho diminui.
 
 ## Ler funções num fluxograma
 
@@ -506,11 +506,11 @@ Uma função que escreve o resultado no ecrã em vez de o devolver só serve par
 
 ### Esquecer a pré-condição
 
-Chamar `media` com um array que pode estar vazio. A função faz 0 / 0. Antes de chamar uma função, lê o seu contrato e confirma que cumpres as pré-condições.
+O erro está em chamar `media` com um array que pode estar vazio, sem confirmar antes que ele tem pelo menos um elemento. A entrada que o revela é o array vazio: a função dá zero voltas, `quantidade` e `total` ficam a 0, e a conta do `devolver` é 0 / 0, que não tem resultado. Com qualquer array que tenha elementos, a chamada funciona, e por isso o erro só aparece a quem testa o caso vazio. No exemplo guiado, é o contrato do problema que garante a pré-condição, porque diz que a entrada tem pelo menos uma nota. Antes de chamar uma função, lê o seu contrato e confirma que cumpres as pré-condições.
 
 ### Cálculos repetidos dentro de um ciclo
 
-Chamar dentro de um ciclo uma função cujo resultado não muda de volta para volta, como `media(notas)` numa comparação. O resultado está certo, mas o trabalho multiplica-se. Calcula o valor uma vez, antes do ciclo.
+O erro está em chamar, dentro de um ciclo, uma função cujo resultado não muda de volta para volta, como `media(notas)` na comparação de cada nota com a média. O resultado está certo, e por isso nenhuma entrada mostra este erro no ecrã. O que o revela é contar as voltas com um array de vários elementos: com 6 notas, a versão com a média dentro do ciclo faz 42 voltas, e a versão com a média calculada antes faz 12, como viste na secção "Duas soluções certas, uma mais eficiente". Quanto mais elementos tiver o array, maior é a diferença. Calcula o valor uma vez, antes do ciclo, e guarda-o numa variável.
 
 ## Verificar o que aprendeste
 
@@ -536,6 +536,6 @@ Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](05-fun
 
 ## O que vem a seguir
 
-Com este guia acaba a algoritmia. O passo seguinte é o Python, a primeira linguagem de programação do ano. A boa notícia é que vais reconhecer quase tudo: o pseudocódigo das aulas foi escrito para passar para o Python quase linha a linha. `Função media(valores)` passa a `def media(valores):`, `devolver` passa a `return`, `Enquanto` passa a `while`, `Para cada` passa a `for`, e a indentação continua a mostrar o que está dentro de quê. O que muda é que, em vez de fazeres o trace à mão, vais pôr o computador a executar os teus algoritmos, e os dossiês que fizeste vão dizer-te se ele faz o que devia.
+Com este guia acaba a algoritmia. O passo seguinte é o Python, a primeira linguagem de programação do ano. Vais reconhecer quase tudo: o pseudocódigo das aulas foi escrito para passar para o Python quase linha a linha. `Função media(valores)` passa a `def media(valores):`, `devolver` passa a `return`, `Enquanto` passa a `while`, `Para cada` passa a `for`, e a indentação continua a mostrar o que está dentro de quê. O que muda é que, em vez de fazeres o trace à mão, vais pôr o computador a executar os teus algoritmos, e os dossiês que fizeste vão dizer-te se ele faz o que devia.
 
 ![Rodapé](../imagens/rodape.png)

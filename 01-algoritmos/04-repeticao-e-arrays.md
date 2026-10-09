@@ -80,7 +80,7 @@ Compara com o `Se` do guia 3. O `Se` avalia a condição uma vez e segue em fren
 
 Destas regras saem duas consequências que convém fixar já.
 
-A primeira: **a condição do `Enquanto` diz quando continuar, e não quando parar**. "Enquanto houver pratos na banca" descreve a situação em que se continua a lavar. Quando escreveres um ciclo, pergunta-te "em que situação quero continuar?", e escreve essa situação. Quem escreve a situação em que quer parar obtém um ciclo que faz o contrário do que queria.
+A primeira: a condição do `Enquanto` diz quando continuar, e não quando parar. "Enquanto houver pratos na banca" descreve a situação em que se continua a lavar. Quando escreveres um ciclo, pergunta-te "em que situação quero continuar?", e escreve essa situação. Quem escreve a situação em que quer parar obtém um ciclo que faz o contrário do que queria.
 
 A segunda: a condição só é avaliada na linha do `Enquanto`. Se, a meio do corpo, as variáveis mudarem de forma a tornar a condição falsa, o corpo não é interrompido. Continua até à última linha indentada, e só no teste seguinte o ciclo termina.
 
@@ -158,7 +158,7 @@ O trace de um ciclo faz-se com as regras do guia 2, com duas novidades. A primei
 
 No passo 5 acontece o que é novo. O algoritmo acabou a última linha do corpo e voltou atrás, à linha do `Enquanto`, e avalia a condição outra vez, agora com `vezes` a valer 2. No passo 11, `vezes` já vale 4, `4 <= 3` é falso, e o algoritmo salta para a primeira linha a seguir ao corpo.
 
-Conta as linhas do `Enquanto`: são quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. Isto é sempre assim num ciclo que termina: **há sempre mais um teste da condição do que iterações**, porque o último teste é o que dá falso e faz o ciclo parar.
+Conta as linhas do `Enquanto`: são quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. Isto é sempre assim num ciclo que termina: há sempre mais um teste da condição do que iterações, porque o último teste é o que dá falso e faz o ciclo parar.
 
 Repara também no valor final de `vezes`: é 4, e não 3. O ciclo não para quando escreve a última linha da tabuada. Para quando `vezes` passa o limite, porque só nessa altura a condição fica falsa. Depois de um ciclo, quanto vale a variável? É uma pergunta frequente em testes, e a resposta está sempre na última linha do trace.
 
@@ -213,13 +213,13 @@ Se a condição for falsa logo no primeiro teste, o corpo não se executa nenhum
 
 Às vezes é um erro. Se alguém escrever a condição da tabuada ao contrário, `Enquanto vezes > ULTIMO`, o primeiro teste é `1 > 3`, que é falso, e o algoritmo salta logo para o fim: aparece "Fim da tabuada" e mais nada. Quem escreveu isto pensou em quando o ciclo devia parar e escreveu essa situação no `Enquanto`, que é o sítio onde se escreve quando continuar.
 
-Outras vezes, zero voltas é exatamente o que deve acontecer. Se o algoritmo soma os pedidos que chegaram hoje e hoje não chegou nenhum, o ciclo não deve executar-se nenhuma vez, e a resposta certa é 0. Daqui sai uma regra de teste que vais usar sempre: **testa o caso de zero voltas**, e confirma que o algoritmo dá uma resposta com sentido. É o caso extremo do guia 1, agora com nome próprio.
+Outras vezes, zero voltas é exatamente o que deve acontecer. Se o algoritmo soma os pedidos que chegaram hoje e hoje não chegou nenhum, o ciclo não deve executar-se nenhuma vez, e a resposta certa é 0. Daqui sai uma regra de teste que vais usar sempre: testa o caso de zero voltas, e confirma que o algoritmo dá uma resposta com sentido. É o caso extremo do guia 1, agora com nome próprio.
 
 ### O ciclo que nunca acaba
 
 Um **ciclo infinito** é um ciclo cuja condição nunca chega a ser falsa. O algoritmo não dá nenhum aviso: num computador, fica parado a trabalhar, ou a escrever a mesma coisa, até alguém o interromper à força. No papel, o trace mostra o problema com toda a clareza.
 
-A causa mais frequente é a atualização. Pode faltar, pode estar fora do corpo por causa da indentação, como viste acima, e nos dois casos a tabela de iterações mostra a mesma fotografia em todas as linhas: `vezes` vale sempre 1. Num ciclo que não lê nada no corpo, **se a fotografia se repetir, o ciclo é infinito**.
+A causa mais frequente é a atualização. Pode faltar, pode estar fora do corpo por causa da indentação, como viste acima, e nos dois casos a tabela de iterações mostra a mesma fotografia em todas as linhas: `vezes` vale sempre 1. Num ciclo que não lê nada no corpo, se a fotografia se repetir, o ciclo é infinito.
 
 A atualização também pode andar no sentido errado. Com `vezes = vezes - 1`, `vezes` passa a 0, -1, -2, e cada um destes números continua a ser menor ou igual a 3. A fotografia não se repete, mas afasta-se da saída. Não basta que a variável mude: tem de mudar na direção que torna a condição falsa.
 
@@ -328,7 +328,7 @@ Cada elemento tem uma posição, a que se chama **índice**, e **os índices com
 
 Para usar um elemento, escreve-se o nome do array e o índice entre parênteses retos. `pontuacoes[0]` é o primeiro elemento, o 12. `pontuacoes[3]` é o quarto elemento, o 5.
 
-Porque é que se começa em 0 e não em 1? Porque o índice diz quantas posições andas a partir do início do array: o primeiro elemento está a zero posições do início. É assim no Python e no C, e por isso usamos já esta regra. Tem uma consequência que vais usar sempre: **num array com `n` elementos, o último índice válido é `n - 1`**. Neste array há 4 elementos, e o último índice é o 3.
+Porque é que se começa em 0 e não em 1? Porque o índice diz quantas posições andas a partir do início do array: o primeiro elemento está a zero posições do início. É assim no Python e no C, e por isso usamos já esta regra. Tem uma consequência que vais usar sempre: num array com `n` elementos, o último índice válido é `n - 1`. Neste array há 4 elementos, e o último índice é o 3.
 
 Um elemento de um array usa-se como qualquer variável. Pode aparecer numa conta, numa condição ou num `Escreve:`, e pode receber um valor novo:
 
@@ -341,7 +341,7 @@ Escreve: pontuacoes[1] + pontuacoes[2]
 
 A segunda linha cria a variável `primeira` com o valor do elemento de índice 0, ou seja, 12. A terceira muda o elemento de índice 1, que passa de 7 a 9: o array fica `[12, 9, 20, 5]`. A quarta escreve 9 + 20, que dá 29.
 
-E `pontuacoes[4]`? Não existe. O array tem os índices 0, 1, 2 e 3, e o 4 já está fora. Usar um índice que não existe é um dos erros mais frequentes com arrays, e chama-se **índice fora do array**. No papel, um algoritmo que o faz está errado. Num programa, o Python para com uma mensagem de erro, e o C, que vais aprender mais tarde, faz pior: continua com um valor qualquer, sem avisar. É por isso que o último índice válido é uma das perguntas que vais ter sempre de saber responder.
+E `pontuacoes[4]`? Não existe. O array tem os índices 0, 1, 2 e 3, e o 4 já está fora. Usar um índice que não existe é um dos erros mais frequentes com arrays, e chama-se **índice fora do array**. No papel, um algoritmo que o faz está errado. Num programa, o Python para com uma mensagem de erro. O C, que vais aprender mais tarde, foi pensado para programas muito rápidos e para dar a quem programa o controlo de cada passo, e por isso não confirma, em cada acesso, se o índice existe: essa verificação fica a cargo de quem programa. Num programa em C, um índice fora do array não dá mensagem nenhuma, e o programa continua com um valor qualquer, sem avisar. São ferramentas com propósitos diferentes, e cada uma faz a escolha que serve o seu. Em qualquer delas, o último índice válido é uma das perguntas que vais ter sempre de saber responder.
 
 ### Percorrer um array com `Para`
 
@@ -539,11 +539,11 @@ Num ciclo com `Para cada`, a tabela de iterações tem uma linha por volta. Como
 
 Depois do ciclo, `quantidade` vale 4 e `total` vale 44. Como `4 > 0` é verdadeiro, calcula-se a média, 44 / 4, que dá 11, e o algoritmo escreve "Média: 11 pontos". A conta usa `/` e não `div`, porque uma média pode ter parte decimal, e a variável `media` é `float`.
 
-Porquê o `Se quantidade > 0`? Por causa do caso de zero voltas. Com o array vazio, o ciclo não dá nenhuma volta, `quantidade` fica 0 e `total` fica 0. Calcular a média seria fazer 0 / 0, e **não se pode dividir por zero**: a conta não tem resultado. Sem o `Se`, o algoritmo pedia uma conta impossível. Com ele, escreve uma mensagem que explica porque é que não há média. Sempre que dividires por um contador, pergunta-te o que acontece se ele ficar a zero.
+Porquê o `Se quantidade > 0`? Por causa do caso de zero voltas. Com o array vazio, o ciclo não dá nenhuma volta, `quantidade` fica 0 e `total` fica 0. Calcular a média seria fazer 0 / 0, e não se pode dividir por zero: a conta não tem resultado. Sem o `Se`, o algoritmo pedia uma conta impossível. Com ele, escreve uma mensagem que explica porque é que não há média. Sempre que dividires por um contador, pergunta-te o que acontece se ele ficar a zero.
 
 ### Inicializar fora do ciclo
 
-Os contadores e os acumuladores inicializam-se sempre antes do ciclo, sem indentação. Se a linha `int total = 0` estivesse dentro do ciclo, o total voltaria a zero no início de cada volta, antes de somar o elemento dessa volta, e no fim guardaria só o último elemento. A regra a fixar: **o que se inicializa dentro do ciclo recomeça em cada volta**.
+Os contadores e os acumuladores inicializam-se sempre antes do ciclo, sem indentação. Se a linha `int total = 0` estivesse dentro do ciclo, o total voltaria a zero no início de cada volta, antes de somar o elemento dessa volta, e no fim guardaria só o último elemento. A regra a fixar: o que se inicializa dentro do ciclo recomeça em cada volta.
 
 ## A sentinela: ler até aparecer o valor que diz "acabou"
 
@@ -608,7 +608,7 @@ Escreve: "Nota aceite: ", nota
 
 As três peças: a inicialização é a primeira leitura, antes do ciclo, como na sentinela; a condição é a de nota inválida, a mesma do guia 3, com `ou`; a atualização é a leitura dentro do corpo, que substitui o valor inválido por um novo. Se a pessoa escrever 25, depois -3 e depois 14, o ciclo dá duas voltas, com uma mensagem de erro em cada, e termina com 14. Se escrever logo 14, o ciclo dá zero voltas, e está certo: não há nada a corrigir.
 
-O mais útil deste padrão está no que vem depois do ciclo. Quando o algoritmo chega à primeira linha a seguir ao corpo, a condição do ciclo acabou de dar falso, e por isso tens a certeza de que a nota está entre 0 e 20. O resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos: **depois de um ciclo, a sua condição é falsa**, e isso diz-te alguma coisa sobre o estado.
+O mais útil deste padrão está no que vem depois do ciclo. Quando o algoritmo chega à primeira linha a seguir ao corpo, a condição do ciclo acabou de dar falso, e por isso tens a certeza de que a nota está entre 0 e 20. O resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos: depois de um ciclo, a sua condição é falsa, e isso diz-te alguma coisa sobre o estado.
 
 ## Parar e Continuar
 
@@ -866,45 +866,51 @@ No fim aparece "Turmas acima da média: 3". Repara na última linha: `i` chegou 
 
 ## Erros frequentes
 
+Os erros desta secção são versões erradas dos algoritmos deste guia. Para cada um vais ver o que acontece e que entrada o revela, porque um erro só fica bem explicado quando se consegue mostrar a entrada que o faz aparecer.
+
 ### O ciclo infinito
 
-A atualização falta, está fora do corpo por causa da indentação, anda no sentido errado ou salta por cima do valor de saída. Encontra-se com a tabela de iterações: se a fotografia se repetir, ou se a variável da condição se afastar da saída, o ciclo é infinito. Num `Enquanto` com `Continuar`, confirma que o `Continuar` não salta a atualização.
+Um ciclo fica infinito quando a atualização falta, quando está fora do corpo por causa da indentação, quando anda no sentido errado ou quando salta por cima do valor que tornaria a condição falsa. A tabuada não lê nada, e por isso qualquer execução mostra o erro: sem a atualização, ou com ela fora do corpo, `vezes` fica sempre a valer 1 e o ecrã enche-se de "7 x 1 = 7"; com `vezes = vezes - 1`, `vezes` passa a 0, -1, -2, e afasta-se cada vez mais do 4. Encontra-se com a tabela de iterações: se a fotografia se repetir, ou se a variável da condição se afastar do valor que faz o ciclo terminar, o ciclo é infinito.
+
+Num `Enquanto` com `Continuar`, o erro só aparece com uma entrada que faça executar o `Continuar`. Se a atualização estiver abaixo dele, essa volta não muda a variável da condição, a volta seguinte começa no mesmo estado, e o ciclo não sai dali. Com entradas que nunca fazem executar o `Continuar`, o ciclo termina e o erro passa despercebido. Por isso, confirma sempre que o `Continuar` não salta a atualização, e testa o ciclo com um valor que o faça executar.
 
 ### A condição de paragem no sítio da condição de continuação
 
-`Enquanto vezes > ULTIMO` em vez de `Enquanto vezes <= ULTIMO`. O ciclo dá zero voltas quando devia dar várias. A condição do `Enquanto` diz quando continuar.
+Quem pensa em quando o ciclo deve parar escreve essa situação no `Enquanto`, como `Enquanto vezes > ULTIMO` em vez de `Enquanto vezes <= ULTIMO`. Na tabuada, o primeiro teste é `1 > 3`, que dá falso, e o ciclo dá zero voltas quando devia dar três: aparece "Fim da tabuada" e mais nada. Como a tabuada não lê nada, o erro aparece logo na primeira execução. A condição do `Enquanto` diz quando continuar, e por isso a pergunta a fazer antes de a escrever é "em que situação quero continuar?".
 
 ### Uma volta a mais ou a menos
 
-Trocar `<` por `<=`, ou começar em 0 em vez de 1. `Para i = 0, i <= 4, i++` dá cinco voltas, e `Para i = 1, i < 4, i++` dá três. Testa sempre a primeira e a última volta e confirma os valores da variável de controlo.
+Trocar `<` por `<=`, ou começar em 0 quando se devia começar em 1, dá uma volta a mais. Trocar `<=` por `<`, ou começar em 1 quando se devia começar em 0, dá uma volta a menos. Num ciclo que devia dar quatro voltas, `Para i = 0, i <= 4, i++` dá cinco, e `Para i = 1, i < 4, i++` dá três.
+
+Na tabuada até 3, `Para vezes = 0, vezes <= ULTIMO, vezes++` escreve uma linha a mais, "7 x 0 = 0", logo na primeira volta. A somar as pontuações `[12, 7, 20, 5]`, o ciclo `Para i = 1, i < 4, i++` dá um total de 32 em vez de 44, porque a primeira volta já usa `pontuacoes[1]` e o 12 nunca é somado. Com um array cujo primeiro elemento fosse 0, essa soma dava o resultado certo por acaso, e o erro passava despercebido. Uma volta a mais ou a menos aparece sempre na primeira ou na última volta, e por isso testa sempre essas duas e confirma os valores da variável de controlo.
 
 ### O índice fora do array
 
-Num array com 4 elementos, `Para i = 0, i <= 4, i++` chega a `pontuacoes[4]`, que não existe. O último índice válido é o número de elementos menos 1, e por isso a condição é `i < 4`. O erro aparece sempre na última volta, e é aí que se testa.
-
+Num array com 4 elementos, como `pontuacoes = [12, 7, 20, 5]`, o ciclo `Para i = 0, i <= 4, i++` dá uma quinta volta, com `i` a valer 4, e chega a `pontuacoes[4]`, que não existe. O último índice válido é o número de elementos menos 1, e por isso a condição certa é `i < 4`. O erro aparece sempre na última volta, sejam quais forem os valores guardados no array, e é aí que se testa: no trace, é a linha em que `i` vale 4 que o mostra, porque não há nenhum elemento para escrever na coluna de `pontuacoes[i]`. Com o `Para cada`, este erro não pode acontecer, porque não há índice.
 
 ### Mudar a variável do `Para cada` para mudar o array
 
-`Para cada nota em notas` seguido de `nota = nota + 1`. A variável de iteração recebe uma cópia de cada elemento, e mudá-la não muda o array. Para mudar os elementos, percorre por índice: `notas[i] = notas[i] + 1`. Ver a secção "O `Para cada` não muda o array".
+Quem quer aumentar 1 a cada nota e escreve `Para cada nota em notas` seguido de `nota = nota + 1` não muda nada no array. A variável de iteração recebe uma cópia de cada elemento, e mudá-la muda só a cópia. O erro vê-se escrevendo o array depois do ciclo: com `notas = [12, 8, 15]`, o ecrã mostra "12 8 15", quando devia mostrar "13 9 16". Para mudar os elementos, percorre por índice, com `notas[i] = notas[i] + 1`, como na secção "O `Para cada` não muda o array".
+
 ### O contador ou o acumulador inicializado dentro do ciclo
 
-`int total = 0` dentro do corpo faz o total recomeçar em cada volta, e no fim fica só o último valor. Contadores e acumuladores inicializam-se antes do ciclo.
+Com a linha `int total = 0` dentro do corpo, o total recomeça em cada volta, e no fim fica só com o último valor. A entrada que revela o erro é qualquer array com dois ou mais elementos: com `pontuacoes = [12, 7, 20, 5]`, o total acaba em 5, quando devia acabar em 44. Com um array de um só elemento, o erro não se vê, porque esse elemento é ao mesmo tempo o último valor e a soma de todos. Contadores e acumuladores inicializam-se antes do ciclo, sem indentação.
 
 ### O contador no sítio errado
 
-Com a linha `jogosBons = jogosBons + 1` com quatro espaços, fora do `Se`, contam-se todos os jogos e não só os bons. Com oito, dentro do `Se`, contam-se só os que cumprem a condição.
+Se a linha `jogosBons = jogosBons + 1` tiver quatro espaços, fica fora do `Se` e conta todos os jogos, e não só os bons. Com oito espaços, dentro do `Se`, conta só os que cumprem a condição. A entrada que revela o erro é um array com pelo menos um jogo abaixo do mínimo: com `pontuacoes = [12, 7, 20, 5]`, a versão errada escreve 4, quando devia escrever 2. Com um array em que todos os jogos tenham 10 ou mais pontos, as duas versões dão o mesmo, e o erro passa despercebido.
 
 ### A sentinela tratada como um dado
 
-Ler no princípio do corpo, com um valor inventado antes do ciclo. A sentinela é contada e, conforme o valor, somada. Usa sempre a leitura antecipada e a leitura no fim do corpo.
+Quem lê o valor no princípio do corpo, e inventa um valor antes do ciclo só para entrar nele, trata a sentinela como um dado: ela é lida dentro do corpo e é contada antes de a condição a poder testar. Qualquer sequência de dados revela o erro, porque a sentinela aparece sempre no fim. Na bilheteira, com as vendas 2, 4 e 1 seguidas da sentinela 0, a versão errada escreve "Vendas: 4", quando foram três. Se a primeira coisa escrita for logo o 0, a versão errada conta uma venda num dia sem vendas. Conforme o valor da sentinela, ela também é somada: na campanha, onde a sentinela é -1, a versão errada tirava um quilo ao total. Usa sempre a leitura antecipada, antes do ciclo, e a leitura no fim do corpo.
 
 ### A média sem valores
 
-Dividir por um contador que pode ficar a zero. Com zero voltas, a conta é 0 / 0, que não tem resultado. Põe a média dentro de um `Se contador > 0`.
+Calcular a média sem o `Se` divide por um contador que pode ficar a zero. A entrada que revela o erro é a do caso de zero voltas: na campanha, o -1 escrito logo de início; na média das pontuações, o array vazio. Com zero voltas, a conta é 0 / 0, que não tem resultado. Com um ou mais valores, a versão sem `Se` dá a média certa, e por isso o erro só aparece a quem testa o caso de zero voltas. Põe a média dentro de um `Se contador > 0`.
 
 ### Testar só o caso normal
 
-Um ciclo testado só com três ou quatro valores parece quase sempre certo. Testa sempre três casos: zero voltas, uma volta e várias voltas. Num array, isso quer dizer um array vazio, um array com um elemento e um array com vários.
+Um ciclo testado só com três ou quatro valores parece quase sempre certo, porque vários dos erros desta secção só aparecem noutros casos. Testa sempre três casos: zero voltas, uma volta e várias voltas. Num array, isso quer dizer um array vazio, um array com um elemento e um array com vários. O caso de zero voltas revela a média sem valores. O caso de várias voltas revela o acumulador inicializado dentro do ciclo, que com uma só volta dá o resultado certo.
 
 ## Verificar o que aprendeste
 
