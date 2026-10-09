@@ -82,7 +82,7 @@ Concluíste quando a tua tabela mostrar o estado depois de cada acontecimento e 
 
 ## Exercício 5: Encontrar a falha (15 min)
 
-a) Na lavandaria da escola, a máquina de lavar tem uma etiqueta que diz apenas "Máximo: 5". O funcionário quer lavar 6 camisolas, cada uma com 300 gramas. Cabem na máquina? Mostra que a resposta depende da unidade que se imagina para o 5, fazendo as contas para duas unidades diferentes. Depois escreve como devia estar escrita a etiqueta.
+a) Na papelaria da escola, uma mochila custa 40 euros e tem uma etiqueta que diz apenas "Desconto: 5". A Inês tem 36 euros. Chega para comprar a mochila? Mostra que a resposta depende da unidade que se imagina para o 5, fazendo as contas para duas unidades diferentes. Depois escreve como devia estar escrita a etiqueta.
 
 b) Alguém escreveu estes passos para contar as pessoas de uma fila:
 
@@ -107,7 +107,7 @@ Exercício 3. Para as entradas, pergunta-te: o que muda de cada vez que a direto
 
 Exercício 4. Para a alínea b), olha para o que o painel mostra e pergunta-te se dava para o calcular a partir de outro número. Lembra-te dos Missionários e Canibais: a margem direita não se guardava porque se deduzia da esquerda.
 
-Exercício 5. Para a alínea a), uma unidade possível é o número de peças de roupa e outra é o peso. Para a alínea b), experimenta filas cada vez mais pequenas: 2 pessoas, 1 pessoa, e depois o caso mais pequeno de todos.
+Exercício 5. Para a alínea a), pergunta-te "5 quê?", como no guia, e lembra-te das maneiras que já viste de escrever um desconto numa montra. Para a alínea b), experimenta filas cada vez mais pequenas: 2 pessoas, 1 pessoa, e depois o caso mais pequeno de todos.
 
 ## Desafio opcional (25 min)
 

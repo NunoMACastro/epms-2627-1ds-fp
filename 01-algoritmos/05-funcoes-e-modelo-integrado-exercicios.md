@@ -97,27 +97,31 @@ Concluíste quando tiveres contado à mão, no array, os dias acima de cada limi
 
 Cada uma destas funções tem um erro. Para cada uma, escreve quatro coisas: o que observaste (o que a função faz com um exemplo concreto), o que era esperado, a causa do erro e a correção.
 
-a) Devia converter um tempo em horas e minutos num total de minutos:
+a) Devia devolver o preço, em euros, de um bilhete de cinema: 3 euros para quem tem menos de 12 anos, 4 euros para quem tem 65 anos ou mais, e 6 euros para as outras idades:
 
 ```text
-Função converterParaMinutos(horas, minutos)
-    int total = horas * 60 + minutos
+Função precoBilhete(idade)
+    Se idade < 12
+        devolver 3
+    Senão se idade > 12 e idade < 65
+        devolver 6
+    Senão se idade >= 65
+        devolver 4
 ```
 
-Usa a chamada `int duracao = converterParaMinutos(2, 15)` como exemplo.
+Usa as chamadas `precoBilhete(40)` e `precoBilhete(12)` como exemplos.
 
-b) Devia devolver `true` se todas as notas do array forem positivas, ou seja, 10 ou mais, e `false` se houver pelo menos uma negativa:
+b) Devia devolver o total de golos marcados por uma equipa num torneio, com os golos de cada jogo guardados num array:
 
 ```text
-Função todasPositivas(notas)
-    Para cada nota em notas
-        Se nota >= 10
-            devolver true
-        Senão
-            devolver false
+Função totalGolos(golosPorJogo)
+    int total = 0
+    Para cada golos em golosPorJogo
+        total = total + golos
+        devolver total
 ```
 
-Usa as chamadas `todasPositivas([12, 5])` e `todasPositivas([5, 12])` como exemplos. Uma delas dá o resultado certo por acaso.
+Usa as chamadas `totalGolos([2, 0, 3])` e `totalGolos([4])` como exemplos. Uma delas dá o resultado certo por acaso.
 
 Concluíste quando cada alínea tiver as quatro partes e a função corrigida fizer o que devia.
 
@@ -149,7 +153,7 @@ Exercício 4. São dois intervalos, um para a hora e outro para os minutos, e os
 
 Exercício 5. É o contador com um `Se`, como no exercício 3, mas a condição compara com o parâmetro `limiar` em vez de um número escrito.
 
-Exercício 6. Na alínea a), procura a palavra `devolver`, e pensa no que fica em `duracao`. Na alínea b), segue a primeira volta de cada exemplo e vê em que momento a função termina. Pergunta-te: quando é que se pode ter a certeza de que todas as notas são positivas?
+Exercício 6. Na alínea a), faz o trace de cada chamada em tabela própria, e confirma, em cada uma, a linha onde a função devolve o seu valor. Na alínea b), faz a tabela da chamada com mais elementos, volta a volta, e compara o total de cada volta com o valor que a função devolve.
 
 Exercício 7. Volta ao passo 8 do exemplo guiado, que mostra as cinco partes de um dossiê. As alíneas a) a c), com os contratos que o enunciado pede, são as quatro primeiras; a quinta, os testes, é o Mais longe 1. Para a média, a pré-condição de `media` diz que o array não pode estar vazio: o array do enunciado tem 7 dias.
 

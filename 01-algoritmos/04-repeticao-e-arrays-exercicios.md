@@ -85,17 +85,17 @@ Concluíste quando o teu algoritmo der o resultado certo para o array do enuncia
 
 ## Exercício 4: A média de estudo (15 min)
 
-Uma aluna registou num array os minutos que estudou em cada dia da semana:
+Uma aluna registou num array os minutos que estudou em cada dia da semana. Nos dias em que não estudou, registou 0:
 
 ```text
 estudo = [30, 45, 0, 60, 15]
 ```
 
-a) Escreve um algoritmo que mostre o total de minutos e a média por dia. Não uses o número de dias como constante: conta os elementos dentro do ciclo, como no guia.
+a) Escreve um algoritmo que mostre o total de minutos da semana e a média dos dias em que ela estudou. Os dias com 0 minutos não contam para a média, porque a aluna quer saber quanto tempo estuda, em média, num dia em que se senta a estudar. Não escrevas à mão quantos dias foram: o algoritmo conta-os dentro do ciclo.
 
-b) O mesmo algoritmo tem de funcionar se o array estiver vazio, sem fazer nenhuma conta impossível. O que mostra nesse caso?
+b) O mesmo algoritmo tem de funcionar se a aluna não tiver estudado em nenhum dia, como em `[0, 0, 0, 0, 0]`, e se o array estiver vazio, sem fazer nenhuma conta impossível. O que mostra em cada um dos dois casos?
 
-Concluíste quando o total e a média que o algoritmo mostra para o array do enunciado forem os que calculaste à mão antes de o seguir, e quando o array vazio der uma mensagem com sentido, sem nenhuma conta impossível.
+Concluíste quando o total e a média que o algoritmo mostra para o array do enunciado forem os que calculaste à mão antes de o seguir, e quando os dois casos da alínea b) derem uma mensagem com sentido, sem nenhuma conta impossível.
 
 ## Exercício 5: A duração da playlist (20 min)
 
@@ -133,18 +133,20 @@ a) Devia somar a chuva, em milímetros, de quatro dias:
 const NUMERO_DE_DIAS = 4
 chuva = [3, 0, 12, 5]
 int total = 0
-Para i = 0, i <= NUMERO_DE_DIAS, i++
+Para i de 1 até NUMERO_DE_DIAS
     total = total + chuva[i]
 Escreve: "Chuva total: ", total, " mm"
 ```
 
-b) Devia fazer a contagem decrescente de um lançamento, de 10 até 1, e depois escrever "Partida!":
+b) Devia fazer a contagem decrescente de um lançamento, de 10 até 1, escrever "Meio caminho!" logo a seguir ao 5, e no fim escrever "Partida!":
 
 ```text
 int contagem = 10
 Enquanto contagem > 0
     Escreve: contagem
-contagem = contagem - 1
+    Se contagem == 5
+        Escreve: "Meio caminho!"
+        contagem = contagem - 1
 Escreve: "Partida!"
 ```
 
@@ -166,7 +168,7 @@ Exercício 5. É o padrão sentinela, com a leitura antes do ciclo e outra no fi
 
 Exercício 6. Percorre o array com o índice, porque precisas da posição. A bandeira começa em `false`; depois do ciclo, é ela que diz se o cacifo foi encontrado.
 
-Exercício 7. Na alínea a), escreve os valores que `i` toma e procura um que não seja um índice válido. Na alínea b), põe o dedo por baixo do `Enquanto` e vê que linhas estão à direita dele.
+Exercício 7. Na alínea a), escreve os índices por baixo dos elementos do array, a começar em 0, e ao lado os valores que `i` toma, volta a volta, e compara as duas listas. Na alínea b), faz a tabela de iterações, com uma linha por teste, e vê se a variável da condição se aproxima do valor que faz o ciclo terminar.
 
 ## Desafio opcional (20 min)
 

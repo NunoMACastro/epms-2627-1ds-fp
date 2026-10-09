@@ -80,15 +80,15 @@ Concluíste quando tiveres as seis mensagens e a explicação da alínea b) usar
 
 ## Exercício 4: A estufa (15 min)
 
-Numa estufa de tomates, a temperatura está boa entre 18 e 26 graus, incluindo os dois extremos. As temperaturas são números inteiros.
+Numa estufa de tomates, a temperatura está boa a partir de 18 graus, incluindo os 18, e abaixo de 26 graus: com 26 graus já está demasiado quente, e é preciso abrir as janelas. As temperaturas são números inteiros.
 
 a) Escreve a condição que diz se a temperatura está boa.
 
 b) Escreve a condição que diz se a temperatura está fora do bom, sem usar `não`.
 
-c) Para as temperaturas 17, 18, 22, 26 e 27, diz se a temperatura está boa ou fora, e confirma que as tuas duas condições dão sempre respostas contrárias.
+c) Para as temperaturas 17, 18, 25, 26 e 27, diz se a temperatura está boa ou fora, e confirma que as tuas duas condições dão sempre respostas contrárias.
 
-Concluíste quando as duas condições derem respostas contrárias nos cinco casos.
+Concluíste quando as duas condições derem respostas contrárias nos cinco casos e cada extremo ficar do lado que o enunciado diz.
 
 ## Exercício 5: O preço das fotocópias (30 min)
 
@@ -112,20 +112,26 @@ Se quiseres confirmar o teu algoritmo com um trace, o Mais longe 1, no fim da fi
 
 Cada um destes bocados de algoritmo tem um erro. Para cada um, diz qual é a entrada que mostra o erro, o que aparece com essa entrada e o que devia aparecer, e escreve a linha corrigida.
 
-a) Os dias do mês vão de 1 a 31. Este bocado devia apanhar os dias inválidos:
+a) Os dias da semana numeram-se de 1, a segunda-feira, a 7, o domingo. Este bocado devia escrever "Dia inválido" para um número que não seja de nenhum dia, "Fim de semana" ao sábado e ao domingo, e "Dia de aulas" nos outros dias:
 
 ```text
-Se dia < 1 e dia > 31
+Se dia < 1 ou dia > 7
     Escreve: "Dia inválido"
+Senão se dia == 6 e dia == 7
+    Escreve: "Fim de semana"
+Senão
+    Escreve: "Dia de aulas"
 ```
 
-b) A loja dá um desconto a quem compra 3 ou mais cadernos:
+b) A papelaria dá desconto conforme o número de cadernos: quem compra menos de 3 não tem desconto, quem compra de 3 a 9 tem 10% e quem compra 10 ou mais tem 20%:
 
 ```text
-Se quantidade > 3
-    Escreve: "Tem desconto"
-Senão
+Se quantidade <= 3
     Escreve: "Sem desconto"
+Senão se quantidade < 10
+    Escreve: "Desconto de 10%"
+Senão
+    Escreve: "Desconto de 20%"
 ```
 
 Concluíste quando, para cada alínea, tiveres uma entrada concreta que mostra o erro e a correção.
@@ -144,7 +150,7 @@ Exercício 4. O intervalo é "entre isto e aquilo", com `e`. O contrário é "ab
 
 Exercício 5. As fronteiras estão entre 0 e 1, entre 10 e 11 e entre 50 e 51. Põe a validação no primeiro `Se`, como no exemplo guiado, e repara que depois de cada `Senão se` já sabes que as condições de cima foram falsas.
 
-Exercício 6. Na alínea a), experimenta um dia que de certeza é inválido, como 0 ou 32, e calcula a condição com as duas comparações. Na alínea b), o erro só aparece num valor: o da própria fronteira.
+Exercício 6. Em cada alínea, escreve primeiro o que o enunciado manda aparecer para alguns valores, e só depois segue o bocado de algoritmo com esses valores, condição a condição. Na alínea a), experimenta um dia de cada uma das três mensagens. Na alínea b), há duas fronteiras: testa as duas, com os três valores de cada uma, como no guia.
 
 ## Desafio opcional (20 min)
 

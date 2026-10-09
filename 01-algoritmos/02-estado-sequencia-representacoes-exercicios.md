@@ -89,18 +89,20 @@ Concluíste quando os resultados do trace coincidirem com os do contrato e o ecr
 
 ## Exercício 5: Encontrar o erro (15 min)
 
-Este algoritmo devia calcular quanto se paga por uma compra de cadernos:
+Esta semana, a papelaria faz um desconto de 0.50 euros em cada caderno. Este algoritmo devia calcular quanto se paga por uma compra de cadernos, já com o desconto:
 
 ```text
+const DESCONTO_POR_CADERNO = 0.5
 Escreve: "Preço de um caderno, em euros?"
 float preco = ler valor
-float total = preco * quantidade
 Escreve: "Quantos cadernos?"
 int quantidade = ler valor
+float total = preco * quantidade
+preco = preco - DESCONTO_POR_CADERNO
 Escreve: "Total a pagar: ", total, " euros"
 ```
 
-a) Faz o trace para um caderno de 1.5 euros e 4 cadernos. Em que passo aparece o problema, e o que diz a tabela nesse passo?
+a) Faz o trace para um caderno de 2 euros e 4 cadernos. Em que passo aparece o problema, e o que diz a tabela nesse passo?
 
 b) Corrige o algoritmo, mudando o menor número de linhas possível. Faz outra vez o trace com os mesmos valores e confirma que o total é 6.
 
@@ -128,7 +130,7 @@ Exercício 3. Para a alínea c), pergunta-te: se tiveres 6 rebuçados para repar
 
 Exercício 4. Para o perímetro, soma os quatro lados: dois são iguais ao comprimento e dois são iguais à largura. Para os tipos, lembra-te de que os lados podem ter parte decimal. Para o ecrã, escreve as unidades dentro das aspas do `Escreve:`.
 
-Exercício 5. Na linha da conta, olha para cada variável e pergunta-te em que linha ela nasce. Se nasce mais abaixo, ainda não tem valor quando a conta é feita.
+Exercício 5. Antes do trace, calcula à mão quanto devia pagar quem compra 4 cadernos de 2 euros com o desconto. No trace, faz cada conta com os valores que estão na linha de cima, e não com os que achas que deviam estar. Quando o total da tabela não for o que calculaste, procura a linha onde ele foi calculado e vê que valores usou.
 
 Exercício 6. Faz a conta do andar de destino menos o andar de partida para as duas primeiras chamadas. Uma dá um número negativo. O guia tem uma função que trata disso.
 
@@ -144,7 +146,7 @@ Escreve as linhas que trocam mesmo os valores de duas variáveis inteiras `a` e 
 - [ ] Nas tabelas de trace, mudei em cada linha só a variável da esquerda do `=` e fiz as contas que estavam escritas.
 - [ ] Verifiquei cada par de `div` e `resto` com a regra do guia.
 - [ ] Escrevi um contrato com unidades e exemplos, e o trace do meu algoritmo deu o que o contrato previa.
-- [ ] Encontrei o passo onde o algoritmo dos cadernos usa uma variável sem valor, e corrigi-o.
+- [ ] Encontrei, com o trace, o passo onde o algoritmo dos cadernos se engana, e corrigi-o mudando o mínimo possível.
 - [ ] Usei `abs` onde só interessava o tamanho de uma diferença.
 
 ## Autoavaliação breve
