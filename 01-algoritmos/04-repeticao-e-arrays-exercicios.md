@@ -7,7 +7,7 @@
 | Disciplina | Fundamentos de Programação, 10.º ano, Desenvolvimento de Software |
 | Unidade de competência | UC00245, Desenvolver algoritmos |
 | Material | Ficha do quarto tema, acompanha o [guia](04-repeticao-e-arrays.md) |
-| Tempo | 95 minutos de exercícios e 20 minutos de desafio opcional |
+| Tempo | 105 minutos de exercícios e 20 minutos de desafio opcional |
 | Entrega | As respostas em papel ou num ficheiro de texto, com as tabelas de iterações |
 
 ## Antes de começares
@@ -97,7 +97,7 @@ b) O mesmo algoritmo tem de funcionar se o array estiver vazio, sem fazer nenhum
 
 Concluíste quando o total e a média que o algoritmo mostra para o array do enunciado forem os que calculaste à mão antes de o seguir, e quando o array vazio der uma mensagem com sentido, sem nenhuma conta impossível.
 
-## Exercício 5: A duração da playlist (15 min)
+## Exercício 5: A duração da playlist (20 min)
 
 O Rui quer saber quanto dura a sua playlist. Escreve a duração de cada música em segundos, uma de cada vez, e escreve 0 quando acabar. Nenhuma música dura 0 segundos.
 
@@ -109,7 +109,7 @@ c) O que mostra o algoritmo se o Rui escrever logo 0?
 
 Concluíste quando tiveres calculado à mão, antes de fazeres a tabela, a duração total das três músicas da alínea b), primeiro em segundos e depois em minutos e segundos, e a tabela e o ecrã derem os valores que previste, incluindo o número de músicas, com a duração escrita em minutos e segundos.
 
-## Exercício 6: Procurar um cacifo (15 min)
+## Exercício 6: Procurar um cacifo (20 min)
 
 Os números dos cinco cacifos ocupados no corredor estão neste array:
 

@@ -7,7 +7,7 @@
 | Disciplina | Fundamentos de Programação, 10.º ano, Desenvolvimento de Software |
 | Unidade de competência | UC00245, Desenvolver algoritmos |
 | Material | Ficha do quinto tema, acompanha o [guia](05-funcoes-e-modelo-integrado.md) |
-| Tempo | 100 minutos de exercícios e 20 minutos de desafio opcional |
+| Tempo | 105 minutos de exercícios e 20 minutos de desafio opcional. A secção "Para ires mais longe", no fim da ficha, também é opcional e fica fora destes minutos |
 | Entrega | As respostas em papel ou num ficheiro de texto; o exercício 7 é o teu dossiê algorítmico |
 
 ## Antes de começares
@@ -19,6 +19,8 @@ Antes de começar, deves conseguir explicar as quatro fases de uma chamada, a di
 Escreve as funções na forma que usamos nas aulas: o cabeçalho com `Função`, o nome e os parâmetros entre parênteses, o corpo indentado, e o resultado entregue com `devolver`. As funções escrevem-se antes do algoritmo principal. Escreve sempre o contrato de cada função que escreveres: o que recebe, o que devolve e um ou dois exemplos. Se souberes a lógica e não te lembrares da forma, escreve frases claras que digam o que a função recebe, o que faz e o que devolve.
 
 Os exercícios 5, 6 e 7 usam funções dos exercícios anteriores. Guarda as tuas respostas à medida que avanças.
+
+Os exercícios 1 a 7 são obrigatórios e cabem nos 105 minutos da ficha. Depois deles há um desafio opcional e, no fim, a secção "Para ires mais longe", também opcional, com os testes do dossiê do exercício 7, para quem terminar e quiser mais prática ou para estudares em casa. Nenhuma das duas conta para concluíres a ficha.
 
 ## Exercício 1: Ler uma função (10 min)
 
@@ -119,9 +121,9 @@ Usa as chamadas `todasPositivas([12, 5])` e `todasPositivas([5, 12])` como exemp
 
 Concluíste quando cada alínea tiver as quatro partes e a função corrigida fizer o que devia.
 
-## Exercício 7: O dossiê da semana de passos (25 min)
+## Exercício 7: O dossiê da semana de passos (30 min)
 
-Este exercício junta toda a algoritmia, e é o teu dossiê. Usa a função `media`, do guia, e a função `contarAcima`, do exercício 5. Estas duas já estão escritas, e não precisas de as escrever outra vez: escreve só o nome e o contrato de cada uma. Usa também a função `existe`, na versão corrigida que a secção dos erros frequentes do guia descreve por palavras. Como o guia não a escreve por inteiro, escreve-a tu, com o seu contrato, antes do algoritmo principal.
+Este exercício junta toda a algoritmia, e é o teu dossiê. Aqui fazes as partes do dossiê que vêm antes dos testes: a análise, a decomposição, o contrato de cada função e o algoritmo. Os testes, a última parte, estão no Mais longe 1, no fim da ficha, que é opcional. Usa a função `media`, do guia, e a função `contarAcima`, do exercício 5. Estas duas já estão escritas, e não precisas de as escrever outra vez: escreve só o nome e o contrato de cada uma. Usa também a função `existe`, na versão corrigida que a secção dos erros frequentes do guia descreve por palavras. Como o guia não a escreve por inteiro, escreve-a tu, com o seu contrato, antes do algoritmo principal.
 
 > Uma aplicação de exercício guardou os passos dados em cada dia de uma semana: `passos = [8200, 0, 10300, 7500, 12000, 6000, 5000]`. O objetivo diário é passar dos 8000 passos. O algoritmo mostra a média de passos por dia, em quantos dias o objetivo foi cumprido e, se houver algum dia com 0 passos, escreve "Houve pelo menos um dia sem passos".
 
@@ -131,11 +133,7 @@ b) **Decomposição.** Faz uma tabela com as funções que vais usar, o que cada
 
 c) **Algoritmo principal.** Escreve o algoritmo principal, que chama as três funções e mostra os resultados. Usa uma constante para o objetivo.
 
-d) **Teste completo.** Faz o teste completo, chamada a chamada, para a semana do enunciado, e confirma que dá o que previste na alínea a).
-
-e) **Um segundo caso.** Escolhe outra semana, com 3 dias e nenhum dia a zero, calcula à mão o resultado esperado e confirma que o algoritmo o dá.
-
-Concluíste quando as cinco partes estiverem feitas e os dois testes darem o que previste.
+Concluíste quando tiveres a análise com o resultado esperado calculado à mão, a tabela da decomposição, o contrato de cada uma das três funções, a função `existe` escrita e o algoritmo principal a chamar as três funções.
 
 ## Apoio
 
@@ -153,7 +151,7 @@ Exercício 5. É o contador com um `Se`, como no exercício 3, mas a condição 
 
 Exercício 6. Na alínea a), procura a palavra `devolver`, e pensa no que fica em `duracao`. Na alínea b), segue a primeira volta de cada exemplo e vê em que momento a função termina. Pergunta-te: quando é que se pode ter a certeza de que todas as notas são positivas?
 
-Exercício 7. Volta ao passo 8 do exemplo guiado: as cinco partes do dossiê são as cinco alíneas. Para a média, a pré-condição de `media` diz que o array não pode estar vazio: o array do enunciado tem 7 dias.
+Exercício 7. Volta ao passo 8 do exemplo guiado, que mostra as cinco partes de um dossiê. As alíneas a) a c), com os contratos que o enunciado pede, são as quatro primeiras; a quinta, os testes, é o Mais longe 1. Para a média, a pré-condição de `media` diz que o array não pode estar vazio: o array do enunciado tem 7 dias.
 
 ## Desafio opcional (20 min)
 
@@ -165,6 +163,22 @@ b) Conta, para os 7 dias, quantas voltas de ciclo faz cada solução, somando as
 
 c) As duas soluções dão o mesmo resultado? Quantos dias ficaram acima da média?
 
+## Para ires mais longe
+
+Esta secção é opcional e fica fora dos 105 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
+
+### Mais longe 1: Os testes do dossiê (30 min)
+
+Continua o exercício 7: usa o teu dossiê da semana de passos. Com estas duas alíneas, o dossiê fica com as cinco partes do passo 8 do guia.
+
+a) **Teste completo.** Faz o teste completo, chamada a chamada, para a semana do enunciado, e confirma que dá o que previste na alínea a) do exercício 7.
+
+b) **Um segundo caso.** Escolhe outra semana, com 3 dias e nenhum dia a zero, calcula à mão o resultado esperado e confirma que o algoritmo o dá.
+
+Concluíste quando os dois testes derem o que previste.
+
+Pista: o teste completo faz-se como no passo 7 do exemplo guiado, com cada chamada na sua tabela própria.
+
 ## Critérios de conclusão
 
 - [ ] Escrevi o contrato de cada função: o que recebe, o que devolve e exemplos.
@@ -173,7 +187,7 @@ c) As duas soluções dão o mesmo resultado? Quantos dias ficaram acima da méd
 - [ ] As minhas funções só usam os seus parâmetros, as suas variáveis e as constantes.
 - [ ] Fiz o trace de pelo menos uma chamada em tabela própria.
 - [ ] Para cada erro, escrevi o observado, o esperado, a causa e a correção.
-- [ ] O meu dossiê tem as cinco partes, e os testes dão o que previ.
+- [ ] O meu dossiê tem a análise, com o resultado esperado calculado à mão, a decomposição, o contrato de cada função e o algoritmo principal.
 
 ## Autoavaliação breve
 

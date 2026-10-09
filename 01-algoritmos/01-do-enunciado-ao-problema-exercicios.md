@@ -7,7 +7,7 @@
 | Disciplina | Fundamentos de Programação, 10.º ano, Desenvolvimento de Software |
 | Unidade de competência | UC00245, Desenvolver algoritmos |
 | Material | Ficha do primeiro tema, acompanha o [guia](01-do-enunciado-ao-problema.md) |
-| Tempo | 90 minutos de exercícios e 25 minutos de desafio opcional |
+| Tempo | 85 minutos de exercícios e 25 minutos de desafio opcional. A secção "Para ires mais longe", no fim da ficha, também é opcional e fica fora destes minutos |
 | Entrega | As respostas em papel ou num ficheiro de texto, com as contas que fizeste e não só os resultados |
 
 ## Antes de começares
@@ -19,6 +19,8 @@ Deves conseguir explicar, antes de começar, as quatro propriedades de um algori
 Não precisas de computador. Nada nesta ficha se escreve em pseudocódigo nem numa linguagem de programação: quando te pedirem passos, escreve-os em português, numerados, com uma ação por passo, como no guia. Se uma resposta te sair em frases em vez de passos, também vale, desde que se perceba sem dúvidas o que queres dizer.
 
 Faz os exercícios pela ordem. Cada um usa uma ideia do guia de cada vez, e o último junta várias.
+
+Os exercícios 1 a 5 são obrigatórios e cabem nos 85 minutos da ficha. Depois deles há um desafio opcional e, no fim, a secção "Para ires mais longe", também opcional, para quem terminar e quiser mais prática ou para estudares em casa. Nenhuma das duas conta para concluíres a ficha.
 
 ## Exercício 1: É um algoritmo? (10 min)
 
@@ -34,7 +36,7 @@ d) Para ganhar o Euromilhões: escolhe os números que vão sair no próximo sor
 
 Concluíste quando tiveres uma resposta para as quatro listas e, nas que não são algoritmos, souberes apontar a propriedade que falha.
 
-## Exercício 2: Dados, contexto e o que falta (15 min)
+## Exercício 2: Dados e contexto (10 min)
 
 Lê este enunciado duas vezes, a segunda com o lápis na mão:
 
@@ -44,9 +46,9 @@ a) Faz uma tabela com três colunas: o pormenor do enunciado, se é um dado ou c
 
 b) Calcula à mão a resposta ao que o Tiago quer saber e escreve a conta.
 
-c) A mãe do Tiago acrescenta uma coisa: "Ao domingo ele não lê, porque se deita mais cedo." E o Tiago muda a pergunta: agora quer saber em que dia da semana vai acabar o livro. Com estas duas mudanças, o enunciado deixa de chegar para responder. Que informação passa a faltar? Mostra que falta mesmo, com dois exemplos em que essa informação é diferente e o livro acaba em dias da semana diferentes.
+Concluíste quando a tua tabela separar bem os dados do contexto e a conta da alínea b) estiver escrita.
 
-Concluíste quando a tua tabela separar bem os dados do contexto, a conta da alínea b) estiver escrita e tiveres os dois exemplos da alínea c) feitos dia a dia.
+Se quiseres continuar com o Tiago, o Mais longe 1, no fim da ficha, muda-lhe a pergunta. É opcional.
 
 ## Exercício 3: Delimitar o problema dos bilhetes (25 min)
 
@@ -99,7 +101,7 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 
 Exercício 1. Para cada lista, faz quatro perguntas, uma por propriedade: isto acaba? Cada passo só se lê de uma maneira? Consigo fazer cada passo com o que tenho? Sei de onde parto e aonde chego? Basta uma resposta "não" para a lista não ser um algoritmo.
 
-Exercício 2. Para a alínea a), troca mentalmente cada pormenor por outro valor (16 anos em vez de 15, um candeeiro verde em vez de azul) e vê se a resposta à pergunta do Tiago muda. Para a alínea c), escolhe um dia da semana para o Tiago começar, faz uma lista dos dias, um por linha, e vai somando as páginas, saltando os domingos. Depois repete com outro dia de início.
+Exercício 2. Para a alínea a), troca mentalmente cada pormenor por outro valor (16 anos em vez de 15, um candeeiro verde em vez de azul) e vê se a resposta à pergunta do Tiago muda.
 
 Exercício 3. Para as entradas, pergunta-te: o que muda de cada vez que a diretora de turma faz esta conta? Para os professores, lembra-te dos livros nas caixas do guia: os alunos que sobram também precisam de alguém. Para a decisão, olha para o caso que a regra dos 15 alunos deixa de fora.
 
@@ -116,6 +118,20 @@ a) Encontra uma solução e mostra-a numa tabela como a do passo 8 do guia, veri
 b) Quantas travessias tem a tua solução? Explica porque é que não é possível fazer com menos.
 
 c) No jogo com três e três, o padrão "vão dois, volta um" falhava numa travessia. No jogo com dois e dois, esse padrão funciona do princípio ao fim? Usa a tua tabela para responder.
+
+## Para ires mais longe
+
+Esta secção é opcional e fica fora dos 85 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
+
+### Mais longe 1: O dia em que o Tiago acaba o livro (40 min)
+
+Continua o exercício 2: usa o mesmo enunciado do Tiago e a conta que fizeste na alínea b). O tempo é grande porque cada exemplo se faz dia a dia, com uma linha por dia, até o livro acabar.
+
+A mãe do Tiago acrescenta uma coisa: "Ao domingo ele não lê, porque se deita mais cedo." E o Tiago muda a pergunta: agora quer saber em que dia da semana vai acabar o livro. Com estas duas mudanças, o enunciado deixa de chegar para responder. Que informação passa a faltar? Mostra que falta mesmo, com dois exemplos em que essa informação é diferente e o livro acaba em dias da semana diferentes.
+
+Concluíste quando souberes dizer que informação falta e tiveres os dois exemplos feitos dia a dia.
+
+Pista: escolhe um dia da semana para o Tiago começar, faz uma lista dos dias, um por linha, e vai somando as páginas, saltando os domingos. Depois repete com outro dia de início.
 
 ## Critérios de conclusão
 

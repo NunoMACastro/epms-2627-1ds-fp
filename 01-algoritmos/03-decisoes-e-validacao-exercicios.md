@@ -7,7 +7,7 @@
 | Disciplina | Fundamentos de Programação, 10.º ano, Desenvolvimento de Software |
 | Unidade de competência | UC00245, Desenvolver algoritmos |
 | Material | Ficha do terceiro tema, acompanha o [guia](03-decisoes-e-validacao.md) |
-| Tempo | 85 minutos de exercícios e 20 minutos de desafio opcional |
+| Tempo | 90 minutos de exercícios e 20 minutos de desafio opcional. A secção "Para ires mais longe", no fim da ficha, também é opcional e fica fora destes minutos |
 | Entrega | As respostas em papel ou num ficheiro de texto, com as tabelas de casos e os traces |
 
 ## Antes de começares
@@ -19,6 +19,8 @@ Antes de começar, deves conseguir explicar a diferença entre `<` e `<=`, as ta
 Escreve os algoritmos na forma que usamos nas aulas, com a indentação a mostrar o que está dentro de cada caso. Se souberes a lógica e não te lembrares da forma, escreve frases claras que digam o que acontece em cada caso, incluindo quando um valor não serve.
 
 Os desenhos de fluxogramas não fazem parte desta ficha. Se o professor indicar o [laboratório](03-decisoes-e-validacao-laboratorio.md) deste tema, é lá que os desenhas.
+
+Os exercícios 1 a 6 são obrigatórios e cabem nos 90 minutos da ficha. Depois deles há um desafio opcional e, no fim, a secção "Para ires mais longe", também opcional, para quem terminar e quiser mais prática ou para estudares em casa. Nenhuma das duas conta para concluíres a ficha.
 
 ## Exercício 1: Verdadeiro ou falso (10 min)
 
@@ -88,7 +90,7 @@ c) Para as temperaturas 17, 18, 22, 26 e 27, diz se a temperatura está boa ou f
 
 Concluíste quando as duas condições derem respostas contrárias nos cinco casos.
 
-## Exercício 5: O preço das fotocópias (25 min)
+## Exercício 5: O preço das fotocópias (30 min)
 
 Lê o enunciado:
 
@@ -102,9 +104,9 @@ b) Escreve a tabela de casos de teste, com o resultado esperado calculado à mã
 
 c) Escreve o algoritmo em pseudocódigo, ou em frases claras. Usa constantes para os preços e para os limites.
 
-d) Faz o trace de dois casos de fronteira à tua escolha e confirma que dão o que previste.
+Concluíste quando a tua tabela tiver os três casos de cada fronteira, com o resultado calculado à mão antes de escreveres o algoritmo, e o teu algoritmo validar o pedido antes de calcular o preço e usar constantes para os preços e para os limites.
 
-Concluíste quando todos os casos da tua tabela derem, no trace ou à mão pelo teu algoritmo, o resultado que previste antes de o escrever.
+Se quiseres confirmar o teu algoritmo com um trace, o Mais longe 1, no fim da ficha, pede-o. É opcional.
 
 ## Exercício 6: Encontrar o erro (15 min)
 
@@ -153,6 +155,18 @@ a) Escreve a condição que diz se um ano é bissexto. Como mistura `e` com `ou`
 b) Testa-a com os anos 2024, 2023, 1900 e 2000, e diz quais são bissextos.
 
 c) Qual destes quatro anos mostra que a regra dos 100 é precisa? E qual mostra que a regra dos 400 é precisa?
+
+## Para ires mais longe
+
+Esta secção é opcional e fica fora dos 90 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
+
+### Mais longe 1: O trace das fotocópias nas fronteiras (15 min)
+
+Continua o exercício 5: usa o teu algoritmo da alínea c) e a tua tabela de casos de teste da alínea b). A matéria está no passo 9 do exemplo guiado do guia, o trace dos casos de fronteira.
+
+Faz o trace de dois casos de fronteira à tua escolha e confirma que dão o que previste.
+
+Concluíste quando os dois casos derem, no trace, o resultado que previste na tabela antes de escreveres o algoritmo.
 
 ## Critérios de conclusão
 

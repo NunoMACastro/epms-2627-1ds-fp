@@ -532,7 +532,7 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 
 ## Praticar
 
-Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md) deste tema. O último exercício é um dossiê completo de um problema pequeno, que junta toda a algoritmia.
+Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md) deste tema. O último exercício é o dossiê de um problema pequeno, que junta toda a algoritmia; os testes do dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo.
 
 ## O que vem a seguir
 
