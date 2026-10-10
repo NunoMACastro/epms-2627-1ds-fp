@@ -534,6 +534,10 @@ Usa esta lista para te testares. Para cada ponto, experimenta fazê-lo sem olhar
 
 Para praticares o que aprendeste neste guia, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md) deste tema. O último exercício é o dossiê de um problema pequeno, que junta toda a algoritmia; os testes do dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo.
 
+## Os três projetos que fecham a algoritmia
+
+Antes do Python, a algoritmia fecha com três projetos, todos jogos, cada um um pouco mais difícil do que o anterior. Num projeto juntas tudo o que aprendeste num problema só, e levas-o do enunciado até um algoritmo testado: o contrato, a tabela de casos escrita antes do algoritmo, o algoritmo, os testes e a correção do que falhar. O [projeto 1, duelo de dados](05-projeto-1-duelo-de-dados.md), fazes com o professor ao quadro, e é aí que aprendes a depurar com método e a voltar a testar tudo. O [projeto 2, adivinha o número](05-projeto-2-adivinha-o-numero.md), fazes em pares, com o professor a confirmar cada passo. O terceiro é a avaliação prática individual da unidade, com um problema novo, e podes consultar os dois primeiros no teu portefólio. O dossiê do exercício 7 da ficha é um bom treino para os três.
+
 ## O que vem a seguir
 
 Com este guia acaba a algoritmia. O passo seguinte é o Python, a primeira linguagem de programação do ano. Vais reconhecer quase tudo: o pseudocódigo das aulas foi escrito para passar para o Python quase linha a linha. `Função media(valores)` passa a `def media(valores):`, `devolver` passa a `return`, `Enquanto` passa a `while`, `Para cada` passa a `for`, e a indentação continua a mostrar o que está dentro de quê. O que muda é que, em vez de fazeres o trace à mão, vais pôr o computador a executar os teus algoritmos, e os dossiês que fizeste vão dizer-te se ele faz o que devia.

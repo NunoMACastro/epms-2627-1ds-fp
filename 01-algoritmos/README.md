@@ -14,4 +14,12 @@ Lê os guias pela ordem, porque cada um usa o que o anterior ensinou. Depois de 
 | [Repetição e arrays](04-repeticao-e-arrays.md) | `Enquanto`, `Para` e `Para cada`; as três peças de um ciclo e a tabela de iterações; arrays e índices; contador, acumulador e média; sentinela, validação repetida, `Parar` e `Continuar`; uma introdução às tabelas, com a campanha de recolha de alimentos |
 | [Funções e modelo integrado](05-funcoes-e-modelo-integrado.md) | Escrever e chamar funções com `Função` e `devolver`; parâmetros, argumentos e o trace de uma chamada; contratos e pré-condições; decompor um problema em funções e montar o dossiê, com o resumo das notas de um teste |
 
+A algoritmia fecha com três projetos, todos jogos, de dificuldade crescente. Os dois primeiros fazes com o professor, e ficam no teu portefólio; o terceiro é a avaliação prática individual, com um problema novo.
+
+| Projeto | Como se faz | Enunciado |
+| --- | --- | --- |
+| 1, duelo de dados | Com o professor ao quadro | [projeto 1](05-projeto-1-duelo-de-dados.md) |
+| 2, adivinha o número | Em pares, com o professor a confirmar cada passo | [projeto 2](05-projeto-2-adivinha-o-numero.md) |
+| 3, avaliação prática | Individual | entregue pelo professor no dia |
+
 ![Rodapé](../imagens/rodape.png)
