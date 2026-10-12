@@ -27,7 +27,7 @@ Este é o primeiro, e é o teu primeiro contacto com um projeto completo e com a
 
 Não tens de resolver o projeto sozinho: o professor resolve-o contigo, no quadro. O teu trabalho é acompanhar cada passo, pensar nas perguntas antes de o professor avançar, responder quando ele perguntar e escrever no caderno o que fica no quadro. Muitas vezes o professor vai parar e perguntar o que se faz a seguir. É nesse momento que se aprende, porque és tu que decides antes de veres a decisão escrita. Uma resposta errada dita em voz alta, numa aula destas, não custa nada e ajuda a turma inteira, porque muitas vezes é o erro que outros também iam cometer.
 
-Os projetos 1 e 2 ficam no teu portefólio e não contam para a nota, porque são feitos com ajuda. Mas vais poder consultá-los durante a avaliação, e por isso vale a pena que o caderno fique completo e arrumado. Não esperes encontrar lá a resposta da avaliação: cada projeto pede decisões que os anteriores não pediram, e a avaliação não é uma cópia deste projeto nem do projeto 2. O que vais poder aproveitar é a forma de trabalhar, passo a passo.
+Os projetos 1 e 2 ficam no teu portefólio e não contam para a avaliação prática, porque são feitos com ajuda. O trabalho que fazes neles conta, como o das outras aulas, no empenho e na autonomia. Mas vais poder consultá-los durante a avaliação, e por isso vale a pena que o caderno fique completo e arrumado. Não esperes encontrar lá a resposta da avaliação: cada projeto pede decisões que os anteriores não pediram, e a avaliação não é uma cópia deste projeto nem do projeto 2. O que vais poder aproveitar é a forma de trabalhar, passo a passo.
 
 ## O que precisas de saber antes
 

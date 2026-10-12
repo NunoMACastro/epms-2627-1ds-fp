@@ -9,7 +9,7 @@
 | Percurso | Algoritmos, projeto 2 de 3, no fim do percurso, depois do [guia 5](05-funcoes-e-modelo-integrado.md) e do [projeto 1](05-projeto-1-duelo-de-dados.md) |
 | Duração | Cerca de 120 minutos em aula: 70 para a Parte 1 e 50 para a Parte 2 |
 | Como se faz | Em pares, passo a passo. No fim de cada passo mostras o trabalho ao professor, e só avanças depois de ele o confirmar |
-| Evidência a guardar | O projeto completo, no portefólio de cada um dos dois elementos do par. Não conta para a nota, porque é feito com ajuda, e podes consultá-lo durante a avaliação prática |
+| Evidência a guardar | O projeto completo, no portefólio de cada um dos dois elementos do par. Não conta para a avaliação prática, porque é feito com ajuda, e podes consultá-lo durante a avaliação prática |
 
 ## Para que serve este projeto
 
