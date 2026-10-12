@@ -312,12 +312,12 @@ Nas decisões, cada saída do losango leva escrito `Sim` ou `Não`, conforme a c
 
 Repara que uma linha com `ler valor` vai num paralelogramo, e não num retângulo, apesar de ser escrita como uma atribuição. O que decide a figura é o que a linha faz: se recebe um valor de fora, é entrada, e a entrada desenha-se no paralelogramo.
 
-Repara também que o fluxograma tem um oval de início e um oval de fim, e o pseudocódigo não tem nenhuma palavra para isso. No pseudocódigo não fazem falta, porque se lê de cima para baixo e o algoritmo começa na primeira linha e acaba na última. Num desenho, as figuras podem estar espalhadas pela folha, e os ovais mostram onde se entra e por onde se sai.
+Repara também que o fluxograma tem um oval de início e um oval de fim, e o pseudocódigo não tem nenhuma palavra para isso. No pseudocódigo não fazem falta, porque se lê de cima para baixo e o algoritmo começa na primeira linha e acaba na última. Num desenho, as figuras podem estar espalhadas pela folha, e os ovais mostram onde se entra e por onde se sai. Há sempre um só oval de fim: mesmo quando, a partir do guia seguinte, o percurso se dividir em caminhos diferentes, os caminhos voltam a juntar-se antes do fim.
 
 Um fluxograma bem feito cumpre sempre estas regras:
 
 - tem um único início;
-- tem pelo menos um fim;
+- tem um único fim;
 - todas as figuras estão ligadas por setas, e nenhuma seta fica pendurada sem destino;
 - cada figura tem uma só instrução, escrita da mesma maneira que no pseudocódigo.
 

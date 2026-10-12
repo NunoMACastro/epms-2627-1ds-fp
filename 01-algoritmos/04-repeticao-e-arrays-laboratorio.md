@@ -18,7 +18,7 @@ Vais desenhar no diagrams.net o fluxograma da primeira parte do exemplo guiado d
 
 Essa seta é a única técnica nova deste laboratório. O objetivo é aprender a desenhá-la de forma que qualquer pessoa, ao olhar para o desenho, perceba sem hesitar de onde sai, onde chega, e que não se confunde com as outras setas.
 
-No fim há uma parte autónoma, com a tabuada do guia, que desenhas sozinho.
+No fim há uma parte autónoma, com um algoritmo que não está no guia, que desenhas sozinho.
 
 ## O que precisas de saber antes
 
@@ -174,29 +174,31 @@ Confirma depois esta lista:
 4. Carrega em Exportar. Se a aplicação pedir um nome e um sítio, o nome é `fluxograma-campanha-de-alimentos.png` e o sítio é "Aparelho" ou "Descarregar", nunca o Google Drive.
 5. Abre a imagem exportada e confirma que se lê todo o texto e que se veem todas as setas, incluindo a de volta.
 
-## Parte autónoma: a tabuada com `Para` (10 min)
+## Parte autónoma: um `Para` no fluxograma (10 min)
 
-Esta parte fazes sozinho. Cria um ficheiro novo, em Ficheiro, Novo..., e guarda-o logo na pasta `algoritmos`, com o nome `fluxograma-tabuada.drawio`.
+Esta parte fazes sozinho. Cria um ficheiro novo, em Ficheiro, Novo..., e guarda-o logo na pasta `algoritmos`, com o nome `fluxograma-inventario-de-corredores.drawio`.
 
-Vais desenhar o fluxograma da tabuada do guia, escrita com `Para`:
+Vais desenhar o fluxograma deste algoritmo, que soma as caixas guardadas nos 3 corredores de um armazém:
 
 ```text
-const NUMERO = 7
-const ULTIMO = 3
-Para vezes de 1 até ULTIMO
-    Escreve: NUMERO, " x ", vezes, " = ", NUMERO * vezes
-Escreve: "Fim da tabuada"
+const NUMERO_DE_CORREDORES = 3
+int totalCaixas = 0
+Para corredor de 1 até NUMERO_DE_CORREDORES
+    Escreve: "Caixas no corredor ", corredor, "?"
+    int caixas = ler valor
+    totalCaixas = totalCaixas + caixas
+Escreve: "Total de caixas no armazém: ", totalCaixas
 ```
 
 A única coisa nova é o `Para`. No guia viste que, nos fluxogramas, o `Para` se desenha como o `Enquanto` equivalente. Por isso o desenho tem figuras que não aparecem escritas como linhas no pseudocódigo acima.
 
 **a)** No papel, escreve as duas instruções que o `Para` faz sem aparecerem escritas como linhas, a inicialização e a atualização, e diz onde fica cada uma no fluxograma: antes do losango, ou no fim do corpo, mesmo antes da seta de volta.
 
-**b)** Desenha o fluxograma no diagrams.net, com essas duas figuras, o losango `vezes <= ULTIMO?` e a seta de volta a chegar à ponta esquerda do losango, como na parte 4. O `Sim` sai por baixo e o `Não` pela direita.
+**b)** Desenha o fluxograma no diagrams.net, com essas duas figuras, o losango `corredor <= NUMERO_DE_CORREDORES?` e a seta de volta a chegar à ponta esquerda do losango, como na parte 4. O `Sim` sai por baixo e o `Não` pela direita.
 
-**c)** Percorre o desenho com o ponteiro do rato. Escreve no papel quantas vezes passaste pelo losango e o que apareceu no ecrã, linha a linha.
+**c)** Percorre o desenho com o ponteiro do rato, com 5, 3 e 4 caixas nos três corredores. Escreve no papel quantas vezes passaste pelo losango e que total apareceu no fim.
 
-Guarda e exporta a imagem como `fluxograma-tabuada.png`, como na parte 6. Se o tempo da aula não chegar para esta parte, termina-a no início da aula seguinte.
+Guarda e exporta a imagem como `fluxograma-inventario-de-corredores.png`, como na parte 6. Se o tempo da aula não chegar para esta parte, termina-a no início da aula seguinte.
 
 ## Quando alguma coisa corre mal na aplicação
 
@@ -216,9 +218,9 @@ Guarda e exporta a imagem como `fluxograma-tabuada.png`, como na parte 6. Se o t
 Na tua pasta `algoritmos` tens de ter quatro ficheiros novos:
 
 - `fluxograma-campanha-de-alimentos.drawio` e `fluxograma-campanha-de-alimentos.png`;
-- `fluxograma-tabuada.drawio` e `fluxograma-tabuada.png`.
+- `fluxograma-inventario-de-corredores.drawio` e `fluxograma-inventario-de-corredores.png`.
 
-E em papel, a folha da parte autónoma, com as duas instruções que o `Para` faz sem aparecerem escritas, o número de passagens pelo losango e o que apareceu no ecrã.
+E em papel, a folha da parte autónoma, com as duas instruções que o `Para` faz sem aparecerem escritas, o número de passagens pelo losango e o total que apareceu no fim.
 
 Antes de entregares, confirma:
 
