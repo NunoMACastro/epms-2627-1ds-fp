@@ -2,7 +2,7 @@
 
 # Laboratório: Estado, sequência e representações
 
-Laboratório do tema Estado, sequência e representações, do módulo Desenvolver algoritmos. Cerca de 60 minutos, e mais cerca de 25 se fizeres o primeiro desafio. Vais desenhar no diagrams.net o fluxograma do algoritmo que converte minutos em horas e minutos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](02-estado-sequencia-representacoes.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Estado, sequência e representações, do módulo Desenvolver algoritmos. Cerca de 70 minutos, e mais cerca de 25 se fizeres o primeiro desafio. Vais desenhar no diagrams.net o fluxograma do algoritmo que converte minutos em horas e minutos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](02-estado-sequencia-representacoes.md) tem a teoria completa, para quem quiser saber mais. A lista "Palavras que vais usar" é para consultar quando precisares, e não para ler de seguida antes de começar.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar, e nenhum exercício da ficha depende dele.
 
@@ -17,12 +17,14 @@ Pelo caminho, ficas a saber guardar um desenho no teu computador e escolher a fi
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
 | 1 | O ficheiro `fluxograma-converter-minutos.drawio`, guardado na pasta `algoritmos` | O nome do ficheiro aparece no topo da aplicação |
-| 2 | As sete figuras, cada uma com o texto de uma instrução | As sete figuras em coluna, com as formas certas |
+| 2 | As sete figuras: o Início, as cinco instruções e o Fim | As sete figuras em coluna, com as formas certas |
 | 3 | As seis setas | As setas presas às figuras, de cima para baixo |
 | 4 | A verificação contra o pseudocódigo | Seguido com o dedo para 60 minutos, o fluxograma mostra "1 h e 0 min" |
 | 5 | A imagem `fluxograma-converter-minutos.png` | A imagem mostra o fluxograma inteiro, e o `.drawio` volta a abrir |
 
 ## Palavras que vais usar
+
+Consulta esta lista quando um passo usar uma palavra que não conheces.
 
 - Algoritmo: uma sequência finita de passos, cada um claro e possível de executar, que parte de uns dados e chega a um resultado.
 - Pseudocódigo: texto escrito com um vocabulário pequeno e sempre igual, que toda a turma lê da mesma maneira, com uma instrução por linha. Para saber mais, vê a secção "Uma forma de escrever algoritmos" do [guia](02-estado-sequencia-representacoes.md).
@@ -53,7 +55,7 @@ Pelo caminho, ficas a saber guardar um desenho no teu computador e escolher a fi
 
 - Um computador com um browser, como o Chrome, o Edge, o Firefox ou o Safari, e ligação à internet.
 - O diagrams.net, a aplicação de diagramas deste laboratório. Também é conhecida por draw.io, que é o nome antigo, e os ficheiros que cria terminam em `.drawio`. Usa-se no browser, é gratuita e não precisa de conta. Confirma que chegas a ela: abre `https://app.diagrams.net/?lang=pt`. Deve aparecer um diagrama em branco, chamado "Diagrama sem nome", o que quer dizer que a aplicação está pronta a usar. Se o professor indicar outra aplicação de diagramas, os passos são parecidos: muda o sítio dos menus, mas não o que tens de fazer.
-- Uma pasta chamada `algoritmos`, onde vais guardar os ficheiros desta disciplina. Cria-a antes de começar, numa pasta do computador, numa pen ou no sítio que o professor indicar. Todos os ficheiros deste laboratório têm nomes em minúsculas, com hífenes entre as palavras e sem acentos nem espaços, como `fluxograma-converter-minutos.drawio`. Um nome assim funciona em qualquer computador e diz o que o ficheiro contém sem ser preciso abri-lo.
+- Uma pasta chamada `algoritmos`, onde vais guardar os ficheiros desta disciplina. Cria-a antes de começar, numa pasta do computador, numa pen ou no sítio que o professor indicar. No Windows, carrega com o botão direito do rato num sítio vazio da pasta onde a queres, e escolhe "Novo" e depois "Pasta". Depois escreve o nome. No Mac, no Finder, carrega com o botão direito num sítio vazio, escolhe "Nova pasta" e escreve o nome. Todos os ficheiros deste laboratório têm nomes em minúsculas, com hífenes entre as palavras e sem acentos nem espaços, como `fluxograma-converter-minutos.drawio`. Um nome assim funciona em qualquer computador e diz o que o ficheiro contém sem ser preciso abri-lo.
 - Papel e lápis, para o primeiro desafio. O algoritmo do passo a passo está na fase 2, e não precisas de mais nada à mão.
 
 ## Se alguma coisa falhar
@@ -114,7 +116,7 @@ O ficheiro `fluxograma-converter-minutos.drawio` está na tua pasta `algoritmos`
 
 Pensa antes de continuares: porque é que não serve guardar no "Navegador", se o ficheiro também fica guardado? A resposta: o "Navegador" guarda o ficheiro dentro do próprio browser. Basta alguém limpar os dados do browser, ou mudares de computador, para o perderes. Numa pasta tua, o ficheiro fica contigo.
 
-## Fase 2: uma figura para cada instrução (20 minutos)
+## Fase 2: uma figura para cada instrução (25 minutos)
 
 Um fluxograma é o desenho de um algoritmo. Cada instrução do pseudocódigo passa a ser uma figura, e a forma da figura diz que tipo de instrução é. As leituras, com `ler valor`, e as saídas, com `Escreve:`, comunicam com quem usa o algoritmo, e vão em paralelogramos. As atribuições e as contas vão em retângulos. O algoritmo começa e acaba num oval, com as palavras `Início` e `Fim`. Para saber mais, lê a secção "Fluxogramas" do [guia](02-estado-sequencia-representacoes.md).
 
@@ -182,7 +184,7 @@ O fluxograma tem 7 figuras: uma por cada uma das cinco instruções, mais o iní
 
 ### Paragem 2
 
-Tens sete figuras numa coluna, cada uma com o texto de uma instrução: dois ovais, três paralelogramos e dois retângulos, pela ordem da tabela.
+Tens sete figuras numa coluna, o Início, as cinco instruções e o Fim, cada uma com o seu texto. São dois ovais, três paralelogramos e dois retângulos, pela ordem da tabela.
 
 Pensa antes de continuares: a linha `int totalMinutos = ler valor` tem um `=`, como as atribuições. Porque é que vai num paralelogramo, e não num retângulo? A resposta: o que decide a figura é o que a linha faz. Esta linha recebe um valor de fora, escrito pela pessoa, e por isso é uma entrada. As entradas desenham-se no paralelogramo.
 

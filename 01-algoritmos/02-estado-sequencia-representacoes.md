@@ -52,7 +52,7 @@ No fim deste guia, consegues:
 
 ## Uma forma de escrever algoritmos
 
-No guia anterior viste que o português permite frases como "espera um bocado". Cada pessoa executa-as à sua maneira, porque não dizem quanto tempo é um bocado. Uma linguagem de programação, como o C ou o Python, não tem esse problema: cada instrução tem um único significado. Mas tem outro, para quem está a começar. Obriga a respeitar regras de escrita muito rígidas. Um ponto e vírgula esquecido impede o programa de funcionar, mesmo que o raciocínio esteja certo.
+No guia anterior viste que o português permite frases como "espera um bocado". Cada pessoa executa-as à sua maneira, porque não dizem quanto tempo é um bocado. Uma linguagem de programação, como o C ou o Python, não tem esse problema: cada instrução tem um único significado. Mas tem outro, para quem está a começar. Obriga a respeitar regras de escrita muito rígidas. No C, por exemplo, um ponto e vírgula esquecido impede o programa de funcionar, mesmo que o raciocínio esteja certo.
 
 O **pseudocódigo** fica a meio caminho. É texto, escrito com um vocabulário pequeno e sempre igual, que toda a turma lê da mesma maneira. Não é uma linguagem de programação. Nenhum computador lê o teu pseudocódigo, e por isso não há erros de escrita que o impeçam de funcionar. Serve para escreveres depressa, e sem ambiguidades, o raciocínio que resolve o problema. A tua atenção fica no raciocínio, e não na pontuação.
 
@@ -70,13 +70,13 @@ No dia a dia, o marcador de um jogo de basquetebol funciona assim. Há um espaç
 
 No guia anterior, o estado dos Missionários e Canibais era formado por três valores sem nome, escritos entre parênteses. Com variáveis, passam a ter nome próprio, por exemplo `missionariosEsquerda`, `canibaisEsquerda` e `ladoDoBarco`. Cada travessia muda o valor de algumas delas.
 
-O nome de uma variável deve dizer o que ela guarda. `totalMinutos` é um bom nome. `x`, `aux` ou `numero2` não são, porque daqui a uma semana nem tu te lembras do que lá estava. Nesta disciplina, os nomes das variáveis seguem estas regras:
+O nome de uma variável deve dizer o que ela guarda. `totalMinutos` é um bom nome. `x`, `aux` ou `numero2` não são, porque daqui a uma semana nem tu te lembras do que lá estava. Nos exercícios de treino que só seguem contas, sem um problema por trás, usam-se nomes curtos, como `a`, `b`, `x` e `y`. Nesta disciplina, os nomes das variáveis seguem estas regras:
 
 - começam por uma letra minúscula;
 - não têm espaços, e quando têm várias palavras, cada palavra a partir da segunda começa por maiúscula, como em `totalMinutos` ou `precoPorUnidade`;
 - não têm acentos nem cedilhas, porque as linguagens que vais usar a seguir nem sempre os aceitam nos nomes, e é melhor habituares-te desde já.
 
-O erro típico com variáveis é usar uma variável antes de ela ter recebido algum valor. Uma caixa acabada de etiquetar está vazia. Perguntar o que está lá dentro não dá nenhuma resposta útil. Vais ver este erro num algoritmo completo em "Erros frequentes", no fim do guia.
+O erro típico com variáveis é usar uma variável antes da linha onde ela nasce, a primeira que lhe dá um valor. Nesse momento, a caixa ainda nem existe. Perguntar o que está lá dentro não dá nenhuma resposta útil. Vais ver este erro num algoritmo completo em "Erros frequentes", no fim do guia.
 
 ## Constantes
 
@@ -96,7 +96,7 @@ No pseudocódigo, uma constante escreve-se no início do algoritmo, antes da pri
 const MINUTOS_POR_HORA = 60
 ```
 
-A palavra `const` é a abreviatura de "constante". Diz a quem lê que este valor fica fixo do princípio ao fim. O sinal `=` quer dizer que o nome `MINUTOS_POR_HORA` fica com o valor 60. Vais ver já a seguir, na secção da atribuição, porque é que se escreve assim. As constantes vão para o início porque são regras do problema. Quem lê o algoritmo fica a conhecê-las antes de ver as contas que as usam.
+A palavra `const` é a abreviatura de "constante". Diz a quem lê que este valor fica fixo do princípio ao fim. O sinal `=` quer dizer que o nome `MINUTOS_POR_HORA` fica com o valor 60. A secção "Atribuição: dar um valor não é perguntar se é igual" explica porque é que se escreve assim. As constantes vão para o início porque são regras do problema. Quem lê o algoritmo fica a conhecê-las antes de ver as contas que as usam.
 
 ## Tipos de dados
 
@@ -109,11 +109,16 @@ Cada variável guarda valores de um **tipo**. O tipo decide que valores são pos
 | `string` | texto, ou seja, sequências de caracteres, entre aspas | `"Ana"`, `"Quantos minutos?"` |
 | `bool` | só um de dois valores, verdadeiro ou falso | `true`, `false` |
 
-Os nomes vêm do inglês, a língua em que as linguagens de programação são escritas. Vais reencontrá-los, iguais ou muito parecidos, no C e no Python. `int` é o princípio de *integer*, que quer dizer inteiro. `float` vem de *floating point*, "vírgula flutuante", o nome técnico da forma como o computador guarda números com parte decimal. `string` quer dizer "fio" ou "cadeia": um texto é uma cadeia de caracteres, uns atrás dos outros. `bool` vem do apelido de George Boole, o matemático que estudou as contas feitas só com verdadeiro e falso. Os dois valores do tipo `bool` escrevem-se `true`, verdadeiro, e `false`, falso.
+Os nomes vêm do inglês, a língua em que as linguagens de programação são escritas. Vais reencontrá-los, iguais ou muito parecidos, no C e no Python. Cada um quer dizer isto:
 
-O professor faz na aula a ligação entre os nomes portugueses e os ingleses. No pseudocódigo usam-se os ingleses, para já estares habituado a eles quando chegares ao C e ao Python.
+- `int` vem de *integer*, que quer dizer inteiro: um número sem casas decimais, como 12 ou -3.
+- `float` vem de *floating point*, "vírgula flutuante": um número com casas decimais, como 2,5. Vírgula flutuante é o nome técnico da forma como o computador guarda estes números.
+- `string` quer dizer "fio" ou "cadeia", e aqui é uma cadeia de caracteres, uns atrás dos outros: um texto, como `"Ana"`.
+- `bool` vem de George Boole, o matemático: só pode ser verdadeiro ou falso. Boole estudou as contas feitas só com estes dois valores, que se escrevem `true`, verdadeiro, e `false`, falso.
 
-Repara que, no pseudocódigo, a parte decimal de um número se separa com um ponto, `2.25`, tal como nas linguagens de programação. No texto em português continua a escrever-se com vírgula, 2,25. São duas convenções para dois contextos, e não se misturam. Dentro do pseudocódigo, ponto; no texto que escreves à volta, vírgula.
+No pseudocódigo escreves sempre estes quatro nomes ingleses, para já estares habituado a eles quando chegares ao C e ao Python.
+
+No pseudocódigo, a parte decimal de um número separa-se com um ponto, `2.25`, tal como nas linguagens de programação. No texto em português continua a escrever-se com vírgula, 2,25. São duas convenções para dois contextos, e não se misturam. Dentro do pseudocódigo, ponto; no texto que escreves à volta, vírgula.
 
 Escolher o tipo é uma decisão com consequências, e decide-se pelo que o valor representa. Um número de minutos, de caixas ou de pessoas é `int`, porque não existem 2,5 pessoas. Um peso ou uma média é `float`. Um nome ou uma mensagem é `string`. A resposta a uma pergunta de sim ou não, como "a nota é positiva?", é `bool`. Vais usar muito o tipo `bool` no guia seguinte, quando o algoritmo tiver de tomar decisões.
 
@@ -127,8 +132,6 @@ Cada instrução que muda o valor de uma variável muda o estado. Se quiseres sa
 
 ## Atribuição: dar um valor não é perguntar se é igual
 
-Esta é a distinção mais importante do guia, e a que mais vezes se troca no início.
-
 **Atribuir** é dar um valor a uma variável. No pseudocódigo que usamos nas aulas, escreve-se com um sinal de igual, com a variável à esquerda e o valor à direita. Se já existir uma variável chamada `horas`, dar-lhe o valor 2 escreve-se assim:
 
 ```text
@@ -137,7 +140,7 @@ horas = 2
 
 Lê-se "horas recebe 2" ou "horas fica com 2". É uma ordem, e não uma pergunta. A partir deste momento, `horas` vale 2, seja qual for o valor que tinha antes.
 
-Repara que este sinal de igual não quer dizer o mesmo que na matemática. Na matemática, `x = 2` afirma que dois lados são iguais, e podes lê-lo da esquerda para a direita ou da direita para a esquerda. No pseudocódigo, `horas = 2` manda pôr o 2 dentro da caixa `horas`. Só se lê num sentido: o valor da direita vai para a variável da esquerda. O C e o Python, as duas linguagens que vais aprender este ano, escrevem a atribuição com este mesmo sinal. É por isso que o usamos já.
+Este sinal de igual não quer dizer o mesmo que na matemática. Na matemática, `x = 2` afirma que dois lados são iguais, e podes lê-lo da esquerda para a direita ou da direita para a esquerda. No pseudocódigo, `horas = 2` manda pôr o 2 dentro da caixa `horas`. Só se lê num sentido: o valor da direita vai para a variável da esquerda. O C e o Python, as duas linguagens que vais aprender este ano, escrevem a atribuição com este mesmo sinal. É por isso que o usamos já.
 
 ### A linha onde a variável nasce
 
@@ -157,7 +160,7 @@ Porque é que o tipo só se escreve uma vez? Porque o tipo é uma característic
 
 E porque é que o tipo aparece na linha onde a variável nasce, e não numa lista no topo do algoritmo? Porque é aí que ele interessa. Quem lê `int horas = 2` fica a saber de uma só vez o nome, o tipo e o primeiro valor. Não tem de andar para cima e para baixo no texto. E porque é também assim que se faz no C, onde se escreve `int horas = 2;`, com um ponto e vírgula no fim. No Python o tipo nem se escreve, mas a variável nasce da mesma maneira, na primeira linha que lhe dá um valor.
 
-Quando o primeiro valor de uma variável é o resultado de uma conta, a conta vai na mesma linha em que ela nasce. Por exemplo, `int horas = totalMinutos div MINUTOS_POR_HORA`. A operação `div` é explicada na secção "Operadores aritméticos", e esta linha aparece inteira no exemplo guiado.
+Quando o primeiro valor de uma variável é o resultado de uma conta, a conta vai na mesma linha em que ela nasce. No marcador do basquetebol, por exemplo, o total de pontos do jogo nasce assim: `int totalPontos = pontosCasa + pontosFora`.
 
 ### Como se executa uma atribuição
 
@@ -183,18 +186,19 @@ a = b
 b = a
 ```
 
-A tabela mostra o valor das duas variáveis depois de cada linha. Uma variável que ainda não nasceu fica "sem valor".
+A tabela mostra, passo a passo, o valor das duas variáveis depois de cada linha. No passo 0, antes de começar, nenhuma nasceu, e por isso as duas estão "sem valor". Nenhuma destas linhas escreve no ecrã, e por isso a última coluna diz sempre "nada".
 
-| Linha executada | a | b |
-| --- | ---: | ---: |
-| `int a = 4` | 4 | sem valor |
-| `int b = 9` | 4 | 9 |
-| `a = b` | 9 | 9 |
-| `b = a` | 9 | 9 |
+| Passo | Instrução executada | a | b | Ecrã |
+| ---: | --- | ---: | ---: | --- |
+| 0 | antes de começar | sem valor | sem valor | nada |
+| 1 | `int a = 4` | 4 | sem valor | nada |
+| 2 | `int b = 9` | 4 | 9 | nada |
+| 3 | `a = b` | 9 | 9 | nada |
+| 4 | `b = a` | 9 | 9 | nada |
 
 No fim, as duas valem 9.
 
-Leitura guiada: a terceira linha guarda em `a` o valor de `b`, e `a` passa a valer 9. O 4 perdeu-se. A quarta linha guarda em `b` o valor atual de `a`, que já é 9. Quem esperava que os valores trocassem de lugar esqueceu-se de que, depois da terceira linha, o 4 já não existe em lado nenhum. Pensar no estado antes e depois de cada linha é o que te protege deste tipo de engano. Esta tabela é uma versão simples da tabela de trace, que a secção "Tabela de trace" ensina a construir com todas as regras.
+Leitura guiada: no passo 3, `a` recebe o valor de `b` e passa a valer 9. O 4 perdeu-se. No passo 4, `b` recebe o valor atual de `a`, que já é 9. Quem esperava que os valores trocassem de lugar esqueceu-se de que, depois do passo 3, o 4 já não existe em lado nenhum. Pensar no estado antes e depois de cada linha é o que te protege deste tipo de engano. Esta tabela chama-se tabela de trace, e a secção "Tabela de trace" ensina a construí-la com todas as regras.
 
 Do lado esquerdo do sinal de igual está sempre uma única variável, porque é lá que o valor vai ser guardado. `10 = total` e `total + 5 = total` não fazem sentido. Não se pode guardar um valor dentro do número 10, nem dentro de uma conta.
 
@@ -303,7 +307,7 @@ Por isso, um algoritmo escrito em frases claras, em português, também é váli
 - quando: em que momento e por que ordem;
 - o que acontece se não der: o que fazer quando um valor não serve, uma pergunta que vai ganhar importância no guia seguinte.
 
-"Divide os minutos por 60 e mostra o resultado" deixa uma dúvida sobre o quanto. É a divisão com parte decimal, que dá 2.25 para 135 minutos, ou só a parte inteira, que dá 2? "Calcula quantas vezes 60 cabe inteiro nos minutos e mostra esse número como as horas" não deixa nenhuma. Nesta fase, o que importa é que a lógica esteja lá. O pseudocódigo é uma ajuda para a escrever sem ambiguidades. No exemplo guiado vais ver o mesmo algoritmo escrito das duas maneiras.
+"Divide os minutos por 60 e mostra o resultado" deixa uma dúvida sobre o quanto. É a divisão com parte decimal, que dá `2.25` para 135 minutos, ou só a parte inteira, que dá 2? "Calcula quantas vezes 60 cabe inteiro nos minutos e mostra esse número como as horas" não deixa nenhuma. Nesta fase, o que importa é que a lógica esteja lá. O pseudocódigo é uma ajuda para a escrever sem ambiguidades. No exemplo guiado vais ver o mesmo algoritmo escrito das duas maneiras.
 
 A forma que usamos assenta em poucas ideias, que já viste nas secções anteriores:
 
@@ -341,7 +345,7 @@ Na linha da atribuição, uma **expressão** é o que está à direita do `=`: u
 
 As palavras que começam uma instrução, como `Escreve:` e, no guia seguinte, `Se` e `Senão`, escrevem-se com maiúscula inicial. Assim veem-se logo no princípio da linha. Os tipos, os operadores, como `div`, `resto`, `e` e `ou`, e `ler valor` escrevem-se em minúsculas. Os nomes das variáveis seguem as regras da secção "Variáveis", e os das constantes vão em maiúsculas, com traço baixo. Nada disto é para decorar como uma lei. É para que todos escrevam da mesma maneira, e cada um leia depressa o que os outros escreveram.
 
-Evita dar a uma variável o nome de uma destas palavras. Uma variável chamada `const` ou `int` deixaria quem lê sem saber se a palavra é uma variável ou parte da forma. Nas linguagens de programação, estas palavras chamam-se **palavras reservadas**. Lá são mesmo proibidas como nomes, como vais ver no Python e no C.
+Evita dar a uma variável o nome de uma destas palavras. Uma variável chamada `const` ou `int` deixaria quem lê sem saber se a palavra é uma variável ou parte da forma. Nas linguagens de programação, estas palavras chamam-se **palavras reservadas**. No C, `int` e `const` são palavras reservadas, proibidas como nomes. O Python tem as suas, que vais conhecer quando lá chegares.
 
 ## Sequência
 
@@ -375,7 +379,7 @@ Nas decisões, cada saída do losango leva escrito `Sim` ou `Não`, conforme a c
 
 Repara que uma linha com `ler valor` vai num paralelogramo, e não num retângulo, apesar de ser escrita como uma atribuição. O que decide a figura é o que a linha faz. Se recebe um valor de fora, é entrada, e a entrada desenha-se no paralelogramo.
 
-Repara também que o fluxograma tem um oval de início e um oval de fim, e o pseudocódigo não tem nenhuma palavra para isso. No pseudocódigo não fazem falta, porque se lê de cima para baixo e o algoritmo começa na primeira linha e acaba na última. Num desenho, as figuras podem estar espalhadas pela folha, e os ovais mostram onde se entra e por onde se sai. Há sempre um só oval de fim. A partir do guia seguinte, o percurso pode dividir-se em caminhos diferentes, mas os caminhos voltam a juntar-se antes do fim.
+O fluxograma tem um oval de início e um oval de fim, e o pseudocódigo não tem nenhuma palavra para isso. No pseudocódigo não fazem falta, porque se lê de cima para baixo e o algoritmo começa na primeira linha e acaba na última. Num desenho, as figuras podem estar espalhadas pela folha, e os ovais mostram onde se entra e por onde se sai. Há sempre um só oval de fim. A partir do guia seguinte, o percurso pode dividir-se em caminhos diferentes, mas os caminhos voltam a juntar-se antes do fim.
 
 Um fluxograma bem feito cumpre sempre estas regras:
 
@@ -397,9 +401,9 @@ Serve para veres o algoritmo por dentro. Um algoritmo só mostra o que escreve n
 Uma tabela de trace constrói-se assim:
 
 1. Faz uma coluna para o número do passo, uma para a instrução executada, uma para cada variável e uma para o que aparece no ecrã.
-2. Na primeira linha, antes de qualquer instrução, escreve "sem valor" em todas as variáveis, porque nenhuma nasceu ainda. Cada variável fica "sem valor" até ao passo da linha onde nasce.
+2. Na primeira linha, antes de qualquer instrução, escreve "sem valor" em todas as variáveis, porque nenhuma nasceu ainda, e "nada" no ecrã. Cada variável fica "sem valor" até ao passo da linha onde nasce.
 3. Para cada instrução, pela ordem em que é executada, acrescenta uma linha. Copia os valores da linha de cima e muda só o que essa instrução muda.
-4. Numa atribuição, incluindo as que usam `ler valor`, muda só a coluna da variável que está à esquerda do `=`. As outras ficam iguais.
+4. Numa atribuição, incluindo as que usam `ler valor`, muda só a coluna da variável que está à esquerda do `=`. As outras ficam iguais. Na coluna do ecrã, numa leitura escreve-se o que a pessoa escreve, como "a pessoa escreve 60", e numa conta escreve-se "nada".
 5. Num `Escreve:`, nenhuma variável muda. Escreve na coluna do ecrã exatamente o que aparece, com os valores que as variáveis têm nesse momento.
 6. As constantes não têm coluna nem passo. A linha do `const` dá nome a uma regra do problema, que vale o mesmo do princípio ao fim. Por isso, não muda nada no estado.
 
@@ -546,7 +550,7 @@ Segundo caso: a pessoa escreve 59.
 | 4 | `int minutos = totalMinutos resto MINUTOS_POR_HORA` | 59 | 0 | 59 | nada |
 | 5 | `Escreve: horas, " h e ", minutos, " min"` | 59 | 0 | 59 | 0 h e 59 min |
 
-A diferença para o primeiro caso está toda nos passos 3 e 4. O 60 não cabe nenhuma vez em 59, e por isso `59 div 60` dá 0. Como não se tirou nenhuma hora, sobram os 59 minutos inteiros, e `59 resto 60` dá 59. Repara que os minutos restantes ficaram em 59, o maior valor que o contrato permite, e não passaram de lá.
+A diferença para o primeiro caso está toda nos passos 3 e 4. O 60 não cabe nenhuma vez em 59, e por isso `59 div 60` dá 0. Como não se tirou nenhuma hora, sobram os 59 minutos inteiros, e `59 resto 60` dá 59. Os minutos restantes ficaram em 59, o maior valor que o contrato permite, e não passaram de lá.
 
 Terceiro caso: a pessoa escreve 0.
 
@@ -629,9 +633,9 @@ Como se evita: numa sequência, leem-se primeiro todos os dados de que a conta p
 
 ### Usar `/` em vez de `div`
 
-O que se vê: com `int horas = totalMinutos / MINUTOS_POR_HORA`, o caso de 135 minutos dá 2.25. É tentador ler isto como "2 horas e 25 minutos", e está errado.
+O que se vê: com `int horas = totalMinutos / MINUTOS_POR_HORA`, o caso de 135 minutos dá `2.25`. É tentador ler isto como "2 horas e 25 minutos", e está errado.
 
-Porque acontece: 2,25 horas são 2 horas e um quarto de hora, ou seja, 2 horas e 15 minutos. A parte decimal de um número de horas não são minutos, são frações de hora. Além disso, a própria linha contradiz-se. O `int` à frente de `horas` promete um número inteiro, que é o que o contrato pede. Mas a conta com `/` dá 2.25, um número com parte decimal.
+Porque acontece: 2,25 horas são 2 horas e um quarto de hora, ou seja, 2 horas e 15 minutos. A parte decimal de um número de horas não são minutos, são frações de hora. Além disso, a própria linha contradiz-se. O `int` à frente de `horas` promete um número inteiro, que é o que o contrato pede. Mas a conta com `/` dá `2.25`, um número com parte decimal.
 
 Como se evita: pergunta-te se o resultado pode ter parte decimal. Horas completas não podem, e por isso a conta certa é `div`.
 
@@ -724,7 +728,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 6. Quanto dão `23 div 4` e `23 resto 4`? Como confirmas as duas contas ao mesmo tempo?
 7. Qual é o contrato da função `abs`? Escreve uma atribuição que guarde em `distancia` a diferença, sem sinal, entre duas variáveis `x` e `y`.
 8. Escolhe um problema pequeno teu, com uma regra fixa, um dado que se lê e uma conta. Escreve o algoritmo na forma das aulas. Usa uma constante, uma leitura, uma conta e uma escrita, e põe o tipo de cada variável na linha onde nasce. Depois escreve-o em frases claras que não deixem dúvidas.
-9. Desenha em papel o fluxograma do algoritmo da pergunta 8. Que figura leva cada linha, e porque é que a linha `const` não tem figura? Se fores guardá-lo na aplicação de diagramas, que nome dás ao ficheiro da imagem?
+9. Diz que figura levaria cada linha do algoritmo da pergunta 8, pela ordem, e porque é que a linha `const` não tem figura. Se o professor indicar o desenho, desenha-o em papel. Se fores guardá-lo na aplicação de diagramas, que nome dás ao ficheiro da imagem?
 10. Faz o trace completo do algoritmo do exemplo guiado para 125 minutos, uma entrada que o guia não testou. O que aparece no ecrã?
 11. O que tens de comparar para mostrar que o pseudocódigo, o fluxograma e o trace de um algoritmo estão certos?
 12. Dás o teu algoritmo da pergunta 8 a um colega, para ele o executar à letra. Pelo que ele fizer, como percebes que uma instrução ficou ambígua?

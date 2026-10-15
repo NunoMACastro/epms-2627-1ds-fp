@@ -26,14 +26,14 @@ Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 | 2 | Seguir o estado de um algoritmo numa tabela de trace | 12 min |
 | 3 | Fazer contas com `div` e `resto` | 10 min |
 | 4 | Escrever um algoritmo sequencial completo, com o contrato e o trace | 35 min |
-| 5 | Encontrar um erro de ordem com o trace | 20 min |
-| 6 | Usar a função `abs` | 20 min |
+| 5 | Encontrar um erro com o trace | 20 min |
+| 6 | Calcular a distância entre dois andares | 20 min |
 | Total da parte obrigatória | Exercícios 1 a 6 | 109 min |
 | Desafio opcional | Trocar os valores de duas variáveis | 20 min |
 
 Escreve os algoritmos na forma que usamos nas aulas, como no exemplo guiado do guia. Se souberes a lógica e não te lembrares da forma, escreve frases claras, que também valem. Nesta fase, o que conta é a lógica.
 
-Nas tabelas de trace, segue as regras do guia. Faz uma coluna por variável e uma linha por instrução, e escreve "sem valor" até a variável nascer. Faz a conta que está escrita, e não a que achas que devia estar.
+Nas tabelas de trace, segue as regras do guia. Faz uma coluna por variável e uma linha por instrução, e escreve "sem valor" até a variável nascer. Faz a conta que está escrita, e não a que achas que devia estar. No exercício 2 a), a tabela já vem meio preenchida, para começares. Nas outras, fazes a tabela toda.
 
 Precisas de papel, de preferência quadriculado, e de lápis. Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de trace preenchidas.
 
@@ -64,9 +64,17 @@ x = x * 3
 y = y - x
 ```
 
-a) Faz a tabela de trace, com as colunas passo, instrução, `x` e `y`. Quanto valem `x` e `y` no fim?
+a) Copia esta tabela de trace e completa as colunas `x` e `y` nos passos 2 a 4. Quanto valem `x` e `y` no fim?
 
-b) Agora imagina que a segunda e a terceira linhas trocam de lugar, ficando `x = x * 3` antes de `int y = x + 2`. Quanto valem `x` e `y` no fim? Explica numa frase porque é que o resultado mudou, se as instruções são as mesmas.
+| Passo | Instrução executada | x | y | Ecrã |
+| ---: | --- | ---: | ---: | --- |
+| 0 | antes de começar | sem valor | sem valor | nada |
+| 1 | `int x = 5` | 5 | sem valor | nada |
+| 2 | `int y = x + 2` | | | nada |
+| 3 | `x = x * 3` | | | nada |
+| 4 | `y = y - x` | | | nada |
+
+b) Agora imagina que a segunda e a terceira linhas trocam de lugar, ficando `x = x * 3` antes de `int y = x + 2`. Faz a tabela de trace, desta vez em branco, com as mesmas colunas. Quanto valem `x` e `y` no fim? Explica numa frase porque é que o resultado mudou, se as instruções são as mesmas.
 
 ## Exercício 3: Contas com `div` e `resto` (10 minutos)
 
@@ -74,11 +82,11 @@ Calcula à mão, e confirma cada par com a verificação do guia. O divisor veze
 
 a) `47 div 6` e `47 resto 6`
 
-b) `30 div 5` e `30 resto 5`
+b) `6 div 47` e `6 resto 47`
 
-c) `6 div 47` e `6 resto 47`
+c) `0 div 9` e `0 resto 9`
 
-d) `0 div 9` e `0 resto 9`
+d) Quantas semanas completas há em 23 dias, e quantos dias sobram? Escreve as duas contas, com `div` e `resto`, e calcula-as.
 
 Um destes pares costuma surpreender. Diz qual foi o que te fez parar e explica o resultado com rebuçados e amigos, como no guia.
 
@@ -109,9 +117,9 @@ preco = preco - DESCONTO_POR_CADERNO
 Escreve: "Total a pagar: ", total, " euros"
 ```
 
-a) Faz o trace para um caderno de 2 euros e 4 cadernos. Em que passo aparece o problema, e o que diz a tabela nesse passo?
+a) Calcula à mão quanto devia pagar quem compra 4 cadernos de 2 euros, já com o desconto. Depois faz o trace com esses valores. Em que passo aparece o problema, e o que diz a tabela nesse passo?
 
-b) Corrige o algoritmo, mudando o menor número de linhas possível. Faz outra vez o trace com os mesmos valores e confirma que o total é 6.
+b) Corrige o algoritmo, mudando o menor número de linhas possível. Faz outra vez o trace com os mesmos valores e confirma que dá o que calculaste.
 
 ## Exercício 6: Andares do elevador (20 minutos)
 
@@ -119,7 +127,7 @@ Num prédio, o rés-do-chão é o andar 0 e a garagem é o andar -1. Os andares 
 
 a) Escreve o algoritmo que lê o andar onde o elevador está e o andar de onde foi chamado. O algoritmo mostra quantos andares o elevador vai percorrer.
 
-b) Testa-o com três chamadas: do andar 3 para o 7, do 7 para o 3, e do 2 para a garagem. Escreve o que aparece no ecrã em cada uma.
+b) Testa-o com três chamadas: do andar 3 para o 7, do 7 para o 3, e do 2 para a garagem. Escreve o que aparece no ecrã em cada uma. Explica numa frase porque é que as duas primeiras dão o mesmo número.
 
 ## Apoio
 
@@ -127,9 +135,9 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 
 - Exercício 1. Pergunta-te o que farias com o valor. Se fosses fazer contas com ele, é um número: tem parte decimal? Se não fosses, que tipo serve?
 - Exercício 2. Copia sempre a linha de cima e muda só a coluna da variável que está à esquerda do `=`. Numa conta, usa os valores que as variáveis têm nesse momento, na linha de cima.
-- Exercício 3. Para a alínea c), pergunta-te: se tiveres 6 rebuçados para repartir por 47 amigos, sem partir nenhum, quantos recebe cada um? E quantos sobram?
+- Exercício 3. Para a alínea b), pergunta-te: se tiveres 6 rebuçados para repartir por 47 amigos, sem partir nenhum, quantos recebe cada um? E quantos sobram? Para a alínea d), pensa nos rebuçados e nos amigos: o que faz aqui o papel dos amigos?
 - Exercício 4. Para o perímetro, soma os quatro lados: dois são iguais ao comprimento e dois são iguais à largura. Para os tipos, lembra-te de que os lados podem ter parte decimal. Para o ecrã, escreve as unidades dentro das aspas do `Escreve:`.
-- Exercício 5. Antes do trace, calcula à mão quanto devia pagar quem compra 4 cadernos de 2 euros com o desconto. No trace, faz cada conta com os valores que estão na linha de cima, e não com os que achas que deviam estar. Quando o total da tabela não for o que calculaste, procura a linha onde ele foi calculado e vê que valores usou.
+- Exercício 5. No trace, faz cada conta com os valores que estão na linha de cima, e não com os que achas que deviam estar. Quando o total da tabela não for o que calculaste, procura a linha onde ele foi calculado e vê que valores usou.
 - Exercício 6. Faz a conta do andar de destino menos o andar de partida para as duas primeiras chamadas, e compara os dois resultados. Pode um elevador percorrer um número negativo de andares?
 
 ## Desafio opcional
@@ -147,8 +155,8 @@ Escreve as linhas que trocam mesmo os valores de duas variáveis inteiras `a` e 
 - [ ] No exercício 2, as duas versões têm o estado final certo, e a minha explicação fala da ordem.
 - [ ] Calculei os quatro pares de `div` e `resto` e verifiquei cada um com a regra do guia.
 - [ ] Escrevi um contrato com unidades e exemplos, e o trace do meu algoritmo deu o que o contrato previa. O ecrã mostra as unidades certas.
-- [ ] Encontrei, com o trace, o passo onde o algoritmo dos cadernos se engana, e corrigi-o mudando o mínimo possível. A versão corrigida dá o total certo.
-- [ ] Usei `abs` onde só interessava o tamanho de uma diferença. As duas primeiras chamadas do elevador dão o mesmo número de andares, e sei dizer porquê.
+- [ ] Encontrei, com o trace, o passo onde o algoritmo dos cadernos se engana, e corrigi-o mudando o mínimo possível. A versão corrigida dá o que calculei à mão.
+- [ ] O meu algoritmo do elevador nunca mostra um número negativo de andares, e as duas primeiras chamadas dão o mesmo número; sei dizer porquê.
 
 ## Autoavaliação
 
