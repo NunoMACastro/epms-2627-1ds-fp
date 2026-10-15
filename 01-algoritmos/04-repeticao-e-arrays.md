@@ -57,7 +57,7 @@ No fim deste guia, consegues:
 - `ler valor` e `Escreve:`: guia [02](02-estado-sequencia-representacoes.md), secção "Entrada e saída: `ler valor` e `Escreve:`".
 - Os símbolos do fluxograma: guia [02](02-estado-sequencia-representacoes.md), secção "Fluxogramas".
 - A tabela de trace: guia [02](02-estado-sequencia-representacoes.md), secção "Tabela de trace".
-- As condições, que só dão `true` ou `false`: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Condições e o tipo lógico".
+- As condições, que só dão `true` ou `false`: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Condições e o tipo `bool`".
 - As comparações, também o `!=`: guia [03](03-decisoes-e-validacao.md), secção "Operadores de comparação".
 - `e`, `ou` e `não`: guia [03](03-decisoes-e-validacao.md), secção "Operadores lógicos: `e`, `ou` e `não`".
 - O `Se`, o `Senão se` e o `Senão`, e o losango do fluxograma: guia [03](03-decisoes-e-validacao.md), secções "Seleção simples", "Seleção composta" e "Seleção encadeada".
@@ -83,13 +83,13 @@ O primeiro é o tamanho. Dez linhas ainda se escrevem. Mas, se fosse a tabuada a
 
 O segundo é a mudança. Se amanhã quiserem a tabuada até 12, alguém tem de acrescentar linhas. Se quiserem a do 8, alguém tem de mudar o 7 em dez sítios. O algoritmo não se adapta, e tem de ser reescrito.
 
-O terceiro torna esta forma impossível em muitos problemas. Imagina que o algoritmo tem de ler as notas de uma turma, e que as turmas têm números de alunos diferentes. Quantas linhas com `ler valor` escreves? Não sabes. Nenhum número fixo de linhas serve para todas as turmas.
+O terceiro torna esta forma impossível em muitos problemas. Um algoritmo que lê as notas de uma turma tem de servir para turmas com números de alunos diferentes. Quantas linhas com `ler valor` escreves? Não sabes. Nenhum número fixo de linhas serve para todas as turmas.
 
-Olha outra vez para as linhas da tabuada. São todas iguais, exceto num pormenor: o número que multiplica o 7, que aumenta 1 de uma linha para a seguinte. Reparar nesta regularidade é o que permite resolver o problema. Imagina que conseguimos dizer ao algoritmo "escreve uma linha da tabuada, passa ao número seguinte, e volta a fazer o mesmo até chegares ao 10". As dez linhas passam a ser três ou quatro. É o reconhecimento de padrões do guia 01, aplicado às instruções.
+Olha outra vez para as linhas da tabuada. São todas iguais, exceto num pormenor: o número que multiplica o 7, que aumenta 1 de uma linha para a seguinte. Reparar nesta regularidade é o que permite resolver o problema. Basta conseguir dizer ao algoritmo "escreve uma linha da tabuada, passa ao número seguinte, e volta a fazer o mesmo até chegares ao 10". Com isso, as dez linhas passam a ser três ou quatro. É o reconhecimento de padrões do guia 01, aplicado às instruções.
 
 No dia a dia fazes repetições destas sem lhes dares esse nome. "Enquanto houver pratos na banca, lava um prato." "Enquanto houver pessoas na fila, atende a seguinte." Todas estas frases têm três partes. A primeira é uma pergunta cuja resposta é sim ou não, como "há pratos na banca?". A segunda é uma ação, que se faz quando a resposta é sim, como lavar um prato. A terceira está escondida, e é a mais importante: a ação muda a resposta à pergunta. Cada prato lavado sai da banca, e mais cedo ou mais tarde a banca fica vazia e paras. Se lavar um prato não o tirasse da banca, ficavas a lavar o mesmo prato para sempre.
 
-Num algoritmo, a uma parte que se executa várias vezes seguidas chama-se **ciclo**. A cada execução dessa parte chama-se **iteração**. Na conversa de todos os dias diz-se também uma **volta** do ciclo. Se o algoritmo lava três pratos, o ciclo teve três iterações, ou deu três voltas.
+Num algoritmo, a uma parte que se executa várias vezes seguidas chama-se **ciclo**. A cada execução dessa parte chama-se **iteração**. Na conversa de todos os dias diz-se também uma **volta** do ciclo. Volta e iteração são a mesma coisa. Iteração é o nome técnico, e volta é o nome do dia a dia, que este guia usa muitas vezes. Se o algoritmo lava três pratos, o ciclo teve três iterações, ou deu três voltas.
 
 ## Enquanto: repetir enquanto a condição for verdadeira
 
@@ -115,7 +115,7 @@ Destas regras saem duas consequências, que vais usar sempre.
 
 A primeira é que a condição do `Enquanto` diz quando continuar, e não quando parar. "Enquanto houver pratos na banca" descreve a situação em que se continua a lavar. Quando escreveres um ciclo, pergunta-te "em que situação quero continuar?", e escreve essa situação. Quem escreve a situação em que quer parar obtém um ciclo que faz o contrário do que queria.
 
-A segunda é que a condição só é avaliada na linha do `Enquanto`. Imagina que, a meio do corpo, as variáveis mudam e a condição fica falsa. O corpo não é interrompido. Continua até à última linha indentada, e só no teste seguinte o ciclo termina.
+A segunda é que a condição só é avaliada na linha do `Enquanto`. Se, a meio do corpo, as variáveis mudarem e a condição ficar falsa, o corpo não é interrompido. Continua até à última linha indentada, e só no teste seguinte o ciclo termina.
 
 Este é o algoritmo da tabuada do 7, escrito com um ciclo. Para o trace ficar curto, vai só até 7 x 3. Para ir até 7 x 10, bastava mudar a constante `ULTIMO` para 10.
 
@@ -149,7 +149,7 @@ Olha para a margem esquerda de cada linha. Há duas linhas que começam quatro e
 
 O que está dentro do ciclo executa-se uma vez por iteração, e o que está fora executa-se uma vez só. A linha do `Enquanto` executa-se mais uma vez do que o corpo, e vais perceber porquê no trace. As linhas `const` não entram na tabela nem nos traces, como nos guias anteriores. Dão nome a regras do problema e não mudam o estado.
 
-Como não há nenhuma palavra a fechar o ciclo, as mesmas linhas com outra margem fazem outro algoritmo. Imagina que a linha `vezes = vezes + 1` ficava alinhada com o `Enquanto`. Passava para fora do corpo, e só se executaria depois de o ciclo acabar. Isso nunca aconteceria, porque sem ela `vezes` vale sempre 1 e a condição é sempre verdadeira. O ecrã encher-se-ia de "7 x 1 = 7". Agora imagina que a última linha, `Escreve: "Fim da tabuada"`, ganhava quatro espaços. Passava a fazer parte do corpo, e a mensagem de fim aparecia três vezes, uma depois de cada linha da tabuada.
+Como não há nenhuma palavra a fechar o ciclo, as mesmas linhas com outra margem fazem outro algoritmo. Se a linha `vezes = vezes + 1` ficasse alinhada com o `Enquanto`, passava para fora do corpo, e só se executaria depois de o ciclo acabar. Isso nunca aconteceria, porque sem ela `vezes` vale sempre 1 e a condição é sempre verdadeira. O ecrã encher-se-ia de "7 x 1 = 7". E se a última linha, `Escreve: "Fim da tabuada"`, ganhasse quatro espaços, passava a fazer parte do corpo. A mensagem de fim aparecia três vezes, uma depois de cada linha da tabuada.
 
 Para leres a indentação sem te enganares, põe o dedo por baixo da primeira letra do `Enquanto` e desce a direito. As linhas que começam à direita do teu dedo são o corpo, até à primeira que começa em cima dele. É assim que o Python, a linguagem que vais aprender a seguir, marca os blocos.
 
@@ -195,7 +195,7 @@ O trace de um ciclo faz-se com as regras do guia 02, com duas novidades. A prime
 
 No passo 5 acontece o que é novo. O algoritmo acabou a última linha do corpo e voltou atrás, à linha do `Enquanto`. Avalia a condição outra vez, agora com `vezes` a valer 2. No passo 11, `vezes` já vale 4, e `4 <= 3` é falso. O algoritmo salta para a primeira linha a seguir ao corpo.
 
-Conta as linhas do `Enquanto`: são quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. Isto é sempre assim num ciclo que termina: há sempre mais um teste da condição do que iterações. O último teste é o que dá falso e faz o ciclo parar.
+Conta as linhas do `Enquanto`: são quatro, nos passos 2, 5, 8 e 11. Três deram verdadeiro e uma deu falso. Isto é sempre assim num ciclo que termina pela condição: há sempre mais um teste da condição do que iterações. O último teste é o que dá falso e faz o ciclo parar.
 
 Olha também para o valor final de `vezes`. É 4, e não 3. O ciclo não para quando escreve a última linha da tabuada. Para quando `vezes` passa o limite, porque só nessa altura a condição fica falsa. Quanto vale a variável depois do ciclo é uma pergunta frequente em testes, e a resposta está sempre na última linha do trace.
 
@@ -248,9 +248,9 @@ Como nos guias anteriores, os fluxogramas são para saberes ler. Desenhá-los nu
 
 Se a condição for falsa logo no primeiro teste, o corpo não se executa nenhuma vez. Diz-se que o ciclo tem zero iterações, ou que dá **zero voltas**.
 
-Às vezes é um erro. Imagina que alguém escreve a condição da tabuada ao contrário, `Enquanto vezes > ULTIMO`. O primeiro teste é `1 > 3`, que é falso, e o algoritmo salta logo para o fim. Aparece "Fim da tabuada" e mais nada, quando deviam aparecer três linhas antes. Como a tabuada não lê nada, o erro aparece logo na primeira execução. Quem escreveu isto pensou em quando o ciclo devia parar, e escreveu essa situação no `Enquanto`. Mas o `Enquanto` é o sítio onde se escreve quando continuar. Antes de escreveres a condição, pergunta-te "em que situação quero continuar?".
+Às vezes é um erro. Por exemplo, alguém escreve a condição da tabuada ao contrário, `Enquanto vezes > ULTIMO`. O primeiro teste é `1 > 3`, que é falso, e o algoritmo salta logo para o fim. Aparece "Fim da tabuada" e mais nada, quando deviam aparecer três linhas antes. Como a tabuada não lê nada, o erro aparece logo na primeira execução. Quem escreveu isto pensou em quando o ciclo devia parar, e escreveu essa situação no `Enquanto`. Mas o `Enquanto` é o sítio onde se escreve quando continuar. Antes de escreveres a condição, pergunta-te "em que situação quero continuar?".
 
-Outras vezes, zero voltas é exatamente o que deve acontecer. Imagina um algoritmo que soma os pedidos que chegaram hoje, num dia em que não chegou nenhum. O ciclo não deve executar-se nenhuma vez, e a resposta certa é 0. Daqui sai uma regra de teste que vais usar sempre. Testa o caso de zero voltas, e confirma que o algoritmo dá uma resposta com sentido. É o caso extremo do guia 01, agora com nome próprio.
+Outras vezes, zero voltas é exatamente o que deve acontecer. Um algoritmo que soma os pedidos que chegaram hoje, num dia em que não chegou nenhum, não deve executar o corpo nenhuma vez. A resposta certa é 0. Daqui sai uma regra de teste que vais usar sempre. Testa o caso de zero voltas, e confirma que o algoritmo dá uma resposta com sentido. É o caso extremo do guia 01, agora com nome próprio.
 
 ### O ciclo que nunca acaba
 
@@ -364,7 +364,7 @@ Todo o `Para` se pode escrever como um `Enquanto`, e já viste como. O contrári
 
 ## Arrays
 
-Imagina que queres guardar as notas dos 25 alunos de uma turma. Até agora, cada variável guardava um valor, e uma variável `nota` guardava uma nota. Precisavas de 25 variáveis, `nota1`, `nota2`, até `nota25`, e de 25 linhas para fazer seja o que for com elas. Voltávamos ao problema das dez linhas da tabuada.
+Até agora, cada variável guardava um valor, e uma variável `nota` guardava uma nota. Para guardar as notas dos 25 alunos de uma turma, precisavas de 25 variáveis, `nota1`, `nota2`, até `nota25`. E precisavas de 25 linhas para fazer seja o que for com elas. Voltávamos ao problema das dez linhas da tabuada.
 
 No dia a dia, um problema destes resolve-se com uma fila de cacifos numerados. A fila tem um nome, e cada cacifo tem um número e guarda uma coisa. Para ires buscar o que está num cacifo, dizes o nome da fila e o número do cacifo.
 
@@ -415,7 +415,7 @@ Leitura guiada: a primeira linha cria o array. A segunda cria a variável `prime
 
 E `pontuacoes[4]`? Não existe. O array tem os índices 0, 1, 2 e 3, e o 4 já está fora. Usar um índice que não existe é um dos erros mais frequentes com arrays, e chama-se **índice fora do array**. No papel, um algoritmo que o faz está errado. Num programa, o Python para com uma mensagem de erro.
 
-O C, que vais aprender mais tarde, foi pensado para programas muito rápidos e para dar a quem programa o controlo de cada passo. Por isso, não confirma em cada acesso se o índice existe, e essa verificação fica a cargo de quem programa. Num programa em C, um índice fora do array não dá mensagem nenhuma, e o programa continua com um valor qualquer. São ferramentas com propósitos diferentes, e cada uma faz a escolha que serve o seu. Em qualquer delas, vais ter sempre de saber dizer qual é o último índice válido.
+O C, que vais aprender mais tarde, foi pensado para programas muito rápidos e para dar a quem programa o controlo de cada passo. Por isso, não confirma em cada acesso se o índice existe, e essa verificação fica a cargo de quem programa. Num programa em C, um índice fora do array pode não dar mensagem nenhuma e continuar com um valor qualquer, ou parar sem explicar porquê. São ferramentas com propósitos diferentes, e cada uma faz a escolha que serve o seu. Em qualquer delas, vais ter sempre de saber dizer qual é o último índice válido.
 
 ### Percorrer um array com `Para`
 
@@ -571,7 +571,7 @@ Na primeira volta, a `nota` vale 12, e o algoritmo tenta escrever em `notas[12]`
 
 Quando só precisas de ler os elementos, para os somar, contar, comparar ou mostrar, percorre por valor, com o `Para cada`. Quando precisas de mudar os elementos do array, percorre por índice, com o `Para` e o índice.
 
-Esta regra vale para arrays de números, como os deste guia, e para arrays de textos. Num array de arrays, a variável do `Para cada` não recebe uma cópia de cada linha, mas a própria linha. É uma conversa diferente, que vais ter em Python, quando aprenderes o que é uma referência. Até lá, sempre que quiseres mudar alguma coisa num array, usa o índice, e a dúvida não se põe.
+Esta regra vale para arrays de números, como os deste guia, e para arrays de textos. Para mudar um array, usa sempre o índice.
 
 ## Contadores e acumuladores
 
@@ -579,7 +579,7 @@ Um **padrão** é uma forma de resolver um pequeno problema que aparece vezes se
 
 ### O contador
 
-Imagina que queres saber quantos jogos da equipa tiveram 10 ou mais pontos. Para responder, o algoritmo conta. Um **contador** é uma variável que conta quantas vezes uma coisa aconteceu. Segue três regras:
+Para saber quantos jogos da equipa tiveram 10 ou mais pontos, o algoritmo tem de contar. Um **contador** é uma variável que conta quantas vezes uma coisa aconteceu. Segue três regras:
 
 1. Começa em 0, antes do ciclo. Antes de se contar o que quer que seja, já se contaram zero coisas.
 2. Sempre que a coisa acontece, aumenta 1: `contador = contador + 1`.
@@ -611,7 +611,7 @@ O resultado é "Jogos com 10 ou mais pontos: 2". O contador aumenta com o 12 e c
 
 ### O acumulador
 
-Imagina agora que queres saber quantos pontos a equipa fez ao todo. Já não se conta, soma-se. Um **acumulador** é uma variável que vai somando valores ao longo das voltas. Segue três regras parecidas com as do contador:
+Para saber quantos pontos a equipa fez ao todo, já não basta contar. É preciso somar. Um **acumulador** é uma variável que vai somando valores ao longo das voltas. Segue três regras parecidas com as do contador:
 
 1. Começa em 0, antes do ciclo. A soma de nada é zero.
 2. Em cada volta, soma-se o valor: `total = total + valor`.
@@ -657,7 +657,7 @@ Com um ou mais valores, a versão sem `Se` dá a média certa. Por isso, a médi
 
 ### Inicializar fora do ciclo
 
-Os contadores e os acumuladores inicializam-se sempre antes do ciclo, sem indentação. Imagina que a linha `int total = 0` estava dentro do ciclo. O total voltava a zero no início de cada volta, antes de somar o elemento dessa volta, e no fim guardava só o último elemento. A regra a fixar: o que se inicializa dentro do ciclo recomeça em cada volta.
+Os contadores e os acumuladores inicializam-se sempre antes do ciclo, sem indentação. Se a linha `int total = 0` estivesse dentro do ciclo, o total voltava a zero no início de cada volta, antes de somar o elemento dessa volta. No fim, guardava só o último elemento. A regra a fixar: o que se inicializa dentro do ciclo recomeça em cada volta.
 
 ## A sentinela: ler até aparecer o valor que diz "acabou"
 
@@ -721,7 +721,9 @@ Escreve: "Vendas: ", vendas
 Escreve: "Bilhetes vendidos: ", bilhetes
 ```
 
-Com os mesmos dados, esta versão dá cinco testes em vez de quatro:
+Antes de leres a tabela, prevê quantas vendas conta esta versão com os mesmos dados, 2, 4 e 1 e o 0.
+
+Esta versão dá cinco testes em vez de quatro:
 
 | Teste | bilhetesDaVenda | vendas | bilhetes | Condição | Durante a iteração |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -762,7 +764,7 @@ O resultado são duas voltas, com uma mensagem de erro em cada, e no fim "Nota a
 
 Leitura guiada: as três peças estão lá. A inicialização é a primeira leitura, antes do ciclo, como na sentinela. A condição é a de nota inválida, a mesma do guia 03, com `ou`. A atualização é a leitura dentro do corpo, que substitui o valor inválido por um novo.
 
-O mais útil deste padrão está no que vem depois do ciclo. Quando o algoritmo chega à primeira linha a seguir ao corpo, a condição do ciclo acabou de dar falso. Por isso, tens a certeza de que a nota está entre 0 e 20, e o resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos. Depois de um ciclo, a sua condição é falsa, e isso diz-te alguma coisa sobre o estado.
+O mais útil deste padrão está no que vem depois do ciclo. Quando o algoritmo chega à primeira linha a seguir ao corpo, a condição do ciclo acabou de dar falso. Por isso, tens a certeza de que a nota está entre 0 e 20, e o resto do algoritmo pode usá-la sem voltar a verificar. É uma ideia que vale para todos os ciclos que terminam pela condição, sem `Parar`. Depois de um ciclo assim, a sua condição é falsa, e isso diz-te alguma coisa sobre o estado.
 
 ## Parar e Continuar
 
@@ -795,9 +797,11 @@ Se encontrado == false
 
 O resultado é "Primeiro jogo sem golos: jogo 3", depois de três voltas. O ciclo terminou na terceira volta, sem olhar para o 3 nem para o segundo 0. Como `encontrado` vale `true`, a última mensagem não aparece.
 
-Leitura guiada: o ciclo percorre o array com o índice, porque a resposta é uma posição. O `Se` de dentro faz a pergunta da pesquisa em cada volta. Quando a resposta é sim, o algoritmo escreve a resposta, levanta a bandeira e sai do ciclo com o `Parar`. O `Se` de fora, depois do ciclo, só escreve alguma coisa quando o ciclo acabou sem encontrar.
+Aqui houve três testes e três voltas, e não mais um teste do que voltas. O `Parar` sai do ciclo sem voltar ao teste. Por isso, depois do ciclo, `i` vale 2 e `i < 5` ainda é verdadeiro.
 
-A variável `encontrado` resolve um problema. Quando o ciclo termina, pode ter terminado por duas razões. Ou o `Parar` o fez sair, ou os índices esgotaram-se sem encontrar nenhum 0. Depois do ciclo, a variável `encontrado` diz qual das duas aconteceu. A uma variável `bool` usada assim chama-se **bandeira**. Começa em `false` e passa a `true` quando acontece o que se procura. Com `golos = [2, 1, 4, 3, 2]`, o ciclo dá as cinco voltas e a bandeira fica em `false`. Aparece "A equipa marcou em todos os jogos.".
+Leitura guiada: o ciclo percorre o array com o índice, porque a resposta é uma posição. O `Se` de dentro faz a pergunta da pesquisa em cada volta. Quando a resposta é sim, o algoritmo escreve a resposta, põe `encontrado` a `true` e sai do ciclo com o `Parar`. O `Se` de fora, depois do ciclo, só escreve alguma coisa quando o ciclo acabou sem encontrar.
+
+A variável `encontrado` resolve um problema. Quando o ciclo termina, pode ter terminado por duas razões. Ou o `Parar` o fez sair, ou os índices esgotaram-se sem encontrar nenhum 0. Depois do ciclo, a variável `encontrado` diz qual das duas aconteceu. A uma variável `bool` usada assim chama-se **bandeira**. Começa em `false` e passa a `true` quando acontece o que se procura. Por isso, a mensagem de "não encontrado" escreve-se depois do ciclo, com a bandeira. Dentro do ciclo, num `Senão`, aparecia uma vez por cada jogo com golos, mesmo antes de se encontrar o 0. Com `golos = [2, 1, 4, 3, 2]`, o ciclo dá as cinco voltas e a bandeira fica em `false`. Aparece "A equipa marcou em todos os jogos.".
 
 ### `Continuar`: saltar para a volta seguinte
 
@@ -834,7 +838,7 @@ Há um cuidado com `Continuar` dentro de um `Enquanto`. Se a atualização estiv
 
 Um elemento de um array pode ser, ele próprio, um array. A um array de arrays chama-se muitas vezes **tabela**, porque se lê como uma tabela com linhas e colunas. Esta secção é uma introdução, e vais trabalhar mais com tabelas mais à frente no curso.
 
-Imagina as notas de dois alunos em três testes:
+As notas de dois alunos em três testes guardam-se assim:
 
 ```text
 notas = [[12, 15, 9], [8, 11, 14]]
@@ -876,6 +880,8 @@ Esta tabela tem uma linha por cada vez que o corpo de dentro se executa:
 | 6.ª | 1 | 2 | 14 | Aluno 2, teste 3: 14 |
 
 Entre a 3.ª e a 4.ª linha, o teste do `Para` de dentro deu `3 < 3`, falso. O algoritmo voltou ao `Para` de fora, que passou `a` a 1. No fim, o teste do de fora dá `2 < 2`, falso, e o algoritmo termina. O corpo de dentro executa-se 2 vezes 3, ou seja, 6 vezes, uma por cada nota da tabela.
+
+Num array de arrays, a variável de um `Para cada` não recebe uma cópia de cada linha, mas a própria linha. É uma conversa diferente da do `Para cada` que não muda o array, e vais tê-la em Python, quando aprenderes o que é uma referência. Até lá, para mudar um array, usa o índice, e a dúvida não se põe.
 
 ## Exemplo guiado: a campanha de recolha de alimentos
 
@@ -990,9 +996,9 @@ Os três casos dão o que o contrato previu.
 
 Agora os dados já estão no array `quilosPorTurma = [12, 0, 9, 15, 6, 18]`, e a pergunta é que turmas trouxeram mais do que a média.
 
-Há um pormenor que decide a forma do algoritmo. Para saber se uma turma está acima da média, é preciso saber a média. E a média só se conhece depois de somar todas as turmas. Por isso, o array é percorrido duas vezes. A primeira volta ao array soma, e calcula-se a média. A segunda compara cada turma com essa média.
+Há um pormenor que decide a forma do algoritmo. Para saber se uma turma está acima da média, é preciso saber a média. E a média só se conhece depois de somar todas as turmas. Por isso, o array é percorrido duas vezes. O primeiro percurso soma, e calcula-se a média. O segundo compara cada turma com essa média.
 
-Na primeira volta ao array só interessam os valores, e usa-se `Para cada`. Na segunda é preciso dizer o número da turma, e por isso é preciso o índice, e usa-se `Para`.
+No primeiro percurso só interessam os valores, e usa-se `Para cada`. No segundo é preciso dizer o número da turma, e por isso é preciso o índice, e usa-se `Para`.
 
 Antes de leres o trace do passo 7, calcula a média de cabeça e diz que turmas ficam acima dela.
 
@@ -1032,15 +1038,15 @@ A média é 60 / 6, que dá 10.
 
 Segundo ciclo, com o índice:
 
-| Teste | i | quilosPorTurma[i] | Comparação com a média | acimaDaMedia no fim da volta | Ecrã |
-| --- | ---: | ---: | --- | ---: | --- |
-| 1.º | 0 | 12 | `12 > 10` dá `true` | 1 | A turma 1 trouxe mais do que a média |
-| 2.º | 1 | 0 | `0 > 10` dá `false` | 1 | nada |
-| 3.º | 2 | 9 | `9 > 10` dá `false` | 1 | nada |
-| 4.º | 3 | 15 | `15 > 10` dá `true` | 2 | A turma 4 trouxe mais do que a média |
-| 5.º | 4 | 6 | `6 > 10` dá `false` | 2 | nada |
-| 6.º | 5 | 18 | `18 > 10` dá `true` | 3 | A turma 6 trouxe mais do que a média |
-| 7.º | 6 | não se usa | `6 < 6` dá `false`: o ciclo termina | 3 | nada |
+| Teste | i | Condição do `Para` | quilosPorTurma[i] | Comparação com a média | acimaDaMedia no fim da volta | Ecrã |
+| --- | ---: | --- | ---: | --- | ---: | --- |
+| 1.º | 0 | `0 < 6` dá `true` | 12 | `12 > 10` dá `true` | 1 | A turma 1 trouxe mais do que a média |
+| 2.º | 1 | `1 < 6` dá `true` | 0 | `0 > 10` dá `false` | 1 | nada |
+| 3.º | 2 | `2 < 6` dá `true` | 9 | `9 > 10` dá `false` | 1 | nada |
+| 4.º | 3 | `3 < 6` dá `true` | 15 | `15 > 10` dá `true` | 2 | A turma 4 trouxe mais do que a média |
+| 5.º | 4 | `4 < 6` dá `true` | 6 | `6 > 10` dá `false` | 2 | nada |
+| 6.º | 5 | `5 < 6` dá `true` | 18 | `18 > 10` dá `true` | 3 | A turma 6 trouxe mais do que a média |
+| 7.º | 6 | `6 < 6` dá `false`: o ciclo termina | não se usa | não se avalia | 3 | nada |
 
 No fim aparece "Turmas acima da média: 3". Na última linha, `i` chegou a 6, e o ciclo terminou sem nunca usar `quilosPorTurma[6]`, que não existe. O último índice usado foi o 5, o último válido num array de 6 elementos. O `i + 1` do `Escreve:` faz com que a turma de índice 0 seja, para as pessoas, a turma 1.
 
@@ -1165,11 +1171,11 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 12. Depois de uma validação repetida da nota, o que sabes sobre a nota na primeira linha a seguir ao ciclo?
 13. Numa pesquisa com `Parar`, para que serve a bandeira? Porque é que a mensagem de "não encontrado" não se escreve dentro do ciclo, num `Senão`?
 14. Em `tabela = [[4, 7], [1, 9], [6, 2]]`, quanto vale `tabela[2][0]`? Quantas vezes se executa o corpo de dentro de dois `Para` que percorrem esta tabela inteira?
-15. Que três casos se testam num ciclo, e que erro revela cada um?
+15. Que três casos se testam num ciclo? Que erro revela o de zero voltas, e qual o de várias voltas?
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md). Tem sete exercícios, do mais simples ao mais completo, e um desafio opcional com uma tabela. Se o professor o indicar, faz também o [laboratório](04-repeticao-e-arrays-laboratorio.md), onde desenhas no computador o fluxograma de um ciclo.
+Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md). Tem sete exercícios, do mais simples ao mais completo, um desafio opcional com uma tabela e mais um exercício opcional, de encontrar o erro. Se o professor o indicar, faz também o [laboratório](04-repeticao-e-arrays-laboratorio.md), onde desenhas no computador o fluxograma de um ciclo.
 
 O tema seguinte é [Funções e modelo integrado](05-funcoes-e-modelo-integrado.md). Os algoritmos deste guia já são grandes, e começam a repetir partes: calcular uma média, procurar um valor num array, validar uma nota. No guia seguinte vais aprender a dar nome a essas partes e a usá-las sempre que precisares. Para isso, usas as funções que já começaste a escrever na aula. Vais também juntar tudo o que aprendeste na algoritmia num último problema, antes de passares para o Python. No Python, o `Enquanto` chama-se `while` e o `Para cada` chama-se `for`. As tabelas de iterações vão servir para prever o que o programa faz antes de o executares.
 

@@ -10,7 +10,7 @@ Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o pr
 
 No fim, tens na tua pasta `algoritmos` o fluxograma de um algoritmo que conta os quilos de uma campanha de recolha de alimentos. Fica em dois ficheiros. Um é o desenho que se pode editar, `fluxograma-campanha-de-alimentos.drawio`. O outro é uma imagem, `fluxograma-campanha-de-alimentos.png`, que qualquer computador abre.
 
-Este algoritmo tem um ciclo. Por isso, o fluxograma tem uma seta que volta atrás, para cima, até ao losango da condição do ciclo. Os fluxogramas sem ciclos não têm nenhuma seta assim. Essa seta é a técnica nova deste laboratório. O objetivo é desenhá-la de forma que qualquer pessoa perceba, sem hesitar, de onde sai e onde chega. E que ninguém a confunda com as outras setas.
+Este algoritmo tem um ciclo. Por isso, o fluxograma tem uma seta que volta atrás, para cima, até ao losango da condição do ciclo. Os fluxogramas sem ciclos não têm nenhuma seta assim. Essa seta é a técnica nova deste laboratório. O objetivo é desenhá-la de forma que qualquer pessoa perceba, sem hesitar, de onde sai e onde chega, sem a confundir com as outras setas.
 
 O problema é este:
 
@@ -44,7 +44,7 @@ A linha do `Enquanto` é o ciclo. Repete as quatro linhas indentadas debaixo del
 
 Depois do ciclo, o algoritmo escreve as turmas e o total. O `Se` final calcula a média só quando houve pelo menos uma turma. Com zero turmas, a conta seria 0 / 0, que não tem resultado, e por isso o `Senão` escreve uma mensagem.
 
-Pelo caminho, ficas a saber planear a disposição de um fluxograma com um ciclo e desenhar a seta de volta. Ficas também a saber seguir o desenho com o dedo, volta a volta.
+Pelo caminho, ficas a saber planear a disposição de um fluxograma com um ciclo e desenhar a seta de volta. Ficas também a saber seguir o desenho com o dedo, volta a volta. Num ecrã, o dedo pode ser o ponteiro do rato: neste laboratório, "seguir com o dedo" quer dizer as duas coisas.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
@@ -70,6 +70,8 @@ Pelo caminho, ficas a saber planear a disposição de um fluxograma com um ciclo
 - Condição: uma pergunta cuja resposta só pode ser verdadeira ou falsa, `true` ou `false`, como `turmas > 0`. Escreve-se dentro do losango.
 - Ciclo: uma parte de um algoritmo que se repete. Com `Enquanto`, repete-se enquanto a condição for verdadeira. Para saber mais, vê a secção "Enquanto: repetir enquanto a condição for verdadeira" do [guia](04-repeticao-e-arrays.md).
 - Corpo do ciclo: as linhas que se repetem, indentadas debaixo do `Enquanto`.
+- Inicialização: a instrução, antes do ciclo, que dá o primeiro valor a uma variável que o ciclo usa, como `int turmas = 0`.
+- Atualização: a instrução do corpo que muda a variável de que a condição depende, aqui `quilos = ler valor`.
 - Volta: cada vez que o corpo do ciclo se executa. Também se diz iteração.
 - Indentação: o recuo de quatro espaços que mostra, no pseudocódigo, que uma linha está dentro de um ciclo, de um `Se` ou de um `Senão`.
 - Sentinela: o valor combinado que quer dizer "acabou". Neste algoritmo é o -1, guardado na constante `SENTINELA`.
@@ -286,7 +288,7 @@ Pensa antes de continuares: porque é que a seta de volta não leva o `Sim`, se 
 
 Um fluxograma verifica-se percorrendo-o com um caso de teste, como se fosses tu o computador. Em cada losango, a saída escolhe-se pela condição, com os valores que as variáveis têm nesse momento.
 
-1. Segue o caminho com o ponteiro do rato, desde o Início, para este caso: a funcionária escreve 12, depois 0, depois 9 e depois -1. Diz em voz baixa o valor de cada variável sempre que ele muda, e escreve no papel o que aparece no ecrã. Conta quantas vezes passas pelo losango 6 e quantas passas pelo losango 13.
+1. Segue o caminho com o dedo, desde o Início, para este caso: a funcionária escreve 12, depois 0, depois 9 e depois -1. Diz em voz baixa o valor de cada variável sempre que ele muda, e escreve no papel o que aparece no ecrã. Conta quantas vezes passas pelo losango 6 e quantas passas pelo losango 13.
 
 2. Confere o teu percurso com este, passagem a passagem:
 
@@ -422,7 +424,7 @@ Ctrl+Z, ou Cmd+Z num Mac, desfaz a última ação. Repete para desfazer mais.
 
    b) Desenha o fluxograma, com essas duas figuras e o losango `corredor <= NUMERO_DE_CORREDORES?`. A seta de volta chega à ponta esquerda do losango, como na fase 3. O `Sim` sai por baixo e o `Não` pela direita.
 
-   c) Percorre o desenho com o ponteiro do rato, com 5, 3 e 4 caixas nos três corredores. Escreve no papel quantas vezes passaste pelo losango e que total apareceu no fim.
+   c) Segue o desenho com o dedo, com 5, 3 e 4 caixas nos três corredores. Escreve no papel quantas vezes passaste pelo losango e que total apareceu no fim.
 
    Guarda e exporta a imagem como `fluxograma-inventario-de-corredores.png`, como na fase 5. Se o tempo da aula não chegar para este desafio, termina-o no início da aula seguinte. Pista: escreve primeiro, no papel, um `Enquanto` que faça o mesmo que este `Para`, e desenha o fluxograma desse `Enquanto`.
 
