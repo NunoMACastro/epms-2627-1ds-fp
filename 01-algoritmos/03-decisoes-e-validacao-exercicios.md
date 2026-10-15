@@ -26,8 +26,8 @@ Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 | 2 | Juntar condições com `e`, `ou` e `não` | 10 min |
 | 3 | Prever o ramo de uma seleção encadeada | 10 min |
 | 4 | Escrever um intervalo e o seu contrário | 15 min |
-| 5 | Validar uma entrada e aplicar uma tabela de preços, da reta ao algoritmo | 30 min |
-| 6 | Encontrar a entrada que mostra um erro | 15 min |
+| 5 | Validar uma entrada e aplicar uma tabela de preços, da reta ao algoritmo | 25 min |
+| 6 | Encontrar a entrada que mostra um erro | 20 min |
 | Total da parte obrigatória | Exercícios 1 a 6 | 90 min |
 | Desafio opcional | Uma condição que mistura `e` e `ou` | 20 min |
 
@@ -35,7 +35,7 @@ Os exercícios 1 a 6 são obrigatórios e cabem nos 90 minutos. Depois do desafi
 
 Escreve os algoritmos na forma que usamos nas aulas, com a indentação a mostrar o que está dentro de cada caso. Se souberes a lógica e não te lembrares da forma, escreve frases claras, que também valem. Têm de dizer o que acontece em cada caso, incluindo quando um valor não serve.
 
-Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de casos e os traces.
+Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de casos.
 
 ## Exercício 1: Verdadeiro ou falso (10 minutos)
 
@@ -53,7 +53,7 @@ e) `idade < 18`
 
 f) `idade <= 15`
 
-Depois escolhe duas das condições que deram resultados diferentes só por causa do igual, e explica a diferença numa frase.
+Há duas condições que só diferem no igual e deram resultados diferentes. Quais são? Explica numa frase.
 
 ## Exercício 2: Juntar condições (10 minutos)
 
@@ -66,7 +66,7 @@ a) A variável `idade` vale 15 e a variável `altura` vale `1.45`. Diz se cada c
 - `idade >= 18 ou altura >= 1.40`
 - `não (idade >= 18)`
 
-b) Qual das quatro condições é a regra da montanha-russa? Explica porque é que tem de ser com `e`, e não com `ou`.
+b) Qual das quatro é a regra da montanha-russa? Explica a escolha com uma pessoa a quem as outras dariam um resultado errado.
 
 ## Exercício 3: Prever o ramo (10 minutos)
 
@@ -97,7 +97,7 @@ b) Escreve a condição que diz se a temperatura está fora do bom, sem usar `n�
 
 c) Para as temperaturas 17, 18, 25, 26 e 27, diz se a temperatura está boa ou fora. Confirma que as tuas duas condições dão sempre respostas contrárias.
 
-## Exercício 5: O preço das fotocópias (30 minutos)
+## Exercício 5: O preço das fotocópias (25 minutos)
 
 Lê o enunciado:
 
@@ -105,38 +105,72 @@ Lê o enunciado:
 
 Usa só as regras da tabela. Não acrescentes descontos, arredondamentos nem outras regras que conheças de lojas verdadeiras.
 
-a) Desenha a reta dos números de cópias, como no passo 3 do exemplo guiado do guia, e marca as regiões e as fronteiras.
+a) A reta dos números de cópias já tem duas regiões marcadas: a dos pedidos inválidos e a das cópias a 0,10 euros. Copia-a e completa-a, como no passo 3 do exemplo guiado do guia. Marca as regiões que faltam e a fronteira que falta.
 
-b) Escreve a tabela de casos de teste, com o resultado esperado calculado à mão. Para cada fronteira, segue a regra do guia: testa o valor imediatamente abaixo, o próprio valor da fronteira e o valor imediatamente acima. Por exemplo, na fronteira entre 10 e 11, o valor da fronteira é o 10. É o último número de cópias que ainda custa 0,10 euros cada. Os casos são o 9, o 10 e o 11.
+```text
+   inválido  |      0,10 cada      |
+  ...  -1  0 |  1  2  ...  9  10   |  11  12  ...
+             ↑                     ↑
+        entre 0 e 1          entre 10 e 11
+```
 
-c) Escreve o algoritmo em pseudocódigo, ou em frases claras. Usa constantes para os preços e para os limites.
+b) Completa a tabela de casos de teste, com o resultado esperado calculado à mão. Para cada fronteira, segue a regra do guia: testa o valor imediatamente abaixo, o próprio valor da fronteira e o valor imediatamente acima. As três linhas da fronteira entre 10 e 11 já estão feitas. Nessa fronteira, o enunciado escreve os dois números, o 10 e o 11, e escolheu-se o 10. Acrescenta as linhas das outras duas fronteiras.
+
+| Cópias | Resultado esperado | Porque é que este caso foi escolhido |
+| ---: | --- | --- |
+| 9 | 9 × 0,10 = 0,90 euros | Imediatamente abaixo da fronteira entre 10 e 11 |
+| 10 | 10 × 0,10 = 1,00 euros | O valor da fronteira, o último que custa 0,10 euros cada |
+| 11 | 11 × 0,08 = 0,88 euros | Imediatamente acima da fronteira |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+c) Escreve o algoritmo em pseudocódigo, ou em frases claras. O princípio já está feito: as constantes dos preços e dos limites, a leitura e a validação. Continua a cadeia a partir daí, com um ramo para cada preço.
+
+```text
+const PRECO_ATE_10 = 0.10
+const PRECO_ATE_50 = 0.08
+const PRECO_ACIMA_50 = 0.05
+const MINIMO_COPIAS = 1
+const LIMITE_1 = 10
+const LIMITE_2 = 50
+Escreve: "Quantas cópias?"
+int copias = ler valor
+Se copias < MINIMO_COPIAS
+    Escreve: "Pedido inválido"
+```
+
+Cada ramo pode guardar o preço numa variável. Uma variável pode nascer dentro de um ramo. Nesse caso, a linha onde ela nasce, com o tipo à frente, escreve-se em cada ramo que a usa. Como só um ramo se executa, a variável nasce uma vez em cada execução.
 
 Se quiseres confirmar o teu algoritmo com um trace, o Mais longe 1, no fim da ficha, pede-o. É opcional.
 
-## Exercício 6: Encontrar o erro (15 minutos)
+## Exercício 6: Encontrar o erro (20 minutos)
 
-Cada um destes bocados de algoritmo tem um erro. Para cada um, diz qual é a entrada que mostra o erro, o que aparece com essa entrada e o que devia aparecer. Depois escreve a linha corrigida.
+Cada um destes bocados de algoritmo tem um erro. Para cada um, escreve a entrada que mostra o erro, o que devia aparecer, tirado do enunciado, e o que aparece. Depois corrige o bocado, mudando o mínimo possível.
 
 a) Os dias da semana numeram-se de 1, a segunda-feira, a 7, o domingo. Este bocado devia escrever "Dia inválido" para um número que não seja de nenhum dia. Devia escrever "Fim de semana" ao sábado e ao domingo, e "Dia de aulas" nos outros dias:
 
 ```text
 Se dia < 1 ou dia > 7
     Escreve: "Dia inválido"
-Senão se dia == 6 e dia == 7
+Senão se dia > 5
     Escreve: "Fim de semana"
-Senão
+Senão se dia < 5
     Escreve: "Dia de aulas"
 ```
 
 b) A papelaria dá desconto conforme o número de cadernos. Quem compra menos de 3 não tem desconto, quem compra de 3 a 9 tem 10% e quem compra 10 ou mais tem 20%:
 
 ```text
-Se quantidade <= 3
-    Escreve: "Sem desconto"
-Senão se quantidade < 10
+Se quantidade >= 3
     Escreve: "Desconto de 10%"
-Senão
+Senão se quantidade >= 10
     Escreve: "Desconto de 20%"
+Senão
+    Escreve: "Sem desconto"
 ```
 
 ## Apoio
@@ -147,8 +181,8 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 - Exercício 2. Avalia primeiro cada comparação sozinha, e só depois junta com a tabela de verdade do `e` ou do `ou`.
 - Exercício 3. Para cada idade, começa na primeira condição e desce. Para assim que uma condição for verdadeira: as de baixo já não contam.
 - Exercício 4. O intervalo é "entre isto e aquilo", com `e`. O contrário é "abaixo disto ou acima daquilo", com `ou`, e cada limite muda de lado. Para cada extremo, pergunta-te se ele pertence ao bom ou ao fora.
-- Exercício 5. Para encontrares as fronteiras, pergunta-te qual é o último número de cópias de cada região e o primeiro da região seguinte. Põe a validação no primeiro `Se`, como no exemplo guiado. Repara que, depois de cada `Senão se`, já sabes que as condições de cima foram falsas.
-- Exercício 6. Em cada alínea, escreve primeiro o que o enunciado manda aparecer para alguns valores. Só depois segue o bocado de algoritmo com esses valores, condição a condição. Que valores escolhes para teres a certeza de que já experimentaste cada linha do bocado, e cada fronteira do enunciado?
+- Exercício 5. Para encontrares a fronteira que falta, pergunta-te qual é o último número de cópias de cada região e o primeiro da região seguinte. Na alínea c), repara que, depois de cada `Senão se`, já sabes que as condições de cima foram falsas.
+- Exercício 6. Em cada alínea, escreve primeiro o que o enunciado manda aparecer para alguns valores. Escolhe um valor de cada lado de cada fronteira e um de cada mensagem. Só depois segue o bocado de algoritmo com esses valores, condição a condição, e compara.
 
 ## Desafio opcional
 
@@ -166,11 +200,20 @@ c) Qual destes quatro anos mostra que a regra dos 100 é precisa? E qual mostra 
 
 Esta secção é opcional e fica fora dos 90 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. O tempo é indicativo.
 
-### Mais longe 1: O trace das fotocópias nas fronteiras (15 minutos)
+### Mais longe 1: O trace das fotocópias nas fronteiras (12 minutos)
 
 Continua o exercício 5: usa o teu algoritmo da alínea c) e a tua tabela de casos de teste da alínea b). A matéria está no passo 9 do exemplo guiado do guia, o trace dos casos de fronteira.
 
-Faz o trace de dois casos de fronteira à tua escolha. Confirma que dão, no trace, o resultado que previste na tabela antes de escreveres o algoritmo.
+Faz o trace de dois casos de fronteira. O primeiro é o 11, e as três primeiras linhas já estão feitas. Continua-o com as linhas do teu algoritmo. Se a tua variável do preço tiver outro nome, usa-o na coluna `preco`. O segundo caso escolhes tu, da tua tabela.
+
+| Passo | Instrução executada | copias | preco | Condição e resultado | Ecrã |
+| ---: | --- | ---: | ---: | --- | --- |
+| 0 | antes de começar | sem valor | sem valor | nenhuma | nada |
+| 1 | `Escreve: "Quantas cópias?"` | sem valor | sem valor | nenhuma | Quantas cópias? |
+| 2 | `int copias = ler valor` | 11 | sem valor | nenhuma | a pessoa escreve 11 |
+| 3 | `Se copias < MINIMO_COPIAS` | 11 | sem valor | `11 < 1` dá `false` | nada |
+
+Confirma que os dois casos dão, no trace, o resultado que previste na tabela antes de escreveres o algoritmo.
 
 ## Critérios de conclusão
 
@@ -178,8 +221,8 @@ Faz o trace de dois casos de fronteira à tua escolha. Confirma que dão, no tra
 - [ ] No exercício 2, tenho os quatro resultados e a explicação da alínea b).
 - [ ] No exercício 3, tenho as seis mensagens, parando na primeira condição verdadeira, e a explicação da alínea b) usa a regra da seleção encadeada.
 - [ ] No exercício 4, usei `e` para "entre" e `ou` para "fora". As duas condições dão respostas contrárias nos cinco casos, e cada extremo fica do lado que o enunciado diz.
-- [ ] No exercício 5, a tabela tem os três casos de cada fronteira, com o resultado calculado à mão antes de escrever o algoritmo. O algoritmo valida o pedido antes de calcular o preço, e usa constantes para os preços e para os limites.
-- [ ] No exercício 6, para cada alínea, mostrei uma entrada concreta que revela o erro, e escrevi a correção.
+- [ ] No exercício 5, completei a reta e a tabela, com os três casos de cada fronteira. Calculei o resultado à mão antes de escrever o algoritmo. O algoritmo continua a validação que estava feita e calcula o preço de cada escalão com as constantes.
+- [ ] No exercício 6, para cada alínea, mostrei uma entrada concreta que revela o erro, com o que devia aparecer e o que aparece. Corrigi o bocado.
 - [ ] Usei só as regras que os enunciados deram.
 
 ## Autoavaliação

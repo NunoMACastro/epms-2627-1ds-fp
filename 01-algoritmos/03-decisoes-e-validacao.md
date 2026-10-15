@@ -11,7 +11,7 @@ Até agora, os teus algoritmos executavam sempre as mesmas instruções, pela me
 1. O que vais aprender
 2. O que já sabes e vais usar
 3. Algoritmos que decidem
-4. Condições e o tipo lógico
+4. Condições e o tipo `bool`
 5. Operadores de comparação
 6. Operadores lógicos: `e`, `ou` e `não`
 7. Seleção simples
@@ -61,9 +61,9 @@ No fim deste guia, consegues:
 
 O algoritmo que converte minutos em horas e minutos faz sempre as mesmas contas. Serve para esse problema, mas a maior parte dos problemas não é assim. Uma loja cobra portes de envio só em encomendas pequenas. Uma aplicação de mapas escolhe um caminho diferente se houver trânsito. Um jogo acaba quando as vidas chegam a zero. Em todos estes casos, o que se faz depende dos dados.
 
-No dia a dia tomas decisões destas constantemente. "Se estiver a chover, levo o guarda-chuva." "Se o semáforo estiver verde, atravesso; senão, espero." Cada uma destas frases tem duas partes: uma pergunta cuja resposta é sim ou não, e o que fazer em cada caso. Os algoritmos decidem exatamente da mesma maneira, e é essa estrutura que vais aprender a escrever.
+No dia a dia tomas decisões destas constantemente. "Se estiver a chover, levo o guarda-chuva." "Se o semáforo estiver verde, atravesso; senão, espero." Cada uma destas frases tem duas partes: uma pergunta cuja resposta é sim ou não, e o que fazer em cada caso. Os algoritmos decidem da mesma maneira, e é essa estrutura que vais aprender a escrever.
 
-## Condições e o tipo lógico
+## Condições e o tipo `bool`
 
 "A nota é maior ou igual a 10?" só tem duas respostas possíveis, sim ou não. "Qual é a nota?" tem muitas, porque a resposta é um número. A primeira pergunta é uma condição, e a segunda não.
 
@@ -88,7 +88,9 @@ As condições mais simples comparam dois valores. A tabela mostra os seis opera
 
 Na aula de matemática escreves "igual" com um só sinal, =, "menor ou igual" com o sinal ≤, "maior ou igual" com ≥ e "diferente" com ≠. Significam o mesmo. Aqui, a pergunta "é igual a?" escreve-se com dois sinais, `==`, porque o sinal sozinho já está ocupado. Como viste no guia anterior, `=` dá um valor a uma variável. `<=`, `>=` e `!=` usam-se porque se escrevem com as teclas que existem no teclado. Vais encontrar os seis tal e qual nas linguagens de programação desta disciplina, o C e o Python. O `!=` lê-se "diferente de": o ponto de exclamação antes do igual quer dizer "não igual".
 
-Olha com atenção para as linhas de `<` e de `<=`. Com a nota a valer 10, `nota < 10` é falso e `nota <= 10` é verdadeiro. A única diferença entre os dois operadores é o que acontece exatamente no valor 10. Para 9 dão os dois verdadeiro, e para 11 dão os dois falso. Guarda esta observação, porque é a razão de ser da secção sobre fronteiras, mais à frente.
+Olha com atenção para as linhas de `<` e de `<=`. Com a nota a valer 10, `nota < 10` é falso e `nota <= 10` é verdadeiro. A única diferença entre os dois operadores é o que acontece no próprio valor 10. Para 9 dão os dois verdadeiro, e para 11 dão os dois falso. Guarda esta observação, porque é a razão de ser da secção sobre fronteiras, mais à frente.
+
+Numa comparação com contas, como `a + b > 10`, as contas fazem-se primeiro. Com `a` a valer 4 e `b` a valer 7, faz-se `4 + 7`, que dá 11, e só depois `11 > 10`, que dá `true`.
 
 Lembra-te também da regra do guia anterior: um `=` manda, dois `==` perguntam. `nota = 10` guarda 10 em `nota`, e o valor que lá estava perde-se. `nota == 10` pergunta se `nota` vale 10 e não muda nada. Numa condição queres sempre perguntar. Por isso, numa condição que pergunta "é igual?", escreves sempre `==`. Se escrevesses um só sinal, estarias a dar uma ordem no sítio de uma pergunta.
 
@@ -136,7 +138,16 @@ O contrário não é "a nota é menor ou igual a 10". É "a nota é menor do que
 
 ### Misturar `e` e `ou`
 
-Quando uma condição tem `e` e `ou` ao mesmo tempo, a ordem por que se avaliam muda o resultado. É como nas contas `2 + 3 * 4` e `(2 + 3) * 4`, que dão 14 e 20. Nas aulas fazemos assim: sempre que misturares `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro. Não custa nada, e evita que tu, ou quem ler o algoritmo, tenha de decorar qual se avalia primeiro.
+Quando uma condição tem `e` e `ou` ao mesmo tempo, a ordem por que se avaliam muda o resultado. É como nas contas `2 + 3 * 4` e `(2 + 3) * 4`, que dão 14 e 20.
+
+Imagina que a piscina passou a deixar entrar as crianças com menos de 6 anos, mesmo sem entrada paga e sem touca. A regra fica assim: entra quem paga e traz touca, ou quem tem menos de 6 anos. Uma criança de 4 anos chega sem entrada paga e sem touca, e por isso `paga` vale `false`, `touca` vale `false` e `idade` vale 4. Antes de leres a tabela, tenta prever o que dá cada uma destas duas condições, que só diferem nos parênteses:
+
+| Condição | Primeiro | Depois | Resultado |
+| --- | --- | --- | --- |
+| `(paga e touca) ou idade < 6` | `false` e `false` dá `false` | `false` ou `true` dá `true` | `true` |
+| `paga e (touca ou idade < 6)` | `false` ou `true` dá `true` | `false` e `true` dá `false` | `false` |
+
+A primeira deixa a criança entrar, como a regra quer. A segunda não a deixa, porque obriga toda a gente a pagar. Nas aulas fazemos assim: sempre que misturares `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro. Não custa nada, e evita que tu, ou quem ler o algoritmo, tenha de decorar qual se avalia primeiro.
 
 ## Seleção simples
 
@@ -196,9 +207,9 @@ Antes de leres a tabela, tenta prever o que aparece em cada versão com 8 graus 
 | 8 | Leva um casaco. Bom dia. | Leva um casaco. Bom dia. |
 | 20 | Bom dia. | nada |
 
-Na primeira versão, `Escreve: "Bom dia."` está encostado à margem do `Se`, fora do bloco, e por isso executa-se sempre. Com 8 graus aparecem as duas mensagens, e com 20 graus aparece só "Bom dia.". Na segunda versão, a mesma linha está quatro espaços para dentro e pertence ao bloco. Com 8 graus aparecem as duas mensagens, como antes, mas com 20 graus não aparece nada. As palavras são exatamente as mesmas, e o comportamento mudou. É por isso que, a partir deste guia, a indentação se escreve com cuidado: é ela que diz o que depende de quê.
+Na primeira versão, `Escreve: "Bom dia."` está encostado à margem do `Se`, fora do bloco, e por isso executa-se sempre. Com 8 graus aparecem as duas mensagens, e com 20 graus aparece só "Bom dia.". Na segunda versão, a mesma linha está quatro espaços para dentro e pertence ao bloco. Com 8 graus aparecem as duas mensagens, como antes, mas com 20 graus não aparece nada. As palavras são as mesmas, e o comportamento mudou. É por isso que, a partir deste guia, a indentação se escreve com cuidado: é ela que diz o que depende de quê.
 
-O Python, que vais aprender este ano, funciona exatamente assim: é a indentação que diz que instruções estão dentro de uma decisão. No C, os blocos marcam-se com chavetas, `{` e `}`. Mas escrevem-se também com indentação, para quem lê perceber logo o que está dentro de quê.
+O Python, que vais aprender este ano, funciona assim: é a indentação que diz que instruções estão dentro de uma decisão. No C, os blocos marcam-se com chavetas, `{` e `}`. Mas escrevem-se também com indentação, para quem lê perceber logo o que está dentro de quê.
 
 ## Seleção composta
 
@@ -303,6 +314,8 @@ Destas regras resulta uma consequência que vais usar muito. Quando o algoritmo 
 
 Um `Senão se` pertence ao mesmo `Se` que está acima dele. Escreve-se na mesma margem, alinhado com ele, tal como o `Senão`. É esse alinhamento que mostra que o `Se`, os `Senão se` e o `Senão` são partes de uma só cadeia, e não decisões separadas. O fim da cadeia é a primeira linha que volta a essa margem sem ser um `Senão se` nem um `Senão`. Numa cadeia destas executa-se sempre, no máximo, um bloco. Com `Senão` no fim, executa-se sempre exatamente um.
 
+Uma variável pode nascer dentro de um ramo. Nesse caso, a linha onde ela nasce, com o tipo à frente, escreve-se em cada ramo que a usa. Como só um ramo se executa, a variável nasce uma vez em cada execução.
+
 ## Intervalos
 
 Muitas condições perguntam se um valor está entre dois limites, como uma nota entre 0 e 20. A esse conjunto de valores chama-se **intervalo**.
@@ -331,7 +344,7 @@ Há uma forma de escrever intervalos que parece natural e que não usamos:
 0 <= nota <= 20
 ```
 
-A razão é que quem executa o algoritmo avalia uma comparação de cada vez. Avaliaria primeiro `0 <= nota`, que dá `true` ou `false`, e depois tentaria comparar esse valor com 20, o que não faz sentido. Algumas linguagens nem assinalam erro: dão um resultado errado sem avisar. Por isso, nas aulas, cada comparação compara dois valores, e as comparações juntam-se com `e` ou `ou`. Assim a condição só se pode ler de uma maneira. Se já escreveste uma comparação encadeada destas, parte-a em duas, ligadas por `e`.
+No C, `0 <= nota <= 20` compara primeiro `0 <= nota`, que dá verdadeiro ou falso, e depois compara esse resultado com 20. O Python lê-a como na matemática. Para a condição se ler da mesma maneira em todo o lado, nas aulas cada comparação compara dois valores. As comparações juntam-se com `e` ou `ou`. Assim a condição só se pode ler de uma maneira. Se já escreveste uma comparação encadeada destas, parte-a em duas, ligadas por `e`.
 
 ### O contrário de um intervalo
 
@@ -355,7 +368,7 @@ A primeira é que as condições **não se sobrepõem**: nenhum valor pode perte
 
 A segunda é que as condições **cobrem todos os casos**: todos os valores possíveis pertencem a algum grupo. Imagina que a regra era "negativa abaixo de 10" e "positiva acima de 10". O 10 não pertencia a nenhum, e ficava sem resposta.
 
-A forma mais segura de verificar as duas propriedades é desenhar uma reta com os valores possíveis e marcar nela os grupos. Cada valor da reta tem de cair num grupo, e num só. Vais fazer exatamente isso no exemplo guiado.
+A forma mais segura de verificar as duas propriedades é desenhar uma reta com os valores possíveis e marcar nela os grupos. Cada valor da reta tem de cair num grupo, e num só. Vais fazê-lo no exemplo guiado.
 
 A seleção encadeada ajuda muito com a primeira propriedade. Como a primeira condição verdadeira ganha e as seguintes nem são avaliadas, dois blocos nunca se executam para o mesmo valor. Mas repara que isso não resolve a sobreposição, esconde-a. O valor que pertencia a dois grupos passa a ir, sem aviso, para o que estiver escrito primeiro. Se não era isso que o enunciado pedia, o algoritmo está errado, e nada no ecrã te avisa. Por isso, a verificação na reta faz-se na mesma.
 
@@ -366,6 +379,8 @@ No guia 01 viste um caso no limite de uma regra: os 24 livros que enchem duas ca
 Os erros de decisão concentram-se nas fronteiras. Viste na secção dos operadores que `nota < 10` e `nota <= 10` dão o mesmo resultado para 9, para 11 e para qualquer valor longe de 10. Só discordam no 10. Se testares um algoritmo com 5 e com 15, nunca vais descobrir que escreveste o operador errado. Para esses valores, os dois operadores dão o mesmo.
 
 Daí a regra para escolher casos de teste numa decisão. Para cada fronteira, testa-se o valor imediatamente abaixo, o próprio valor da fronteira e o valor imediatamente acima. Com números inteiros, os vizinhos são os valores a uma unidade de distância. Para a fronteira do 10, são o 9, o 10 e o 11.
+
+O valor da fronteira é o número que o enunciado escreve para esse limite, como o 10 de "igual ou superior a 10". Há enunciados que escrevem os dois números de uma fronteira, como em "criança até aos 12 anos, jovem a partir dos 13". Nesse caso escolhe-se um deles. Com o 12, os casos são 11, 12 e 13; com o 13, são 12, 13 e 14. Nos dois, os dois lados da fronteira ficam testados.
 
 Cada caso apanha erros diferentes. O 10 apanha quem trocou `>=` por `>`, porque é o único valor em que os dois operadores discordam. O 9 dá negativa com os dois, e por isso sozinho não mostra esse erro. O 9 está nos casos para confirmar o outro lado da fronteira, porque é a nota mais alta que tem de dar negativa. O 11 apanha quem escreveu `nota == 10` em vez de `nota >= 10`, porque essa condição acerta no 10 e falha logo a seguir.
 
@@ -446,7 +461,7 @@ nota >= LIMIAR_POSITIVA
 
 Repara que a condição de positiva não diz nada sobre a nota ser menor ou igual a 20. Não precisa, e a razão está nas regras da seleção encadeada. Esta condição vai ficar num `Senão se` logo a seguir à validação. Quando o algoritmo chegar a ela, já sabe que a nota não é inválida, porque se fosse tinha entrado no primeiro ramo. Uma nota válida está sempre entre 0 e 20, e por isso basta perguntar se é maior ou igual a 10.
 
-A negativa não precisa de condição nenhuma. Se a nota não é inválida e não é positiva, só pode ser negativa, e é isso exatamente o que o `Senão` apanha.
+A negativa não precisa de condição nenhuma. Se a nota não é inválida e não é positiva, só pode ser negativa, e é isso que o `Senão` apanha.
 
 ### Passo 6: o pseudocódigo
 
@@ -473,7 +488,7 @@ As decisões deste pseudocódigo, uma a uma:
 3. A pergunta do `Escreve:` diz a escala. Quem usa o algoritmo fica a saber o que se espera dele, e é menos provável que se engane.
 4. A validação é a primeira condição da cadeia. As outras só são avaliadas para notas válidas.
 5. O `Senão se` e o `Senão` estão na mesma margem do `Se`. Cada `Escreve:` está quatro espaços mais para dentro, por baixo da linha de que depende. É a indentação que mostra que as três mensagens são os três blocos de uma só cadeia. Cada uma só se escreve no seu caso.
-6. Qualquer que seja a nota, aparece exatamente uma mensagem, porque numa seleção encadeada com `Senão` se executa sempre exatamente um bloco.
+6. Qualquer que seja a nota, aparece uma só mensagem, porque numa seleção encadeada com `Senão` se executa sempre um só bloco.
 
 O mesmo algoritmo, em frases claras, também é válido:
 
@@ -544,7 +559,9 @@ Agora segue o caminho de 10. No primeiro losango a condição é falsa, e sais p
 
 Compara o desenho com o pseudocódigo. O primeiro losango é o `Se`. O segundo losango, pendurado no `Não` do primeiro, é o `Senão se`. A figura do `Não` do segundo losango é o bloco do `Senão`. A linha onde os três caminhos se juntam é o fim da cadeia. É o sítio onde estaria a primeira linha que voltasse à margem do `Se`. Neste algoritmo não há mais nenhuma linha depois da cadeia, e por isso a junção leva diretamente ao fim.
 
-Tal como no guia anterior, as três linhas `const` não têm figura, porque são regras do problema e não passos do caminho. Há três caminhos possíveis do início ao fim, um por cada mensagem, e cada entrada percorre exatamente um deles.
+Neste desenho, o `Sim` sai para a esquerda. Noutros desenhos, como os do laboratório, sai pela direita. O lado de cada saída não importa, desde que cada seta tenha o texto certo.
+
+Tal como no guia anterior, as três linhas `const` não têm figura, porque são regras do problema e não passos do caminho. Há três caminhos possíveis do início ao fim, um por cada mensagem, e cada entrada percorre um só deles.
 
 ### Passo 9: o trace dos casos de fronteira
 
@@ -561,7 +578,7 @@ Antes de leres a primeira tabela, faz tu o trace com a nota 10, o próprio limia
 | 4 | `Senão se nota >= LIMIAR_POSITIVA` | 10 | `10 >= 10` dá `true` | nada |
 | 5 | `Escreve: "Positiva"` | 10 | nenhuma | Positiva |
 
-No passo 3 a validação é falsa. Por isso, o bloco do `Se`, a linha indentada por baixo dele, é saltado, e passa-se ao `Senão se`. No passo 4 a condição é verdadeira, e executa-se o seu bloco, no passo 5. Depois disso o algoritmo salta para o fim da cadeia. O `Senão` e o `Escreve: "Negativa"` não aparecem na tabela, porque não foram executados. A variável `nota` nunca muda depois da linha onde nasce, porque avaliar uma condição não altera o estado.
+No passo 3 a validação é falsa. Por isso, o bloco do `Se`, a linha indentada por baixo dele, é saltado, e passa-se ao `Senão se`. No passo 4 a condição é verdadeira, e executa-se o seu bloco, no passo 5. Depois disso o algoritmo salta para o fim da cadeia. O `Senão` e o `Escreve: "Negativa"` não aparecem na tabela, porque não foram executados. Com a nota 9, a condição do passo 4 seria falsa, e passava-se ao `Senão`. O `Senão` não pergunta nada: passa-se diretamente ao seu bloco, e por isso não tem linha própria no trace. O passo 5 seria logo `Escreve: "Negativa"`. A variável `nota` nunca muda depois da linha onde nasce, porque avaliar uma condição não altera o estado.
 
 Com a nota 21, acima da escala:
 
@@ -597,7 +614,7 @@ O 10 é positiva, e não negativa, porque o operador é `>=` e não `>`. `10 >= 
 
 O 20 é positiva, e não inválida, porque `20 > 20` é falso: vinte não é maior do que vinte. O 21 é inválido porque `21 > 20` é verdadeiro. O 19, do lado de dentro da escala, é positiva pelo mesmo caminho do 20. Confirma que a validação deixa passar as notas logo abaixo do extremo.
 
-Em todas as fronteiras, a decisão é tomada por um único operador. A diferença entre o operador com igual e o operador sem igual é exatamente o valor da fronteira.
+Em todas as fronteiras, a decisão é tomada por um único operador. Os dois operadores, com igual e sem igual, só dão resultados diferentes num valor: o da fronteira.
 
 ### Passo 10: comparar com o previsto
 
@@ -680,7 +697,7 @@ Como se corrige: quando os casos são alternativas uns dos outros, e só um deve
 
 O que se vê: quase todos os erros desta secção desaparecem se testares só com notas do meio das regiões, como 5 e 15. A exceção é o igual em vez de maior ou igual. O 15 também o revela, porque essa versão falha todas as positivas menos o 10. Um algoritmo testado apenas no meio das regiões parece quase sempre certo.
 
-Porque acontece: os valores do meio são os primeiros que vêm à cabeça, e são os únicos em que os operadores errados acertam.
+Porque acontece: os valores do meio são os primeiros que vêm à cabeça, e são valores em que os operadores errados também acertam.
 
 Como se corrige: os casos de teste de uma decisão escolhem-se nas fronteiras, e é aí que se encontram os erros.
 

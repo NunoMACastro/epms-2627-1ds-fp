@@ -31,14 +31,14 @@ Pelo caminho, ficas a saber pôr num fluxograma um losango com uma condição e 
 - `ler valor`: a instrução que recebe um valor escrito por quem usa o algoritmo.
 - `Escreve:`: a instrução que mostra texto e valores no ecrã.
 - Constante: um valor fixo do problema, com o nome em maiúsculas, escrito com `const`, como `const NOTA_MAXIMA = 20`.
-- Condição: uma pergunta cuja resposta só pode ser verdadeira ou falsa, `true` ou `false`, como `temperatura < 12`. Escreve-se dentro do losango. Para saber mais, vê a secção "Condições e o tipo lógico" do [guia](03-decisoes-e-validacao.md).
+- Condição: uma pergunta cuja resposta só pode ser verdadeira ou falsa, `true` ou `false`, como `temperatura < 12`. Escreve-se dentro do losango. Para saber mais, vê a secção "Condições e o tipo `bool`" do [guia](03-decisoes-e-validacao.md).
 - Sinais de comparação: `<` lê-se "é menor do que", `>` lê-se "é maior do que", e `>=`, "é maior ou igual a".
 - `ou`: junta duas condições numa só, que é verdadeira quando pelo menos uma das duas é verdadeira.
 - Saídas `Sim` e `Não`: as duas setas que saem de um losango. Segue-se a do `Sim` quando a resposta à condição é verdadeira, e a do `Não` quando é falsa.
 - Ramo: cada um dos caminhos que saem de um losango.
 - Ponto de junção: a figura onde os ramos de uma decisão se voltam a juntar, antes de o algoritmo continuar.
 - Indentação: o recuo de quatro espaços que mostra, no pseudocódigo, que uma linha está dentro de um `Se`, de um `Senão se` ou de um `Senão`. Essa linha só se executa nesse caso.
-- Seleção encadeada: um `Se` seguido de um ou mais `Senão se` e, no fim, um `Senão`. No fluxograma, é uma cadeia de losangos, cada um pendurado na saída `Não` do anterior. Para saber mais, vê a secção "Seleção encadeada" do [guia](03-decisoes-e-validacao.md).
+- Seleção encadeada: um `Se` seguido de um ou mais `Senão se` e, muitas vezes, um `Senão` no fim. No fluxograma, é uma cadeia de losangos, cada um pendurado na saída `Não` do anterior. Para saber mais, vê a secção "Seleção encadeada" do [guia](03-decisoes-e-validacao.md).
 - Caso de teste: uma entrada escolhida para testar o algoritmo, com o resultado que o enunciado pede.
 - Browser: o programa que abre as páginas da internet, como o Chrome, o Edge, o Firefox ou o Safari.
 - Ficheiro `.drawio`: o desenho que a aplicação volta a abrir para continuares a editar.
@@ -49,7 +49,7 @@ Pelo caminho, ficas a saber pôr num fluxograma um losango com uma condição e 
 
 - Um computador com um browser e ligação à internet.
 - O diagrams.net, a aplicação de diagramas deste laboratório. Também é conhecida por draw.io, que é o nome antigo, e os ficheiros que cria terminam em `.drawio`. Usa-se no browser, é gratuita e não precisa de conta. Confirma que chegas a ela: abre `https://app.diagrams.net/?lang=pt`. Deve aparecer um diagrama em branco, chamado "Diagrama sem nome", o que quer dizer que a aplicação está pronta a usar.
-- A pasta `algoritmos`, onde guardas os ficheiros desta disciplina. Se fizeste o laboratório do tema 02, já a tens. Se não, cria-a antes de começar, numa pasta do computador, numa pen ou no sítio que o professor indicar.
+- A pasta `algoritmos`, onde guardas os ficheiros desta disciplina. Se fizeste o laboratório do tema 02, já a tens. Se não, cria-a antes de começar, numa pasta do computador, numa pen ou no sítio que o professor indicar. No Windows, carrega com o botão direito do rato num sítio vazio da pasta onde a queres, e escolhe "Novo" e depois "Pasta". Depois escreve o nome. No Mac, no Finder, carrega com o botão direito num sítio vazio, escolhe "Nova pasta" e escreve o nome.
 - Papel e caneta, para a tabela da fase 3.
 
 Se fizeste o [laboratório do tema 02](02-estado-sequencia-representacoes-laboratorio.md), já conheces a aplicação, e podes passar depressa pelos passos que já sabes. Se não o fizeste, não faz mal, porque cada ação está explicada na primeira vez que aparece.
@@ -171,7 +171,7 @@ A cadeia acaba na primeira linha que volta à margem do `Se` sem ser um `Senão 
 
 Algumas linhas do pseudocódigo não dão figura. As três linhas `const` não são passos do caminho: dão nome a valores fixos, e esses nomes aparecem dentro dos losangos, onde são usados. A palavra `Senão` também não tem figura própria. A figura do ramo dela é o paralelogramo "Negativa", à saída `Não` do segundo losango.
 
-O desenho vai ter duas colunas. Ao centro desce o caminho principal, e à direita ficam os resultados que saem pelo `Sim` de cada losango.
+O desenho vai ter duas colunas. Ao centro desce o caminho principal, e à direita ficam os resultados que saem pelo `Sim` de cada losango. Esta arrumação não é obrigatória, mas os passos seguem-na.
 
 1. Limpa a página. Carrega numa zona vazia e, sem largar o botão do rato, arrasta um retângulo que envolva as três figuras e as setas da fase 1. Tudo o que ficar dentro do retângulo fica selecionado. Carrega na tecla Delete ou Backspace.
 
@@ -208,7 +208,7 @@ Conta as figuras e as setas do teu desenho. Deve ter:
 - cada losango com uma seta `Sim` e uma seta `Não`, e nenhum com uma só saída;
 - nenhuma seta solta, sem figura numa das pontas.
 
-O teu desenho deve corresponder a este. No desenho em caracteres, os parênteses curvos são os ovais e as barras inclinadas são os paralelogramos. As figuras de três linhas com pontas são os losangos:
+O teu desenho deve ter as mesmas figuras e as mesmas ligações que este. A arrumação é a dos passos, e o desenho em caracteres só a aproxima. Nele, os parênteses curvos são os ovais e as barras inclinadas são os paralelogramos. As figuras de três linhas com pontas são os losangos:
 
 ```text
                             ( Início )
