@@ -14,7 +14,7 @@ Antes de começares, deves conseguir explicar:
 - a pergunta que separa um dado do contexto, "se isto mudasse, a resposta mudava?" (secção "Dados relevantes e pormenores do contexto");
 - as quatro partes do contrato: entradas, saídas, restrições e exemplos concretos (secção "O contrato de entrada e saída").
 
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica antes de começares. Vais precisar também de fazer contas simples, da matemática do ensino básico.
+Se alguma destas ideias não estiver clara, volta à secção do guia que a explica antes de começares. Vais precisar também de fazer contas simples, da matemática do ensino básico, incluindo percentagens.
 
 ## Como trabalhar
 
@@ -80,7 +80,7 @@ b) Escreve os exemplos concretos do contrato, numa tabela com quatro colunas:
 - professores que vão;
 - porque é que o caso interessa: caso normal, caso que fica exatamente no limite de uma regra do enunciado, ou caso extremo.
 
-Calcula à mão os casos de 23, 20, 15 e 12 alunos, e escreve as contas.
+Calcula à mão os casos de 23, 20, 15 e 12 alunos, e escreve as contas. Um caso pode ter mais do que uma classificação. Se tiver, diz porquê.
 
 Um destes quatro casos obriga-te a decidir o que as saídas devem dizer, porque o enunciado não o diz. Descobre qual é, e escreve a decisão que tomaste. Não há uma só decisão certa, mas a tua tem de ficar escrita.
 
@@ -96,7 +96,7 @@ Lê o enunciado:
 
 a) Decompõe o funcionamento do parque em três ou quatro partes. Escreve o objetivo de cada parte numa frase. Lembra-te do critério do guia: cada parte tem de se conseguir explicar e verificar sozinha.
 
-b) Pensa no estado do parque, a fotografia da situação num momento. Qual é o menor número de valores que precisas de guardar para saber tudo o que o painel tem de mostrar? Explica porque é que chega. Explica também porque é que guardar mais um valor seria guardar a mesma informação duas vezes.
+b) Pensa no estado do parque, a fotografia da situação num momento. Qual é o menor número de valores que precisas de guardar para saber tudo o que o painel tem de mostrar? Explica porque é que chega. Se guardasses também outro número, o que podia correr mal?
 
 c) Simula esta manhã numa tabela de estado. Às 8h00 há 2 lugares livres. Depois acontece, por esta ordem:
 
@@ -133,13 +133,14 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem. Passa à se
 - Exercício 2: para a alínea a), troca mentalmente cada pormenor por outro valor e vê se a resposta à pergunta do Tiago muda. Por exemplo, um candeeiro verde em vez de azul, ou um livro de banda desenhada em vez de aventuras.
 - Exercício 3: para as entradas, pergunta-te o que muda de cada vez que a diretora de turma faz esta conta. Para os professores, lembra-te dos livros nas caixas do guia: os alunos que sobram também precisam de alguém. Para a decisão, pergunta-te, em cada um dos quatro casos, se todas as regras do enunciado se cumprem.
 - Exercício 4: para a alínea b), olha para o que o painel mostra e pergunta-te se dava para o calcular a partir de outro número. Lembra-te dos Missionários e Canibais: a margem direita não se guardava, porque se deduzia da esquerda.
-- Exercício 5: para a alínea a), pergunta-te "5 quê?", como no guia, e lembra-te das maneiras que já viste de escrever um desconto numa montra. Para a alínea b), experimenta filas cada vez mais pequenas: 2 pessoas, 1 pessoa. Depois pergunta-te se ainda há uma fila mais pequena do que a última que experimentaste.
+- Exercício 5: para a alínea a), pergunta-te "5 quê?", como no guia, e lembra-te das maneiras que já viste de escrever um desconto numa montra. Para a alínea b), experimenta filas cada vez mais pequenas e segue os passos à letra em cada uma, como o robô da sandes.
+- Desafio opcional: para a alínea b), conta quantas pessoas a mais ficam na direita depois de cada ida e volta.
 
 ## Desafio opcional
 
 Cerca de 25 minutos. Volta aos Missionários e Canibais, mas agora com dois missionários e dois canibais. O barco continua a levar no máximo duas pessoas e não atravessa sozinho. A regra de segurança é a mesma do guia.
 
-a) Encontra uma solução e mostra-a numa tabela como a do passo 8 do exemplo guiado. Verifica a regra em todas as linhas e nas duas margens.
+a) Encontra uma solução e mostra-a numa tabela como a do exemplo guiado, na secção "Passo 8: simular até ao fim". Verifica a regra em todas as linhas e nas duas margens.
 
 b) Quantas travessias tem a tua solução? Explica porque é que não é possível fazer com menos.
 

@@ -66,7 +66,7 @@ Há uma forma simples e honesta de testar se um conjunto de passos é mesmo um a
 
 O erro típico de quem começa é escrever passos vagos. "Junta farinha quanto baste", "espera um bocado" e "vira na rua do costume" têm a forma de instruções, mas nenhuma diz exatamente o que fazer. Quanto é "quanto baste"? Quanto tempo é "um bocado"? Qual é "a rua do costume"? Para quem escreveu, a resposta é óbvia, porque a tem na cabeça. Para quem executa, não há resposta nenhuma. Um passo que depende do que está na cabeça de quem o escreveu não é um passo de algoritmo.
 
-Há passos vagos de outra forma, como "levar as pessoas certas para o outro lado" ou "arrumar os livros pelas caixas". Não são passos. São o problema inteiro com outras palavras. Um passo tem de dizer exatamente o que fazer, de forma que outra pessoa o execute sem te perguntar nada.
+Há passos vagos de outra forma, como "levar as pessoas certas para o outro lado" ou "arrumar os livros pelas caixas". Estas frases são o problema inteiro com outras palavras, e não dizem o que fazer. Um passo tem de dizer exatamente o que fazer, de forma que outra pessoa o execute sem te perguntar nada.
 
 ## Algoritmia e programação
 
@@ -110,7 +110,7 @@ Há dois erros opostos a evitar. O primeiro é deitar fora uma frase que parece 
 
 O **pensamento computacional** é uma forma de pensar sobre problemas que torna a solução possível de executar por outra pessoa ou por uma máquina. Costuma apresentar-se em quatro ideias: decomposição, reconhecimento de padrões, abstração e algoritmo. Não se usam por ordem, uma de cada vez, como numa receita. Usam-se em conjunto, e vai-se saltando entre elas enquanto se pensa.
 
-Esta secção usa como exemplo o jogo dos Missionários e Canibais. Se não o conheces, a ideia é esta. Três missionários e três canibais têm de passar um rio num barco pequeno. Numa margem onde haja missionários, os canibais nunca podem ficar em maior número do que eles. O exemplo guiado, mais à frente neste guia, resolve o jogo do princípio ao fim, com todas as regras.
+Esta secção usa como exemplo o jogo dos Missionários e Canibais. Se não o conheces, a ideia é esta. Três missionários e três canibais têm de passar um rio num barco pequeno. Numa margem onde haja missionários, os canibais nunca podem ficar em maior número do que eles. É a regra de segurança do jogo. O exemplo guiado, mais à frente neste guia, resolve o jogo do princípio ao fim, com todas as regras.
 
 ### Decomposição
 
@@ -138,7 +138,7 @@ O erro típico é ver um padrão onde ele não se aplica sempre. Na solução do
 
 O mapa do metro é o exemplo clássico. Não mostra as distâncias reais, as ruas por cima, nem as curvas dos túneis. Mostra as estações, a ordem em que aparecem e onde se muda de linha, que é tudo o que precisas para decidir onde sair. Um mapa com todos os pormenores reais seria mais verdadeiro e muito menos útil.
 
-Nos Missionários e Canibais, os nomes das pessoas, a cor do barco e a largura do rio desaparecem. A situação inteira fica descrita com três coisas: quantos missionários há na margem esquerda, quantos canibais há nessa margem e onde está o barco. Vais ver no exemplo guiado porque é que isto chega.
+Nos Missionários e Canibais, os nomes das pessoas, a cor do barco e a largura do rio desaparecem. A situação inteira fica descrita com três valores: quantos missionários há na margem esquerda, quantos canibais há nessa margem e onde está o barco. A margem direita não é precisa, porque se deduz da esquerda: há sempre três missionários e três canibais ao todo.
 
 O erro típico é abstrair de mais, e deitar fora uma coisa de que precisas. Se tirares o lado do barco da tua representação, deixas de saber quem pode viajar a seguir. Só pode viajar quem está na margem onde o barco está.
 
@@ -160,16 +160,20 @@ Verificar uma regra é olhar para o estado. Encontrar um erro é, quase sempre, 
 
 ## O contrato de entrada e saída
 
-O **contrato de entrada e saída** de um problema é a descrição escrita, antes de haver algoritmo, de quatro coisas:
+Pensa numa máquina de venda automática. Metes dinheiro e escreves o código de um produto, e a máquina dá-te o produto e o troco. Há regras: só aceita certas moedas, e faz alguma coisa combinada se o código não existir ou se o dinheiro não chegar. Repara que, para usares a máquina, não precisas de saber como ela funciona por dentro. Basta saberes o que lhe dás, o que ela te devolve e que regras cumpre.
 
-- as **entradas**: que dados o algoritmo recebe, de que tipo, em que unidade e com que limites;
+Num problema, essa descrição tem um nome. O **contrato de entrada e saída** de um problema é a descrição escrita, antes de haver algoritmo, de quatro coisas:
+
+- as **entradas**: que dados o algoritmo recebe, de que tipo, em que unidade e com que limites. O tipo é a espécie de valor, por exemplo, um número inteiro, um número com casas decimais ou um texto;
 - as **saídas**: que resultado o algoritmo produz, e em que forma;
 - as **restrições**: as regras que têm de ser respeitadas, sobre as entradas ou sobre o caminho até à saída;
 - os **exemplos concretos**: algumas entradas escolhidas com cuidado, cada uma com a saída que se espera, calculada à mão.
 
+A máquina de venda automática tem um contrato destes, mesmo que ninguém o tenha escrito num papel. As entradas são o dinheiro que se mete e o código do produto. As saídas são o produto e o troco. As restrições dizem que moedas aceita e o que acontece se o código não existir ou se o dinheiro não chegar.
+
 Chama-se contrato porque funciona como um acordo entre duas partes. Quem usa o algoritmo compromete-se a dar entradas dentro dos limites combinados. O algoritmo compromete-se a devolver a saída prometida. Pode acontecer alguém dar uma entrada fora do combinado. Nesse caso, o contrato ou diz o que acontece, ou deixa claro que esse caso não está coberto.
 
-Uma máquina de venda automática tem um contrato destes, mesmo que ninguém o tenha escrito num papel. As entradas são o dinheiro que se mete e o código do produto. As saídas são o produto e o troco. As restrições dizem que moedas aceita e o que acontece se o código não existir ou se o dinheiro não chegar. Repara que, para usares a máquina, não precisas de saber como ela funciona por dentro. O contrato basta. É essa a grande vantagem de um contrato bem escrito: separa o que o algoritmo faz de como o faz.
+Na máquina, o contrato basta para a usares. É essa a grande vantagem de um contrato bem escrito: separa o que o algoritmo faz de como o faz.
 
 ### Um contrato completo: livros em caixas
 
@@ -184,7 +188,7 @@ As entradas são duas:
 - o número de livros, um número inteiro igual ou maior do que zero;
 - a capacidade de cada caixa, medida em número de livros, um número inteiro maior do que zero.
 
-Repara que a capacidade não pode ser zero. Uma caixa onde não cabe nenhum livro não serve para nada, e o contrato deixa isso claro logo à partida.
+O enunciado diz 12 livros, mas a capacidade fica como entrada, e não como um número fixo. Assim, o mesmo algoritmo serve para caixas de outro tamanho. Repara também que a capacidade não pode ser zero. Uma caixa onde não cabe nenhum livro não serve para nada, e o contrato deixa isso claro logo à partida.
 
 As saídas também são duas: o número de caixas necessárias e o número de livros que vão na última caixa.
 
@@ -207,13 +211,13 @@ Cada linha ensina uma coisa diferente.
 
 A primeira linha é o **caso normal**, o que qualquer pessoa imagina ao ler o enunciado. Com 30 livros enchem-se duas caixas de 12, que levam 24, e sobram 6 livros. Esses 6 também têm de ir numa caixa, porque a restrição diz que todos os livros ficam dentro de uma caixa. São portanto 3 caixas, e a última leva 6.
 
-A segunda linha mostra que a última caixa pode estar cheia. É um caso que fica exatamente no limite de uma regra: as duas caixas levam 12 livros cada, nem mais um. Quem só pensou no primeiro caso pode ter ficado com a ideia de que a última caixa está sempre incompleta. Este exemplo desfaz essa ideia antes de ela chegar ao algoritmo.
+A segunda linha mostra que a última caixa pode estar cheia. É um **caso no limite de uma regra**, porque fica exatamente em cima do limite que a regra põe. As duas caixas levam 12 livros cada, nem mais um. Quem só pensou no primeiro caso pode ter ficado com a ideia de que a última caixa está sempre incompleta. Este exemplo desfaz essa ideia antes de ela chegar ao algoritmo.
 
 A terceira linha é o caso em que nem uma caixa se enche. A resposta é uma caixa com 5 livros, e não zero caixas, porque os 5 livros têm de ir para algum lado.
 
 A quarta linha obriga a tomar uma decisão que o enunciado não tomou. Com zero livros não é preciso nenhuma caixa, e por isso não há última caixa. Quantos livros vão "na última caixa" quando ela não existe? O enunciado não responde. O contrato tem de responder, e aqui a decisão foi dizer por palavras que não há última caixa. Podia ter sido outra, desde que ficasse escrita. O que não pode acontecer é ninguém ter pensado nisso e o algoritmo fazer uma coisa qualquer quando aparecer o zero.
 
-As duas últimas linhas ficam nas pontas do que o contrato aceita: menos livros do que cabem numa caixa, e nenhum livro. Um caso destes chama-se **caso extremo**. Os casos extremos são os que costumam obrigar a decisões que o enunciado não tomou.
+As duas últimas linhas ficam nas pontas do problema: muito poucos livros, menos do que cabem numa caixa, e nenhum livro. Um caso nas pontas do problema chama-se **caso extremo**. Pode ser o zero, o muito pouco, ou um valor que uma regra não deixa passar, como uma caixa de capacidade zero. Os casos extremos são os que costumam obrigar a decisões que o enunciado não tomou.
 
 Estes exemplos servem para duas coisas. Antes de escrever o algoritmo, mostram se percebeste o problema. Se não conseguires calcular à mão o resultado de um exemplo, ainda não o percebeste. Depois de escrever o algoritmo, servem de teste. O algoritmo tem de dar exatamente estes resultados, e se não der, está errado.
 
@@ -297,25 +301,24 @@ Nas tabelas deste guia vais ver as duas margens escritas, porque é mais fácil 
 
 ### Passo 6: decompor numa travessia de cada vez
 
-O problema grande é "chegar de (3, 3, esquerda) a (0, 0, direita)". Decompõe-se numa sequência de travessias, e cada travessia decompõe-se nestes passos:
+O problema grande é "chegar de (3, 3, esquerda) a (0, 0, direita)". Decompõe-se numa sequência de travessias, e cada travessia decompõe-se nesta lista. Para não se confundir com os passos do exemplo guiado, cada linha da lista tem uma letra, e chama-se alínea.
 
-1. Ver em que margem está o barco.
-2. Escolher quem vai no barco. Há apenas cinco hipóteses: um missionário, dois missionários, um canibal, dois canibais, ou um missionário e um canibal.
-3. Confirmar que essas pessoas estão mesmo na margem onde está o barco. Se não estiverem, voltar ao passo 2 com outra hipótese.
-4. Calcular a nova situação: tirar essas pessoas da margem de partida, pô-las na margem de chegada e mudar o barco de lado.
-5. Verificar a regra de segurança nas duas margens.
-6. Se a regra falhar, desfazer a travessia e voltar ao passo 2 com outra hipótese.
-7. Se a regra se cumprir, confirmar que a nova situação não é uma que já aconteceu antes. Se for, também se volta ao passo 2, porque regressar a uma situação conhecida é andar para trás.
-8. Se já se experimentaram as cinco hipóteses e nenhuma serviu, a travessia anterior foi uma má escolha. Desfazê-la e voltar ao passo 2 dessa travessia, com outra hipótese.
-9. Se a nova situação for (0, 0, direita), o jogo está resolvido. Se não for, volta-se ao passo 1 para a travessia seguinte.
+- a) Ver em que margem está o barco.
+- b) Escolher quem vai no barco, entre as hipóteses que ainda não experimentaste nesta travessia. São cinco: um missionário, dois missionários, um canibal, dois canibais, ou um missionário e um canibal. Se já experimentaste as cinco e nenhuma serviu, a travessia anterior foi uma má escolha: desfá-la e volta à alínea b) dessa travessia.
+- c) Confirmar que essas pessoas estão mesmo na margem onde está o barco. Se não estiverem, voltar à alínea b) com outra hipótese.
+- d) Calcular a nova situação: tirar essas pessoas da margem de partida, pô-las na margem de chegada e mudar o barco de lado.
+- e) Verificar a regra de segurança nas duas margens.
+- f) Se a regra falhar, desfazer a travessia e voltar à alínea b) com outra hipótese.
+- g) Se a regra se cumprir, confirmar que a nova situação não é uma que já aconteceu antes. Se for, desfazer a travessia e voltar à alínea b) com outra hipótese, porque regressar a uma situação conhecida é andar para trás.
+- h) Se a nova situação for (0, 0, direita), o jogo está resolvido. Se não for, volta-se à alínea a) para a travessia seguinte.
 
-O passo 7 desta lista merece uma explicação. Sem ele, podias passar a tarde a levar um canibal para a direita e a trazê-lo de volta. Estavas sempre dentro das regras, e nunca avançavas. Recusar situações repetidas é o que garante que o processo acaba.
+A alínea g) desta lista merece uma explicação. Sem ela, podias passar a tarde a levar um canibal para a direita e a trazê-lo de volta. Estavas sempre dentro das regras, e nunca avançavas. Recusar situações repetidas é o que garante que o processo acaba.
 
-O passo 8 trata o caso em que uma travessia não deixa avançar. Volta-se atrás e experimenta-se outra. O passo 9 manda voltar ao início e fazer tudo outra vez para a travessia seguinte. Fazer os mesmos passos várias vezes chama-se **repetição**, e vai ter uma forma própria de se escrever no tema 04, Repetição e arrays. Por agora, basta dizê-lo em português com clareza, como está acima.
+A última frase da alínea b) trata o caso em que uma travessia não deixa avançar. Volta-se atrás e experimenta-se outra. A alínea h) manda voltar ao início e fazer tudo outra vez para a travessia seguinte. Fazer os mesmos passos várias vezes chama-se **repetição**, e vai ter uma forma própria de se escrever no tema 04, Repetição e arrays. Por agora, basta dizê-lo em português com clareza, como está acima.
 
 ### Passo 7: reconhecer o padrão da verificação
 
-Os passos 1 a 9 da lista do passo 6 são iguais em todas as travessias. Só mudam os números. É o padrão de que se falou na secção "Reconhecimento de padrões". Aprendes a verificar uma travessia e sabes verificar todas.
+As alíneas a) a h) da lista do passo 6 são iguais em todas as travessias. Só mudam os números. É o padrão de que se falou na secção "Reconhecimento de padrões". Aprendes a verificar uma travessia e sabes verificar todas.
 
 Vê o padrão a funcionar logo na primeira travessia, experimentando as cinco hipóteses a partir de (3, 3, esquerda). Antes de leres a tabela, experimenta-as tu, com os objetos ou numa folha. Quais são permitidas?
 
@@ -327,11 +330,11 @@ Vê o padrão a funcionar logo na primeira travessia, experimentando as cinco hi
 | 2 canibais | 3 missionários e 1 canibal | 2 canibais | Sim |
 | 1 missionário e 1 canibal | 2 missionários e 2 canibais | 1 missionário e 1 canibal | Sim |
 
-Das cinco hipóteses, duas falham logo. As outras três são permitidas. Começar com 1 canibal é permitido, mas só deixa voltar ao início. Na margem direita fica só esse canibal, e é ele que tem de trazer o barco de volta. Voltar ao início é regressar a uma situação conhecida, e o passo 7 da lista do passo 6 recusa-o. Como nenhuma outra hipótese serve, o passo 8 manda desfazer a primeira travessia e experimentar outra. A solução que se segue começa com dois canibais, mas começar com um missionário e um canibal também leva a uma solução.
+Das cinco hipóteses, duas falham logo. As outras três são permitidas. Começar com 1 canibal é permitido, mas só deixa voltar ao início. Na margem direita fica só esse canibal, e é ele que tem de trazer o barco de volta. Voltar ao início é regressar a uma situação conhecida, e a alínea g) da lista do passo 6 recusa-o. Como nenhuma outra hipótese serve, a alínea b) manda desfazer a primeira travessia e experimentar outra. A solução que se segue começa com dois canibais, mas começar com um missionário e um canibal também leva a uma solução.
 
 ### Passo 8: simular até ao fim
 
-Esta é a solução completa. Cada linha é o estado depois de uma travessia. A coluna da direita mostra a verificação da regra, feita em todas as linhas e não só nas que parecem perigosas.
+Esta é a solução completa. Cada linha é o estado depois de uma travessia. A coluna da direita mostra a verificação da regra, feita em todas as linhas e não só nas que parecem perigosas. Na tabela, M quer dizer missionários e C quer dizer canibais.
 
 | Travessia | Quem vai no barco | Sentido | Margem esquerda | Margem direita | A regra cumpre-se? |
 | ---: | --- | --- | --- | --- | --- |
@@ -348,19 +351,17 @@ Esta é a solução completa. Cada linha é o estado depois de uma travessia. A 
 | 10 | 1 canibal | direita → esquerda | 0 M, 2 C | 3 M, 1 C | Sim |
 | 11 | 2 canibais | esquerda → direita | 0 M, 0 C | 3 M, 3 C | Sim, e é o objetivo |
 
-Na tabela, M quer dizer missionários e C quer dizer canibais.
-
 A travessia 6 é o momento mais difícil do jogo, e é onde muita gente fica presa na aula. Depois da travessia 5, o barco está na margem direita, que tem 2 missionários e 2 canibais. A esquerda tem 1 missionário e 1 canibal. Alguém tem de levar o barco de volta. Antes de leres a explicação, experimenta tu as cinco hipóteses, com os objetos, e tenta perceber porque é que quatro delas não servem. Depois confirma com a lista, uma hipótese de cada vez, com o padrão da verificação:
 
 - Se voltar 1 missionário, a direita fica com 1 missionário e 2 canibais. A regra falha.
-- Se voltarem 2 missionários, a situação passa a ser a mesma que havia depois da travessia 4. É permitido, mas é andar para trás, e o passo 7 da lista do passo 6 recusa-o.
+- Se voltarem 2 missionários, a situação passa a ser a mesma que havia depois da travessia 4. É permitido, mas é andar para trás, e a alínea g) da lista do passo 6 recusa-o.
 - Se voltar 1 canibal, a esquerda fica com 1 missionário e 2 canibais. A regra falha.
 - Se voltarem 2 canibais, a esquerda fica com 1 missionário e 3 canibais. A regra falha.
 - Se voltarem 1 missionário e 1 canibal, a esquerda fica com 2 e 2 e a direita com 1 e 1. A regra cumpre-se e a situação é nova.
 
 Só uma hipótese faz avançar, e é a menos intuitiva de todas, porque leva de volta um missionário que tinha acabado de atravessar. É também aqui que o padrão "vão dois, volta um" deixa de funcionar. Nas travessias 5 e 6 vão dois e voltam dois. Quem seguisse o padrão sem verificar não encontrava esta saída.
 
-Não há nenhuma solução com menos de 11 travessias. Há quatro sequências diferentes com 11 travessias, e só diferem nas duas primeiras e nas duas últimas. Qualquer uma delas é uma solução correta, porque todas cumprem o contrato.
+Não há nenhuma solução com menos de 11 travessias. Há quatro sequências diferentes com 11 travessias, e só diferem nas duas primeiras e nas duas últimas. Qualquer uma delas é uma solução correta, porque todas cumprem o contrato. Quem seguir a lista do passo 6 à letra, com as hipóteses pela ordem da alínea b), chega a outra destas quatro soluções. Essa acaba com 1 missionário e depois 1 missionário e 1 canibal, e está igualmente certa.
 
 ### Passo 9: confirmar a solução contra o contrato
 
@@ -382,7 +383,7 @@ Estes são os erros que mais aparecem neste tema. Para cada um, vês como se rec
 
 Imagina que o enunciado dos livros dizia "cada caixa leva no máximo 10" em vez de "12 livros". Dez quê? Dez livros, ou dez quilos? Se forem dez livros, 30 livros precisam de 3 caixas. Se forem dez quilos e cada livro pesar meio quilo, cabem 20 livros por caixa e 30 livros precisam só de 2 caixas. O mesmo enunciado dá duas respostas diferentes, conforme a unidade que se imagina.
 
-Pior ainda: se for em quilos, o enunciado não diz quanto pesa cada livro, e sem esse dado o problema não se resolve. Não é um problema de contas. É informação que falta.
+Pior ainda: se for em quilos, o enunciado não diz quanto pesa cada livro. Falta informação, e sem ela nenhuma conta resolve o problema.
 
 Acontece porque quem escreve o enunciado tem a unidade na cabeça e não a escreve. Como se evita: no contrato, cada entrada leva a sua unidade escrita por extenso, como "capacidade da caixa, em número de livros". Quando o enunciado não diz a unidade, não se escolhe uma em silêncio. Pergunta-se, ou escreve-se a decisão.
 
@@ -406,7 +407,7 @@ Nos Missionários e Canibais, o exemplo mínimo do regresso esquecido são só d
 
 ### Começar a resolver antes de acabar de ler
 
-É o erro mais comum de todos, e explica muitos dos outros. Vê-se quando a solução não usa uma regra do enunciado. Quem lê a primeira frase dos Missionários e Canibais e começa logo a mexer no barco não repara em "não atravessa sozinho". Também não repara na leitura cuidadosa da regra de segurança. Acontece porque a primeira leitura só apanha a história. O remédio é o passo 1 do exemplo guiado: ler duas vezes, a segunda com lápis.
+É o erro mais comum de todos, e explica muitos dos outros. Vê-se quando a solução não usa uma regra do enunciado. Quem lê a primeira frase dos Missionários e Canibais e começa logo a mexer no barco não repara em "não atravessa sozinho". Também não repara que a regra de segurança só vale nas margens onde há missionários. Acontece porque a primeira leitura só apanha a história. O remédio está no exemplo guiado, na secção "Passo 1: ler duas vezes": ler o enunciado duas vezes, a segunda com lápis.
 
 ### Esquecer os casos extremos no contrato
 
@@ -432,12 +433,13 @@ Um contrato só com o caso normal, como os 30 livros, parece completo e não est
 - Estado: o conjunto de valores que descrevem a situação num dado momento, como uma fotografia.
 - Ação: um passo que muda o estado.
 - Contrato de entrada e saída: as entradas, as saídas, as restrições e os exemplos concretos de um problema, escritos antes de haver algoritmo.
-- Entradas: os dados que o algoritmo recebe, com o tipo, a unidade e os limites.
+- Entradas: os dados que o algoritmo recebe, com o tipo, a unidade e os limites. O tipo é a espécie de valor, como um número inteiro, um número com casas decimais ou um texto.
 - Saídas: o resultado que o algoritmo produz.
 - Restrições: as regras que têm de ser respeitadas, sobre as entradas ou sobre o caminho até à saída.
 - Exemplos concretos: entradas escolhidas com cuidado, cada uma com a saída esperada, calculada à mão.
 - Caso normal: o caso que qualquer pessoa imagina ao ler o enunciado.
-- Caso extremo: um caso nas pontas do que o contrato aceita, como o zero, que costuma obrigar a uma decisão.
+- Caso no limite de uma regra: um caso exatamente em cima do limite que uma regra põe, como a caixa com 12 livros.
+- Caso extremo: um caso nas pontas do problema, como o zero, o muito pouco ou um valor que uma regra não deixa passar.
 - Repetição: fazer os mesmos passos várias vezes.
 - Etapa omitida: um passo que falta no algoritmo e que não se nota enquanto se testa só o caso que se tinha em mente.
 - Exemplo mínimo: a entrada mais pequena e simples que ainda mostra uma falha.
