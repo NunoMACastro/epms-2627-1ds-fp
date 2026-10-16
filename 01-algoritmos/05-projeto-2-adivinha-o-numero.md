@@ -384,7 +384,7 @@ Confirma, antes de dares o projeto por acabado:
 
 ## O que vem a seguir
 
-O projeto 3 é a avaliação prática individual que fecha a algoritmia, e dura 120 minutos. Vais receber um problema novo, que não é nenhum dos jogos dos projetos 1 e 2. Fazes sozinho o processo que fizeste aqui em par: o contrato, a tabela de casos antes do algoritmo, o algoritmo e os testes. Depois, com um algoritmo escrito por outra pessoa, fazes a depuração, com o registo, e voltas a testar tudo. Por fim, fazes a melhoria, com o trabalho contado. O que se observa é a lógica e o processo, e não a forma da escrita nem a rapidez. Podes ter contigo o portefólio, com os projetos 1 e 2. As outras regras vêm escritas no enunciado, e o professor dá-te antes a grelha com os critérios.
+O projeto 3 é a avaliação prática individual que fecha a algoritmia, e dura 120 minutos. Vais receber um problema novo, que não é nenhum dos jogos dos projetos 1 e 2. Fazes sozinho o processo que fizeste aqui em par: o contrato, a tabela de casos antes do algoritmo, o algoritmo e os testes. Depois, com um algoritmo escrito por outra pessoa, fazes a depuração e voltas a testar tudo. Se um caso do teu algoritmo falhar, depuras e escreves o registo de depuração. Por fim, fazes a melhoria, com o trabalho contado. O que se observa é a lógica e o processo, e não a forma da escrita nem a rapidez. Podes ter contigo o portefólio, com os projetos 1 e 2. As outras regras vêm escritas no enunciado. Antes da prova, o professor dá-te os critérios do módulo, e a grelha da prova vem com o enunciado.
 
 A melhor preparação é rever este projeto, sobretudo as respostas do passo 3 e o registo de depuração do passo 10. Percebe também porque é que cada passo vem antes do seguinte.
 
