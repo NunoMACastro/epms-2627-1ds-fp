@@ -6,7 +6,7 @@ Módulo Desenvolver algoritmos. Neste guia aprendes a escrever as tuas próprias
 
 Os algoritmos do guia 04 já eram grandes, e começavam a repetir partes de problema para problema. Somavam um array, calculavam uma média com cuidado com o zero, procuravam um valor, validavam uma nota. Neste guia vais aprender a dar nome a essas partes. Depois vais juntar tudo o que aprendeste na algoritmia num algoritmo completo, organizado em funções, testado e pronto para passar para o Python.
 
-Na aula já escreveste as primeiras funções em pseudocódigo, com parâmetros, argumentos e `devolver`. Este guia arruma essa matéria na forma que usamos nas aulas. Explica também o que acontece por dentro de uma chamada, e mostra como se decompõe um problema inteiro em funções.
+Se já escreveste funções em pseudocódigo na aula, com parâmetros, argumentos e `devolver`, este guia arruma essa matéria na forma que usamos nas aulas. Explica também o que acontece por dentro de uma chamada, e mostra como se decompõe um problema inteiro em funções.
 
 Tal como nos guias anteriores, um algoritmo escrito em frases claras também é válido, desde que não deixe dúvidas. Com funções, isso quer dizer sobretudo deixar claro o que cada função recebe, o que devolve e em que casos.
 
@@ -81,7 +81,7 @@ A primeira é não repetir. A validação de uma nota, `nota < 0 ou nota > 20`, 
 
 A segunda é ler melhor. Uma linha como `Se notaValida(nota)` lê-se como uma frase: se a nota é válida. A mesma linha com a condição inteira obriga quem lê a descodificar a condição. Só depois percebe o que se está a perguntar.
 
-A terceira é a mais importante: testar por partes. Um algoritmo grande, com ciclos dentro de seleções dentro de ciclos, é difícil de testar de uma vez. Se estiver dividido em funções pequenas, cada uma com o seu contrato, testa-se cada função sozinha, com poucos casos. Só depois se junta tudo. Quando aparece um erro, já sabes que as funções estão certas, e por isso o erro está na forma como as juntaste. É a decomposição do guia 01, levada até ao fim.
+A terceira é a mais importante: testar por partes. Um algoritmo grande, com ciclos dentro de seleções dentro de ciclos, é difícil de testar de uma vez. Se estiver dividido em funções pequenas, cada uma com o seu contrato, testa-se cada função sozinha, com poucos casos. Só depois se junta tudo. Quando aparece um erro, já sabes que as funções passam nos seus testes, e por isso começas a procurar na forma como as juntaste. É a decomposição do guia 01, levada até ao fim.
 
 ## Escrever uma função
 
@@ -138,7 +138,7 @@ Escreve: "Área: ", area
 
 `area` fica com 6, e o ecrã mostra "Área: 6".
 
-Leitura guiada: as duas primeiras linhas são a função, e sozinhas não fazem nada. O algoritmo começa na terceira linha, a primeira do algoritmo principal. Nessa linha, `areaRetangulo(3, 2)` chama a função com o 3 e o 2. A função multiplica-os e devolve 6, e o 6 fica guardado em `area`, que nasce nesta linha. A última linha escreve o texto e o valor de `area`.
+Leitura guiada: as duas primeiras linhas são a função, e sozinhas não fazem nada. O algoritmo começa na linha `float area = areaRetangulo(3, 2)`, a primeira do algoritmo principal. Nessa linha, `areaRetangulo(3, 2)` chama a função com o 3 e o 2. A função multiplica-os e devolve 6, e o 6 fica guardado em `area`, que nasce nesta linha. A última linha escreve o texto e o valor de `area`.
 
 Os valores escritos entre parênteses na chamada, o 3 e o 2, chamam-se **argumentos**.
 
@@ -242,7 +242,7 @@ As duas chamadas devolvem 8. A chamada `maior(3, 8)`, em tabela própria:
 
 Leitura guiada: como a condição é falsa, o algoritmo passa para o bloco do `Senão` e devolve `b`, que vale 8. Em `maior(8, 3)`, a condição `8 > 3` dá `true`, e devolve-se `a`, que também vale 8. Em cada chamada executa-se exatamente um dos dois `devolver`.
 
-Há uma regra que esta função cumpre, e que todas as funções deste guia têm de cumprir. Em todos os caminhos possíveis, a função chega a um `devolver`. Pensa numa função que, para algum valor, chegasse ao fim do corpo sem passar por nenhum `devolver`. Não teria nada para entregar, e a linha que a chamou ficaria com um buraco por tapar. É o erro mais frequente com funções, e a secção "Erros frequentes" mostra-o com números.
+Há uma regra que esta função cumpre, e que todas as funções deste guia têm de cumprir. Em todos os caminhos possíveis, a função chega a um `devolver`. Pensa numa função que, para algum valor, chegasse ao fim do corpo sem passar por nenhum `devolver`. Não teria nada para entregar, e a linha que a chamou ficaria com um buraco por tapar. É o erro mais frequente com funções, e a secção "Erros frequentes" mostra uma função que nunca chega a um `devolver`.
 
 ### `devolver` não é `Escreve:`
 
@@ -350,7 +350,7 @@ Também se podia escolher outra solução, como devolver 0 para o array vazio. M
 
 ## Decompor um problema em funções
 
-Agora que sabes escrever e chamar funções, falta decidir que funções escrever. É a decomposição do guia 01, com uma regra a mais. Os passos são sempre estes, e o exemplo guiado segue-os um a um.
+Agora que sabes escrever e chamar funções, falta decidir que funções escrever. É a decomposição do guia 01, com uma regra a mais. Os passos são sempre estes seis. O exemplo guiado, mais abaixo, tem oito passos, e segue estes seis um a um, do seu passo 2 ao passo 7.
 
 1. **Escrever o contrato do problema inteiro**: as entradas, as saídas, as restrições e os exemplos concretos, calculados à mão.
 2. **Decompor em partes**, cada uma com um objetivo que se diz numa frase. Cada parte que recebe dados e produz um resultado é candidata a função.
@@ -359,7 +359,7 @@ Agora que sabes escrever e chamar funções, falta decidir que funções escreve
 5. **Escrever o algoritmo principal**, que lê os dados, chama as funções e mostra os resultados.
 6. **Fazer o teste completo**: executar à mão um dos exemplos do passo 1, do princípio ao fim, chamada a chamada, sem computador.
 
-Os testes do passo 4 escolhem-se a partir do contrato, antes de olhar para a solução. A estes testes chama-se **testes independentes da solução**. Testam o que a função devia fazer, e não o que tu achas que ela faz.
+Os testes do passo 4 da lista escolhem-se a partir do contrato, antes de olhar para a solução. A estes testes chama-se **testes independentes da solução**. Testam o que a função devia fazer, e não o que tu achas que ela faz.
 
 Uma boa função faz uma coisa só, e o seu nome diz qual. Quando escreveres o objetivo de uma função, repara se precisas de dizer "e", como em "calcula a média e conta as positivas". Se precisares, provavelmente são duas funções.
 
@@ -392,13 +392,15 @@ Para cada nota em notas
 
 A média calcula-se uma vez, antes do ciclo, e guarda-se numa variável. São 6 voltas dentro da função e 6 no ciclo: 12 voltas.
 
+As duas dão o mesmo sempre que há pelo menos uma nota, a pré-condição de `media`. Com o array vazio, a primeira dá 0 sem chamar `media`, porque o ciclo dá zero voltas. A segunda chama `media([])` antes do ciclo, e a conta é 0 / 0.
+
 | Notas no array | Voltas com a média dentro do ciclo | Voltas com a média calculada antes |
 | ---: | ---: | ---: |
 | 4 | 20 | 8 |
 | 6 | 42 | 12 |
 | 10 | 110 | 20 |
 
-Repara como a diferença cresce. Com 10 notas, a primeira solução já faz mais de cinco vezes o trabalho da segunda. A regra que daqui sai é simples. Um valor que não muda dentro de um ciclo calcula-se antes do ciclo. O resultado não muda, e o trabalho diminui.
+Repara como a diferença cresce. Com 10 notas, a primeira solução já faz mais de cinco vezes o trabalho da segunda. A regra que daqui sai é simples. Um valor que não muda dentro de um ciclo calcula-se antes do ciclo, e o trabalho diminui. Antes de tirares a chamada do ciclo, confirma as pré-condições da função. Se o array pode estar vazio, o cálculo fica dentro de um `Se` que confirma que há pelo menos um elemento.
 
 ## Ler funções num fluxograma
 
@@ -501,7 +503,7 @@ Função contarPositivas(notas)
     devolver positivas
 ```
 
-Antes de escrever o algoritmo principal, testa-se cada função sozinha. Um teste de uma função é uma chamada com um argumento escolhido e o valor que se espera que ela devolva. Os casos vêm do contrato e das fronteiras. Para cada fronteira, há o valor de baixo, o da fronteira e o de cima, como no guia 03. Para as funções que recebem arrays, há um array com um elemento e um com vários, como no guia 04. Há também um array vazio, quando o contrato o deixa.
+Antes de escrever o algoritmo principal, testa-se cada função sozinha. Um teste de uma função é uma chamada com um argumento escolhido e o valor que se espera que ela devolva. Os casos escolhem-se a partir dos contratos do passo 4 e das fronteiras, antes de olhar para o pseudocódigo das funções. Para cada fronteira, há o valor de baixo, o da fronteira e o de cima, como no guia 03. Para as funções que recebem arrays, há um array com um elemento e um com vários, como no guia 04. Há também um array vazio, quando o contrato o deixa.
 
 | Chamada | Esperado | Devolvido no trace | Certo? |
 | --- | --- | --- | --- |
@@ -520,7 +522,7 @@ Antes de escrever o algoritmo principal, testa-se cada função sozinha. Um test
 | `contarPositivas([11])` | 1 | uma volta; `11 >= 10` dá `true` | sim |
 | `contarPositivas([14, 9, 17, 10, 6, 16])` | 4 | seis voltas, com a tabela no passo 7 | sim |
 
-As três funções passam em todos os testes. A partir daqui, se o algoritmo completo der um resultado errado, o erro não está dentro delas. Está na forma como o algoritmo principal as usa.
+As três funções passam em todos os testes. Se o algoritmo completo der um resultado errado, procura-se primeiro na forma como o principal as usa. Se aí estiver tudo certo, falta um teste a uma função, e o caso que falhou mostra qual.
 
 ### Passo 6: o algoritmo principal
 
@@ -609,11 +611,17 @@ O que fizeste nos passos 2 a 7 é um **dossiê algorítmico**. Tem tudo o que é
 | O pseudocódigo das funções e do algoritmo principal | Passos 5 e 6 |
 | Os testes de cada função e o teste completo | Passos 5 e 7 |
 
-É este dossiê que leva o algoritmo para o Python. Os testes que escreveste aqui, à mão, vão ser os mesmos que vais pôr o computador a executar. Se o programa em Python der outro resultado, o erro está na tradução, e não no raciocínio.
+É este dossiê que leva o algoritmo para o Python. Os testes que escreveste aqui, à mão, vão ser os mesmos que vais pôr o computador a executar. Se o programa em Python der outro resultado no mesmo caso, procura primeiro na tradução.
 
 ## Erros frequentes
 
-Quando uma função tua falha, procura o erro pela mesma ordem do guia 04. Escreve o caso que falhou, com o resultado que o enunciado pede e o que apareceu. Escreve numa frase o que achas que causa o erro. Confirma essa frase no caso mais curto que ainda mostra o erro, e numa função isso faz-se com a tabela própria da chamada. Depois corrige a instrução que causa o erro, e volta a testar todos os casos, também os que já davam certo.
+Quando uma função tua falha, procura o erro pela mesma ordem do guia 04:
+
+1. **Observar e reproduzir o erro.** Escreve o caso que falhou, com o resultado que o enunciado pede e o que apareceu.
+2. **Formular uma hipótese.** Escreve numa frase o que achas que causa o erro.
+3. **Verificar a hipótese.** Confirma essa frase no caso mais curto que ainda mostra o erro. Numa função, isso faz-se com a tabela própria da chamada.
+4. **Corrigir a causa.** Corrige a instrução que causa o erro, e não o sítio onde ele se vê.
+5. **Voltar a testar tudo.** Volta a testar todos os casos, também os que já davam certo.
 
 Os erros desta secção encontram-se assim. A troca da ordem dos argumentos ficou na secção "A ordem dos argumentos conta".
 
@@ -708,7 +716,7 @@ O que se vê: o resultado está certo, e por isso nenhuma entrada mostra este er
 
 Porque acontece: dentro do ciclo chama-se uma função cujo resultado não muda de volta para volta. É o caso de `media(notas)` na comparação de cada nota com a média. Parece natural escrever a chamada no sítio onde o valor é preciso.
 
-Como se corrige: calcula o valor uma vez, antes do ciclo, e guarda-o numa variável, como na secção "Duas soluções certas, uma mais eficiente". Quanto mais elementos tiver o array, maior é a diferença.
+Como se corrige: calcula o valor uma vez, antes do ciclo, e guarda-o numa variável, como na secção "Duas soluções certas, uma mais eficiente". Quanto mais elementos tiver o array, maior é a diferença. Antes de tirares a chamada do ciclo, confirma as pré-condições da função. Se o array pode estar vazio, faz o cálculo dentro de um `Se` que o confirma, como em "Esquecer a pré-condição".
 
 ## Palavras novas deste guia
 
@@ -742,14 +750,14 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 7. Qual é a diferença entre `devolver` e `Escreve:`? Dá um exemplo em que só a versão com `devolver` serve.
 8. Escreve a função `idadeValida(idade)`, que devolve `true` para idades de 0 a 120, incluindo os extremos, e usa-a num `Se`. Que seis valores escolhes para a testar?
 9. Porque é que `media` tem uma pré-condição e `contarPositivas` não? O que devolve `contarPositivas([])`?
-10. Quais são os seis passos para decompor um problema em funções? Em que passo se escolhem os testes, e porque é que se escolhem antes de olhar para a solução?
+10. Quais são os seis passos para decompor um problema em funções? Em qual dos seis passos se escolhem os testes, e porque é que se escolhem antes de olhar para a solução?
 11. Com 8 notas no array, quantas voltas faz a solução com a média dentro do ciclo? E a solução com a média calculada antes?
 12. Na função `existe` errada, da secção "Erros frequentes", que chamada mostra o erro? Com `existe([8, 3], 8)`, a versão errada dá a resposta certa? Porquê?
 13. Quais são as cinco partes de um dossiê algorítmico? Em que passo do exemplo guiado está cada uma?
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md). Tem sete exercícios, do mais simples ao mais completo. O último é o dossiê de um problema pequeno, que junta toda a algoritmia. Os testes desse dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo. Este tema não tem laboratório.
+Para praticar este tema, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md). Tem sete exercícios, do mais simples ao mais completo. O último é o começo do dossiê de um problema pequeno, que junta toda a algoritmia: a análise, a decomposição e os contratos. O algoritmo e os testes desse dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo. Este tema não tem laboratório.
 
 A algoritmia fecha com três projetos, todos jogos, cada um um pouco mais difícil do que o anterior. Num projeto juntas tudo o que aprendeste num problema só. Leva-lo do enunciado até um algoritmo testado. Pelo caminho fazes o contrato, a tabela de casos escrita antes do algoritmo, o algoritmo, os testes e a correção do que falhar.
 

@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Funções e modelo integrado
 
-Ficha do tema Funções e modelo integrado, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Lês e chamas funções, distingues parâmetros de argumentos e escreves funções com `Função` e `devolver`. Usas funções que devolvem `true` ou `false`, passas um valor que muda o que uma função conta e encontras erros em funções. No fim, montas o dossiê de um problema pequeno. Cerca de 130 minutos, para fazeres sozinho: 110 na parte obrigatória e 20 no desafio opcional.
+Ficha do tema Funções e modelo integrado, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Lês e chamas funções, distingues parâmetros de argumentos e escreves funções com `Função` e `devolver`. Usas funções que devolvem `true` ou `false`, passas um valor que muda o que uma função conta e encontras erros em funções. No fim, começas o dossiê de um problema pequeno. Cerca de 132 minutos, para fazeres sozinho: 112 na parte obrigatória e 20 no desafio opcional.
 
 ## O que precisas de saber
 
@@ -24,23 +24,23 @@ Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 | --- | --- | ---: |
 | 1 | Ler uma função e escrever o seu contrato | 10 min |
 | 2 | Parâmetros e argumentos | 10 min |
-| 3 | Escrever uma função que percorre um array, com o trace da chamada | 15 min |
-| 4 | Uma função que devolve `true` ou `false`, usada num `Se` | 10 min |
+| 3 | Escrever uma função que percorre um array, com o trace da chamada | 20 min |
+| 4 | Uma função que devolve `true` ou `false`, e as horas que a testam | 12 min |
 | 5 | Uma função que recebe o limiar | 15 min |
 | 6 | Encontrar o erro numa função, com o registo de depuração | 20 min |
-| 7 | O dossiê de um problema, com três funções | 30 min |
-| Total da parte obrigatória | Exercícios 1 a 7 | 110 min |
+| 7 | O começo do dossiê de um problema: a análise, a decomposição e os contratos | 25 min |
+| Total da parte obrigatória | Exercícios 1 a 7 | 112 min |
 | Desafio opcional | Duas soluções certas, contadas em voltas | 20 min |
 
-Os exercícios 1 a 7 são obrigatórios e cabem nos 110 minutos. Depois do desafio, a secção "Para ires mais longe" tem os testes do dossiê do exercício 7, também opcionais. É para quem terminar e quiser mais prática, ou para estudares em casa. Nem o desafio nem essa secção contam para concluíres a ficha.
+Os exercícios 1 a 7 são obrigatórios e cabem nos 112 minutos. Depois do desafio, a secção "Para ires mais longe" tem mais quatro exercícios, também opcionais. Continuam os exercícios 4, 6 e 7, e dois deles acabam o dossiê do exercício 7. É para quem terminar e quiser mais prática, ou para estudares em casa. Nem o desafio nem essa secção contam para concluíres a ficha.
 
 Escreve as funções na forma que usamos nas aulas. O cabeçalho leva `Função`, o nome e os parâmetros entre parênteses. O corpo vai indentado, e o resultado entrega-se com `devolver`. As funções escrevem-se antes do algoritmo principal.
 
 Escreve sempre o contrato de cada função que escreveres: o que recebe, o que devolve e um ou dois exemplos. Se souberes a lógica e não te lembrares da forma, escreve frases claras. Têm de dizer o que a função recebe, o que faz e o que devolve.
 
-O exercício 5 parte do exercício 3, e o exercício 7 usa a função do exercício 5. Guarda as tuas respostas à medida que avanças.
+O exercício 5 parte do exercício 3, e o exercício 7 usa a função do exercício 5. Os Mais longe 3 e 4 continuam o exercício 7. Guarda as tuas respostas à medida que avanças.
 
-Entregas as respostas em papel ou num ficheiro de texto. O exercício 7 é o teu dossiê algorítmico.
+Entregas as respostas em papel ou num ficheiro de texto. O exercício 7 é o começo do teu dossiê algorítmico.
 
 ## Exercício 1: Ler uma função (10 minutos)
 
@@ -52,7 +52,7 @@ Função maior(a, b)
         devolver b
 ```
 
-a) O que devolve `maior(3, 8)`? E `maior(8, 3)`? E `maior(5, 5)`?
+a) O que devolve `maior(7, 12)`? E `maior(12, 7)`? E `maior(5, 5)`?
 
 b) Que valor fica em `x` depois de `int x = maior(4, 9) + maior(2, 1)`?
 
@@ -73,7 +73,7 @@ b) Calcula o que devolvem `notaFinal(15, 10)` e `notaFinal(10, 15)`.
 
 c) Um aluno teve 15 no teste e 10 no trabalho. Qual das duas chamadas da alínea b) dá a sua nota final? Explica porque é que a outra dá um valor diferente.
 
-## Exercício 3: Escrever uma função com um ciclo (15 minutos)
+## Exercício 3: Escrever uma função com um ciclo (20 minutos)
 
 Vais escrever a função `contarPares(numeros)`. Recebe um array de números inteiros e devolve quantos deles são pares. Um número é par quando o resto da divisão por 2 é 0.
 
@@ -81,7 +81,7 @@ a) Antes de escreveres a função, escreve o seu contrato. Dá exemplos para `[4
 
 b) Escreve a função.
 
-c) Faz o trace da chamada `contarPares([4, 7, 10, 3])` em tabela própria, com uma linha por volta. A tabela já tem as duas primeiras linhas. Completa as outras com a tua função. Se o teu contador tiver outro nome, usa-o na última coluna. No fim, escreve o valor que a função devolve.
+c) Faz o trace da chamada `contarPares([4, 7, 10, 3])` em tabela própria, com uma linha por volta. A tabela já tem as duas primeiras linhas. Completa as outras com a tua função. Se o teu contador ou a tua variável do ciclo tiverem outro nome, usa esse nome na coluna. No fim, escreve o valor que a função devolve.
 
 | Volta | numero | A condição do teu `Se` dá | pares no fim da volta |
 | --- | ---: | --- | ---: |
@@ -91,13 +91,13 @@ c) Faz o trace da chamada `contarPares([4, 7, 10, 3])` em tabela própria, com u
 | 3.ª | | | |
 | 4.ª | | | |
 
-## Exercício 4: Uma função que responde sim ou não (10 minutos)
+## Exercício 4: Uma função que responde sim ou não (12 minutos)
 
 a) Escreve a função `horaValida(hora, minuto)`. Devolve `true` se a hora estiver entre 0 e 23 e os minutos entre 0 e 59, incluindo os extremos. Devolve `false` em todos os outros casos.
 
-b) Escreve as linhas do algoritmo principal que leem uma hora e uns minutos. Escrevem "Hora válida" ou "Hora inválida", e usam a tua função num `Se`.
+b) Olha para estas seis horas: 23:59, 24:00, 12:60, 0:00, -1:30 e 10:-1. As duas últimas têm um número negativo, a hora -1 e os minutos -1. Antes de seguires a tua função, decide a partir do enunciado se cada uma é válida. Depois diz o que a tua função devolve para cada uma, e confirma que dá o que decidiste.
 
-c) Olha para estas quatro horas: 23:59, 24:00, 12:60 e 0:00. Antes de seguires a tua função, decide a partir do enunciado se cada uma é válida. Depois diz o que a tua função devolve para cada uma, e confirma que dá o que decidiste.
+Usar a função num `Se` do algoritmo principal está no Mais longe 1, no fim da ficha.
 
 ## Exercício 5: Um limiar que muda (15 minutos)
 
@@ -115,16 +115,16 @@ c) Explica, numa ou duas frases, o que mudou entre as duas chamadas. Porque é q
 
 ## Exercício 6: Encontrar o erro (20 minutos)
 
-Cada uma destas funções tem um erro. Procura-o pela ordem que o guia dá no início de "Erros frequentes". Escreve o que encontrares num registo de depuração, com quatro partes:
+Esta função tem um erro. Procura-o pela ordem que o guia dá no início de "Erros frequentes". Escreve o que encontrares num registo de depuração, com quatro partes:
 
 - o que observaste: a chamada que mostra o erro e o que a função devolve com ela;
 - o que era esperado: o que a função devia devolver nessa chamada, tirado do enunciado;
-- a causa: a linha que produz o erro, confirmada com o trace da chamada;
+- a causa: primeiro, numa frase, o que achas que causa o erro; depois, a linha do trace da chamada que o confirma;
 - a correção: a função corrigida, mudando o mínimo possível.
 
-Depois volta a fazer as duas chamadas de cada alínea com a função corrigida, e confirma que as duas dão o esperado.
+Depois volta a fazer as duas chamadas com a função corrigida, e confirma que as duas dão o esperado.
 
-a) Esta função devia devolver o preço, em euros, de um bilhete de cinema. Custa 3 euros para quem tem menos de 12 anos e 4 euros para quem tem 65 anos ou mais. Para as outras idades custa 6 euros.
+A função devia devolver o preço, em euros, de um bilhete de cinema. Custa 3 euros para quem tem menos de 12 anos e 4 euros para quem tem 65 anos ou mais. Para as outras idades custa 6 euros.
 
 ```text
 Função precoBilhete(idade)
@@ -138,37 +138,27 @@ Função precoBilhete(idade)
 
 Usa as chamadas `precoBilhete(40)` e `precoBilhete(12)` como exemplos.
 
-b) Esta função devia devolver o total de golos marcados por uma equipa num torneio, com os golos de cada jogo guardados num array:
+O Mais longe 2, no fim da ficha, tem outra função com um erro, para treinares outra vez o registo.
 
-```text
-Função totalGolos(golosPorJogo)
-    int total = 0
-    Para cada golos em golosPorJogo
-        total = total + golos
-        devolver total
-```
+## Exercício 7: O dossiê da semana de passos (25 minutos)
 
-Usa as chamadas `totalGolos([2, 0, 3])` e `totalGolos([4])` como exemplos. Uma delas dá o resultado certo por acaso.
+Este exercício junta toda a algoritmia, e é o começo do teu dossiê. Aqui fazes as partes do dossiê que vêm antes do algoritmo: a análise, a decomposição e o contrato de cada função. As duas últimas partes, o algoritmo e os testes, são opcionais. Estão no fim da ficha, no Mais longe 3 e no Mais longe 4.
 
-## Exercício 7: O dossiê da semana de passos (30 minutos)
-
-Este exercício junta toda a algoritmia, e é o teu dossiê. Aqui fazes as partes do dossiê que vêm antes dos testes: a análise, a decomposição, o contrato de cada função e o algoritmo. Os testes, a última parte, estão no Mais longe 1, no fim da ficha, que é opcional.
-
-Vais usar três funções. A função `media` é a do guia, e a função `contarAcima` é a do exercício 5. Estas duas já estão escritas, e não precisas de as escrever outra vez. Escreve só o nome e o contrato de cada uma. A terceira é a função `existe`, na versão corrigida que a secção "Erros frequentes" do guia descreve por palavras. Como o guia não a escreve por inteiro, escreve-a tu, com o seu contrato, antes do algoritmo principal.
+Vais usar três funções. A função `media` é a do guia, e a função `contarAcima` é a do exercício 5. A terceira é a função `existe`, na versão corrigida que a secção "Erros frequentes" do guia descreve por palavras. Aqui não escreves nenhuma das três: escreves o nome, a chamada e o contrato de cada uma.
 
 > Uma aplicação de exercício guardou os passos dados em cada dia de uma semana: `passos = [8200, 0, 10300, 7500, 12000, 6000, 5000]`. O objetivo diário é passar dos 8000 passos. O algoritmo mostra a média de passos por dia e em quantos dias o objetivo foi cumprido. Se houver algum dia com 0 passos, escreve também "Houve pelo menos um dia sem passos".
 
 a) Análise. Escreve o contrato do problema, com as entradas, as saídas e as restrições. Calcula à mão o resultado esperado para a semana do enunciado.
 
-b) Decomposição. Completa a tabela das funções que vais usar, com o que cada uma recebe e o que devolve. A primeira linha já está feita. Depois escreve o contrato de cada função e a função `existe`.
+b) Decomposição. Completa a tabela das funções que vais usar, com o que cada uma recebe e o que devolve. Na última coluna, escreve a chamada que responde à pergunta do enunciado, com os argumentos. A primeira linha já está feita.
 
-| Função | Recebe | Devolve |
-| --- | --- | --- |
-| `media(valores)` | um array de números, com pelo menos um elemento | a média desses números |
-| `contarAcima(valores, limiar)` | | |
-| `existe(valores, procurado)` | | |
+| Função | Recebe | Devolve | A chamada neste problema |
+| --- | --- | --- | --- |
+| `media(valores)` | um array de números, com pelo menos um elemento | a média desses números | `media(passos)` |
+| `contarAcima(valores, limiar)` | | | |
+| `existe(valores, procurado)` | | | |
 
-c) Algoritmo principal. Escreve o algoritmo principal, que chama as três funções e mostra os resultados. Usa uma constante para o objetivo.
+c) Contratos. Escreve o contrato de cada uma das três funções, com dois exemplos cada.
 
 ## Apoio
 
@@ -179,8 +169,8 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 - Exercício 3. É um contador dentro de uma função, como `contarPositivas` no exemplo guiado do guia. Que operação do guia 02 te dá o resto de uma divisão? No fim do ciclo, devolve o contador.
 - Exercício 4. Escreve primeiro uma condição só para a hora, e outra só para os minutos. Depois pensa numa hora como 10:75, em que a hora está bem e os minutos não. A função deve devolver `true` ou `false`?
 - Exercício 5. É o contador com um `Se`, como no exercício 3. A condição compara cada valor com o parâmetro `limiar`, em vez de um número escrito.
-- Exercício 6. Em cada alínea, escreve primeiro o que a função devia devolver em cada chamada, tirado do enunciado. Depois faz o trace de cada chamada em tabela própria, linha a linha, e compara.
-- Exercício 7. Volta ao passo 8 do exemplo guiado, que mostra as cinco partes de um dossiê. As alíneas a) a c), com os contratos, são as quatro primeiras, e a quinta, os testes, é o Mais longe 1. Lê a pré-condição de `media`: o array do enunciado cumpre-a?
+- Exercício 6. Escreve primeiro o que a função devia devolver em cada chamada, tirado do enunciado. Depois faz o trace, em tabela própria, da chamada que não dá o esperado, linha a linha.
+- Exercício 7. Volta ao passo 8 do exemplo guiado, que mostra as cinco partes de um dossiê. As alíneas a) a c) são as três primeiras. Na tabela, pergunta-te que valor faz cada função responder à pergunta do enunciado. Lê a pré-condição de `media`: o array do enunciado cumpre-a?
 
 ## Desafio opcional
 
@@ -196,15 +186,41 @@ c) As duas soluções dão o mesmo resultado? Quantos dias ficaram acima da méd
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 110 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
+Esta secção é opcional e fica fora dos 112 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
 
-### Mais longe 1: Os testes do dossiê (30 minutos)
+### Mais longe 1: A hora no algoritmo principal (5 minutos)
 
-Continua o exercício 7, com o teu dossiê da semana de passos. Com estas duas alíneas, o dossiê fica com as cinco partes do passo 8 do guia.
+Continua o exercício 4. Escreve as linhas do algoritmo principal que leem uma hora e uns minutos. Escrevem "Hora válida" ou "Hora inválida", e usam a tua função `horaValida` num `Se`.
+
+### Mais longe 2: Outra função para depurar (18 minutos)
+
+Esta função devia devolver o total de golos marcados por uma equipa num torneio, com os golos de cada jogo guardados num array. Tem um erro. Escreve o registo de depuração, com as quatro partes do exercício 6. Depois volta a fazer as duas chamadas com a função corrigida.
+
+```text
+Função totalGolos(golosPorJogo)
+    int total = 0
+    Para cada golos em golosPorJogo
+        total = golos
+    devolver total
+```
+
+Usa as chamadas `totalGolos([2, 0, 3])` e `totalGolos([4])` como exemplos. Uma delas dá o resultado certo por acaso.
+
+### Mais longe 3: O algoritmo do dossiê (20 minutos)
+
+Continua o exercício 7, com o teu dossiê da semana de passos.
+
+a) Escreve a função `existe`, com o contrato que escreveste no exercício 7.
+
+b) Escreve o algoritmo principal, que chama as três funções e mostra os resultados. Usa uma constante para o objetivo. As funções `media` e `contarAcima` já estão escritas, no guia e no exercício 5, e não precisas de as copiar.
+
+### Mais longe 4: Os testes do dossiê (30 minutos)
+
+Continua o Mais longe 3. Com estas duas alíneas, o dossiê fica com as cinco partes do passo 8 do guia.
 
 a) Teste completo. Faz o teste completo, chamada a chamada, para a semana do enunciado. Confirma que dá o que previste na alínea a) do exercício 7. Escolhe tu como mostras cada chamada: em tabela própria, como no passo 7 do exemplo guiado, ou só com as voltas e o valor devolvido.
 
-b) Um segundo caso. Escolhe outra semana, com 3 dias e nenhum dia a zero. Escolhe-a de maneira a testar uma coisa que a semana do enunciado não testa. Calcula à mão o resultado esperado, e confirma que o algoritmo o dá.
+b) Um segundo caso. Escolhe outro caso, com só 3 dias e nenhum dia a zero. Escolhe-a de maneira a testar uma coisa que a semana do enunciado não testa. Calcula à mão o resultado esperado, e confirma que o algoritmo o dá.
 
 Os dois testes têm de dar o que previste.
 
@@ -213,10 +229,10 @@ Os dois testes têm de dar o que previste.
 - [ ] No exercício 1, tenho os quatro valores, e o contrato diz o que acontece quando os dois números são iguais.
 - [ ] No exercício 2, apontei os parâmetros e os argumentos. Expliquei, com as duas contas, porque é que a ordem conta.
 - [ ] No exercício 3, contei à mão os pares dos três exemplos antes de escrever a função. A função devolve esses três valores, e o trace confirma o primeiro.
-- [ ] No exercício 4, decidi a partir do enunciado, antes de seguir a função, se cada uma das quatro horas é válida. A minha função dá o que decidi nas quatro.
+- [ ] No exercício 4, decidi a partir do enunciado, antes de seguir a função, se cada uma das seis horas é válida. A minha função dá o que decidi nas seis.
 - [ ] No exercício 5, contei à mão os dias acima de cada limiar. As duas chamadas dão essas contagens, e a minha explicação fala do argumento.
-- [ ] No exercício 6, cada alínea tem as quatro partes do registo. A função corrigida dá o esperado nas duas chamadas.
-- [ ] No exercício 7, o dossiê tem a análise, com o resultado esperado calculado à mão. Tem a tabela da decomposição e o contrato de cada uma das três funções. Tem também a função `existe` escrita e o algoritmo principal a chamar as três.
+- [ ] No exercício 6, o registo tem as quatro partes, e a causa começa pela minha frase e acaba na linha do trace que a confirma. A função corrigida dá o esperado nas duas chamadas.
+- [ ] No exercício 7, o dossiê tem a análise, com o resultado esperado calculado à mão. Tem a tabela da decomposição, com a chamada de cada função, e o contrato de cada uma das três.
 - [ ] Em todas as minhas funções, todos os caminhos chegam a um `devolver`.
 - [ ] As minhas funções devolvem os resultados, e quem escreve no ecrã é o algoritmo principal.
 - [ ] As minhas funções só usam os seus parâmetros, as suas variáveis e as constantes.
