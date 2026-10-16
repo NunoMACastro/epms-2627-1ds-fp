@@ -9,12 +9,12 @@ Materiais de Fundamentos de Programação do 10.º ano do Curso Profissional de 
 Começa pelo guia [Do enunciado ao problema delimitado](01-algoritmos/01-do-enunciado-ao-problema.md), o primeiro da área de algoritmos. Cada tema tem um guia e uma ficha de exercícios, e alguns têm também um laboratório:
 
 - o guia, para ler e estudar;
-- o laboratório, quando o tema o tem, para seguir passo a passo no computador, sem precisares de abrir o guia;
+- o laboratório, quando o tema o tem, para seguir passo a passo no computador, quando o professor o indicar, sem precisares de abrir o guia;
 - a ficha de exercícios, para praticares sozinho.
 
-O índice de cada área diz que documentos tem cada tema e quais são opcionais.
+O [índice da área de algoritmos](01-algoritmos/README.md) diz que documentos tem cada tema e quais são opcionais.
 
-No fim da área de algoritmos há também dois projetos guiados, que fazes com ajuda, passo a passo.
+No fim da área de algoritmos há também dois projetos guiados, que fazes com ajuda, passo a passo, e a avaliação prática, individual.
 
 ## As áreas
 

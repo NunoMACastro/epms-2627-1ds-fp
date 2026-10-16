@@ -16,7 +16,7 @@ Lê os temas pela ordem, porque cada guia usa o que os anteriores ensinaram.
 
 Os fluxogramas são para saberes o que são e como se leem, e isso está explicado nos guias. Desenhá-los é opcional, e só o fazes quando o professor o indicar. Os laboratórios dos temas 02, 03 e 04 são essa parte opcional. Ensinam a desenhá-los no diagrams.net, uma aplicação que se usa no browser. Nenhuma ficha nem nenhum projeto pede um fluxograma desenhado. Para as fichas e os projetos bastam papel e lápis.
 
-A área fecha com três projetos, todos jogos, cada um mais difícil do que o anterior. Os dois primeiros são projetos guiados, que fazes com ajuda e que ficam no teu portefólio. O terceiro é a avaliação prática individual, com um problema novo, e o professor entrega-o no dia.
+A área fecha com três projetos, todos jogos, cada um mais difícil do que o anterior. Os dois primeiros são projetos guiados, que fazes com ajuda. Guardas os dois no teu portefólio, a pasta ou as páginas do caderno onde ficam os teus projetos. O terceiro é a avaliação prática individual, com um problema novo, e o professor entrega-o no dia.
 
 | Projeto | Tema | Como se faz |
 | --- | --- | --- |
