@@ -2,24 +2,25 @@
 
 # Algoritmos
 
-Percurso da unidade de competência UC00245, Desenvolver algoritmos. Aqui aprendes a resolver problemas antes de escrever código: perceber o que um enunciado pede, escrever a solução em pseudocódigo e em fluxograma, e verificá-la à mão com uma tabela de trace.
+Nesta área aprendes a pensar na solução de um problema antes de escrever código. Percebes o que o problema pede, escreves em pseudocódigo os passos que o resolvem e verificas à mão se esses passos funcionam. Corresponde ao módulo Desenvolver algoritmos.
 
-Lê os guias pela ordem, porque cada um usa o que o anterior ensinou. Depois de estudares um guia, pratica sem ajuda com a ficha de exercícios desse guia: a [ficha do primeiro guia](01-do-enunciado-ao-problema-exercicios.md), a [do segundo](02-estado-sequencia-representacoes-exercicios.md), a [do terceiro](03-decisoes-e-validacao-exercicios.md), a [do quarto](04-repeticao-e-arrays-exercicios.md) e a [do quinto](05-funcoes-e-modelo-integrado-exercicios.md). Do segundo ao quarto guias há também um laboratório de fluxogramas, o [do segundo](02-estado-sequencia-representacoes-laboratorio.md), o [do terceiro](03-decisoes-e-validacao-laboratorio.md) e o [do quarto](04-repeticao-e-arrays-laboratorio.md), que são opcionais e só se fazem quando o professor o indicar. A forma de escrever pseudocódigo usada nas aulas, e os símbolos do fluxograma, estão explicados no segundo guia. O que conta é a lógica: um algoritmo escrito em frases claras, sem dúvidas, também vale.
+| Tema | Guia | Laboratório | Ficha |
+| --- | --- | --- | --- |
+| 01 Do enunciado ao problema delimitado | [guia](01-do-enunciado-ao-problema.md) | não tem | [ficha](01-do-enunciado-ao-problema-exercicios.md) |
+| 02 Estado, sequência e representações | [guia](02-estado-sequencia-representacoes.md) | [laboratório](02-estado-sequencia-representacoes-laboratorio.md), opcional | [ficha](02-estado-sequencia-representacoes-exercicios.md) |
+| 03 Decisões e validação | [guia](03-decisoes-e-validacao.md) | [laboratório](03-decisoes-e-validacao-laboratorio.md), opcional | [ficha](03-decisoes-e-validacao-exercicios.md) |
+| 04 Repetição e arrays | [guia](04-repeticao-e-arrays.md) | [laboratório](04-repeticao-e-arrays-laboratorio.md), opcional | [ficha](04-repeticao-e-arrays-exercicios.md) |
+| 05 Funções e modelo integrado | [guia](05-funcoes-e-modelo-integrado.md) | não tem | [ficha](05-funcoes-e-modelo-integrado-exercicios.md) |
 
-| Guia | O que aprendes |
-| --- | --- |
-| [Do enunciado ao problema delimitado](01-do-enunciado-ao-problema.md) | O que é um algoritmo, como separar dados de contexto, como escrever o contrato de entrada e saída de um problema, e os Missionários e Canibais resolvidos passo a passo |
-| [Estado, sequência e representações](02-estado-sequencia-representacoes.md) | Variáveis, constantes, tipos, atribuição e contas; a forma de escrever pseudocódigo e os símbolos do fluxograma; a tabela de trace, com a conversão de minutos em horas e minutos |
-| [Decisões e validação](03-decisoes-e-validacao.md) | Comparações, `e`, `ou` e `não`; seleção simples, composta e encadeada; intervalos, fronteiras e validação de entradas, com a classificação de uma nota de 0 a 20 |
-| [Repetição e arrays](04-repeticao-e-arrays.md) | `Enquanto`, `Para` e `Para cada`; as três peças de um ciclo e a tabela de iterações; arrays e índices; contador, acumulador e média; sentinela, validação repetida, `Parar` e `Continuar`; uma introdução às tabelas, com a campanha de recolha de alimentos |
-| [Funções e modelo integrado](05-funcoes-e-modelo-integrado.md) | Escrever e chamar funções com `Função` e `devolver`; parâmetros, argumentos e o trace de uma chamada; contratos e pré-condições; decompor um problema em funções e montar o dossiê, com o resumo das notas de um teste |
+Lê os temas pela ordem, porque cada guia usa o que os anteriores ensinaram.
 
-A algoritmia fecha com três projetos, todos jogos, de dificuldade crescente. Os dois primeiros fazes com o professor, e ficam no teu portefólio; o terceiro é a avaliação prática individual, com um problema novo.
+Os fluxogramas são para saberes o que são e como se leem, e isso está explicado nos guias. Desenhá-los é opcional, e só o fazes quando o professor o indicar. Os laboratórios dos temas 02, 03 e 04 são essa parte opcional. Ensinam a desenhá-los no diagrams.net, uma aplicação que se usa no browser. Nenhuma ficha nem nenhum projeto pede um fluxograma desenhado. Para as fichas e os projetos bastam papel e lápis.
 
-| Projeto | Como se faz | Enunciado |
+A área fecha com três projetos, todos jogos, cada um mais difícil do que o anterior. Os dois primeiros são projetos guiados, que fazes com ajuda e que ficam no teu portefólio. O terceiro é a avaliação prática individual, com um problema novo, e o professor entrega-o no dia.
+
+| Projeto | Tema | Como se faz |
 | --- | --- | --- |
-| 1, duelo de dados | Com o professor ao quadro | [projeto 1](05-projeto-1-duelo-de-dados.md) |
-| 2, adivinha o número | Em pares, com o professor a confirmar cada passo | [projeto 2](05-projeto-2-adivinha-o-numero.md) |
-| 3, avaliação prática | Individual | entregue pelo professor no dia |
+| [Projeto 1: Duelo de dados](05-projeto-1-duelo-de-dados.md) | 05 Funções e modelo integrado | Com o professor ao quadro |
+| [Projeto 2: Adivinha o número](05-projeto-2-adivinha-o-numero.md) | 05 Funções e modelo integrado | Em pares, com o professor a confirmar cada passo |
 
 ![Rodapé](../imagens/rodape.png)

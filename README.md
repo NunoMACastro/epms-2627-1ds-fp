@@ -1,51 +1,31 @@
 ![Cabeçalho](imagens/cabecalho.png)
 
-# Fundamentos de Programação, 10.º ano de Desenvolvimento de Software
+# Fundamentos de Programação · 10.º DS
 
-Materiais da disciplina, publicados quando ficam prontos. Podes ler à frente do
-que já foi dado nas aulas.
+Materiais de Fundamentos de Programação do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Cada material é publicado quando fica pronto, e podes lê-lo antes de ser dado na aula.
 
-## Como está organizado
+## Por onde começar
 
-Há uma pasta por percurso, numerada pela ordem em que é lecionado, e dentro dela
-um ficheiro por aula. O nome do ficheiro começa pelo número da aula dentro do
-percurso e continua com o assunto, para que se perceba pelo nome o que lá está.
+Começa pelo guia [Do enunciado ao problema delimitado](01-algoritmos/01-do-enunciado-ao-problema.md), o primeiro da área de algoritmos. Cada tema tem um guia e uma ficha de exercícios, e alguns têm também um laboratório:
 
-```text
-01-algoritmos/     UC00245    resolver problemas antes de escrever código
-02-python/         UC00618    aplicações em Python 3
-03-c/              UC00606    programação estruturada em C
-avaliacoes/                   enunciados de avaliação, publicados na altura própria
-exemplos/                     programas completos demonstrados nas aulas
-laboratorios/                 código de partida dos laboratórios
-imagens/                      cabeçalho e rodapé dos documentos
-```
+- o guia, para ler e estudar;
+- o laboratório, quando o tema o tem, para seguir passo a passo no computador, sem precisares de abrir o guia;
+- a ficha de exercícios, para praticares sozinho.
 
-Por exemplo, a sexta aula de C tem o ficheiro
-`03-c/06-arrays-e-percursos-seguros.md`. Ao lado dele, quando houver ficha,
-aparece `03-c/06-arrays-e-percursos-seguros-exercicios.md`. Os nomes dizem o que
-cada ficheiro é:
+O índice de cada área diz que documentos tem cada tema e quais são opcionais.
 
-| Sufixo do nome | O que é |
+No fim da área de algoritmos há também dois projetos guiados, que fazes com ajuda, passo a passo.
+
+## As áreas
+
+| Área | Módulo |
 | --- | --- |
-| sem sufixo | Os apontamentos da aula, para ler e consultar |
-| `-laboratorio` | Os passos a seguir no computador, com a ferramenta aberta ao lado |
-| `-exercicios` | A ficha de exercícios dessa aula |
+| [Algoritmos](01-algoritmos/README.md) | Desenvolver algoritmos |
 
-O código completo demonstrado na aula fica em `exemplos/`, organizado pelo mesmo
-percurso, porque o mesmo exemplo serve muitas vezes mais do que uma aula. O
-código incompleto que recebes para trabalhar num laboratório fica em
-`laboratorios/`.
+## Como estudar
 
-As resoluções não estão neste repositório. São trabalhadas na aula.
+Lê o guia antes de fazeres os exercícios: primeiro a explicação, depois o exemplo guiado. Antes de seguires um algoritmo, tenta prever o resultado. É aí que percebes se a ideia ficou entendida. As resoluções dos exercícios não estão aqui, porque se trabalham na aula.
 
-## Estado atual
-
-Já estão publicados, em `01-algoritmos/`, os cinco guias de algoritmos, cada um
-com a sua ficha de exercícios, e os laboratórios de fluxogramas do segundo, do
-terceiro e do quarto guias. O ficheiro
-[01-algoritmos/README.md](01-algoritmos/README.md) diz o que cada guia ensina e
-por que ordem se leem. As outras pastas aparecem à medida que cada aula
-é dada, pela ordem acima.
+Podes ler tudo aqui no GitHub, sem instalar nada. Se encontrares um erro num material, avisa o professor.
 
 ![Rodapé](imagens/rodape.png)
