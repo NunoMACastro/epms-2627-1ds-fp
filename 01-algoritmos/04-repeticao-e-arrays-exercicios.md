@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Repetição e arrays
 
-Ficha do tema Repetição e arrays, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Contas as voltas de um ciclo e usas os índices de um array. Contas e somas ao percorrer um array, e calculas uma média sem dividir por zero. Lês também valores até uma sentinela, procuras um valor com `Parar` e encontras o erro de um ciclo. Cerca de 148 minutos, para fazeres sozinho: 128 na parte obrigatória e 20 no desafio opcional.
+Ficha do tema Repetição e arrays, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Contas as voltas de um ciclo e usas os índices de um array. Contas e somas ao percorrer um array, e calculas uma média sem dividir por zero. Lês também valores até uma sentinela, procuras um valor com `Parar` e encontras o erro de um ciclo. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -21,19 +21,18 @@ O [laboratório](04-repeticao-e-arrays-laboratorio.md) deste tema é de fluxogra
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Contar as voltas de um ciclo, com a tabela de iterações | 12 min |
-| 2 | Usar os índices de um array | 10 min |
-| 3 | Contar os valores de um array que cumprem uma regra | 21 min |
-| 4 | Contar e somar no mesmo ciclo, e calcular uma média sem dividir por zero | 22 min |
-| 5 | Ler valores até uma sentinela | 20 min |
-| 6 | Procurar um valor num array, com `Parar` e uma bandeira | 26 min |
-| 7 | Encontrar e corrigir o erro de um ciclo | 17 min |
-| Total da parte obrigatória | Exercícios 1 a 7 | 128 min |
-| Desafio opcional | Percorrer uma tabela com dois `Para` | 20 min |
+| Exercício | O que treina |
+| --- | --- |
+| 1 | Contar as voltas de um ciclo, com a tabela de iterações |
+| 2 | Usar os índices de um array |
+| 3 | Contar os valores de um array que cumprem uma regra |
+| 4 | Contar e somar no mesmo ciclo, e calcular uma média sem dividir por zero |
+| 5 | Ler valores até uma sentinela |
+| 6 | Procurar um valor num array, com `Parar` e uma bandeira |
+| 7 | Encontrar e corrigir o erro de um ciclo |
+| Desafio opcional | Percorrer uma tabela com dois `Para` |
 
-Os exercícios 1 a 7 são obrigatórios e cabem nos 128 minutos. Depois do desafio, a secção "Para ires mais longe" tem mais um exercício de encontrar o erro, também opcional. O desafio e essa secção são para quem terminar e quiser mais prática, ou para estudares em casa, e não contam para concluíres a ficha.
+Os exercícios 1 a 7 são obrigatórios. Depois do desafio, a secção "Para ires mais longe" tem mais um exercício de encontrar o erro, também opcional. O desafio e essa secção são para quem terminar e quiser mais prática, ou para estudares em casa, e não contam para concluíres a ficha.
 
 Escreve os algoritmos na forma que usamos nas aulas, com a indentação a mostrar o que está dentro de cada ciclo. Um array escreve-se como uma lista de Python, sem tipo à frente. Se souberes a lógica e não te lembrares da forma, escreve frases claras, que também valem. Têm de dizer o que se repete, até quando, e o que muda de uma volta para a seguinte.
 
@@ -41,7 +40,7 @@ Nas tabelas de iterações, segue as regras do guia. Faz uma linha por cada test
 
 Precisas de papel, de preferência quadriculado, e de lápis. Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de iterações.
 
-## Exercício 1: Quantas voltas? (12 minutos)
+## Exercício 1: Quantas voltas?
 
 Para cada ciclo, diz quantas voltas dá, o que aparece no ecrã e com que valor da variável é feito o último teste.
 
@@ -76,7 +75,7 @@ Para i = 0, i < 3, i++
     Escreve: i
 ```
 
-## Exercício 2: Os índices de um array (10 minutos)
+## Exercício 2: Os índices de um array
 
 Os minutos de atraso do autocarro da escola em cinco dias ficaram guardados neste array:
 
@@ -94,7 +93,7 @@ d) O que acontece com `Escreve: atrasos[5]`?
 
 e) Em que dia é que o autocarro não teve atraso, contando o primeiro dia como dia 1? E qual é o índice desse elemento no array?
 
-## Exercício 3: Contar num intervalo (21 minutos)
+## Exercício 3: Contar num intervalo
 
 As alturas, em centímetros, dos jogadores de uma equipa de voleibol estão neste array:
 
@@ -111,7 +110,7 @@ b) Diz quando é que o teu ciclo termina, e porquê.
 
 c) Sem mudar o algoritmo, diz o que ele mostra se o array for `[]` e se for `[170]`.
 
-## Exercício 4: A média de estudo (22 minutos)
+## Exercício 4: A média de estudo
 
 Uma aluna registou num array os minutos que estudou em cada dia da semana. Nos dias em que não estudou, registou 0:
 
@@ -123,7 +122,7 @@ a) Escreve um algoritmo que mostre o total de minutos da semana e a média dos d
 
 b) O mesmo algoritmo tem de funcionar se a aluna não tiver estudado em nenhum dia, como em `[0, 0, 0, 0, 0]`. Tem de funcionar também se o array estiver vazio. Em nenhum dos dois casos pode fazer uma conta impossível. O que mostra em cada um?
 
-## Exercício 5: A duração da playlist (20 minutos)
+## Exercício 5: A duração da playlist
 
 O Rui quer saber quanto dura a sua playlist. O Rui escreve a duração de cada música em segundos, uma de cada vez, e escreve 0 quando acabar. Nenhuma música dura 0 segundos.
 
@@ -133,7 +132,7 @@ b) As músicas duram 200, 185 e 240 segundos. Antes de fazeres a tabela, calcula
 
 c) O que mostra o algoritmo se o Rui escrever logo 0?
 
-## Exercício 6: Procurar um cacifo (26 minutos)
+## Exercício 6: Procurar um cacifo
 
 Os números dos cinco cacifos ocupados no corredor estão neste array:
 
@@ -145,7 +144,7 @@ a) Escreve um algoritmo que lê um número de cacifo e o procura no array. Se o 
 
 b) Antes de seguires o algoritmo, olha para o array e prevê o que deve acontecer com os cacifos 23, 18 e 40. Para cada um, prevê a posição, ou se está livre, e quantas voltas dá o ciclo. Depois segue o teu algoritmo só com o 18 e com o 40, e confirma as voltas e o que aparece no ecrã.
 
-## Exercício 7: Encontrar o erro (17 minutos)
+## Exercício 7: Encontrar o erro
 
 Este algoritmo tem um erro. Para o encontrares e corrigires, segue estes passos:
 
@@ -181,8 +180,6 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 
 ## Desafio opcional
 
-Leva cerca de 20 minutos.
-
 Os pontos de duas equipas em três jogos de um torneio estão guardados numa tabela, uma linha por equipa:
 
 ```text
@@ -197,9 +194,9 @@ c) No guia viste que um acumulador inicializado dentro do ciclo é um erro. No t
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 128 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. O tempo é indicativo.
+Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam.
 
-### Mais longe 1: A contagem que não acaba (16 minutos)
+### Mais longe 1: A contagem que não acaba
 
 Este algoritmo devia fazer a contagem decrescente de um lançamento, de 5 até 1. Logo a seguir ao 3, devia escrever "Meio caminho!", e no fim devia escrever "Partida!". Tem um erro. Segue os cinco passos do exercício 7 para o encontrar e corrigir.
 

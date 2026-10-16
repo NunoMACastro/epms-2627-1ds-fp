@@ -2,7 +2,7 @@
 
 # Do enunciado ao problema delimitado
 
-Módulo Desenvolver algoritmos. Este guia ensina-te a olhar para um enunciado e a transformá-lo num problema bem delimitado, antes de pensares em qualquer solução. Lê-se em cerca de 80 minutos, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia ensina-te a olhar para um enunciado e a transformá-lo num problema bem delimitado, antes de pensares em qualquer solução. Lê-se ao teu ritmo, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md) deste tema.
 
 Serve também para estudares com calma o jogo dos Missionários e Canibais, que se joga na primeira aula da disciplina. Não precisas de saber programar. Nada neste guia exige um computador, e a maior parte do que aqui está faz-se com papel, lápis e atenção. Neste tema, os algoritmos escrevem-se em português, em passos numerados. A notação própria para os escrever é o assunto do tema seguinte.
 

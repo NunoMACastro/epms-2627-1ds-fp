@@ -2,7 +2,7 @@
 
 # Laboratório: Estado, sequência e representações
 
-Laboratório do tema Estado, sequência e representações, do módulo Desenvolver algoritmos. Cerca de 70 minutos, e mais cerca de 25 se fizeres o primeiro desafio. Vais desenhar no diagrams.net o fluxograma do algoritmo que converte minutos em horas e minutos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](02-estado-sequencia-representacoes.md) tem a teoria completa, para quem quiser saber mais. A lista "Palavras que vais usar" é para consultar quando precisares, e não para ler de seguida antes de começar.
+Laboratório do tema Estado, sequência e representações, do módulo Desenvolver algoritmos. Vais desenhar no diagrams.net o fluxograma do algoritmo que converte minutos em horas e minutos, e guardá-lo no teu computador. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte, ou em casa se tiveres computador. Tudo o que precisas está aqui; o [guia do tema](02-estado-sequencia-representacoes.md) tem a teoria completa, para quem quiser saber mais. A lista "Palavras que vais usar" é para consultar quando precisares, e não para ler de seguida antes de começar.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar, e nenhum exercício da ficha depende dele.
 
@@ -67,7 +67,7 @@ Consulta esta lista quando um passo usar uma palavra que não conheces.
 
 ## Preparar o projeto
 
-Esta preparação leva cerca de 5 minutos. A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Abre o browser, maximiza a janela para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede à aplicação que apareça em português. Sem ela, a aplicação usa a língua do browser, que pode ser o inglês.
 
@@ -88,7 +88,7 @@ Esta preparação leva cerca de 5 minutos. A aplicação muda de aspeto de vez e
 
    A forma mais simples de seguir este laboratório é maximizar a janela. Se não puderes, usa esse botão sempre que os passos falarem da barra de menus. Nesse caso, procura "Exportar como" diretamente no menu, e não dentro de "Ficheiro".
 
-## Fase 1: o ficheiro guardado no teu computador (8 minutos)
+## Fase 1: o ficheiro guardado no teu computador
 
 Neste momento, o diagrama só existe dentro do separador do browser. Se fechares o separador, perdes tudo. É por isso que se guarda antes de desenhar. Guardar logo no início dá um nome e um sítio ao ficheiro. A partir daí, cada vez que guardares, o trabalho vai para o mesmo ficheiro.
 
@@ -116,7 +116,7 @@ O ficheiro `fluxograma-converter-minutos.drawio` está na tua pasta `algoritmos`
 
 Pensa antes de continuares: porque é que não serve guardar no "Navegador", se o ficheiro também fica guardado? A resposta: o "Navegador" guarda o ficheiro dentro do próprio browser. Basta alguém limpar os dados do browser, ou mudares de computador, para o perderes. Numa pasta tua, o ficheiro fica contigo.
 
-## Fase 2: uma figura para cada instrução (25 minutos)
+## Fase 2: uma figura para cada instrução
 
 Um fluxograma é o desenho de um algoritmo. Cada instrução do pseudocódigo passa a ser uma figura, e a forma da figura diz que tipo de instrução é. As leituras, com `ler valor`, e as saídas, com `Escreve:`, comunicam com quem usa o algoritmo, e vão em paralelogramos. As atribuições e as contas vão em retângulos. O algoritmo começa e acaba num oval, com as palavras `Início` e `Fim`. Para saber mais, lê a secção "Fluxogramas" do [guia](02-estado-sequencia-representacoes.md).
 
@@ -188,7 +188,7 @@ Tens sete figuras numa coluna, o Início, as cinco instruções e o Fim, cada um
 
 Pensa antes de continuares: a linha `int totalMinutos = ler valor` tem um `=`, como as atribuições. Porque é que vai num paralelogramo, e não num retângulo? A resposta: o que decide a figura é o que a linha faz. Esta linha recebe um valor de fora, escrito pela pessoa, e por isso é uma entrada. As entradas desenham-se no paralelogramo.
 
-## Fase 3: as setas dão a ordem (10 minutos)
+## Fase 3: as setas dão a ordem
 
 As figuras sozinhas não dizem por que ordem se executam. É a seta que diz para onde se vai a seguir, de uma figura para a próxima. Este algoritmo é uma sequência: as instruções executam-se uma depois da outra, de cima para baixo, cada uma uma vez. Por isso, o percurso é uma linha reta, e sete figuras em coluna precisam de seis setas, uma entre cada par de figuras seguidas. Para saber mais, lê a secção "Fluxogramas" do [guia](02-estado-sequencia-representacoes.md).
 
@@ -234,7 +234,7 @@ O fluxograma está completo, e tem de ficar assim, com o mesmo texto em cada fig
 
 Pensa antes de continuares: quantas setas teria o fluxograma de um algoritmo sequencial com 10 figuras, contando o início e o fim? A resposta: 9. Num algoritmo sequencial, as figuras estão numa linha só, e há uma seta entre cada par de figuras seguidas. Do Fim não sai nenhuma seta, porque é onde o percurso acaba.
 
-## Fase 4: o fluxograma diz o mesmo que o pseudocódigo (8 minutos)
+## Fase 4: o fluxograma diz o mesmo que o pseudocódigo
 
 O fluxograma e o pseudocódigo do mesmo algoritmo têm de dizer exatamente a mesma coisa. Se não disserem, um dos dois está errado. Antes de dares o desenho por acabado, compara-o com o pseudocódigo da fase 2, instrução a instrução. Depois segue-o com o dedo, com um número de minutos concreto, e anota o que aparece no ecrã. Seguir um algoritmo assim, à mão, chama-se fazer o trace. Para saber mais, lê a secção "Tabela de trace" do [guia](02-estado-sequencia-representacoes.md).
 
@@ -260,7 +260,7 @@ O fluxograma passou as verificações. Seguido com o dedo para 60 minutos, dá o
 
 Pensa antes de continuares: seguido com o dedo para 59 minutos, o que aparece no fim do ecrã? A resposta: "0 h e 59 min". O 60 não cabe nenhuma vez em 59, e por isso `59 div 60` dá 0. Como não se tirou nenhuma hora, sobram os 59 minutos inteiros, e `59 resto 60` dá 59. O percurso é o mesmo que com 60, porque num algoritmo sequencial todas as figuras se percorrem sempre. Só mudam os valores.
 
-## Fase 5: a imagem para mostrar, o ficheiro para editar (7 minutos)
+## Fase 5: a imagem para mostrar, o ficheiro para editar
 
 O ficheiro `.drawio` é o teu fluxograma editável, o que abres para continuar a trabalhar ou para corrigir. Para mostrar o fluxograma a alguém, ou para o entregar, exporta-se uma imagem. Qualquer computador ou telemóvel a abre, sem precisar da aplicação. Uma imagem não se edita. Se precisares de mudar alguma coisa, mudas o `.drawio` e exportas a imagem outra vez. Por isso guardas sempre os dois ficheiros.
 

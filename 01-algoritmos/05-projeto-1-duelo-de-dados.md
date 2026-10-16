@@ -2,17 +2,17 @@
 
 # Projeto 1: Duelo de dados
 
-Dois jogadores lançam dados durante cinco rondas, e o algoritmo diz quem ganhou cada ronda e quem ganhou o duelo. O projeto faz-se numa aula de cerca de 60 minutos, com o professor ao quadro.
+Dois jogadores lançam dados durante cinco rondas, e o algoritmo diz quem ganhou cada ronda e quem ganhou o duelo. O projeto faz-se numa aula, com o professor ao quadro. Acompanhas ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## Para que servem os três projetos
 
 Até aqui, cada exercício treinou uma coisa de cada vez: um ciclo, uma cadeia de decisões, um contador, uma tabela de casos, uma função. Um projeto junta tudo isso num problema só e leva-o do enunciado até um algoritmo testado. É um salto grande. Por isso, a algoritmia acaba com três projetos, em vez de um só, e cada um é um pouco mais difícil do que o anterior.
 
-| Projeto | Como se faz | Tempo |
-| --- | --- | --- |
-| 1, duelo de dados | O professor resolve-o ao quadro, a pensar em voz alta; tu acompanhas, respondes e escreves no caderno | Cerca de 60 minutos |
-| 2, adivinha o número | Em pares, um passo de cada vez, com o professor a confirmar cada passo antes do seguinte | Cerca de 130 minutos |
-| 3, avaliação prática | Individual, com um problema novo | 120 minutos |
+| Projeto | Como se faz |
+| --- | --- |
+| 1, duelo de dados | O professor resolve-o ao quadro, a pensar em voz alta; tu acompanhas, respondes e escreves no caderno |
+| 2, adivinha o número | Em pares, um passo de cada vez, com o professor a confirmar cada passo antes do seguinte |
+| 3, avaliação prática | Individual, com um problema novo |
 
 Os três seguem o mesmo processo, sempre pela mesma ordem:
 
@@ -86,7 +86,7 @@ Lê o enunciado duas vezes, como no passo 1 do exemplo guiado do guia 01. Na pri
 
 Antes do passo 1, inventa um duelo com o colega do lado. São cinco rondas, com valores à vossa escolha, escritos em duas colunas, uma por jogador. Decidam, só com o enunciado, o que o algoritmo devia escrever em cada ronda e no fim. Guardem esse duelo. Pode vir a ser um dos vossos casos de teste, e pode também levar-vos à pergunta que o passo 1 vai fazer.
 
-## Passo 1: o contrato (7 min)
+## Passo 1: o contrato
 
 O contrato vem primeiro porque diz exatamente o que o algoritmo tem de fazer, antes de se pensar em como o vai fazer. O enunciado está escrito para pessoas, e as pessoas preenchem as falhas sem dar por isso. O contrato transforma-o em respostas precisas, e é dele que vão sair os resultados esperados do passo 2. O enunciado e o contrato são a única autoridade sobre o que o algoritmo deve fazer. Sem contrato, os resultados esperados seriam palpites, e um teste que compara o obtido com um palpite não prova nada.
 
@@ -135,7 +135,7 @@ Já viste coisas da mesma família nos guias. O guia 03, na secção da validaç
 
 Repara que a suposição e a decisão são coisas diferentes. A decisão escolhe o que o algoritmo faz numa situação que pode mesmo acontecer. A suposição diz que uma situação não vai acontecer, e porquê.
 
-## Passo 2: a tabela de casos esperados, antes do algoritmo (10 min)
+## Passo 2: a tabela de casos esperados, antes do algoritmo
 
 Este passo faz-se sem algoritmo nenhum, e é de propósito. Já o fizeste nos guias, talvez sem dar por isso. Por exemplo, no guia 01, os exemplos concretos do contrato dos livros calculam-se à mão, sem algoritmo nenhum. No guia 03, no passo 4 do exemplo guiado, os resultados esperados das notas escrevem-se antes de haver algoritmo, a partir do enunciado. Num projeto, esta ordem passa a ser uma regra, e vale a pena perceberes porquê.
 
@@ -194,7 +194,7 @@ Antes de o professor avançar, pensa nestas perguntas:
 6. Para ganhar o duelo, um jogador precisa de ganhar três rondas? Pode alguém ganhar com menos?
 7. Olha para a tua tabela. Cada mensagem do enunciado aparece no resultado esperado de pelo menos um caso? E a mensagem que a decisão do passo 1 vier a criar?
 
-## Passo 3: o algoritmo (14 min)
+## Passo 3: o algoritmo
 
 Agora, e só agora, escreve-se o algoritmo. A tabela de casos do passo 2 é o alvo. O algoritmo tem de escrever, para cada caso, exatamente o resultado esperado que lá está.
 
@@ -229,7 +229,7 @@ Pensa nestas perguntas antes de o professor avançar:
 
 Com o algoritmo escrito, faz uma pergunta que só agora se pode fazer, porque precisa do algoritmo à frente. Há algum ramo de um `Se` por onde nenhum caso da tabela passa? Um ramo, como viste no guia 03, é cada um dos caminhos de uma decisão. Um ramo por onde nenhum caso passa nunca foi experimentado, e um erro escondido lá dentro passava em todos os testes. Se houver um, acrescenta um caso que passe por ele. O resultado esperado desse caso calcula-se pelo enunciado, como os outros, e não pelo algoritmo.
 
-## Passo 4: a tabela de iterações (7 min)
+## Passo 4: a tabela de iterações
 
 Um pseudocódigo não corre num computador. Executá-lo é fazer o trace à mão, como no guia 02. Para um ciclo, a forma mais curta é a tabela de iterações do guia 04. Tem uma linha por cada teste da condição do ciclo. Cada linha mostra a fotografia do estado nesse momento, a condição com os valores substituídos e o que acontece durante a volta seguinte.
 
@@ -256,7 +256,7 @@ Pensa nestas perguntas antes de o professor avançar:
 
 Quando a tabela estiver feita, confere-a com a regra do guia 02. Uma variável fica "sem valor" até à linha onde nasce, e as constantes não têm coluna.
 
-## Passo 5: executar os outros casos e comparar o obtido com o esperado (6 min)
+## Passo 5: executar os outros casos e comparar o obtido com o esperado
 
 A tabela de iterações prova que o algoritmo funciona para um caso, e não diz nada sobre os outros. Por isso, executam-se todos os casos da tabela do passo 2, e não só aquele de que se fez a tabela de iterações.
 
@@ -276,7 +276,7 @@ Pensa nestas perguntas antes de o professor avançar:
 2. Depois de executares todos os casos, todos os ramos do algoritmo foram percorridos por pelo menos um deles?
 3. Todos os casos passarem prova que o algoritmo está certo? Qual dos teus casos te dá mais confiança, isto é, qual apanharia mais erros se o algoritmo os tivesse? Responde em voz alta, com o número do caso e a razão.
 
-## Passo 6: depurar com a rotina da depuração (20 min)
+## Passo 6: depurar com a rotina da depuração
 
 Um teste que falha é útil: o erro apareceu no caderno, e não no meio de um jogo a sério. Agora é preciso encontrar a causa e corrigi-la. A isto chama-se **depurar**.
 
@@ -354,7 +354,7 @@ Antes de fechares o caderno, confirma:
 
 ## O que vem a seguir
 
-O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um número. Faz-se em pares, um passo de cada vez, com o professor a confirmar cada passo antes de passares ao seguinte. Leva cerca de 130 minutos. Vem depois da aula da validação de dados e da validação repetida, dos guias 03 e 04, porque vai precisar das duas. Segue o mesmo processo deste projeto, com a mesma rotina da depuração, o registo nas mesmas quatro partes e o teste de regressão. Junta-lhe o passo que aqui ficou de fora: melhorar o algoritmo e mostrar que a versão melhorada faz menos trabalho. Mede-se contando perguntas num exemplo pequeno, como o guia 05 conta voltas na secção "Duas soluções certas, uma mais eficiente".
+O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um número. Faz-se em pares, um passo de cada vez, com o professor a confirmar cada passo antes de passares ao seguinte. Vem depois da aula da validação de dados e da validação repetida, dos guias 03 e 04, porque vai precisar das duas. Segue o mesmo processo deste projeto, com a mesma rotina da depuração, o registo nas mesmas quatro partes e o teste de regressão. Junta-lhe o passo que aqui ficou de fora: melhorar o algoritmo e mostrar que a versão melhorada faz menos trabalho. Mede-se contando perguntas num exemplo pequeno, como o guia 05 conta voltas na secção "Duas soluções certas, uma mais eficiente".
 
 Depois vem a avaliação prática: individual, com 120 minutos e um problema novo, que o professor entrega no dia. O processo é o mesmo dos dois projetos, e podes consultar os dois no teu portefólio. Antes da avaliação, o professor mostra-te a grelha com os critérios.
 

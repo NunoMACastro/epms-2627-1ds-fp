@@ -2,7 +2,7 @@
 
 # Laboratório: Decisões e validação
 
-Laboratório do tema Decisões e validação, do módulo Desenvolver algoritmos. Cerca de 65 minutos, e mais cerca de 25 se fizeres o desafio. Vais desenhar no diagrams.net o fluxograma de um algoritmo que decide, o que valida e classifica a nota de um teste. Depois segues nele, com o dedo, o caminho de cada caso. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](03-decisoes-e-validacao.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Decisões e validação, do módulo Desenvolver algoritmos. Vais desenhar no diagrams.net o fluxograma de um algoritmo que decide, o que valida e classifica a nota de um teste. Depois segues nele, com o dedo, o caminho de cada caso. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte, ou em casa se tiveres computador. Tudo o que precisas está aqui; o [guia do tema](03-decisoes-e-validacao.md) tem a teoria completa, para quem quiser saber mais.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar, e nenhum exercício da ficha depende dele.
 
@@ -63,7 +63,7 @@ Se fizeste o [laboratório do tema 02](02-estado-sequencia-representacoes-labora
 
 ## Preparar o projeto
 
-Esta preparação leva cerca de 8 minutos. A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Abre o browser, maximiza a janela para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede à aplicação que apareça em português.
 
@@ -93,7 +93,7 @@ Esta preparação leva cerca de 8 minutos. A aplicação muda de aspeto de vez e
 
    A figura nova é a Decision, o losango. O grupo tem também o retângulo, chamado Process, que quer dizer "processamento". Serve para as contas e para as instruções que dão um valor a uma variável. Aqui não o usas, porque os algoritmos deste laboratório não fazem contas. Usa sempre as figuras do grupo "Fluxograma", mesmo que encontres outras parecidas noutros grupos.
 
-## Fase 1: o losango e as saídas Sim e Não (12 minutos)
+## Fase 1: o losango e as saídas Sim e Não
 
 Os algoritmos que fazem sempre as mesmas instruções, pela mesma ordem, desenham-se numa linha reta. Um algoritmo que decide faz uma pergunta e escolhe o caminho conforme a resposta. Vê este, de uma aplicação de meteorologia que te avisa quando está frio. A temperatura já está guardada na variável `temperatura`, porque foi lida mais acima:
 
@@ -137,7 +137,7 @@ Confirma três coisas antes de avançares. Do losango saem exatamente duas setas
 
 Pensa antes de continuares: no pseudocódigo, que linha corresponde à figura onde os dois ramos se juntam? A resposta: a linha `Escreve: "Bom dia."`, a primeira que volta a estar alinhada com o `Se`. Por isso já está fora da decisão, e executa-se seja qual for a resposta ao losango. É isto que quer dizer "os ramos voltam a juntar-se": o algoritmo acaba por passar pela mesma figura e continua a partir daí.
 
-## Fase 2: uma cadeia de decisões, o fluxograma da nota (25 minutos)
+## Fase 2: uma cadeia de decisões, o fluxograma da nota
 
 Às vezes há mais do que dois caminhos. Vê este problema:
 
@@ -247,7 +247,7 @@ Se o teu desenho tiver uma figura a mais ou a menos, compara-o figura a figura c
 
 Pensa antes de continuares: porque é que o segundo losango está ligado à saída `Não` do primeiro, e não à saída `Sim`? A resposta: o segundo losango é o `Senão se`, que só se pergunta quando a validação dá não, isto é, quando a nota é válida. Se estivesse ligado ao `Sim`, as notas fora da escala chegavam à pergunta da positiva e eram classificadas, que é o que o enunciado proíbe.
 
-## Fase 3: seguir cada caminho com o dedo (20 minutos)
+## Fase 3: seguir cada caminho com o dedo
 
 Um fluxograma de decisões está certo quando cada caso de teste tem um caminho, e um só, do Início até ao Fim. Esse caminho tem de acabar na mensagem que o enunciado pede. É isso que vais confirmar agora. Para saber mais, lê a secção "Fronteiras e casos de teste" do [guia](03-decisoes-e-validacao.md).
 

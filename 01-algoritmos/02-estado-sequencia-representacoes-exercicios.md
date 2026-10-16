@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Estado, sequência e representações
 
-Ficha do tema Estado, sequência e representações, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Cerca de 129 minutos, para fazeres sozinho: 109 na parte obrigatória e 20 no desafio opcional.
+Ficha do tema Estado, sequência e representações, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -20,16 +20,17 @@ O [laboratório](02-estado-sequencia-representacoes-laboratorio.md) deste tema �
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Escolher o tipo de cada valor | 12 min |
-| 2 | Seguir o estado de um algoritmo numa tabela de trace | 12 min |
-| 3 | Fazer contas com `div` e `resto` | 10 min |
-| 4 | Escrever um algoritmo sequencial completo, com o contrato e o trace | 35 min |
-| 5 | Encontrar um erro com o trace | 20 min |
-| 6 | Calcular a distância entre dois andares | 20 min |
-| Total da parte obrigatória | Exercícios 1 a 6 | 109 min |
-| Desafio opcional | Trocar os valores de duas variáveis | 20 min |
+| Exercício | O que treina |
+| --- | --- |
+| 1 | Escolher o tipo de cada valor |
+| 2 | Seguir o estado de um algoritmo numa tabela de trace |
+| 3 | Fazer contas com `div` e `resto` |
+| 4 | Escrever um algoritmo sequencial completo, com o contrato e o trace |
+| 5 | Encontrar um erro com o trace |
+| 6 | Calcular a distância entre dois andares |
+| Desafio opcional | Trocar os valores de duas variáveis |
+
+Os exercícios 1 a 6 são obrigatórios. O desafio é opcional e não conta para concluíres a ficha. É para quem terminar e quiser mais prática, ou para estudares em casa.
 
 Escreve os algoritmos na forma que usamos nas aulas, como no exemplo guiado do guia. Se souberes a lógica e não te lembrares da forma, escreve frases claras, que também valem. Nesta fase, o que conta é a lógica.
 
@@ -37,7 +38,7 @@ Nas tabelas de trace, segue as regras do guia. Faz uma coluna por variável e um
 
 Precisas de papel, de preferência quadriculado, e de lápis. Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de trace preenchidas.
 
-## Exercício 1: Escolher o tipo (12 minutos)
+## Exercício 1: Escolher o tipo
 
 Para cada valor, escolhe o tipo, `int`, `float`, `string` ou `bool`, e justifica numa frase pelo que o valor representa:
 
@@ -53,7 +54,7 @@ e) o preço de um gelado, em euros;
 
 f) o código postal de uma morada, como 4000-123.
 
-## Exercício 2: Prever o estado (12 minutos)
+## Exercício 2: Prever o estado
 
 Lê este algoritmo:
 
@@ -76,7 +77,7 @@ a) Copia esta tabela de trace e completa as colunas `x` e `y` nos passos 2 a 4. 
 
 b) Agora imagina que a segunda e a terceira linhas trocam de lugar, ficando `x = x * 3` antes de `int y = x + 2`. Faz a tabela de trace, desta vez em branco, com as mesmas colunas. Quanto valem `x` e `y` no fim? Explica numa frase porque é que o resultado mudou, se as instruções são as mesmas.
 
-## Exercício 3: Contas com `div` e `resto` (10 minutos)
+## Exercício 3: Contas com `div` e `resto`
 
 Calcula à mão, e confirma cada par com a verificação do guia. O divisor vezes a divisão inteira, mais o resto, tem de dar o número de partida.
 
@@ -90,7 +91,7 @@ d) Quantas semanas completas há em 23 dias, e quantos dias sobram? Escreve as d
 
 Um destes pares costuma surpreender. Diz qual foi o que te fez parar e explica o resultado com rebuçados e amigos, como no guia.
 
-## Exercício 4: A placa de madeira (35 minutos)
+## Exercício 4: A placa de madeira
 
 Lê o enunciado:
 
@@ -102,7 +103,7 @@ b) Escreve o algoritmo em pseudocódigo, ou em frases claras. O resultado tem de
 
 c) Faz o trace do teu algoritmo para um dos teus exemplos e confirma que dá o que o contrato previu.
 
-## Exercício 5: Encontrar o erro (20 minutos)
+## Exercício 5: Encontrar o erro
 
 Esta semana, a papelaria faz um desconto de 0,50 euros em cada caderno. Este algoritmo devia calcular quanto se paga por uma compra de cadernos, já com o desconto:
 
@@ -121,7 +122,7 @@ a) Calcula à mão quanto devia pagar quem compra 4 cadernos de 2 euros, já com
 
 b) Corrige o algoritmo, mudando o menor número de linhas possível. Faz outra vez o trace com os mesmos valores e confirma que dá o que calculaste.
 
-## Exercício 6: Andares do elevador (20 minutos)
+## Exercício 6: Andares do elevador
 
 Num prédio, o rés-do-chão é o andar 0 e a garagem é o andar -1. Os andares de cima são 1, 2, 3 e assim por diante. O elevador está num andar, e alguém o chama de outro.
 
@@ -141,8 +142,6 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 - Exercício 6. Faz a conta do andar de destino menos o andar de partida para as duas primeiras chamadas, e compara os dois resultados. Pode um elevador percorrer um número negativo de andares?
 
 ## Desafio opcional
-
-Leva cerca de 20 minutos.
 
 No guia viste que as duas linhas `a = b` e `b = a` não trocam os valores de duas variáveis. No fim, as duas ficam com o mesmo valor, porque o valor antigo de `a` se perde.
 

@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Decisões e validação
 
-Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Avalias comparações, juntas condições, prevês o ramo de uma seleção e escreves intervalos. Escolhes também casos de teste nas fronteiras, validas uma entrada e encontras a entrada que mostra um erro. Cerca de 110 minutos, para fazeres sozinho: 90 na parte obrigatória e 20 no desafio opcional.
+Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Avalias comparações, juntas condições, prevês o ramo de uma seleção e escreves intervalos. Escolhes também casos de teste nas fronteiras, validas uma entrada e encontras a entrada que mostra um erro. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -20,24 +20,23 @@ O [laboratório](03-decisoes-e-validacao-laboratorio.md) deste tema é de fluxog
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Avaliar comparações, também no próprio limite | 10 min |
-| 2 | Juntar condições com `e`, `ou` e `não` | 10 min |
-| 3 | Prever o ramo de uma seleção encadeada | 10 min |
-| 4 | Escrever um intervalo e o seu contrário | 15 min |
-| 5 | Validar uma entrada e aplicar uma tabela de preços, da reta ao algoritmo | 25 min |
-| 6 | Encontrar a entrada que mostra um erro | 20 min |
-| Total da parte obrigatória | Exercícios 1 a 6 | 90 min |
-| Desafio opcional | Uma condição que mistura `e` e `ou` | 20 min |
+| Exercício | O que treina |
+| --- | --- |
+| 1 | Avaliar comparações, também no próprio limite |
+| 2 | Juntar condições com `e`, `ou` e `não` |
+| 3 | Prever o ramo de uma seleção encadeada |
+| 4 | Escrever um intervalo e o seu contrário |
+| 5 | Validar uma entrada e aplicar uma tabela de preços, da reta ao algoritmo |
+| 6 | Encontrar a entrada que mostra um erro |
+| Desafio opcional | Uma condição que mistura `e` e `ou` |
 
-Os exercícios 1 a 6 são obrigatórios e cabem nos 90 minutos. Depois do desafio, a secção "Para ires mais longe" tem mais um exercício, também opcional. É para quem terminar e quiser mais prática, ou para estudares em casa. Nem o desafio nem essa secção contam para concluíres a ficha.
+Os exercícios 1 a 6 são obrigatórios. Depois do desafio, a secção "Para ires mais longe" tem mais um exercício, também opcional. É para quem terminar e quiser mais prática, ou para estudares em casa. Nem o desafio nem essa secção contam para concluíres a ficha.
 
 Escreve os algoritmos na forma que usamos nas aulas, com a indentação a mostrar o que está dentro de cada caso. Se souberes a lógica e não te lembrares da forma, escreve frases claras, que também valem. Têm de dizer o que acontece em cada caso, incluindo quando um valor não serve.
 
 Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de casos.
 
-## Exercício 1: Verdadeiro ou falso (10 minutos)
+## Exercício 1: Verdadeiro ou falso
 
 A variável `idade` vale 16. Para cada condição, diz se dá `true` ou `false`:
 
@@ -55,7 +54,7 @@ f) `idade <= 15`
 
 Há duas condições que só diferem no igual e deram resultados diferentes. Quais são? Explica numa frase.
 
-## Exercício 2: Juntar condições (10 minutos)
+## Exercício 2: Juntar condições
 
 Num parque de diversões, a montanha-russa tem duas regras: só entra quem tiver pelo menos 12 anos e pelo menos 1,40 metros de altura.
 
@@ -68,7 +67,7 @@ a) A variável `idade` vale 15 e a variável `altura` vale `1.45`. Diz se cada c
 
 b) Qual das quatro é a regra da montanha-russa? Explica a escolha com uma pessoa a quem as outras dariam um resultado errado.
 
-## Exercício 3: Prever o ramo (10 minutos)
+## Exercício 3: Prever o ramo
 
 Lê este algoritmo de um cinema, sem o executar:
 
@@ -87,7 +86,7 @@ a) Diz que mensagem aparece para cada uma destas idades: 5, 11, 12, 40, 64 e 65.
 
 b) A condição do `Senão se` é só `idade < 65`. Porque é que não precisa de dizer também `idade >= 12`?
 
-## Exercício 4: A estufa (15 minutos)
+## Exercício 4: A estufa
 
 Numa estufa de tomates, a temperatura está boa a partir de 18 graus, incluindo os 18, e abaixo de 26 graus. Com 26 graus já está demasiado quente, e é preciso abrir as janelas. As temperaturas são números inteiros.
 
@@ -97,7 +96,7 @@ b) Escreve a condição que diz se a temperatura está fora do bom, sem usar `n�
 
 c) Para as temperaturas 17, 18, 25, 26 e 27, diz se a temperatura está boa ou fora. Confirma que as tuas duas condições dão sempre respostas contrárias.
 
-## Exercício 5: O preço das fotocópias (25 minutos)
+## Exercício 5: O preço das fotocópias
 
 Lê o enunciado:
 
@@ -147,7 +146,7 @@ Cada ramo pode guardar o preço numa variável. Uma variável pode nascer dentro
 
 Se quiseres confirmar o teu algoritmo com um trace, o Mais longe 1, no fim da ficha, pede-o. É opcional.
 
-## Exercício 6: Encontrar o erro (20 minutos)
+## Exercício 6: Encontrar o erro
 
 Cada um destes bocados de algoritmo tem um erro. Para cada um, escreve a entrada que mostra o erro, o que devia aparecer, tirado do enunciado, e o que aparece. Depois corrige o bocado, mudando o mínimo possível.
 
@@ -186,8 +185,6 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 
 ## Desafio opcional
 
-Leva cerca de 20 minutos.
-
 Um ano é bissexto quando tem 29 de fevereiro. Isso acontece quando o ano é divisível por 4 e não é divisível por 100, ou quando é divisível por 400. Um número é divisível por outro quando o resto da divisão é 0. O resto escreve-se com `resto`, como aprendeste no guia anterior.
 
 a) Escreve a condição que diz se um ano é bissexto. Como mistura `e` com `ou`, usa parênteses para mostrar o que se avalia primeiro.
@@ -198,9 +195,9 @@ c) Qual destes quatro anos mostra que a regra dos 100 é precisa? E qual mostra 
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 90 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. O tempo é indicativo.
+Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam.
 
-### Mais longe 1: O trace das fotocópias nas fronteiras (12 minutos)
+### Mais longe 1: O trace das fotocópias nas fronteiras
 
 Continua o exercício 5: usa o teu algoritmo da alínea c) e a tua tabela de casos de teste da alínea b). A matéria está no passo 9 do exemplo guiado do guia, o trace dos casos de fronteira.
 

@@ -2,7 +2,7 @@
 
 # Projeto 2: Adivinha o número
 
-Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em cerca de 130 minutos de aula: 74 para a Parte 1 e 57 para a Parte 2.
+Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em várias aulas. Cada par avança ao seu ritmo: o que não acabarem na aula, acabam em casa ou na aula seguinte.
 
 ## Para que serve este projeto
 
@@ -69,7 +69,7 @@ Cada passo acaba com a frase "Mostra ao professor antes de avançar". Quer dizer
 
 Precisas de papel e lápis, dos guias 01 a 05 à mão e do projeto 1, que está no teu portefólio.
 
-O tempo de cada passo, no título dele, é uma estimativa para um par médio. Há passos que vão demorar mais e outros menos. O que conta é fazer cada um com cuidado.
+Há passos que vão demorar mais e outros menos. O que conta é fazer cada um com cuidado.
 
 ## O jogo
 
@@ -83,9 +83,9 @@ As mensagens entre aspas são estas, palavra por palavra. As perguntas que o alg
 
 Por exemplo, se o número secreto for 63 e o jogador 2 escrever 50, o algoritmo escreve "Mais alto". Se a seguir o jogador 2 escrever 120, o algoritmo escreve "Esse número não vale. Escreve um número de 1 a 100." e pede outro número. O 120 não conta como tentativa.
 
-## Parte 1: do enunciado ao algoritmo testado (74 min)
+## Parte 1: do enunciado ao algoritmo testado
 
-### Passo 1: o contrato (12 min)
+### Passo 1: o contrato
 
 A ferramenta está no guia 01, na secção "O contrato de entrada e saída". Está também no passo 3 do exemplo guiado do mesmo guia, "procurar o que falta ou se pode ler de duas maneiras".
 
@@ -105,7 +105,7 @@ Há uma razão para fazer o contrato por escrito, mesmo num jogo que parece simp
 
 Mostra ao professor antes de avançar: o contrato, com a decisão e a sua razão.
 
-### Passo 2: a tabela de casos esperados, antes do algoritmo (12 min)
+### Passo 2: a tabela de casos esperados, antes do algoritmo
 
 A ferramenta está no guia 03, na secção "Fronteiras e casos de teste". Está também no passo 4 do exemplo guiado desse guia, "escolher os casos de teste e prever os resultados". No guia 04, está nas secções "O ciclo que nunca começa" e "Testar só o caso normal". E está no projeto 1, onde viste a tabela com o tipo de cada caso.
 
@@ -137,7 +137,7 @@ Há duas dicas para não perderes tempo. Nos jogos compridos, escolhe números f
 
 Mostra ao professor antes de avançar: a tabela com as colunas de antes de executar preenchidas. Para cada fronteira, diz quais são os casos que ficam de um lado e do outro.
 
-### Passo 3: as peças do algoritmo (12 min)
+### Passo 3: as peças do algoritmo
 
 A ferramenta está no guia 04, nas secções "As três peças de um ciclo", "Escolher entre `Enquanto` e `Para`" e "Validação repetida". A bandeira está na secção "`Parar`: sair do ciclo já". Está também no guia 03, nas secções "O contrário de um intervalo" e "O operador `não`".
 
@@ -192,7 +192,7 @@ Responde por escrito, em poucas palavras:
 
 Mostra ao professor antes de avançar: as cinco respostas.
 
-### Passo 4: o algoritmo (18 min)
+### Passo 4: o algoritmo
 
 A ferramenta está em todos os exemplos do guia 04. Está sobretudo no passo 4 do exemplo guiado, "o pseudocódigo da primeira parte", e na secção "Validação repetida".
 
@@ -215,7 +215,7 @@ Antes de mostrares, confere estas cinco coisas, com o dedo por baixo de cada lin
 
 Mostra ao professor antes de avançar: o algoritmo completo.
 
-### Passo 5: a tabela de iterações do caso normal (6 min)
+### Passo 5: a tabela de iterações do caso normal
 
 A ferramenta está no guia 04, na secção "A tabela de iterações" e no passo 5 do exemplo guiado, "o trace dos três casos".
 
@@ -235,7 +235,7 @@ Não precisas de escrever as perguntas.
 
 Mostra ao professor antes de avançar: a tabela de iterações e a comparação.
 
-### Passo 6: executar a tabela de casos (10 min)
+### Passo 6: executar a tabela de casos
 
 A ferramenta está no guia 02, na secção "Tabela de trace", e no guia 03, no passo 10 do exemplo guiado, "comparar com o previsto".
 
@@ -247,7 +247,7 @@ Agora executa os outros casos da tua tabela. Não precisas de fazer a tabela de 
 
 Mostra ao professor antes de avançar: a tabela com todas as colunas e a resposta da alínea b).
 
-### Passo 7: depurar o que falhou (4 min, ou mais se for preciso)
+### Passo 7: depurar o que falhou
 
 A ferramenta é a rotina da depuração que o professor mostrou no projeto 1. É também o registo de depuração com as quatro partes que já usaste no exercício 6 da ficha do tema 05, "Encontrar o erro".
 
@@ -265,7 +265,7 @@ Se nenhum caso falhou, escreve-o por baixo da tabela. O professor pode dar-te um
 
 Mostra ao professor antes de avançar: o registo de depuração e a versão corrigida, ou a tabela com todos os casos a passar.
 
-## Parte 2: depurar e melhorar o algoritmo de um colega (57 min)
+## Parte 2: depurar e melhorar o algoritmo de um colega
 
 Quando o professor confirmar o teu passo 7, entrega-te duas coisas em papel. A primeira é o algoritmo que um colega de outra turma escreveu para este mesmo jogo. A segunda é o relato de um erro que esse colega observou quando o experimentou com um jogo de teste. O relato diz qual era o número secreto, que números o jogador 2 escreveu, o que apareceu no ecrã e o que devia ter aparecido.
 
@@ -273,7 +273,7 @@ Esse algoritmo não está neste documento, e há uma razão para isso. Resolve o
 
 O colega fez algumas escolhas diferentes das tuas, e isso não quer dizer que estejam erradas. Dois algoritmos diferentes podem estar ambos certos. Para encontrares o erro, não procures as diferenças em relação ao teu algoritmo. Segue a rotina da depuração do projeto 1, a partir do erro observado. Guarda a folha que o professor te dá, porque faz parte do teu portefólio.
 
-### Passo 8: ler o algoritmo do colega e observar e reproduzir o erro (14 min)
+### Passo 8: ler o algoritmo do colega e observar e reproduzir o erro
 
 A ferramenta está no primeiro passo da rotina da depuração do projeto 1, observar e reproduzir o erro. Está também no guia 04, na secção "A tabela de iterações", e no guia 01, na secção "Reproduzir a falha com um exemplo mínimo".
 
@@ -289,7 +289,7 @@ Depois, reproduz o erro. **Reproduzir** um erro é fazê-lo acontecer outra vez,
 
 Mostra ao professor antes de avançar: a tabela de iterações e as respostas às alíneas b) e c).
 
-### Passo 9: formular uma hipótese, verificá-la e corrigir a causa (8 min)
+### Passo 9: formular uma hipótese, verificá-la e corrigir a causa
 
 A ferramenta está nos passos 2, 3 e 4 da rotina do projeto 1: formular uma hipótese, verificar a hipótese e corrigir a causa. Está também no guia 03, na secção "Fronteiras e casos de teste".
 
@@ -307,7 +307,7 @@ Quando encontrares a linha, corrige a causa, e não o sintoma. O sintoma é o qu
 
 Mostra ao professor antes de avançar: a hipótese, o trace, a causa e a correção.
 
-### Passo 10: o registo de depuração e voltar a testar tudo (20 min)
+### Passo 10: o registo de depuração e voltar a testar tudo
 
 A ferramenta é o registo de depuração do projeto 1, com as quatro partes do exercício 6 da ficha do tema 05. É também o quinto passo da rotina do projeto 1, voltar a testar tudo.
 
@@ -321,7 +321,7 @@ Uma correção pode estragar um caso que antes funcionava. Por isso, depois de c
 
 Mostra ao professor antes de avançar: o registo de depuração e a tabela executada.
 
-### Passo 11: melhorar sem mudar o que o algoritmo faz (8 min)
+### Passo 11: melhorar sem mudar o que o algoritmo faz
 
 A ferramenta está no guia 05, na secção "Duas soluções certas, uma mais eficiente". Está também no guia 03, nas secções "Seleção encadeada" e "Condições que não se sobrepõem e que cobrem todos os casos". Nos erros frequentes desse guia, lê "Dois `Se` separados em vez de uma cadeia".
 
@@ -337,7 +337,7 @@ Lembra-te da regra principal. A versão melhorada tem de escrever exatamente o m
 
 Mostra ao professor antes de avançar: a parte melhorada, a explicação e os três testes.
 
-### Passo 12: contar as perguntas antes e depois (7 min)
+### Passo 12: contar as perguntas antes e depois
 
 A ferramenta está no guia 05, na secção "Duas soluções certas, uma mais eficiente".
 

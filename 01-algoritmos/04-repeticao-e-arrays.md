@@ -2,7 +2,7 @@
 
 # Repetição e arrays
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que repetem instruções, e a guardar muitos valores numa só variável, a que se chama array. Aprendes também a percorrer esses valores um a um, a contá-los e a somá-los. Lê-se em cerca de 160 minutos, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-arrays-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que repetem instruções, e a guardar muitos valores numa só variável, a que se chama array. Aprendes também a percorrer esses valores um a um, a contá-los e a somá-los. Lê-se ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-arrays-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md) deste tema.
 
 Até agora, cada instrução dos teus algoritmos executava-se no máximo uma vez. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Repetir instruções e guardar vários valores numa variável são as duas ideias que mais vais usar daqui até ao fim do curso.
 

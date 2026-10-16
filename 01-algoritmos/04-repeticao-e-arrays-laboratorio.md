@@ -2,7 +2,7 @@
 
 # Laboratório: Repetição e arrays
 
-Laboratório do tema Repetição e arrays, do módulo Desenvolver algoritmos. Cerca de 60 minutos, e mais cerca de 20 se fizeres o desafio. Vais desenhar no diagrams.net o fluxograma de um algoritmo com um ciclo, com a seta que volta atrás até ao losango da condição. Cada passo diz o que fazer, porquê e o que deves ver. Tudo o que precisas está aqui; o [guia do tema](04-repeticao-e-arrays.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Repetição e arrays, do módulo Desenvolver algoritmos. Vais desenhar no diagrams.net o fluxograma de um algoritmo com um ciclo, com a seta que volta atrás até ao losango da condição. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. O que não acabares na aula, acabas na aula seguinte, ou em casa se tiveres computador. Tudo o que precisas está aqui; o [guia do tema](04-repeticao-e-arrays.md) tem a teoria completa, para quem quiser saber mais.
 
 Este laboratório é todo de fluxogramas, e é opcional. Só o fazes quando o professor o indicar, e nenhum exercício da ficha depende dele.
 
@@ -108,7 +108,7 @@ Se fizeste os laboratórios dos temas [02](02-estado-sequencia-representacoes-la
 
 ## Preparar o projeto
 
-Esta preparação leva cerca de 7 minutos. A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Ficaram por confirmar três coisas, todas da fase 3. São as marcas de ligação no contorno do losango, a opção "Pontos de passagem", com "Ortogonal", e a opção "Limpar pontos de passagem". Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Ficaram por confirmar três coisas, todas da fase 3. São as marcas de ligação no contorno do losango, a opção "Pontos de passagem", com "Ortogonal", e a opção "Limpar pontos de passagem". Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Abre o browser, maximiza a janela para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede à aplicação que apareça em português.
 
@@ -139,7 +139,7 @@ Esta preparação leva cerca de 7 minutos. A aplicação muda de aspeto de vez e
 
    O grupo tem muitas outras figuras, que pertencem a convenções mais pormenorizadas do que a nossa. Usa sempre estas quatro, do grupo "Fluxograma".
 
-## Fase 1: planear a disposição antes de desenhar (5 minutos)
+## Fase 1: planear a disposição antes de desenhar
 
 Num fluxograma, cada figura liga-se à seguinte por uma seta, e as setas descem. Num ciclo, há uma seta que sobe. Depois da última linha do corpo, o algoritmo não continua para baixo. Volta à linha do `Enquanto` e testa a condição outra vez. No desenho, essa volta é a seta de volta, que sobe da última figura do corpo até ao losango do ciclo.
 
@@ -186,7 +186,7 @@ Tens no papel o esquema das três faixas, com o caminho livre à esquerda para a
 
 Pensa antes de continuares: como distingues, à primeira vista, o losango do ciclo do losango do `Se`? A resposta: ao losango do ciclo chega uma seta pela esquerda, a seta de volta. Ao losango do `Se` não chega nenhuma seta pela esquerda.
 
-## Fase 2: as figuras e as setas que descem (20 minutos)
+## Fase 2: as figuras e as setas que descem
 
 Cada linha do pseudocódigo que faz alguma coisa é uma figura do fluxograma. A linha `const SENTINELA = -1` não tem figura. Dá nome a um valor fixo, e esse nome aparece dentro do losango onde é usado. A palavra `Senão` também não tem figura própria. O ramo dela começa na figura 16, à saída `Não` do losango 13.
 
@@ -252,7 +252,7 @@ Conta as figuras e as setas do teu desenho. Deve ter dezassete figuras e dezasse
 
 Pensa antes de continuares: porque é que a figura 10 ainda não tem nenhuma seta a sair, e a figura 11 nenhuma a chegar? A resposta: a seta que sai da figura 10 é a seta de volta, que vai ao losango 6. A única seta que chega à figura 11 é a saída `Não` do ciclo. As duas desenham-se na fase 3, com um cuidado especial.
 
-## Fase 3: a seta que volta ao losango (15 minutos)
+## Fase 3: a seta que volta ao losango
 
 A seta de volta vai sempre ao losango do ciclo, porque é lá que o ciclo decide se continua. Se fosse à primeira inicialização, a contagem e o total voltavam a zero em cada volta. Se fosse para uma figura do corpo, a condição nunca mais era testada, e o ciclo nunca acabava. Esta fase faz-se devagar. Confirma cada passo antes de passares ao seguinte.
 
@@ -284,7 +284,7 @@ Olha para o losango 6. Chegam-lhe duas setas, uma por cima e outra pela esquerda
 
 Pensa antes de continuares: porque é que a seta de volta não leva o `Sim`, se é por ela que o ciclo continua? A resposta: o `Sim` já está na saída de baixo do losango, por onde se entra no corpo. A seta de volta não sai do losango, chega a ele. É o caminho de regresso ao teste, depois de o corpo acabar.
 
-## Fase 4: verificar o desenho com um caso de teste (8 minutos)
+## Fase 4: verificar o desenho com um caso de teste
 
 Um fluxograma verifica-se percorrendo-o com um caso de teste, como se fosses tu o computador. Em cada losango, a saída escolhe-se pela condição, com os valores que as variáveis têm nesse momento.
 
@@ -318,7 +318,7 @@ O teu desenho passou no caso de teste. Fizeste quatro passagens pelo losango do 
 
 Pensa antes de continuares: imagina que a seta de volta chegava à figura 2, `int turmas = 0`. Com o mesmo caso, chegavas ao Fim? A resposta: não. No fim de cada volta, a contagem e o total voltavam a 0. Depois, a leitura antecipada da figura 5 lia logo o valor seguinte. O valor lido no fim do corpo era deitado fora sem passar pelo losango. O 12 era testado, o 0 deitado fora, o 9 testado e o -1 deitado fora. O algoritmo ficava à espera de mais um valor, e o dedo nunca chegava ao Fim.
 
-## Fase 5: uma imagem do fluxograma (5 minutos)
+## Fase 5: uma imagem do fluxograma
 
 O ficheiro `.drawio` é o teu fluxograma editável. É esse que abres para continuar a trabalhar ou para corrigir. Para mostrar o fluxograma a alguém, ou para o entregar, exporta-se uma imagem, que qualquer computador ou telemóvel abre sem precisar da aplicação. Uma imagem não se edita. Se precisares de mudar alguma coisa, mudas o `.drawio` e exportas a imagem outra vez. Por isso, guardas sempre os dois ficheiros.
 
@@ -404,7 +404,7 @@ Ctrl+Z, ou Cmd+Z num Mac, desfaz a última ação. Repete para desfazer mais.
 
 ## Desafios
 
-1. Um `Para` no fluxograma, em cerca de 20 minutos. Este algoritmo soma as caixas guardadas nos 3 corredores de um armazém:
+1. Um `Para` no fluxograma. Este algoritmo soma as caixas guardadas nos 3 corredores de um armazém:
 
    ```text
    const NUMERO_DE_CORREDORES = 3

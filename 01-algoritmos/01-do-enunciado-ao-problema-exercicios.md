@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Do enunciado ao problema delimitado
 
-Ficha do tema Do enunciado ao problema delimitado, do módulo Desenvolver algoritmos. Praticas o que o guia ensinou. Reconheces algoritmos, separas os dados do contexto, escreves o contrato de um problema, segues o estado de uma situação e encontras falhas. Cerca de 85 minutos, para fazeres sozinho, e mais 25 se fizeres o desafio opcional.
+Ficha do tema Do enunciado ao problema delimitado, do módulo Desenvolver algoritmos. Praticas o que o guia ensinou. Reconheces algoritmos, separas os dados do contexto, escreves o contrato de um problema, segues o estado de uma situação e encontras falhas. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -14,7 +14,7 @@ Antes de começares, deves conseguir explicar:
 - a pergunta que separa um dado do contexto, "se isto mudasse, a resposta mudava?" (secção "Dados relevantes e pormenores do contexto");
 - as quatro partes do contrato: entradas, saídas, restrições e exemplos concretos (secção "O contrato de entrada e saída").
 
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica antes de começares. Vais precisar também de fazer contas simples, da matemática do ensino básico, incluindo percentagens.
+Se alguma destas ideias não estiver clara, volta à secção do guia que a explica antes de começares. Vais precisar também de fazer contas simples, da matemática do ensino básico.
 
 ## Como trabalhar
 
@@ -22,22 +22,21 @@ Não precisas de computador. Nada nesta ficha se escreve em pseudocódigo nem nu
 
 Faz os exercícios pela ordem. Cada um usa uma ideia do guia de cada vez, e o último junta várias.
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Reconhecer um algoritmo pelas quatro propriedades | 10 min |
-| 2 | Separar os dados do contexto | 10 min |
-| 3 | Escrever o contrato de um problema, com os exemplos concretos | 25 min |
-| 4 | Decompor e seguir o estado numa tabela | 25 min |
-| 5 | Encontrar uma falha e o exemplo mínimo | 15 min |
-| Total da parte obrigatória | Exercícios 1 a 5 | 85 min |
-| Desafio opcional | Os Missionários e Canibais com dois e dois | 25 min, fora do total |
-| Para ires mais longe | O dia em que o Tiago acaba o livro | 40 min, fora do total |
+| Exercício | O que treina |
+| --- | --- |
+| 1 | Reconhecer um algoritmo pelas quatro propriedades |
+| 2 | Separar os dados do contexto |
+| 3 | Escrever o contrato de um problema, com os exemplos concretos |
+| 4 | Decompor e seguir o estado numa tabela |
+| 5 | Encontrar uma falha e o exemplo mínimo |
+| Desafio opcional | Os Missionários e Canibais com dois e dois |
+| Para ires mais longe | O dia em que o Tiago acaba o livro |
 
-Os exercícios 1 a 5 são obrigatórios e cabem nos 85 minutos da ficha. O desafio e a secção "Para ires mais longe" são opcionais, e nenhum dos dois conta para concluíres a ficha. Servem para quem terminar e quiser mais prática, ou para estudares em casa.
+Os exercícios 1 a 5 são obrigatórios. O desafio e a secção "Para ires mais longe" são opcionais, e nenhum dos dois conta para concluíres a ficha. Servem para quem terminar e quiser mais prática, ou para estudares em casa.
 
 Entregas as respostas em papel ou num ficheiro de texto, com as contas que fizeste, e não só os resultados.
 
-## Exercício 1: Reconhecer um algoritmo (10 minutos)
+## Exercício 1: Reconhecer um algoritmo
 
 Cada uma das listas seguintes pretende ser um algoritmo. Para cada uma, diz se é mesmo um algoritmo. Se não for, diz qual das quatro propriedades falha e explica porquê numa frase.
 
@@ -51,7 +50,7 @@ d) Para ganhar o Euromilhões: escolhe os números que vão sair no próximo sor
 
 Concluíste quando tiveres uma resposta para as quatro listas e, nas que não são algoritmos, souberes apontar a propriedade que falha.
 
-## Exercício 2: Dados e contexto (10 minutos)
+## Exercício 2: Dados e contexto
 
 Lê este enunciado duas vezes, a segunda com o lápis na mão:
 
@@ -65,7 +64,7 @@ Concluíste quando a tua tabela separar bem os dados do contexto e a conta da al
 
 Se quiseres continuar com o Tiago, o Mais longe 1, no fim da ficha, muda-lhe a pergunta. É opcional.
 
-## Exercício 3: Delimitar o problema dos bilhetes (25 minutos)
+## Exercício 3: Delimitar o problema dos bilhetes
 
 Lê o enunciado:
 
@@ -88,7 +87,7 @@ c) Delimitar um problema também é dizer o que fica fora dele. Indica dois porm
 
 Concluíste quando outra pessoa conseguir calcular um caso novo, como 31 alunos, só com o teu contrato e sem ler o enunciado.
 
-## Exercício 4: O estado do parque de estacionamento (25 minutos)
+## Exercício 4: O estado do parque de estacionamento
 
 Lê o enunciado:
 
@@ -110,9 +109,9 @@ Usa as colunas: momento, o que acontece, lugares livres depois e o que mostra o 
 
 Concluíste quando a tua tabela mostrar o estado depois de cada acontecimento e o painel mostrar "CHEIO" sempre, e só, quando deve.
 
-## Exercício 5: Encontrar a falha (15 minutos)
+## Exercício 5: Encontrar a falha
 
-a) Na papelaria da escola, uma mochila custa 40 euros e tem uma etiqueta que diz apenas "Desconto: 5". A Inês tem 36 euros. Chega para comprar a mochila? Mostra que a resposta depende da unidade que se imagina para o 5, fazendo as contas para duas unidades diferentes. Depois escreve como devia estar escrita a etiqueta.
+a) A Inês encomendou uma mochila numa loja online, para levar na visita de estudo. A página da loja diz apenas "Entrega em 3 dias". A Inês fez a encomenda numa sexta-feira, e a visita é na terça-feira seguinte. A mochila chega a tempo? Mostra que a resposta depende da maneira de contar os 3 dias, com as contas de duas maneiras diferentes. Depois escreve como devia estar escrita a frase da loja.
 
 b) Alguém escreveu estes passos para contar as pessoas de uma fila:
 
@@ -123,7 +122,7 @@ b) Alguém escreveu estes passos para contar as pessoas de uma fila:
 
 Experimenta os passos com uma fila de 3 pessoas: funcionam. Agora encontra uma fila para a qual não funcionam. Escolhe o exemplo mínimo, a fila mais pequena e simples que mostra a falha, e explica o que corre mal. Por fim, acrescenta um passo que corrija a falha, e diz em que posição o puseste.
 
-Concluíste quando tiveres as contas das duas unidades na alínea a) e, na alínea b), o exemplo mínimo e o passo novo.
+Concluíste quando tiveres as duas contagens dos dias na alínea a) e, na alínea b), o exemplo mínimo e o passo novo.
 
 ## Apoio
 
@@ -133,12 +132,12 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem. Passa à se
 - Exercício 2: para a alínea a), troca mentalmente cada pormenor por outro valor e vê se a resposta à pergunta do Tiago muda. Por exemplo, um candeeiro verde em vez de azul, ou um livro de banda desenhada em vez de aventuras.
 - Exercício 3: para as entradas, pergunta-te o que muda de cada vez que a diretora de turma faz esta conta. Para os professores, lembra-te dos livros nas caixas do guia: os alunos que sobram também precisam de alguém. Para a decisão, pergunta-te, em cada um dos quatro casos, se todas as regras do enunciado se cumprem.
 - Exercício 4: para a alínea b), olha para o que o painel mostra e pergunta-te se dava para o calcular a partir de outro número. Lembra-te dos Missionários e Canibais: a margem direita não se guardava, porque se deduzia da esquerda.
-- Exercício 5: para a alínea a), pergunta-te "5 quê?", como no guia, e lembra-te das maneiras que já viste de escrever um desconto numa montra. Para a alínea b), experimenta filas cada vez mais pequenas e segue os passos à letra em cada uma, como o robô da sandes.
+- Exercício 5: para a alínea a), escreve os dias a seguir à sexta-feira, um por linha, e pensa em quem faz as entregas. Para a alínea b), experimenta filas cada vez mais pequenas e segue os passos à letra em cada uma, como o robô da sandes.
 - Desafio opcional: para a alínea b), conta quantas pessoas a mais ficam na direita depois de cada ida e volta.
 
 ## Desafio opcional
 
-Cerca de 25 minutos. Volta aos Missionários e Canibais, mas agora com dois missionários e dois canibais. O barco continua a levar no máximo duas pessoas e não atravessa sozinho. A regra de segurança é a mesma do guia.
+Volta aos Missionários e Canibais, mas agora com dois missionários e dois canibais. O barco continua a levar no máximo duas pessoas e não atravessa sozinho. A regra de segurança é a mesma do guia.
 
 a) Encontra uma solução e mostra-a numa tabela como a do exemplo guiado, na secção "Passo 8: simular até ao fim". Verifica a regra em todas as linhas e nas duas margens.
 
@@ -148,11 +147,11 @@ c) No jogo com três e três, o padrão "vão dois, volta um" falhava numa trave
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 85 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
+Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa.
 
-### Mais longe 1: O dia em que o Tiago acaba o livro (40 minutos)
+### Mais longe 1: O dia em que o Tiago acaba o livro
 
-Continua o exercício 2: usa o mesmo enunciado do Tiago e a conta que fizeste na alínea b). O tempo é grande porque cada exemplo se faz dia a dia, com uma linha por dia, até o livro acabar.
+Continua o exercício 2: usa o mesmo enunciado do Tiago e a conta que fizeste na alínea b). É mais comprido do que os outros, porque cada exemplo se faz dia a dia, com uma linha por dia, até o livro acabar.
 
 A mãe do Tiago acrescenta uma coisa: "Ao domingo ele não lê, porque se deita mais cedo." E o Tiago muda a pergunta. Agora quer saber em que dia da semana vai acabar o livro. Com estas duas mudanças, o enunciado deixa de chegar para responder. Que informação passa a faltar? Mostra que falta mesmo, com dois exemplos em que essa informação é diferente e o livro acaba em dias da semana diferentes.
 

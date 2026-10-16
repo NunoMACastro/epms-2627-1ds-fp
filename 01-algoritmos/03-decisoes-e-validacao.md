@@ -2,7 +2,7 @@
 
 # Decisões e validação
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que escolhem o que fazer consoante os dados. Aprendes também a usar essas escolhas para verificar se uma entrada respeita o contrato, antes de a usar. Lê-se em cerca de 100 minutos, de preferência em mais do que uma vez. Para praticar, há o [laboratório](03-decisoes-e-validacao-laboratorio.md) e a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que escolhem o que fazer consoante os dados. Aprendes também a usar essas escolhas para verificar se uma entrada respeita o contrato, antes de a usar. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há o [laboratório](03-decisoes-e-validacao-laboratorio.md) e a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
 
 Até agora, os teus algoritmos executavam sempre as mesmas instruções, pela mesma ordem, fosse qual fosse a entrada. Na aula já trabalhaste as estruturas de seleção, com se, senão se e senão, e já juntaste condições com `e` e `ou` em exercícios. Este guia retoma essas ideias com calma e escreve-as na forma que usamos nas aulas. Depois acrescenta o que ainda falta: os intervalos, as fronteiras e a validação de entradas. Este tema ainda não repete instruções. Um algoritmo que recebe um valor inválido avisa e termina.
 

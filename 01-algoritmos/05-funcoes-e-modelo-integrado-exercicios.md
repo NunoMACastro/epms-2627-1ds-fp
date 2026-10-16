@@ -2,7 +2,7 @@
 
 # Ficha de exercícios: Funções e modelo integrado
 
-Ficha do tema Funções e modelo integrado, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Lês e chamas funções, distingues parâmetros de argumentos e escreves funções com `Função` e `devolver`. Usas funções que devolvem `true` ou `false`, passas um valor que muda o que uma função conta e encontras erros em funções. No fim, começas o dossiê de um problema pequeno. Cerca de 132 minutos, para fazeres sozinho: 112 na parte obrigatória e 20 no desafio opcional.
+Ficha do tema Funções e modelo integrado, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Lês e chamas funções, distingues parâmetros de argumentos e escreves funções com `Função` e `devolver`. Usas funções que devolvem `true` ou `false`, passas um valor que muda o que uma função conta e encontras erros em funções. No fim, começas o dossiê de um problema pequeno. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## O que precisas de saber
 
@@ -20,19 +20,18 @@ Este tema não tem laboratório. Os exercícios fazem-se em papel.
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
 
-| Exercício | O que treina | Tempo |
-| --- | --- | ---: |
-| 1 | Ler uma função e escrever o seu contrato | 10 min |
-| 2 | Parâmetros e argumentos | 10 min |
-| 3 | Escrever uma função que percorre um array, com o trace da chamada | 20 min |
-| 4 | Uma função que devolve `true` ou `false`, e as horas que a testam | 12 min |
-| 5 | Uma função que recebe o limiar | 15 min |
-| 6 | Encontrar o erro numa função, com o registo de depuração | 20 min |
-| 7 | O começo do dossiê de um problema: a análise, a decomposição e os contratos | 25 min |
-| Total da parte obrigatória | Exercícios 1 a 7 | 112 min |
-| Desafio opcional | Duas soluções certas, contadas em voltas | 20 min |
+| Exercício | O que treina |
+| --- | --- |
+| 1 | Ler uma função e escrever o seu contrato |
+| 2 | Parâmetros e argumentos |
+| 3 | Escrever uma função que percorre um array, com o trace da chamada |
+| 4 | Uma função que devolve `true` ou `false`, e as horas que a testam |
+| 5 | Uma função que recebe o limiar |
+| 6 | Encontrar o erro numa função, com o registo de depuração |
+| 7 | O começo do dossiê de um problema: a análise, a decomposição e os contratos |
+| Desafio opcional | Duas soluções certas, contadas em voltas |
 
-Os exercícios 1 a 7 são obrigatórios e cabem nos 112 minutos. Depois do desafio, a secção "Para ires mais longe" tem mais quatro exercícios, também opcionais. Continuam os exercícios 4, 6 e 7, e dois deles acabam o dossiê do exercício 7. É para quem terminar e quiser mais prática, ou para estudares em casa. Nem o desafio nem essa secção contam para concluíres a ficha.
+Os exercícios 1 a 7 são obrigatórios. Depois do desafio, a secção "Para ires mais longe" tem mais quatro exercícios, também opcionais. Continuam os exercícios 4, 6 e 7, e dois deles acabam o dossiê do exercício 7. É para quem terminar e quiser mais prática, ou para estudares em casa. Nem o desafio nem essa secção contam para concluíres a ficha.
 
 Escreve as funções na forma que usamos nas aulas. O cabeçalho leva `Função`, o nome e os parâmetros entre parênteses. O corpo vai indentado, e o resultado entrega-se com `devolver`. As funções escrevem-se antes do algoritmo principal.
 
@@ -42,7 +41,7 @@ O exercício 5 parte do exercício 3, e o exercício 7 usa a função do exercí
 
 Entregas as respostas em papel ou num ficheiro de texto. O exercício 7 é o começo do teu dossiê algorítmico.
 
-## Exercício 1: Ler uma função (10 minutos)
+## Exercício 1: Ler uma função
 
 ```text
 Função maior(a, b)
@@ -58,7 +57,7 @@ b) Que valor fica em `x` depois de `int x = maior(4, 9) + maior(2, 1)`?
 
 c) Escreve o contrato desta função. Tem de dizer o que acontece quando os dois números são iguais.
 
-## Exercício 2: Parâmetros e argumentos (10 minutos)
+## Exercício 2: Parâmetros e argumentos
 
 Uma escola calcula a nota final de uma disciplina com 70% da nota do teste e 30% da nota do trabalho:
 
@@ -73,7 +72,7 @@ b) Calcula o que devolvem `notaFinal(15, 10)` e `notaFinal(10, 15)`.
 
 c) Um aluno teve 15 no teste e 10 no trabalho. Qual das duas chamadas da alínea b) dá a sua nota final? Explica porque é que a outra dá um valor diferente.
 
-## Exercício 3: Escrever uma função com um ciclo (20 minutos)
+## Exercício 3: Escrever uma função com um ciclo
 
 Vais escrever a função `contarPares(numeros)`. Recebe um array de números inteiros e devolve quantos deles são pares. Um número é par quando o resto da divisão por 2 é 0.
 
@@ -91,7 +90,7 @@ c) Faz o trace da chamada `contarPares([4, 7, 10, 3])` em tabela própria, com u
 | 3.ª | | | |
 | 4.ª | | | |
 
-## Exercício 4: Uma função que responde sim ou não (12 minutos)
+## Exercício 4: Uma função que responde sim ou não
 
 a) Escreve a função `horaValida(hora, minuto)`. Devolve `true` se a hora estiver entre 0 e 23 e os minutos entre 0 e 59, incluindo os extremos. Devolve `false` em todos os outros casos.
 
@@ -99,7 +98,7 @@ b) Olha para estas seis horas: 23:59, 24:00, 12:60, 0:00, -1:30 e 10:-1. As duas
 
 Usar a função num `Se` do algoritmo principal está no Mais longe 1, no fim da ficha.
 
-## Exercício 5: Um limiar que muda (15 minutos)
+## Exercício 5: Um limiar que muda
 
 As temperaturas máximas de uma semana ficaram neste array:
 
@@ -113,7 +112,7 @@ b) Conta à mão, no array, quantos dias tiveram mais de 30 graus e quantos tive
 
 c) Explica, numa ou duas frases, o que mudou entre as duas chamadas. Porque é que não foi preciso mudar nada dentro da função?
 
-## Exercício 6: Encontrar o erro (20 minutos)
+## Exercício 6: Encontrar o erro
 
 Esta função tem um erro. Procura-o pela ordem que o guia dá no início de "Erros frequentes". Escreve o que encontrares num registo de depuração, com quatro partes:
 
@@ -140,7 +139,7 @@ Usa as chamadas `precoBilhete(40)` e `precoBilhete(12)` como exemplos.
 
 O Mais longe 2, no fim da ficha, tem outra função com um erro, para treinares outra vez o registo.
 
-## Exercício 7: O dossiê da semana de passos (25 minutos)
+## Exercício 7: O dossiê da semana de passos
 
 Este exercício junta toda a algoritmia, e é o começo do teu dossiê. Aqui fazes as partes do dossiê que vêm antes do algoritmo: a análise, a decomposição e o contrato de cada função. As duas últimas partes, o algoritmo e os testes, são opcionais. Estão no fim da ficha, no Mais longe 3 e no Mais longe 4.
 
@@ -174,8 +173,6 @@ Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à 
 
 ## Desafio opcional
 
-Leva cerca de 20 minutos.
-
 Na semana de passos, a diretora da aplicação quer saber também quantos dias ficaram acima da média da semana, e não do objetivo.
 
 a) Escreve uma solução que chama `media(passos)` dentro do ciclo, em cada comparação, e outra que a calcula uma vez antes do ciclo.
@@ -186,13 +183,13 @@ c) As duas soluções dão o mesmo resultado? Quantos dias ficaram acima da méd
 
 ## Para ires mais longe
 
-Esta secção é opcional e fica fora dos 112 minutos da ficha. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa. O tempo é indicativo.
+Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa.
 
-### Mais longe 1: A hora no algoritmo principal (5 minutos)
+### Mais longe 1: A hora no algoritmo principal
 
 Continua o exercício 4. Escreve as linhas do algoritmo principal que leem uma hora e uns minutos. Escrevem "Hora válida" ou "Hora inválida", e usam a tua função `horaValida` num `Se`.
 
-### Mais longe 2: Outra função para depurar (18 minutos)
+### Mais longe 2: Outra função para depurar
 
 Esta função devia devolver o total de golos marcados por uma equipa num torneio, com os golos de cada jogo guardados num array. Tem um erro. Escreve o registo de depuração, com as quatro partes do exercício 6. Depois volta a fazer as duas chamadas com a função corrigida.
 
@@ -206,7 +203,7 @@ Função totalGolos(golosPorJogo)
 
 Usa as chamadas `totalGolos([2, 0, 3])` e `totalGolos([4])` como exemplos. Uma delas dá o resultado certo por acaso.
 
-### Mais longe 3: O algoritmo do dossiê (20 minutos)
+### Mais longe 3: O algoritmo do dossiê
 
 Continua o exercício 7, com o teu dossiê da semana de passos.
 
@@ -214,7 +211,7 @@ a) Escreve a função `existe`, com o contrato que escreveste no exercício 7.
 
 b) Escreve o algoritmo principal, que chama as três funções e mostra os resultados. Usa uma constante para o objetivo. As funções `media` e `contarAcima` já estão escritas, no guia e no exercício 5, e não precisas de as copiar.
 
-### Mais longe 4: Os testes do dossiê (30 minutos)
+### Mais longe 4: Os testes do dossiê
 
 Continua o Mais longe 3. Com estas duas alíneas, o dossiê fica com as cinco partes do passo 8 do guia.
 

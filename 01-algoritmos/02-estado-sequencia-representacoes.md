@@ -2,7 +2,7 @@
 
 # Estado, sequência e representações
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, constantes, tipos e contas, e a ler o mesmo algoritmo num fluxograma. Aprendes também a acompanhar o que acontece dentro de um algoritmo, instrução a instrução, numa tabela de trace. Lê-se em cerca de 110 minutos, de preferência em mais do que uma vez. Para praticar, há o [laboratório](02-estado-sequencia-representacoes-laboratorio.md) e a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, constantes, tipos e contas, e a ler o mesmo algoritmo num fluxograma. Aprendes também a acompanhar o que acontece dentro de um algoritmo, instrução a instrução, numa tabela de trace. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há o [laboratório](02-estado-sequencia-representacoes-laboratorio.md) e a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md) deste tema.
 
 No guia anterior escreveste passos em português, numerados. Funcionou, mas o português deixa passar ambiguidades sem dar sinal. Neste guia vais aprender duas formas de escrever algoritmos que ajudam a apanhar essas ambiguidades, o pseudocódigo e o fluxograma. Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arruma essas instruções na forma que usamos nas aulas, a mesma em todos os guias de algoritmos. E explica a razão de cada escolha. Todos os algoritmos deste guia são sequenciais: fazem sempre os mesmos passos, pela mesma ordem. Escolher entre caminhos é o assunto do guia seguinte.
 

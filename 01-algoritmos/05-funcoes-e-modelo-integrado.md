@@ -2,7 +2,7 @@
 
 # Funções e modelo integrado
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever as tuas próprias funções, partes de um algoritmo com nome que recebem valores e devolvem um resultado. Aprendes também a decompor um problema inteiro em funções e a testá-lo por partes. Lê-se em cerca de 90 minutos, de preferência em mais do que uma vez, com papel e lápis ao lado. Para praticar, há a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever as tuas próprias funções, partes de um algoritmo com nome que recebem valores e devolvem um resultado. Aprendes também a decompor um problema inteiro em funções e a testá-lo por partes. Lê-se ao teu ritmo, de preferência em mais do que uma vez, com papel e lápis ao lado. Para praticar, há a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md) deste tema.
 
 Os algoritmos do guia 04 já eram grandes, e começavam a repetir partes de problema para problema. Somavam um array, calculavam uma média com cuidado com o zero, procuravam um valor, validavam uma nota. Neste guia vais aprender a dar nome a essas partes. Depois vais juntar tudo o que aprendeste na algoritmia num algoritmo completo, organizado em funções, testado e pronto para passar para o Python.
 
@@ -405,6 +405,8 @@ Repara como a diferença cresce. Com 10 notas, a primeira solução já faz mais
 ## Ler funções num fluxograma
 
 Como nos guias anteriores, os fluxogramas são para saberes ler, e este tema não tem laboratório. Num fluxograma, cada função desenha-se à parte, como um fluxograma pequeno. O oval de início tem o nome da função e os parâmetros, como `( Função media(valores) )`. O oval do fim tem o `devolver`, como `( devolver total / quantidade )`.
+
+Uma função com vários `devolver`, como `maior`, tem na mesma um só início e um só fim, como qualquer fluxograma do guia 02. Cada `devolver` fica num retângulo, no fim do seu caminho. As setas desses retângulos juntam-se num só oval de fim, `( Fim )`.
 
 No fluxograma do algoritmo principal, a linha da chamada aparece num retângulo, como qualquer atribuição, por exemplo `[ float m = media(notas) ]`. Quem lê sabe que, nesse retângulo, o caminho salta para o fluxograma da função e volta com o valor.
 
