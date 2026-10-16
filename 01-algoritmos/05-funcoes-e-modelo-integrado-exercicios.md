@@ -117,8 +117,8 @@ c) Explica, numa ou duas frases, o que mudou entre as duas chamadas. Porque é q
 
 Esta função tem um erro. Procura-o pela ordem que o guia dá no início de "Erros frequentes". Escreve o que encontrares num registo de depuração, com quatro partes:
 
-- o que observaste: a chamada que mostra o erro e o que a função devolve com ela;
-- o que era esperado: o que a função devia devolver nessa chamada, tirado do enunciado;
+- o que se observou: a chamada que mostra o erro e o que a função devolve com ela;
+- o que se esperava: o que a função devia devolver nessa chamada, tirado do enunciado;
 - a causa: primeiro, numa frase, o que achas que causa o erro; depois, a linha do trace da chamada que o confirma;
 - a correção: a função corrigida, mudando o mínimo possível.
 

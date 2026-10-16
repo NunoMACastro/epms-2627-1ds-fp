@@ -2,7 +2,7 @@
 
 # Projeto 2: Adivinha o número
 
-Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em cerca de duas horas de aula: 70 minutos para a Parte 1 e 50 para a Parte 2.
+Um jogador escreve um número secreto de 1 a 100, e o outro tenta adivinhá-lo, com pistas, em 10 tentativas no máximo. O projeto faz-se em pares, em cerca de 130 minutos de aula: 74 para a Parte 1 e 57 para a Parte 2.
 
 ## Para que serve este projeto
 
@@ -36,6 +36,8 @@ Este projeto não traz nenhuma instrução nova de pseudocódigo. Usa o que apre
 - O exemplo mínimo: guia 01, secção "Reproduzir a falha com um exemplo mínimo".
 - A tabela de trace: guia [02 Estado, sequência e representações](02-estado-sequencia-representacoes.md), secção "Tabela de trace". A sua regra mais importante é executar o que está escrito, e não o que achas que o algoritmo devia fazer.
 - O tipo à frente só na linha onde a variável nasce: guia 02, secção "A linha onde a variável nasce".
+- As constantes, escritas com `const`: guia 02, secção "Constantes".
+- A forma de escrever o pseudocódigo nas aulas e as frases claras: guia 02, secção "A forma de escrever pseudocódigo nas aulas".
 - A cadeia de `Se`, `Senão se` e `Senão`, em que a primeira condição verdadeira ganha: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Seleção encadeada".
 - Os operadores `e`, `ou` e `não`: guia 03, secção "Operadores lógicos: `e`, `ou` e `não`".
 - Os intervalos e o contrário de um intervalo, escrito com `ou`: guia 03, secções "Intervalos" e "O contrário de um intervalo".
@@ -75,13 +77,13 @@ O tempo de cada passo, no título dele, é uma estimativa para um par médio. H�
 >
 > Depois, o jogador 2 tenta adivinhar o número, e tem no máximo 10 tentativas. Em cada tentativa escreve um número. Se o número estiver fora de 1 a 100, o algoritmo escreve "Esse número não vale. Escreve um número de 1 a 100." e pede outra vez, até o número ser válido. Um número que não vale não conta como tentativa. Se o número for igual ao secreto, o jogador 2 acertou. Se for menor do que o secreto, o algoritmo escreve "Mais alto". Se for maior, escreve "Mais baixo".
 >
-> O jogo acaba quando o jogador 2 acerta ou quando esgota as 10 tentativas. Se o jogador 2 acertou, o algoritmo escreve no fim "Acertaste à tentativa N!". No lugar do N fica o número da tentativa em que acertou. Se acertou em 7 tentativas ou menos, escreve também "Muito bem!". Se não acertou, escreve "Perdeste! O número era S.", com o número secreto no lugar do S.
+> O jogo acaba quando o jogador 2 acerta ou quando esgota as 10 tentativas. Se o jogador 2 acertou, o algoritmo escreve no fim "Acertaste à tentativa N!". No lugar do N fica o número da tentativa em que acertou. Se acertou em 7 tentativas ou menos, escreve a seguir "Muito bem!". Se não acertou, escreve "Perdeste! O número era S.", com o número secreto no lugar do S.
 
 As mensagens entre aspas são estas, palavra por palavra. As perguntas que o algoritmo faz antes de cada leitura, como a que pede o número secreto, escolhe-as tu. "Mais alto" quer dizer que o número secreto é mais alto do que o número que o jogador 2 acabou de escrever. "Mais baixo" quer dizer que é mais baixo.
 
 Por exemplo, se o número secreto for 63 e o jogador 2 escrever 50, o algoritmo escreve "Mais alto". Se a seguir o jogador 2 escrever 120, o algoritmo escreve "Esse número não vale. Escreve um número de 1 a 100." e pede outro número. O 120 não conta como tentativa.
 
-## Parte 1: do enunciado ao algoritmo testado (70 min)
+## Parte 1: do enunciado ao algoritmo testado (74 min)
 
 ### Passo 1: o contrato (12 min)
 
@@ -125,7 +127,7 @@ Pensa também nas fronteiras do ciclo, que são fáceis de esquecer. O guia 04 m
 - o jogo mais curto possível;
 - o jogo mais comprido possível, de cada uma das maneiras como pode acabar;
 - os dois lados da fronteira do "Muito bem!";
-- números que não valem, dos dois lados do intervalo de 1 a 100, cada um ao lado do número válido mais perto;
+- os dois lados de cada limite de 1 a 100: o número que não vale mais perto e, no mesmo jogo, o válido mais perto;
 - dois números que não valem, escritos seguidos;
 - a situação que decidiste no passo 1.
 
@@ -135,7 +137,7 @@ Há duas dicas para não perderes tempo. Nos jogos compridos, escolhe números f
 
 Mostra ao professor antes de avançar: a tabela com as colunas de antes de executar preenchidas. Para cada fronteira, diz quais são os casos que ficam de um lado e do outro.
 
-### Passo 3: as peças do algoritmo (8 min)
+### Passo 3: as peças do algoritmo (12 min)
 
 A ferramenta está no guia 04, nas secções "As três peças de um ciclo", "Escolher entre `Enquanto` e `Para`" e "Validação repetida". A bandeira está na secção "`Parar`: sair do ciclo já". Está também no guia 03, nas secções "O contrário de um intervalo" e "O operador `não`".
 
@@ -257,13 +259,13 @@ Se algum caso falhou, não mudes linhas ao acaso. Segue os cinco passos da rotin
 4. corrigir a causa, uma de cada vez, mudando o mínimo possível;
 5. voltar a testar tudo, a tabela inteira, porque uma correção pode estragar um caso que antes passava.
 
-Escreve o registo de depuração com as quatro partes. A primeira é o que se observou, com o caso e o resultado obtido. A segunda é o que se esperava. A terceira é a causa, isto é, que linha está errada e o que o trace mostrou. A quarta é a correção. Por baixo do registo, numa linha, escreve o resultado do teste de regressão: quantos casos da tabela passam depois da correção. Não apagues a versão com o erro. Escreve a versão corrigida noutra folha, porque o portefólio mostra as duas.
+Escreve o registo de depuração com as quatro partes. A primeira é o que se observou, com o caso e o resultado obtido. A segunda é o que se esperava. A terceira é a causa: a hipótese, numa frase, e a linha que o trace mostrou estar errada. A quarta é a correção. Por baixo do registo, numa linha, escreve o resultado do teste de regressão: quantos casos da tabela passam depois da correção. Não apagues a versão com o erro. Escreve a versão corrigida noutra folha, porque o portefólio mostra as duas.
 
 Se nenhum caso falhou, escreve-o por baixo da tabela. O professor pode dar-te um caso que ainda não experimentaste, para veres se o teu algoritmo também passa nele.
 
 Mostra ao professor antes de avançar: o registo de depuração e a versão corrigida, ou a tabela com todos os casos a passar.
 
-## Parte 2: depurar e melhorar o algoritmo de um colega (50 min)
+## Parte 2: depurar e melhorar o algoritmo de um colega (57 min)
 
 Quando o professor confirmar o teu passo 7, entrega-te duas coisas em papel. A primeira é o algoritmo que um colega de outra turma escreveu para este mesmo jogo. A segunda é o relato de um erro que esse colega observou quando o experimentou com um jogo de teste. O relato diz qual era o número secreto, que números o jogador 2 escreveu, o que apareceu no ecrã e o que devia ter aparecido.
 
@@ -271,7 +273,7 @@ Esse algoritmo não está neste documento, e há uma razão para isso. Resolve o
 
 O colega fez algumas escolhas diferentes das tuas, e isso não quer dizer que estejam erradas. Dois algoritmos diferentes podem estar ambos certos. Para encontrares o erro, não procures as diferenças em relação ao teu algoritmo. Segue a rotina da depuração do projeto 1, a partir do erro observado. Guarda a folha que o professor te dá, porque faz parte do teu portefólio.
 
-### Passo 8: ler o algoritmo do colega e observar e reproduzir o erro (13 min)
+### Passo 8: ler o algoritmo do colega e observar e reproduzir o erro (14 min)
 
 A ferramenta está no primeiro passo da rotina da depuração do projeto 1, observar e reproduzir o erro. Está também no guia 04, na secção "A tabela de iterações", e no guia 01, na secção "Reproduzir a falha com um exemplo mínimo".
 
@@ -293,7 +295,7 @@ A ferramenta está nos passos 2, 3 e 4 da rotina do projeto 1: formular uma hip�
 
 Uma hipótese diz onde procurar e o que verificar. "O algoritmo do colega tem um erro" não é uma hipótese, porque não diz que instrução, nem com que valores. Uma boa hipótese pode ser deitada abaixo por uma única linha do trace, e é isso que a torna útil.
 
-Quando encontrares a linha, corrige a causa, e não o sintoma. O sintoma é o que se vê no ecrã; a causa é a linha que o produz. Uma correção da causa explica porque é que o resultado estava errado. Uma correção que só faz o resultado ficar certo esconde o erro e deixa-o lá, à espera do próximo caso. Costuma mudar outra coisa qualquer que já estava certa. A pergunta que separa as duas é esta: a minha alteração explica porque é que o resultado ficou errado, ou só o acerta?
+Quando encontrares a linha, corrige a causa, e não o sintoma. O sintoma é o que se vê no ecrã. A causa é a linha que o produz, ou a que falta para o resultado ficar certo. Uma correção da causa explica porque é que o resultado estava errado. Uma correção que só faz o resultado ficar certo esconde o erro e deixa-o lá, à espera do próximo caso. Costuma mudar outra coisa qualquer que já estava certa. A pergunta que separa as duas é esta: a minha alteração explica porque é que o resultado ficou errado, ou só o acerta?
 
 **a)** Escreve a tua hipótese numa frase que possa ser verdadeira ou falsa.
 
@@ -305,7 +307,7 @@ Quando encontrares a linha, corrige a causa, e não o sintoma. O sintoma é o qu
 
 Mostra ao professor antes de avançar: a hipótese, o trace, a causa e a correção.
 
-### Passo 10: o registo de depuração e voltar a testar tudo (14 min)
+### Passo 10: o registo de depuração e voltar a testar tudo (20 min)
 
 A ferramenta é o registo de depuração do projeto 1, com as quatro partes do exercício 6 da ficha do tema 05. É também o quinto passo da rotina do projeto 1, voltar a testar tudo.
 
@@ -313,7 +315,7 @@ Uma correção pode estragar um caso que antes funcionava. Por isso, depois de c
 
 **a)** Antes de executares, confirma que a tua tabela tem os dois lados da fronteira onde o erro apareceu. Precisa de um caso em cima da fronteira, como o do relato, e de outro logo do outro lado dela. Se não tiver, acrescenta esses casos agora, com o resultado esperado escrito a partir do contrato, antes de executares.
 
-**b)** Escreve o registo de depuração desta correção, com as quatro partes. São o que se observou, com o jogo relatado e o exemplo mínimo; o que se esperava; a causa; e a correção. Outra pessoa tem de conseguir perceber o erro e a correção só pelo registo, sem ter estado contigo.
+**b)** Escreve o registo de depuração desta correção, com as quatro partes. São o que se observou, com o jogo relatado e o exemplo mínimo; o que se esperava; a causa, com a hipótese; e a correção. Outra pessoa tem de conseguir perceber o erro e a correção só pelo registo, sem ter estado contigo.
 
 **c)** Faz o teste de regressão. Executa a tabela inteira na versão corrigida do algoritmo do colega, como no passo 6, e preenche o resultado obtido e se passou. Por baixo do registo, escreve numa linha quantos casos passam.
 

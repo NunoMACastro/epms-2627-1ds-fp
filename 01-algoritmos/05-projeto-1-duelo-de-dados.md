@@ -11,7 +11,7 @@ Até aqui, cada exercício treinou uma coisa de cada vez: um ciclo, uma cadeia d
 | Projeto | Como se faz | Tempo |
 | --- | --- | --- |
 | 1, duelo de dados | O professor resolve-o ao quadro, a pensar em voz alta; tu acompanhas, respondes e escreves no caderno | Cerca de 60 minutos |
-| 2, adivinha o número | Em pares, um passo de cada vez, com o professor a confirmar cada passo antes do seguinte | Cerca de 120 minutos |
+| 2, adivinha o número | Em pares, um passo de cada vez, com o professor a confirmar cada passo antes do seguinte | Cerca de 130 minutos |
 | 3, avaliação prática | Individual, com um problema novo | 120 minutos |
 
 Os três seguem o mesmo processo, sempre pela mesma ordem:
@@ -37,6 +37,7 @@ Este projeto não traz pseudocódigo novo. Usa o que está nos guias 01 a 05, e 
 - O contrato de entrada e saída, com as entradas, as saídas, as restrições e os exemplos concretos calculados à mão. Está no guia [01 Do enunciado ao problema delimitado](01-do-enunciado-ao-problema.md), secção "O contrato de entrada e saída".
 - A regra da informação que falta, do guia 01, secção "Dados relevantes e pormenores do contexto". Quando o enunciado não diz o que acontece numa situação, não se inventa em silêncio. Decide-se, e escreve-se a decisão.
 - O exemplo mínimo, a entrada mais pequena e simples que ainda mostra uma falha: guia 01, secção "Reproduzir a falha com um exemplo mínimo".
+- A decomposição de um problema em partes mais pequenas: guia 01, secção "Pensamento computacional", em "Decomposição".
 - As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`. Estão no guia [02 Estado, sequência e representações](02-estado-sequencia-representacoes.md), secções "A linha onde a variável nasce" e "Constantes".
 - A leitura com `ler valor` e a escrita no ecrã com `Escreve:`, do guia 02.
 - A tabela de trace, em que se executa um algoritmo à mão, instrução a instrução: guia 02, secção "Tabela de trace". Faz-se o que está escrito, e não o que achas que o algoritmo devia fazer.
@@ -46,6 +47,8 @@ Este projeto não traz pseudocódigo novo. Usa o que está nos guias 01 a 05, e 
 - O `Para` na primeira forma, com a sua condição escondida: guia [04 Repetição e arrays](04-repeticao-e-arrays.md), secção "A primeira forma: `Para ... de ... até ...`".
 - A pergunta que decide entre `Enquanto` e `Para`: guia 04, secção "Escolher entre `Enquanto` e `Para`".
 - O contador: guia 04, secção "O contador".
+- A regra de que um contador nasce antes do ciclo: guia 04, secção "Inicializar fora do ciclo".
+- O caso de zero voltas, em que o ciclo não chega a dar nenhuma volta: guia 04, secção "O ciclo que nunca começa".
 - A tabela de iterações, do guia 04, na secção com o mesmo nome. Cada linha é a fotografia do estado no momento em que o ciclo testa a condição.
 - A rotina da depuração, em resumo: guia 04, no início de "Erros frequentes".
 - Os testes escolhidos antes de olhar para a solução: guia [05 Funções e modelo integrado](05-funcoes-e-modelo-integrado.md), secção "Decompor um problema em funções".
@@ -68,6 +71,8 @@ Precisas só do caderno e de um lápis. Não precisas de dados na aula, e há um
 O algoritmo deste projeto não lança dados. São os jogadores que lançam dados verdadeiros, e cada um escreve o valor que saiu. O algoritmo só faz o que é preciso fazer com esses valores: comparar, contar e decidir. Se fosse o algoritmo a inventar os valores, cada execução dava um duelo diferente, e um caso de teste nunca se podia repetir. Quando um resultado parecesse errado, não havia maneira de voltar a ver o mesmo duelo para procurar o erro. Assim, cada caso de teste é uma lista de valores escrita por ti. Executa-se as vezes que quiseres, sempre com o mesmo resultado.
 
 Este documento é mais comprido do que o tempo da aula deixa ler, e é de propósito. Na aula, o professor diz em poucas palavras o que os passos 2, 5 e 6 explicam por extenso. Em casa, relê essas explicações com calma. São elas que vais consultar no projeto 2 e na avaliação.
+
+O passo 6 é o mais comprido, e raramente cabe inteiro no fim da aula. Em regra, o registo de depuração e o teste de regressão acabam-se no início da aula seguinte.
 
 No fim, guardas o projeto no teu portefólio. A secção "O que fica no teu portefólio", no fim deste documento, diz que peças guardas e com que nomes.
 
@@ -110,7 +115,7 @@ Pensa nestas perguntas antes de o professor avançar, e escreve as tuas resposta
 
 A pergunta 5 leva-te a uma situação de que o enunciado não fala. Pensa em todos os finais possíveis, contando as rondas ganhas de cada jogador. Há algum para o qual a última frase do enunciado não diga o que escrever?
 
-É o caso a que o guia 01 chama informação que falta. Não há nenhuma palavra vaga para sublinhar, mas há uma pergunta sem resposta. E é dos mais perigosos, porque um algoritmo escrito sem pensar nela não se queixa. Escreve qualquer coisa no fim, e essa coisa depende da forma como calhou ficar escrita a última decisão do algoritmo. Não depende de alguém ter pensado no que era justo.
+É o caso a que o guia 01 chama informação que falta. Não há nenhuma palavra vaga para sublinhar, mas há uma pergunta sem resposta. E é dos mais perigosos, porque um algoritmo escrito sem pensar nela não se queixa. Escreve no fim um vencedor que ninguém escolheu, ou não escreve nada. Depende da forma como calhou ficar escrita a última decisão do algoritmo, e não de alguém ter pensado no que era justo.
 
 O guia 01 diz o que fazer, na secção "Dados relevantes e pormenores do contexto". Não se inventa em silêncio. Pergunta-se a quem escreveu o enunciado. Se não for possível, toma-se uma decisão e escreve-se, para que quem ler a solução saiba em que pressuposto ela assenta. Foi o que o contrato dos livros em caixas fez com os zero livros, quando decidiu dizer por palavras que não há última caixa. Na aula, quem escreveu o enunciado está ali, e a decisão toma-se em conjunto, no quadro.
 
@@ -132,7 +137,7 @@ Repara que a suposição e a decisão são coisas diferentes. A decisão escolhe
 
 ## Passo 2: a tabela de casos esperados, antes do algoritmo (10 min)
 
-Este passo faz-se sem algoritmo nenhum, e é de propósito. Já o fizeste duas vezes nos guias, talvez sem dar por isso. No guia 01, os exemplos concretos do contrato dos livros calculam-se à mão, sem algoritmo nenhum. No guia 03, no passo 4 do exemplo guiado, os resultados esperados das notas escrevem-se antes de haver algoritmo, a partir do enunciado. Num projeto, esta ordem passa a ser uma regra, e vale a pena perceberes porquê.
+Este passo faz-se sem algoritmo nenhum, e é de propósito. Já o fizeste nos guias, talvez sem dar por isso. Por exemplo, no guia 01, os exemplos concretos do contrato dos livros calculam-se à mão, sem algoritmo nenhum. No guia 03, no passo 4 do exemplo guiado, os resultados esperados das notas escrevem-se antes de haver algoritmo, a partir do enunciado. Num projeto, esta ordem passa a ser uma regra, e vale a pena perceberes porquê.
 
 ### O resultado esperado decide-se antes de executar
 
@@ -168,7 +173,7 @@ No passo 5, depois de executar, acrescentam-se mais duas, "Resultado obtido" e "
 A coluna "Tipo" é nova. Nos guias, as tabelas de casos tinham as entradas, o resultado esperado e a razão da escolha. Num projeto, cada caso diz também de que tipo é, e há três tipos:
 
 - Um caso **normal** é um caso típico, dos que se imaginam ao ler o enunciado. São exemplos os 30 livros do guia 01 e os 135 minutos do guia 02. Mostra que o algoritmo faz o que se espera no dia a dia, mas sozinho apanha poucos erros.
-- Um caso de **fronteira** está no sítio onde a resposta do algoritmo muda, ou imediatamente ao lado dele. São exemplos a nota 10 e a nota 9 do guia 03. Viste na secção "Fronteiras e casos de teste" porque é que os erros de decisão se concentram aí. Uma comparação com o igual a mais ou a menos dá o mesmo resultado em todos os valores, menos no da fronteira. Para cada fronteira, testa-se o valor que está em cima dela e os vizinhos de um lado e do outro. O caso no limite de uma regra do guia 01, como os 24 livros, é um caso destes. Os casos extremos do guia 01, como o zero, também se marcam como fronteira, porque estão na ponta do que pode acontecer.
+- Um caso de **fronteira** está no sítio onde a resposta do algoritmo muda, ou imediatamente ao lado dele. São exemplos a nota 10 e a nota 9 do guia 03. Viste na secção "Fronteiras e casos de teste" porque é que os erros de decisão se concentram aí. Uma comparação com `>=` no lugar de `>`, ou ao contrário, dá o mesmo resultado em todos os valores, menos no da fronteira. Para cada fronteira, testa-se o valor que está em cima dela e os vizinhos de um lado e do outro. O caso no limite de uma regra do guia 01, como os 24 livros, é um caso destes. Os casos extremos do guia 01, como o zero, também se marcam como fronteira, porque estão na ponta do que pode acontecer.
 - Um caso **inválido** tem uma entrada que não cumpre o contrato, como a nota 21 do guia 03. Serve para ver o que o algoritmo faz com ela: se a trata como o contrato manda, ou se a aceita como se fosse boa.
 
 Uma tabela bem feita tem casos dos três tipos, a não ser que o contrato diga porque é que um deles não pode aparecer. É para isso que o tipo se escreve: quem lê a tabela vê logo se falta algum, e porquê.
@@ -182,7 +187,7 @@ Nesta tabela não vão aparecer casos do tipo inválido. Não é esquecimento, e
 Antes de o professor avançar, pensa nestas perguntas:
 
 1. Numa ronda, onde é que a resposta muda de "Ronda para o jogador 1" para "Ronda para o jogador 2"? Que par de valores fica exatamente em cima dessa fronteira, e que pares ficam imediatamente de um lado e do outro?
-2. No fim do duelo, onde é que a resposta muda de um vencedor para o outro? Que duelo fica exatamente em cima dessa fronteira? E qual é a menor diferença de rondas ganhas com que um jogador ainda ganha o duelo?
+2. No fim do duelo, onde é que a resposta muda de um vencedor para o outro? Que duelo fica exatamente em cima dessa fronteira?
 3. O duelo tem sempre cinco rondas, por isso este jogo não tem o caso de zero voltas do guia 04. Há algum duelo em que nenhum jogador chega a ganhar uma ronda? O que esperas que o algoritmo escreva nesse duelo?
 4. Consegues escrever o resultado esperado de um duelo em que os dois ganharam o mesmo número de rondas sem a decisão do passo 1? Porquê?
 5. A ordem pela qual as rondas são ganhas pode mudar o vencedor do duelo? Que duelo escolherias para mostrar que um algoritmo não se deixa enganar pelo que aconteceu na última ronda?
@@ -230,7 +235,7 @@ Um pseudocódigo não corre num computador. Executá-lo é fazer o trace à mão
 
 No `Para` da primeira forma, a condição está escondida no "até". Como o guia 04 explica na secção "A primeira forma: `Para ... de ... até ...`", quer dizer "continua enquanto a variável de controlo for menor ou igual ao limite". Na tabela, escreve-se por extenso, com os valores.
 
-O professor escolhe um dos casos da tabela, normalmente o que passa por mais ramos do algoritmo. Faz a tabela de iterações no quadro, com a turma a dizer cada valor antes de ele o escrever. A tabela tem estas colunas:
+O professor escolhe um dos casos da tabela. Faz a tabela de iterações no quadro, com a turma a dizer cada valor antes de ele o escrever. A tabela tem estas colunas:
 
 - uma para a variável do `Para`;
 - uma para cada valor lido;
@@ -238,7 +243,7 @@ O professor escolhe um dos casos da tabela, normalmente o que passa por mais ram
 - a da condição;
 - a do que acontece durante a volta.
 
-Nesta última coluna escreve-se o que é lido, que condição da ronda dá verdadeiro, que mensagem aparece e que contador muda. Lembra-te da regra do guia 04. As colunas mostram o estado no momento do teste. Por isso, um valor lido durante uma volta só aparece na sua coluna na linha seguinte. E lembra-te da regra do guia 02: uma variável fica "sem valor" até à linha onde nasce, e as constantes não têm coluna.
+Nesta última coluna escreve-se o que é lido, que condição da ronda dá verdadeiro, que mensagem aparece e que contador muda. Lembra-te da regra do guia 04. As colunas mostram o estado no momento do teste. Por isso, um valor lido durante uma volta só aparece na sua coluna na linha seguinte.
 
 Pensa nestas perguntas antes de o professor avançar:
 
@@ -248,6 +253,8 @@ Pensa nestas perguntas antes de o professor avançar:
 4. Depois de uma ronda empatada, que colunas mudam na linha seguinte, e quais ficam iguais?
 5. Quanto vale a variável do `Para` na última linha? Pode usar-se esse valor depois do ciclo? (Guia 04, regra 4 do `Para`.)
 6. Depois da última linha, que instruções são executadas, e que mensagem aparece no fim? Bate certo com o resultado esperado que escreveste no passo 2?
+
+Quando a tabela estiver feita, confere-a com a regra do guia 02. Uma variável fica "sem valor" até à linha onde nasce, e as constantes não têm coluna.
 
 ## Passo 5: executar os outros casos e comparar o obtido com o esperado (6 min)
 
@@ -269,7 +276,7 @@ Pensa nestas perguntas antes de o professor avançar:
 2. Depois de executares todos os casos, todos os ramos do algoritmo foram percorridos por pelo menos um deles?
 3. Todos os casos passarem prova que o algoritmo está certo? Qual dos teus casos te dá mais confiança, isto é, qual apanharia mais erros se o algoritmo os tivesse? Responde em voz alta, com o número do caso e a razão.
 
-## Passo 6: depurar com a rotina da depuração (11 min)
+## Passo 6: depurar com a rotina da depuração (20 min)
 
 Um teste que falha é útil: o erro apareceu no caderno, e não no meio de um jogo a sério. Agora é preciso encontrar a causa e corrigi-la. A isto chama-se **depurar**.
 
@@ -282,10 +289,10 @@ Quem começa costuma depurar à sorte: muda uma linha, experimenta, muda outra, 
 1. **Observar e reproduzir o erro.** Escreve o caso que falhou, o resultado esperado e o resultado obtido, e diz exatamente em que mensagem diferem. O resultado esperado tira-se do enunciado e da tabela, e nunca do algoritmo que falha. Depois executa o caso outra vez, devagar, para confirmares que o erro volta a aparecer. Um erro que se consegue repetir é um erro que se consegue estudar.
 2. **Formular uma hipótese.** Escreve, numa frase, o que achas que está a causar o erro. A esta frase chama-se **hipótese**: um palpite com fundamento, que os valores do trace podem confirmar ou desmentir. "O algoritmo está mal" não é uma hipótese, porque não diz que instrução procurar nem que valores olhar.
 3. **Verificar a hipótese.** Segue os valores com o trace, no caso mais curto que ainda mostra o erro. Esse caso é o exemplo mínimo do guia 01, na secção "Reproduzir a falha com um exemplo mínimo". Com ele, o trace fica curto e a causa salta à vista. Procura a primeira linha da tabela onde uma variável fica com um valor diferente do que devia ter. É o que o guia 02 manda fazer no passo 7 do exemplo guiado, quando um caso não coincide com o previsto. Se o trace confirmar a hipótese, encontraste a causa. Se a desmentir, a hipótese era falsa, e fazes outra, agora com o que o trace te mostrou.
-4. **Corrigir a causa.** A causa é a instrução que produz o valor errado. O sintoma é o que se vê de errado no ecrã. Muda a instrução que produz o erro, uma causa de cada vez, mudando o mínimo possível. Uma correção que acerta o ecrã do caso que falhou, sem mexer nessa instrução, corrige só o sintoma. O erro volta a aparecer noutro caso.
+4. **Corrigir a causa.** A causa é a instrução que produz o valor errado, ou a que falta para ele ficar certo. O sintoma é o que se vê de errado no ecrã. Corrige a causa, uma de cada vez, mudando o mínimo possível. Uma correção que acerta o ecrã sem explicar porque é que o valor ficou errado corrige só o sintoma. O erro pode voltar noutro caso.
 5. **Voltar a testar tudo.** Depois de corrigir, executas outra vez todos os casos da tabela, também os que já passavam, e explicas o que mudou. A este novo teste da tabela inteira chama-se **teste de regressão**. Procura regressões, isto é, coisas que funcionavam e deixaram de funcionar por causa da correção.
 
-O problema dos livros em caixas, do guia 01, mostra porque é que os passos 4 e 5 são precisos. Quem esquece a caixa incompleta divide os livros por 12 e fica só com a parte inteira. Isso dá 2 caixas para 30 livros, quando são 3. Somar sempre mais uma caixa no fim acerta os 30 livros. Mas passa a dar 3 caixas para 24 livros, quando são 2, e 1 caixa para 0 livros, quando não é preciso nenhuma. Essa correção acertou o sintoma, o número de caixas para 30 livros, e estragou dois casos que estavam certos. A causa era outra: a caixa a mais só é precisa quando sobram livros. A correção da causa é somar uma caixa só nesse caso. Quem só voltasse a experimentar os 30 livros ficava convencido de que estava tudo certo. Só o teste de regressão, com a tabela inteira, mostra os dois casos estragados.
+O problema dos livros em caixas, do guia 01, mostra porque é que os passos 4 e 5 são precisos. Quem esquece a caixa incompleta divide os livros por 12 e fica só com a parte inteira. Isso dá 2 caixas para 30 livros, quando são 3. Somar sempre mais uma caixa no fim acerta os 30 livros. Mas passa a dar 3 caixas para 24 livros, quando são 2, e 1 caixa para 0 livros, quando não é preciso nenhuma. Essa correção acertou o sintoma, o número de caixas para 30 livros, e estragou dois casos que estavam certos. A causa era um passo que faltava: a caixa a mais, que só é precisa quando sobram livros. A correção da causa é acrescentar esse passo, que soma uma caixa só nesse caso. Quem só voltasse a experimentar os 30 livros ficava convencido de que estava tudo certo. Só o teste de regressão, com a tabela inteira, mostra os dois casos estragados.
 
 ### O registo de depuração
 
@@ -295,12 +302,12 @@ Cada depuração escreve-se num **registo de depuração**, com quatro partes. �
 | --- | --- |
 | O que se observou | O caso que falhou, o resultado obtido e a mensagem que está errada; e o exemplo mínimo, com o que ele dá |
 | O que se esperava | O resultado esperado desse caso, o que está na tabela, e o do exemplo mínimo, calculado pelo enunciado |
-| A causa | A instrução que produz o erro, e o que o trace mostrou: a primeira linha onde uma variável fica com um valor diferente do que devia ter |
+| A causa | A hipótese, numa frase, e o que o trace mostrou: a primeira linha onde uma variável fica com um valor diferente do que devia ter, e a instrução que produz o erro, ou a que falta |
 | A correção | A instrução que mudou, e onde, mudando o mínimo possível |
 
 Por baixo do registo, numa linha, escreves o resultado do teste de regressão. Diz quantos casos da tabela passam depois da correção, contando os que já passavam antes. Um registo sem esta linha está incompleto, porque não mostra que a correção não estragou nada.
 
-Repara como os passos da rotina enchem o registo. O primeiro passo dá as duas primeiras partes, e o terceiro acrescenta-lhes o exemplo mínimo. O segundo e o terceiro dão a causa, já confirmada pelo trace: a hipótese só passa a causa depois de o trace a confirmar. O quarto dá a correção. E o quinto dá a linha de baixo.
+Repara como os passos da rotina enchem o registo. O primeiro passo dá as duas primeiras partes, e o terceiro acrescenta-lhes o exemplo mínimo. O segundo e o terceiro dão a causa: a hipótese escreve-se numa frase, e só passa a causa depois de o trace a confirmar. O quarto dá a correção. E o quinto dá a linha de baixo.
 
 Pensa nestas perguntas antes de o professor avançar:
 
@@ -347,7 +354,7 @@ Antes de fechares o caderno, confirma:
 
 ## O que vem a seguir
 
-O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um número. Faz-se em pares, um passo de cada vez, com o professor a confirmar cada passo antes de passares ao seguinte. Leva cerca de 120 minutos. Vem depois da aula da validação de dados e da validação repetida, dos guias 03 e 04, porque vai precisar das duas. Segue o mesmo processo deste projeto, com a mesma rotina da depuração, o registo nas mesmas quatro partes e o teste de regressão. Junta-lhe o passo que aqui ficou de fora: melhorar o algoritmo e mostrar que a versão melhorada faz menos trabalho. Mede-se contando perguntas num exemplo pequeno, como o guia 05 conta voltas na secção "Duas soluções certas, uma mais eficiente".
+O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um número. Faz-se em pares, um passo de cada vez, com o professor a confirmar cada passo antes de passares ao seguinte. Leva cerca de 130 minutos. Vem depois da aula da validação de dados e da validação repetida, dos guias 03 e 04, porque vai precisar das duas. Segue o mesmo processo deste projeto, com a mesma rotina da depuração, o registo nas mesmas quatro partes e o teste de regressão. Junta-lhe o passo que aqui ficou de fora: melhorar o algoritmo e mostrar que a versão melhorada faz menos trabalho. Mede-se contando perguntas num exemplo pequeno, como o guia 05 conta voltas na secção "Duas soluções certas, uma mais eficiente".
 
 Depois vem a avaliação prática: individual, com 120 minutos e um problema novo, que o professor entrega no dia. O processo é o mesmo dos dois projetos, e podes consultar os dois no teu portefólio. Antes da avaliação, o professor mostra-te a grelha com os critérios.
 
