@@ -15,8 +15,6 @@ O [guia do tema](04-repeticao-e-arrays.md). Antes de começar, deves conseguir e
 
 Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "As três peças de um ciclo", "O índice", "Contadores e acumuladores" e "A sentinela: ler até aparecer o valor que diz "acabou"". Para o exercício 5 precisas também do `div` e do `resto`, do [guia 02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 
-O [laboratório](04-repeticao-e-arrays-laboratorio.md) deste tema é de fluxogramas, e é opcional. Os desenhos de fluxogramas não fazem parte desta ficha. Se o professor indicar o laboratório, é lá que os desenhas.
-
 ## Como trabalhar
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:

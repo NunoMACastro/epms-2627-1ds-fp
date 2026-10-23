@@ -2,7 +2,7 @@
 
 # Decisões e validação
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que escolhem o que fazer consoante os dados. Aprendes também a usar essas escolhas para verificar se uma entrada respeita o contrato, antes de a usar. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há o [laboratório](03-decisoes-e-validacao-laboratorio.md) e a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que escolhem o que fazer consoante os dados. Aprendes também a usar essas escolhas para verificar se uma entrada respeita o contrato, antes de a usar. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
 
 Até agora, os teus algoritmos executavam sempre as mesmas instruções, pela mesma ordem, fosse qual fosse a entrada. Na aula já trabalhaste as estruturas de seleção, com se, senão se e senão, e já juntaste condições com `e` e `ou` em exercícios. Este guia retoma essas ideias com calma e escreve-as na forma que usamos nas aulas. Depois acrescenta o que ainda falta: os intervalos, as fronteiras e a validação de entradas. Este tema ainda não repete instruções. Um algoritmo que recebe um valor inválido avisa e termina.
 
@@ -32,7 +32,7 @@ Até agora, os teus algoritmos executavam sempre as mesmas instruções, pela me
 No fim deste guia, consegues:
 
 - escrever condições com comparações e com `e`, `ou` e `não`, saber qual usar em cada situação e prever se dão `true` ou `false`;
-- escrever seleções simples, compostas e encadeadas em pseudocódigo, com a indentação a mostrar o que está dentro de cada caso, e ler o seu fluxograma;
+- escrever seleções simples, compostas e encadeadas em pseudocódigo, com a indentação a mostrar o que está dentro de cada caso;
 - escrever um intervalo de valores como condição, incluindo ou excluindo os extremos conforme o enunciado;
 - verificar que as condições de uma seleção não se sobrepõem e cobrem todos os casos;
 - encontrar as fronteiras de um problema e escolher casos de teste abaixo, na fronteira e acima dela;
@@ -52,9 +52,8 @@ No fim deste guia, consegues:
 - `=`, que dá um valor, e `==`, que pergunta se é igual: guia [02](02-estado-sequencia-representacoes.md), secção "Atribuição: dar um valor não é perguntar se é igual".
 - `ler valor` e `Escreve:`: guia [02](02-estado-sequencia-representacoes.md), secção "Entrada e saída: `ler valor` e `Escreve:`".
 - A ordem das operações numa conta, como em `2 + 3 * 4`: guia [02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
-- Os símbolos do fluxograma, incluindo o losango: guia [02](02-estado-sequencia-representacoes.md), secção "Fluxogramas".
 - A tabela de trace: guia [02](02-estado-sequencia-representacoes.md), secção "Tabela de trace".
-- Os casos de teste, as entradas com o resultado previsto à mão: guia [02](02-estado-sequencia-representacoes.md), no passo 7 do exemplo guiado.
+- Os casos de teste, as entradas com o resultado previsto à mão: guia [02](02-estado-sequencia-representacoes.md), no passo 6 do exemplo guiado.
 - Os sinais de comparação da matemática, como =, < e ≤, do ensino básico.
 
 ## Algoritmos que decidem
@@ -242,29 +241,7 @@ Senão
 
 O `Senão` escreve-se na mesma margem do `Se` a que pertence, e o seu bloco vai também quatro espaços para dentro. Numa seleção composta executa-se sempre exatamente um dos dois blocos, nunca os dois e nunca nenhum. Não há um valor de idade para o qual apareçam as duas mensagens, nem um para o qual não apareça nenhuma.
 
-No fluxograma, a seleção é o losango. Tem uma entrada e duas saídas. Uma saída está marcada `Sim`, para quando a condição é verdadeira, e a outra está marcada `Não`, para quando é falsa. Os dois caminhos voltam a juntar-se num ponto. Esse ponto corresponde à primeira linha depois dos dois blocos, a que volta à margem do `Se`:
-
-```text
-                  |
-                  ↓
-         /                  \
-        <     condição ?     >
-         \                  /
-         |                 |
-        Sim               Não
-         |                 |
-         ↓                 ↓
-  [ bloco do Se ] [ bloco do Senão ]
-         |                 |
-         ↓                 ↓
-         +--------+--------+
-                  |
-                  ↓
-```
-
-A cada um destes caminhos chama-se **ramo**. Numa seleção simples, sem `Senão`, o ramo do `Não` vai diretamente para o ponto de junção, sem passar por nenhuma figura.
-
-Tal como no guia anterior, os fluxogramas são para saberes ler: seguir os caminhos com o dedo e compará-los com o pseudocódigo. Desenhá-los numa aplicação é a parte opcional do [laboratório deste tema](03-decisoes-e-validacao-laboratorio.md), que só fazes quando o professor o indicar.
+A cada um dos caminhos que a decisão pode seguir, o do `Se` e o do `Senão`, chama-se **ramo**. Depois do ramo escolhido, o algoritmo continua na primeira linha que volta à margem do `Se`. Numa seleção simples, sem `Senão`, quando a condição é falsa o algoritmo salta o bloco do `Se` e continua nessa mesma linha.
 
 ## Seleção encadeada
 
@@ -518,52 +495,7 @@ Com a nota 21, a primeira condição pergunta se 21 é maior ou igual a 10. É v
 
 Repara num pormenor que torna este erro traiçoeiro: com a nota -1, esta versão errada responde bem. O -1 não é maior ou igual a 10, e a primeira condição é falsa. Passa-se à validação, que é verdadeira, e aparece "Nota inválida". Quem testasse só -1 como caso inválido ficava convencido de que a validação funcionava. É por isso que se testam os dois lados da escala.
 
-### Passo 8: o fluxograma, com o caminho da entrada inválida
-
-```text
-                            ( Início )
-                                |
-                                ↓
-        / Escreve: "Nota do teste (inteiro de 0 a 20)?" /
-                                |
-                                ↓
-                     / int nota = ler valor /
-                                |
-                                ↓
-         /                                              \
-        <   nota < NOTA_MINIMA ou nota > NOTA_MAXIMA ?   >
-         \                                              /
-               |                                  |
-              Sim                                Não
-               |                                  |
-               ↓                                  ↓
-  / Escreve: "Nota inválida" /     /                             \
-               |                  <   nota >= LIMIAR_POSITIVA ?   >
-               |                   \                             /
-               |                     |                         |
-               |                    Sim                       Não
-               |                     |                         |
-               |                     ↓                         ↓
-               |          / Escreve: "Positiva" /   / Escreve: "Negativa" /
-               |                     |                         |
-               ↓                     ↓                         ↓
-               +---------------------+------------+------------+
-                                                  |
-                                                  ↓
-                                               ( Fim )
-```
-
-Segue com o dedo o caminho de uma entrada inválida, como 21. Depois de ler a nota, chegas ao primeiro losango. A condição é verdadeira, e sais pelo `Sim`, à esquerda. Mostras "Nota inválida" e desces diretamente até à linha de junção, sem passar pelo segundo losango. É o desenho da regra "a primeira condição verdadeira ganha". O segundo losango está no caminho do `Não`, e por isso só é visitado por notas válidas.
-
-Agora segue o caminho de 10. No primeiro losango a condição é falsa, e sais pelo `Não`, à direita. No segundo losango, 10 é maior ou igual a 10, sais pelo `Sim` e mostras "Positiva". Com 9 farias o mesmo caminho até ao segundo losango e sairias pelo `Não`, para "Negativa".
-
-Compara o desenho com o pseudocódigo. O primeiro losango é o `Se`. O segundo losango, pendurado no `Não` do primeiro, é o `Senão se`. A figura do `Não` do segundo losango é o bloco do `Senão`. A linha onde os três caminhos se juntam é o fim da cadeia. É o sítio onde estaria a primeira linha que voltasse à margem do `Se`. Neste algoritmo não há mais nenhuma linha depois da cadeia, e por isso a junção leva diretamente ao fim.
-
-Neste desenho, o `Sim` sai para a esquerda. Noutros desenhos, como os do laboratório, sai pela direita. O lado de cada saída não importa, desde que cada seta tenha o texto certo.
-
-Tal como no guia anterior, as três linhas `const` não têm figura, porque são regras do problema e não passos do caminho. Há três caminhos possíveis do início ao fim, um por cada mensagem, e cada entrada percorre um só deles.
-
-### Passo 9: o trace dos casos de fronteira
+### Passo 8: o trace dos casos de fronteira
 
 Primeiro, o trace completo de duas entradas, linha a linha. As constantes não têm coluna nem passo, porque nunca mudam, e o passo 1 é a primeira linha depois das três linhas `const`. Numa linha com uma condição, a coluna "Condição e resultado" mostra a condição com os valores substituídos e o resultado da avaliação.
 
@@ -616,7 +548,7 @@ O 20 é positiva, e não inválida, porque `20 > 20` é falso: vinte não é mai
 
 Em todas as fronteiras, a decisão é tomada por um único operador. Os dois operadores, com igual e sem igual, só dão resultados diferentes num valor: o da fronteira.
 
-### Passo 10: comparar com o previsto
+### Passo 9: comparar com o previsto
 
 Compara a coluna "Ecrã" da tabela anterior com a coluna "Resultado esperado" da tabela do passo 4. Coincidem nos nove casos. O algoritmo cumpre o contrato em todas as fronteiras e em todas as regiões da reta. Se algum caso não coincidisse, o trace mostraria qual foi a condição que deu um resultado diferente do que devia. É essa condição que se corrige.
 
@@ -715,7 +647,7 @@ Como se corrige: os casos de teste de uma decisão escolhem-se nas fronteiras, e
 - Seleção simples: um `Se` sem `Senão`, que executa o bloco quando a condição é verdadeira e não faz nada quando é falsa.
 - Seleção composta: um `Se` com `Senão`, que executa sempre exatamente um de dois blocos.
 - Seleção encadeada: um `Se` seguido de um ou mais `Senão se`, em que a primeira condição verdadeira ganha.
-- Ramo: cada um dos caminhos que saem de uma decisão; no fluxograma, cada saída do losango.
+- Ramo: cada um dos caminhos que saem de uma decisão; no pseudocódigo, o bloco de um `Se`, de um `Senão se` ou de um `Senão`.
 - Intervalo: o conjunto dos valores entre dois limites.
 - Extremo fechado: um extremo que pertence ao intervalo.
 - Extremo aberto: um extremo que não pertence ao intervalo.
@@ -734,7 +666,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 1. A variável `pontos` vale 50. Quanto dão `pontos > 50`, `pontos >= 50` e `pontos != 50`? Porque é que as duas primeiras dão resultados diferentes?
 2. Escreve de memória as tabelas de verdade do `e` e do `ou`. Qual é a diferença entre o `ou` dos algoritmos e o "ou" de "sopa ou sobremesa"?
 3. Qual é o contrário de `altura >= 150`? E o de `temperatura <= 30`? Escreve-os sem usar `não`.
-4. Escreve um exemplo teu de uma seleção simples, de uma composta e de uma encadeada, com a indentação certa. Como reconheces cada uma num fluxograma?
+4. Escreve um exemplo teu de uma seleção simples, de uma composta e de uma encadeada, com a indentação certa.
 5. Dá um exemplo teu em que passar uma linha para dentro do bloco de um `Se` muda o que aparece no ecrã. Com que valor se vê a diferença?
 6. Escreve em frases claras uma decisão tua com três casos, que diga também o que acontece quando o valor não serve.
 7. No jogo das vidas, 0 é menor do que 3. Porque é que, com 0 vidas, não aparece o aviso "Cuidado, estás quase a perder"?
@@ -747,7 +679,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md). Tem seis exercícios, do mais simples ao mais completo, e um desafio opcional. Se o professor o indicar, faz também o [laboratório](03-decisoes-e-validacao-laboratorio.md), onde desenhas fluxogramas com decisões no computador.
+Para praticar este tema, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md). Tem seis exercícios, do mais simples ao mais completo, e um desafio opcional.
 
 O tema seguinte é [Repetição e arrays](04-repeticao-e-arrays.md). No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem. Se a pessoa se enganou, tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida. Mas para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No guia seguinte vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
 

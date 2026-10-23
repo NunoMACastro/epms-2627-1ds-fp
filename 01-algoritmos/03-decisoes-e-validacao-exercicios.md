@@ -14,8 +14,6 @@ O [guia do tema](03-decisoes-e-validacao.md). Antes de começar, deves conseguir
 
 Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Operadores de comparação", "Operadores lógicos: `e`, `ou` e `não`" e "Seleção encadeada". Para o desafio opcional precisas também do `resto`, do [guia 02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 
-O [laboratório](03-decisoes-e-validacao-laboratorio.md) deste tema é de fluxogramas, e é opcional. Os desenhos de fluxogramas não fazem parte desta ficha. Se o professor indicar o laboratório, é lá que os desenhas.
-
 ## Como trabalhar
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
@@ -199,7 +197,7 @@ Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fa
 
 ### Mais longe 1: O trace das fotocópias nas fronteiras
 
-Continua o exercício 5: usa o teu algoritmo da alínea c) e a tua tabela de casos de teste da alínea b). A matéria está no passo 9 do exemplo guiado do guia, o trace dos casos de fronteira.
+Continua o exercício 5: usa o teu algoritmo da alínea c) e a tua tabela de casos de teste da alínea b). A matéria está no passo 8 do exemplo guiado do guia, o trace dos casos de fronteira.
 
 Faz o trace de dois casos de fronteira. O primeiro é o 11, e as três primeiras linhas já estão feitas. Continua-o com as linhas do teu algoritmo. Se a tua variável do preço tiver outro nome, usa-o na coluna `preco`. O segundo caso escolhes tu, da tua tabela.
 

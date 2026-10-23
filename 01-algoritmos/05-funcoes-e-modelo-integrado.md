@@ -22,12 +22,11 @@ Tal como nos guias anteriores, um algoritmo escrito em frases claras também é 
 8. Funções que recebem arrays
 9. Decompor um problema em funções
 10. Duas soluções certas, uma mais eficiente
-11. Ler funções num fluxograma
-12. Exemplo guiado: o resumo das notas de um teste
-13. Erros frequentes
-14. Palavras novas deste guia
-15. Verificar o que aprendeste
-16. O que vem a seguir
+11. Exemplo guiado: o resumo das notas de um teste
+12. Erros frequentes
+13. Palavras novas deste guia
+14. Verificar o que aprendeste
+15. O que vem a seguir
 
 ## O que vais aprender
 
@@ -55,7 +54,6 @@ No fim deste guia, consegues:
 - As funções predefinidas, como `abs`, e o seu contrato: guia [02](02-estado-sequencia-representacoes.md), secção "Funções predefinidas".
 - `ler valor` e `Escreve:`: guia [02](02-estado-sequencia-representacoes.md), secção "Entrada e saída: `ler valor` e `Escreve:`".
 - A tabela de trace: guia [02](02-estado-sequencia-representacoes.md), secção "Tabela de trace".
-- As figuras do fluxograma, com um só início e um só fim: guia [02](02-estado-sequencia-representacoes.md), secção "Fluxogramas".
 - As condições, que dão `true` ou `false`: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Condições e o tipo `bool`".
 - Os operadores `e`, `ou` e `não`: guia [03](03-decisoes-e-validacao.md), secção "Operadores lógicos: `e`, `ou` e `não`".
 - O `Se`, o `Senão se` e o `Senão`: guia [03](03-decisoes-e-validacao.md), secções "Seleção simples", "Seleção composta" e "Seleção encadeada".
@@ -402,33 +400,6 @@ As duas dão o mesmo sempre que há pelo menos uma nota, a pré-condição de `m
 
 Repara como a diferença cresce. Com 10 notas, a primeira solução já faz mais de cinco vezes o trabalho da segunda. A regra que daqui sai é simples. Um valor que não muda dentro de um ciclo calcula-se antes do ciclo, e o trabalho diminui. Antes de tirares a chamada do ciclo, confirma as pré-condições da função. Se o array pode estar vazio, o cálculo fica dentro de um `Se` que confirma que há pelo menos um elemento.
 
-## Ler funções num fluxograma
-
-Como nos guias anteriores, os fluxogramas são para saberes ler, e este tema não tem laboratório. Num fluxograma, cada função desenha-se à parte, como um fluxograma pequeno. O oval de início tem o nome da função e os parâmetros, como `( Função media(valores) )`. O oval do fim tem o `devolver`, como `( devolver total / quantidade )`.
-
-Uma função com vários `devolver`, como `maior`, tem na mesma um só início e um só fim, como qualquer fluxograma do guia 02. Cada `devolver` fica num retângulo, no fim do seu caminho. As setas desses retângulos juntam-se num só oval de fim, `( Fim )`.
-
-No fluxograma do algoritmo principal, a linha da chamada aparece num retângulo, como qualquer atribuição, por exemplo `[ float m = media(notas) ]`. Quem lê sabe que, nesse retângulo, o caminho salta para o fluxograma da função e volta com o valor.
-
-Antes de leres a explicação, segue com o dedo o algoritmo da área nestes dois fluxogramas. Por que figuras passas, e por que ordem?
-
-```text
-     O algoritmo principal                       A função
-
-          ( Início )                ( Função areaRetangulo(comprimento, largura) )
-               |                                        |
-               ↓                                        ↓
-[ float area = areaRetangulo(3, 2) ]        ( devolver comprimento * largura )
-               |
-               ↓
-   / Escreve: "Área: ", area /
-               |
-               ↓
-            ( Fim )
-```
-
-O dedo parte do início do algoritmo principal e chega ao retângulo da chamada. Aí salta para o fluxograma da função, com o 3 e o 2. Passa do oval de início ao oval do `devolver` e volta ao retângulo com o 6. Depois segue para o `Escreve:` e acaba no fim. É a mesma ordem das quatro fases de uma chamada.
-
 ## Exemplo guiado: o resumo das notas de um teste
 
 ### Passo 1: o enunciado
@@ -759,7 +730,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md). Tem sete exercícios, do mais simples ao mais completo. O último é o começo do dossiê de um problema pequeno, que junta toda a algoritmia: a análise, a decomposição e os contratos. O algoritmo e os testes desse dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo. Este tema não tem laboratório.
+Para praticar este tema, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md). Tem sete exercícios, do mais simples ao mais completo. O último é o começo do dossiê de um problema pequeno, que junta toda a algoritmia: a análise, a decomposição e os contratos. O algoritmo e os testes desse dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo.
 
 A algoritmia fecha com três projetos, todos jogos, cada um um pouco mais difícil do que o anterior. Num projeto juntas tudo o que aprendeste num problema só. Leva-lo do enunciado até um algoritmo testado. Pelo caminho fazes o contrato, a tabela de casos escrita antes do algoritmo, o algoritmo, os testes e a correção do que falhar.
 

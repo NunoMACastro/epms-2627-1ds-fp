@@ -14,8 +14,6 @@ O [guia do tema](02-estado-sequencia-representacoes.md). Antes de começar, deve
 
 Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Variáveis", "Constantes" e "Atribuição: dar um valor não é perguntar se é igual".
 
-O [laboratório](02-estado-sequencia-representacoes-laboratorio.md) deste tema é de fluxogramas, e é opcional. Os desenhos de fluxogramas não fazem parte desta ficha. Se o professor indicar o laboratório, é lá que os desenhas.
-
 ## Como trabalhar
 
 Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:

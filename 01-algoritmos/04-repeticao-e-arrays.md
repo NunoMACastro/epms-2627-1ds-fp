@@ -2,7 +2,7 @@
 
 # Repetição e arrays
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que repetem instruções, e a guardar muitos valores numa só variável, a que se chama array. Aprendes também a percorrer esses valores um a um, a contá-los e a somá-los. Lê-se ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há o [laboratório](04-repeticao-e-arrays-laboratorio.md) e a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que repetem instruções, e a guardar muitos valores numa só variável, a que se chama array. Aprendes também a percorrer esses valores um a um, a contá-los e a somá-los. Lê-se ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md) deste tema.
 
 Até agora, cada instrução dos teus algoritmos executava-se no máximo uma vez. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Repetir instruções e guardar vários valores numa variável são as duas ideias que mais vais usar daqui até ao fim do curso.
 
@@ -55,12 +55,11 @@ No fim deste guia, consegues:
 - A atribuição `total = total + 5`, que soma 5 ao valor que `total` tinha: guia [02](02-estado-sequencia-representacoes.md), secção "Atribuição: dar um valor não é perguntar se é igual".
 - As contas com `/`, `div` e `resto`: guia [02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 - `ler valor` e `Escreve:`: guia [02](02-estado-sequencia-representacoes.md), secção "Entrada e saída: `ler valor` e `Escreve:`".
-- Os símbolos do fluxograma: guia [02](02-estado-sequencia-representacoes.md), secção "Fluxogramas".
 - A tabela de trace: guia [02](02-estado-sequencia-representacoes.md), secção "Tabela de trace".
 - As condições, que só dão `true` ou `false`: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Condições e o tipo `bool`".
 - As comparações, também o `!=`: guia [03](03-decisoes-e-validacao.md), secção "Operadores de comparação".
 - `e`, `ou` e `não`: guia [03](03-decisoes-e-validacao.md), secção "Operadores lógicos: `e`, `ou` e `não`".
-- O `Se`, o `Senão se` e o `Senão`, e o losango do fluxograma: guia [03](03-decisoes-e-validacao.md), secções "Seleção simples", "Seleção composta" e "Seleção encadeada".
+- O `Se`, o `Senão se` e o `Senão`: guia [03](03-decisoes-e-validacao.md), secções "Seleção simples", "Seleção composta" e "Seleção encadeada".
 - Os intervalos e o seu contrário: guia [03](03-decisoes-e-validacao.md), secções "Intervalos" e "O contrário de um intervalo".
 - As fronteiras e a validação de uma entrada: guia [03](03-decisoes-e-validacao.md), secções "Fronteiras e casos de teste" e "Casos válidos, casos inválidos e validação".
 - A média, a soma a dividir pelo número de valores, e a regra de que não se divide por zero, da matemática do ensino básico.
@@ -212,38 +211,6 @@ Com a tabuada até 10, a tabela teria 33 passos. Depois de perceberes como um ci
 
 Cada linha resume um grupo de linhas do trace anterior. A tabela de iterações não mostra os passos um a um. Mostra o que interessa: com que valores começa cada iteração, quantas iterações há e com que valores o ciclo termina. Sempre que te pedirem o trace de um ciclo, é esta tabela que se espera. Só não é assim se te pedirem o trace linha a linha. Nos primeiros ciclos que fizeres, faz as duas, para veres que dizem o mesmo.
 
-### A seta que volta ao losango
-
-No fluxograma, um ciclo desenha-se com o losango do guia 03 e com uma seta nova. Essa seta volta atrás, para cima, até ao losango da condição:
-
-```text
-                     ( Início )
-                          |
-                          ↓
-                  [ int vezes = 1 ]
-                          |
-                          ↓
-              /                      \
-   +-------> <    vezes <= ULTIMO ?   > ----- Não ------+
-   |          \                      /                  |
-   |                      |                             |
-   |                     Sim                            |
-   |                      |                             |
-   |                      ↓                             ↓
-   |   / Escreve: NUMERO, " x ", vezes, ... /   / Escreve: "Fim da tabuada" /
-   |                      |                             |
-   |                      ↓                             ↓
-   |            [ vezes = vezes + 1 ]                ( Fim )
-   |                      |
-   +----------------------+
-```
-
-Segue o percurso com o dedo. Do início, passas pela inicialização e chegas ao losango. Se a condição for verdadeira, sais pelo `Sim`, escreves a linha da tabuada e fazes a atualização. A seta leva-te então de volta ao losango, para perguntares outra vez. Se for falsa, sais pelo `Não`, escreves a mensagem final e terminas. Para três linhas da tabuada, o dedo passa quatro vezes pelo losango, tantas quantas as linhas da tabela de iterações.
-
-A seta de volta vai sempre ao losango. Se voltasse à inicialização, `vezes` voltaria a 1 em cada iteração, e o ciclo nunca acabaria. É a seta que sobe que te diz que há um ciclo. Num fluxograma só com sequência e seleção, as setas andam sempre para baixo.
-
-Como nos guias anteriores, os fluxogramas são para saberes ler. Desenhá-los numa aplicação é o [laboratório deste tema](04-repeticao-e-arrays-laboratorio.md), que é opcional e que só fazes quando o professor o indicar.
-
 ### O ciclo que nunca começa
 
 Se a condição for falsa logo no primeiro teste, o corpo não se executa nenhuma vez. Diz-se que o ciclo tem zero iterações, ou que dá **zero voltas**.
@@ -345,8 +312,6 @@ A tabela seguinte põe as três escritas do mesmo ciclo lado a lado:
 | Inicialização | `int vezes = 1`, antes do ciclo | `de 1`, na primeira linha | `vezes = 1`, a primeira parte |
 | Condição | `vezes <= ULTIMO`, na linha do `Enquanto` | `até ULTIMO`, na primeira linha | `vezes <= ULTIMO`, a segunda parte |
 | Atualização | `vezes = vezes + 1`, a última linha do corpo | não se escreve, porque o `Para` soma 1 | `vezes++`, a terceira parte |
-
-No fluxograma, as duas formas do `Para` desenham-se como o `Enquanto` equivalente. A inicialização vai num retângulo antes do losango, a condição no losango, e a atualização num retângulo no fim do corpo.
 
 ### Escolher entre `Enquanto` e `Para`
 
@@ -1123,7 +1088,6 @@ Como se corrige: testa sempre três casos, zero voltas, uma volta e várias volt
 - Condição de um ciclo: a peça que decide se se faz mais uma iteração; diz quando continuar.
 - Atualização: a instrução do corpo que muda a variável da condição e aproxima o ciclo do fim.
 - Tabela de iterações: uma tabela com uma linha por cada teste da condição, com a fotografia do estado nesse momento.
-- Seta de volta: no fluxograma, a seta que sobe do fim do corpo até ao losango da condição.
 - Zero voltas: o caso em que a condição é falsa logo no primeiro teste, e o corpo não se executa.
 - Ciclo infinito: um ciclo cuja condição nunca chega a ser falsa.
 - Ciclo contado: um ciclo em que se sabe, antes de começar, quantas iterações vai haver.
@@ -1175,7 +1139,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md). Tem sete exercícios, do mais simples ao mais completo, um desafio opcional com uma tabela e mais um exercício opcional, de encontrar o erro. Se o professor o indicar, faz também o [laboratório](04-repeticao-e-arrays-laboratorio.md), onde desenhas no computador o fluxograma de um ciclo.
+Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md). Tem sete exercícios, do mais simples ao mais completo, um desafio opcional com uma tabela e mais um exercício opcional, de encontrar o erro.
 
 O tema seguinte é [Funções e modelo integrado](05-funcoes-e-modelo-integrado.md). Os algoritmos deste guia já são grandes, e começam a repetir partes: calcular uma média, procurar um valor num array, validar uma nota. No guia seguinte vais aprender a dar nome a essas partes e a usá-las sempre que precisares. Para isso, usas as funções que já começaste a escrever na aula. Vais também juntar tudo o que aprendeste na algoritmia num último problema, antes de passares para o Python. No Python, o `Enquanto` chama-se `while` e o `Para cada` chama-se `for`. As tabelas de iterações vão servir para prever o que o programa faz antes de o executares.
 

@@ -2,9 +2,9 @@
 
 # Estado, sequência e representações
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, constantes, tipos e contas, e a ler o mesmo algoritmo num fluxograma. Aprendes também a acompanhar o que acontece dentro de um algoritmo, instrução a instrução, numa tabela de trace. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há o [laboratório](02-estado-sequencia-representacoes-laboratorio.md) e a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, constantes, tipos e contas. Aprendes também a acompanhar o que acontece dentro de um algoritmo, instrução a instrução, numa tabela de trace. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md) deste tema.
 
-No guia anterior escreveste passos em português, numerados. Funcionou, mas o português deixa passar ambiguidades sem dar sinal. Neste guia vais aprender duas formas de escrever algoritmos que ajudam a apanhar essas ambiguidades, o pseudocódigo e o fluxograma. Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arruma essas instruções na forma que usamos nas aulas, a mesma em todos os guias de algoritmos. E explica a razão de cada escolha. Todos os algoritmos deste guia são sequenciais: fazem sempre os mesmos passos, pela mesma ordem. Escolher entre caminhos é o assunto do guia seguinte.
+No guia anterior escreveste passos em português, numerados. Funcionou, mas o português deixa passar ambiguidades sem dar sinal. Neste guia vais aprender uma forma de escrever algoritmos que ajuda a apanhar essas ambiguidades, o pseudocódigo. Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arruma essas instruções na forma que usamos nas aulas, a mesma em todos os guias de algoritmos. E explica a razão de cada escolha. Todos os algoritmos deste guia são sequenciais: fazem sempre os mesmos passos, pela mesma ordem. Escolher entre caminhos é o assunto do guia seguinte.
 
 ## Neste guia
 
@@ -21,13 +21,12 @@ No guia anterior escreveste passos em português, numerados. Funcionou, mas o po
 11. Funções predefinidas
 12. A forma de escrever pseudocódigo nas aulas
 13. Sequência
-14. Fluxogramas
-15. Tabela de trace
-16. Exemplo guiado: converter minutos em horas e minutos
-17. Erros frequentes
-18. Palavras novas deste guia
-19. Verificar o que aprendeste
-20. O que vem a seguir
+14. Tabela de trace
+15. Exemplo guiado: converter minutos em horas e minutos
+16. Erros frequentes
+17. Palavras novas deste guia
+18. Verificar o que aprendeste
+19. O que vem a seguir
 
 ## O que vais aprender
 
@@ -37,9 +36,8 @@ No fim deste guia, consegues:
 - distinguir dar um valor a uma variável, com `=`, de perguntar se dois valores são iguais, com `==`;
 - fazer contas com os operadores aritméticos, incluindo a divisão inteira e o resto, e usar uma função predefinida, como `abs`;
 - escrever um algoritmo sequencial completo em pseudocódigo, na forma que usamos nas aulas, ou em frases claras que não deixem dúvidas;
-- ler o mesmo algoritmo num fluxograma e, se o professor o indicar, desenhá-lo em papel e numa aplicação de diagramas;
 - executar um algoritmo à mão numa tabela de trace, instrução a instrução, comparando o estado antes e depois de cada atribuição;
-- confirmar que o pseudocódigo, o fluxograma e o trace dão os mesmos resultados nos mesmos casos de teste.
+- confirmar, com casos de teste, que o algoritmo dá os resultados que o contrato previu.
 
 ## O que já sabes e vais usar
 
@@ -55,10 +53,6 @@ No fim deste guia, consegues:
 No guia anterior viste que o português permite frases como "espera um bocado". Cada pessoa executa-as à sua maneira, porque não dizem quanto tempo é um bocado. Uma linguagem de programação, como o C ou o Python, não tem esse problema: cada instrução tem um único significado. Mas tem outro, para quem está a começar. Obriga a respeitar regras de escrita muito rígidas. No C, por exemplo, um ponto e vírgula esquecido impede o programa de funcionar, mesmo que o raciocínio esteja certo.
 
 O **pseudocódigo** fica a meio caminho. É texto, escrito com um vocabulário pequeno e sempre igual, que toda a turma lê da mesma maneira. Não é uma linguagem de programação. Nenhum computador lê o teu pseudocódigo, e por isso não há erros de escrita que o impeçam de funcionar. Serve para escreveres depressa, e sem ambiguidades, o raciocínio que resolve o problema. A tua atenção fica no raciocínio, e não na pontuação.
-
-O **fluxograma** é um desenho do mesmo algoritmo, feito com figuras ligadas por setas. Mostra de relance o caminho que o algoritmo percorre. É o que se costuma usar para explicar um processo a quem não programa.
-
-O mesmo algoritmo escreve-se das duas maneiras. Se as duas versões não disserem exatamente a mesma coisa, pelo menos uma está errada.
 
 ## Variáveis
 
@@ -355,43 +349,6 @@ Uma **estrutura sequencial** é uma sequência de instruções executadas uma de
 
 Numa sequência, a ordem importa. Uma instrução só pode usar valores que já existem no momento em que é executada. Imagina uma conta que precisa de um valor que só é lido duas linhas abaixo. A conta é feita com uma variável que ainda não nasceu e por isso não tem valor, e o resultado não faz sentido. Parece óbvio escrito assim, e é um dos erros mais frequentes de quem começa.
 
-## Fluxogramas
-
-Um fluxograma representa um algoritmo com figuras ligadas por setas. Cada figura tem uma forma que diz que tipo de instrução é, e as setas dizem a ordem.
-
-| Figura | Para que serve | Como aparece nestes guias |
-| --- | --- | --- |
-| Oval | Início e fim do algoritmo | `( Início )` e `( Fim )` |
-| Paralelogramo | Entrada e saída de dados: `ler valor` e `Escreve:` | `/ int totalMinutos = ler valor /` |
-| Retângulo | Processamento: atribuições e contas | `[ int horas = totalMinutos div MINUTOS_POR_HORA ]` |
-| Losango | Decisão: o caminho divide-se em dois | uma figura de três linhas com pontas à esquerda e à direita, mostrada abaixo |
-| Seta | O sentido do percurso | linhas verticais terminadas em `↓` |
-
-Estes guias são ficheiros de texto e não têm desenhos. Por isso, cada figura aparece representada por caracteres: parênteses curvos para o oval, barras inclinadas para o paralelogramo e parênteses retos para o retângulo. O losango ocupa três linhas, para se distinguir bem dos sinais de comparação que muitas vezes vão lá dentro. A condição termina sempre com um ponto de interrogação:
-
-```text
-         /                  \
-        <     condição ?     >
-         \                  /
-```
-
-Nas decisões, cada saída do losango leva escrito `Sim` ou `Não`, conforme a condição seja verdadeira ou falsa. Quando desenhares no papel ou na aplicação de diagramas, usa as figuras verdadeiras.
-
-Repara que uma linha com `ler valor` vai num paralelogramo, e não num retângulo, apesar de ser escrita como uma atribuição. O que decide a figura é o que a linha faz. Se recebe um valor de fora, é entrada, e a entrada desenha-se no paralelogramo.
-
-O fluxograma tem um oval de início e um oval de fim, e o pseudocódigo não tem nenhuma palavra para isso. No pseudocódigo não fazem falta, porque se lê de cima para baixo e o algoritmo começa na primeira linha e acaba na última. Num desenho, as figuras podem estar espalhadas pela folha, e os ovais mostram onde se entra e por onde se sai. Há sempre um só oval de fim. A partir do guia seguinte, o percurso pode dividir-se em caminhos diferentes, mas os caminhos voltam a juntar-se antes do fim.
-
-Um fluxograma bem feito cumpre sempre estas regras:
-
-- tem um único início;
-- tem um único fim;
-- todas as figuras estão ligadas por setas, e nenhuma seta fica pendurada sem destino;
-- cada figura tem uma só instrução, escrita da mesma maneira que no pseudocódigo.
-
-Neste guia só vais usar o oval, o paralelogramo e o retângulo, ligados em linha reta, porque os algoritmos sequenciais nunca escolhem entre dois caminhos. O losango fica apresentado porque faz parte da simbologia, e entra em uso no guia seguinte.
-
-Nesta disciplina, os fluxogramas são para saberes o que são e como se leem. Tens de saber o que quer dizer cada figura e como se segue o caminho com o dedo. E tens de saber comparar um fluxograma com o pseudocódigo. Desenhar fluxogramas, no papel ou numa aplicação, é uma parte opcional, que só fazes quando o professor o indicar. O [laboratório deste tema](02-estado-sequencia-representacoes-laboratorio.md) é essa parte opcional. Ensina, passo a passo, a desenhar fluxogramas no diagrams.net, uma aplicação que se usa no browser, sem criar conta.
-
 ## Tabela de trace
 
 Uma **tabela de trace** é uma tabela onde se executa um algoritmo à mão, instrução a instrução. Em cada linha, regista-se o valor de todas as variáveis depois dessa instrução. A palavra *trace* é inglesa e quer dizer "rasto". Em inglês, a tabela chama-se *trace table*. Vais ouvir muitas vezes dizer apenas "fazer o trace".
@@ -480,37 +437,7 @@ O mesmo algoritmo também se pode escrever em frases claras, como os passos nume
 
 Cada frase diz que valor se usa, que conta se faz e em que momento, e por isso não deixa dúvidas a quem a executa. Compara com a frase vaga da secção "A forma de escrever pseudocódigo nas aulas". "Divide os minutos por 60 e mostra o resultado" não dizia que divisão era. As frases e o pseudocódigo têm a mesma lógica, passo a passo. O pseudocódigo diz o mesmo com menos palavras, e com o tempo vais achá-lo mais rápido de escrever e de ler. Mas se, a resolver um exercício, souberes a lógica e não te lembrares da forma, escreve as frases. Nesta fase, o que conta é a lógica.
 
-### Passo 5: o fluxograma
-
-O mesmo algoritmo, desenhado:
-
-```text
-                      ( Início )
-                           |
-                           ↓
-            / Escreve: "Quantos minutos?" /
-                           |
-                           ↓
-           / int totalMinutos = ler valor /
-                           |
-                           ↓
-   [ int horas = totalMinutos div MINUTOS_POR_HORA ]
-                           |
-                           ↓
- [ int minutos = totalMinutos resto MINUTOS_POR_HORA ]
-                           |
-                           ↓
-     / Escreve: horas, " h e ", minutos, " min" /
-                           |
-                           ↓
-                        ( Fim )
-```
-
-Segue o percurso com o dedo, de cima para baixo. Começa no oval de início e passa pelos dois paralelogramos da pergunta e da leitura. Faz as duas contas nos retângulos, mostra o resultado noutro paralelogramo e termina no oval de fim. É uma linha única, sem bifurcações, e é isso que significa uma estrutura sequencial.
-
-Agora compara figura a figura com o pseudocódigo. A cada linha do pseudocódigo corresponde uma figura, pela mesma ordem e com o mesmo texto, incluindo o tipo nas linhas onde as variáveis nascem. Há uma exceção: a linha `const MINUTOS_POR_HORA = 60` não tem figura. O fluxograma desenha o caminho que a execução percorre, passo a passo, e a constante não é um passo desse caminho. É uma regra do problema, que vale o mesmo em todas as figuras, do início ao fim. As linhas onde as variáveis nascem têm figura, porque fazem alguma coisa: recebem um valor de fora ou fazem uma conta.
-
-### Passo 6: o trace, linha a linha
+### Passo 5: o trace, linha a linha
 
 Vais fazer o trace dos três casos do contrato que não são o caso normal. São o 60 e o 59, que ficam dos dois lados do sítio onde a resposta muda, e o 0, o valor mais pequeno permitido. A constante não tem coluna nem passo, porque vale 60 do princípio ao fim e nunca muda. O passo 1 é, por isso, a primeira linha depois do `const`.
 
@@ -567,9 +494,9 @@ O 60 não cabe nenhuma vez em 0, e não sobra nada. O algoritmo não precisa de 
 
 Se fizeres também o trace de 135, o caso do enunciado, os passos 3 e 4 dão 2 e 15. O ecrã mostra "2 h e 15 min".
 
-### Passo 7: confirmar que as três representações concordam
+### Passo 6: confirmar que o algoritmo cumpre o contrato
 
-Tens agora três representações do mesmo algoritmo: o pseudocódigo, o fluxograma e o trace. Os exemplos do contrato, cada um com o resultado previsto à mão, servem agora para testar o algoritmo, e por isso chamam-se **casos de teste**. As três representações estão certas se derem os mesmos resultados nos mesmos casos de teste. E esses resultados têm de ser os que o contrato previu à mão no passo 2.
+Os exemplos do contrato, cada um com o resultado previsto à mão, servem agora para testar o algoritmo, e por isso chamam-se **casos de teste**. O algoritmo está certo se o trace der, em cada caso de teste, o resultado que o contrato previu à mão no passo 2.
 
 | Minutos | Previsto no contrato | Resultado do trace |
 | ---: | --- | --- |
@@ -578,19 +505,7 @@ Tens agora três representações do mesmo algoritmo: o pseudocódigo, o fluxogr
 | 60 | 1 hora e 0 minutos | 1 h e 0 min |
 | 135 | 2 horas e 15 minutos | 2 h e 15 min |
 
-Os quatro casos coincidem. O fluxograma tem as mesmas instruções pela mesma ordem que o pseudocódigo. Por isso, percorrê-lo com o dedo, com os mesmos valores, produz as mesmas linhas de trace. Se algum caso não coincidisse, o passo seguinte seria procurar no trace a primeira linha onde um valor ficou diferente do esperado.
-
-### Passo 8: desenhar o fluxograma na aplicação de diagramas (opcional)
-
-Este passo é opcional. Só o fazes quando o professor o indicar, e o [laboratório deste tema](02-estado-sequencia-representacoes-laboratorio.md) guia-te nele, clique a clique. Depois de desenhares o fluxograma em papel, reconstrói-lo numa aplicação de diagramas no computador, a que o professor indicar na aula. O processo é o mesmo em qualquer aplicação:
-
-1. Cria um diagrama novo e procura a biblioteca de figuras de fluxograma. Tem sempre o oval, o paralelogramo, o retângulo e o losango.
-2. Coloca as figuras de cima para baixo, pela ordem do papel, uma instrução por figura, com o texto escrito exatamente como no pseudocódigo. A linha do `const` fica de fora, tal como no papel.
-3. Liga as figuras com setas, sempre no sentido da execução. Confirma que cada seta sai de uma figura e chega a outra, sem pontas soltas.
-4. Percorre o diagrama com o dedo no ecrã e compara-o, figura a figura, com o pseudocódigo.
-5. Guarda o ficheiro da aplicação e exporta o diagrama como imagem ou como PDF. Dá ao ficheiro um nome que diga o que ele contém, em minúsculas, com hífenes e sem acentos nem espaços, como `fluxograma-converter-minutos.png`.
-
-O desenho em papel vem primeiro de propósito. No papel pensas no algoritmo, e na aplicação tratas da apresentação. Se começares pela aplicação, a tua atenção vai para o tamanho das caixas e para o alinhamento das setas. O algoritmo fica para segundo plano.
+Os quatro casos coincidem. Se algum caso não coincidisse, o passo seguinte seria procurar no trace a primeira linha onde um valor ficou diferente do esperado.
 
 ## Erros frequentes
 
@@ -671,22 +586,9 @@ Porque acontece: é mais rápido escrever o que já se sabe do que fazer a conta
 
 Como se evita: faz sempre a conta que está escrita, com os valores que estão na linha de cima.
 
-### Fluxograma que não corresponde ao pseudocódigo
-
-O que se vê: um destes erros, ou mais do que um:
-
-- uma figura com a forma errada, como uma linha com `ler valor` dentro de um retângulo;
-- uma instrução que existe no pseudocódigo e falta no desenho;
-- uma seta que não chega a lado nenhum.
-
-Porque acontece: desenha-se figura a figura, à pressa, sem voltar a comparar o desenho com o pseudocódigo.
-
-Como se evita: todos se apanham da mesma maneira. Percorre o fluxograma com o dedo, ao lado do pseudocódigo, figura a figura e instrução a instrução.
-
 ## Palavras novas deste guia
 
 - Pseudocódigo: texto escrito com um vocabulário pequeno e sempre igual, que toda a turma lê da mesma maneira; nenhum computador o executa.
-- Fluxograma: o desenho de um algoritmo, com figuras ligadas por setas.
 - Variável: um espaço com um nome, onde se guarda um valor que pode mudar enquanto o algoritmo é executado.
 - Constante: um valor com nome que não muda durante a execução do algoritmo; escreve-se com `const` e em maiúsculas.
 - Tipo: o que decide que valores uma variável pode guardar e o que se pode fazer com eles.
@@ -709,10 +611,6 @@ Como se evita: todos se apanham da mesma maneira. Percorre o fluxograma com o de
 - Indentação: o recuo de uma linha em relação à margem, de quatro espaços por nível, que mostra o que está dentro de quê.
 - Palavra reservada: uma palavra que faz parte da forma, como `const` ou `int`, e que não se usa como nome de uma variável.
 - Estrutura sequencial: instruções executadas uma depois da outra, de cima para baixo, cada uma exatamente uma vez.
-- Oval: a figura do fluxograma onde o algoritmo começa, com `Início`, e acaba, com `Fim`.
-- Paralelogramo: a figura do fluxograma para as entradas e as saídas, com `ler valor` ou `Escreve:`.
-- Retângulo: a figura do fluxograma para as atribuições e as contas.
-- Losango: a figura do fluxograma para uma decisão, que só se usa a partir do guia seguinte.
 - Tabela de trace: uma tabela onde se executa um algoritmo à mão, com o valor de todas as variáveis depois de cada instrução.
 - Caso de teste: um exemplo do contrato, com a entrada e o resultado previsto à mão, que serve para testar o algoritmo.
 
@@ -728,15 +626,14 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 6. Quanto dão `23 div 4` e `23 resto 4`? Como confirmas as duas contas ao mesmo tempo?
 7. Qual é o contrato da função `abs`? Escreve uma atribuição que guarde em `distancia` a diferença, sem sinal, entre duas variáveis `x` e `y`.
 8. Escolhe um problema pequeno teu, com uma regra fixa, um dado que se lê e uma conta. Escreve o algoritmo na forma das aulas. Usa uma constante, uma leitura, uma conta e uma escrita, e põe o tipo de cada variável na linha onde nasce. Depois escreve-o em frases claras que não deixem dúvidas.
-9. Diz que figura levaria cada linha do algoritmo da pergunta 8, pela ordem, e porque é que a linha `const` não tem figura. Se o professor indicar o desenho, desenha-o em papel. Se fores guardá-lo na aplicação de diagramas, que nome dás ao ficheiro da imagem?
-10. Faz o trace completo do algoritmo do exemplo guiado para 125 minutos, uma entrada que o guia não testou. O que aparece no ecrã?
-11. O que tens de comparar para mostrar que o pseudocódigo, o fluxograma e o trace de um algoritmo estão certos?
-12. Dás o teu algoritmo da pergunta 8 a um colega, para ele o executar à letra. Pelo que ele fizer, como percebes que uma instrução ficou ambígua?
+9. Faz o trace completo do algoritmo do exemplo guiado para 125 minutos, uma entrada que o guia não testou. O que aparece no ecrã?
+10. O que tens de comparar para mostrar que um algoritmo está certo nos casos de teste?
+11. Dás o teu algoritmo da pergunta 8 a um colega, para ele o executar à letra. Pelo que ele fizer, como percebes que uma instrução ficou ambígua?
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md). Tem seis exercícios, um para cada ideia do guia, e um desafio opcional. Se o professor o indicar, faz também o [laboratório](02-estado-sequencia-representacoes-laboratorio.md), onde desenhas fluxogramas no computador.
+Para praticar este tema, faz a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md). Tem seis exercícios, um para cada ideia do guia, e um desafio opcional.
 
-O tema seguinte é [Decisões e validação](03-decisoes-e-validacao.md). O algoritmo deste guia faz sempre as mesmas contas, por mais estranha que seja a entrada. Se alguém escrever -30 minutos, o contrato diz que a entrada não é válida. Mas o algoritmo não tem forma de o verificar, e faz as contas na mesma e mostra um resultado sem sentido. Para verificar uma entrada, ou para fazer coisas diferentes consoante os dados, o algoritmo precisa de tomar decisões. No guia seguinte vais aprender a escrever essas decisões em pseudocódigo e em fluxograma. Vais aprender também a escolher com cuidado os limites de cada decisão e a testar os valores onde uma decisão muda de resposta.
+O tema seguinte é [Decisões e validação](03-decisoes-e-validacao.md). O algoritmo deste guia faz sempre as mesmas contas, por mais estranha que seja a entrada. Se alguém escrever -30 minutos, o contrato diz que a entrada não é válida. Mas o algoritmo não tem forma de o verificar, e faz as contas na mesma e mostra um resultado sem sentido. Para verificar uma entrada, ou para fazer coisas diferentes consoante os dados, o algoritmo precisa de tomar decisões. No guia seguinte vais aprender a escrever essas decisões em pseudocódigo. Vais aprender também a escolher com cuidado os limites de cada decisão e a testar os valores onde uma decisão muda de resposta.
 
 ![Rodapé](../imagens/rodape.png)

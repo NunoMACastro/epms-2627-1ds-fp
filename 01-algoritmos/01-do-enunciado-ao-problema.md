@@ -70,7 +70,7 @@ Há passos vagos de outra forma, como "levar as pessoas certas para o outro lado
 
 ## Algoritmia e programação
 
-A **algoritmia** é o trabalho de pensar, escrever e verificar algoritmos. Não depende de nenhuma linguagem de programação. Um algoritmo pode escrever-se em português, em passos numerados, em desenhos com setas ou numa notação própria, que vais aprender no guia seguinte.
+A **algoritmia** é o trabalho de pensar, escrever e verificar algoritmos. Não depende de nenhuma linguagem de programação. Um algoritmo pode escrever-se em português, em passos numerados, ou numa notação própria, que vais aprender no guia seguinte.
 
 A **programação** é o trabalho de passar um algoritmo para uma linguagem de programação, como C ou Python, que o computador consegue executar. Ao longo deste ano vais aprender as duas coisas, por esta ordem: primeiro algoritmos, depois Python, depois C.
 
@@ -461,8 +461,8 @@ Responde sem olhar para o guia. Se não conseguires responder a uma pergunta, vo
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md). Tem cinco exercícios, do mais simples ao mais completo, e um desafio opcional com os Missionários e Canibais. Este tema não tem laboratório, porque tudo se faz em papel. O tema seguinte é [Estado, sequência e representações](02-estado-sequencia-representacoes.md).
+Para praticar este tema, faz a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md). Tem cinco exercícios, do mais simples ao mais completo, e um desafio opcional com os Missionários e Canibais. O tema seguinte é [Estado, sequência e representações](02-estado-sequencia-representacoes.md).
 
-No tema seguinte vais aprender a escrever algoritmos numa notação própria, chamada pseudocódigo, e a representá-los num desenho com figuras e setas, o fluxograma. O estado dos Missionários e Canibais, que aqui eram três valores escritos numa tabela, passa a ter nomes próprios, chamados variáveis. Vais aprender a segui-lo passo a passo numa tabela de trace. O contrato continua a ser o primeiro passo de todos os problemas. Antes de escrever uma única instrução, vais sempre escrever as entradas, as saídas, as restrições e os exemplos.
+No tema seguinte vais aprender a escrever algoritmos numa notação própria, chamada pseudocódigo. O estado dos Missionários e Canibais, que aqui eram três valores escritos numa tabela, passa a ter nomes próprios, chamados variáveis. Vais aprender a segui-lo passo a passo numa tabela de trace. O contrato continua a ser o primeiro passo de todos os problemas. Antes de escrever uma única instrução, vais sempre escrever as entradas, as saídas, as restrições e os exemplos.
 
 ![Rodapé](../imagens/rodape.png)

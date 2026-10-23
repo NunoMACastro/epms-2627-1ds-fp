@@ -14,7 +14,7 @@ O [guia do tema](05-funcoes-e-modelo-integrado.md). Antes de começar, deves con
 
 Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Chamar uma função" e "`devolver`". Para o exercício 3 precisas também do `resto`, do [guia 02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 
-Este tema não tem laboratório. Os exercícios fazem-se em papel.
+Os exercícios fazem-se em papel.
 
 ## Como trabalhar
 

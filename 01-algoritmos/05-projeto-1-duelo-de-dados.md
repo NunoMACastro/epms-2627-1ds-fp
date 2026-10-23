@@ -289,7 +289,7 @@ Quem começa costuma depurar à sorte: muda uma linha, experimenta, muda outra, 
 
 1. **Observar e reproduzir o erro.** Escreve o caso que falhou, o resultado esperado e o resultado obtido, e diz exatamente em que mensagem diferem. O resultado esperado tira-se do enunciado e da tabela, e nunca do algoritmo que falha. Depois executa o caso outra vez, devagar, para confirmares que o erro volta a aparecer. Um erro que se consegue repetir é um erro que se consegue estudar.
 2. **Formular uma hipótese.** Escreve, numa frase, o que achas que está a causar o erro. A esta frase chama-se **hipótese**: um palpite com fundamento, que os valores do trace podem confirmar ou desmentir. "O algoritmo está mal" não é uma hipótese, porque não diz que instrução procurar nem que valores olhar.
-3. **Verificar a hipótese.** Segue os valores com o trace, no caso mais curto que ainda mostra o erro. Esse caso é o exemplo mínimo do guia 01, na secção "Reproduzir a falha com um exemplo mínimo". Com ele, o trace fica curto e a causa salta à vista. Procura a primeira linha da tabela onde uma variável fica com um valor diferente do que devia ter. É o que o guia 02 manda fazer no passo 7 do exemplo guiado, quando um caso não coincide com o previsto. Se o trace confirmar a hipótese, encontraste a causa. Se a desmentir, a hipótese era falsa, e fazes outra, agora com o que o trace te mostrou.
+3. **Verificar a hipótese.** Segue os valores com o trace, no caso mais curto que ainda mostra o erro. Esse caso é o exemplo mínimo do guia 01, na secção "Reproduzir a falha com um exemplo mínimo". Com ele, o trace fica curto e a causa salta à vista. Procura a primeira linha da tabela onde uma variável fica com um valor diferente do que devia ter. É o que o guia 02 manda fazer no passo 6 do exemplo guiado, quando um caso não coincide com o previsto. Se o trace confirmar a hipótese, encontraste a causa. Se a desmentir, a hipótese era falsa, e fazes outra, agora com o que o trace te mostrou.
 4. **Corrigir a causa.** A causa é a instrução que produz o valor errado, ou a que falta para ele ficar certo. O sintoma é o que se vê de errado no ecrã. Corrige a causa, uma de cada vez, mudando o mínimo possível. Uma correção que acerta o ecrã sem explicar porque é que o valor ficou errado corrige só o sintoma. O erro pode voltar noutro caso.
 5. **Voltar a testar tudo.** Depois de corrigir, executas outra vez todos os casos da tabela, também os que já passavam, e explicas o que mudou. A este novo teste da tabela inteira chama-se **teste de regressão**. Procura regressões, isto é, coisas que funcionavam e deixaram de funcionar por causa da correção.
 
@@ -332,7 +332,7 @@ Para este projeto, guarda:
 - a tabela de iterações;
 - o registo de depuração, com a versão com erro, a versão corrigida e a linha do teste de regressão.
 
-Se guardares em ficheiros, usa um ficheiro por peça. Dá-lhes nomes como manda o guia 02, no passo 8 do exemplo guiado: em minúsculas, com hífenes e sem acentos nem espaços. Os nomes são os mesmos no projeto 2, só com o nome do jogo à frente.
+Se guardares em ficheiros, usa um ficheiro por peça. Dá-lhes nomes em minúsculas, com hífenes e sem acentos nem espaços. Os nomes são os mesmos no projeto 2, só com o nome do jogo à frente.
 
 | Peça | Nome do ficheiro |
 | --- | --- |

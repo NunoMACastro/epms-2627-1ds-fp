@@ -237,7 +237,7 @@ Mostra ao professor antes de avançar: a tabela de iterações e a comparação.
 
 ### Passo 6: executar a tabela de casos
 
-A ferramenta está no guia 02, na secção "Tabela de trace", e no guia 03, no passo 10 do exemplo guiado, "comparar com o previsto".
+A ferramenta está no guia 02, na secção "Tabela de trace", e no guia 03, no passo 9 do exemplo guiado, "comparar com o previsto".
 
 Agora executa os outros casos da tua tabela. Não precisas de fazer a tabela de iterações de cada um. Segue o algoritmo, tentativa a tentativa, e anota num rascunho o número lido, o valor das tentativas e o que aparece no ecrã. Executa o que está escrito, linha a linha, e não o que achas que o algoritmo devia fazer. É a regra do guia 02, e é ela que impede o trace de concordar sempre contigo.
 

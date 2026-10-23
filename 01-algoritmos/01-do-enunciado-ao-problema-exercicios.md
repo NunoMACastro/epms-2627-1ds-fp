@@ -6,7 +6,7 @@ Ficha do tema Do enunciado ao problema delimitado, do módulo Desenvolver algori
 
 ## O que precisas de saber
 
-O [guia do tema](01-do-enunciado-ao-problema.md). Este tema não tem laboratório.
+O [guia do tema](01-do-enunciado-ao-problema.md).
 
 Antes de começares, deves conseguir explicar:
 
