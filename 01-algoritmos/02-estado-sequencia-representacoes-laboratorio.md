@@ -250,7 +250,7 @@ O fluxograma e o pseudocódigo do mesmo algoritmo têm de dizer exatamente a mes
 
    Se uma das verificações falhar, corrige o desenho antes de continuares.
 
-2. Segue o fluxograma com o dedo, no ecrã, como se a pessoa tivesse escrito 60 minutos. Em cada paralelogramo com `Escreve:`, diz em voz baixa o que aparece no ecrã. Em cada retângulo, faz a conta.
+2. Segue o fluxograma com o dedo, no ecrã, como se a pessoa tivesse escrito 60 minutos. Em cada paralelogramo com `Escreve:`, determina o que aparece no ecrã. Em cada retângulo, faz a conta.
 
    O que deves ver, por esta ordem: a pergunta "Quantos minutos?" e depois "1 h e 0 min". No primeiro retângulo, `60 div 60` dá 1, porque o 60 cabe uma vez em 60. No segundo, `60 resto 60` dá 0, porque não sobra nada. Se não chegares a este ecrã, há uma figura fora do sítio ou com o texto errado.
 

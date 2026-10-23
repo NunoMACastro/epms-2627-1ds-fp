@@ -2,7 +2,7 @@
 
 # Fundamentos de Programação · 10.º DS
 
-Materiais de Fundamentos de Programação do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Cada material é publicado quando fica pronto, e podes lê-lo antes de ser dado na aula.
+Materiais de Fundamentos de Programação do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Podes estudar estes materiais antes de a matéria ser dada na aula.
 
 ## Por onde começar
 

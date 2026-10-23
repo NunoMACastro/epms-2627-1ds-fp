@@ -176,7 +176,7 @@ Senão
 
 Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à seguinte só se a anterior não tiver chegado.
 
-- Exercício 1. Substitui `idade` por 16 e lê cada condição em voz alta: "dezasseis é maior ou igual a dezasseis?". Nas que têm igual, pergunta-te se o 16 está incluído.
+- Exercício 1. Substitui `idade` por 16 e interpreta cada condição por palavras: "dezasseis é maior ou igual a dezasseis?". Nas que têm igual, pergunta-te se o 16 está incluído.
 - Exercício 2. Avalia primeiro cada comparação sozinha, e só depois junta com a tabela de verdade do `e` ou do `ou`.
 - Exercício 3. Para cada idade, começa na primeira condição e desce. Para assim que uma condição for verdadeira: as de baixo já não contam.
 - Exercício 4. O intervalo é "entre isto e aquilo", com `e`. O contrário é "abaixo disto ou acima daquilo", com `ou`, e cada limite muda de lado. Para cada extremo, pergunta-te se ele pertence ao bom ou ao fora.

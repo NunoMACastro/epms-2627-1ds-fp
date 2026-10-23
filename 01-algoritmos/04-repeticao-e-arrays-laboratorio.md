@@ -108,7 +108,7 @@ Se fizeste os laboratórios dos temas [02](02-estado-sequencia-representacoes-la
 
 ## Preparar o projeto
 
-A aplicação muda de aspeto de vez em quando. Os nomes dos menus e dos botões deste laboratório foram confirmados em setembro de 2026, com a aplicação em português. Ficaram por confirmar três coisas, todas da fase 3. São as marcas de ligação no contorno do losango, a opção "Pontos de passagem", com "Ortogonal", e a opção "Limpar pontos de passagem". Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
+A aplicação muda de aspeto de vez em quando. Os passos descrevem cada opção pelo que faz. Se um nome no teu ecrã não for exatamente igual, procura o que faz a mesma coisa, porque os passos são os mesmos.
 
 1. Abre a aplicação em português. Abre o browser, maximiza a janela para ocupar o ecrã todo, e escreve na barra de endereços `https://app.diagrams.net/?lang=pt`. A parte final, `?lang=pt`, pede à aplicação que apareça em português.
 
@@ -288,7 +288,7 @@ Pensa antes de continuares: porque é que a seta de volta não leva o `Sim`, se 
 
 Um fluxograma verifica-se percorrendo-o com um caso de teste, como se fosses tu o computador. Em cada losango, a saída escolhe-se pela condição, com os valores que as variáveis têm nesse momento.
 
-1. Segue o caminho com o dedo, desde o Início, para este caso: a funcionária escreve 12, depois 0, depois 9 e depois -1. Diz em voz baixa o valor de cada variável sempre que ele muda, e escreve no papel o que aparece no ecrã. Conta quantas vezes passas pelo losango 6 e quantas passas pelo losango 13.
+1. Segue o caminho com o dedo, desde o Início, para este caso: a funcionária escreve 12, depois 0, depois 9 e depois -1. Acompanha o valor de cada variável sempre que ele muda, e escreve no papel o que aparece no ecrã. Conta quantas vezes passas pelo losango 6 e quantas passas pelo losango 13.
 
 2. Confere o teu percurso com este, passagem a passagem:
 
