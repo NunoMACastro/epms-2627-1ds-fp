@@ -2,7 +2,7 @@
 
 # Projeto 1: Duelo de dados
 
-Dois jogadores lançam dados durante cinco rondas, e o algoritmo diz quem ganhou cada ronda e quem ganhou o duelo. O projeto faz-se numa aula, com o professor ao quadro. Acompanhas ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
+Dois jogadores escolhem números entre 1 e 6 durante um máximo de cinco rondas. O duelo termina logo que alguém alcance três vitórias. O algoritmo diz quem ganhou cada ronda e quem ganhou o duelo. O projeto faz-se numa aula, com o professor ao quadro. Acompanhas ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
 
 ## Para que servem os três projetos
 
@@ -44,7 +44,8 @@ Este projeto não traz pseudocódigo novo. Usa o que está nos guias 01 a 05, e 
 - As comparações e a cadeia `Se`, `Senão se`, `Senão`: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Seleção encadeada". A primeira condição verdadeira ganha, e o `Senão` apanha tudo o que sobra.
 - As fronteiras e os três valores que se testam em cada uma: guia 03, secção "Fronteiras e casos de teste".
 - Os resultados esperados escritos antes de haver algoritmo, no passo 4 do exemplo guiado do guia 03. É o ponto de partida do passo 2 deste projeto.
-- O `Para` na primeira forma, com a sua condição escondida: guia [04 Repetição e arrays](04-repeticao-e-arrays.md), secção "A primeira forma: `Para ... de ... até ...`".
+- O `Enquanto`, com a inicialização, a condição e a atualização. Está no guia [04 Repetição e arrays](04-repeticao-e-arrays.md), nas secções "Enquanto: repetir enquanto a condição for verdadeira" e "As três peças de um ciclo".
+- O operador `e`, para exigir várias condições ao mesmo tempo: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "O operador `e`".
 - A pergunta que decide entre `Enquanto` e `Para`: guia 04, secção "Escolher entre `Enquanto` e `Para`".
 - O contador: guia 04, secção "O contador".
 - A regra de que um contador nasce antes do ciclo: guia 04, secção "Inicializar fora do ciclo".
@@ -66,9 +67,9 @@ Não tens de resolver este projeto sozinho. O professor resolve-o contigo, no qu
 
 Muitas vezes o professor vai parar e perguntar o que se faz a seguir. É nesse momento que se aprende, porque és tu que decides antes de veres a decisão escrita. Uma resposta errada dita em voz alta, numa aula destas, não custa nada e ajuda a turma inteira. Muitas vezes é o erro que outros também iam cometer.
 
-Precisas só do caderno e de um lápis. Não precisas de dados na aula, e há uma boa razão para isso.
+Precisas só do caderno e de um lápis.
 
-O algoritmo deste projeto não lança dados. São os jogadores que lançam dados verdadeiros, e cada um escreve o valor que saiu. O algoritmo só faz o que é preciso fazer com esses valores: comparar, contar e decidir. Se fosse o algoritmo a inventar os valores, cada execução dava um duelo diferente, e um caso de teste nunca se podia repetir. Quando um resultado parecesse errado, não havia maneira de voltar a ver o mesmo duelo para procurar o erro. Assim, cada caso de teste é uma lista de valores escrita por ti. Executa-se as vezes que quiseres, sempre com o mesmo resultado.
+Em cada ronda, os jogadores escolhem os números e escrevem-nos pela ordem do jogo. O algoritmo lê esses valores, compara-os, conta as rondas ganhas e decide o vencedor do duelo. Para testar, podes preparar valores para cinco rondas. Se o duelo terminar antes, os valores que sobrarem ficam por ler. Depois usas essa mesma lista em cada execução. Assim, podes repetir um duelo com as mesmas entradas para procurar um erro e confirmar a correção.
 
 Este documento é mais comprido do que o tempo da aula deixa ler, e é de propósito. Na aula, o professor diz em poucas palavras o que os passos 2, 5 e 6 explicam por extenso. Em casa, relê essas explicações com calma. São elas que vais consultar no projeto 2 e na avaliação.
 
@@ -78,13 +79,13 @@ No fim, guardas o projeto no teu portefólio. A secção "O que fica no teu port
 
 ## O jogo
 
-> Dois jogadores fazem um duelo de dados de cinco rondas. Em cada ronda, cada jogador lança um dado verdadeiro, de seis faces, e escreve o valor que saiu. Primeiro escreve o jogador 1, e depois o jogador 2. Quem tirar mais ganha a ronda, e o algoritmo escreve "Ronda para o jogador 1" ou "Ronda para o jogador 2". Se os dois tirarem o mesmo, escreve "Ronda empatada". No fim das cinco rondas, ganha o duelo quem tiver ganho mais rondas. O algoritmo escreve então "Ganhou o jogador 1" ou "Ganhou o jogador 2".
+> Dois jogadores disputam um duelo com um máximo de cinco rondas. Em cada ronda, o jogador 1 escolhe um número inteiro entre 1 e 6 e escreve-o. Depois, o jogador 2 faz o mesmo. Quem escolher o número maior ganha a ronda, e o algoritmo escreve "Ronda para o jogador 1" ou "Ronda para o jogador 2". Se os dois escolherem o mesmo número, escreve "Ronda empatada". O duelo termina logo que um jogador ganhe três rondas, ou depois da quinta ronda. No fim, ganha o duelo quem tiver ganho mais rondas. O algoritmo escreve então "Ganhou o jogador 1" ou "Ganhou o jogador 2".
 
-Por exemplo, numa ronda em que o jogador 1 tira 4 e o jogador 2 tira 2, o algoritmo escreve "Ronda para o jogador 1". Numa ronda em que o jogador 1 tira 3 e o jogador 2 tira 6, escreve "Ronda para o jogador 2".
+Por exemplo, numa ronda em que o jogador 1 escolhe 4 e o jogador 2 escolhe 2, o algoritmo escreve "Ronda para o jogador 1". Numa ronda em que o jogador 1 escolhe 3 e o jogador 2 escolhe 6, escreve "Ronda para o jogador 2".
 
-Lê o enunciado duas vezes, como no passo 1 do exemplo guiado do guia 01. Na primeira leitura, percebe o jogo. Na segunda, de lápis na mão, sublinha os números e as mensagens que o algoritmo tem de escrever. Sublinha também as palavras que dizem quando acontece cada coisa, como "em cada ronda" e "no fim das cinco rondas". São essas palavras que vão decidir, no passo 3, o que fica dentro do ciclo e o que fica fora dele.
+Lê o enunciado duas vezes, como no passo 1 do exemplo guiado do guia 01. Na primeira leitura, percebe o jogo. Na segunda, de lápis na mão, sublinha os números e as mensagens que o algoritmo tem de escrever. Sublinha também as palavras que dizem quando acontece cada coisa. São exemplos "em cada ronda", "logo que um jogador ganhe três rondas" e "depois da quinta ronda". São essas palavras que vão decidir, no passo 3, o que fica dentro do ciclo e o que fica fora dele.
 
-Antes do passo 1, inventa um duelo com o colega do lado. São cinco rondas, com valores à vossa escolha, escritos em duas colunas, uma por jogador. Decidam, só com o enunciado, o que o algoritmo devia escrever em cada ronda e no fim. Guardem esse duelo. Pode vir a ser um dos vossos casos de teste, e pode também levar-vos à pergunta que o passo 1 vai fazer.
+Antes do passo 1, inventa um duelo com o colega do lado. Preparem valores para cinco rondas, escritos em duas colunas, uma por jogador. Apliquem a regra de paragem e deixem por usar os valores das rondas que não se jogam. Decidam, só com o enunciado, o que o algoritmo devia escrever em cada ronda e no fim. Guardem esse duelo. Pode vir a ser um dos vossos casos de teste, e pode também levar-vos à pergunta que o passo 1 vai fazer.
 
 ## Passo 1: o contrato
 
@@ -105,7 +106,7 @@ O professor escreve o contrato no quadro, parte a parte, e tu copias. A coluna d
 
 Pensa nestas perguntas antes de o professor avançar, e escreve as tuas respostas a lápis, na margem do caderno:
 
-1. Quantos valores escreve cada jogador ao longo de um duelo? E os dois juntos? Por que ordem chegam ao algoritmo?
+1. Qual é o mínimo e o máximo de valores que cada jogador escreve ao longo de um duelo? E os dois juntos? Por que ordem chegam ao algoritmo?
 2. Que valores pode ter cada entrada? Pode aparecer um 0, um 7 ou um 2,5? Que palavras do enunciado te deixam responder a isto?
 3. Há algum número no enunciado que nunca muda de um duelo para outro? Como é que se escreve um valor destes no pseudocódigo? (Guia 02, "Constantes".)
 4. O que é que o algoritmo escreve durante o jogo, e quantas vezes? E o que escreve no fim?
@@ -127,7 +128,7 @@ O guia 01 diz o que fazer, na secção "Dados relevantes e pormenores do context
 
 No guia 01, na secção "O contrato de entrada e saída", viste porque é que um contrato se chama assim: é um acordo. Quem usa o algoritmo compromete-se a dar entradas dentro do combinado, e o algoritmo compromete-se a dar a saída prometida. Se alguém der uma entrada fora do combinado, há duas hipóteses. Ou o contrato diz o que acontece nesse caso, ou deixa claro que esse caso não está coberto.
 
-Validar uma entrada é verificar se o valor é aceitável e decidir o que fazer quando não é. Está explicado no guia 03, na secção "Casos válidos, casos inválidos e validação". Vai ser trabalhado em aula antes do projeto 2, que vai precisar disso. Este projeto pode dispensar a validação, desde que o contrato diga porquê, numa frase escrita. A resposta à pergunta 2 é o sítio onde essa frase nasce. Repara na forma como o enunciado descreve o dado e de onde vem cada valor que o jogador escreve.
+Validar uma entrada é verificar se o valor é aceitável e decidir o que fazer quando não é. Está explicado no guia 03, na secção "Casos válidos, casos inválidos e validação". Vai ser trabalhado em aula antes do projeto 2, que vai precisar disso. Este projeto pode dispensar a validação, desde que o contrato diga porquê, numa frase escrita. A resposta à pergunta 2 é o sítio onde essa frase nasce. Repara no tipo de número e nos limites que o enunciado pede. Neste projeto, o contrato assume que os jogadores cumprem o combinado. Entradas fora do tipo ou do intervalo combinados não estão cobertas.
 
 Uma frase destas, no contrato, chama-se uma **suposição**: uma coisa que o contrato dá como certa e que o algoritmo não verifica. Escreve-se nas entradas, ao pé dos valores a que diz respeito. Uma suposição escrita é honesta, porque quem lê o contrato fica a saber em que condições o algoritmo funciona. Uma suposição que ninguém escreveu é um erro à espera de acontecer. Só se descobre no dia em que a coisa dada como certa falha.
 
@@ -149,9 +150,9 @@ Há uma segunda vantagem. Enquanto não há algoritmo, não há nada para olhar 
 
 ### Como se escreve um caso deste jogo
 
-Neste jogo, cada caso de teste é um duelo inteiro: dez valores, dois por ronda. Para os escreveres depressa e sem confusões, escreve cada ronda como um par entre parênteses, com o valor do jogador 1 primeiro. O par (4, 2) quer dizer que o jogador 1 tirou 4 e o jogador 2 tirou 2. Um caso são cinco pares, pela ordem das rondas.
+Neste jogo, cada caso de teste é um duelo inteiro: dois valores por ronda jogada, num máximo de dez valores. Para os escreveres depressa e sem confusões, escreve cada ronda como um par entre parênteses, com o valor do jogador 1 primeiro. O par (4, 2) quer dizer que o jogador 1 escolheu 4 e o jogador 2 escolheu 2. Podes preparar cinco pares, pela ordem das rondas. Se alguém chegar às três vitórias antes do fim, os pares seguintes ficam por ler. Regista também quantas rondas se jogam.
 
-O resultado esperado de um caso é tudo o que o algoritmo tem de escrever, além das perguntas aos jogadores. São a mensagem de cada uma das cinco rondas e a mensagem do fim. Para caber na tabela, podes abreviar as mensagens das rondas:
+O resultado esperado de um caso é tudo o que o algoritmo tem de escrever, além das perguntas aos jogadores. São a mensagem de cada ronda jogada e a mensagem do fim. Também é preciso confirmar que o algoritmo não pede valores depois de o duelo terminar. Para caber na tabela, podes abreviar as mensagens das rondas:
 
 - J1 quer dizer "Ronda para o jogador 1";
 - J2 quer dizer "Ronda para o jogador 2";
@@ -159,14 +160,14 @@ O resultado esperado de um caso é tudo o que o algoritmo tem de escrever, além
 
 A mensagem do fim escreve-se por inteiro. Não deixes as mensagens das rondas de fora. Um algoritmo que acerta no fim e escreve mal uma ronda está errado, e só uma tabela com as rondas o mostra.
 
-Para calcular o resultado esperado de um caso não precisas de algoritmo nenhum. Decide cada ronda pelo enunciado e faz um risco ao lado do jogador que a ganhou. No fim, compara os riscos dos dois.
+Para calcular o resultado esperado de um caso não precisas de algoritmo nenhum. Decide cada ronda pelo enunciado e faz um risco ao lado do jogador que a ganhou. Aplica a regra de paragem antes de passares ao par seguinte. No fim, compara os riscos dos dois.
 
 ### Os três tipos de caso
 
 A tabela tem estas colunas, que se preenchem agora:
 
-| N.º | Tipo | Entradas, ronda a ronda | Resultado esperado | Porque foi escolhido |
-| ---: | --- | --- | --- | --- |
+| N.º | Tipo | Entradas preparadas, ronda a ronda | Rondas lidas | Resultado esperado | Porque foi escolhido |
+| ---: | --- | --- | ---: | --- | --- |
 
 No passo 5, depois de executar, acrescentam-se mais duas, "Resultado obtido" e "Passou?".
 
@@ -176,22 +177,22 @@ A coluna "Tipo" é nova. Nos guias, as tabelas de casos tinham as entradas, o re
 - Um caso de **fronteira** está no sítio onde a resposta do algoritmo muda, ou imediatamente ao lado dele. São exemplos a nota 10 e a nota 9 do guia 03. Viste na secção "Fronteiras e casos de teste" porque é que os erros de decisão se concentram aí. Uma comparação com `>=` no lugar de `>`, ou ao contrário, dá o mesmo resultado em todos os valores, menos no da fronteira. Para cada fronteira, testa-se o valor que está em cima dela e os vizinhos de um lado e do outro. O caso no limite de uma regra do guia 01, como os 24 livros, é um caso destes. Os casos extremos do guia 01, como o zero, também se marcam como fronteira, porque estão na ponta do que pode acontecer.
 - Um caso **inválido** tem uma entrada que não cumpre o contrato, como a nota 21 do guia 03. Serve para ver o que o algoritmo faz com ela: se a trata como o contrato manda, ou se a aceita como se fosse boa.
 
-Uma tabela bem feita tem casos dos três tipos, a não ser que o contrato diga porque é que um deles não pode aparecer. É para isso que o tipo se escreve: quem lê a tabela vê logo se falta algum, e porquê.
+Uma tabela bem feita tem casos dos três tipos, a não ser que o contrato exclua explicitamente algum deles. É para isso que o tipo se escreve: quem lê a tabela vê logo se falta algum, e porquê.
 
 ### Os casos deste jogo
 
-Este jogo tem fronteiras em dois sítios diferentes. Uma está dentro de cada ronda, quando se comparam os dois dados. A outra está no fim do duelo, quando se comparam as rondas ganhas. No quadro, a tabela vai ter cerca de seis casos.
+Este jogo tem fronteiras em dois sítios diferentes. Uma está dentro de cada ronda, quando se comparam os dois números escolhidos. A outra está no fim do duelo, quando se comparam as rondas ganhas. No quadro, a tabela começa com cerca de seis casos. Acrescentam-se casos de paragem à terceira e à quarta ronda, para os dois jogadores.
 
-Nesta tabela não vão aparecer casos do tipo inválido. Não é esquecimento, e não pode parecer esquecimento a quem ler o teu portefólio. Uma tabela sem casos inválidos só está completa se o contrato disser porque é que não há entradas inválidas. Se o contrato não o disser, falta uma linha à tabela, ou falta uma frase ao contrato. Quando o professor escrever a tabela, confirma que a razão ficou escrita no passo 1.
+Nesta tabela não vão aparecer casos do tipo inválido. Não é esquecimento, e não pode parecer esquecimento a quem ler o teu portefólio. Uma tabela sem casos inválidos só está completa se o contrato disser que essas entradas não estão cobertas. Se o contrato não o disser, falta uma linha à tabela, ou falta uma frase ao contrato. Quando o professor escrever a tabela, confirma que a razão ficou escrita no passo 1.
 
 Antes de o professor avançar, pensa nestas perguntas:
 
 1. Numa ronda, onde é que a resposta muda de "Ronda para o jogador 1" para "Ronda para o jogador 2"? Que par de valores fica exatamente em cima dessa fronteira, e que pares ficam imediatamente de um lado e do outro?
 2. No fim do duelo, onde é que a resposta muda de um vencedor para o outro? Que duelo fica exatamente em cima dessa fronteira?
-3. O duelo tem sempre cinco rondas, por isso este jogo não tem o caso de zero voltas do guia 04. Há algum duelo em que nenhum jogador chega a ganhar uma ronda? O que esperas que o algoritmo escreva nesse duelo?
+3. O duelo começa sempre com uma ronda, por isso não tem o caso de zero voltas do guia 04. Há algum duelo em que nenhum jogador chega a ganhar uma ronda? O que esperas que o algoritmo escreva nesse duelo?
 4. Consegues escrever o resultado esperado de um duelo em que os dois ganharam o mesmo número de rondas sem a decisão do passo 1? Porquê?
-5. A ordem pela qual as rondas são ganhas pode mudar o vencedor do duelo? Que duelo escolherias para mostrar que um algoritmo não se deixa enganar pelo que aconteceu na última ronda?
-6. Para ganhar o duelo, um jogador precisa de ganhar três rondas? Pode alguém ganhar com menos?
+5. A ordem dos pares preparados pode mudar o momento da paragem? Que caso escolherias para mostrar que o resultado depende da contagem, e não só da última ronda jogada?
+6. Em que situações o duelo termina antes da quinta ronda? Depois de cinco rondas, pode alguém ganhar com menos de três vitórias?
 7. Olha para a tua tabela. Cada mensagem do enunciado aparece no resultado esperado de pelo menos um caso? E a mensagem que a decisão do passo 1 vier a criar?
 
 ## Passo 3: o algoritmo
@@ -222,7 +223,7 @@ Pensa nestas perguntas antes de o professor avançar:
 3. Para decidir, no fim, quem ganhou o duelo, o que é que o algoritmo tem de ir guardando ao longo das rondas? Que padrão do guia 04 é este?
 4. Quantas variáveis dessas são precisas? O enunciado manda escrever quantas rondas ficaram empatadas? Uma variável que é atualizada e nunca é usada faz falta? Decide e justifica.
 5. Onde nascem essas variáveis, antes do ciclo ou dentro dele? O que acontecia se nascessem dentro? (Guia 04, "Inicializar fora do ciclo".)
-6. Os valores dos dados aparecem pela primeira vez dentro do ciclo. Em que linha levam o tipo? (Guia 02, "A linha onde a variável nasce".) Essa linha escreve-se uma vez e executa-se cinco. O que acontece, em cada ronda, ao valor da ronda anterior? E porque é que, para os dados, a linha pode ficar dentro do ciclo? Compara com a tua resposta à pergunta 5.
+6. Os números escolhidos aparecem pela primeira vez dentro do ciclo. Em que linha levam o tipo? (Guia 02, "A linha onde a variável nasce".) Essa linha escreve-se uma vez e executa-se em cada ronda jogada. O que acontece, em cada ronda, ao valor da ronda anterior? E porque é que, para os números escolhidos, a linha pode ficar dentro do ciclo? Compara com a tua resposta à pergunta 5.
 7. Dentro do ciclo, a ronda tem três resultados possíveis. Por que ordem fazes as perguntas, e qual dos três fica no `Senão`? Precisas de escrever a condição desse último, ou o `Senão` chega? Porquê? (Guia 03, "Seleção encadeada".)
 8. Onde fica a decisão do duelo: dentro do ciclo ou depois dele? O que aparecia no ecrã se ficasse no sítio errado?
 9. Que ramo da decisão do fim existe só por causa da decisão do passo 1?
@@ -233,11 +234,11 @@ Com o algoritmo escrito, faz uma pergunta que só agora se pode fazer, porque pr
 
 Um pseudocódigo não corre num computador. Executá-lo é fazer o trace à mão, como no guia 02. Para um ciclo, a forma mais curta é a tabela de iterações do guia 04. Tem uma linha por cada teste da condição do ciclo. Cada linha mostra a fotografia do estado nesse momento, a condição com os valores substituídos e o que acontece durante a volta seguinte.
 
-No `Para` da primeira forma, a condição está escondida no "até". Como o guia 04 explica na secção "A primeira forma: `Para ... de ... até ...`", quer dizer "continua enquanto a variável de controlo for menor ou igual ao limite". Na tabela, escreve-se por extenso, com os valores.
+No `Enquanto`, a condição está escrita na própria linha do ciclo. Na tabela, substitui as variáveis pelos seus valores e avalia a condição completa. O guia 04 explica as três peças do ciclo: a inicialização, a condição e a atualização.
 
 O professor escolhe um dos casos da tabela. Faz a tabela de iterações no quadro, com a turma a dizer cada valor antes de ele o escrever. A tabela tem estas colunas:
 
-- uma para a variável do `Para`;
+- uma para o número da ronda;
 - uma para cada valor lido;
 - uma para cada contador;
 - a da condição;
@@ -249,9 +250,9 @@ Pensa nestas perguntas antes de o professor avançar:
 
 1. Se só pudesses fazer a tabela de iterações de um dos casos, qual escolhias? Porquê esse?
 2. Antes de começar: quantas linhas vai ter a tabela? Porquê esse número, e não o número de rondas?
-3. Na primeira linha, que valores têm as colunas dos dados? Porquê?
+3. Na primeira linha, que valores têm as colunas dos números escolhidos? Porquê?
 4. Depois de uma ronda empatada, que colunas mudam na linha seguinte, e quais ficam iguais?
-5. Quanto vale a variável do `Para` na última linha? Pode usar-se esse valor depois do ciclo? (Guia 04, regra 4 do `Para`.)
+5. Quanto vale `ronda` na última linha? Que parte da condição fez o ciclo terminar? E o que aconteceria se faltasse a atualização de `ronda`?
 6. Depois da última linha, que instruções são executadas, e que mensagem aparece no fim? Bate certo com o resultado esperado que escreveste no passo 2?
 
 Quando a tabela estiver feita, confere-a com a regra do guia 02. Uma variável fica "sem valor" até à linha onde nasce, e as constantes não têm coluna.
@@ -260,7 +261,7 @@ Quando a tabela estiver feita, confere-a com a regra do guia 02. Uma variável f
 
 A tabela de iterações prova que o algoritmo funciona para um caso, e não diz nada sobre os outros. Por isso, executam-se todos os casos da tabela do passo 2, e não só aquele de que se fez a tabela de iterações.
 
-Não precisas de uma tabela de iterações inteira para cada caso. Segue cada ronda pela cadeia de decisões, anota a mensagem que o algoritmo escreve e faz um risco no contador que muda. Depois da quinta ronda, aplica a decisão do fim aos riscos que tens. Mas executa o que está escrito, e não o que achas que o algoritmo devia fazer. É a regra mais importante do trace, na secção "Tabela de trace" do guia 02. O guia 02 mostra o que acontece a quem a esquece, em "Preencher o trace com o que se esperava". O trace fica certo, e o algoritmo continua errado.
+Não precisas de uma tabela de iterações inteira para cada caso. Segue cada ronda pela cadeia de decisões, anota a mensagem que o algoritmo escreve e faz um risco no contador que muda. Quando a regra de paragem mandar terminar, aplica a decisão do fim aos riscos que tens. Mas executa o que está escrito, e não o que achas que o algoritmo devia fazer. É a regra mais importante do trace, na secção "Tabela de trace" do guia 02. O guia 02 mostra o que acontece a quem a esquece, em "Preencher o trace com o que se esperava". O trace fica certo, e o algoritmo continua errado.
 
 Na aula, cada par executa um dos casos e diz o resultado em voz alta. Depois, acrescentam-se à tabela as duas colunas que faltavam, "Resultado obtido" e "Passou?", e preenchem-se caso a caso.
 
@@ -312,7 +313,7 @@ Repara como os passos da rotina enchem o registo. O primeiro passo dá as duas p
 Pensa nestas perguntas antes de o professor avançar:
 
 1. Pensa nos erros frequentes dos guias 03 e 04, sobretudo nos que envolvem contadores, a indentação e cadeias de `Se`. Qual deles te parece mais provável num algoritmo como este? Que caso da tabela o apanhava?
-2. O exemplo mínimo é o caso mais pequeno e simples que ainda mostra o erro. Neste jogo não se podem tirar rondas, porque são sempre cinco. Como é que tornas um caso mais simples?
+2. O exemplo mínimo é o caso mais pequeno e simples que ainda mostra o erro. Como podes simplificar os valores sem mudar a situação que revela o erro? Confirma também se o erro permite que a regra de paragem funcione.
 3. A correção que vais escrever explica porque é que o valor ficou errado, ou só acerta o resultado do caso que falhou?
 4. Que casos da tabela já passavam antes da correção? Depois de corrigires, o que te garante que continuam a passar?
 
@@ -345,9 +346,11 @@ As páginas do caderno também contam. Fotografa-as ou passa-as a limpo, e junta
 
 Antes de fechares o caderno, confirma:
 
-- [ ] O contrato tem as entradas, as saídas, as restrições e as condições, cada uma escrita numa frase. A suposição sobre os valores dos dados está nas entradas, e a decisão sobre o que o enunciado não dizia começa por "Decisão:".
+- [ ] O contrato tem as entradas, as saídas, as restrições e as condições, cada uma escrita numa frase. A suposição sobre os números escolhidos está nas entradas, e a decisão sobre o que o enunciado não dizia começa por "Decisão:".
 - [ ] A tabela de casos foi escrita antes do algoritmo, e cada caso tem o tipo e a razão da escolha.
 - [ ] Cada mensagem do enunciado, e a da decisão, aparece no resultado esperado de pelo menos um caso.
+- [ ] Há casos de paragem às três vitórias para ambos os jogadores e casos que chegam à quinta ronda.
+- [ ] O número de rondas lidas coincide com o previsto, e os pares de reserva ficam por ler depois da paragem.
 - [ ] A tabela de iterações tem a linha do último teste, o que dá falso e faz sair do ciclo.
 - [ ] Todos os casos têm o resultado obtido e a coluna "Passou?" preenchida.
 - [ ] O registo de depuração tem as quatro partes, as duas versões do algoritmo e, por baixo, o resultado do teste de regressão.
