@@ -21,6 +21,7 @@ No fim da área de algoritmos há também dois projetos guiados, que fazes com a
 | Área | Módulo |
 | --- | --- |
 | [Algoritmos](01-algoritmos/README.md) | Desenvolver algoritmos |
+| [Python](02-python/README.md) | Criar aplicações em linguagem de programação Python |
 
 ## Como estudar
 
