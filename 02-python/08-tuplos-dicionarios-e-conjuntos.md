@@ -2,7 +2,7 @@
 
 # Tuplos, dicionários e conjuntos
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia aprendes três formas novas de guardar muitos valores de uma vez: os tuplos, os dicionários e os conjuntos. Aprendes também a escolher, para cada problema, a forma de guardar os dados que o serve melhor. Para praticar, há o [laboratório](08-tuplos-dicionarios-e-conjuntos-laboratorio.md) e a [ficha de exercícios](08-tuplos-dicionarios-e-conjuntos-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia aprendes três formas novas de guardar muitos valores de uma vez: os tuplos, os dicionários e os conjuntos. Aprendes também a escolher, para cada problema, a forma de guardar os dados que o serve melhor. Para praticar, há o [laboratório](laboratorios/08-tuplos-dicionarios-e-conjuntos-laboratorio.md) e a [ficha de exercícios](exercicios/08-tuplos-dicionarios-e-conjuntos-exercicios.md) deste tema.
 
 No tema anterior, cada dado do catálogo do clube ficava numa lista própria: os títulos numa, os anos noutra. Para mostrar o ano de um título, era preciso que as duas listas estivessem alinhadas, com os dados de cada jogo no mesmo índice. Neste tema, os dados de um jogo passam a andar juntos. Passas também a procurar um jogo pelo código, sem percorrer a lista, e a tirar os repetidos de uma coleção. Este tema ainda não escreve funções que alteram as coleções que recebem, nem guarda nada em ficheiros. Isso fica para os temas seguintes.
 
@@ -747,7 +747,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](08-tuplos-dicionarios-e-conjuntos-laboratorio.md). Nele constróis o programa do catálogo do clube. Guardas os jogos numa lista de tuplos e depois num dicionário, e procuras um jogo pelo código. Mostras também os géneros sem repetidos e contas os jogos de cada género. Depois faz a [ficha de exercícios](08-tuplos-dicionarios-e-conjuntos-exercicios.md). Tem exercícios com cada coleção, um script com erros para encontrar e uma escolha de coleções para justificar.
+Para praticar este tema, faz o [laboratório](laboratorios/08-tuplos-dicionarios-e-conjuntos-laboratorio.md). Nele constróis o programa do catálogo do clube. Guardas os jogos numa lista de tuplos e depois num dicionário, e procuras um jogo pelo código. Mostras também os géneros sem repetidos e contas os jogos de cada género. Depois faz a [ficha de exercícios](exercicios/08-tuplos-dicionarios-e-conjuntos-exercicios.md). Tem exercícios com cada coleção, um script com erros para encontrar e uma escolha de coleções para justificar.
 
 O tema seguinte é Funções, mutabilidade e transformações legíveis. Vais escrever funções que recebem coleções e devolvem resultados, e ver quando uma função muda a coleção que recebeu. Vais também voltar à abstração, agora com as funções.
 

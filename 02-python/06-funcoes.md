@@ -2,7 +2,7 @@
 
 # Funções
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia passas para Python, com `def` e `return`, as funções que já escrevias em pseudocódigo. Aprendes também a testar cada função sozinha antes de a usar. Para praticar, há o [laboratório](06-funcoes-laboratorio.md) e a [ficha de exercícios](06-funcoes-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia passas para Python, com `def` e `return`, as funções que já escrevias em pseudocódigo. Aprendes também a testar cada função sozinha antes de a usar. Para praticar, há o [laboratório](laboratorios/06-funcoes-laboratorio.md) e a [ficha de exercícios](exercicios/06-funcoes-exercicios.md) deste tema.
 
 Na algoritmia, escreveste funções com `Função` e `devolver`, e seguiste as chamadas à mão. Agora é o computador que as executa. Com as funções, acaba a tradução para Python de tudo o que a algoritmia deu. Por isso, o exemplo guiado fecha com o quadro completo das diferenças. As funções deste tema recebem valores e devolvem um resultado, sem mudar as listas que recebem. As funções que mudam as listas que recebem ficam para o tema 09.
 
@@ -46,7 +46,7 @@ No fim deste guia, consegues:
 - O `print` com vários valores separados por vírgulas, e os comentários com `#`: guia [01 Do pseudocódigo ao Python](01-do-pseudocodigo-ao-python.md).
 - Os três tipos de erro e o traceback lido de baixo para cima: guia [01 Do pseudocódigo ao Python](01-do-pseudocodigo-ao-python.md).
 - Desligar uma linha com um `#` no início, e a opção Toggle Line Comment do menu Edit: guia [01 Do pseudocódigo ao Python](01-do-pseudocodigo-ao-python.md).
-- A rotina de cinco passos para procurar um erro: [projeto 1, Duelo de dados](../01-algoritmos/05-projeto-1-duelo-de-dados.md) da algoritmia, secção "Passo 6: depurar com a rotina da depuração".
+- A rotina de cinco passos para procurar um erro: [projeto 1, Duelo de dados](../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md) da algoritmia, secção "Passo 6: depurar com a rotina da depuração".
 - As variáveis, os nomes com traço baixo e as constantes em maiúsculas: guia [02 Dados e interação](02-dados-e-interacao.md).
 - Os tipos `int`, `float`, `str` e `bool`, e a divisão com `/`, que dá sempre um `float`: guia [02 Dados e interação](02-dados-e-interacao.md).
 - O `None`, o valor que quer dizer "nenhum valor", e o seu tipo, `NoneType`: guia [02 Dados e interação](02-dados-e-interacao.md).
@@ -1020,7 +1020,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](06-funcoes-laboratorio.md). Nele constróis, função a função, o resumo das partidas de uma semana num jogo online, e testas cada função sozinha antes de a usares. Depois faz a [ficha de exercícios](06-funcoes-exercicios.md). Tem chamadas para prever, funções para escrever e testar, um script com erros para encontrar e uma função desconhecida para explicar.
+Para praticar este tema, faz o [laboratório](laboratorios/06-funcoes-laboratorio.md). Nele constróis, função a função, o resumo das partidas de uma semana num jogo online, e testas cada função sozinha antes de a usares. Depois faz a [ficha de exercícios](exercicios/06-funcoes-exercicios.md). Tem chamadas para prever, funções para escrever e testar, um script com erros para encontrar e uma função desconhecida para explicar.
 
 O tema seguinte é [07 Textos e listas que mudam](07-textos-e-listas-que-mudam.md). Até aqui, as listas eram dadas no programa e nunca mudavam de tamanho, e os textos usavam-se inteiros. No tema 07, vais percorrer um texto letra a letra, tirar-lhe partes e acrescentar e tirar elementos de uma lista. As funções deste tema vão continuar a arrumar esse trabalho.
 

@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Funções
 
-Laboratório do tema Funções, do módulo Criar aplicações em linguagem de programação Python. Vais construir, uma função de cada vez, um programa que faz o resumo das partidas de uma semana num jogo online. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](06-funcoes.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Funções, do módulo Criar aplicações em linguagem de programação Python. Vais construir, uma função de cada vez, um programa que faz o resumo das partidas de uma semana num jogo online. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../06-funcoes.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -43,19 +43,19 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Função: um bloco de código com nome, que recebe valores, faz um trabalho e devolve um resultado. Para saber mais, vê a secção "Porque é que se escrevem funções" do [guia](06-funcoes.md).
+- Função: um bloco de código com nome, que recebe valores, faz um trabalho e devolve um resultado. Para saber mais, vê a secção "Porque é que se escrevem funções" do [guia](../06-funcoes.md).
 - `def`: a palavra que começa uma função em Python; é a `Função` do pseudocódigo.
 - `return`: entrega um valor a quem chamou a função e termina a função; é o `devolver` do pseudocódigo.
 - Parâmetro: o nome que a função dá, no cabeçalho, a um valor que vai receber.
 - Argumento: o valor que se dá à função quando se chama, entre os parênteses.
 - Chamar uma função: escrever o nome dela com os argumentos entre parênteses, para ela se executar.
 - Valor devolvido: o valor que a função entrega, e que fica no sítio da chamada.
-- Documentação de uma função, ou docstring: o texto entre aspas triplas, `"""`, por baixo do cabeçalho. Diz o que a função faz, recebe e devolve. Para saber mais, vê a secção "A documentação de uma função" do [guia](06-funcoes.md).
+- Documentação de uma função, ou docstring: o texto entre aspas triplas, `"""`, por baixo do cabeçalho. Diz o que a função faz, recebe e devolve. Para saber mais, vê a secção "A documentação de uma função" do [guia](../06-funcoes.md).
 - Parte principal: as linhas encostadas à margem, depois das funções, que usam as funções e escrevem no ecrã.
 - Variável local: um parâmetro, ou uma variável que nasce dentro de uma função; só existe enquanto ela se executa.
 - `None`: o valor que quer dizer "nenhum valor"; é o que devolve uma função que acaba sem passar por um `return`.
 - Linha de teste: um `print` com uma chamada a uma função e o valor que se espera que ela devolva.
-- Testar uma função sozinha: chamá-la com valores escolhidos e comparar o que devolve com o que calculaste à mão, antes de a usar. Para saber mais, vê a secção "Testar cada função sozinha" do [guia](06-funcoes.md).
+- Testar uma função sozinha: chamá-la com valores escolhidos e comparar o que devolve com o que calculaste à mão, antes de a usar. Para saber mais, vê a secção "Testar cada função sozinha" do [guia](../06-funcoes.md).
 
 ## O que precisas
 
@@ -83,7 +83,7 @@ Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. 
 
 A primeira parte do resumo é o total de pontos da semana. Com o que já sabes, fazia-se com um acumulador e um `for`, na parte principal. Agora, essa conta vai para uma função, com um nome que diz o que ela faz. Na algoritmia escrevias `Função totalDePontos(pontuacoes)` e `devolver total`. Em Python, a `Função` passa a `def` e o `devolver` passa a `return`. O cabeçalho acaba com dois pontos, e o corpo da função vai indentado, como num `if`.
 
-Uma função escrita ainda não faz nada. Só se executa quando alguém a chama, com o nome e os valores entre parênteses. Para saber mais, lê a secção "Escrever uma função com `def` e `return`" do [guia](06-funcoes.md).
+Uma função escrita ainda não faz nada. Só se executa quando alguém a chama, com o nome e os valores entre parênteses. Para saber mais, lê a secção "Escrever uma função com `def` e `return`" do [guia](../06-funcoes.md).
 
 1. Escreve em `partidas.py` este conteúdo e guarda:
 
@@ -140,7 +140,7 @@ Pensa antes de continuares: dentro da função há uma variável `total`. Se esc
 
 O total deu 7200, que bate com a conta do caderno. Mas um caso só não chega para confiar numa função. Uma função que recebe uma lista testa-se com três tipos de lista. São a lista vazia, se a função a aceitar, uma lista com um elemento e uma lista com vários. A documentação diz que a função aceita a lista vazia e que devolve 0.
 
-Testar a função sozinha quer dizer chamá-la com estas listas, antes de a parte principal a usar. Depois compara-se o que ela devolve com o que calculaste à mão. Cada teste é uma linha com um `print`: primeiro a chamada, depois o texto com o valor esperado. Assim, cada linha do ecrã mostra as duas coisas lado a lado. As linhas de teste ficam depois das funções e antes da parte principal. Para saber mais, lê a secção "Testar cada função sozinha" do [guia](06-funcoes.md).
+Testar a função sozinha quer dizer chamá-la com estas listas, antes de a parte principal a usar. Depois compara-se o que ela devolve com o que calculaste à mão. Cada teste é uma linha com um `print`: primeiro a chamada, depois o texto com o valor esperado. Assim, cada linha do ecrã mostra as duas coisas lado a lado. As linhas de teste ficam depois das funções e antes da parte principal. Para saber mais, lê a secção "Testar cada função sozinha" do [guia](../06-funcoes.md).
 
 1. Antes de escreveres os testes, calcula no caderno o que a função deve devolver com cada uma destas listas: `[]`, `[500]` e `[1200, 850, 2000]`.
 
@@ -223,7 +223,7 @@ Pensa antes de continuares: no passo 4, o teste com `[1200, 850, 2000]` apanhou 
 
 A segunda parte do resumo é a média por partida: o total dividido pelo número de partidas. O total já tem uma função, testada. O número de partidas dá-o o `len`. A média pode então ser uma função de uma linha, que chama a `total_de_pontos` lá dentro.
 
-Quando uma chamada está dentro de outra, ou dentro de uma conta, o Python faz primeiro a chamada de dentro. Pensa na chamada como um buraco na linha: o Python vai à função buscar o valor e tapa o buraco com ele. Só depois continua a conta. Para saber mais, lê a secção "Uma chamada dentro de outra" do [guia](06-funcoes.md).
+Quando uma chamada está dentro de outra, ou dentro de uma conta, o Python faz primeiro a chamada de dentro. Pensa na chamada como um buraco na linha: o Python vai à função buscar o valor e tapa o buraco com ele. Só depois continua a conta. Para saber mais, lê a secção "Uma chamada dentro de outra" do [guia](../06-funcoes.md).
 
 A média tem um cuidado. Com a lista vazia, a conta seria 0 / 0, que não tem resultado. Esta função não aceita a lista vazia, e a documentação di-lo, para quem a chamar saber.
 
@@ -341,7 +341,7 @@ Pensa antes de continuares: porque é que valeu a pena testar a `total_de_pontos
 
 A terceira parte do resumo é a classificação de cada partida. As regras são estas: uma partida com 2000 pontos ou mais é excelente; de 1000 a 1999, é boa; abaixo de 1000, é fraca. Os números 2000 e 1000 são regras do jogo, que não mudam enquanto o programa corre. Por isso, vão ser constantes, no início do ficheiro.
 
-A função recebe os pontos de uma partida e devolve um texto. Tem um `if`, um `elif` e um `else`, com um `return` em cada caminho. O `return` termina a função. Em cada chamada, executa-se só um dos três, o do primeiro caminho cuja condição é verdadeira. Para saber mais, lê a secção "O `return` entrega o valor e termina a função" do [guia](06-funcoes.md).
+A função recebe os pontos de uma partida e devolve um texto. Tem um `if`, um `elif` e um `else`, com um `return` em cada caminho. O `return` termina a função. Em cada chamada, executa-se só um dos três, o do primeiro caminho cuja condição é verdadeira. Para saber mais, lê a secção "O `return` entrega o valor e termina a função" do [guia](../06-funcoes.md).
 
 1. Em `partidas.py`, a seguir às duas linhas do comentário do topo, deixa uma linha em branco e escreve as duas constantes:
 
@@ -514,7 +514,7 @@ Pensa antes de continuares: a função podia ter um `print("excelente")` em vez 
 
 A última parte do resumo é contar as partidas que ficaram acima da média. Podia ser uma função só para a média, mas é mais útil uma que conte as partidas acima de um limite qualquer. Assim, a mesma função conta as partidas acima da média, acima de 1000 ou acima de 1500. Para isso, recebe dois valores: a lista e o limite.
 
-Com dois parâmetros, a ordem conta. Os argumentos passam para os parâmetros pela ordem em que estão escritos, e não pelo nome. O primeiro argumento vai para o primeiro parâmetro, e o segundo para o segundo. Para saber mais, lê a secção "Chamar uma função: parâmetros e argumentos" do [guia](06-funcoes.md).
+Com dois parâmetros, a ordem conta. Os argumentos passam para os parâmetros pela ordem em que estão escritos, e não pelo nome. O primeiro argumento vai para o primeiro parâmetro, e o segundo para o segundo. Para saber mais, lê a secção "Chamar uma função: parâmetros e argumentos" do [guia](../06-funcoes.md).
 
 1. A seguir à função `classificar_partida`, com duas linhas em branco antes e depois, escreve a quarta função:
 
@@ -594,7 +594,7 @@ Pensa antes de continuares: a parte principal tem uma variável `pontos`, no cic
 
 O programa está completo e funciona. Falta confirmar que o ficheiro está arrumado pela ordem certa, e perceber porque é que essa ordem não é só uma questão de gosto. Um script com funções arruma-se sempre assim, de cima para baixo: o comentário do topo, as constantes, as funções e a parte principal. Neste laboratório, as linhas de teste, desligadas, ficam entre as funções e a parte principal.
 
-O Python executa o ficheiro de cima para baixo. A linha do `def` é a que cria a função, e antes de o Python passar por ela, a função ainda não existe. Por isso, uma função tem de estar criada antes de a linha que a chama ser executada. Para saber mais, lê a secção "A ordem no ficheiro: constantes, funções e parte principal" do [guia](06-funcoes.md).
+O Python executa o ficheiro de cima para baixo. A linha do `def` é a que cria a função, e antes de o Python passar por ela, a função ainda não existe. Por isso, uma função tem de estar criada antes de a linha que a chama ser executada. Para saber mais, lê a secção "A ordem no ficheiro: constantes, funções e parte principal" do [guia](../06-funcoes.md).
 
 1. Acrescenta dois comentários que mostram as partes do ficheiro. Por cima da linha `PONTOS_EXCELENTE = 2000`, escreve `# As constantes: os pontos que separam as classificações das partidas.` Por cima da linha `pontuacoes = [...]`, escreve `# A parte principal: usa as funções e escreve o resumo da semana.` Guarda e corre. O resultado não muda, porque os comentários não se executam.
 
@@ -760,4 +760,4 @@ O ficheiro não foi guardado. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outr
 - [ ] Sabes dizer, para cada erro que provocaste, que erro era e como o reconheceste.
 - [ ] Consegues explicar, por palavras tuas, o que acontece numa chamada: dos argumentos que passam para os parâmetros ao valor devolvido que tapa o buraco.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

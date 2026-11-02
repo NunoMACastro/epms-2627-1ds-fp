@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Do enunciado ao problema delimitado
 
@@ -6,7 +6,7 @@ Ficha do tema Do enunciado ao problema delimitado, do módulo Desenvolver algori
 
 ## O que precisas de saber
 
-O [guia do tema](01-do-enunciado-ao-problema.md).
+O [guia do tema](../01-do-enunciado-ao-problema.md).
 
 Antes de começares, deves conseguir explicar:
 
@@ -174,4 +174,4 @@ Pista: escolhe um dia da semana para o Tiago começar e faz uma lista dos dias, 
 1. O que já consegues fazer sozinho, sem voltar ao guia?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

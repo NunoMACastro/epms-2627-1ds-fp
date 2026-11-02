@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Decisões e validação
 
@@ -6,13 +6,13 @@ Ficha do tema Decisões e validação, do módulo Desenvolver algoritmos. Treina
 
 ## O que precisas de saber
 
-O [guia do tema](03-decisoes-e-validacao.md). Antes de começar, deves conseguir explicar:
+O [guia do tema](../03-decisoes-e-validacao.md). Antes de começar, deves conseguir explicar:
 
 - a diferença entre `<` e `<=`;
 - as tabelas de verdade do `e` e do `ou`;
 - a regra da seleção encadeada: a primeira condição verdadeira ganha.
 
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Operadores de comparação", "Operadores lógicos: `e`, `ou` e `não`" e "Seleção encadeada". Para o desafio opcional precisas também do `resto`, do [guia 02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
+Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Operadores de comparação", "Operadores lógicos: `e`, `ou` e `não`" e "Seleção encadeada". Para o desafio opcional precisas também do `resto`, do [guia 02](../02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 
 ## Como trabalhar
 
@@ -225,4 +225,4 @@ Confirma que os dois casos dão, no trace, o resultado que previste na tabela an
 1. O que já consegues fazer sozinho?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

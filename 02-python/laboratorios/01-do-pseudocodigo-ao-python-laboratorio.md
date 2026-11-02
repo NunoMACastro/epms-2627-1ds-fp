@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Do pseudocódigo ao Python
 
-Laboratório do tema Do pseudocódigo ao Python, do módulo Criar aplicações em linguagem de programação Python. Vais preparar a pasta dos teus scripts, correr o primeiro e conhecer uma a uma as ferramentas do VS Code. No fim, escreves o ecrã de abertura do adivinha o número, o jogo do projeto 2. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](01-do-pseudocodigo-ao-python.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Do pseudocódigo ao Python, do módulo Criar aplicações em linguagem de programação Python. Vais preparar a pasta dos teus scripts, correr o primeiro e conhecer uma a uma as ferramentas do VS Code. No fim, escreves o ecrã de abertura do adivinha o número, o jogo do projeto 2. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../01-do-pseudocodigo-ao-python.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -30,10 +30,10 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Script: um ficheiro de texto com instruções em Python, com o nome a acabar em `.py`. Para saber mais, vê a secção "Um programa é um algoritmo que o computador executa" do [guia](01-do-pseudocodigo-ao-python.md).
+- Script: um ficheiro de texto com instruções em Python, com o nome a acabar em `.py`. Para saber mais, vê a secção "Um programa é um algoritmo que o computador executa" do [guia](../01-do-pseudocodigo-ao-python.md).
 - Interpretador: o programa que lê o teu script, confirma que está bem escrito e executa as instruções por ordem. É o que se instala quando se instala o Python.
 - Editor de código: um editor de texto feito para escrever código, com cores, números de linha e ajudas à escrita.
-- IDE, ambiente de desenvolvimento integrado: um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas. Para saber mais, vê a secção "O ambiente de desenvolvimento integrado, o IDE" do [guia](01-do-pseudocodigo-ao-python.md).
+- IDE, ambiente de desenvolvimento integrado: um programa que junta numa só janela as ferramentas para escrever, correr e corrigir programas. Para saber mais, vê a secção "O ambiente de desenvolvimento integrado, o IDE" do [guia](../01-do-pseudocodigo-ao-python.md).
 - VS Code: o editor de código das aulas, que, com a extensão Python, funciona como um IDE para Python.
 - Extensão: um programa pequeno que se acrescenta ao VS Code para lhe dar ferramentas novas.
 - Terminal: uma janela onde se escrevem comandos, um por linha, e se carrega em Enter.
@@ -44,7 +44,7 @@ fp-python/
 - Erro de sintaxe: um erro na escrita do código, que faz o Python recusar o programa antes de executar qualquer linha.
 - Erro de execução: um erro que para o programa a meio, numa linha que não se consegue executar.
 - Erro de lógica: um erro que não dá mensagem nenhuma; o programa corre e faz outra coisa do que devia.
-- Traceback: a mensagem de um erro que para o programa a meio. Lê-se de baixo para cima. Para saber mais, vê a secção "Os três tipos de erro" do [guia](01-do-pseudocodigo-ao-python.md).
+- Traceback: a mensagem de um erro que para o programa a meio. Lê-se de baixo para cima. Para saber mais, vê a secção "Os três tipos de erro" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 ## O que precisas
 
@@ -74,7 +74,7 @@ Os nomes dos menus e dos botões são os do VS Code em inglês. Os da preparaç�
 
 ## Fase 1: Correr um script
 
-Na algoritmia, quem executava os algoritmos eras tu, com a tabela de trace. Agora vais pôr o computador a fazê-lo. Para isso, escreves as instruções num ficheiro, o script, e mandas o interpretador do Python executá-lo. O `Escreve:` do pseudocódigo passa a chamar-se `print`, com o texto entre parênteses. Para saber mais, lê a secção "Correr um script" do [guia](01-do-pseudocodigo-ao-python.md).
+Na algoritmia, quem executava os algoritmos eras tu, com a tabela de trace. Agora vais pôr o computador a fazê-lo. Para isso, escreves as instruções num ficheiro, o script, e mandas o interpretador do Python executá-lo. O `Escreve:` do pseudocódigo passa a chamar-se `print`, com o texto entre parênteses. Para saber mais, lê a secção "Correr um script" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 Se fizeste esta fase na primeira aula e o teu `ola.py` corre, lê os passos para relembrares e passa à fase 2.
 
@@ -128,7 +128,7 @@ Pensa antes de continuares: porque é que, com o erro na linha 3, nem o "Olá, P
 
 ## Fase 2: Experimentar na consola do Python
 
-Às vezes só queres saber o que faz uma linha, sem criar um ficheiro. Para isso há a consola do Python: executa uma linha de cada vez e mostra logo o resultado. Para saber mais, lê a secção "A consola do Python, para experimentar uma linha" do [guia](01-do-pseudocodigo-ao-python.md).
+Às vezes só queres saber o que faz uma linha, sem criar um ficheiro. Para isso há a consola do Python: executa uma linha de cada vez e mostra logo o resultado. Para saber mais, lê a secção "A consola do Python, para experimentar uma linha" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 1. No terminal, escreve só `python`, sem nome de ficheiro, e carrega em Enter. No macOS, é `python3`. Se na fase 1 só funcionou o `py`, escreve `py`. O que deves ver: umas linhas com a versão do Python e, na última, `>>>`. Isto quer dizer que estás na consola do Python, à espera de uma linha.
 
@@ -157,7 +157,7 @@ Pensa antes de continuares: como sabes, olhando para o terminal, se estás na co
 
 ## Fase 3: Conhecer as ferramentas do VS Code
 
-O VS Code junta numa só janela as ferramentas de que precisas para escrever, correr e corrigir programas. Por isso se chama a estes programas ambientes de desenvolvimento integrados, ou IDE. Nesta fase vais encontrá-las uma a uma, e escrever cada uma no teu quadro. Não precisas de as decorar: precisas de saber que existem, para as ires buscar quando fizerem falta. Para saber mais, lê a secção "As ferramentas do VS Code" do [guia](01-do-pseudocodigo-ao-python.md).
+O VS Code junta numa só janela as ferramentas de que precisas para escrever, correr e corrigir programas. Por isso se chama a estes programas ambientes de desenvolvimento integrados, ou IDE. Nesta fase vais encontrá-las uma a uma, e escrever cada uma no teu quadro. Não precisas de as decorar: precisas de saber que existem, para as ires buscar quando fizerem falta. Para saber mais, lê a secção "As ferramentas do VS Code" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 1. Olha para o explorador, o painel da esquerda, com o título `FP-PYTHON`. Mostra os ficheiros da pasta, e por agora só o `ola.py`. Carrega no `ola.py`. O que deves ver: o ficheiro abre-se ao centro, no editor, com um separador no topo com o nome `ola.py`. Escreve no quadro: "Explorador (Explorer)", "à esquerda", "ver e criar os ficheiros da pasta".
 
@@ -183,7 +183,7 @@ Pensa antes de continuares: porque é que as cores do VS Code não aparecem quan
 
 ## Fase 4: Correr com o botão
 
-Escrever `python ola.py` de cada vez funciona, mas, num programa que corres muitas vezes, cansa. Com a extensão Python, o VS Code tem um botão que corre o ficheiro aberto e escreve o comando por ti. Se a extensão não estiver instalada, lê os passos desta fase, sem os fazer, e passa à fase 5. Para saber mais, lê a secção "Com o botão de correr" do [guia](01-do-pseudocodigo-ao-python.md).
+Escrever `python ola.py` de cada vez funciona, mas, num programa que corres muitas vezes, cansa. Com a extensão Python, o VS Code tem um botão que corre o ficheiro aberto e escreve o comando por ti. Se a extensão não estiver instalada, lê os passos desta fase, sem os fazer, e passa à fase 5. Para saber mais, lê a secção "Com o botão de correr" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 1. Com o `ola.py` aberto no editor, procura no canto de cima, à direita do editor, um triângulo. Passa o rato por cima dele. O que deves ver: uma pequena caixa com o texto Run Python File, isto é, "correr o ficheiro de Python".
 
@@ -201,7 +201,7 @@ Pensa antes de continuares: se o botão é mais rápido, porque é que vale a pe
 
 ## Fase 5: Ver os erros antes de correr
 
-Um erro de escrita, como um parêntese que ficou por fechar, faz o Python recusar o programa. Com a extensão Python, o VS Code encontra muitos destes erros enquanto escreves, antes de correres. Nesta fase vais provocar dois erros e ver o que o VS Code e o terminal mostram. No fim, dizes de que tipo é cada um. Para saber mais, lê a secção "Os três tipos de erro" do [guia](01-do-pseudocodigo-ao-python.md).
+Um erro de escrita, como um parêntese que ficou por fechar, faz o Python recusar o programa. Com a extensão Python, o VS Code encontra muitos destes erros enquanto escreves, antes de correres. Nesta fase vais provocar dois erros e ver o que o VS Code e o terminal mostram. No fim, dizes de que tipo é cada um. Para saber mais, lê a secção "Os três tipos de erro" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 1. Provoca um erro de sintaxe. No `ola.py`, apaga o `)` do fim da linha 2, para ficar `print("Olá, Python!"`. Não guardes ainda. O que deves ver, com a extensão Python: uma linha ondulada, vermelha, perto do sítio do erro. Sem a extensão, não aparece nada, e passas ao passo 3.
 
@@ -239,7 +239,7 @@ Pensa antes de continuares: nos dois erros desta fase, porque é que no primeiro
 
 ## Fase 6: O ecrã de abertura do adivinha o número
 
-Agora vais escrever um programa a sério, com o que já sabes. No projeto 2 da algoritmia, fizeste o algoritmo do adivinha o número. Antes de um jogo começar, os jogadores precisam de saber como se joga. O programa desta fase escreve esse ecrã. Vais traduzir o pseudocódigo, `Escreve:` a `Escreve:`, e confirmar que o ecrã fica igual ao esperado. Para saber mais, lê o "Exemplo guiado" do [guia](01-do-pseudocodigo-ao-python.md).
+Agora vais escrever um programa a sério, com o que já sabes. No projeto 2 da algoritmia, fizeste o algoritmo do adivinha o número. Antes de um jogo começar, os jogadores precisam de saber como se joga. O programa desta fase escreve esse ecrã. Vais traduzir o pseudocódigo, `Escreve:` a `Escreve:`, e confirmar que o ecrã fica igual ao esperado. Para saber mais, lê o "Exemplo guiado" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 1. Lê o ecrã que o programa tem de escrever. É o resultado esperado, e vais compará-lo com o que o programa escrever:
 
@@ -317,7 +317,7 @@ Pensa antes de continuares: no erro de lógica do passo 5, porque é que o VS Co
 
 ## Fase 7, opcional: Um script sem IDE
 
-Esta fase é para quem tiver um computador com Windows e quiser ver que um programa não precisa do VS Code para correr. Um script é só um ficheiro de texto simples, e o Bloco de Notas também escreve texto simples. Para saber mais, lê a secção "Quando é preciso um IDE, e quando não" do [guia](01-do-pseudocodigo-ao-python.md).
+Esta fase é para quem tiver um computador com Windows e quiser ver que um programa não precisa do VS Code para correr. Um script é só um ficheiro de texto simples, e o Bloco de Notas também escreve texto simples. Para saber mais, lê a secção "Quando é preciso um IDE, e quando não" do [guia](../01-do-pseudocodigo-ao-python.md).
 
 1. Abre o Bloco de Notas do Windows e escreve estas duas linhas:
 
@@ -393,4 +393,4 @@ O ficheiro não foi guardado. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outr
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, o que é um IDE, para que serve, e quando te chegaria um editor simples ou a consola.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

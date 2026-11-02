@@ -2,7 +2,7 @@
 
 # Decisões e validação
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que escolhem o que fazer consoante os dados. Aprendes também a usar essas escolhas para verificar se uma entrada respeita o contrato, antes de a usar. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que escolhem o que fazer consoante os dados. Aprendes também a usar essas escolhas para verificar se uma entrada respeita o contrato, antes de a usar. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](exercicios/03-decisoes-e-validacao-exercicios.md) deste tema.
 
 Até agora, os teus algoritmos executavam sempre as mesmas instruções, pela mesma ordem, fosse qual fosse a entrada. Na aula já trabalhaste as estruturas de seleção, com se, senão se e senão, e já juntaste condições com `e` e `ou` em exercícios. Este guia retoma essas ideias com calma e escreve-as na forma que usamos nas aulas. Depois acrescenta o que ainda falta: os intervalos, as fronteiras e a validação de entradas. Este tema ainda não repete instruções. Um algoritmo que recebe um valor inválido avisa e termina.
 
@@ -679,7 +679,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](03-decisoes-e-validacao-exercicios.md). Tem seis exercícios, do mais simples ao mais completo, e um desafio opcional.
+Para praticar este tema, faz a [ficha de exercícios](exercicios/03-decisoes-e-validacao-exercicios.md). Tem seis exercícios, do mais simples ao mais completo, e um desafio opcional.
 
 O tema seguinte é [Repetição e arrays](04-repeticao-e-arrays.md). No algoritmo deste guia, uma nota inválida termina o algoritmo com uma mensagem. Se a pessoa se enganou, tem de começar tudo outra vez. Seria mais útil o algoritmo voltar a pedir a nota até receber uma válida. Mas para isso tem de repetir instruções, e até agora cada instrução executava-se no máximo uma vez. No guia seguinte vais aprender a escrever repetições, a contar e a somar valores ao longo delas, e a garantir que uma repetição acaba.
 

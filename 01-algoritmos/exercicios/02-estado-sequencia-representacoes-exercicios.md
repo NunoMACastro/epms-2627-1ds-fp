@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Estado, sequência e representações
 
@@ -6,7 +6,7 @@ Ficha do tema Estado, sequência e representações, do módulo Desenvolver algo
 
 ## O que precisas de saber
 
-O [guia do tema](02-estado-sequencia-representacoes.md). Antes de começar, deves conseguir explicar:
+O [guia do tema](../02-estado-sequencia-representacoes.md). Antes de começar, deves conseguir explicar:
 
 - a diferença entre uma variável e uma constante;
 - porque é que o tipo só se escreve na linha onde a variável nasce;
@@ -160,4 +160,4 @@ Escreve as linhas que trocam mesmo os valores de duas variáveis inteiras `a` e 
 1. O que já consegues fazer sozinho?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

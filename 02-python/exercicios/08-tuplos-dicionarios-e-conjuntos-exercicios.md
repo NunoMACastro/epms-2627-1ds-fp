@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Tuplos, dicionários e conjuntos
 
@@ -6,7 +6,7 @@ Ficha do tema Tuplos, dicionários e conjuntos, do módulo Criar aplicações em
 
 ## O que precisas de saber
 
-O [guia do tema](08-tuplos-dicionarios-e-conjuntos.md) e o [laboratório](08-tuplos-dicionarios-e-conjuntos-laboratorio.md).
+O [guia do tema](../08-tuplos-dicionarios-e-conjuntos.md) e o [laboratório](../laboratorios/08-tuplos-dicionarios-e-conjuntos-laboratorio.md).
 
 ## Como trabalhar
 
@@ -292,4 +292,4 @@ Escreve o script `em_comum.py`, que mostra, por ordem alfabética, os jogos que 
 2. No exercício 6, qual dos três erros foi o mais difícil de encontrar, e porquê?
 3. Já consegues prever como fica uma coleção depois de um `add` ou de uma atribuição a uma chave, antes de correr?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Dados e interação
 
-Laboratório do tema Dados e interação, do módulo Criar aplicações em linguagem de programação Python. Vais construir um programa que lê os resultados de uma equipa no torneio de futebol da escola e mostra o resumo dela. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](02-dados-e-interacao.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Dados e interação, do módulo Criar aplicações em linguagem de programação Python. Vais construir um programa que lê os resultados de uma equipa no torneio de futebol da escola e mostra o resumo dela. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../02-dados-e-interacao.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -50,7 +50,7 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Variável: um espaço com um nome, onde se guarda um valor que pode mudar, como em `vitorias = 4`. A variável nasce na primeira linha que lhe dá um valor. Para saber mais, vê a secção "Guardar um valor numa variável" do [guia](02-dados-e-interacao.md).
+- Variável: um espaço com um nome, onde se guarda um valor que pode mudar, como em `vitorias = 4`. A variável nasce na primeira linha que lhe dá um valor. Para saber mais, vê a secção "Guardar um valor numa variável" do [guia](../02-dados-e-interacao.md).
 - Atribuição: a instrução com `=`, que calcula o lado direito e guarda o resultado na variável da esquerda. Lê-se "recebe".
 - Constante: uma variável com o nome todo em maiúsculas, como `PONTOS_POR_VITORIA`, que guarda uma regra do problema e não muda.
 - Tipo: o género de valor. `int` é um número inteiro, `float` um número com parte decimal, escrita com ponto, e `str` um texto, entre aspas.
@@ -60,7 +60,7 @@ fp-python/
 - `round`: a função predefinida que arredonda um número.
 - `type`: a função predefinida que diz de que tipo é um valor.
 - `input`: a função predefinida que escreve uma pergunta e espera que a pessoa escreva e carregue em Enter. Devolve o que ela escreveu, sempre como texto.
-- Converter: transformar um valor de um tipo noutro, como o texto `"4"` no número 4, com a função `int`. Para saber mais, vê a secção "Converter o texto lido num número: `int` e `float`" do [guia](02-dados-e-interacao.md).
+- Converter: transformar um valor de um tipo noutro, como o texto `"4"` no número 4, com a função `int`. Para saber mais, vê a secção "Converter o texto lido num número: `int` e `float`" do [guia](../02-dados-e-interacao.md).
 - Caso de teste: uma entrada, com o resultado esperado calculado à mão a partir do enunciado, para comparar com o que o programa mostra.
 - Traceback: a mensagem de um erro que para o programa a meio. Lê-se de baixo para cima: a última linha diz o que aconteceu, e as de cima dizem onde.
 
@@ -88,7 +88,7 @@ Os nomes dos menus e dos botões são os do VS Code em inglês. São os mesmos d
 
 Um programa que mostra o resumo de uma equipa precisa de se lembrar dos resultados dela. Na algoritmia, um valor que o algoritmo guarda tinha um nome e ficava numa variável, como `int vitorias = 4`. Em Python, a variável escreve-se sem o tipo à frente: `vitorias = 4`. O Python descobre o tipo pelo próprio valor. Os nomes escrevem-se em minúsculas, sem acentos, com um traço baixo entre as palavras: `nome_equipa`, e não `nomeEquipa`.
 
-Nesta fase, os resultados ficam escritos no próprio programa. Na fase 6, passam a ser perguntados a quem usa o programa. Para saber mais, lê a secção "Guardar um valor numa variável" do [guia](02-dados-e-interacao.md).
+Nesta fase, os resultados ficam escritos no próprio programa. Na fase 6, passam a ser perguntados a quem usa o programa. Para saber mais, lê a secção "Guardar um valor numa variável" do [guia](../02-dados-e-interacao.md).
 
 1. No painel Explorer, passa o rato por cima de `FP-PYTHON` e carrega no primeiro ícone, New File.... Escreve o nome `resumo_equipa.py` e carrega em Enter. Cria `resumo_equipa.py` com este conteúdo:
 
@@ -155,7 +155,7 @@ Pensa antes de continuares: em pseudocódigo, como se escrevia a linha 5? E porq
 
 O resumo precisa de duas contas: quantos jogos a equipa fez e quantos pontos tem. Os jogos são as vitórias, mais os empates, mais as derrotas. Os pontos são as vitórias vezes 3, mais os empates vezes 1, porque uma vitória vale 3 pontos e um empate vale 1.
 
-Na conta dos pontos há multiplicações e uma soma. A ordem é a da matemática: primeiro as multiplicações e as divisões, depois as somas e as subtrações. Os parênteses mudam a ordem. Para saber mais, lê a secção "A ordem das contas" do [guia](02-dados-e-interacao.md).
+Na conta dos pontos há multiplicações e uma soma. A ordem é a da matemática: primeiro as multiplicações e as divisões, depois as somas e as subtrações. Os parênteses mudam a ordem. Para saber mais, lê a secção "A ordem das contas" do [guia](../02-dados-e-interacao.md).
 
 1. Substitui todo o conteúdo de `resumo_equipa.py` por este:
 
@@ -211,7 +211,7 @@ Pensa antes de continuares: se escrevesses `pontos = empates * 1 + vitorias * 3`
 
 Na linha 11, o 3 e o 1 são regras do torneio, e não resultados de uma equipa. Quem lê a conta tem de adivinhar o que querem dizer. E se o torneio mudar uma regra, tens de procurar o número no meio das contas.
 
-Na algoritmia, uma regra destas era uma constante, com `const`. O Python não tem `const`: uma constante é uma variável com o nome todo em maiúsculas, que se combina não mudar. Escreve-se no início do programa, para quem lê conhecer as regras antes das contas. Para saber mais, lê a secção "As constantes" do [guia](02-dados-e-interacao.md).
+Na algoritmia, uma regra destas era uma constante, com `const`. O Python não tem `const`: uma constante é uma variável com o nome todo em maiúsculas, que se combina não mudar. Escreve-se no início do programa, para quem lê conhecer as regras antes das contas. Para saber mais, lê a secção "As constantes" do [guia](../02-dados-e-interacao.md).
 
 1. Em `resumo_equipa.py`, logo a seguir à linha em branco da linha 3, acrescenta estas três linhas, e mais uma linha em branco depois delas:
 
@@ -272,7 +272,7 @@ Pensa antes de continuares: se o torneio passasse a dar 2 pontos por empate, que
 
 Os pontos por jogo são os pontos a dividir pelos jogos: 15 a dividir por 9. Antes de pores essa conta no programa, vale a pena ver na consola do Python como ele divide, porque há surpresas. Na consola, o Python executa uma linha de cada vez e mostra logo o resultado, sem precisares de `print`. O que lá escreves não fica guardado em nenhum ficheiro.
 
-Vais usar duas funções predefinidas, que já vêm com o Python. O `type` recebe um valor e diz de que tipo ele é. O `round` recebe um número e devolve-o arredondado. Escreve-se o nome da função e, entre parênteses, o valor. Para saber mais, lê as secções "A divisão com `/` dá sempre um `float`" e "Funções predefinidas" do [guia](02-dados-e-interacao.md).
+Vais usar duas funções predefinidas, que já vêm com o Python. O `type` recebe um valor e diz de que tipo ele é. O `round` recebe um número e devolve-o arredondado. Escreve-se o nome da função e, entre parênteses, o valor. Para saber mais, lê as secções "A divisão com `/` dá sempre um `float`" e "Funções predefinidas" do [guia](../02-dados-e-interacao.md).
 
 1. No terminal, escreve só `python`, sem nome de ficheiro, e carrega em Enter. No macOS, é `python3`. O que deves ver: umas linhas com a versão do Python e, na última, `>>>`. Isto quer dizer que estás na consola do Python, à espera de uma linha.
 
@@ -322,7 +322,7 @@ Pensa antes de continuares: uma equipa com 12 pontos em 4 jogos, que pontos por 
 
 Com o que viste na consola, já podes pôr as duas contas no programa. Os pontos por jogo são os pontos a dividir pelos jogos, arredondados a duas casas decimais. A percentagem de vitórias é a parte dos jogos que a equipa ganhou, vezes 100, arredondada às unidades.
 
-O resultado do `round` pode ficar numa variável, como qualquer outro valor. O `round` recebe o resultado da divisão e devolve-o arredondado, e é esse valor arredondado que fica guardado. Para saber mais, lê a secção "`round`, o arredondamento" do [guia](02-dados-e-interacao.md).
+O resultado do `round` pode ficar numa variável, como qualquer outro valor. O `round` recebe o resultado da divisão e devolve-o arredondado, e é esse valor arredondado que fica guardado. Para saber mais, lê a secção "`round`, o arredondamento" do [guia](../02-dados-e-interacao.md).
 
 1. Em `resumo_equipa.py`, a seguir à linha 15, a dos pontos, acrescenta estas quatro linhas:
 
@@ -406,7 +406,7 @@ Escreve: "Vitórias?"
 int vitorias = ler valor
 ```
 
-No Python, as duas juntam-se numa só, com a função `input`. O `input` escreve a pergunta, espera que a pessoa escreva e carregue em Enter, e devolve o que ela escreveu. Mas devolve sempre um texto. Mesmo que a pessoa escreva 4, chega ao programa o texto `"4"`, com um algarismo lá dentro, e não o número quatro. O passo 1 mostra na consola porque é que isso importa. Para fazer contas, converte-se o texto num número com o `int`, logo na leitura. Para saber mais, lê as secções "Ler do teclado com `input`" e "Converter o texto lido num número: `int` e `float`" do [guia](02-dados-e-interacao.md).
+No Python, as duas juntam-se numa só, com a função `input`. O `input` escreve a pergunta, espera que a pessoa escreva e carregue em Enter, e devolve o que ela escreveu. Mas devolve sempre um texto. Mesmo que a pessoa escreva 4, chega ao programa o texto `"4"`, com um algarismo lá dentro, e não o número quatro. O passo 1 mostra na consola porque é que isso importa. Para fazer contas, converte-se o texto num número com o `int`, logo na leitura. Para saber mais, lê as secções "Ler do teclado com `input`" e "Converter o texto lido num número: `int` e `float`" do [guia](../02-dados-e-interacao.md).
 
 1. Vê primeiro, na consola, o que acontece quando um número está escrito como texto, entre aspas. Abre a consola, como na fase 4, com `python`, ou `python3` no macOS. Prevê cada resultado antes de carregares em Enter:
 
@@ -638,7 +638,7 @@ O ficheiro não foi guardado. O Python corre o que está no disco. Guarda com Ct
 
 Estes desafios são para quem acabou as sete fases. Faz cada um numa cópia do teu programa, ou no mesmo ficheiro, e testa-o com casos calculados à mão antes de correres.
 
-1. O quadro do torneio mostra a percentagem com o sinal colado ao número, como `Percentagem de vitórias: 44%`. Muda a última linha do resumo para aparecer exatamente assim, sem espaço antes do `%`. Pista: com as vírgulas, o `print` põe sempre um espaço entre os valores. A secção "Juntar textos com `+` e `str`" do [guia](02-dados-e-interacao.md) mostra como colar um número a um texto.
+1. O quadro do torneio mostra a percentagem com o sinal colado ao número, como `Percentagem de vitórias: 44%`. Muda a última linha do resumo para aparecer exatamente assim, sem espaço antes do `%`. Pista: com as vírgulas, o `print` põe sempre um espaço entre os valores. A secção "Juntar textos com `+` e `str`" do [guia](../02-dados-e-interacao.md) mostra como colar um número a um texto.
 2. Acrescenta ao programa duas perguntas, os golos marcados e os golos sofridos. No resumo, mostra a diferença de golos e a média de golos marcados por jogo, arredondada a uma casa decimal. Com 4, 3, 2, 14 golos marcados e 9 sofridos, a diferença é 5. Pensa no que a diferença deve mostrar numa equipa que sofreu mais golos do que marcou.
 3. Acrescenta ao resumo os pontos que ficaram por ganhar: quantos pontos faltam à equipa para ter o máximo possível nos jogos que fez. Com 4, 3, 2, são 12. Pista: calcula primeiro quantos pontos teria a equipa se ganhasse todos os jogos.
 
@@ -651,4 +651,4 @@ Estes desafios são para quem acabou as sete fases. Faz cada um numa cópia do t
 - [ ] Consegues explicar, por palavras tuas, porque é que os pontos por jogo aparecem com parte decimal.
 - [ ] Consegues explicar, por palavras tuas, porque é que o valor lido com o `input` se converte com o `int` antes de entrar numa conta.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

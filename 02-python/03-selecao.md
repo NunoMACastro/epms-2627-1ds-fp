@@ -2,7 +2,7 @@
 
 # Seleção
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia, os teus programas passam a decidir. Fazem uma coisa num caso e outra coisa noutro, conforme os valores que leem. Vais traduzir para Python as decisões que já escreves em pseudocódigo e testar cada caminho nas fronteiras. Para praticar, há o [laboratório](03-selecao-laboratorio.md) e a [ficha de exercícios](03-selecao-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia, os teus programas passam a decidir. Fazem uma coisa num caso e outra coisa noutro, conforme os valores que leem. Vais traduzir para Python as decisões que já escreves em pseudocódigo e testar cada caminho nas fronteiras. Para praticar, há o [laboratório](laboratorios/03-selecao-laboratorio.md) e a [ficha de exercícios](exercicios/03-selecao-exercicios.md) deste tema.
 
 Até agora, os teus programas faziam sempre as mesmas contas e escreviam sempre as mesmas linhas, fosse qual fosse o valor lido. A partir deste tema, o que o programa faz depende dos dados. Mas ainda não repete instruções. Se a pessoa escrever um valor que não serve, o programa avisa e acaba. Voltar a pedir o valor é assunto do tema seguinte, o dos ciclos.
 
@@ -913,7 +913,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](03-selecao-laboratorio.md). Nele constróis, fase a fase, dois programas da campanha de recolha de alimentos da escola. O balanço decide o que mostrar conforme os valores lidos, e o posto de recolha usa o `match`. Depois faz a [ficha de exercícios](03-selecao-exercicios.md).
+Para praticar este tema, faz o [laboratório](laboratorios/03-selecao-laboratorio.md). Nele constróis, fase a fase, dois programas da campanha de recolha de alimentos da escola. O balanço decide o que mostrar conforme os valores lidos, e o posto de recolha usa o `match`. Depois faz a [ficha de exercícios](exercicios/03-selecao-exercicios.md).
 
 O tema seguinte é [04 Ciclos while e for](04-ciclos-while-e-for.md). Neste tema, quando a pessoa escreve um valor inválido, o programa avisa e acaba, e é preciso corrê-lo outra vez. No tema seguinte, o programa passa a repetir instruções. Assim, pode voltar a pedir o valor até ele ser válido, e ler muitos valores seguidos, contando-os e somando-os.
 

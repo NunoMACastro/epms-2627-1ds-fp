@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Funções e modelo integrado
 
@@ -6,13 +6,13 @@ Ficha do tema Funções e modelo integrado, do módulo Desenvolver algoritmos. T
 
 ## O que precisas de saber
 
-O [guia do tema](05-funcoes-e-modelo-integrado.md). Antes de começar, deves conseguir explicar:
+O [guia do tema](../05-funcoes-e-modelo-integrado.md). Antes de começar, deves conseguir explicar:
 
 - as quatro fases de uma chamada;
 - a diferença entre `devolver` e `Escreve:`;
 - porque é que uma função só usa os seus parâmetros, as suas variáveis e as constantes.
 
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Chamar uma função" e "`devolver`". Para o exercício 3 precisas também do `resto`, do [guia 02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
+Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "Chamar uma função" e "`devolver`". Para o exercício 3 precisas também do `resto`, do [guia 02](../02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 
 Os exercícios fazem-se em papel.
 
@@ -239,4 +239,4 @@ Os dois testes têm de dar o que previste.
 1. O que já consegues fazer sozinho?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

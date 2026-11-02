@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Do pseudocódigo ao Python
 
@@ -6,7 +6,7 @@ Ficha do tema Do pseudocódigo ao Python, do módulo Criar aplicações em lingu
 
 ## O que precisas de saber
 
-O [guia do tema](01-do-pseudocodigo-ao-python.md) e o [laboratório](01-do-pseudocodigo-ao-python-laboratorio.md).
+O [guia do tema](../01-do-pseudocodigo-ao-python.md) e o [laboratório](../laboratorios/01-do-pseudocodigo-ao-python-laboratorio.md).
 
 ## Como trabalhar
 
@@ -184,4 +184,4 @@ Prevê o que acontece se o correres no Python 3, e qual é a primeira linha de q
 2. Numa frase tua, o que é um IDE e quando é que não precisas dele?
 3. Que ferramenta do VS Code usaste mais nesta ficha?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Projeto 1: Duelo de dados
 
@@ -34,25 +34,25 @@ Os projetos 1 e 2 ficam no teu portefólio e não contam para a avaliação prá
 
 Este projeto não traz pseudocódigo novo. Usa o que está nos guias 01 a 05, e cada passo deste documento diz onde está explicada a ferramenta de que precisa.
 
-- O contrato de entrada e saída, com as entradas, as saídas, as restrições e os exemplos concretos calculados à mão. Está no guia [01 Do enunciado ao problema delimitado](01-do-enunciado-ao-problema.md), secção "O contrato de entrada e saída".
+- O contrato de entrada e saída, com as entradas, as saídas, as restrições e os exemplos concretos calculados à mão. Está no guia [01 Do enunciado ao problema delimitado](../01-do-enunciado-ao-problema.md), secção "O contrato de entrada e saída".
 - A regra da informação que falta, do guia 01, secção "Dados relevantes e pormenores do contexto". Quando o enunciado não diz o que acontece numa situação, não se inventa em silêncio. Decide-se, e escreve-se a decisão.
 - O exemplo mínimo, a entrada mais pequena e simples que ainda mostra uma falha: guia 01, secção "Reproduzir a falha com um exemplo mínimo".
 - A decomposição de um problema em partes mais pequenas: guia 01, secção "Pensamento computacional", em "Decomposição".
-- As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`. Estão no guia [02 Estado, sequência e representações](02-estado-sequencia-representacoes.md), secções "A linha onde a variável nasce" e "Constantes".
+- As variáveis, com o tipo à frente na linha onde nascem, e as constantes, escritas com `const`. Estão no guia [02 Estado, sequência e representações](../02-estado-sequencia-representacoes.md), secções "A linha onde a variável nasce" e "Constantes".
 - A leitura com `ler valor` e a escrita no ecrã com `Escreve:`, do guia 02.
 - A tabela de trace, em que se executa um algoritmo à mão, instrução a instrução: guia 02, secção "Tabela de trace". Faz-se o que está escrito, e não o que achas que o algoritmo devia fazer.
-- As comparações e a cadeia `Se`, `Senão se`, `Senão`: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Seleção encadeada". A primeira condição verdadeira ganha, e o `Senão` apanha tudo o que sobra.
+- As comparações e a cadeia `Se`, `Senão se`, `Senão`: guia [03 Decisões e validação](../03-decisoes-e-validacao.md), secção "Seleção encadeada". A primeira condição verdadeira ganha, e o `Senão` apanha tudo o que sobra.
 - As fronteiras e os três valores que se testam em cada uma: guia 03, secção "Fronteiras e casos de teste".
 - Os resultados esperados escritos antes de haver algoritmo, no passo 4 do exemplo guiado do guia 03. É o ponto de partida do passo 2 deste projeto.
-- O `Enquanto`, com a inicialização, a condição e a atualização. Está no guia [04 Repetição e arrays](04-repeticao-e-arrays.md), nas secções "Enquanto: repetir enquanto a condição for verdadeira" e "As três peças de um ciclo".
-- O operador `e`, para exigir várias condições ao mesmo tempo: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "O operador `e`".
+- O `Enquanto`, com a inicialização, a condição e a atualização. Está no guia [04 Repetição e arrays](../04-repeticao-e-arrays.md), nas secções "Enquanto: repetir enquanto a condição for verdadeira" e "As três peças de um ciclo".
+- O operador `e`, para exigir várias condições ao mesmo tempo: guia [03 Decisões e validação](../03-decisoes-e-validacao.md), secção "O operador `e`".
 - A pergunta que decide entre `Enquanto` e `Para`: guia 04, secção "Escolher entre `Enquanto` e `Para`".
 - O contador: guia 04, secção "O contador".
 - A regra de que um contador nasce antes do ciclo: guia 04, secção "Inicializar fora do ciclo".
 - O caso de zero voltas, em que o ciclo não chega a dar nenhuma volta: guia 04, secção "O ciclo que nunca começa".
 - A tabela de iterações, do guia 04, na secção com o mesmo nome. Cada linha é a fotografia do estado no momento em que o ciclo testa a condição.
 - A rotina da depuração, em resumo: guia 04, no início de "Erros frequentes".
-- Os testes escolhidos antes de olhar para a solução: guia [05 Funções e modelo integrado](05-funcoes-e-modelo-integrado.md), secção "Decompor um problema em funções".
+- Os testes escolhidos antes de olhar para a solução: guia [05 Funções e modelo integrado](../05-funcoes-e-modelo-integrado.md), secção "Decompor um problema em funções".
 - O dossiê de um problema: guia 05, passo 8 do exemplo guiado.
 
 Do guia 05 não precisas de mais nada, porque este algoritmo não precisa de funções. Se quiseres pôr uma parte dele numa função, podes, e não perdes nada por isso.
@@ -361,6 +361,6 @@ O [projeto 2](05-projeto-2-adivinha-o-numero.md) é o jogo de adivinhar um núme
 
 Depois vem a avaliação prática: individual, com 120 minutos e um problema novo, que o professor entrega no dia. O processo é o mesmo dos dois projetos, e podes consultar os dois no teu portefólio. Antes da avaliação, o professor mostra-te a grelha com os critérios.
 
-Até lá, a [ficha do tema 05](05-funcoes-e-modelo-integrado-exercicios.md) serve de prática para os passos deste projeto. O exercício 6 treina o registo de depuração, com as mesmas quatro partes. São o que se observou, o que se esperava, a causa e a correção. O exercício 7, o começo do dossiê, treina o contrato, com o resultado esperado calculado à mão antes de haver algoritmo.
+Até lá, a [ficha do tema 05](../exercicios/05-funcoes-e-modelo-integrado-exercicios.md) serve de prática para os passos deste projeto. O exercício 6 treina o registo de depuração, com as mesmas quatro partes. São o que se observou, o que se esperava, a causa e a correção. O exercício 7, o começo do dossiê, treina o contrato, com o resultado esperado calculado à mão antes de haver algoritmo.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

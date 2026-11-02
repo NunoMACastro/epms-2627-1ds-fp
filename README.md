@@ -12,6 +12,8 @@ Começa pelo guia [Do enunciado ao problema delimitado](01-algoritmos/01-do-enun
 - o laboratório, quando o tema o tem, para seguir passo a passo no computador, quando o professor o indicar, sem precisares de abrir o guia;
 - a ficha de exercícios, para praticares sozinho.
 
+Em cada área, os guias estão na pasta da área. Os laboratórios estão na pasta `laboratorios`, as fichas na pasta `exercicios` e os projetos guiados na pasta `projetos-guiados`. Cada uma destas pastas tem um índice que explica o que é esse tipo de documento. Se tinhas guardado a ligação para um laboratório, uma ficha ou um projeto guiado, procura o documento nessas pastas.
+
 O [índice da área de algoritmos](01-algoritmos/README.md) diz que documentos tem cada tema e quais são opcionais.
 
 No fim da área de algoritmos há também dois projetos guiados, que fazes com ajuda, passo a passo, e a avaliação prática, individual.

@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Ciclos while e for
 
@@ -6,7 +6,7 @@ Ficha do tema Ciclos while e for, do módulo Criar aplicações em linguagem de 
 
 ## O que precisas de saber
 
-O [guia do tema](04-ciclos-while-e-for.md) e o [laboratório](04-ciclos-while-e-for-laboratorio.md).
+O [guia do tema](../04-ciclos-while-e-for.md) e o [laboratório](../laboratorios/04-ciclos-while-e-for-laboratorio.md).
 
 ## Como trabalhar
 
@@ -159,9 +159,9 @@ Quando o ecrã for igual ao esperado, muda `DIAS` para 3 e corre outra vez. Ante
 
 ## Desafio opcional
 
-Traduz para Python o teu algoritmo do [projeto 2, Adivinha o número](../01-algoritmos/05-projeto-2-adivinha-o-numero.md), que está no teu portefólio, no script `adivinha.py`. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo. Se o teu algoritmo usa `Parar`, troca-o por uma bandeira, porque o `Parar` só chega ao Python no tema seguinte.
+Traduz para Python o teu algoritmo do [projeto 2, Adivinha o número](../../01-algoritmos/projetos-guiados/05-projeto-2-adivinha-o-numero.md), que está no teu portefólio, no script `adivinha.py`. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo. Se o teu algoritmo usa `Parar`, troca-o por uma bandeira, porque o `Parar` só chega ao Python no tema seguinte.
 
-As mensagens do enunciado têm de aparecer palavra por palavra, como "Acertaste à tentativa 3!", sem nenhum espaço antes do ponto de exclamação. Com o `print` e as vírgulas, isso não acontece. O guia [02 Dados e interação](02-dados-e-interacao.md) mostra como se junta um número a um texto sem espaços.
+As mensagens do enunciado têm de aparecer palavra por palavra, como "Acertaste à tentativa 3!", sem nenhum espaço antes do ponto de exclamação. Com o `print` e as vírgulas, isso não acontece. O guia [02 Dados e interação](../02-dados-e-interacao.md) mostra como se junta um número a um texto sem espaços.
 
 ## Para ires mais longe
 
@@ -189,4 +189,4 @@ c) Explica numa ou duas frases qual dos dois preferes para este problema, e porq
 2. No exercício 5, qual dos três erros foi o mais difícil de encontrar, e porquê?
 3. Antes de correres um ciclo, já consegues dizer quantas voltas vai dar?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

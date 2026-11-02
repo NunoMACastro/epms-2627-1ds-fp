@@ -2,7 +2,7 @@
 
 # Estado, sequência e representações
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, constantes, tipos e contas. Aprendes também a acompanhar o que acontece dentro de um algoritmo, instrução a instrução, numa tabela de trace. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos em pseudocódigo, com variáveis, constantes, tipos e contas. Aprendes também a acompanhar o que acontece dentro de um algoritmo, instrução a instrução, numa tabela de trace. Lê-se ao teu ritmo, de preferência em mais do que uma vez. Para praticar, há a [ficha de exercícios](exercicios/02-estado-sequencia-representacoes-exercicios.md) deste tema.
 
 No guia anterior escreveste passos em português, numerados. Funcionou, mas o português deixa passar ambiguidades sem dar sinal. Neste guia vais aprender uma forma de escrever algoritmos que ajuda a apanhar essas ambiguidades, o pseudocódigo. Na aula já escreveste as primeiras instruções em pseudocódigo. Este guia arruma essas instruções na forma que usamos nas aulas, a mesma em todos os guias de algoritmos. E explica a razão de cada escolha. Todos os algoritmos deste guia são sequenciais: fazem sempre os mesmos passos, pela mesma ordem. Escolher entre caminhos é o assunto do guia seguinte.
 
@@ -632,7 +632,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](02-estado-sequencia-representacoes-exercicios.md). Tem seis exercícios, um para cada ideia do guia, e um desafio opcional.
+Para praticar este tema, faz a [ficha de exercícios](exercicios/02-estado-sequencia-representacoes-exercicios.md). Tem seis exercícios, um para cada ideia do guia, e um desafio opcional.
 
 O tema seguinte é [Decisões e validação](03-decisoes-e-validacao.md). O algoritmo deste guia faz sempre as mesmas contas, por mais estranha que seja a entrada. Se alguém escrever -30 minutos, o contrato diz que a entrada não é válida. Mas o algoritmo não tem forma de o verificar, e faz as contas na mesma e mostra um resultado sem sentido. Para verificar uma entrada, ou para fazer coisas diferentes consoante os dados, o algoritmo precisa de tomar decisões. No guia seguinte vais aprender a escrever essas decisões em pseudocódigo. Vais aprender também a escolher com cuidado os limites de cada decisão e a testar os valores onde uma decisão muda de resposta.
 

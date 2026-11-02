@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Seleção
 
-Laboratório do tema Seleção, do módulo Criar aplicações em linguagem de programação Python. Vais construir dois programas para a campanha de recolha de alimentos da escola, que decidem o que escrever conforme os valores que leem. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](03-selecao.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Seleção, do módulo Criar aplicações em linguagem de programação Python. Vais construir dois programas para a campanha de recolha de alimentos da escola, que decidem o que escrever conforme os valores que leem. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../03-selecao.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -53,7 +53,7 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Condição: uma pergunta cuja resposta só pode ser `True` ou `False`, como `total_quilos >= 100`. Para saber mais, vê a secção "As comparações dão `True` ou `False`" do [guia](03-selecao.md).
+- Condição: uma pergunta cuja resposta só pode ser `True` ou `False`, como `total_quilos >= 100`. Para saber mais, vê a secção "As comparações dão `True` ou `False`" do [guia](../03-selecao.md).
 - `True` e `False`: os dois valores do tipo `bool`, o verdadeiro e o falso, com maiúscula.
 - Comparação: uma condição que compara dois valores, com `==`, `!=`, `<`, `<=`, `>` ou `>=`. Os sinais são os mesmos do pseudocódigo.
 - `if`: o `Se` do pseudocódigo. Executa o seu bloco só quando a condição é verdadeira.
@@ -89,7 +89,7 @@ Neste laboratório, onde o texto diz `python`, usa o teu comando.
 
 ## Fase 1: As comparações dão `True` ou `False`
 
-Para decidir, um programa faz uma pergunta que só tem duas respostas. "Os quilos chegam à meta?" responde-se com sim ou não. Em Python, a resposta é `True` ou `False`, os dois valores do tipo `bool`, com maiúscula. Uma comparação é uma conta que dá um destes dois valores, tal como `2 + 3` dá 5. Nesta fase experimentas comparações na consola, sem criar ficheiros. Para saber mais, lê a secção "As comparações dão `True` ou `False`" do [guia](03-selecao.md).
+Para decidir, um programa faz uma pergunta que só tem duas respostas. "Os quilos chegam à meta?" responde-se com sim ou não. Em Python, a resposta é `True` ou `False`, os dois valores do tipo `bool`, com maiúscula. Uma comparação é uma conta que dá um destes dois valores, tal como `2 + 3` dá 5. Nesta fase experimentas comparações na consola, sem criar ficheiros. Para saber mais, lê a secção "As comparações dão `True` ou `False`" do [guia](../03-selecao.md).
 
 1. Entra na consola: no terminal, escreve só `python`, com o teu comando, e carrega em Enter. O que deves ver: duas linhas em inglês, a primeira com a versão do Python, e por baixo `>>>`. É a consola, à espera de uma linha de Python.
 
@@ -133,7 +133,7 @@ Pensa antes de continuares: qual é a diferença entre `turmas = 0` e `turmas ==
 
 ## Fase 2: Decidir com `if`
 
-A campanha tem uma meta: 100 quilos de alimentos. O programa deve escrever "Meta atingida!" quando o total chega aos 100, e não escrever nada sobre a meta nos outros casos. No pseudocódigo, escrevias `Se total_quilos >= META_QUILOS`, com a mensagem indentada por baixo. Em Python, o `Se` passa a `if`, e a linha acaba em dois pontos. As linhas indentadas por baixo, quatro espaços para dentro, são o bloco: só se executam quando a condição é verdadeira. A primeira linha que volta à margem do `if` já está fora, e executa-se sempre. Para saber mais, lê as secções "Decidir com `if`" e "Os dois pontos e a indentação" do [guia](03-selecao.md).
+A campanha tem uma meta: 100 quilos de alimentos. O programa deve escrever "Meta atingida!" quando o total chega aos 100, e não escrever nada sobre a meta nos outros casos. No pseudocódigo, escrevias `Se total_quilos >= META_QUILOS`, com a mensagem indentada por baixo. Em Python, o `Se` passa a `if`, e a linha acaba em dois pontos. As linhas indentadas por baixo, quatro espaços para dentro, são o bloco: só se executam quando a condição é verdadeira. A primeira linha que volta à margem do `if` já está fora, e executa-se sempre. Para saber mais, lê as secções "Decidir com `if`" e "Os dois pontos e a indentação" do [guia](../03-selecao.md).
 
 1. Cria o ficheiro `balanco.py`. No painel Explorer, passa o rato por cima de `FP-PYTHON` e carrega no ícone New File.... Escreve o nome `balanco.py` e carrega em Enter. Escreve nele este conteúdo, que é o ficheiro completo:
 
@@ -232,7 +232,7 @@ Pensa antes de continuares: porque é que o caso 100 é mais importante do que o
 
 ## Fase 3: Dois caminhos, com `if` e `else`
 
-O balanço deve mostrar a média por turma: o total a dividir pelo número de turmas. Mas, se nenhuma turma entregou, a conta é uma divisão por zero, que não tem resultado e para o programa. Por isso, como no pseudocódigo, a média só se calcula quando há pelo menos uma turma. Nos outros casos, o programa escreve outra mensagem. São dois caminhos, e escreve-se sempre um deles. O `Senão` do pseudocódigo passa a `else`, com os dois pontos e sem condição, na mesma margem do `if`. Para saber mais, lê a secção "Dois caminhos: `if` e `else`" do [guia](03-selecao.md).
+O balanço deve mostrar a média por turma: o total a dividir pelo número de turmas. Mas, se nenhuma turma entregou, a conta é uma divisão por zero, que não tem resultado e para o programa. Por isso, como no pseudocódigo, a média só se calcula quando há pelo menos uma turma. Nos outros casos, o programa escreve outra mensagem. São dois caminhos, e escreve-se sempre um deles. O `Senão` do pseudocódigo passa a `else`, com os dois pontos e sem condição, na mesma margem do `if`. Para saber mais, lê a secção "Dois caminhos: `if` e `else`" do [guia](../03-selecao.md).
 
 1. Primeiro, vê o problema. Em `balanco.py`, acrescenta estas duas linhas logo a seguir ao `print("Total:", total_quilos, "kg")`, encostadas à margem:
 
@@ -318,7 +318,7 @@ Pensa antes de continuares: há algum caso em que aparecem as duas mensagens, a 
 
 ## Fase 4: Mais de dois caminhos, com a cadeia `elif`
 
-A mensagem da meta tem agora só dois casos: aparece ou não aparece. A organização quer três. Com 200 quilos ou mais, o dobro da meta, o programa dá os parabéns à escola. Com 100 quilos ou mais, diz que a meta foi atingida. Abaixo dos 100, diz quantos quilos faltam. No pseudocódigo, escrevias uma seleção encadeada, com `Se`, `Senão se` e `Senão`. Em Python, o `Senão se` passa a `elif`, numa só palavra, com os dois pontos. As condições avaliam-se de cima para baixo, e só se executa o bloco da primeira que for verdadeira. Se nenhuma for, executa-se o do `else`. Para saber mais, lê a secção "Mais de dois caminhos: a cadeia com `elif`" do [guia](03-selecao.md).
+A mensagem da meta tem agora só dois casos: aparece ou não aparece. A organização quer três. Com 200 quilos ou mais, o dobro da meta, o programa dá os parabéns à escola. Com 100 quilos ou mais, diz que a meta foi atingida. Abaixo dos 100, diz quantos quilos faltam. No pseudocódigo, escrevias uma seleção encadeada, com `Se`, `Senão se` e `Senão`. Em Python, o `Senão se` passa a `elif`, numa só palavra, com os dois pontos. As condições avaliam-se de cima para baixo, e só se executa o bloco da primeira que for verdadeira. Se nenhuma for, executa-se o do `else`. Para saber mais, lê a secção "Mais de dois caminhos: a cadeia com `elif`" do [guia](../03-selecao.md).
 
 1. Em `balanco.py`, substitui as três linhas da meta, desde o comentário `# Esta mensagem só aparece quando a condição é verdadeira.` até ao `print("Meta atingida!")`, por estas:
 
@@ -413,7 +413,7 @@ Pensa antes de continuares: porque é que a condição do `elif` não precisa de
 
 ## Fase 5: Uma decisão dentro de outra
 
-A organização acha que a campanha correu bem quando cada turma trouxe, em média, 10 quilos ou mais, e quer uma mensagem para esse caso. Mas a média só existe quando houve entregas: calcula-se dentro do bloco do `if turmas > 0:`. Por isso, a decisão nova vai para dentro desse bloco. Dentro de um bloco pode estar qualquer instrução, também outro `if`. Fica na mesma margem das outras linhas do bloco, e o seu `print` fica mais quatro espaços para dentro, com oito. No pseudocódigo era igual: cada nível de indentação são quatro espaços. Para saber mais, lê a parte "Uma decisão dentro de outra", na secção "Validar um valor: dentro e fora de um intervalo" do [guia](03-selecao.md).
+A organização acha que a campanha correu bem quando cada turma trouxe, em média, 10 quilos ou mais, e quer uma mensagem para esse caso. Mas a média só existe quando houve entregas: calcula-se dentro do bloco do `if turmas > 0:`. Por isso, a decisão nova vai para dentro desse bloco. Dentro de um bloco pode estar qualquer instrução, também outro `if`. Fica na mesma margem das outras linhas do bloco, e o seu `print` fica mais quatro espaços para dentro, com oito. No pseudocódigo era igual: cada nível de indentação são quatro espaços. Para saber mais, lê a parte "Uma decisão dentro de outra", na secção "Validar um valor: dentro e fora de um intervalo" do [guia](../03-selecao.md).
 
 1. Em `balanco.py`, acrescenta a constante da média boa, na linha a seguir a `META_QUILOS = 100`:
 
@@ -514,7 +514,7 @@ Pensa antes de continuares: porque é que o `if` da média boa não pode ficar e
 
 Quem escreve os valores pode enganar-se. A escola tem 12 turmas. Por isso, o número de turmas tem de estar entre 0 e 12, incluindo os dois, e os quilos não podem ser negativos. Com -3 turmas ou 15 turmas, o balanço daria contas sem sentido, com ar de certas. A validação vem primeiro, como na algoritmia: se os valores forem impossíveis, o programa avisa e não faz mais contas.
 
-Um valor está fora do intervalo de 0 a 12 quando está abaixo de 0 ou acima de 12. Escreve-se `turmas < 0 or turmas > TOTAL_TURMAS`, com o `or` do Python, o `ou` do pseudocódigo: basta falhar um dos lados para estar fora. Os quilos negativos juntam-se com mais um `or`. Tudo o que o programa já fazia passa para dentro do bloco do `else`, porque só faz sentido com valores válidos. É uma decisão dentro de outra, como na fase 5, mas agora com quase todo o programa lá dentro. Para saber mais, lê a secção "Validar um valor: dentro e fora de um intervalo" do [guia](03-selecao.md).
+Um valor está fora do intervalo de 0 a 12 quando está abaixo de 0 ou acima de 12. Escreve-se `turmas < 0 or turmas > TOTAL_TURMAS`, com o `or` do Python, o `ou` do pseudocódigo: basta falhar um dos lados para estar fora. Os quilos negativos juntam-se com mais um `or`. Tudo o que o programa já fazia passa para dentro do bloco do `else`, porque só faz sentido com valores válidos. É uma decisão dentro de outra, como na fase 5, mas agora com quase todo o programa lá dentro. Para saber mais, lê a secção "Validar um valor: dentro e fora de um intervalo" do [guia](../03-selecao.md).
 
 1. Em `balanco.py`, acrescenta a constante do número de turmas da escola, na linha acima de `META_QUILOS = 100`:
 
@@ -625,7 +625,7 @@ Pensa antes de continuares: porque é que o `print("Fim do balanço.")` ficou na
 
 ## Fase 7: Escolher entre valores certos com `match`
 
-No posto de recolha, a pessoa escreve o número do alimento que trouxe, de 1 a 4, e o programa diz a caixa. Cada número tem a sua caixa, e qualquer outro número quer dizer um alimento que a campanha não recolhe. Com o que já sabes, escreve-se uma cadeia de `if` em que cada condição compara o mesmo valor com um número fixo. Para estes casos, o Python tem uma forma mais curta, o `match`. A linha `match tipo:` diz que valor se compara, e cada `case` traz um valor fixo, com o seu bloco. O `case _`, com o traço baixo, apanha qualquer outro valor, como o `else`. O `match` só existe a partir do Python 3.10. Para saber mais, lê a secção "Escolher entre valores certos com `match`" do [guia](03-selecao.md).
+No posto de recolha, a pessoa escreve o número do alimento que trouxe, de 1 a 4, e o programa diz a caixa. Cada número tem a sua caixa, e qualquer outro número quer dizer um alimento que a campanha não recolhe. Com o que já sabes, escreve-se uma cadeia de `if` em que cada condição compara o mesmo valor com um número fixo. Para estes casos, o Python tem uma forma mais curta, o `match`. A linha `match tipo:` diz que valor se compara, e cada `case` traz um valor fixo, com o seu bloco. O `case _`, com o traço baixo, apanha qualquer outro valor, como o `else`. O `match` só existe a partir do Python 3.10. Para saber mais, lê a secção "Escolher entre valores certos com `match`" do [guia](../03-selecao.md).
 
 1. Começa pela versão com `if`. Cria o ficheiro `posto.py`, no painel Explorer, com o ícone New File..., e escreve nele este conteúdo, que é o ficheiro completo:
 
@@ -804,4 +804,4 @@ O ficheiro não foi guardado. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outr
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que os casos de teste de uma decisão se escolhem nas fronteiras. E porque é que, numa cadeia, a ordem das condições muda o resultado.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

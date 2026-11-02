@@ -2,7 +2,7 @@
 
 # Dados e interação
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia, os teus programas passam a guardar valores, a fazer contas e a ler o que a pessoa escreve no teclado. Para praticar, há o [laboratório](02-dados-e-interacao-laboratorio.md) e a [ficha de exercícios](02-dados-e-interacao-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia, os teus programas passam a guardar valores, a fazer contas e a ler o que a pessoa escreve no teclado. Para praticar, há o [laboratório](laboratorios/02-dados-e-interacao-laboratorio.md) e a [ficha de exercícios](exercicios/02-dados-e-interacao-exercicios.md) deste tema.
 
 No tema anterior, os programas só escreviam no ecrã textos e números fixos, sempre iguais. A partir de agora, um programa guarda valores com nome, calcula com eles e responde ao que a pessoa escreve. Vais passar para Python quase tudo o que fizeste no guia 02 da algoritmia. São as variáveis, as constantes, os tipos, as contas, o `ler valor` e o `Escreve:`. Ainda não há decisões nem repetições. Todos os programas deste guia são sequências: cada linha executa-se uma vez, de cima para baixo. As decisões são do tema seguinte, e as repetições do outro a seguir.
 
@@ -1055,7 +1055,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](02-dados-e-interacao-laboratorio.md). Nele constróis, fase a fase, um programa que lê os resultados de uma equipa no torneio de futebol da escola. O programa mostra o resumo da equipa, com os pontos, os pontos por jogo e a percentagem de vitórias. Depois faz a [ficha de exercícios](02-dados-e-interacao-exercicios.md). Tem previsões na consola, uma tabela de trace, scripts curtos de leitura e contas, e um script com erros para encontrar.
+Para praticar este tema, faz o [laboratório](laboratorios/02-dados-e-interacao-laboratorio.md). Nele constróis, fase a fase, um programa que lê os resultados de uma equipa no torneio de futebol da escola. O programa mostra o resumo da equipa, com os pontos, os pontos por jogo e a percentagem de vitórias. Depois faz a [ficha de exercícios](exercicios/02-dados-e-interacao-exercicios.md). Tem previsões na consola, uma tabela de trace, scripts curtos de leitura e contas, e um script com erros para encontrar.
 
 O tema seguinte é [Seleção](03-selecao.md). Os programas deste guia fazem sempre as mesmas contas, por mais estranha que seja a entrada. Com -30 minutos, o `minutos.py` mostra um resultado sem sentido, e com zero jogadores o `cartas.py` para com um erro. No tema seguinte, o programa passa a decidir. Com `if`, `elif` e `else`, o `Se`, o `Senão se` e o `Senão` do pseudocódigo, faz coisas diferentes consoante os dados.
 

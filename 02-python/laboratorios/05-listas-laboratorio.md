@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Listas
 
-Laboratório do tema Listas, do módulo Criar aplicações em linguagem de programação Python. Vais construir, fase a fase, um programa que mostra o estado de uma equipa num jogo, a partir de uma lista. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](05-listas.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Listas, do módulo Criar aplicações em linguagem de programação Python. Vais construir, fase a fase, um programa que mostra o estado de uma equipa num jogo, a partir de uma lista. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../05-listas.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -50,19 +50,19 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Lista: o array do pseudocódigo, em Python; guarda vários valores, numa ordem fixa, com um só nome. Escreve-se entre parênteses retos, com os valores separados por vírgulas. Para saber mais, vê a secção "Uma lista guarda vários valores com um só nome" do [guia](05-listas.md).
+- Lista: o array do pseudocódigo, em Python; guarda vários valores, numa ordem fixa, com um só nome. Escreve-se entre parênteses retos, com os valores separados por vírgulas. Para saber mais, vê a secção "Uma lista guarda vários valores com um só nome" do [guia](../05-listas.md).
 - Elemento: cada valor guardado numa lista.
-- Índice: a posição de um elemento na lista, a contar do 0. O primeiro elemento tem o índice 0. Para saber mais, vê a secção "O índice: a posição de cada elemento" do [guia](05-listas.md).
+- Índice: a posição de um elemento na lista, a contar do 0. O primeiro elemento tem o índice 0. Para saber mais, vê a secção "O índice: a posição de cada elemento" do [guia](../05-listas.md).
 - Último índice válido: o número de elementos menos 1. Numa lista de 5 elementos, é o 4.
 - `IndexError`: o erro de execução que aparece quando se usa um índice que não existe na lista.
-- `len`: a função predefinida que diz quantos elementos tem uma lista. Para saber mais, vê a secção "O `len`: quantos elementos tem a lista" do [guia](05-listas.md).
+- `len`: a função predefinida que diz quantos elementos tem uma lista. Para saber mais, vê a secção "O `len`: quantos elementos tem a lista" do [guia](../05-listas.md).
 - Percorrer uma lista: passar por todos os elementos, um a um, fazendo alguma coisa com cada um.
-- Percorrer pelo valor: com `for vida in pontos_de_vida:`; em cada volta, a variável recebe um elemento. Para saber mais, vê a secção "Percorrer a lista pelo valor, com `for`" do [guia](05-listas.md).
-- Percorrer pelo índice: com `for i in range(0, len(pontos_de_vida)):`; em cada volta, a variável recebe uma posição. Para saber mais, vê a secção "Percorrer a lista pelo índice, com `range` e `len`" do [guia](05-listas.md).
-- Bandeira: uma variável `bool` que começa em `False` e passa a `True` quando acontece o que se procura. Para saber mais, vê a secção "Procurar um valor: a pesquisa com bandeira" do [guia](05-listas.md).
+- Percorrer pelo valor: com `for vida in pontos_de_vida:`; em cada volta, a variável recebe um elemento. Para saber mais, vê a secção "Percorrer a lista pelo valor, com `for`" do [guia](../05-listas.md).
+- Percorrer pelo índice: com `for i in range(0, len(pontos_de_vida)):`; em cada volta, a variável recebe uma posição. Para saber mais, vê a secção "Percorrer a lista pelo índice, com `range` e `len`" do [guia](../05-listas.md).
+- Bandeira: uma variável `bool` que começa em `False` e passa a `True` quando acontece o que se procura. Para saber mais, vê a secção "Procurar um valor: a pesquisa com bandeira" do [guia](../05-listas.md).
 - `break`: termina o ciclo imediatamente; é o `Parar` do pseudocódigo.
 - `continue`: termina só a volta atual e passa à seguinte; é o `Continuar` do pseudocódigo.
-- Lista vazia: a lista sem elementos, `[]`. Para saber mais, vê a secção "A lista vazia e os três casos de teste" do [guia](05-listas.md).
+- Lista vazia: a lista sem elementos, `[]`. Para saber mais, vê a secção "A lista vazia e os três casos de teste" do [guia](../05-listas.md).
 
 ## O que precisas
 
@@ -81,7 +81,7 @@ As mensagens de erro deste laboratório são as do Python 3.14. Num Python mais 
 
 ## Fase 1: A lista e o índice
 
-Uma lista guarda vários valores com um só nome, uns a seguir aos outros. Em vez de cinco variáveis, uma por jogador, a equipa fica numa só, `pontos_de_vida`. Escreve-se como um array do pseudocódigo: os valores entre parênteses retos, separados por vírgulas. Para usar um só elemento, escreve-se o nome da lista e a posição entre parênteses retos. A essa posição chama-se índice, e começa no 0: `pontos_de_vida[0]` é o primeiro jogador. Para saber mais, lê a secção "O índice: a posição de cada elemento" do [guia](05-listas.md).
+Uma lista guarda vários valores com um só nome, uns a seguir aos outros. Em vez de cinco variáveis, uma por jogador, a equipa fica numa só, `pontos_de_vida`. Escreve-se como um array do pseudocódigo: os valores entre parênteses retos, separados por vírgulas. Para usar um só elemento, escreve-se o nome da lista e a posição entre parênteses retos. A essa posição chama-se índice, e começa no 0: `pontos_de_vida[0]` é o primeiro jogador. Para saber mais, lê a secção "O índice: a posição de cada elemento" do [guia](../05-listas.md).
 
 1. Cria o ficheiro novo, para o programa da equipa: no painel Explorer, clica no ícone New File..., escreve `equipa.py` e carrega em Enter. O conteúdo do ficheiro é este:
 
@@ -136,7 +136,7 @@ Pensa antes de continuares: se a equipa tivesse 8 jogadores, que índice tinha o
 
 ## Fase 2: O tamanho da lista, com `len`
 
-O `[4]` da fase 1 só serve para uma equipa de cinco jogadores. Se entrar um sexto jogador, o programa continua a mostrar o quinto como se fosse o último, e não avisa. O Python tem uma função predefinida que diz quantos elementos tem uma lista, o `len`, do inglês *length*, "comprimento". `len(pontos_de_vida)` dá 5, e o último índice é esse número menos 1. Para saber mais, lê a secção "O `len`: quantos elementos tem a lista" do [guia](05-listas.md).
+O `[4]` da fase 1 só serve para uma equipa de cinco jogadores. Se entrar um sexto jogador, o programa continua a mostrar o quinto como se fosse o último, e não avisa. O Python tem uma função predefinida que diz quantos elementos tem uma lista, o `len`, do inglês *length*, "comprimento". `len(pontos_de_vida)` dá 5, e o último índice é esse número menos 1. Para saber mais, lê a secção "O `len`: quantos elementos tem a lista" do [guia](../05-listas.md).
 
 1. Em `equipa.py`, substitui tudo o que está abaixo da linha da lista por estas linhas, para o programa contar os jogadores:
 
@@ -186,7 +186,7 @@ print("Último jogador:", pontos_de_vida[numero_de_jogadores - 1], "pontos de vi
 
 ## Fase 3: Percorrer pelo valor, a vida total e a média
 
-Para saber a vida total da equipa, é preciso somar os cinco jogadores. Em vez de uma conta com cinco parcelas, percorre-se a lista. O `Para cada` do pseudocódigo passa a `for`, e lê-se "para cada vida em pontos de vida". Em cada volta, a variável `vida` recebe o elemento seguinte da lista, do primeiro ao último, e o ciclo acaba sozinho. A isto chama-se percorrer pelo valor, porque a variável recebe o valor de cada elemento. Para saber mais, lê a secção "Percorrer a lista pelo valor, com `for`" do [guia](05-listas.md).
+Para saber a vida total da equipa, é preciso somar os cinco jogadores. Em vez de uma conta com cinco parcelas, percorre-se a lista. O `Para cada` do pseudocódigo passa a `for`, e lê-se "para cada vida em pontos de vida". Em cada volta, a variável `vida` recebe o elemento seguinte da lista, do primeiro ao último, e o ciclo acaba sozinho. A isto chama-se percorrer pelo valor, porque a variável recebe o valor de cada elemento. Para saber mais, lê a secção "Percorrer a lista pelo valor, com `for`" do [guia](../05-listas.md).
 
 1. Em `equipa.py`, acrescenta estas linhas no fim do ficheiro, com uma linha em branco antes, encostadas à margem:
 
@@ -230,7 +230,7 @@ Pensa antes de continuares: o que aconteceria se a linha `total = 0` estivesse d
 
 ## Fase 4: Percorrer pelo índice, o estado de cada jogador
 
-Agora queres uma linha por jogador, como "Jogador 1 tem 80 pontos de vida". O valor já não chega, porque cada linha precisa do número do jogador, que é a sua posição. Percorre-se a lista pelo índice, com o `for` e o `range`. O `range(0, numero_de_jogadores)` dá os números de 0 a 4, os índices da lista: começa no 0 e para logo antes do 5. É o `Para i = 0, i < 5, i++` do pseudocódigo. Para saber mais, lê a secção "Percorrer a lista pelo índice, com `range` e `len`" do [guia](05-listas.md).
+Agora queres uma linha por jogador, como "Jogador 1 tem 80 pontos de vida". O valor já não chega, porque cada linha precisa do número do jogador, que é a sua posição. Percorre-se a lista pelo índice, com o `for` e o `range`. O `range(0, numero_de_jogadores)` dá os números de 0 a 4, os índices da lista: começa no 0 e para logo antes do 5. É o `Para i = 0, i < 5, i++` do pseudocódigo. Para saber mais, lê a secção "Percorrer a lista pelo índice, com `range` e `len`" do [guia](../05-listas.md).
 
 1. Em `equipa.py`, acrescenta estas linhas no fim, com uma linha em branco antes:
 
@@ -271,7 +271,7 @@ Pensa antes de continuares: porque é que aqui não serve o `for vida in pontos_
 
 ## Fase 5: Procurar com uma bandeira
 
-Há algum jogador fora de combate? A resposta é sim ou não. O programa olha para os jogadores um a um. Se encontrar um com 0 pontos de vida, a resposta é sim. Mas só pode responder que não depois de ver a lista toda. A resposta fica guardada numa bandeira, uma variável `bool` que começa em `False` e passa a `True` quando aparece o que se procura. Em Python, escreve-se `False` e `True`, com maiúscula. Para saber mais, lê a secção "Procurar um valor: a pesquisa com bandeira" do [guia](05-listas.md).
+Há algum jogador fora de combate? A resposta é sim ou não. O programa olha para os jogadores um a um. Se encontrar um com 0 pontos de vida, a resposta é sim. Mas só pode responder que não depois de ver a lista toda. A resposta fica guardada numa bandeira, uma variável `bool` que começa em `False` e passa a `True` quando aparece o que se procura. Em Python, escreve-se `False` e `True`, com maiúscula. Para saber mais, lê a secção "Procurar um valor: a pesquisa com bandeira" do [guia](../05-listas.md).
 
 1. Em `equipa.py`, acrescenta estas linhas no fim, com uma linha em branco antes:
 
@@ -301,7 +301,7 @@ Pensa antes de continuares: porque é que a mensagem "Nenhum jogador está fora 
 
 ## Fase 6: Parar com `break`, o primeiro jogador fora de combate
 
-A fase 5 diz que há um jogador fora de combate, mas não diz qual. A resposta é uma posição, e por isso a lista passa a percorrer-se pelo índice. E, depois de encontrar o primeiro, o resto da lista não interessa. O `Parar` do pseudocódigo escreve-se `break` em Python: termina o ciclo imediatamente, e o programa continua na primeira linha a seguir ao ciclo. Para saber mais, lê a secção "Parar a pesquisa com `break`" do [guia](05-listas.md).
+A fase 5 diz que há um jogador fora de combate, mas não diz qual. A resposta é uma posição, e por isso a lista passa a percorrer-se pelo índice. E, depois de encontrar o primeiro, o resto da lista não interessa. O `Parar` do pseudocódigo escreve-se `break` em Python: termina o ciclo imediatamente, e o programa continua na primeira linha a seguir ao ciclo. Para saber mais, lê a secção "Parar a pesquisa com `break`" do [guia](../05-listas.md).
 
 1. Em `equipa.py`, substitui as linhas que acrescentaste na fase 5, do comentário da bandeira até ao fim, por estas:
 
@@ -388,7 +388,7 @@ if not alguem_fora:
 
 ## Fase 7: Mudar os elementos pelo índice, a poção da equipa
 
-A equipa tem uma poção que dá 30 pontos de vida a cada jogador, sem passar dos 100. A poção muda os pontos de vida, e por isso muda os elementos da lista. Um elemento muda-se como uma variável, com o elemento do lado esquerdo do `=`: `pontos_de_vida[1] = 75` põe 75 no lugar do 45. Para mudar um elemento, o programa precisa da posição dele, isto é, do índice. Para saber mais, lê a secção "Mudar um elemento pelo índice" do [guia](05-listas.md).
+A equipa tem uma poção que dá 30 pontos de vida a cada jogador, sem passar dos 100. A poção muda os pontos de vida, e por isso muda os elementos da lista. Um elemento muda-se como uma variável, com o elemento do lado esquerdo do `=`: `pontos_de_vida[1] = 75` põe 75 no lugar do 45. Para mudar um elemento, o programa precisa da posição dele, isto é, do índice. Para saber mais, lê a secção "Mudar um elemento pelo índice" do [guia](../05-listas.md).
 
 1. Os 30 pontos da poção e o máximo de 100 são regras do jogo, e ficam em constantes, no início do programa. Em `equipa.py`, a seguir à primeira linha, o comentário, e à linha em branco, acrescenta estas duas linhas e mais uma linha em branco:
 
@@ -446,7 +446,7 @@ Pensa antes de continuares: o jogador 3 estava fora de combate e ficou com 30 po
 
 ## Fase 8: Saltar com `continue`, quem está fora de combate
 
-A regra do jogo é esta: a poção não cura os jogadores fora de combate. No ciclo da poção, a volta de um jogador com 0 pontos de vida tem de ser saltada. O `Continuar` do pseudocódigo escreve-se `continue` em Python. Termina só a volta atual: as linhas do corpo que estão abaixo dele não se executam nessa volta, e o ciclo passa ao jogador seguinte. Para saber mais, lê a secção "Saltar uma volta com `continue`" do [guia](05-listas.md).
+A regra do jogo é esta: a poção não cura os jogadores fora de combate. No ciclo da poção, a volta de um jogador com 0 pontos de vida tem de ser saltada. O `Continuar` do pseudocódigo escreve-se `continue` em Python. Termina só a volta atual: as linhas do corpo que estão abaixo dele não se executam nessa volta, e o ciclo passa ao jogador seguinte. Para saber mais, lê a secção "Saltar uma volta com `continue`" do [guia](../05-listas.md).
 
 1. No bloco da poção, muda o comentário e acrescenta um `if` com o `continue`, logo no início do corpo do ciclo. O bloco fica assim:
 
@@ -474,7 +474,7 @@ Pensa antes de continuares: como podias fazer o mesmo sem `continue`? A resposta
 
 ## Fase 9: Testar com a equipa vazia, com um jogador e com vários
 
-O programa funciona com a lista do enunciado. Mas um programa com listas testa-se sempre com três listas: a lista vazia, uma lista com um só elemento e uma lista com vários. A lista vazia escreve-se `[]`, e o `len` dela é 0. É a equipa antes de entrar algum jogador. Cada um dos três casos mostra erros diferentes, e é por isso que se testam os três. Para saber mais, lê a secção "A lista vazia e os três casos de teste" do [guia](05-listas.md).
+O programa funciona com a lista do enunciado. Mas um programa com listas testa-se sempre com três listas: a lista vazia, uma lista com um só elemento e uma lista com vários. A lista vazia escreve-se `[]`, e o `len` dela é 0. É a equipa antes de entrar algum jogador. Cada um dos três casos mostra erros diferentes, e é por isso que se testam os três. Para saber mais, lê a secção "A lista vazia e os três casos de teste" do [guia](../05-listas.md).
 
 1. Muda a lista para `pontos_de_vida = []`, guarda e prevê o que acontece antes de correres. Depois corre. O que deves ver:
 
@@ -702,4 +702,4 @@ O ficheiro não foi guardado. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outr
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste. O `IndexError` e o `ZeroDivisionError` são de execução. O `range(1, ...)`, a falta do `break` e a poção pelo valor são de lógica.
 - [ ] Consegues explicar, por palavras tuas, quando percorres uma lista pelo valor e quando a percorres pelo índice.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

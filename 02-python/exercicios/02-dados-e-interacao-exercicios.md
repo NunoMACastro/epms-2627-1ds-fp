@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Dados e interação
 
@@ -6,7 +6,7 @@ Ficha do tema Dados e interação, do módulo Criar aplicações em linguagem de
 
 ## O que precisas de saber
 
-O [guia do tema](02-dados-e-interacao.md) e o [laboratório](02-dados-e-interacao-laboratorio.md).
+O [guia do tema](../02-dados-e-interacao.md) e o [laboratório](../laboratorios/02-dados-e-interacao-laboratorio.md).
 
 ## Como trabalhar
 
@@ -247,4 +247,4 @@ c) Corrige o script mudando o mínimo possível, e confirma que as duas linhas a
 2. No exercício 6, qual dos três erros foi o mais difícil de encontrar, e porquê?
 3. Quando escreves um `input`, já te lembras sozinho de pensar se o valor lido precisa de conversão?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

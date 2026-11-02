@@ -2,7 +2,7 @@
 
 # Listas
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia, os teus programas passam a guardar muitos valores com um só nome, numa lista. Depois percorrem a lista para contar, somar, procurar e saltar valores. Para praticar, há o [laboratório](05-listas-laboratorio.md) e a [ficha de exercícios](05-listas-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia, os teus programas passam a guardar muitos valores com um só nome, numa lista. Depois percorrem a lista para contar, somar, procurar e saltar valores. Para praticar, há o [laboratório](laboratorios/05-listas-laboratorio.md) e a [ficha de exercícios](exercicios/05-listas-exercicios.md) deste tema.
 
 Na algoritmia, já trabalhaste com arrays: as pontuações de uma equipa, as notas de um teste, os quilos de cada turma. Em Python, um array chama-se lista, e escreve-se como no pseudocódigo das aulas. Por isso, vais reconhecer muita coisa. O que é novo é a forma de escrever em Python os ciclos sobre uma lista, o `break` e o `continue`. É nova também a função `len`, que diz quantos elementos tem uma lista.
 
@@ -805,7 +805,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia,
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](05-listas-laboratorio.md) e depois a [ficha de exercícios](05-listas-exercicios.md). O laboratório constrói um programa sobre a equipa de um jogo, e a ficha tem exercícios para contar, somar, mudar e procurar em listas.
+Para praticar este tema, faz o [laboratório](laboratorios/05-listas-laboratorio.md) e depois a [ficha de exercícios](exercicios/05-listas-exercicios.md). O laboratório constrói um programa sobre a equipa de um jogo, e a ficha tem exercícios para contar, somar, mudar e procurar em listas.
 
 O tema seguinte é [06 Funções](06-funcoes.md). Os programas deste guia já repetem partes: somar uma lista, calcular uma média, procurar um valor. No tema seguinte, vais dar um nome a cada uma dessas partes, com as funções do Python. Vais também testá-las sozinhas, antes de as juntar.
 

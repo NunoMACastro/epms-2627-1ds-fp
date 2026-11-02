@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Projeto 2: Adivinha o número
 
@@ -31,27 +31,27 @@ Este projeto fica no teu portefólio e não conta para a avaliação prática, p
 
 Este projeto não traz nenhuma instrução nova de pseudocódigo. Usa o que aprendeste nos guias e o processo que o professor mostrou no projeto 1, juntando tudo num problema maior.
 
-- O contrato de entrada e saída: guia [01 Do enunciado ao problema delimitado](01-do-enunciado-ao-problema.md), secção "O contrato de entrada e saída".
+- O contrato de entrada e saída: guia [01 Do enunciado ao problema delimitado](../01-do-enunciado-ao-problema.md), secção "O contrato de entrada e saída".
 - A regra do que o enunciado não diz, que não se inventa em silêncio: decide-se e escreve-se. Está no guia 01, no passo 3 do exemplo guiado dos Missionários e Canibais.
 - O exemplo mínimo: guia 01, secção "Reproduzir a falha com um exemplo mínimo".
-- A tabela de trace: guia [02 Estado, sequência e representações](02-estado-sequencia-representacoes.md), secção "Tabela de trace". A sua regra mais importante é executar o que está escrito, e não o que achas que o algoritmo devia fazer.
+- A tabela de trace: guia [02 Estado, sequência e representações](../02-estado-sequencia-representacoes.md), secção "Tabela de trace". A sua regra mais importante é executar o que está escrito, e não o que achas que o algoritmo devia fazer.
 - O tipo à frente só na linha onde a variável nasce: guia 02, secção "A linha onde a variável nasce".
 - As constantes, escritas com `const`: guia 02, secção "Constantes".
 - A forma de escrever o pseudocódigo nas aulas e as frases claras: guia 02, secção "A forma de escrever pseudocódigo nas aulas".
-- A cadeia de `Se`, `Senão se` e `Senão`, em que a primeira condição verdadeira ganha: guia [03 Decisões e validação](03-decisoes-e-validacao.md), secção "Seleção encadeada".
+- A cadeia de `Se`, `Senão se` e `Senão`, em que a primeira condição verdadeira ganha: guia [03 Decisões e validação](../03-decisoes-e-validacao.md), secção "Seleção encadeada".
 - Os operadores `e`, `ou` e `não`: guia 03, secção "Operadores lógicos: `e`, `ou` e `não`".
 - Os intervalos e o contrário de um intervalo, escrito com `ou`: guia 03, secções "Intervalos" e "O contrário de um intervalo".
 - As condições que não se sobrepõem e que cobrem todos os casos: guia 03, secção com esse nome.
 - As fronteiras, testadas imediatamente abaixo, em cima e imediatamente acima: guia 03, secção "Fronteiras e casos de teste".
 - Os resultados esperados escritos antes de haver algoritmo: guia 03, passo 4 do exemplo guiado.
-- As três peças de um ciclo, a inicialização, a condição e a atualização: guia [04 Repetição e arrays](04-repeticao-e-arrays.md), secção "As três peças de um ciclo".
+- As três peças de um ciclo, a inicialização, a condição e a atualização: guia [04 Repetição e arrays](../04-repeticao-e-arrays.md), secção "As três peças de um ciclo".
 - A regra de que a condição de um ciclo diz quando continuar, e não quando parar: guia 04, secção "O ciclo que nunca começa".
 - A pergunta que escolhe entre `Enquanto` e `Para`: guia 04, secção "Escolher entre `Enquanto` e `Para`".
 - A tabela de iterações e o contador: guia 04, secções "A tabela de iterações" e "O contador".
 - A bandeira: guia 04, secção "`Parar`: sair do ciclo já".
 - A validação repetida, que volta a pedir um valor enquanto ele for inválido: guia 04, secção "Validação repetida".
 - A ideia de que, depois de um ciclo que termina pela condição, essa condição é falsa, e isso diz alguma coisa sobre o estado. Está na mesma secção do guia 04.
-- A comparação de duas soluções certas, contando o trabalho de cada uma num exemplo pequeno. Está no guia [05 Funções e modelo integrado](05-funcoes-e-modelo-integrado.md), secção "Duas soluções certas, uma mais eficiente".
+- A comparação de duas soluções certas, contando o trabalho de cada uma num exemplo pequeno. Está no guia [05 Funções e modelo integrado](../05-funcoes-e-modelo-integrado.md), secção "Duas soluções certas, uma mais eficiente".
 - O processo inteiro, do [projeto 1](05-projeto-1-duelo-de-dados.md). Tem o contrato com as condições, as decisões e as suposições. Tem o resultado esperado decidido antes de executar, e os casos normais, de fronteira e inválidos.
 - A rotina da depuração, em cinco passos, o registo de depuração, com as suas quatro partes, e o teste de regressão, também do projeto 1.
 
@@ -388,4 +388,4 @@ O projeto 3 é a avaliação prática individual que fecha a algoritmia, e dura 
 
 A melhor preparação é rever este projeto, sobretudo as respostas do passo 3 e o registo de depuração do passo 10. Percebe também porque é que cada passo vem antes do seguinte.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

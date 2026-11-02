@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Funções
 
@@ -6,7 +6,7 @@ Ficha do tema Funções, do módulo Criar aplicações em linguagem de programa�
 
 ## O que precisas de saber
 
-O [guia do tema](06-funcoes.md) e o [laboratório](06-funcoes-laboratorio.md).
+O [guia do tema](../06-funcoes.md) e o [laboratório](../laboratorios/06-funcoes-laboratorio.md).
 
 ## Como trabalhar
 
@@ -196,7 +196,7 @@ d) Confirma a alínea a) no computador. Copia a função para o script `misterio
 
 ## Desafio opcional
 
-Traduz para Python o teu algoritmo do [projeto 1, Duelo de dados](../01-algoritmos/05-projeto-1-duelo-de-dados.md), que está no teu portefólio, no script `duelo.py`. Escreve uma função que recebe os números escolhidos pelos dois jogadores numa ronda e devolve quem ganhou essa ronda. Escreve outra que recebe as rondas ganhas de cada jogador e devolve quem ganhou o duelo. Testa as duas sozinhas antes de escreveres a parte principal. A parte principal lê os números e escreve as mensagens das rondas e do fim. Para o caso em que ninguém ganha, usa a decisão que a turma tomou. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo.
+Traduz para Python o teu algoritmo do [projeto 1, Duelo de dados](../../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md), que está no teu portefólio, no script `duelo.py`. Escreve uma função que recebe os números escolhidos pelos dois jogadores numa ronda e devolve quem ganhou essa ronda. Escreve outra que recebe as rondas ganhas de cada jogador e devolve quem ganhou o duelo. Testa as duas sozinhas antes de escreveres a parte principal. A parte principal lê os números e escreve as mensagens das rondas e do fim. Para o caso em que ninguém ganha, usa a decisão que a turma tomou. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo.
 
 ## Para ires mais longe
 
@@ -238,4 +238,4 @@ Pista: a função é um contador, como o `contar_acima` da fase 5 do laboratóri
 2. No exercício 4, qual dos três erros foi o mais difícil de encontrar, e porquê?
 3. Quando vês um traceback com várias linhas `File`, já consegues dizer onde o programa parou e quem chamou a função?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

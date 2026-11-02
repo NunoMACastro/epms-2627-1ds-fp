@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Tuplos, dicionários e conjuntos
 
-Laboratório do tema Tuplos, dicionários e conjuntos, do módulo Criar aplicações em linguagem de programação Python. Vais construir o programa do catálogo de um clube de videojogos. O programa procura jogos pelo código e pelo género, mostra os géneros sem repetidos e conta os jogos de cada género. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](08-tuplos-dicionarios-e-conjuntos.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Tuplos, dicionários e conjuntos, do módulo Criar aplicações em linguagem de programação Python. Vais construir o programa do catálogo de um clube de videojogos. O programa procura jogos pelo código e pelo género, mostra os géneros sem repetidos e conta os jogos de cada género. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../08-tuplos-dicionarios-e-conjuntos.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -34,7 +34,7 @@ fp-python/
 ## Palavras que vais usar
 
 - Coleção: um valor que guarda outros valores, como uma lista ou um texto.
-- Tuplo: um grupo fixo de valores entre parênteses curvos, que não se altera, como `("Celeste", "plataformas", 2018)`. Para saber mais, vê a secção "Tuplos: valores que andam juntos" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+- Tuplo: um grupo fixo de valores entre parênteses curvos, que não se altera, como `("Celeste", "plataformas", 2018)`. Para saber mais, vê a secção "Tuplos: valores que andam juntos" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 - Desempacotar: dar a cada valor de um tuplo uma variável própria, numa só linha, como `titulo, genero, ano = jogo`.
 - Dicionário: uma coleção de pares chave e valor, em que se procura o valor pela chave.
 - Chave: num dicionário, o que se procura, como o código de um jogo. Cada chave aparece uma só vez.
@@ -42,7 +42,7 @@ fp-python/
 - `items` e `values`: os métodos que dão, para percorrer um dicionário, os pares de chave e valor, ou só os valores.
 - Lista vazia: a lista sem elementos, `[]`.
 - `append`: o método que acrescenta um elemento no fim de uma lista.
-- Conjunto: uma coleção sem repetidos e sem ordem. Para saber mais, vê a secção "Conjuntos: valores sem repetidos" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+- Conjunto: uma coleção sem repetidos e sem ordem. Para saber mais, vê a secção "Conjuntos: valores sem repetidos" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 - `set()` e `add`: a função que cria um conjunto vazio, e o método que lhe acrescenta um valor. Se o valor já lá estiver, nada muda.
 - Dicionário de contagens: um dicionário em que cada chave é um valor que apareceu e o valor é quantas vezes apareceu.
 - Tabela de decisões: a tabela do teu caderno com os dados, a coleção escolhida para cada um e porquê.
@@ -73,7 +73,7 @@ Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. 
 
 O catálogo tem sete jogos, e cada jogo tem quatro dados que andam sempre juntos: o código, o título, o género e o ano. Se cada dado ficasse numa lista própria, bastava tirar um título e esquecer o ano. Cada jogo seguinte passava a ter o ano do anterior. Para guardar um grupo de valores que andam juntos, o Python tem o tuplo. Escreve-se com os valores entre parênteses curvos, separados por vírgulas. É imutável, como os textos: depois de criado, não muda.
 
-Para usar os valores de um tuplo, dá-se um nome a cada um, numa só linha: `codigo, titulo, genero, ano = jogo`. O primeiro valor vai para a primeira variável, o segundo para a segunda, e assim por diante. Chama-se desempacotar. Funciona também no `for`, quando cada elemento da lista é um tuplo. Para saber mais, lê a secção "Tuplos: valores que andam juntos" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+Para usar os valores de um tuplo, dá-se um nome a cada um, numa só linha: `codigo, titulo, genero, ano = jogo`. O primeiro valor vai para a primeira variável, o segundo para a segunda, e assim por diante. Chama-se desempacotar. Funciona também no `for`, quando cada elemento da lista é um tuplo. Para saber mais, lê a secção "Tuplos: valores que andam juntos" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 
 1. Começa na consola, para veres um tuplo de perto. No terminal, escreve o teu comando do Python, sem mais nada, e carrega em Enter. Escreve estas linhas, uma de cada vez. Antes de cada Enter, prevê o que aparece.
 
@@ -181,7 +181,7 @@ Acrescenta à tua tabela de decisões:
 
 No dia a dia, procuramos muitas coisas por um nome, e não por uma posição. Num dicionário de português, procuras a palavra e lês o significado. Na lista de contactos do telemóvel, procuras o nome e lês o número. O clube procura cada jogo pelo código.
 
-No Python, há uma coleção feita para isto: o dicionário. Guarda pares. Cada par tem uma chave, que é o que se procura, e um valor, que é o que se encontra. Escreve-se entre chavetas, com cada par na forma `chave: valor`. Aqui, as chavetas não estão numa f-string: abrem e fecham o dicionário. Lê-se um valor com a chave entre parênteses retos, como `catalogo["PLA-02"]`, sem ciclo nenhum. Cada chave aparece uma só vez. Para saber mais, lê a secção "Dicionários: procurar por chave" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+No Python, há uma coleção feita para isto: o dicionário. Guarda pares. Cada par tem uma chave, que é o que se procura, e um valor, que é o que se encontra. Escreve-se entre chavetas, com cada par na forma `chave: valor`. Aqui, as chavetas não estão numa f-string: abrem e fecham o dicionário. Lê-se um valor com a chave entre parênteses retos, como `catalogo["PLA-02"]`, sem ciclo nenhum. Cada chave aparece uma só vez. Para saber mais, lê a secção "Dicionários: procurar por chave" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 
 1. Cria o ficheiro `catalogo.py` com este conteúdo:
 
@@ -248,7 +248,7 @@ Acrescenta à tua tabela de decisões:
 
 O clube quer que o programa mostre o catálogo inteiro antes de perguntar um código. Para isso, é preciso passar por todos os pares do dicionário.
 
-Um `for` sobre um dicionário dá só as chaves. Para ter a chave e o valor em cada volta, usa-se o método `items`, que quer dizer "itens". Em cada volta, dá um tuplo com a chave e o valor, que se desempacota nas duas variáveis do `for`. Os pares saem pela ordem em que foram escritos. Para ter só os valores, sem as chaves, há o método `values`, que quer dizer "valores", e que vais usar na fase 4. Para saber mais, lê a secção "Percorrer um dicionário" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+Um `for` sobre um dicionário dá só as chaves. Para ter a chave e o valor em cada volta, usa-se o método `items`, que quer dizer "itens". Em cada volta, dá um tuplo com a chave e o valor, que se desempacota nas duas variáveis do `for`. Os pares saem pela ordem em que foram escritos. Para ter só os valores, sem as chaves, há o método `values`, que quer dizer "valores", e que vais usar na fase 4. Para saber mais, lê a secção "Percorrer um dicionário" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 
 1. Em `catalogo.py`, acrescenta estas linhas entre a chaveta que fecha o catálogo e a linha do `codigo = input(...)`, encostadas à margem. Deixa uma linha em branco antes delas e outra depois, como no resto do ficheiro:
 
@@ -290,7 +290,7 @@ Pensa antes de continuares: se escrevesses `for jogo in catalogo:`, sem o `items
 
 Agora o programa pergunta um género e mostra os títulos desse género. Não se sabe quantos são: podem ser dois, um ou nenhum. A lista dos títulos tem de começar vazia e crescer à medida que se encontram jogos do género.
 
-É o que já sabes das listas: uma lista vazia escreve-se `[]`, e o método `append` acrescenta um elemento no fim, mudando a própria lista. Para percorrer os jogos, usa-se o `values` da fase 3, que dá só os valores do dicionário, os tuplos. Para saber mais, lê a secção "Percorrer um dicionário" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+É o que já sabes das listas: uma lista vazia escreve-se `[]`, e o método `append` acrescenta um elemento no fim, mudando a própria lista. Para percorrer os jogos, usa-se o `values` da fase 3, que dá só os valores do dicionário, os tuplos. Para saber mais, lê a secção "Percorrer um dicionário" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 
 1. Em `catalogo.py`, acrescenta estas linhas no fim do ficheiro, encostadas à margem. Começam por um `print()`, que separa esta parte da procura:
 
@@ -360,7 +360,7 @@ Acrescenta à tua tabela de decisões:
 
 O clube quer saber que géneros há no catálogo. Há sete jogos, mas os géneros repetem-se: há dois de plataformas e dois de desporto. Numa lista de géneros, `plataformas` aparecia duas vezes.
 
-Para isto há o conjunto: uma coleção sem repetidos e sem ordem. Cria-se vazio com `set()`, e acrescenta-se um valor com o método `add`. Se o valor já lá estiver, nada muda: cada valor fica uma só vez. Para saber mais, lê a secção "Conjuntos: valores sem repetidos" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+Para isto há o conjunto: uma coleção sem repetidos e sem ordem. Cria-se vazio com `set()`, e acrescenta-se um valor com o método `add`. Se o valor já lá estiver, nada muda: cada valor fica uma só vez. Para saber mais, lê a secção "Conjuntos: valores sem repetidos" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 
 1. Em `catalogo.py`, acrescenta estas linhas no fim do ficheiro, encostadas à margem:
 
@@ -421,7 +421,7 @@ Acrescenta à tua tabela de decisões:
 
 Por fim, o clube quer saber quantos jogos tem de cada género. Aqui os repetidos contam: os dois jogos de plataformas têm de dar 2. Um conjunto não serve, porque deita fora as repetições.
 
-Conta-se com um dicionário. Cada género é uma chave, e o valor é o seu contador. Para cada jogo, há dois casos. Se o género já é uma chave, soma-se 1 ao seu contador. Se ainda não é, é o primeiro jogo desse género, e o género entra com o contador a 1. O dicionário começa vazio, com `{}`. Para saber mais, lê a secção "Contar com um dicionário" do [guia](08-tuplos-dicionarios-e-conjuntos.md).
+Conta-se com um dicionário. Cada género é uma chave, e o valor é o seu contador. Para cada jogo, há dois casos. Se o género já é uma chave, soma-se 1 ao seu contador. Se ainda não é, é o primeiro jogo desse género, e o género entra com o contador a 1. O dicionário começa vazio, com `{}`. Para saber mais, lê a secção "Contar com um dicionário" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 
 1. Em `catalogo.py`, acrescenta estas linhas no fim do ficheiro, encostadas à margem:
 
@@ -625,4 +625,4 @@ A linha `jogos_por_genero = {}` ficou dentro do ciclo, e o dicionário volta a n
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que o catálogo ficou num dicionário e os géneros num conjunto. E porque é que um conjunto não pode substituir sempre uma lista.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

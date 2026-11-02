@@ -2,7 +2,7 @@
 
 # Ciclos while e for
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia passas para Python os ciclos do pseudocódigo, o `Enquanto` e o `Para`, e pões o computador a repetir instruções. Para praticar, há o [laboratório](04-ciclos-while-e-for-laboratorio.md) e a [ficha de exercícios](04-ciclos-while-e-for-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia passas para Python os ciclos do pseudocódigo, o `Enquanto` e o `Para`, e pões o computador a repetir instruções. Para praticar, há o [laboratório](laboratorios/04-ciclos-while-e-for-laboratorio.md) e a [ficha de exercícios](exercicios/04-ciclos-while-e-for-exercicios.md) deste tema.
 
 No tema anterior, os programas já decidiam, mas cada linha executava-se no máximo uma vez. Agora, um bloco de linhas pode repetir-se as vezes que forem precisas. Os ciclos não são novidade, porque já os aprendeste em pseudocódigo, na algoritmia. O que muda é a forma de os escrever, e o facto de ser o computador a dar as voltas. Este tema ainda não guarda vários valores numa lista. Por isso, quando um programa trabalha com uma série de valores, lê-os do teclado, um de cada vez. As listas ficam para o tema seguinte.
 
@@ -57,7 +57,7 @@ No fim deste guia, consegues:
 - A sentinela e a leitura antecipada: guia [04](../01-algoritmos/04-repeticao-e-arrays.md), secção "A sentinela: ler até aparecer o valor que diz "acabou"".
 - A validação repetida: guia [04](../01-algoritmos/04-repeticao-e-arrays.md), secção "Validação repetida".
 - Um ciclo dentro de outro: guia [04](../01-algoritmos/04-repeticao-e-arrays.md), secção "Arrays de arrays: uma tabela".
-- A validação repetida dentro de um `Para`: [projeto 2, Adivinha o número](../01-algoritmos/05-projeto-2-adivinha-o-numero.md), secção "Passo 3: as peças do algoritmo".
+- A validação repetida dentro de um `Para`: [projeto 2, Adivinha o número](../01-algoritmos/projetos-guiados/05-projeto-2-adivinha-o-numero.md), secção "Passo 3: as peças do algoritmo".
 - Correr um script no terminal, com `python`, `py` ou `python3`, o `print` com vários valores e os comentários: guia [01 Do pseudocódigo ao Python](01-do-pseudocodigo-ao-python.md).
 - Os três tipos de erro, o traceback e a rotina da depuração, em cinco passos: guia [01 Do pseudocódigo ao Python](01-do-pseudocodigo-ao-python.md).
 - As variáveis, os nomes com traço baixo e as constantes em maiúsculas: guia [02 Dados e interação](02-dados-e-interacao.md).
@@ -1024,7 +1024,7 @@ Responde sem olhar para o guia. Se não conseguires, volta à secção que expli
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](04-ciclos-while-e-for-laboratorio.md). Nele passas para Python, fase a fase, a campanha de recolha de alimentos do guia 04 da algoritmia. Primeiro com a sentinela, o contador, o acumulador e a média, e depois com o `for`, nas turmas do 10.º ano. Depois faz a [ficha de exercícios](04-ciclos-while-e-for-exercicios.md), com ciclos para prever, escrever e corrigir.
+Para praticar este tema, faz o [laboratório](laboratorios/04-ciclos-while-e-for-laboratorio.md). Nele passas para Python, fase a fase, a campanha de recolha de alimentos do guia 04 da algoritmia. Primeiro com a sentinela, o contador, o acumulador e a média, e depois com o `for`, nas turmas do 10.º ano. Depois faz a [ficha de exercícios](exercicios/04-ciclos-while-e-for-exercicios.md), com ciclos para prever, escrever e corrigir.
 
 O tema seguinte é [Listas](05-listas.md). Neste tema, os valores de uma série chegaram um a um, do teclado, e cada um desapareceu quando chegou o seguinte. No tema seguinte, os valores ficam guardados juntos numa lista, como os arrays do pseudocódigo, e o `for` percorre-os um a um.
 

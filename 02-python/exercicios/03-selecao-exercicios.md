@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Seleção
 
@@ -6,7 +6,7 @@ Ficha do tema Seleção, do módulo Criar aplicações em linguagem de programa�
 
 ## O que precisas de saber
 
-O [guia do tema](03-selecao.md) e o [laboratório](03-selecao-laboratorio.md).
+O [guia do tema](../03-selecao.md) e o [laboratório](../laboratorios/03-selecao-laboratorio.md).
 
 ## Como trabalhar
 
@@ -192,4 +192,4 @@ Antes de escreveres código, faz no caderno uma tabela com as nove combinações
 2. No exercício 6, qual dos três erros foi o mais difícil de encontrar, e porquê?
 3. Antes de correres um script, já consegues dizer que casos de teste vais usar e porquê?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

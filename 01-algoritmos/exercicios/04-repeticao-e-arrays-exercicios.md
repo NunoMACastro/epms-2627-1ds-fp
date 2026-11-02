@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Repetição e arrays
 
@@ -6,14 +6,14 @@ Ficha do tema Repetição e arrays, do módulo Desenvolver algoritmos. Treinas o
 
 ## O que precisas de saber
 
-O [guia do tema](04-repeticao-e-arrays.md). Antes de começar, deves conseguir explicar:
+O [guia do tema](../04-repeticao-e-arrays.md). Antes de começar, deves conseguir explicar:
 
 - as três peças de um ciclo;
 - porque é que os índices começam em 0;
 - a diferença entre um contador e um acumulador;
 - porque é que a sentinela se lê antes do ciclo e no fim do corpo.
 
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "As três peças de um ciclo", "O índice", "Contadores e acumuladores" e "A sentinela: ler até aparecer o valor que diz "acabou"". Para o exercício 5 precisas também do `div` e do `resto`, do [guia 02](02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
+Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "As três peças de um ciclo", "O índice", "Contadores e acumuladores" e "A sentinela: ler até aparecer o valor que diz "acabou"". Para o exercício 5 precisas também do `div` e do `resto`, do [guia 02](../02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
 
 ## Como trabalhar
 
@@ -228,4 +228,4 @@ Escreve: "Partida!"
 1. O que já consegues fazer sozinho?
 2. Que dificuldade tiveste, e o que fizeste para a resolver?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

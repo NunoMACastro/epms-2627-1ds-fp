@@ -1,8 +1,8 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Textos e listas que mudam
 
-Laboratório do tema Textos e listas que mudam, do módulo Criar aplicações em linguagem de programação Python. Vais construir dois programas para o clube de videojogos da escola. Um arruma e confirma o código de um jogo, e o outro gere a fila para a consola do clube. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](07-textos-e-listas-que-mudam.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Textos e listas que mudam, do módulo Criar aplicações em linguagem de programação Python. Vais construir dois programas para o clube de videojogos da escola. Um arruma e confirma o código de um jogo, e o outro gere a fila para a consola do clube. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../07-textos-e-listas-que-mudam.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
@@ -37,7 +37,7 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Carácter: uma letra, um algarismo, um sinal ou um espaço. Um texto é uma sequência de caracteres. Para saber mais, vê a secção "Um texto é uma sequência de caracteres" do [guia](07-textos-e-listas-que-mudam.md).
+- Carácter: uma letra, um algarismo, um sinal ou um espaço. Um texto é uma sequência de caracteres. Para saber mais, vê a secção "Um texto é uma sequência de caracteres" do [guia](../07-textos-e-listas-que-mudam.md).
 - Índice: a posição de um carácter num texto, ou de um elemento numa lista, a contar do 0.
 - Índice negativo: um índice que conta a partir do fim; `-1` é o último.
 - Fatia: um pedaço de um texto tirado por posições, como `codigo[0:3]`. O segundo índice não entra.
@@ -81,7 +81,7 @@ O código de um jogo, como `"DES-02"`, é um texto. Um texto guarda uma sequênc
 | --- | --- | --- | --- | --- | --- | --- |
 | Índice | 0 | 1 | 2 | 3 | 4 | 5 |
 
-Nesta fase experimentas na consola do Python, onde cada linha mostra logo o resultado. Para saber mais, lê a secção "Um texto é uma sequência de caracteres" do [guia](07-textos-e-listas-que-mudam.md).
+Nesta fase experimentas na consola do Python, onde cada linha mostra logo o resultado. Para saber mais, lê a secção "Um texto é uma sequência de caracteres" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Abre a consola: no terminal, escreve o teu comando do Python, `python`, `py` ou `python3`, sem mais nada, e carrega em Enter. O que deves ver: umas linhas com a versão do Python e, por baixo, `>>>`, à espera de uma linha.
 
@@ -137,7 +137,7 @@ Acrescenta à tua tabela das operações:
 
 ## Fase 2: Tirar fatias de um texto
 
-Muitas vezes não queres um carácter, mas um pedaço do texto. Do código `"DES-02"`, queres o género, `"DES"`, ou o número, `"02"`. Um pedaço de um texto, tirado por posições, chama-se fatia. Escreve-se com dois índices separados por dois pontos: `codigo[0:3]`. O primeiro índice entra na fatia, e o segundo não entra, como no `range`. Para saber mais, lê a secção "Fatias de um texto" do [guia](07-textos-e-listas-que-mudam.md).
+Muitas vezes não queres um carácter, mas um pedaço do texto. Do código `"DES-02"`, queres o género, `"DES"`, ou o número, `"02"`. Um pedaço de um texto, tirado por posições, chama-se fatia. Escreve-se com dois índices separados por dois pontos: `codigo[0:3]`. O primeiro índice entra na fatia, e o segundo não entra, como no `range`. Para saber mais, lê a secção "Fatias de um texto" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Continua na consola, com o mesmo `codigo`. Prevê e escreve:
 
@@ -179,7 +179,7 @@ Acrescenta à tua tabela das operações:
 
 Quem escreve um código no teclado pode escrever ` pla-01 `, com espaços à volta e em minúsculas. Para o Python, isso é outro texto, diferente de `"PLA-01"`. Antes de usar um texto que vem do teclado, é preciso arrumá-lo.
 
-Para isso, cada texto traz consigo funções próprias, os métodos. Chamam-se com um ponto depois do valor e os parênteses no fim. O `strip()` devolve o texto sem os espaços do início e do fim, e o `upper()` devolve o texto em maiúsculas. Nenhum dos dois muda o texto original: devolvem um texto novo. Para saber mais, lê a secção "Os métodos dos textos" do [guia](07-textos-e-listas-que-mudam.md).
+Para isso, cada texto traz consigo funções próprias, os métodos. Chamam-se com um ponto depois do valor e os parênteses no fim. O `strip()` devolve o texto sem os espaços do início e do fim, e o `upper()` devolve o texto em maiúsculas. Nenhum dos dois muda o texto original: devolvem um texto novo. Para saber mais, lê a secção "Os métodos dos textos" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Cria o ficheiro `codigo.py`. No painel Explorer, passa o rato por cima de `FP-PYTHON` e carrega no ícone New File..., o primeiro dos quatro que aparecem. Escreve o nome e carrega em Enter. Cria-o com este conteúdo:
 
@@ -233,7 +233,7 @@ Acrescenta à tua tabela das operações:
 
 ## Fase 4: Um texto não se altera
 
-Há quem escreva o código com outro separador: `pla_01`, com um traço baixo, ou `pla 01`, com um espaço. O programa tem de pôr um hífen no índice 3. A ideia natural é mudar esse carácter, como se muda um elemento de uma lista. Nesta fase vais ver porque é que isso não funciona, e o que se faz em vez disso. Para saber mais, lê a secção "Um texto não se altera" do [guia](07-textos-e-listas-que-mudam.md).
+Há quem escreva o código com outro separador: `pla_01`, com um traço baixo, ou `pla 01`, com um espaço. O programa tem de pôr um hífen no índice 3. A ideia natural é mudar esse carácter, como se muda um elemento de uma lista. Nesta fase vais ver porque é que isso não funciona, e o que se faz em vez disso. Para saber mais, lê a secção "Um texto não se altera" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Corre o `codigo.py` com `pla_01`. Antes de correres, prevê o código arrumado. O que deves ver:
 
@@ -293,7 +293,7 @@ Acrescenta à tua tabela das operações:
 
 E se a pessoa escrever `pla01`, sem separador, ou `pl4-01`, com um algarismo no lugar de uma letra? O programa mostra um código que não existe. Um código do clube tem uma forma certa: seis caracteres, três letras, um separador e dois algarismos. O separador já ficou tratado na fase 4, com o hífen que o programa põe no índice 3. Nesta fase, o programa confirma o tamanho e as três letras. Na fase seguinte, confirma os dois algarismos.
 
-Para confirmar que o género tem só letras, percorre-se o prefixo carácter a carácter, com `for`, como se percorre uma lista. Em cada volta, pergunta-se se o carácter está num texto com as 26 letras. Para isso serve o `in`: entre dois textos, pergunta se o primeiro aparece dentro do segundo, e dá `True` ou `False`. O `not in` faz o contrário. Para saber mais, lê a secção "Perguntar se um texto contém outro, com `in`" do [guia](07-textos-e-listas-que-mudam.md).
+Para confirmar que o género tem só letras, percorre-se o prefixo carácter a carácter, com `for`, como se percorre uma lista. Em cada volta, pergunta-se se o carácter está num texto com as 26 letras. Para isso serve o `in`: entre dois textos, pergunta se o primeiro aparece dentro do segundo, e dá `True` ou `False`. O `not in` faz o contrário. Para saber mais, lê a secção "Perguntar se um texto contém outro, com `in`" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Experimenta primeiro o `in` na consola. No terminal, escreve o teu comando do Python, sem mais nada, e carrega em Enter. Escreve estas linhas, uma de cada vez, e prevê o que aparece antes de cada Enter.
 
@@ -399,7 +399,7 @@ Acrescenta à tua tabela das operações:
 
 ## Fase 6: Confirmar os algarismos com um método
 
-Falta confirmar que o número tem só algarismos. Podias escrever outro ciclo, igual ao das letras, com um texto dos dez algarismos. Mas os textos têm um método que já faz essa procura: o `isdigit()`, de *is digit*, "é algarismo". Dá `True` quando o texto tem só algarismos, e `False` quando tem outra coisa, ou quando está vazio. Para saber mais, lê a secção "Os métodos dos textos" do [guia](07-textos-e-listas-que-mudam.md).
+Falta confirmar que o número tem só algarismos. Podias escrever outro ciclo, igual ao das letras, com um texto dos dez algarismos. Mas os textos têm um método que já faz essa procura: o `isdigit()`, de *is digit*, "é algarismo". Dá `True` quando o texto tem só algarismos, e `False` quando tem outra coisa, ou quando está vazio. Para saber mais, lê a secção "Os métodos dos textos" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Experimenta-o na consola. Prevê e escreve:
 
@@ -452,7 +452,7 @@ Acrescenta à tua tabela das operações:
 
 O programa escreve três linhas, mas o clube quer uma só frase: `O código PLA-01 é do género PLA e tem o número 1.`. Com o `print` e as vírgulas, aparece um espaço antes do ponto final. Com o `+`, era preciso converter o número com `str` e cuidar de cada espaço.
 
-Para isto há as f-strings. Uma f-string é um texto com um `f` antes das aspas. Dentro dele, cada par de chavetas, `{` e `}`, marca o sítio onde entra um valor. O Python calcula o que está entre as chavetas e põe o resultado no lugar delas, já como texto. Para saber mais, lê a secção "Juntar textos e valores com f-strings" do [guia](07-textos-e-listas-que-mudam.md).
+Para isto há as f-strings. Uma f-string é um texto com um `f` antes das aspas. Dentro dele, cada par de chavetas, `{` e `}`, marca o sítio onde entra um valor. O Python calcula o que está entre as chavetas e põe o resultado no lugar delas, já como texto. Para saber mais, lê a secção "Juntar textos e valores com f-strings" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Em `codigo.py`, substitui os três `print` dentro do `if` e o `print` dentro do `else`. O fim do ficheiro fica assim:
 
@@ -541,7 +541,7 @@ Acrescenta à tua tabela das operações:
 
 Agora o segundo programa. O clube tem uma consola, e quem quer jogar põe-se na fila. Não se sabe quantas pessoas vão chegar. A fila começa vazia e cresce à medida que chegam nomes.
 
-Uma lista vazia escreve-se `[]`. Para lhe acrescentar um elemento no fim, usa-se o método `append`, que quer dizer "acrescentar". As listas são mutáveis: o `append` muda a própria lista e não devolve nada. É ao contrário dos métodos dos textos, que nunca mudam o texto e devolvem um texto novo. Para saber mais, lê a secção "Listas que crescem e encolhem" do [guia](07-textos-e-listas-que-mudam.md).
+Uma lista vazia escreve-se `[]`. Para lhe acrescentar um elemento no fim, usa-se o método `append`, que quer dizer "acrescentar". As listas são mutáveis: o `append` muda a própria lista e não devolve nada. É ao contrário dos métodos dos textos, que nunca mudam o texto e devolvem um texto novo. Para saber mais, lê a secção "Listas que crescem e encolhem" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Cria o ficheiro `fila.py` com este conteúdo:
 
@@ -603,7 +603,7 @@ Acrescenta à tua tabela das operações:
 
 ## Fase 9: Chamar o primeiro com `pop`
 
-Quando a consola fica livre, joga o primeiro da fila, e ele sai da fila. Para tirar um elemento de uma lista pela posição, usa-se o método `pop`. Com `fila.pop(0)`, a lista perde o elemento do índice 0, e os outros passam uma posição para a frente. O `pop` devolve o elemento que tirou, para o programa o poder usar: aqui, para dizer de quem é a vez. Sem nada entre os parênteses, `fila.pop()` tira o último. Para saber mais, lê a secção "Listas que crescem e encolhem" do [guia](07-textos-e-listas-que-mudam.md).
+Quando a consola fica livre, joga o primeiro da fila, e ele sai da fila. Para tirar um elemento de uma lista pela posição, usa-se o método `pop`. Com `fila.pop(0)`, a lista perde o elemento do índice 0, e os outros passam uma posição para a frente. O `pop` devolve o elemento que tirou, para o programa o poder usar: aqui, para dizer de quem é a vez. Sem nada entre os parênteses, `fila.pop()` tira o último. Para saber mais, lê a secção "Listas que crescem e encolhem" do [guia](../07-textos-e-listas-que-mudam.md).
 
 O programa passa a aceitar uma palavra especial: quem escreve `próximo` não entra na fila, chama o primeiro a jogar. Para aceitar também `Próximo` ou `PRÓXIMO`, o programa usa o método `lower()`, o contrário do `upper()`: devolve um texto novo, em minúsculas.
 
@@ -692,7 +692,7 @@ Acrescenta à tua tabela das operações:
 
 ## Fase 10: Ninguém entra duas vezes, e quem ficou
 
-Falta uma regra: a mesma pessoa não pode estar duas vezes na fila. Antes de acrescentar um nome, o programa pergunta se ele já lá está. O `in` que usaste com os textos também funciona com as listas: `"Rui" in fila` dá `True` se o Rui for um dos elementos da fila. No fim, o programa mostra quem ficou, numerado. Para saber mais, lê a secção "Listas que crescem e encolhem" do [guia](07-textos-e-listas-que-mudam.md).
+Falta uma regra: a mesma pessoa não pode estar duas vezes na fila. Antes de acrescentar um nome, o programa pergunta se ele já lá está. O `in` que usaste com os textos também funciona com as listas: `"Rui" in fila` dá `True` se o Rui for um dos elementos da fila. No fim, o programa mostra quem ficou, numerado. Para saber mais, lê a secção "Listas que crescem e encolhem" do [guia](../07-textos-e-listas-que-mudam.md).
 
 1. Em `fila.py`, acrescenta um `elif` entre o bloco do `próximo` e o `else` que acrescenta o nome. Há dois `else` no ficheiro. O que interessa é o de fora, com quatro espaços antes, alinhado com o `if entrada.lower() == "próximo":`. Logo antes dele, escreve estas duas linhas, a primeira também com quatro espaços:
 
@@ -845,4 +845,4 @@ O programa compara com `"próximo"`, com acento, e para o Python são textos dif
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que o `upper` se guarda com uma atribuição e o `append` não. E o que isso diz sobre os textos e as listas.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

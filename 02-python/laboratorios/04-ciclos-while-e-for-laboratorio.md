@@ -1,12 +1,12 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Laboratório: Ciclos while e for
 
-Laboratório do tema Ciclos while e for, do módulo Criar aplicações em linguagem de programação Python. Vais passar para Python, fase a fase, o problema da campanha de recolha de alimentos, que já conheces do pseudocódigo. Primeiro com um ciclo `while`, e depois com um ciclo `for`. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](04-ciclos-while-e-for.md) tem a teoria completa, para quem quiser saber mais.
+Laboratório do tema Ciclos while e for, do módulo Criar aplicações em linguagem de programação Python. Vais passar para Python, fase a fase, o problema da campanha de recolha de alimentos, que já conheces do pseudocódigo. Primeiro com um ciclo `while`, e depois com um ciclo `for`. Cada passo diz o que fazer, porquê e o que deves ver, e avanças ao teu ritmo. Tudo o que precisas está aqui; o [guia do tema](../04-ciclos-while-e-for.md) tem a teoria completa, para quem quiser saber mais.
 
 ## O que vais construir
 
-Este é o problema, o mesmo do exemplo guiado do [guia 04 da algoritmia](../01-algoritmos/04-repeticao-e-arrays.md), com uma mudança na segunda parte:
+Este é o problema, o mesmo do exemplo guiado do [guia 04 da algoritmia](../../01-algoritmos/04-repeticao-e-arrays.md), com uma mudança na segunda parte:
 
 > A escola organiza uma campanha de recolha de alimentos. Cada turma entrega os alimentos que juntou, e a funcionária escreve quantos quilos a turma trouxe, um número inteiro. Uma turma pode não ter trazido nada, e nesse caso a funcionária escreve 0. Quando não há mais turmas, escreve -1. O programa mostra quantas turmas entregaram, o total de quilos e a média por turma, mas a média só se houver pelo menos uma turma.
 >
@@ -64,7 +64,7 @@ fp-python/
 
 ## Palavras que vais usar
 
-- Ciclo: uma parte do programa que se executa várias vezes seguidas. Para saber mais, vê a secção "Os ciclos em Python" do [guia](04-ciclos-while-e-for.md).
+- Ciclo: uma parte do programa que se executa várias vezes seguidas. Para saber mais, vê a secção "Os ciclos em Python" do [guia](../04-ciclos-while-e-for.md).
 - Volta: cada execução do corpo de um ciclo. O nome técnico é iteração.
 - Corpo do ciclo: as linhas indentadas debaixo do `while` ou do `for`, que se repetem.
 - `while`: o `Enquanto` do Python. Repete o corpo enquanto a condição der `True`.
@@ -122,7 +122,7 @@ Enquanto quilos != SENTINELA
 Escreve: "Turmas que entregaram: ", turmas
 ```
 
-Em Python, o `Enquanto` passa a `while`, com dois pontos no fim da linha. As linhas do corpo ficam indentadas quatro espaços, como no pseudocódigo. Cada par de `Escreve:` e `ler valor` junta-se num `input`, com o `int` a converter o texto lido num número. Para saber mais, lê a secção "Repetir com `while`" do [guia](04-ciclos-while-e-for.md).
+Em Python, o `Enquanto` passa a `while`, com dois pontos no fim da linha. As linhas do corpo ficam indentadas quatro espaços, como no pseudocódigo. Cada par de `Escreve:` e `ler valor` junta-se num `input`, com o `int` a converter o texto lido num número. Para saber mais, lê a secção "Repetir com `while`" do [guia](../04-ciclos-while-e-for.md).
 
 1. No painel Explorer, cria um ficheiro novo, com o nome `campanha.py`, como nos laboratórios anteriores. Escreve nele este conteúdo, que é o ficheiro completo:
 
@@ -203,7 +203,7 @@ Pensa antes de continuares: o que acontecia se a sentinela fosse o 0? A resposta
 
 ## Fase 2: Somar os quilos, e observar as voltas
 
-Falta o total de quilos. Para isso não basta contar, é preciso somar. Um acumulador é uma variável que vai somando valores ao longo das voltas. Começa em 0, antes do ciclo, e em cada volta soma o valor dessa volta. O contador soma sempre 1; o acumulador soma o próprio valor. Nesta fase vais também confirmar as voltas com uma tabela de iterações prevista e observada. Para saber mais, lê as secções "O contador e o acumulador" e "Ver as voltas: a tabela de iterações prevista e observada" do [guia](04-ciclos-while-e-for.md).
+Falta o total de quilos. Para isso não basta contar, é preciso somar. Um acumulador é uma variável que vai somando valores ao longo das voltas. Começa em 0, antes do ciclo, e em cada volta soma o valor dessa volta. O contador soma sempre 1; o acumulador soma o próprio valor. Nesta fase vais também confirmar as voltas com uma tabela de iterações prevista e observada. Para saber mais, lê as secções "O contador e o acumulador" e "Ver as voltas: a tabela de iterações prevista e observada" do [guia](../04-ciclos-while-e-for.md).
 
 1. Em `campanha.py`, faz três alterações. Depois de `turmas = 0`, acrescenta a linha `total_quilos = 0`. Dentro do corpo, depois de `turmas = turmas + 1`, acrescenta `total_quilos = total_quilos + quilos`, com os mesmos quatro espaços. No fim do ficheiro, acrescenta `print("Total:", total_quilos, "kg")`, encostado à margem. Muda também a segunda linha do comentário do topo, porque o programa passou a somar. O ficheiro completo fica assim:
 
@@ -305,7 +305,7 @@ Pensa antes de continuares: com o acumulador dentro do ciclo, o caso 15, -1 dava
 
 ## Fase 3: A média só quando há turmas, com `if`
 
-Falta a média: o total a dividir pelo número de turmas. Com zero turmas, a conta seria 0 / 0, que não tem resultado, e o Python parava o programa com `ZeroDivisionError: division by zero`. Por isso, como no pseudocódigo, a média calcula-se só se houver pelo menos uma turma, com o `if` e o `else` do tema anterior. O `if` fica depois do ciclo, encostado à margem, porque a média só faz sentido quando todas as turmas estão contadas. Para saber mais, lê a secção "A média, só quando há valores" do [guia](04-ciclos-while-e-for.md).
+Falta a média: o total a dividir pelo número de turmas. Com zero turmas, a conta seria 0 / 0, que não tem resultado, e o Python parava o programa com `ZeroDivisionError: division by zero`. Por isso, como no pseudocódigo, a média calcula-se só se houver pelo menos uma turma, com o `if` e o `else` do tema anterior. O `if` fica depois do ciclo, encostado à margem, porque a média só faz sentido quando todas as turmas estão contadas. Para saber mais, lê a secção "A média, só quando há valores" do [guia](../04-ciclos-while-e-for.md).
 
 1. Em `campanha.py`, acrescenta estas linhas no fim do ficheiro, depois do último `print`, encostadas à margem:
 
@@ -365,7 +365,7 @@ Pensa antes de continuares: porque é que o `if` da média não pode ficar dentr
 
 ## Fase 4: As 6 turmas do 10.º ano, com `for`
 
-A segunda parte do problema é diferente. O 10.º ano tem 6 turmas, e por isso, antes de o ciclo começar, já se sabe que vai dar 6 voltas. A um ciclo assim chama-se ciclo contado. Com o `while`, terias de escrever as três peças à mão. O `Para` do pseudocódigo resolvia isto, e em Python é o `for`, com o `range`. O `range(1, 7)` produz os números 1, 2, 3, 4, 5 e 6: o primeiro entra, e o segundo não entra. O `for` dá à variável `turma` cada um desses números, um por volta. Para saber mais, lê a secção "Contar voltas com `for` e `range`" do [guia](04-ciclos-while-e-for.md).
+A segunda parte do problema é diferente. O 10.º ano tem 6 turmas, e por isso, antes de o ciclo começar, já se sabe que vai dar 6 voltas. A um ciclo assim chama-se ciclo contado. Com o `while`, terias de escrever as três peças à mão. O `Para` do pseudocódigo resolvia isto, e em Python é o `for`, com o `range`. O `range(1, 7)` produz os números 1, 2, 3, 4, 5 e 6: o primeiro entra, e o segundo não entra. O `for` dá à variável `turma` cada um desses números, um por volta. Para saber mais, lê a secção "Contar voltas com `for` e `range`" do [guia](../04-ciclos-while-e-for.md).
 
 Como estes dados são outros, e não terminam com o -1, ficam noutro programa. Assim, cada ensaio da segunda parte não obriga a passar pela primeira.
 
@@ -437,7 +437,7 @@ Pensa antes de continuares: neste programa, a média não precisa do `if` que ti
 
 ## Fase 5: Contar as turmas que chegaram à meta
 
-A diretora quer saber também quantas turmas chegaram à meta de cada turma, 10 kg ou mais. Não é a meta da campanha inteira, que se mede pelo total. É um contador, mas que não aumenta em todas as voltas. Só aumenta nas voltas em que a turma chegou à meta. Para isso, a linha do aumento vai para dentro de um `if`, com oito espaços. Quatro põem-na dentro do `for`, e os outros quatro põem-na dentro do `if`. Para saber mais, lê a secção "Contar só algumas voltas" do [guia](04-ciclos-while-e-for.md).
+A diretora quer saber também quantas turmas chegaram à meta de cada turma, 10 kg ou mais. Não é a meta da campanha inteira, que se mede pelo total. É um contador, mas que não aumenta em todas as voltas. Só aumenta nas voltas em que a turma chegou à meta. Para isso, a linha do aumento vai para dentro de um `if`, com oito espaços. Quatro põem-na dentro do `for`, e os outros quatro põem-na dentro do `if`. Para saber mais, lê a secção "Contar só algumas voltas" do [guia](../04-ciclos-while-e-for.md).
 
 1. Em `campanha_10ano.py`, faz quatro alterações. Depois de `NUMERO_DE_TURMAS = 6`, acrescenta `META = 10`. Depois de `total_quilos = 0`, acrescenta `na_meta = 0`. No fim do corpo do `for`, depois da soma, acrescenta estas três linhas, com a indentação que mostram:
 
@@ -499,7 +499,7 @@ Pensa antes de continuares: se a linha `na_meta = na_meta + 1` ficasse só com q
 
 Esta fase é opcional, porque traz uma ideia nova: um ciclo dentro de outro. Até aqui, cada programa tinha um só ciclo. Já o fizeste em pseudocódigo, no projeto 2 da algoritmia, com a validação da nota dentro de um `Para`.
 
-Ninguém traz quilos negativos. Um número negativo só pode ser um engano a escrever, e o programa não o deve somar. A solução é pedir o valor outra vez, enquanto for negativo: uma validação repetida. É um `while` dentro do `for`, o ciclo dentro de outro. Em cada volta do `for`, o `while` dá todas as suas voltas: volta a perguntar os quilos da mesma turma até o valor ser válido. Só depois o valor é somado e comparado com a meta. Para saber mais, lê a secção "Validação repetida" do [guia](04-ciclos-while-e-for.md).
+Ninguém traz quilos negativos. Um número negativo só pode ser um engano a escrever, e o programa não o deve somar. A solução é pedir o valor outra vez, enquanto for negativo: uma validação repetida. É um `while` dentro do `for`, o ciclo dentro de outro. Em cada volta do `for`, o `while` dá todas as suas voltas: volta a perguntar os quilos da mesma turma até o valor ser válido. Só depois o valor é somado e comparado com a meta. Para saber mais, lê a secção "Validação repetida" do [guia](../04-ciclos-while-e-for.md).
 
 1. Em `campanha_10ano.py`, logo a seguir à linha do `input` que está dentro do `for`, acrescenta estas três linhas, com a indentação que mostram. Muda também o comentário do topo, como está no ficheiro completo da paragem 6.
 
@@ -629,4 +629,4 @@ Não é um erro: a divisão não acaba, e o Python mostra as casas todas. Se qui
 - [ ] Sabes dizer porque é que o `campanha.py` usa um `while` e o `campanha_10ano.py` usa um `for`.
 - [ ] Consegues explicar, por palavras tuas, o que faz cada uma das três peças de um ciclo.
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

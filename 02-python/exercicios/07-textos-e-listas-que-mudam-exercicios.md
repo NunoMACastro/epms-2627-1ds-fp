@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Textos e listas que mudam
 
@@ -6,7 +6,7 @@ Ficha do tema Textos e listas que mudam, do módulo Criar aplicações em lingua
 
 ## O que precisas de saber
 
-O [guia do tema](07-textos-e-listas-que-mudam.md) e o [laboratório](07-textos-e-listas-que-mudam-laboratorio.md).
+O [guia do tema](../07-textos-e-listas-que-mudam.md) e o [laboratório](../laboratorios/07-textos-e-listas-que-mudam-laboratorio.md).
 
 ## Como trabalhar
 
@@ -248,4 +248,4 @@ Corre o teu `palavra_do_dia.py` corrigido e carrega logo em Enter, sem escrever 
 2. No exercício 7, qual dos três erros foi o mais difícil de encontrar, e porquê?
 3. Já consegues dizer, antes de correr, se um método muda o valor ou devolve um valor novo?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

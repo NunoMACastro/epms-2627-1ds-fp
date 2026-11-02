@@ -1,4 +1,4 @@
-![Cabeçalho](../imagens/cabecalho.png)
+![Cabeçalho](../../imagens/cabecalho.png)
 
 # Ficha de exercícios: Listas
 
@@ -6,7 +6,7 @@ Ficha do tema Listas, do módulo Criar aplicações em linguagem de programaçã
 
 ## O que precisas de saber
 
-O [guia do tema](05-listas.md) e o [laboratório](05-listas-laboratorio.md).
+O [guia do tema](../05-listas.md) e o [laboratório](../laboratorios/05-listas-laboratorio.md).
 
 ## Como trabalhar
 
@@ -202,4 +202,4 @@ Os golos que uma equipa marcou em cada jogo estão na lista `golos = [2, 0, 1, 0
 2. Que caso de teste te mostrou um erro que não esperavas: a lista vazia, a lista com um elemento ou a fronteira?
 3. No exercício 7, qual dos dois erros foi o mais difícil de encontrar, e porquê?
 
-![Rodapé](../imagens/rodape.png)
+![Rodapé](../../imagens/rodape.png)

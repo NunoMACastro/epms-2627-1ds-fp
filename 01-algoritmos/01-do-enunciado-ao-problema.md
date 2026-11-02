@@ -2,7 +2,7 @@
 
 # Do enunciado ao problema delimitado
 
-Módulo Desenvolver algoritmos. Este guia ensina-te a olhar para um enunciado e a transformá-lo num problema bem delimitado, antes de pensares em qualquer solução. Lê-se ao teu ritmo, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Este guia ensina-te a olhar para um enunciado e a transformá-lo num problema bem delimitado, antes de pensares em qualquer solução. Lê-se ao teu ritmo, e não precisa de ser de uma vez. Para praticar, há a [ficha de exercícios](exercicios/01-do-enunciado-ao-problema-exercicios.md) deste tema.
 
 Serve também para estudares com calma o jogo dos Missionários e Canibais, que se joga na primeira aula da disciplina. Não precisas de saber programar. Nada neste guia exige um computador, e a maior parte do que aqui está faz-se com papel, lápis e atenção. Neste tema, os algoritmos escrevem-se em português, em passos numerados. A notação própria para os escrever é o assunto do tema seguinte.
 
@@ -461,7 +461,7 @@ Responde sem olhar para o guia. Se não conseguires responder a uma pergunta, vo
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](01-do-enunciado-ao-problema-exercicios.md). Tem cinco exercícios, do mais simples ao mais completo, e um desafio opcional com os Missionários e Canibais. O tema seguinte é [Estado, sequência e representações](02-estado-sequencia-representacoes.md).
+Para praticar este tema, faz a [ficha de exercícios](exercicios/01-do-enunciado-ao-problema-exercicios.md). Tem cinco exercícios, do mais simples ao mais completo, e um desafio opcional com os Missionários e Canibais. O tema seguinte é [Estado, sequência e representações](02-estado-sequencia-representacoes.md).
 
 No tema seguinte vais aprender a escrever algoritmos numa notação própria, chamada pseudocódigo. O estado dos Missionários e Canibais, que aqui eram três valores escritos numa tabela, passa a ter nomes próprios, chamados variáveis. Vais aprender a segui-lo passo a passo numa tabela de trace. O contrato continua a ser o primeiro passo de todos os problemas. Antes de escrever uma única instrução, vais sempre escrever as entradas, as saídas, as restrições e os exemplos.
 

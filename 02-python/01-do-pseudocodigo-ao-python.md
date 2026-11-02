@@ -2,7 +2,7 @@
 
 # Do pseudocódigo ao Python
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia ficas a saber onde se escreve um programa e com que ferramentas, e escreves e corres os teus primeiros scripts em Python. Para praticar, há o [laboratório](01-do-pseudocodigo-ao-python-laboratorio.md) e a [ficha de exercícios](01-do-pseudocodigo-ao-python-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia ficas a saber onde se escreve um programa e com que ferramentas, e escreves e corres os teus primeiros scripts em Python. Para praticar, há o [laboratório](laboratorios/01-do-pseudocodigo-ao-python-laboratorio.md) e a [ficha de exercícios](exercicios/01-do-pseudocodigo-ao-python-exercicios.md) deste tema.
 
 Na algoritmia, quem executava os algoritmos eras tu, linha a linha, numa tabela de trace. A partir de agora é o computador. Antes da primeira linha de Python, há uma pergunta a que tens de saber responder: onde se escreve um programa, e com que ferramentas? Este tema responde-lhe, e fica pelos programas que só escrevem no ecrã. As variáveis, as contas e a leitura do teclado ficam para o tema seguinte, Dados e interação.
 
@@ -49,10 +49,10 @@ No fim deste guia, consegues:
 - A tabela de trace: guia [02](../01-algoritmos/02-estado-sequencia-representacoes.md), secção "Tabela de trace".
 - A forma do pseudocódigo das aulas e a indentação: guia [02](../01-algoritmos/02-estado-sequencia-representacoes.md), secção "A forma de escrever pseudocódigo nas aulas".
 - O `Escreve:`, com textos e valores separados por vírgulas: guia [02](../01-algoritmos/02-estado-sequencia-representacoes.md), secção "Entrada e saída: `ler valor` e `Escreve:`".
-- As regras do duelo de dados: [projeto 1, Duelo de dados](../01-algoritmos/05-projeto-1-duelo-de-dados.md), secção "O jogo".
+- As regras do duelo de dados: [projeto 1, Duelo de dados](../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md), secção "O jogo".
 - As funções e o que acontece numa chamada: guia [05 Funções e modelo integrado](../01-algoritmos/05-funcoes-e-modelo-integrado.md), secção "Chamar uma função".
-- Os casos de teste e o resultado esperado, escrito antes de executar: [projeto 1](../01-algoritmos/05-projeto-1-duelo-de-dados.md), secção "Passo 2: a tabela de casos esperados, antes do algoritmo".
-- A rotina da depuração, em cinco passos: [projeto 1](../01-algoritmos/05-projeto-1-duelo-de-dados.md), secção "Passo 6: depurar com a rotina da depuração".
+- Os casos de teste e o resultado esperado, escrito antes de executar: [projeto 1](../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md), secção "Passo 2: a tabela de casos esperados, antes do algoritmo".
+- A rotina da depuração, em cinco passos: [projeto 1](../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md), secção "Passo 6: depurar com a rotina da depuração".
 - Criar uma pasta e guardar um ficheiro no computador, do dia a dia.
 
 ## Um programa é um algoritmo que o computador executa
@@ -649,7 +649,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](01-do-pseudocodigo-ao-python-laboratorio.md). Nele preparas a pasta do projeto, conheces as ferramentas do VS Code uma a uma e escreves o ecrã de abertura de um jogo. Depois faz a [ficha de exercícios](01-do-pseudocodigo-ao-python-exercicios.md), com ecrãs para prever e para traduzir, a escolha da ferramenta certa e erros para encontrar.
+Para praticar este tema, faz o [laboratório](laboratorios/01-do-pseudocodigo-ao-python-laboratorio.md). Nele preparas a pasta do projeto, conheces as ferramentas do VS Code uma a uma e escreves o ecrã de abertura de um jogo. Depois faz a [ficha de exercícios](exercicios/01-do-pseudocodigo-ao-python-exercicios.md), com ecrãs para prever e para traduzir, a escolha da ferramenta certa e erros para encontrar.
 
 O tema seguinte é [Dados e interação](02-dados-e-interacao.md). Os programas deste tema escreveram sempre o mesmo ecrã. No tema seguinte, vão guardar valores em variáveis, fazer contas e ler o que a pessoa escreve no teclado.
 

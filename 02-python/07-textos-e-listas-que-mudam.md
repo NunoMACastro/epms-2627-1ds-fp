@@ -2,7 +2,7 @@
 
 # Textos e listas que mudam
 
-Módulo Criar aplicações em linguagem de programação Python. Neste guia aprendes a trabalhar com um texto por dentro. Vais ler cada carácter, tirar um pedaço, procurar uma palavra e arrumar o que alguém escreveu no teclado. Aprendes também a escrever mensagens exatas com f-strings, e a usar listas que ganham e perdem elementos enquanto o programa corre. Para praticar, há o [laboratório](07-textos-e-listas-que-mudam-laboratorio.md) e a [ficha de exercícios](07-textos-e-listas-que-mudam-exercicios.md) deste tema.
+Módulo Criar aplicações em linguagem de programação Python. Neste guia aprendes a trabalhar com um texto por dentro. Vais ler cada carácter, tirar um pedaço, procurar uma palavra e arrumar o que alguém escreveu no teclado. Aprendes também a escrever mensagens exatas com f-strings, e a usar listas que ganham e perdem elementos enquanto o programa corre. Para praticar, há o [laboratório](laboratorios/07-textos-e-listas-que-mudam-laboratorio.md) e a [ficha de exercícios](exercicios/07-textos-e-listas-que-mudam-exercicios.md) deste tema.
 
 Até aqui, os textos serviam para mostrar mensagens e para guardar o que o `input` devolvia. As listas vinham escritas no programa, com os valores todos, e só mudavam um elemento pelo índice. Neste tema, olhas para dentro de um texto, carácter a carácter. E as listas passam a crescer e a encolher: começam vazias e recebem os valores à medida que eles chegam. Este tema ainda não junta os vários dados de uma coisa num só valor, nem procura valores por um nome. Isso fica para o tema seguinte.
 
@@ -968,7 +968,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz o [laboratório](07-textos-e-listas-que-mudam-laboratorio.md). Nele constróis dois programas do clube: um arruma e confirma o código de um jogo, e o outro gere a fila para a consola. Depois faz a [ficha de exercícios](07-textos-e-listas-que-mudam-exercicios.md). Tem exercícios com textos e com listas, e um script com erros para encontrar.
+Para praticar este tema, faz o [laboratório](laboratorios/07-textos-e-listas-que-mudam-laboratorio.md). Nele constróis dois programas do clube: um arruma e confirma o código de um jogo, e o outro gere a fila para a consola. Depois faz a [ficha de exercícios](exercicios/07-textos-e-listas-que-mudam-exercicios.md). Tem exercícios com textos e com listas, e um script com erros para encontrar.
 
 O tema seguinte é [Tuplos, dicionários e conjuntos](08-tuplos-dicionarios-e-conjuntos.md). Vais guardar os quatro dados de cada jogo juntos, procurar um jogo pelo código sem percorrer a lista, e tirar os repetidos de uma coleção.
 

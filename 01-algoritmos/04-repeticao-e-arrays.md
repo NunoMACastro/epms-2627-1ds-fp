@@ -2,7 +2,7 @@
 
 # Repetição e arrays
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que repetem instruções, e a guardar muitos valores numa só variável, a que se chama array. Aprendes também a percorrer esses valores um a um, a contá-los e a somá-los. Lê-se ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever algoritmos que repetem instruções, e a guardar muitos valores numa só variável, a que se chama array. Aprendes também a percorrer esses valores um a um, a contá-los e a somá-los. Lê-se ao teu ritmo, em várias vezes, com papel quadriculado e lápis ao lado, porque as tabelas se fazem à mão. Para praticar, há a [ficha de exercícios](exercicios/04-repeticao-e-arrays-exercicios.md) deste tema.
 
 Até agora, cada instrução dos teus algoritmos executava-se no máximo uma vez. Neste tema, a mesma instrução passa a poder executar-se muitas vezes seguidas. Repetir instruções e guardar vários valores numa variável são as duas ideias que mais vais usar daqui até ao fim do curso.
 
@@ -1139,7 +1139,7 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](04-repeticao-e-arrays-exercicios.md). Tem sete exercícios, do mais simples ao mais completo, um desafio opcional com uma tabela e mais um exercício opcional, de encontrar o erro.
+Para praticar este tema, faz a [ficha de exercícios](exercicios/04-repeticao-e-arrays-exercicios.md). Tem sete exercícios, do mais simples ao mais completo, um desafio opcional com uma tabela e mais um exercício opcional, de encontrar o erro.
 
 O tema seguinte é [Funções e modelo integrado](05-funcoes-e-modelo-integrado.md). Os algoritmos deste guia já são grandes, e começam a repetir partes: calcular uma média, procurar um valor num array, validar uma nota. No guia seguinte vais aprender a dar nome a essas partes e a usá-las sempre que precisares. Para isso, usas as funções que já começaste a escrever na aula. Vais também juntar tudo o que aprendeste na algoritmia num último problema, antes de passares para o Python. No Python, o `Enquanto` chama-se `while` e o `Para cada` chama-se `for`. As tabelas de iterações vão servir para prever o que o programa faz antes de o executares.
 

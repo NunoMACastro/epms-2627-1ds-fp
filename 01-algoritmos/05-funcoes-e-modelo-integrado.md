@@ -2,7 +2,7 @@
 
 # Funções e modelo integrado
 
-Módulo Desenvolver algoritmos. Neste guia aprendes a escrever as tuas próprias funções, partes de um algoritmo com nome que recebem valores e devolvem um resultado. Aprendes também a decompor um problema inteiro em funções e a testá-lo por partes. Lê-se ao teu ritmo, de preferência em mais do que uma vez, com papel e lápis ao lado. Para praticar, há a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md) deste tema.
+Módulo Desenvolver algoritmos. Neste guia aprendes a escrever as tuas próprias funções, partes de um algoritmo com nome que recebem valores e devolvem um resultado. Aprendes também a decompor um problema inteiro em funções e a testá-lo por partes. Lê-se ao teu ritmo, de preferência em mais do que uma vez, com papel e lápis ao lado. Para praticar, há a [ficha de exercícios](exercicios/05-funcoes-e-modelo-integrado-exercicios.md) deste tema.
 
 Os algoritmos do guia 04 já eram grandes, e começavam a repetir partes de problema para problema. Somavam um array, calculavam uma média com cuidado com o zero, procuravam um valor, validavam uma nota. Neste guia vais aprender a dar nome a essas partes. Depois vais juntar tudo o que aprendeste na algoritmia num algoritmo completo, organizado em funções, testado e pronto para passar para o Python.
 
@@ -730,11 +730,11 @@ Usa estas perguntas para te testares. Responde a cada uma sem olhar para o guia.
 
 ## O que vem a seguir
 
-Para praticar este tema, faz a [ficha de exercícios](05-funcoes-e-modelo-integrado-exercicios.md). Tem sete exercícios, do mais simples ao mais completo. O último é o começo do dossiê de um problema pequeno, que junta toda a algoritmia: a análise, a decomposição e os contratos. O algoritmo e os testes desse dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo.
+Para praticar este tema, faz a [ficha de exercícios](exercicios/05-funcoes-e-modelo-integrado-exercicios.md). Tem sete exercícios, do mais simples ao mais completo. O último é o começo do dossiê de um problema pequeno, que junta toda a algoritmia: a análise, a decomposição e os contratos. O algoritmo e os testes desse dossiê estão na secção opcional "Para ires mais longe", para quem quiser completá-lo.
 
 A algoritmia fecha com três projetos, todos jogos, cada um um pouco mais difícil do que o anterior. Num projeto juntas tudo o que aprendeste num problema só. Leva-lo do enunciado até um algoritmo testado. Pelo caminho fazes o contrato, a tabela de casos escrita antes do algoritmo, o algoritmo, os testes e a correção do que falhar.
 
-O [projeto 1, Duelo de dados](05-projeto-1-duelo-de-dados.md), fazes com o professor ao quadro. É aí que treinas por extenso a rotina da depuração, os cinco passos que os guias 04 e 05 apresentam nos erros frequentes. O [projeto 2, Adivinha o número](05-projeto-2-adivinha-o-numero.md), fazes em pares, com o professor a confirmar cada passo. Os dois ficam no teu portefólio. Não contam para a avaliação prática, mas o trabalho neles conta no empenho e na autonomia. O terceiro projeto é a avaliação prática individual da unidade, com um problema novo, e nela podes consultar os dois primeiros. O dossiê do exercício 7 da ficha é um bom treino para os três.
+O [projeto 1, Duelo de dados](projetos-guiados/05-projeto-1-duelo-de-dados.md), fazes com o professor ao quadro. É aí que treinas por extenso a rotina da depuração, os cinco passos que os guias 04 e 05 apresentam nos erros frequentes. O [projeto 2, Adivinha o número](projetos-guiados/05-projeto-2-adivinha-o-numero.md), fazes em pares, com o professor a confirmar cada passo. Os dois ficam no teu portefólio. Não contam para a avaliação prática, mas o trabalho neles conta no empenho e na autonomia. O terceiro projeto é a avaliação prática individual da unidade, com um problema novo, e nela podes consultar os dois primeiros. O dossiê do exercício 7 da ficha é um bom treino para os três.
 
 Com este tema acaba a algoritmia. O tema seguinte é o primeiro do Python, Do pseudocódigo ao Python. O Python é a primeira linguagem de programação do ano, e vais reconhecer quase tudo. O pseudocódigo das aulas foi escrito para passar para o Python quase linha a linha:
 
