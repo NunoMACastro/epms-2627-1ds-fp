@@ -22,11 +22,11 @@ Os exercícios 1 a 7 são obrigatórios e fazem-se por esta ordem, porque cada u
 
 O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
 
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. As tabelas e as respostas escritas ficam no caderno. Antes de correres um script, escreve sempre o resultado que esperas, calculado à mão a partir do enunciado. Nas mensagens, usa f-strings ou o `print` com vírgulas, como preferires, desde que o ecrã fique como o enunciado mostra.
+Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Quando um exercício pede uma resposta escrita, escreve-a no script, num comentário com `#`, no sítio que o exercício indica. Antes de correres um script, decide que resultado esperas, a partir do enunciado: é com ele que vês se o script está certo. Nas mensagens, usa f-strings ou o `print` com vírgulas, como preferires, desde que o ecrã fique como o enunciado mostra.
 
 ## Exercício 1: Prever na consola
 
-Abre a consola do Python, com o teu comando, `python`, `py` ou `python3`. Vais escrever as linhas abaixo, por esta ordem. Antes de cada linha marcada com uma letra, escreve no caderno o que esperas que a consola mostre. Só depois a escreves e confirmas. As linhas sem letra não mostram nada, mas criam ou mudam os valores.
+Abre a consola do Python, com o teu comando, `python`, `py` ou `python3`. Vais escrever as linhas abaixo, por esta ordem. Antes de cada linha marcada com uma letra, prevê o que a consola vai mostrar. Só depois a escreves e confirmas. As linhas sem letra não mostram nada, mas criam ou mudam os valores.
 
 ```text
 nome = "Ana Sofia"
@@ -50,29 +50,18 @@ l) len(mochila)
 
 Na consola, não escrevas a letra nem o parêntese: escreve só o que vem a seguir, como `nome[0]`.
 
-Para cada previsão em que te enganaste, escreve uma frase a explicar o que o Python fez.
+Quando uma previsão falhar, procura no guia a razão do que o Python fez.
 
 ## Exercício 2: O despertador
 
-Um despertador mostra as horas num texto com cinco caracteres, como `"07:45"`: dois algarismos das horas, os dois pontos e dois algarismos dos minutos. Escreve o script `despertador.py`, que lê uma hora nesta forma e diz quantos minutos passaram desde a meia-noite. O ecrã fica assim:
+Um despertador mostra as horas num texto com cinco caracteres, como `"07:45"`: dois algarismos das horas, os dois pontos e dois algarismos dos minutos. Escreve o script `despertador.py`, que lê uma hora nesta forma e diz quantos minutos passaram desde a meia-noite. O script começa com um comentário que diz o que ele faz. O ecrã fica assim:
 
 ```text
 Hora do despertador (hh:mm)? 07:45
 07:45 são 465 minutos depois da meia-noite.
 ```
 
-a) Antes de escreveres código, completa no caderno o resultado esperado de cada caso, calculado à mão:
-
-| Hora | Minutos depois da meia-noite |
-| --- | ---: |
-| `00:00` | |
-| `07:45` | 465 |
-| `12:00` | |
-| `23:59` | |
-
-b) Escreve o script. Começa com um comentário que diga o que ele faz.
-
-c) Corre o script com os quatro casos e confirma a tabela.
+Experimenta-o com `00:00`, `07:45`, `12:00` e `23:59`.
 
 ## Exercício 3: O nome de utilizador
 
@@ -90,14 +79,14 @@ Ano de nascimento? 2011
 O teu nome de utilizador é anamar2011.
 ```
 
-Antes de correres, calcula à mão o nome de utilizador de cada caso. Depois corre o script com cada um e confirma:
+Experimenta-o com estes casos:
 
-| Nome completo | Ano | Nome de utilizador |
-| --- | --- | --- |
-| `Ana Sofia Martins` | `2011` | `anamar2011` |
-| `rui costa` | `2010` | |
-| `Eva Sá` | `2012` | |
-| `Tomás` | `2010` | |
+| Nome completo | Ano |
+| --- | --- |
+| `Ana Sofia Martins` | `2011` |
+| `rui costa` | `2010` |
+| `Eva Sá` | `2012` |
+| `Tomás` | `2010` |
 
 O script tem de servir para nomes com qualquer número de palavras.
 
@@ -111,16 +100,7 @@ O PIN tem de ter 4 algarismos.
 O PIN não pode ter os quatro algarismos iguais.
 ```
 
-Antes de correres, escreve no caderno a mensagem esperada para cada PIN da tabela. Depois corre o script com cada um e confirma:
-
-| PIN escrito | Mensagem esperada |
-| --- | --- |
-| `2580` | |
-| `1111` | |
-| `12a4` | |
-| `123` | |
-| `0000` | |
-| `1121` | |
+Experimenta-o com os PIN `2580`, `1111`, `12a4`, `123`, `0000` e `1121`.
 
 ## Exercício 5: Os lançamentos de dardos
 
@@ -136,14 +116,7 @@ Melhor: 20
 Pior: 5
 ```
 
-Testa o script com estas entradas. Antes de cada uma, escreve no caderno o que esperas que apareça:
-
-| Pontuações escritas, por ordem | Lançamentos | Total | Melhor | Pior |
-| --- | ---: | ---: | ---: | ---: |
-| 20, 5, 60, 0 | | | | |
-| 25 | | | | |
-
-Testa também sem nenhuma pontuação, carregando logo em Enter, e escreve antes o que esperas que apareça.
+Experimenta-o com as pontuações 20, 5, 60 e 0, por esta ordem, e com uma só pontuação, 25. Experimenta-o também sem nenhuma pontuação, carregando logo em Enter.
 
 ## Exercício 6: A lista de tarefas
 
@@ -164,8 +137,6 @@ c) Lembraste-te de `"ligar à avó"`, que fica para o fim.
 d) Fizeste a primeira tarefa da lista: sai da lista, e o programa escreve `Feita:` e o nome dela.
 
 e) O programa mostra quantas tarefas faltam e a lista, numerada a partir do 1, uma por linha. A primeira linha diz `Faltam` e o número de tarefas, como `Faltam 5 tarefas:`. Cada tarefa vem numa linha, como `1. fazer a mochila`.
-
-Antes de correres, escreve no caderno como fica a lista depois de cada pedido, e o ecrã que esperas. Depois corre e confirma.
 
 ## Exercício 7: Encontrar o erro
 
@@ -195,7 +166,7 @@ A palavra JOGO aparece 2 vezes.
 Última palavra: jogo
 ```
 
-Copia o script para o ficheiro `palavra_do_dia.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve no caderno:
+Copia o script para o ficheiro `palavra_do_dia.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina. Escreve o que ela pede num comentário no fim do script, com `#`, para os números das linhas não mudarem:
 
 1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
 2. Numa frase, o que achas que causa o erro.
@@ -203,21 +174,21 @@ Copia o script para o ficheiro `palavra_do_dia.py` e corre-o. O Python mostra os
 4. A linha que mudaste, e como ficou. Muda o mínimo possível.
 5. O que aconteceu quando voltaste a correr.
 
-Quando o script mostrar o resultado certo, testa-o também com `Hoje há JOGO e amanhã há jogo` e com `Não há aulas amanhã`. Antes de correres, escreve o que deve aparecer.
+Quando o script mostrar o resultado certo, experimenta-o também com `Hoje há JOGO e amanhã há jogo` e com `Não há aulas amanhã`.
 
 ## Apoio
 
-- Exercício 1: na linha `e)`, lembra-te do que um método de um texto faz ao texto. Nas linhas `h)`, `i)` e `k)`, a consola mostra a lista inteira; desenha-a no caderno depois de cada linha que a muda. A linha `j)` mostra um valor: qual?
-- Exercício 2: desenha no caderno a tabela de índices de `"07:45"`, carácter a carácter, antes de escolher as fatias. Cada fatia é um texto: pensa no que é preciso antes de fazer contas com ela.
-- Exercício 3: há um método que parte o nome numa lista de palavras. Escreve no caderno a lista que ele dá para cada nome da tabela, antes de escolher o que tiras dela.
+- Exercício 1: na linha `e)`, lembra-te do que um método de um texto faz ao texto. Nas linhas `h)`, `i)` e `k)`, a consola mostra a lista inteira; pensa em como ela fica depois de cada linha que a muda. A linha `j)` mostra um valor: qual?
+- Exercício 2: conta os índices de `"07:45"`, carácter a carácter, como na tabela da fase 1 do laboratório, antes de escolheres as fatias. Cada fatia é um texto: pensa no que é preciso antes de fazer contas com ela.
+- Exercício 3: há um método que parte o nome numa lista de palavras. Experimenta-o na consola com os nomes da tabela, para veres a lista que ele dá, antes de escolheres o que tiras dela.
 - Exercício 4: o guia tem um método que diz se um texto tem só algarismos. Para os quatro iguais, servem o `for` que percorre um texto carácter a carácter e uma bandeira, como as do tema 05.
-- Exercício 5: é o ciclo da sentinela, com o texto vazio no papel do -1 do laboratório do tema 04. Escreve primeiro a versão que funciona com as duas primeiras entradas, e só depois testa sem nenhuma pontuação.
+- Exercício 5: é o ciclo da sentinela, com o texto vazio no papel do -1 do laboratório do tema 04. Faz primeiro a versão que funciona com os dois primeiros casos, e só depois trata o caso sem nenhuma pontuação.
 - Exercício 6: para cada pedido, pergunta-te o que sabes: o valor que entra ou sai, ou a posição. A tabela das operações das listas, no fim de "Seguir o estado da lista", no guia, ajuda a escolher o método.
 - Exercício 7: o Python só mostra o erro seguinte depois de corrigires o anterior. A linha que a mensagem aponta pode ter a causa ou não. Um dos erros não dá mensagem nenhuma: só o encontras comparando o ecrã com o esperado.
 
 ## Desafio opcional
 
-Uma palavra é um palíndromo quando se lê da mesma maneira nos dois sentidos, do princípio para o fim e do fim para o princípio. São exemplos "radar" e "ana". Escreve o script `palindromo.py`, que lê uma palavra e diz se é um palíndromo, sem ligar às maiúsculas. Testa com `Radar`, `ana`, `Tetris`, `abba` e `a`. Antes de cada caso, escreve o que esperas.
+Uma palavra é um palíndromo quando se lê da mesma maneira nos dois sentidos, do princípio para o fim e do fim para o princípio. São exemplos "radar" e "ana". Escreve o script `palindromo.py`, que lê uma palavra e diz se é um palíndromo, sem ligar às maiúsculas. Testa com `Radar`, `ana`, `Tetris`, `abba` e `a`.
 
 Há uma forma de o fazer com os índices negativos. Compara o primeiro carácter com o último, o segundo com o penúltimo, e assim por diante.
 
@@ -237,10 +208,10 @@ Corre o teu `palavra_do_dia.py` corrigido e carrega logo em Enter, sem escrever 
 
 ## Critérios de conclusão
 
-- O exercício 1 tem a previsão e a confirmação de cada linha marcada, e uma frase para cada previsão errada.
-- Os scripts `despertador.py`, `utilizador.py`, `pin.py` e `dardos.py` correm e dão os resultados das tabelas, que preencheste antes de correr.
-- O `tarefas.py` usa um método diferente em cada pedido e mostra a lista que previste no caderno.
-- O `palavra_do_dia.py` dá os resultados certos nos três casos. Tens no caderno a rotina de cada um dos três erros, com o tipo de cada um.
+- Correste as linhas do exercício 1 na consola, e percebes cada resultado, também os que não previste.
+- Os scripts `despertador.py`, `utilizador.py`, `pin.py` e `dardos.py` correm e dão o resultado certo em todos os casos do seu exercício.
+- O `tarefas.py` usa um método diferente em cada pedido e mostra as tarefas que faltam, numeradas.
+- O `palavra_do_dia.py` dá os resultados certos nos três casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
 
 ## Autoavaliação
 

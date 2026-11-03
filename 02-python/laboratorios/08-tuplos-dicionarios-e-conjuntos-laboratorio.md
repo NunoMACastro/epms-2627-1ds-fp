@@ -11,7 +11,7 @@ O clube de videojogos de uma escola foi inventado para as aulas. Tem um catálog
 - `catalogo_lista.py` procura um jogo pelo código, com o catálogo guardado numa lista;
 - `catalogo.py` faz a mesma procura com o catálogo guardado num dicionário. Depois mostra o catálogo, junta os jogos de um género, diz que géneros há, sem repetidos, e quantos jogos tem cada um.
 
-Pelo caminho, ficas a saber usar tuplos, dicionários e conjuntos, e a escolher entre eles. Fazes ainda, no caderno, a tua **tabela de decisões**. É uma tabela com os dados do problema, a coleção que escolheste para cada um e porquê.
+Pelo caminho, ficas a saber usar tuplos, dicionários e conjuntos, e a escolher entre eles. Nas paragens em que se escolhe uma coleção, encontras a **tabela de decisões**: os dados do problema, a coleção escolhida para cada um e porquê. Antes de leres o porquê, pensa tu na razão da escolha.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
@@ -45,13 +45,12 @@ fp-python/
 - Conjunto: uma coleção sem repetidos e sem ordem. Para saber mais, vê a secção "Conjuntos: valores sem repetidos" do [guia](../08-tuplos-dicionarios-e-conjuntos.md).
 - `set()` e `add`: a função que cria um conjunto vazio, e o método que lhe acrescenta um valor. Se o valor já lá estiver, nada muda.
 - Dicionário de contagens: um dicionário em que cada chave é um valor que apareceu e o valor é quantas vezes apareceu.
-- Tabela de decisões: a tabela do teu caderno com os dados, a coleção escolhida para cada um e porquê.
+- Tabela de decisões: a tabela das paragens com os dados, a coleção escolhida para cada um e porquê.
 
 ## O que precisas
 
 - O Python 3 e o VS Code, os dos laboratórios anteriores. Para confirmares o Python, abre o terminal do VS Code, no menu Terminal, com a opção New Terminal. Escreve `python --version`, com o teu comando: `python`, `py` no Windows ou `python3` no macOS. Deve aparecer uma linha como `Python 3.14.0`, com o 3 no início.
 - A pasta `fp-python`, a dos laboratórios anteriores. Se não a tiveres, cria-a como diz "Preparar o projeto".
-- O caderno, para a tabela de decisões.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou apontar outra coluna da linha. O tipo de erro, a palavra antes dos dois pontos, é o mesmo. O caminho do ficheiro que aparece nas mensagens, a seguir a `File`, muda de computador para computador.
 
@@ -66,8 +65,6 @@ Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. 
 ## Preparar o projeto
 
 1. Abre a pasta `fp-python` no VS Code. No menu File, escolhe Open Folder..., isto é, "abrir pasta", e escolhe `fp-python`. Se ainda não tens a pasta, cria-a primeiro no sítio onde guardas os trabalhos, por exemplo em Documentos. O que deves ver: à esquerda, no painel Explorer, o nome `FP-PYTHON`, com os ficheiros que já lá estiverem.
-
-2. No caderno, faz uma tabela com três colunas, com estes títulos: "Os dados", "A coleção" e "Porquê". É a tua tabela de decisões. Em cada paragem em que escolheres uma coleção, acrescentas-lhe uma linha.
 
 ## Fase 1: O catálogo numa lista de tuplos
 
@@ -171,7 +168,7 @@ O `catalogo_lista.py` procura um jogo pelo código, percorrendo a lista.
 
 Pensa antes de continuares: com o código `AVE-01`, o último da lista, quantas voltas dá o ciclo? E com `PLA-09`? A resposta: 7 nos dois casos. Com `AVE-01`, o jogo só aparece na sétima volta. Com `PLA-09`, o ciclo percorre a lista toda sem o encontrar. Um catálogo com mil jogos podia obrigar a mil comparações.
 
-Acrescenta à tua tabela de decisões:
+A tabela de decisões desta fase:
 
 | Os dados | A coleção | Porquê |
 | --- | --- | --- |
@@ -238,7 +235,7 @@ O `catalogo.py` procura um jogo pela chave, sem ciclo, e não para com um códig
 
 Pensa antes de continuares: com mil jogos no catálogo, qual dos dois programas encontra mais depressa o último jogo, e porquê? A resposta: o do dicionário. A lista compara o código com cada jogo, um a um, até o encontrar. O dicionário vai diretamente à chave, e o tamanho do catálogo quase não conta.
 
-Acrescenta à tua tabela de decisões:
+A tabela de decisões desta fase:
 
 | Os dados | A coleção | Porquê |
 | --- | --- | --- |
@@ -350,7 +347,7 @@ O `catalogo.py` junta numa lista os jogos do género pedido e trata o caso de n�
 
 Pensa antes de continuares: porque é que os títulos de um género se guardam numa lista, e não num tuplo? A resposta: porque o número de títulos não se sabe à partida, e a lista cresce com o `append`. Um tuplo não muda depois de criado, e não podia receber os títulos um a um.
 
-Acrescenta à tua tabela de decisões:
+A tabela de decisões desta fase:
 
 | Os dados | A coleção | Porquê |
 | --- | --- | --- |
@@ -411,7 +408,7 @@ O `catalogo.py` mostra os géneros do catálogo, cada um uma vez e por ordem.
 
 Pensa antes de continuares: o conjunto dos géneros podia substituir o catálogo inteiro? A resposta: não. O conjunto diz que géneros há, e mais nada. Perdeu quantos jogos há de cada género, os títulos e a ordem. Um conjunto serve quando a pergunta é "que valores há, cada um uma vez", e não quando os repetidos contam.
 
-Acrescenta à tua tabela de decisões:
+A tabela de decisões desta fase:
 
 | Os dados | A coleção | Porquê |
 | --- | --- | --- |
@@ -452,7 +449,7 @@ Conta-se com um dicionário. Cada género é uma chave, e o valor é o seu conta
    puzzle: 1
    ```
 
-3. Segue as quatro primeiras voltas no caderno. Os jogos saem pela ordem do catálogo:
+3. Segue as quatro primeiras voltas nesta tabela. Os jogos saem pela ordem do catálogo:
 
    | Volta | `genero` | Já é chave? | `jogos_por_genero` depois da volta |
    | ---: | --- | --- | --- |
@@ -461,7 +458,7 @@ Conta-se com um dicionário. Cada género é uma chave, e o valor é o seu conta
    | 3 | corridas | não | `{'plataformas': 2, 'corridas': 1}` |
    | 4 | desporto | não | `{'plataformas': 2, 'corridas': 1, 'desporto': 1}` |
 
-   Continua a tabela até à volta 7, e confirma que acaba com os cinco pares do ecrã.
+   Continua de cabeça até à volta 7, e confirma que o dicionário acaba com os cinco pares do ecrã.
 
 4. Por fim, atualiza o comentário do início, porque o programa passou a fazer mais coisas. Substitui as duas primeiras linhas do ficheiro por estas três:
 
@@ -569,7 +566,7 @@ for genero in sorted(jogos_por_genero):
 
 Pensa antes de continuares: agora que tens o dicionário das contagens, ainda precisavas do conjunto dos géneros? A resposta: para saber quantos géneros há, não. As chaves de um dicionário não se repetem, e `len(jogos_por_genero)` também dá 5. O conjunto responde só a "que géneros há?", e di-lo de forma mais direta. O dicionário responde também a "quantos de cada?". Escolhe-se a coleção que responde à pergunta que se faz.
 
-Acrescenta à tua tabela de decisões:
+A tabela de decisões desta fase:
 
 | Os dados | A coleção | Porquê |
 | --- | --- | --- |
@@ -621,7 +618,7 @@ A linha `jogos_por_genero = {}` ficou dentro do ciclo, e o dicionário volta a n
 
 - [ ] O `catalogo_lista.py` e o `catalogo.py` dão a mesma resposta com `PLA-02`, ` des-01` e `PLA-09`.
 - [ ] O `catalogo.py` mostra o catálogo, os jogos de `puzzle`, de ` Desporto` e de `luta`, os cinco géneros por ordem e os jogos de cada género.
-- [ ] A tua tabela de decisões tem as cinco linhas das paragens 1, 2, 4, 5 e 6.
+- [ ] Para cada linha das tabelas de decisões das paragens 1, 2, 4, 5 e 6, sabes dizer porque é que a coleção serve aqueles dados.
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que o catálogo ficou num dicionário e os géneros num conjunto. E porque é que um conjunto não pode substituir sempre uma lista.
 

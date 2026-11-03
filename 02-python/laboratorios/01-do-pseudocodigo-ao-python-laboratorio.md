@@ -8,13 +8,13 @@ Laboratório do tema Do pseudocódigo ao Python, do módulo Criar aplicações e
 
 No fim, tens uma pasta com dois scripts. O primeiro, `ola.py`, escreve duas linhas e confirma que o Python corre no teu computador. O segundo, `adivinha_abertura.py`, escreve o ecrã que aparece antes de um jogo do adivinha o número começar. Tem o título, os números do jogo e as regras.
 
-Pelo caminho, ficas a saber correr um script no terminal e com o botão de correr, e experimentar uma linha na consola do Python. Ficas também a saber usar as ferramentas do VS Code que te ajudam a escrever e a encontrar erros. Fazes também, no caderno, o teu **quadro das ferramentas**: uma tabela com cada ferramenta do VS Code, onde está e para que serve.
+Pelo caminho, ficas a saber correr um script no terminal e com o botão de correr, e experimentar uma linha na consola do Python. Ficas também a saber usar as ferramentas do VS Code que te ajudam a escrever e a encontrar erros, e para que serve cada uma.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
 | 1 | `ola.py` | O primeiro script corre no terminal |
 | 2 | Nada no disco; experimentas na consola do Python | Sabes entrar e sair da consola e usá-la para uma linha |
-| 3 | Nada no disco; percorres as ferramentas do VS Code | O quadro das ferramentas tem as primeiras linhas |
+| 3 | Nada no disco; percorres as ferramentas do VS Code | Sabes onde estão as primeiras ferramentas e para que servem |
 | 4 | Corres o `ola.py` com o botão | Sabes correr um script com o botão e o que ele escreve no terminal |
 | 5 | `ola.py`, com erros provocados | Sabes ver um erro antes de correr e dizer de que tipo é |
 | 6 | `adivinha_abertura.py` | O ecrã de abertura do jogo aparece igual ao esperado |
@@ -51,7 +51,6 @@ fp-python/
 - O Python 3, o interpretador. Para confirmares que o tens, abre o terminal, como a fase 1 explica, e escreve `python --version`, ou `py --version` se o Windows não conhecer o `python`. Deve aparecer uma linha como `Python 3.13.2`, que quer dizer que o Python 3 está instalado. O primeiro número tem de ser 3. No macOS, o comando é `python3 --version`.
 - O VS Code, o editor de código das aulas. Abre-se como qualquer outra aplicação do computador.
 - A extensão Python do VS Code, que dá o botão de correr, as sugestões das palavras do Python e o sublinhado dos erros. A fase 3 mostra como confirmar que está instalada. Sem ela, o laboratório faz-se na mesma, e as fases 4 e 5 dizem o que muda.
-- O caderno, para o quadro das ferramentas.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou apontar a linha seguinte. O tipo de erro, a palavra antes dos dois pontos, é o mesmo.
 
@@ -69,8 +68,6 @@ Os nomes dos menus e dos botões são os do VS Code em inglês. Os da preparaç�
 1. Cria uma pasta para os teus scripts de Python, com o nome `fp-python`, no sítio onde costumas guardar os trabalhos, por exemplo em Documentos. Uma pasta própria impede que os scripts se misturem com outros ficheiros. O nome não tem espaços nem acentos, para se escrever sem problemas no terminal. Se já a criaste na primeira aula, usa essa.
 
 2. Abre a pasta no VS Code. No menu File, escolhe Open Folder..., isto é, "abrir pasta", e escolhe `fp-python`. Se o VS Code perguntar se confias nos autores dos ficheiros desta pasta, responde que sim: a pasta é tua. O que deves ver: à esquerda, no painel Explorer, o nome `FP-PYTHON`.
-
-3. No caderno, faz uma tabela com três colunas, com estes títulos: "Ferramenta", "Onde está" e "Para que serve". É o teu quadro das ferramentas. Nas paragens das fases 3, 4 e 5, acrescentas-lhe as linhas do que acabaste de usar.
 
 ## Fase 1: Correr um script
 
@@ -107,7 +104,7 @@ Se fizeste esta fase na primeira aula e o teu `ola.py` corre, lê os passos para
    O meu primeiro script correu.
    ```
 
-   Isto quer dizer que o interpretador encontrou o ficheiro e executou as duas instruções, de cima para baixo. Se o Windows responder que não conhece o `python`, ou se abrir a Microsoft Store, fecha a loja e experimenta `py ola.py`, que faz o mesmo. Escreve no caderno o comando que funciona no teu computador. Se aparecer outra coisa, vê os [problemas frequentes](#problemas-frequentes).
+   Isto quer dizer que o interpretador encontrou o ficheiro e executou as duas instruções, de cima para baixo. Se o Windows responder que não conhece o `python`, ou se abrir a Microsoft Store, fecha a loja e experimenta `py ola.py`, que faz o mesmo. Daqui em diante, usa sempre o comando que funcionou no teu computador. Se aparecer outra coisa, vê os [problemas frequentes](#problemas-frequentes).
 
 5. Provoca um erro de propósito: apaga a aspa que fecha o texto da terceira linha, para ficar `print("O meu primeiro script correu.)`. Guarda e corre outra vez o mesmo comando. O que deves ver:
 
@@ -157,27 +154,27 @@ Pensa antes de continuares: como sabes, olhando para o terminal, se estás na co
 
 ## Fase 3: Conhecer as ferramentas do VS Code
 
-O VS Code junta numa só janela as ferramentas de que precisas para escrever, correr e corrigir programas. Por isso se chama a estes programas ambientes de desenvolvimento integrados, ou IDE. Nesta fase vais encontrá-las uma a uma, e escrever cada uma no teu quadro. Não precisas de as decorar: precisas de saber que existem, para as ires buscar quando fizerem falta. Para saber mais, lê a secção "As ferramentas do VS Code" do [guia](../01-do-pseudocodigo-ao-python.md).
+O VS Code junta numa só janela as ferramentas de que precisas para escrever, correr e corrigir programas. Por isso se chama a estes programas ambientes de desenvolvimento integrados, ou IDE. Nesta fase vais encontrá-las uma a uma. Não precisas de as decorar: precisas de saber que existem, para as ires buscar quando fizerem falta. Para saber mais, lê a secção "As ferramentas do VS Code" do [guia](../01-do-pseudocodigo-ao-python.md).
 
-1. Olha para o explorador, o painel da esquerda, com o título `FP-PYTHON`. Mostra os ficheiros da pasta, e por agora só o `ola.py`. Carrega no `ola.py`. O que deves ver: o ficheiro abre-se ao centro, no editor, com um separador no topo com o nome `ola.py`. Escreve no quadro: "Explorador (Explorer)", "à esquerda", "ver e criar os ficheiros da pasta".
+1. Olha para o explorador, o painel da esquerda, com o título `FP-PYTHON`. Mostra os ficheiros da pasta, e por agora só o `ola.py`. Carrega no `ola.py`. O que deves ver: o ficheiro abre-se ao centro, no editor, com um separador no topo com o nome `ola.py`. O explorador, Explorer, está à esquerda e serve para ver e criar os ficheiros da pasta.
 
-2. Olha para a margem da esquerda do editor. Tem os números das linhas: 1, 2 e 3. Repara também nas cores: o comentário tem uma cor, o `print` outra, e os textos entre aspas outra. Escreve no quadro os números das linhas e as cores. Os números servem para encontrar a linha de que uma mensagem fala, e as cores para ver o que é cada parte do código.
+2. Olha para a margem da esquerda do editor. Tem os números das linhas: 1, 2 e 3. Repara também nas cores: o comentário tem uma cor, o `print` outra, e os textos entre aspas outra. Os números servem para encontrar a linha de que uma mensagem fala, e as cores para ver o que é cada parte do código.
 
-3. Experimenta a bola do separador. No fim da linha 3 do `ola.py`, carrega em Enter, para criar uma linha nova, e não guardes. O que deves ver: no separador do `ola.py`, no lugar do X, aparece uma bola cheia. Quer dizer que o que está no ecrã é diferente do que está guardado no disco. Guarda com Ctrl+S, ou Cmd+S no macOS, e a bola volta a ser um X. Escreve no quadro o editor e os separadores: o editor serve para escrever o código, e cada separador é um ficheiro aberto.
+3. Experimenta a bola do separador. No fim da linha 3 do `ola.py`, carrega em Enter, para criar uma linha nova, e não guardes. O que deves ver: no separador do `ola.py`, no lugar do X, aparece uma bola cheia. Quer dizer que o que está no ecrã é diferente do que está guardado no disco. Guarda com Ctrl+S, ou Cmd+S no macOS, e a bola volta a ser um X. O editor serve para escrever o código, e cada separador é um ficheiro aberto.
 
 4. Experimenta o fecho automático. Na linha nova, escreve só `print(`. O que deves ver: o VS Code escreve sozinho o `)`, e o cursor fica entre os dois parênteses. Escreve agora uma aspa, `"`, e o VS Code escreve a aspa que fecha. É assim que o editor evita parênteses e aspas por fechar.
 
-5. Experimenta as sugestões. Apaga a linha que escreveste e, numa linha nova, escreve só `pri`. O que deves ver: uma lista pequena, por baixo do cursor, com `print` lá dentro. Carrega em Tab, ou em Enter, e o VS Code completa a palavra. Sem a extensão Python, a lista pode aparecer na mesma, com as palavras que já estão no ficheiro. Depois, apaga a linha 4 inteira, até o cursor voltar ao fim da linha 3. Guarda, e o `ola.py` volta a ter só as três linhas. Escreve no quadro as sugestões: servem para escrever mais depressa e sem erros nos nomes.
+5. Experimenta as sugestões. Apaga a linha que escreveste e, numa linha nova, escreve só `pri`. O que deves ver: uma lista pequena, por baixo do cursor, com `print` lá dentro. Carrega em Tab, ou em Enter, e o VS Code completa a palavra. Sem a extensão Python, a lista pode aparecer na mesma, com as palavras que já estão no ficheiro. Depois, apaga a linha 4 inteira, até o cursor voltar ao fim da linha 3. Guarda, e o `ola.py` volta a ter só as três linhas. As sugestões servem para escrever mais depressa e sem erros nos nomes.
 
-6. Olha para a barra de estado, a faixa estreita no fundo da janela. O que deves ver, entre outras coisas: a posição do cursor, por exemplo `Ln 3, Col 12`, que quer dizer linha 3, coluna 12. Vês também a palavra `Python`, a linguagem do ficheiro aberto. Com a extensão Python, aparece também a versão do Python que o VS Code vai usar. Escreve a barra de estado no quadro.
+6. Olha para a barra de estado, a faixa estreita no fundo da janela. O que deves ver, entre outras coisas: a posição do cursor, por exemplo `Ln 3, Col 12`, que quer dizer linha 3, coluna 12. Vês também a palavra `Python`, a linguagem do ficheiro aberto. Com a extensão Python, aparece também a versão do Python que o VS Code vai usar.
 
-7. Confirma se a extensão Python está instalada. Na coluna de ícones da esquerda, carrega no ícone das extensões, Extensions, o dos quadrados. Na caixa de procura que aparece no topo, escreve `Python`. O que deves ver: uma lista de extensões, e a primeira, "Python", da Microsoft. Se ela tiver um botão Install, não está instalada: avisa o professor antes de instalar. Se não tiver esse botão, já está instalada. Escreve as extensões no quadro: servem para acrescentar ferramentas ao VS Code.
+7. Confirma se a extensão Python está instalada. Na coluna de ícones da esquerda, carrega no ícone das extensões, Extensions, o dos quadrados. Na caixa de procura que aparece no topo, escreve `Python`. O que deves ver: uma lista de extensões, e a primeira, "Python", da Microsoft. Se ela tiver um botão Install, não está instalada: avisa o professor antes de instalar. Se não tiver esse botão, já está instalada. As extensões servem para acrescentar ferramentas ao VS Code.
 
 8. Volta ao explorador, com um clique no primeiro ícone da coluna da esquerda, o das folhas, Explorer.
 
 ### Paragem 3
 
-O teu quadro das ferramentas tem as primeiras linhas. São o explorador, os números das linhas e as cores, as sugestões, a barra de estado e as extensões. Sabes também o que quer dizer a bola cheia no separador.
+Já conheces as primeiras ferramentas. São o explorador, o editor e os separadores, os números das linhas e as cores, as sugestões, a barra de estado e as extensões. Sabes também o que quer dizer a bola cheia no separador.
 
 Pensa antes de continuares: porque é que as cores do VS Code não aparecem quando abres o mesmo ficheiro no Bloco de Notas? A resposta: as cores não estão guardadas no ficheiro. O ficheiro tem só texto simples, e é o editor de código que pinta cada parte quando o mostra.
 
@@ -195,7 +192,7 @@ Escrever `python ola.py` de cada vez funciona, mas, num programa que corres muit
 
 ### Paragem 4
 
-Sabes correr um script de duas formas: com o comando, no terminal, e com o botão de correr. Acrescenta ao quadro o terminal integrado, no painel de baixo, e o botão de correr, no canto de cima à direita do editor.
+Sabes correr um script de duas formas: com o comando, no terminal, e com o botão de correr. Conheces mais duas ferramentas: o terminal integrado, no painel de baixo, e o botão de correr, no canto de cima à direita do editor.
 
 Pensa antes de continuares: se o botão é mais rápido, porque é que vale a pena saber escrever o comando? A resposta: o comando funciona em qualquer computador com o Python, mesmo sem o VS Code ou sem a extensão. O botão só existe no VS Code com a extensão Python.
 
@@ -233,7 +230,7 @@ Um erro de escrita, como um parêntese que ficou por fechar, faz o Python recusa
 
 ### Paragem 5
 
-O `ola.py` voltou a correr e a escrever as duas linhas. Acrescenta ao quadro o sublinhado dos erros e o painel dos problemas: servem para ver um erro de escrita antes de correres o programa.
+O `ola.py` voltou a correr e a escrever as duas linhas. Conheces mais duas ferramentas, o sublinhado dos erros e o painel dos problemas: servem para ver um erro de escrita antes de correres o programa. A secção "As ferramentas do VS Code" do [guia](../01-do-pseudocodigo-ao-python.md) tem uma tabela com todas as que usaste nas fases 3, 4 e 5. Diz onde está cada uma e para que serve, e é para consultares quando precisares.
 
 Pensa antes de continuares: nos dois erros desta fase, porque é que no primeiro não apareceu nenhuma frase e no segundo apareceu uma? A resposta: o primeiro é um erro de sintaxe, e o Python recusa o programa antes de o executar. O segundo é um erro de execução. O programa começa a correr, e as linhas anteriores escrevem o que têm a escrever. Só para na linha que não consegue executar.
 
@@ -388,8 +385,8 @@ O ficheiro não foi guardado. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outr
 
 - [ ] O `ola.py` corre e escreve as duas linhas.
 - [ ] O `adivinha_abertura.py` escreve o ecrã de abertura, igual ao esperado, linha a linha.
-- [ ] Escreveste no caderno o comando que corre o Python no teu computador: `python`, `py` ou `python3`.
-- [ ] O teu quadro das ferramentas tem as ferramentas das fases 3, 4 e 5, cada uma com o sítio onde está e para que serve.
+- [ ] Corres os scripts no terminal com o comando que funciona no teu computador: `python`, `py` ou `python3`.
+- [ ] Sabes onde está cada ferramenta das fases 3, 4 e 5 e para que serve.
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, o que é um IDE, para que serve, e quando te chegaria um editor simples ou a consola.
 

@@ -38,7 +38,7 @@ As quatro respostas depois dos pontos de interrogação são as que tu escreves 
 | 4 | Nada no disco; experimentas na consola do Python | Sabes como o Python divide e arredonda |
 | 5 | `resumo_equipa.py`, com uma divisão e o `round` | O programa mostra os pontos por jogo e a percentagem de vitórias |
 | 6 | `resumo_equipa.py`, com o `input` e o `int` | O programa pergunta os resultados de qualquer equipa |
-| 7 | O caderno, com a tabela de casos de teste | Confirmaste o programa com cinco casos calculados à mão |
+| 7 | Nada no disco; corres o programa com cinco casos de teste | Confirmaste o programa com cinco casos calculados à mão |
 
 No fim, a tua pasta tem mais um ficheiro, ao lado dos do tema anterior:
 
@@ -68,7 +68,6 @@ fp-python/
 
 - A pasta `fp-python`, do tema anterior, aberta no VS Code. Abre-a no menu File, com a opção Open Folder.... O que deves ver: à esquerda, no painel Explorer, o nome `FP-PYTHON` e os ficheiros do tema anterior. Se não a tens, faz primeiro a secção "Preparar o projeto" do [laboratório do tema 01](01-do-pseudocodigo-ao-python-laboratorio.md).
 - O Python 3. Para confirmares que o tens, abre o terminal, no menu Terminal, com a opção New Terminal, e escreve `python --version`. Deve aparecer uma linha como `Python 3.13.2`, que quer dizer que o Python 3 está instalado. O primeiro número tem de ser 3. No macOS, o comando é `python3 --version`. Se o Windows não conhecer o `python`, experimenta `py --version`.
-- O caderno, para a tabela de casos de teste da fase 7.
 
 Ao longo do laboratório, o comando para correr o programa é `python resumo_equipa.py`. Usa o que funcionou no teu computador no tema anterior: `py resumo_equipa.py` no Windows, se o `python` não funcionar, ou `python3 resumo_equipa.py` no macOS. Também podes usar o botão de correr, o triângulo no canto de cima, à direita do editor, se a extensão Python estiver instalada.
 
@@ -553,19 +552,19 @@ O programa funcionou com a equipa 10.º DS, mas um caso só não chega para conf
 
 O resultado esperado calcula-se antes de correr o programa, e nunca a partir do que ele mostra. Se o copiasses do ecrã, a tabela concordava sempre com o programa, mesmo que ele estivesse errado.
 
-1. No caderno, copia esta tabela, com as colunas "esperado" ainda por preencher. Cada caso foi escolhido por uma razão, que está na primeira coluna.
+1. Lê os cinco casos de teste. Cada caso foi escolhido por uma razão, que está na primeira coluna.
 
-   | Caso | Vitórias, empates, derrotas | Jogos | Pontos | Pontos por jogo | Percentagem |
-   | --- | --- | ---: | ---: | ---: | ---: |
-   | Um caso normal | 4, 3, 2 | | | | |
-   | Só vitórias | 5, 0, 0 | | | | |
-   | Só derrotas | 0, 0, 3 | | | | |
-   | Um só jogo, empatado | 0, 1, 0 | | | | |
-   | Nenhum jogo | 0, 0, 0 | | | | |
+   | Caso | Vitórias, empates, derrotas |
+   | --- | --- |
+   | Um caso normal | 4, 3, 2 |
+   | Só vitórias | 5, 0, 0 |
+   | Só derrotas | 0, 0, 3 |
+   | Um só jogo, empatado | 0, 1, 0 |
+   | Nenhum jogo | 0, 0, 0 |
 
-   Calcula à mão o que o programa deve mostrar em cada caso. Nos pontos por jogo, lembra-te de que o `/` dá sempre um `float`, e escreve o resultado como o Python o mostra. No último caso, pensa bem no que acontece à divisão.
+   Antes de correres, calcula o que o programa deve mostrar em cada caso: os jogos, os pontos, os pontos por jogo e a percentagem. Nos pontos por jogo, lembra-te de que o `/` dá sempre um `float`, e pensa no resultado como o Python o mostra. No último caso, pensa bem no que acontece à divisão.
 
-2. Corre o programa cinco vezes, uma por caso. O nome da equipa não muda as contas: escreve o que quiseres. Ao lado de cada linha da tabela, escreve o que o programa mostrou e se coincide com o que esperavas.
+2. Corre o programa cinco vezes, uma por caso. O nome da equipa não muda as contas: escreve o que quiseres. Em cada caso, compara o que o programa mostra com o que calculaste.
 
    Os quatro primeiros casos devem dar estes resultados:
 
@@ -592,11 +591,11 @@ O resultado esperado calcula-se antes de correr o programa, e nunca a partir do 
    ZeroDivisionError: division by zero
    ```
 
-   A última linha quer dizer "erro de divisão por zero". Com 0 jogos, a conta dos pontos por jogo é 0 a dividir por 0, que não tem resultado, nem na matemática nem no Python. É um erro de execução, na linha 19. Uma equipa sem jogos não tem pontos por jogo nem percentagem de vitórias, e era essa a resposta certa à mão. Este programa ainda não sabe decidir não fazer uma conta: faz sempre todas as linhas, de cima para baixo. Escreve na tabela, no último caso, "o programa para com `ZeroDivisionError`". Junta uma nota: o programa só serve para equipas com pelo menos um jogo.
+   A última linha quer dizer "erro de divisão por zero". Com 0 jogos, a conta dos pontos por jogo é 0 a dividir por 0, que não tem resultado, nem na matemática nem no Python. É um erro de execução, na linha 19. Uma equipa sem jogos não tem pontos por jogo nem percentagem de vitórias, e era essa a resposta certa à mão. Este programa ainda não sabe decidir não fazer uma conta: faz sempre todas as linhas, de cima para baixo. Por isso, só serve para equipas com pelo menos um jogo.
 
 ### Paragem 7
 
-Tens no caderno a tabela de casos de teste, com o esperado e o obtido de cada caso. Os quatro primeiros coincidem. O quinto mostra o limite do programa: uma equipa tem de ter pelo menos um jogo.
+Correste os cinco casos de teste e comparaste cada um com o que calculaste antes. Os quatro primeiros coincidem. O quinto mostra o limite do programa: uma equipa tem de ter pelo menos um jogo.
 
 Pensa antes de continuares: no caso 5, 0, 0, porque é que o programa mostra `3.0`, e não `3`? E porque é que vale a pena testar o caso 0, 0, 3? A resposta: `3.0` porque 15 a dividir por 5 se faz com `/`, que dá sempre um `float`. O caso 0, 0, 3 confirma que o programa se porta bem quando a equipa não tem nenhum ponto. A divisão de 0 por 3 é possível, e dá `0.0`.
 
@@ -645,7 +644,7 @@ Estes desafios são para quem acabou as sete fases. Faz cada um numa cópia do t
 ## Antes de terminares
 
 - [ ] O `resumo_equipa.py` está guardado na pasta `fp-python`, igual ao da paragem 6, e corre sem erros com números inteiros e pelo menos um jogo.
-- [ ] Tens no caderno a tabela de casos de teste da fase 7, com o esperado calculado antes de correr e o obtido de cada caso.
+- [ ] Correste os cinco casos de teste da fase 7 e comparaste cada um com o que calculaste antes de correr.
 - [ ] Provocaste e corrigiste os quatro erros do laboratório. São o nome mal escrito, a conta com os parênteses trocados, a conversão esquecida e o texto que não é um número.
 - [ ] Sabes dizer de que tipo é cada erro: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que os pontos por jogo aparecem com parte decimal.

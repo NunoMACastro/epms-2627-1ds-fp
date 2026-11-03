@@ -61,7 +61,6 @@ fp-python/
 
 - O Python 3, o interpretador. Para confirmares que o tens, abre o terminal do VS Code e escreve `python --version`, ou `python3 --version` no macOS. Deve aparecer uma linha como `Python 3.14.0`, com o primeiro número 3.
 - O VS Code, com a pasta `fp-python` aberta, a mesma dos laboratórios anteriores. Se não a tiveres, cria-a, como no laboratório do tema 01, e abre-a no menu File, com a opção Open Folder.
-- O caderno, para escreveres os valores que esperas antes de correres o programa.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou não ter os sinais `^` e `~` por baixo da linha. O tipo de erro, a palavra antes dos dois pontos na última linha, é o mesmo. O caminho do ficheiro nas mensagens, como `C:\Users\aluno\Documents\fp-python\partidas.py`, é o do computador onde o programa correu, e no teu é outro.
 
@@ -111,7 +110,7 @@ Uma função escrita ainda não faz nada. Só se executa quando alguém a chama,
 
    Leitura guiada: começa pela linha do `def`. É o cabeçalho: a função chama-se `total_de_pontos` e recebe um valor, a que dá o nome `pontuacoes`. A esse nome chama-se **parâmetro**. Logo por baixo, entre aspas triplas, `"""`, está a documentação da função. Diz o que ela devolve, o que recebe e o que faz com a lista vazia. O Python guarda este texto, mas não o executa. A seguir vem o corpo, com o acumulador e o `for` que já conheces, e no fim o `return total`, que entrega o total. As duas linhas em branco antes e depois da função são uma convenção do Python, para se ver bem onde ela começa e acaba. As três linhas encostadas à margem, no fim, são a **parte principal**: é aí que o programa começa a fazer coisas.
 
-2. Antes de correres, faz a soma das seis partidas no caderno. Depois, no terminal, corre:
+2. Antes de correres, prevê o total das seis partidas. Depois, no terminal, corre:
 
    ```bash
    python partidas.py
@@ -138,11 +137,11 @@ Pensa antes de continuares: dentro da função há uma variável `total`. Se esc
 
 ## Fase 2: Testar a função sozinha
 
-O total deu 7200, que bate com a conta do caderno. Mas um caso só não chega para confiar numa função. Uma função que recebe uma lista testa-se com três tipos de lista. São a lista vazia, se a função a aceitar, uma lista com um elemento e uma lista com vários. A documentação diz que a função aceita a lista vazia e que devolve 0.
+O total deu 7200, que é a soma das seis partidas. Mas um caso só não chega para confiar numa função. Uma função que recebe uma lista testa-se com três tipos de lista. São a lista vazia, se a função a aceitar, uma lista com um elemento e uma lista com vários. A documentação diz que a função aceita a lista vazia e que devolve 0.
 
 Testar a função sozinha quer dizer chamá-la com estas listas, antes de a parte principal a usar. Depois compara-se o que ela devolve com o que calculaste à mão. Cada teste é uma linha com um `print`: primeiro a chamada, depois o texto com o valor esperado. Assim, cada linha do ecrã mostra as duas coisas lado a lado. As linhas de teste ficam depois das funções e antes da parte principal. Para saber mais, lê a secção "Testar cada função sozinha" do [guia](../06-funcoes.md).
 
-1. Antes de escreveres os testes, calcula no caderno o que a função deve devolver com cada uma destas listas: `[]`, `[500]` e `[1200, 850, 2000]`.
+1. Antes de escreveres os testes, calcula de cabeça o que a função deve devolver com cada uma destas listas: `[]`, `[500]` e `[1200, 850, 2000]`.
 
 2. Em `partidas.py`, a seguir ao `return total` e às duas linhas em branco, antes da linha `pontuacoes = [...]`, acrescenta estas linhas, encostadas à margem:
 
@@ -244,7 +243,7 @@ A média tem um cuidado. Com a lista vazia, a conta seria 0 / 0, que não tem re
 
    Leitura guiada: o corpo é só o `return`, com uma conta. A conta tem duas chamadas: `total_de_pontos(pontuacoes)`, a tua função, e `len(pontuacoes)`, a função predefinida. O parâmetro desta função também se chama `pontuacoes`, e passa a sua lista à função de cima. Os dois parâmetros têm o mesmo nome, mas cada um é uma variável local da sua função. A divisão com `/` dá sempre um `float`.
 
-2. Escolhe os testes. A lista vazia não entra, porque a documentação diz que a função não a aceita. Ficam uma lista com uma partida e listas com várias. Calcula no caderno o que a função deve devolver com `[500]`, com `[1000, 2000]` e com a lista das seis partidas.
+2. Escolhe os testes. A lista vazia não entra, porque a documentação diz que a função não a aceita. Ficam uma lista com uma partida e listas com várias. Calcula de cabeça o que a função deve devolver com `[500]`, com `[1000, 2000]` e com a lista das seis partidas.
 
 3. Por baixo das três linhas de teste desligadas, acrescenta estas três, ligadas:
 
@@ -371,7 +370,7 @@ A função recebe os pontos de uma partida e devolve um texto. Tem um `if`, um `
 
    Leitura guiada: a função recebe um número, os pontos de uma só partida, e não a lista. A cadeia testa primeiro a fronteira de cima. Se a partida tiver 2000 ou mais, devolve "excelente" e termina ali, sem olhar para o resto. Só chega ao `elif` uma partida com menos de 2000, e só chega ao `else` uma com menos de 1000. A função devolve o texto, e não o escreve: quem escreve é a parte principal.
 
-3. Escolhe os testes. Há duas fronteiras, a do 1000 e a do 2000. Para cada uma, testa-se o valor de baixo, o da fronteira e o de cima: 999, 1000 e 1001, e 1999, 2000 e 2001. Escreve no caderno a classificação que esperas para cada um. Depois, por baixo dos testes desligados, acrescenta:
+3. Escolhe os testes. Há duas fronteiras, a do 1000 e a do 2000. Para cada uma, testa-se o valor de baixo, o da fronteira e o de cima: 999, 1000 e 1001, e 1999, 2000 e 2001. Prevê a classificação de cada um. Depois, por baixo dos testes desligados, acrescenta:
 
    ```python
    print(classificar_partida(999), "esperado: fraca")
@@ -535,7 +534,7 @@ Com dois parâmetros, a ordem conta. Os argumentos passam para os parâmetros pe
 
    Leitura guiada: o cabeçalho tem dois parâmetros, separados por uma vírgula: primeiro a lista, depois o limite. O corpo é um contador, como os que já fizeste, com a condição `pontos > limite`. A documentação diz o que acontece na fronteira: uma partida igual ao limite não conta, porque "acima" quer dizer "mais do que".
 
-2. Escolhe os testes e calcula no caderno o esperado de cada um. São quatro: a lista vazia, uma partida igual ao limite, uma partida logo acima e uma lista com várias. Depois, por baixo dos testes desligados, acrescenta:
+2. Escolhe os testes e calcula de cabeça o esperado de cada um. São quatro: a lista vazia, uma partida igual ao limite, uma partida logo acima e uma lista com várias. Depois, por baixo dos testes desligados, acrescenta:
 
    ```python
    print(contar_acima([], 1000), "esperado: 0")
@@ -707,7 +706,7 @@ for i in range(0, len(pontuacoes)):
 print("Partidas acima da média:", contar_acima(pontuacoes, media_da_semana))
 ```
 
-Pensa antes de continuares: se mudares a lista da parte principal para `[2500, 900]`, o que esperas que o programa escreva? Calcula no caderno e depois experimenta. A resposta: o total é 3400 e a média é 1700.0. A partida 1 é excelente e a partida 2 é fraca. Acima da média fica uma partida, a de 2500. Quando acabares, volta a pôr a lista das seis partidas.
+Pensa antes de continuares: se mudares a lista da parte principal para `[2500, 900]`, o que esperas que o programa escreva? Calcula de cabeça e depois experimenta. A resposta: o total é 3400 e a média é 1700.0. A partida 1 é excelente e a partida 2 é fraca. Acima da média fica uma partida, a de 2500. Quando acabares, volta a pôr a lista das seis partidas.
 
 ## Problemas frequentes
 

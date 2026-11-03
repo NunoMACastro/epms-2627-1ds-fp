@@ -21,25 +21,23 @@ Os exercícios 1 a 6 são obrigatórios e fazem-se por esta ordem, porque cada u
 
 O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
 
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Cada script começa com um comentário que diz o nome do ficheiro e o que ele faz. Os nomes escrevem-se à maneira do Python, em minúsculas, com traço baixo. As tabelas e as respostas escritas ficam no caderno. Antes de correres um script, escreve sempre o resultado que esperas, calculado à mão a partir do enunciado. É aí que percebes se a ideia ficou entendida, e é assim que um teste apanha um erro.
+Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Cada script começa com um comentário que diz o nome do ficheiro e o que ele faz. Os nomes escrevem-se à maneira do Python, em minúsculas, com traço baixo. Uma resposta escrita fica num comentário, com `#`, no início do script ou junto da linha a que diz respeito, como cada exercício indica. Antes de correres um script, pensa no resultado que esperas, tirado do enunciado, e não do que o programa mostra. É aí que percebes se a ideia ficou entendida, e é assim que um teste apanha um erro.
 
 ## Exercício 1: Prever na consola
 
-Abre a consola do Python, no terminal, com `python`, ou `python3` no macOS. Para cada linha da tabela, escreve no caderno o valor que esperas e o tipo desse valor, antes de a experimentares. Os tipos possíveis são `int`, `float` e `str`. Depois escreve a linha a seguir ao `>>>` e confirma. Para confirmares o tipo, podes usar o `type`, como em `type(25 / 4)`.
+Abre a consola do Python, no terminal, com `python`, ou `python3` no macOS. Para cada uma destas linhas, prevê o valor que ela dá e o tipo desse valor, e confirma-os na consola. Os tipos possíveis são `int`, `float` e `str`. Para confirmares o tipo, podes usar o `type`, como em `type(25 / 4)`.
 
-| Linha | O valor que esperas | O tipo que esperas |
-| --- | --- | --- |
-| `25 / 4` | | |
-| `25 // 4` | | |
-| `25 % 4` | | |
-| `24 / 4` | | |
-| `3 * 2 ** 2` | | |
-| `"7" + "1"` | | |
-| `int("7") + 1` | | |
-| `int(9.87)` | | |
-| `int("7") / 2` | | |
+- `25 / 4`
+- `25 // 4`
+- `25 % 4`
+- `24 / 4`
+- `3 * 2 ** 2`
+- `"7" + "1"`
+- `int("7") + 1`
+- `int(9.87)`
+- `int("7") / 2`
 
-Para cada linha em que te enganaste, escreve uma frase a explicar o que o Python fez.
+Para cada linha em que te enganaste, explica numa frase o que o Python fez. Escreve as frases num ficheiro `prever_na_consola.py`, só com comentários, um por linha.
 
 Parte opcional, com duas linhas que enganam mais: `round(6.5)` e `100 / 10 / 2`.
 
@@ -57,7 +55,7 @@ energia = energia - 40
 print("Energia no fim:", energia)
 ```
 
-a) Sem correres o script, completa no caderno a tabela de trace. As primeiras linhas já estão preenchidas.
+Sem correres o script, faz o trace dele: o valor de `energia` e de `pocoes` depois de cada instrução, e o que aparece no ecrã. As primeiras linhas da tabela de trace já estão preenchidas.
 
 | Passo | Linha | Instrução executada | `energia` | `pocoes` | Ecrã |
 | ---: | ---: | --- | ---: | ---: | --- |
@@ -69,7 +67,7 @@ a) Sem correres o script, completa no caderno a tabela de trace. As primeiras li
 | 5 | 6 | `energia = energia - 40` | | | |
 | 6 | 7 | `print("Energia no fim:", energia)` | | | |
 
-b) Copia o script para o ficheiro `energia.py`, corre-o e confirma a última linha da tua tabela.
+Copia o script para o ficheiro `energia.py` e escreve lá o trace, num comentário no fim de cada instrução, como em `energia = 100  # energia 100, pocoes sem valor`. No `print`, o comentário diz também o que aparece no ecrã. O ecrã do script tem de coincidir com a última linha do teu trace.
 
 ## Exercício 3: As pontuações de dois amigos
 
@@ -85,15 +83,7 @@ Pior pontuação: 950
 Diferença: 250
 ```
 
-a) Antes de escreveres o script, completa no caderno o resultado esperado de cada caso:
-
-| Primeiro | Segundo | Melhor | Pior | Diferença |
-| ---: | ---: | ---: | ---: | ---: |
-| 1200 | 950 | 1200 | 950 | 250 |
-| 800 | 1500 | | | |
-| 1000 | 1000 | | | |
-
-b) Escreve o script e corre-o com os três casos. Ao lado de cada linha da tabela, escreve o que o script mostrou e se coincide.
+Experimenta-o também com 800 e 1500, e com 1000 e 1000.
 
 ## Exercício 4: A temperatura do jogo
 
@@ -106,17 +96,7 @@ Temperatura em graus Fahrenheit? 50
 Em graus Celsius: 10.0
 ```
 
-a) Antes de escreveres o script, calcula à mão o resultado esperado de cada caso. Podes usar a calculadora.
-
-| Graus Fahrenheit | Graus Celsius esperados |
-| ---: | ---: |
-| 32 | |
-| 212 | |
-| 50 | 10.0 |
-| 98.6 | |
-| 0 | |
-
-b) Escreve o script e corre-o com os cinco casos. Confirma a tabela.
+Experimenta-o também com 32, 212, 98.6 e 0 graus Fahrenheit.
 
 ## Exercício 5: A loja do jogo
 
@@ -131,16 +111,7 @@ Espadas que podes comprar: 1
 Moedas de prata que sobram: 70
 ```
 
-a) Antes de escreveres o script, completa no caderno o resultado esperado de cada caso:
-
-| Ouro | Prata | Espadas | Prata que sobra |
-| ---: | ---: | ---: | ---: |
-| 3 | 20 | 1 | 70 |
-| 5 | 0 | | |
-| 2 | 49 | | |
-| 0 | 250 | | |
-
-b) Escreve o script e corre-o com os quatro casos. Confirma a tabela.
+Experimenta-o também com estas moedas de ouro e de prata: 5 e 0, 2 e 49, e 0 e 250.
 
 ## Exercício 6: Encontrar o erro
 
@@ -166,7 +137,7 @@ Respostas erradas: 5
 Percentagem de certas: 75
 ```
 
-Copia o script para o ficheiro `quiz.py` e corre-o com 20 e 15. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve no caderno:
+Copia o script para o ficheiro `quiz.py` e corrige-o até mostrar este resultado com 20 e 15. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve-a num comentário no fim do script:
 
 1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
 2. Numa frase, o que achas que causa o erro.
@@ -174,15 +145,15 @@ Copia o script para o ficheiro `quiz.py` e corre-o com 20 e 15. O Python mostra 
 4. A linha que mudaste, e como ficou. Muda o mínimo possível.
 5. O que aconteceu quando voltaste a correr.
 
-Quando o script mostrar o resultado certo com 20 e 15, testa-o também com 12 perguntas e 5 certas. Antes de correres, calcula à mão o que deve aparecer.
+Quando o script mostrar o resultado certo com 20 e 15, experimenta-o também com 12 perguntas e 5 certas.
 
 ## Apoio
 
 - Exercício 1: em cada linha, decide primeiro o tipo e só depois o valor. Pergunta-te se a conta tem um `/` ou se os valores estão entre aspas. Na quinta linha, lembra-te da ordem das contas.
-- Exercício 2: em cada passo, copia os valores da linha de cima e muda só a variável que está à esquerda do `=`. Um `print` não muda nenhuma variável.
-- Exercício 3: antes de escreveres cada linha do script, confirma na tabela o que ela tem de mostrar nos três casos.
+- Exercício 2: em cada instrução, parte dos valores da linha de cima e muda só a variável que está à esquerda do `=`. Um `print` não muda nenhuma variável.
+- Exercício 3: antes de escreveres cada linha do script, pensa no que ela tem de mostrar nos três casos.
 - Exercício 4: confirma à mão o caso 50 antes de correres, e depois confirma-o no computador.
-- Exercício 5: escreve primeiro, no caderno, as contas que farias à mão para o caso 3 e 20, por ordem. Cada conta passa a uma linha do script.
+- Exercício 5: começa pelas contas que farias à mão para o caso 3 e 20, por ordem. Cada conta passa a uma linha do script.
 - Exercício 6: lê cada mensagem de baixo para cima, e lembra-te de que a linha apontada pode não ser a da causa. Um dos erros não dá mensagem nenhuma: só o encontras comparando o resultado com o esperado.
 
 ## Desafio opcional
@@ -194,7 +165,7 @@ Duração do vídeo em segundos? 3725
 1 h 2 min 5 s
 ```
 
-Antes de escreveres o script, calcula à mão o resultado de cada caso: 3725, 59, 3600, 3599 e 7384 segundos. Depois corre o script com os cinco casos e confirma.
+Experimenta-o com 3725, 59, 3600, 3599 e 7384 segundos.
 
 ## Para ires mais longe
 
@@ -214,6 +185,8 @@ b) Escreve a versão para o Python 3, no script `media_de_dois.py`, com os acent
 
 c) Com 7 e 8, a versão antiga, no Python 2, mostrava `A media e 7`. Quanto mostra a tua versão, e porque é que os dois resultados são diferentes?
 
+Responde à a) e à c) num comentário no início do `media_de_dois.py`.
+
 ### Mais longe 2: Um nome que estraga uma função
 
 Este script devia mostrar o melhor de três jogos e, a seguir, o melhor dos dois primeiros:
@@ -228,18 +201,18 @@ print("O melhor jogo teve", max, "pontos")
 print("Dos dois primeiros, o melhor teve", max(jogo1, jogo2), "pontos")
 ```
 
-a) Copia-o para o ficheiro `melhor_jogo.py` e corre-o. A primeira linha do ecrã aparece, e depois o script para. Copia a última linha da mensagem.
+Copia-o para o ficheiro `melhor_jogo.py` e corre-o. A primeira linha do ecrã aparece, e depois o script para. A mensagem quer dizer "erro de tipo: um `int` não se pode chamar". Chamar é usar com parênteses, como uma função.
 
-b) A mensagem quer dizer "erro de tipo: um `int` não se pode chamar". Chamar é usar com parênteses, como uma função. Explica, numa ou duas frases, porque é que a linha 5 funcionou e a linha 7 não. Pista: segue o que o nome `max` quer dizer antes e depois da linha 5.
+a) Explica, numa ou duas frases, porque é que a linha 5 funcionou e a linha 7 não. Escreve a explicação num comentário no início do script. Pista: segue o que o nome `max` quer dizer antes e depois da linha 5.
 
-c) Corrige o script mudando o mínimo possível, e confirma que as duas linhas aparecem.
+b) Corrige o script mudando o mínimo possível, para as duas linhas aparecerem.
 
 ## Critérios de conclusão
 
-- O exercício 1 tem a previsão e a confirmação de cada linha, e uma frase para cada previsão errada.
-- A tabela de trace do exercício 2 está completa, e a última linha coincide com o que o script mostrou.
-- Os scripts `pontuacoes.py`, `temperatura.py` e `loja.py` correm e dão os resultados das tabelas, que preencheste antes de correr.
-- O `quiz.py` dá os resultados certos nos dois casos. Tens no caderno a rotina de cada um dos três erros, com o tipo de cada um.
+- O `prever_na_consola.py` tem uma frase para cada linha do exercício 1 em que te enganaste.
+- O `energia.py` tem o trace completo, num comentário no fim de cada instrução, e o ecrã coincide com a última linha do trace.
+- Os scripts `pontuacoes.py`, `temperatura.py` e `loja.py` correm e dão o resultado certo em todos os casos do enunciado.
+- O `quiz.py` dá os resultados certos nos dois casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
 
 ## Autoavaliação
 

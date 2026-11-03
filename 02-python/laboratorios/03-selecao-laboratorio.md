@@ -31,7 +31,7 @@ Que alimento trouxeste? 2
 Vai para a caixa verde.
 ```
 
-Pelo caminho, ficas a saber traduzir para Python as decisões do pseudocódigo. Vais usar o `if`, o `else`, a cadeia com `elif`, uma decisão dentro de outra, o `or` e o `match`. E testas cada decisão nas fronteiras, com os resultados esperados escritos no caderno antes de correr.
+Pelo caminho, ficas a saber traduzir para Python as decisões do pseudocódigo. Vais usar o `if`, o `else`, a cadeia com `elif`, uma decisão dentro de outra, o `or` e o `match`. E testas cada decisão nas fronteiras, com o resultado de cada caso previsto antes de correr.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
@@ -73,7 +73,6 @@ fp-python/
 - A pasta `fp-python`, aberta no VS Code, e o comando que corre o Python no teu computador, `python`, `py` ou `python3`. Se não tiveres a pasta aberta, abre-a no menu File, com a opção Open Folder....
 - O terminal do VS Code, no menu Terminal, com a opção New Terminal. O texto antes do cursor deve acabar em `fp-python`.
 - O Python 3.10 ou mais recente, para a fase 7, que usa o `match`. Confirma a versão com `python --version`, ou com o teu comando. Deve aparecer uma linha como `Python 3.13.2`. O número a seguir ao 3 tem de ser 10 ou mais. Se for menor, faz a fase 7 até ao passo 3 e avisa o professor.
-- O caderno, para as previsões e para as tabelas de casos de teste.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou não ter os sinais `^` por baixo da linha. O nome do erro, a palavra antes dos dois pontos na última linha, é o mesmo.
 
@@ -127,7 +126,7 @@ Para decidir, um programa faz uma pergunta que só tem duas respostas. "Os quilo
 
 ### Paragem 1
 
-Sabes prever se uma comparação dá `True` ou `False`, e a consola confirma-o. No caderno, faz uma tabela com duas colunas, "Pseudocódigo" e "Python", e escreve nela a primeira linha: `true` e `false` passam a `True` e `False`. Vais acrescentar uma ou duas linhas em cada paragem.
+Sabes prever se uma comparação dá `True` ou `False`, e a consola confirma-o. Do pseudocódigo para o Python, o `true` e o `false` passam a `True` e `False`. Em cada paragem seguinte, uma tabela pequena junta o que mudou nessa fase, do pseudocódigo para o Python.
 
 Pensa antes de continuares: qual é a diferença entre `turmas = 0` e `turmas == 0`? A resposta: a primeira guarda 0 na variável, e o valor que lá estava perde-se. A segunda pergunta se a variável vale 0, responde `True` ou `False`, e não muda nada.
 
@@ -185,7 +184,7 @@ A campanha tem uma meta: 100 quilos de alimentos. O programa deve escrever "Meta
 
    Com 120, a condição `120 >= 100` deu `True`, e o bloco executou-se. Com 99, `99 >= 100` deu `False`, e o bloco foi saltado. O `print` da margem apareceu nos dois casos.
 
-3. Testa a fronteira. A resposta do programa muda entre 99 e 100 quilos, e é aí que um sinal errado se esconde. Os casos de uma fronteira são o valor de baixo, o da fronteira e o de cima: 99, 100 e 101. No caderno, escreve primeiro o resultado esperado de cada um, tirado do enunciado: "Meta atingida!" a partir dos 100, incluindo os 100. Depois confere com esta tabela:
+3. Testa a fronteira. A resposta do programa muda entre 99 e 100 quilos, e é aí que um sinal errado se esconde. Os casos de uma fronteira são o valor de baixo, o da fronteira e o de cima: 99, 100 e 101. Prevê o resultado de cada um a partir do enunciado, que pede "Meta atingida!" a partir dos 100, incluindo os 100. Depois confere com esta tabela:
 
    | Quilos | "Meta atingida!" aparece? |
    | ---: | --- |
@@ -221,7 +220,7 @@ A campanha tem uma meta: 100 quilos de alimentos. O programa deve escrever "Meta
 
 O `balanco.py` diz "Meta atingida!" só quando o total chega aos 100 quilos, e confirmaste a fronteira com 99, 100 e 101.
 
-Acrescenta à tua tabela do caderno:
+O que mudou nesta fase, do pseudocódigo para o Python:
 
 | Pseudocódigo | Python |
 | --- | --- |
@@ -272,7 +271,7 @@ O balanço deve mostrar a média por turma: o total a dividir pelo número de tu
 
    Leitura guiada: o `if` pergunta se há turmas. Se houver, executa-se o seu bloco, com as duas linhas da média. Se não houver, salta-se esse bloco e executa-se o do `else`, que escreve a outra mensagem. A divisão está dentro do bloco do `if`, e por isso só se faz quando `turmas` é maior do que 0. O `else` está na mesma margem do `if`, com os dois pontos, e o seu `print` quatro espaços para dentro.
 
-4. Prepara os casos de teste. A fronteira desta decisão está entre 0 e 1 turmas. O valor de baixo seria -1, mas não há turmas negativas, e a fase 6 vai recusá-las. Por isso, os casos da fronteira são 0 e 1. Junta-lhes um caso do meio, como 6. No caderno, escreve primeiro o que esperas que apareça na linha da média de cada um. Depois confere com esta tabela:
+4. Prepara os casos de teste. A fronteira desta decisão está entre 0 e 1 turmas. O valor de baixo seria -1, mas não há turmas negativas, e a fase 6 vai recusá-las. Por isso, os casos da fronteira são 0 e 1. Junta-lhes um caso do meio, como 6. Prevê o que aparece na linha da média de cada um, e depois confere com esta tabela:
 
    | Turmas | Quilos | A linha da média |
    | ---: | ---: | --- |
@@ -307,7 +306,7 @@ if total_quilos >= META_QUILOS:
 print("Fim do balanço.")
 ```
 
-Acrescenta à tua tabela do caderno:
+O que mudou nesta fase, do pseudocódigo para o Python:
 
 | Pseudocódigo | Python |
 | --- | --- |
@@ -336,7 +335,7 @@ A mensagem da meta tem agora só dois casos: aparece ou não aparece. A organiza
 
    Leitura guiada: lê a cadeia de cima para baixo. A primeira condição pergunta se o total chega a 200, o dobro da meta. Se não chegar, o `elif` pergunta se chega a 100. Quando o programa chega ao `elif`, já sabe que o total é menor do que 200, porque senão tinha entrado no primeiro ramo. Se as duas condições forem falsas, o `else` apanha o resto, e calcula os quilos que faltam. Essa conta só faz sentido nesse ramo, com o total abaixo da meta. O `if`, o `elif` e o `else` estão na mesma margem, e são uma só cadeia.
 
-2. Prepara os casos de teste. Esta cadeia tem duas fronteiras, nos 100 e nos 200 quilos. Para cada uma, testas o valor de baixo, o da fronteira e o de cima. Usa sempre 4 turmas. No caderno, escreve primeiro a mensagem do nível que esperas em cada caso. Depois confere com esta tabela:
+2. Prepara os casos de teste. Esta cadeia tem duas fronteiras, nos 100 e nos 200 quilos. Para cada uma, testas o valor de baixo, o da fronteira e o de cima. Usa sempre 4 turmas. Prevê a mensagem do nível em cada caso, e depois confere com esta tabela:
 
    | Quilos | A mensagem do nível |
    | ---: | --- |
@@ -403,7 +402,7 @@ else:
 print("Fim do balanço.")
 ```
 
-Acrescenta à tua tabela do caderno:
+O que mudou nesta fase, do pseudocódigo para o Python:
 
 | Pseudocódigo | Python |
 | --- | --- |
@@ -445,7 +444,7 @@ A organização acha que a campanha correu bem quando cada turma trouxe, em méd
 
    Leitura guiada: o `if` novo está na margem do `media = ...`, porque pertence ao mesmo bloco, o do `if turmas > 0:`. O seu `print` está oito espaços para dentro, porque está dentro de dois blocos. Com 0 turmas, o bloco de fora é saltado inteiro, também o `if` de dentro, e o programa passa ao `else`. Com turmas, calcula a média, escreve-a, e só então pergunta se ela chega aos 10. O `else` continua alinhado com o `if turmas > 0:`, e é dele.
 
-3. Prepara os casos de teste. A fronteira está numa média de 10 kg. Com 4 turmas, a média chega aos 10 com 40 quilos, e os casos são 39, 40 e 41. Junta-lhes o caso sem turmas, 0 e 0, em que a mensagem não pode aparecer. No caderno, escreve primeiro se esperas a mensagem da média boa em cada caso. Depois confere com esta tabela:
+3. Prepara os casos de teste. A fronteira está numa média de 10 kg. Com 4 turmas, a média chega aos 10 com 40 quilos, e os casos são 39, 40 e 41. Junta-lhes o caso sem turmas, 0 e 0, em que a mensagem não pode aparecer. Prevê se a mensagem da média boa aparece em cada caso, e depois confere com esta tabela:
 
    | Turmas | Quilos | Média | A mensagem da média boa aparece? |
    | ---: | ---: | --- | --- |
@@ -502,7 +501,7 @@ else:
 print("Fim do balanço.")
 ```
 
-Acrescenta à tua tabela do caderno:
+O que mudou nesta fase, do pseudocódigo para o Python:
 
 | Pseudocódigo | Python |
 | --- | --- |
@@ -586,7 +585,7 @@ Um valor está fora do intervalo de 0 a 12 quando está abaixo de 0 ou acima de 
 
    Quer dizer "erro de indentação: esperava-se um bloco indentado depois do `else` da linha 12". Depois de uma linha que acaba em dois pontos, o Python exige pelo menos uma linha indentada. É um erro de sintaxe, e o programa nem arranca. Volta a pôr os quatro espaços, guarda e corre com 6 e 120, para confirmares que funciona.
 
-5. Prepara os casos de teste da validação. As turmas têm duas fronteiras, no 0 e no 12, e os quilos têm uma, no 0. Para cada fronteira, testas o valor de baixo, o da fronteira e o de cima. No caderno, escreve primeiro, para cada caso, se esperas o aviso ou o balanço. Depois confere com esta tabela:
+5. Prepara os casos de teste da validação. As turmas têm duas fronteiras, no 0 e no 12, e os quilos têm uma, no 0. Para cada fronteira, testas o valor de baixo, o da fronteira e o de cima. Prevê, para cada caso, se aparece o aviso ou o balanço, e depois confere com esta tabela:
 
    | Turmas | Quilos | O que aparece antes de "Fim do balanço." |
    | ---: | ---: | --- |
@@ -615,7 +614,7 @@ Um valor está fora do intervalo de 0 a 12 quando está abaixo de 0 ou acima de 
 
 O `balanco.py` está completo. Avisa dos valores impossíveis antes de fazer contas e mostra a média só quando há entregas. Diz também se a média foi boa, e o nível da campanha. Confirmaste as fronteiras de cada decisão.
 
-Acrescenta à tua tabela do caderno:
+O que mudou nesta fase, do pseudocódigo para o Python:
 
 | Pseudocódigo | Python |
 | --- | --- |
@@ -688,7 +687,7 @@ No posto de recolha, a pessoa escreve o número do alimento que trouxe, de 1 a 4
 
    Leitura guiada: a linha `match tipo:` diz que o valor a comparar é o `tipo`. Os `case` ficam quatro espaços para dentro do `match`, e cada `print` mais quatro, dentro do seu `case`. O Python compara o `tipo` com o valor de cada `case`, de cima para baixo, e executa o bloco do primeiro que for igual. O `case _` fica no fim e apanha o que sobra. Cada linha de `match` e de `case` acaba em dois pontos. O `tipo ==` deixou de se repetir.
 
-5. Prepara os casos de teste. Cada ramo é um caso: o 1, o 2, o 3 e o 4. Junta-lhes dois valores que não existem, o 5 e o 0. No caderno, escreve primeiro a caixa que esperas em cada um. Depois confere com esta tabela:
+5. Prepara os casos de teste. Cada ramo é um caso: o 1, o 2, o 3 e o 4. Junta-lhes dois valores que não existem, o 5 e o 0. Prevê a caixa de cada um, e depois confere com esta tabela:
 
    | Alimento | O que aparece |
    | ---: | --- |
@@ -737,7 +736,7 @@ match tipo:
         print("Esse alimento não se recolhe nesta campanha.")
 ```
 
-Acrescenta à tua tabela do caderno:
+O que mudou nesta fase, do pseudocódigo para o Python:
 
 | Pseudocódigo | Python |
 | --- | --- |
@@ -793,14 +792,13 @@ O ficheiro não foi guardado. Guarda com Ctrl+S, ou Cmd+S no macOS, e corre outr
 
 2. A média com uma casa decimal. Com 12 turmas e 200 quilos, a média aparece como `16.666666666666668`. Muda o programa para a média aparecer só com uma casa decimal, como `16.7`. Testa também com 7 turmas e 100 quilos. Pista: a função predefinida `round`, do guia 02, arredonda um número e deixa escolher quantas casas decimais ficam.
 
-3. As palavras no posto. No `posto.py`, a pessoa passa a escrever o nome do alimento, em minúsculas, em vez do número. O menu mostra uma palavra por caixa: `arroz`, `enlatados`, `leite` e `azeite`. Muda o menu e o `match` para isso, com as mesmas caixas. Escolhe tu os casos de teste, com o resultado esperado de cada um escrito antes de correr, e inclui uma palavra com maiúscula, como `Leite`. Pista: a resposta passa a ser um texto, e os valores dos `case` também.
+3. As palavras no posto. No `posto.py`, a pessoa passa a escrever o nome do alimento, em minúsculas, em vez do número. O menu mostra uma palavra por caixa: `arroz`, `enlatados`, `leite` e `azeite`. Muda o menu e o `match` para isso, com as mesmas caixas. Escolhe tu os casos de teste, com o resultado esperado de cada um decidido antes de correr, e inclui uma palavra com maiúscula, como `Leite`. Pista: a resposta passa a ser um texto, e os valores dos `case` também.
 
 ## Antes de terminares
 
-- [ ] O `balanco.py` dá os resultados das tabelas das fases 2 a 6, e escreveste no caderno os resultados esperados antes de correr cada caso.
+- [ ] O `balanco.py` dá os resultados das tabelas das fases 2 a 6.
 - [ ] O `balanco.py` nunca para com `ZeroDivisionError`, mesmo com 0 turmas.
 - [ ] O `posto.py` corre com `match` e dá os mesmos resultados que a versão com `if`, nos seis casos.
-- [ ] A tua tabela do caderno tem as linhas das sete paragens, do pseudocódigo para o Python.
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que os casos de teste de uma decisão se escolhem nas fronteiras. E porque é que, numa cadeia, a ordem das condições muda o resultado.
 

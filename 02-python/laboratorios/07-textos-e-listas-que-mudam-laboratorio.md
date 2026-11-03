@@ -11,7 +11,7 @@ O clube de videojogos de uma escola foi inventado para as aulas. Identifica cada
 - `codigo.py` lê um código escrito de qualquer maneira, como ` pla_01 `, arruma-o, confirma que tem a forma certa e mostra as suas partes numa frase;
 - `fila.py` gere a fila para a consola do clube. Cada nome escrito entra no fim da fila, a palavra `próximo` chama o primeiro a jogar, e ninguém entra duas vezes.
 
-Pelo caminho, ficas a saber ler um texto por posições, tirar-lhe fatias e usar os métodos dos textos. Ficas também a saber percorrer um texto carácter a carácter, escrever mensagens com f-strings e fazer crescer e encolher uma lista. Fazes ainda, no caderno, a tua **tabela das operações**. É uma tabela com cada operação que usaste, o que ela faz e se muda o valor original.
+Pelo caminho, ficas a saber ler um texto por posições, tirar-lhe fatias e usar os métodos dos textos. Ficas também a saber percorrer um texto carácter a carácter, escrever mensagens com f-strings e fazer crescer e encolher uma lista. Em cada paragem, encontras a **tabela das operações** da fase: cada operação que usaste, o que ela faz e se muda o valor original. Antes de leres a última coluna, decide tu se a operação muda o original.
 
 | Fase | O que muda | O que funciona no fim |
 | --- | --- | --- |
@@ -49,13 +49,12 @@ fp-python/
 - f-string: um texto com um `f` antes das aspas, em que cada par de chavetas recebe um valor.
 - `append`: o método que acrescenta um elemento no fim de uma lista.
 - `pop`: o método que tira um elemento de uma lista, pela posição, e o devolve.
-- Tabela das operações: a tabela do teu caderno com cada operação, o que ela faz e se muda o valor original.
+- Tabela das operações: a tabela de cada paragem, com as operações da fase, o que cada uma faz e se muda o valor original.
 
 ## O que precisas
 
 - O Python 3 e o VS Code, os dos laboratórios anteriores. Para confirmares o Python, abre o terminal do VS Code, no menu Terminal, com a opção New Terminal. Escreve `python --version`, com o teu comando: `python`, `py` no Windows ou `python3` no macOS. Deve aparecer uma linha como `Python 3.14.0`, com o 3 no início.
 - A pasta `fp-python`, a dos laboratórios anteriores. Se não a tiveres, cria-a como diz "Preparar o projeto".
-- O caderno, para a tabela das operações e para as previsões.
 
 Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. Num Python mais antigo, uma mensagem pode ter outras palavras, ou apontar outra coluna da linha. O tipo de erro, a palavra antes dos dois pontos, é o mesmo. O caminho do ficheiro que aparece nas mensagens, a seguir a `File`, muda de computador para computador.
 
@@ -70,8 +69,6 @@ Os resultados e as mensagens de erro deste laboratório são os do Python 3.14. 
 ## Preparar o projeto
 
 1. Abre a pasta `fp-python` no VS Code. No menu File, escolhe Open Folder..., isto é, "abrir pasta", e escolhe `fp-python`. Se ainda não tens a pasta, cria-a primeiro no sítio onde guardas os trabalhos, por exemplo em Documentos. O que deves ver: à esquerda, no painel Explorer, o nome `FP-PYTHON`, com os ficheiros que já lá estiverem.
-
-2. No caderno, faz uma tabela com três colunas, com estes títulos: "Operação", "O que faz" e "Muda o original?". É a tua tabela das operações. Em cada paragem, acrescentas-lhe as linhas que a paragem indica.
 
 ## Fase 1: Um texto lê-se por posições
 
@@ -128,7 +125,7 @@ Sabes ler um carácter de um texto pelo índice, a contar do início e a contar 
 
 Pensa antes de continuares: no título `"Celeste"`, qual é o índice do último `e`, a contar do início? E a contar do fim? A resposta: 6 e -1. O título tem 7 caracteres, por isso o último índice a contar do início é 6.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -169,7 +166,7 @@ Sabes tirar uma fatia de um texto e contar quantos caracteres ela tem antes de a
 
 Pensa antes de continuares: o que dá `"DES-02"[4:20]`? Dá erro? A resposta: dá `'02'`, sem erro. Uma fatia que passa do fim do texto fica com os caracteres que existem. Só o índice de um carácter, sozinho, dá erro fora dos limites.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -224,7 +221,7 @@ O `codigo.py` arruma o código escrito e separa o género e o número, mesmo com
 
 Pensa antes de continuares: depois de escreveres ` pla-01 `, quanto vale `escrito`, no fim do programa? A resposta: continua `" pla-01 "`, com os espaços e as minúsculas. O `strip` e o `upper` devolveram textos novos, e só o último ficou em `codigo`. O texto escrito ficou como estava.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -282,7 +279,7 @@ O `codigo.py` aceita um código com qualquer separador no índice 3, e mostra-o 
 
 Pensa antes de continuares: o método `replace("_", "-")` troca cada traço baixo por um hífen. Porque é que, aqui, as duas fatias servem melhor? A resposta: o `replace("_", "-")` só trata o traço baixo, e falhava com `pla 01` ou `pla.01`. As fatias põem o hífen no índice 3, seja qual for o carácter que lá estava.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -362,7 +359,7 @@ Para confirmar que o género tem só letras, percorre-se o prefixo carácter a c
 
    O `pla01` passa a `PLA-1` depois das fatias, com 5 caracteres, e falha no tamanho. O `pl4-01` falha nas letras, por causa do 4.
 
-4. Segue o ciclo com o `pl4-01`, no caderno, antes de continuares. O prefixo é `"PL4"`:
+4. Segue o ciclo com o `pl4-01` nesta tabela, antes de continuares. O prefixo é `"PL4"`:
 
    | Volta | `caracter` | `caracter not in LETRAS` | `so_letras` depois da volta |
    | ---: | --- | --- | --- |
@@ -390,7 +387,7 @@ O `codigo.py` recusa um código com o tamanho errado ou com um carácter que nã
 
 Pensa antes de continuares: se a bandeira `so_letras` começasse em `False`, o que mostrava o programa com ` pla_01 `? A resposta: dizia que o código não tem a forma certa. Nenhuma linha do ciclo põe a bandeira a `True`, e ela ficava em `False` mesmo com três letras. Esta bandeira procura um carácter errado, e por isso começa em `True`.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -442,7 +439,7 @@ O `codigo.py` confirma o tamanho, as letras e os algarismos de um código, e diz
 
 Pensa antes de continuares: o programa aceita `plax01`, com um x no lugar do separador? E `pla101`? Corre os dois e explica porquê. A resposta: aceita os dois, e mostra o código `PLA-01`. As fatias da fase 4 saltam o índice 3, e o programa põe lá o hífen, seja qual for o carácter que lá estava. O programa não confirma o carácter do meio. Um dos desafios do fim trata disso.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -531,7 +528,7 @@ else:
 
 Pensa antes de continuares: o que escrevia `print(f"{prefixo}{numero}")`, com o código `PLA-01`? A resposta: `PLA01`. Entre os dois pares de chavetas não há nada, e por isso os dois valores ficam colados, sem espaço nem hífen.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -595,7 +592,7 @@ O `fila.py` junta os nomes numa lista que começa vazia e cresce um a um.
 
 Pensa antes de continuares: porque é que se escreve `codigo = codigo.upper()`, com atribuição, e `fila.append(entrada)`, sem atribuição? A resposta: o `upper` não muda o texto e devolve um texto novo, que tem de se guardar. O `append` muda a própria lista e devolve `None`, que não se deve guardar.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -647,7 +644,7 @@ O programa passa a aceitar uma palavra especial: quem escreve `próximo` não en
    ['Bia']
    ```
 
-   Segue a fila no caderno, linha a linha: `['Rui']`, `['Rui', 'Ana']`, `['Ana']`, `['Ana', 'Bia']` e `['Bia']`. A Bia entrou em 2.º lugar, e não em 3.º, porque o Rui já tinha saído.
+   Segue a fila, linha a linha: `['Rui']`, `['Rui', 'Ana']`, `['Ana']`, `['Ana', 'Bia']` e `['Bia']`. A Bia entrou em 2.º lugar, e não em 3.º, porque o Rui já tinha saído.
 
 3. Agora testa o caso que engana: a fila vazia. Antes de correres, prevê o que acontece se a primeira coisa que escreves for `próximo`. Corre e escreve `próximo`. O que deves ver:
 
@@ -682,7 +679,7 @@ O `fila.py` chama o primeiro da fila, que sai dela, e não para com a fila vazia
 
 Pensa antes de continuares: se escrevesses `fila.pop()` em vez de `fila.pop(0)`, quem jogava primeiro? A resposta: o último a chegar, porque o `pop()` sem posição tira o último elemento. Uma fila justa tira do princípio, com o `pop(0)`, e acrescenta no fim, com o `append`.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
@@ -780,13 +777,13 @@ Atualiza também o comentário do início do teu ficheiro, se ainda não tiver a
 
 Pensa antes de continuares: corre o programa com `Rui` e depois `rui`. O que acontece, e porquê? A resposta: os dois entram na fila, como se fossem pessoas diferentes. Para o Python, `"Rui"` e `"rui"` são textos diferentes, e o `in` compara os elementos exatamente.
 
-Acrescenta à tua tabela das operações:
+A tabela das operações desta fase:
 
 | Operação | O que faz | Muda o original? |
 | --- | --- | --- |
 | `x in lista` | dá `True` se `x` for um dos elementos da lista | não |
 
-Olha agora para a última coluna da tabela inteira. As operações dos textos dizem todas "não", ou "não se aplica", e as das listas que acrescentam ou tiram dizem "sim". É a diferença entre um valor imutável e um mutável.
+Olha agora para a última coluna das tabelas das dez paragens. As operações dos textos dizem todas "não", ou "não se aplica", e as das listas que acrescentam ou tiram dizem "sim". É a diferença entre um valor imutável e um mutável.
 
 ## Problemas frequentes
 
@@ -830,7 +827,7 @@ O programa compara com `"próximo"`, com acento, e para o Python são textos dif
 
 1. Pedir o código outra vez. Em `codigo.py`, o programa deixa de acabar quando o código não tem a forma certa. Em vez disso, pede o código outra vez, até receber um código certo. Testa com `pla01`, depois `pl4-01` e por fim `pla-01`. Pista: pensa em todas as linhas que têm de se repetir para cada código novo, incluindo a bandeira.
 
-2. Confirmar o separador. Em `codigo.py`, o programa passa a recusar um código com um carácter do meio errado. Os separadores certos são o hífen, o traço baixo, o espaço e o ponto. O carácter do meio é o do índice 3 do que a pessoa escreveu, depois do `strip`. Testa com `plax01`, `pla101`, `pla_01`, ` pla 01 ` e `pla-01`. Antes de cada caso, escreve o que esperas. Pista: o carácter do meio tem de se confirmar antes de o programa lá pôr o hífen.
+2. Confirmar o separador. Em `codigo.py`, o programa passa a recusar um código com um carácter do meio errado. Os separadores certos são o hífen, o traço baixo, o espaço e o ponto. O carácter do meio é o do índice 3 do que a pessoa escreveu, depois do `strip`. Testa com `plax01`, `pla101`, `pla_01`, ` pla 01 ` e `pla-01`. Antes de cada caso, prevê o que aparece. Pista: o carácter do meio tem de se confirmar antes de o programa lá pôr o hífen.
 
 3. Desistir da fila. Em `fila.py`, quem escrever `sai` seguido de um nome, como `sai Ana`, tira essa pessoa da fila, esteja onde estiver. Se a pessoa não estiver na fila, o programa diz-o e não para. Testa com `Rui`, `Ana`, `Bia`, `sai Ana`, `sai Eva` e Enter. Pista: as primeiras letras da entrada dizem se é um pedido para sair, e uma fatia dá o nome que vem depois. Há um método das listas que tira um valor sem saber a posição; o guia explica-o na secção "Listas que crescem e encolhem".
 
@@ -841,7 +838,7 @@ O programa compara com `"próximo"`, com acento, e para o Python são textos dif
 - [ ] O `codigo.py` mostra a frase certa com ` pla_01 ` e com `des 02`.
 - [ ] O `codigo.py` recusa `pla01`, `pl4-01`, `pla-0a` e `des-002`.
 - [ ] O `fila.py` dá o ecrã do passo 3 da fase 10, e não para com `próximo` e a fila vazia.
-- [ ] A tua tabela das operações tem as linhas das dez paragens, com a coluna "Muda o original?" preenchida.
+- [ ] Para cada operação das tabelas das paragens, sabes dizer se muda o valor original.
 - [ ] Sabes dizer de que tipo foi cada erro que provocaste: de sintaxe, de execução ou de lógica.
 - [ ] Consegues explicar, por palavras tuas, porque é que o `upper` se guarda com uma atribuição e o `append` não. E o que isso diz sobre os textos e as listas.
 

@@ -20,7 +20,7 @@ Os exercícios 1 a 5 são obrigatórios e fazem-se por esta ordem. Cada um preci
 
 O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
 
-Guarda os teus scripts na pasta `fp-python`, a do laboratório, com os nomes que cada exercício indica. As respostas escritas ficam no caderno. Antes de correres um script, escreve sempre o resultado que esperas. É aí que percebes se a ideia ficou entendida.
+Guarda os teus scripts na pasta `fp-python`, a do laboratório, com os nomes que cada exercício indica. Uma resposta escrita fica num comentário, com `#`, no início do script ou junto da linha a que diz respeito, como cada exercício indica. Antes de correres um script, pensa no resultado que esperas. É aí que percebes se a ideia ficou entendida.
 
 ## Exercício 1: Prever o ecrã
 
@@ -36,12 +36,11 @@ print("Vidas:", 3, "de", 5)
 print("Bom jogo!")  # A última linha do ecrã.
 ```
 
-1. Antes de correres, escreve no caderno o ecrã que esperas, linha a linha, com as linhas em branco e com os espaços exatos. Diz quantas linhas tem o ecrã.
-2. Cria `previsao.py` com este conteúdo, corre-o e compara o ecrã com o que escreveste. Para cada linha em que te enganaste, explica numa frase porque é que o ecrã é assim.
+Sem o correres, prevê o ecrã, linha a linha, com as linhas em branco e com os espaços exatos, e quantas linhas tem. Depois cria `previsao.py` com este conteúdo e confirma. Para cada linha do ecrã em que te enganaste, explica numa frase porque é que o ecrã é assim. Escreve a frase num comentário, no fim da linha do script a que diz respeito.
 
 ## Exercício 2: A ferramenta certa
 
-Para cada uma destas tarefas, diz se usas a consola do Python, o terminal, um editor de texto simples ou o IDE. Justifica numa frase. Há tarefas em que mais do que uma ferramenta serve: nesse caso, diz qual escolhes e porquê.
+Para cada uma destas tarefas, diz se usas a consola do Python, o terminal, um editor de texto simples ou o IDE. Justifica numa frase. Há tarefas em que mais do que uma ferramenta serve: nesse caso, diz qual escolhes e porquê. Escreve as respostas num ficheiro `ferramenta_certa.py`, só com comentários, um por tarefa.
 
 1. Descobrir se um `print()` sem nada lá dentro escreve alguma coisa.
 2. Mostrar a um colega, num computador da biblioteca que tem o Python mas não tem o VS Code, que o teu `ola.py` corre.
@@ -74,11 +73,11 @@ Pontos por resposta certa: 5
   3. Sair
 ```
 
-Traduz o algoritmo para Python, num script `quiz_menu.py`. A primeira linha é um comentário com o nome do ficheiro e o que ele faz. Corre-o e compara o ecrã com o esperado, linha a linha.
+Traduz o algoritmo para Python, num script `quiz_menu.py` que escreva este ecrã exatamente. A primeira linha é um comentário com o nome do ficheiro e o que ele faz.
 
 ## Exercício 4: Que tipo de erro é?
 
-Para cada script, diz que tipo de erro tem: de sintaxe, de execução ou de lógica. Diz também que linhas aparecem no ecrã antes da mensagem de erro, se aparecer alguma. Responde primeiro no caderno, só a ler o código. Depois corre cada script, para confirmares.
+Para cada script, diz, só a ler o código, que tipo de erro tem: de sintaxe, de execução ou de lógica. Diz também que linhas aparecem no ecrã antes da mensagem de erro, se aparecer alguma. Escreve a resposta no comentário da primeira linha de cada script, a seguir ao nome, e corre-o para a confirmares.
 
 1. Este script devia escrever duas linhas:
 
@@ -130,7 +129,7 @@ print("Preparar...")
 print(Partida)
 ```
 
-Cria `corrida.py` com este conteúdo e corrige-o até escrever o ecrã esperado. Para cada erro, escreve no caderno a rotina da depuração. Escreve o que esperavas e o que obtiveste, o tipo de erro, a tua hipótese, a correção e o resultado de voltares a testar. Corrige um erro de cada vez, e corre o programa depois de cada correção.
+Cria `corrida.py` com este conteúdo e corrige-o até escrever o ecrã esperado, um erro de cada vez. Para cada erro, segue a rotina da depuração, num comentário no fim do script. Escreve o que esperavas e o que obtiveste, o tipo de erro, a tua hipótese, a correção e o resultado de voltares a testar.
 
 ## Apoio
 
@@ -153,7 +152,7 @@ Escreve um script `trofeu.py` que desenhe no ecrã este troféu, feito só com s
   _|_
 ```
 
-Antes de correres, conta os espaços do início de cada linha.
+Os espaços do início de cada linha também contam.
 
 ## Para ires mais longe
 
@@ -168,15 +167,15 @@ print
 print "Boa sorte!"
 ```
 
-Prevê o que acontece se o correres no Python 3, e qual é a primeira linha de que o Python se queixa. Depois passa-o para o Python 3, num script `pontos.py`, e corre-o. Pista para a terceira linha: no Python 2, um `print` sozinho escrevia uma linha em branco.
+Prevê o que acontece se o correres no Python 3, e qual é a primeira linha de que o Python se queixa. Depois passa-o para o Python 3, num script `pontos.py`. Pista para a terceira linha: no Python 2, um `print` sozinho escrevia uma linha em branco.
 
 ## Critérios de conclusão
 
-- O ecrã que previste no exercício 1 está escrito, com as diferenças explicadas.
-- As quatro tarefas do exercício 2 têm a ferramenta e a justificação.
+- O `previsao.py` tem um comentário com a explicação de cada linha do ecrã em que te enganaste.
+- O `ferramenta_certa.py` tem, para cada uma das quatro tarefas do exercício 2, a ferramenta e a justificação.
 - O `quiz_menu.py` escreve o ecrã do exercício 3, igual ao esperado.
-- Os três scripts do exercício 4 têm o tipo de erro e as linhas que aparecem.
-- O `corrida.py` escreve o ecrã esperado, e a rotina dos três erros está no caderno.
+- Os três scripts do exercício 4 têm, no comentário da primeira linha, o tipo de erro e as linhas que aparecem.
+- O `corrida.py` escreve o ecrã esperado, e o comentário do fim tem a rotina dos três erros.
 
 ## Autoavaliação
 

@@ -23,11 +23,11 @@ Os exercícios 1 a 8 são obrigatórios e fazem-se por esta ordem, porque cada u
 
 O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
 
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. As tabelas e as respostas escritas ficam no caderno. Antes de correres um script, escreve sempre o resultado que esperas, calculado à mão a partir do enunciado. Nas mensagens, usa f-strings ou o `print` com vírgulas, como preferires, desde que o ecrã fique como o enunciado mostra.
+Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Quando um exercício pede uma resposta escrita, escreve-a no script, num comentário com `#`, no sítio que o exercício indica. Antes de correres um script, decide que resultado esperas, a partir do enunciado: é com ele que vês se o script está certo. Nas mensagens, usa f-strings ou o `print` com vírgulas, como preferires, desde que o ecrã fique como o enunciado mostra.
 
 ## Exercício 1: Prever o estado das coleções
 
-Abre a consola do Python, com o teu comando, `python`, `py` ou `python3`. Vais escrever as linhas abaixo, por esta ordem. Antes de cada linha marcada com uma letra, escreve no caderno o que esperas que a consola mostre. Só depois a escreves e confirmas. As linhas sem letra não mostram nada, mas criam ou mudam as coleções.
+Abre a consola do Python, com o teu comando, `python`, `py` ou `python3`. Vais escrever as linhas abaixo, por esta ordem. Antes de cada linha marcada com uma letra, prevê o que a consola vai mostrar. Só depois a escreves e confirmas. As linhas sem letra não mostram nada, mas criam ou mudam as coleções.
 
 ```text
 jogo = ("Tetris", "puzzle", 1984)
@@ -52,7 +52,7 @@ k) type({})
 
 Na consola, não escrevas a letra nem o parêntese: escreve só o que vem a seguir, como `jogo[1]`.
 
-Para cada previsão em que te enganaste, escreve uma frase a explicar o que o Python fez.
+Quando uma previsão falhar, procura no guia a razão do que o Python fez.
 
 ## Exercício 2: O caminho até ao tesouro
 
@@ -65,19 +65,17 @@ jogador = (2, 3)
 tesouro = (7, 1)
 ```
 
-O script mostra quantos passos separam o jogador do tesouro, numa linha como `Do (2, 3) ao (7, 1): 7 passos`. Dá um nome a cada um dos quatro números, numa linha por tuplo.
+a) O script mostra quantos passos separam o jogador do tesouro, numa linha como `Do (2, 3) ao (7, 1): 7 passos`. Dá um nome a cada um dos quatro números, numa linha por tuplo. Experimenta-o também com estes casos, mudando as duas linhas do início:
 
-a) Corre o script e confirma os 7 passos. Depois, muda as duas linhas do início para testar os casos da tabela. Antes de cada um, calcula à mão:
+| `jogador` | `tesouro` |
+| --- | --- |
+| `(7, 1)` | `(2, 3)` |
+| `(4, 4)` | `(4, 4)` |
+| `(0, 0)` | `(0, 5)` |
 
-| `jogador` | `tesouro` | Passos |
-| --- | --- | ---: |
-| `(7, 1)` | `(2, 3)` | |
-| `(4, 4)` | `(4, 4)` | |
-| `(0, 0)` | `(0, 5)` | |
+b) Num comentário no início do script, explica numa frase porque é que cada posição está num tuplo, e não numa lista.
 
-b) Explica numa frase porque é que cada posição está num tuplo, e não numa lista.
-
-c) O jogador anda uma casa para cima: o y aumenta 1, e o x fica igual. Acrescenta ao fim do script a linha que muda `jogador`, sem escreveres os números à mão, e mostra o `jogador` novo com um `print`. Com `jogador = (2, 3)`, o que esperas que apareça?
+c) O jogador anda uma casa para cima: o y aumenta 1, e o x fica igual. Acrescenta ao fim do script a linha que muda `jogador`, sem escreveres os números à mão, e mostra o `jogador` novo com um `print`.
 
 ## Exercício 3: Os pontos das palavras
 
@@ -102,14 +100,7 @@ pontos = {
 
 Escreve o script `palavras.py`, que lê uma palavra e mostra quantos pontos ela vale, numa linha como `Xadrez vale 24 pontos`. A palavra aparece no ecrã tal como a pessoa a escreveu.
 
-Antes de correres, calcula à mão os pontos de cada palavra da tabela. Depois corre o script com cada uma e confirma:
-
-| Palavra escrita | Pontos |
-| --- | ---: |
-| `casa` | |
-| `Xadrez` | 24 |
-| `QUIZ` | |
-| `k` | |
+Experimenta-o com `casa`, `Xadrez`, `QUIZ` e `k`.
 
 ## Exercício 4: As estrelas do jogo do mês
 
@@ -119,26 +110,14 @@ Os sócios do clube dão de 1 a 5 estrelas ao jogo do mês. Este mês, as avalia
 avaliacoes = [5, 4, 5, 3, 5, 4, 1]
 ```
 
-Escreve o script `estrelas_do_mes.py`, que começa com esta linha e conta, com um dicionário, quantas vezes foi dada cada classificação. Depois mostra as classificações de 1 a 5, uma por linha. O ecrã começa assim:
+Escreve o script `estrelas_do_mes.py`, que começa com esta linha e conta, com um dicionário, quantas vezes foi dada cada classificação. Depois mostra as classificações de 1 a 5, uma por linha. As cinco aparecem sempre, também as que ninguém deu. O ecrã começa assim:
 
 ```text
 Estrelas: vezes
 1: 1
 ```
 
-a) Antes de escreveres código, completa no caderno a tabela do que deve aparecer:
-
-| Estrelas | Vezes |
-| ---: | ---: |
-| 1 | 1 |
-| 2 | |
-| 3 | |
-| 4 | |
-| 5 | |
-
-b) Escreve o script, corre-o e confirma a tabela. As cinco classificações aparecem sempre, também as que ninguém deu.
-
-c) Testa também com `avaliacoes = []` e com `avaliacoes = [3, 3, 3]`. Antes de cada caso, escreve o que esperas.
+Experimenta-o também com `avaliacoes = []` e com `avaliacoes = [3, 3, 3]`.
 
 ## Exercício 5: A caderneta de cromos
 
@@ -155,7 +134,7 @@ Escreve o script `cromos.py`, que mostra quatro coisas:
 - quantas cópias a mais tem para trocar: um cromo que saiu três vezes dá duas cópias para trocar;
 - que números lhe faltam para completar a caderneta.
 
-O script tem de funcionar com qualquer lista de cromos saídos. Antes de correres, calcula à mão as quatro respostas para a lista da Joana. Depois corre e confirma. Testa também com `saidos = []` e com uma lista com os 12 números, cada um uma vez. Antes de cada caso, escreve o que esperas.
+O script tem de funcionar com qualquer lista de cromos saídos. Experimenta-o também com `saidos = []` e com uma lista com os 12 números, cada um uma vez.
 
 ## Exercício 6: Encontrar o erro
 
@@ -185,7 +164,7 @@ print(f"Duração total: {total // SEGUNDOS_POR_MINUTO} min {total % SEGUNDOS_PO
 
 Com estas três músicas, o script devia mostrar `Músicas: 3` e `Duração total: 10 min 0 s`.
 
-Copia o script para o ficheiro `playlist.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve no caderno:
+Copia o script para o ficheiro `playlist.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina. Escreve o que ela pede num comentário no fim do script, com `#`, para os números das linhas não mudarem:
 
 1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
 2. Numa frase, o que achas que causa o erro.
@@ -193,11 +172,11 @@ Copia o script para o ficheiro `playlist.py` e corre-o. O Python mostra os erros
 4. A linha que mudaste, e como ficou. Muda o mínimo possível.
 5. O que aconteceu quando voltaste a correr.
 
-Quando o script mostrar o resultado certo, testa-o também com uma playlist de uma só música, `{"Só uma": "0:59"}`, e com a playlist vazia, `{}`. Antes de correres, escreve o que deve aparecer.
+Quando o script mostrar o resultado certo, experimenta-o também com uma playlist de uma só música, `{"Só uma": "0:59"}`, e com a playlist vazia, `{}`.
 
 ## Exercício 7: Escolher as coleções
 
-Para cada situação da tabela, escolhe a coleção que usavas: lista, tuplo, dicionário ou conjunto. Justifica cada escolha com as quatro perguntas do guia: a ordem, os repetidos, a forma de procurar e se os valores mudam.
+Para cada situação da tabela, escolhe a coleção que usavas: lista, tuplo, dicionário ou conjunto. Justifica cada escolha com as quatro perguntas do guia: a ordem, os repetidos, a forma de procurar e se os valores mudam. Escreve as escolhas no ficheiro `colecoes.py`, só com comentários: uma linha por situação, com a coleção e o porquê.
 
 | Situação | Coleção | Porquê |
 | --- | --- | --- |
@@ -221,16 +200,16 @@ a) Escreve o script `inscricoes.py`, que mostra:
 - quantos alunos diferentes se inscreveram;
 - quantos inscritos tem cada clube, com os clubes por ordem alfabética.
 
-Antes de correres, calcula à mão o que deve aparecer com a lista dada. Depois corre e confirma. Testa também com a lista vazia, `inscricoes = []`.
+Experimenta-o também com a lista vazia, `inscricoes = []`.
 
-b) Faz a tabela de decisões do teu script, com uma linha para cada coleção que usaste: os dados, a coleção e porquê.
+b) Num comentário no início do script, faz a tabela de decisões dele. Tem uma linha para cada coleção que usaste, com os dados, a coleção e porquê.
 
 ## Apoio
 
 - Exercício 1: nas linhas `d)` e `j)`, a consola mostra a coleção inteira, com as chavetas ou os parênteses retos. Lembra-te do que faz uma atribuição a uma chave que já existe, e do que o `in` pergunta num dicionário.
 - Exercício 2: há uma função predefinida do tema 02 que dá a distância de um número a zero, sem sinal.
 - Exercício 3: percorre a palavra carácter a carácter. Nem todas as letras são chaves do dicionário, e o guia diz o que acontece quando se lê uma chave que não existe. Precisas da palavra de duas formas: uma para fazer as contas, e outra para mostrar.
-- Exercício 4: o guia tem um padrão para contar com um dicionário. Escreve no caderno o dicionário que ele dá com as avaliações deste mês, e compara-o com a tabela da alínea a).
+- Exercício 4: o guia tem um padrão para contar com um dicionário. Mostra com um `print` provisório o dicionário que ele dá com as avaliações deste mês, e compara-o com o ecrã que o enunciado pede.
 - Exercício 5: compara o número de cromos saídos com o número de cromos diferentes. Para os que faltam, percorre os números de 1 a 12 com um `range` e pergunta, a cada um, se a Joana o tem.
 - Exercício 6: o Python só mostra o erro seguinte depois de corrigires o anterior. A linha que a mensagem aponta pode não ser a que tem a causa. Um dos erros não dá mensagem nenhuma: só o encontras comparando o resultado com o esperado.
 - Exercício 7: responde às quatro perguntas para cada situação, antes de escolheres a coleção.
@@ -242,9 +221,9 @@ Duas palavras são anagramas quando têm as mesmas letras, o mesmo número de ve
 
 O `set` de um texto dá o conjunto dos seus caracteres: `set("ola")` dá `{'o', 'l', 'a'}`. Dois conjuntos são iguais quando têm os mesmos valores.
 
-a) Sem correr, diz o que o programa do colega responde com `ola` e `olaa`. Está certo? Explica porquê, numa frase.
+a) Sem correr, decide o que o programa do colega responde com `ola` e `olaa`. Está certo? Explica porquê numa frase, num comentário no início do `anagramas.py` da alínea b).
 
-b) Escreve o script `anagramas.py`, que lê duas palavras e diz se são anagramas, sem ligar às maiúsculas. Conta as letras de cada palavra num dicionário. Testa com `Roma` e `amor`, `pedra` e `perda`, `ola` e `olaa`, e `mar` e `sol`. Antes de cada caso, escreve o que esperas.
+b) Escreve o script `anagramas.py`, que lê duas palavras e diz se são anagramas, sem ligar às maiúsculas. Conta as letras de cada palavra num dicionário. Testa com `Roma` e `amor`, `pedra` e `perda`, `ola` e `olaa`, e `mar` e `sol`.
 
 Dois dicionários são iguais, com o `==`, quando têm exatamente os mesmos pares, seja qual for a ordem em que entraram.
 
@@ -259,7 +238,7 @@ inscricoes = [("Ana", "xadrez"), ("Rui", "teatro"), ("Ana", "teatro"),
               ("Bia", "xadrez"), ("Rui", "teatro"), ("Tomás", "robótica")]
 ```
 
-Antes de correres, prevê o que o teu script mostra. Depois muda-o para que a inscrição repetida não conte duas vezes: o teatro tem de continuar com 2 inscritos.
+Muda também o script, para que a inscrição repetida não conte duas vezes: o teatro tem de continuar com 2 inscritos.
 
 ### Mais longe 2: O clube que se pergunta
 
@@ -278,13 +257,13 @@ Escreve o script `em_comum.py`, que mostra, por ordem alfabética, os jogos que 
 
 ## Critérios de conclusão
 
-- O exercício 1 tem a previsão e a confirmação de cada linha marcada, e uma frase para cada previsão errada.
-- Os scripts `tesouro.py`, `palavras.py` e `estrelas_do_mes.py` correm e dão os resultados das tabelas, que preencheste antes de correr.
-- O `cromos.py` dá as quatro respostas que calculaste à mão.
-- O exercício 2 tem a explicação da escolha do tuplo e a linha que muda o jogador.
-- O `playlist.py` dá os resultados certos nos três casos. Tens no caderno a rotina de cada um dos três erros, com o tipo de cada um.
-- O exercício 7 tem as cinco escolhas justificadas.
-- O `inscricoes.py` funciona nos dois casos do exercício 8, e tens a tabela de decisões dele.
+- Correste as linhas do exercício 1 na consola, e percebes cada resultado, também os que não previste.
+- Os scripts `tesouro.py`, `palavras.py` e `estrelas_do_mes.py` correm e dão o resultado certo em todos os casos do seu exercício.
+- O `cromos.py` dá as quatro respostas certas com a lista da Joana e com os outros dois casos.
+- O `tesouro.py` tem, no comentário do início, a explicação da escolha do tuplo, e no fim a linha que muda o jogador.
+- O `playlist.py` dá os resultados certos nos três casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
+- O `colecoes.py` tem as cinco escolhas do exercício 7, cada uma com o porquê.
+- O `inscricoes.py` funciona nos dois casos do exercício 8, e tem a tabela de decisões no comentário do início.
 
 ## Autoavaliação
 

@@ -76,7 +76,7 @@ fp-python/
 - Leitura antecipada: a leitura do primeiro valor, antes do ciclo.
 - Contador: uma variável que conta quantas vezes uma coisa aconteceu, como `turmas = turmas + 1`.
 - Acumulador: uma variável que vai somando valores, como `total_quilos = total_quilos + quilos`.
-- Tabela de iterações: uma tabela com uma linha por cada teste da condição, com o valor das variáveis nesse momento. A **prevista** fazes tu, no caderno, antes de correr; a **observada** escreve-a o computador.
+- Tabela de iterações: uma tabela com uma linha por cada teste da condição, com o valor das variáveis nesse momento. A **prevista** fazes tu, antes de correr; a **observada** escreve-a o computador.
 - Linha de observação: um `print` provisório que mostra o valor das variáveis, para veres as voltas. Tira-se quando acabas de observar.
 - Ciclo infinito: um ciclo cuja condição nunca chega a dar `False`.
 - Ctrl+C: as teclas que param, no terminal, um programa que está a correr. Também no macOS é a tecla Control, e não a Cmd.
@@ -91,7 +91,6 @@ fp-python/
 - A pasta `fp-python`, aberta no VS Code, a mesma dos laboratórios anteriores. Se não a tiveres, cria-a, por exemplo em Documentos, e abre-a no menu File, com a opção Open Folder....
 - O terminal do VS Code, no menu Terminal, com a opção New Terminal. O texto antes do cursor deve acabar em `fp-python`.
 - O Python 3. Confirma com `python --version`, ou `python3 --version` no macOS: o primeiro número tem de ser 3.
-- O caderno, para as previsões e para as tabelas de iterações.
 
 Neste laboratório, onde o texto diz `python`, usa o comando que funciona no teu computador. No Windows, se o `python` não funcionar, é `py`. No macOS, é `python3`.
 
@@ -143,7 +142,7 @@ Em Python, o `Enquanto` passa a `while`, com dois pontos no fim da linha. As lin
 
    Leitura guiada: lê-o pelas três peças do ciclo. A inicialização são as duas linhas antes do `while`. O contador `turmas` começa em 0, e o primeiro valor lê-se antes do ciclo: é a leitura antecipada. A condição é `quilos != SENTINELA`, "os quilos lidos não são o -1". O corpo são as duas instruções indentadas. A primeira conta a turma, e a última lê os quilos da turma seguinte. O `print` final está encostado à margem, fora do ciclo, e só se executa quando o ciclo termina. Quando carregas em Enter depois dos dois pontos do `while`, o VS Code começa sozinho a linha seguinte com os quatro espaços.
 
-2. Guarda. Vais correr o programa três vezes, com os três casos que a algoritmia manda testar num ciclo: zero voltas, uma volta e várias voltas. Antes de correres, copia esta tabela para o caderno e escreve, em cada linha, quantas voltas prevês e o que aparece no fim:
+2. Guarda. Vais correr o programa três vezes, com os três casos que a algoritmia manda testar num ciclo: zero voltas, uma volta e várias voltas. Antes de correres, prevê, para cada linha desta tabela, quantas voltas dá o ciclo e o que aparece no fim:
 
    | Valores escritos, por ordem | Voltas previstas | Turmas que entregaram | Porque é que este caso foi escolhido |
    | --- | ---: | ---: | --- |
@@ -178,7 +177,7 @@ Em Python, o `Enquanto` passa a `while`, com dois pontos no fim da linha. As lin
    Turmas que entregaram: 0
    ```
 
-   O ciclo deu zero voltas, porque a condição `-1 != -1` deu `False` logo no primeiro teste. Confirma no caderno que as voltas observadas são as que previste.
+   O ciclo deu zero voltas, porque a condição `-1 != -1` deu `False` logo no primeiro teste. Confirma que as voltas observadas são as que previste.
 
 5. Provoca um erro de propósito: tira a atualização. Na última linha do corpo, a do `input`, põe um `#` antes do `quilos`, para ela passar a comentário. Guarda e corre, e escreve `12`. O que deves ver: depois do 12, não aparece mais nada, e o programa não volta ao terminal. Parece parado, mas está a dar voltas sem fim, muito depressa. Sem a atualização, `quilos` vale sempre 12, e a condição `12 != -1` dá sempre `True`. É um ciclo infinito.
 
@@ -227,7 +226,7 @@ Falta o total de quilos. Para isso não basta contar, é preciso somar. Um acumu
 
    Leitura guiada: o acumulador `total_quilos` nasce antes do ciclo, ao lado do contador, com 0, porque a soma de nada é zero. Dentro do corpo, cada volta soma os quilos da turma. A soma vem antes da leitura seguinte, porque tem de usar os quilos desta volta, e não os da próxima. O total só se escreve depois do ciclo, quando todas as turmas estão somadas.
 
-2. Antes de correres, faz no caderno a tabela de iterações prevista, para 12, 0, 9 e -1. Tem uma linha por cada teste da condição, com o valor das variáveis no momento do teste. Copia as colunas e preenche-as:
+2. Antes de correres, prevê a tabela de iterações para 12, 0, 9 e -1. Tem uma linha por cada teste da condição, com o valor das variáveis no momento do teste, nestas colunas:
 
    | Teste | quilos | turmas | total_quilos | Condição |
    | --- | ---: | ---: | ---: | --- |
@@ -257,7 +256,7 @@ Falta o total de quilos. Para isso não basta contar, é preciso somar. Um acumu
    print("(observação) quilos =", quilos, "turmas =", turmas, "total =", total_quilos)
    ```
 
-   A primeira executa-se no início de cada volta, logo depois de a condição dar `True`. A segunda executa-se uma só vez, quando a condição acabou de dar `False`. Cada uma corresponde a uma linha da tua tabela prevista.
+   A primeira executa-se no início de cada volta, logo depois de a condição dar `True`. A segunda executa-se uma só vez, quando a condição acabou de dar `False`. Cada uma corresponde a uma linha da tabela prevista do passo 2.
 
 4. Guarda, corre e escreve 12, 0, 9 e -1. O que deves ver:
 
@@ -274,7 +273,7 @@ Falta o total de quilos. Para isso não basta contar, é preciso somar. Um acumu
    Total: 21 kg
    ```
 
-   As quatro linhas de observação são a tabela observada. Compara-as, uma a uma, com as quatro linhas da tua tabela prevista. Se forem iguais, o ciclo fez o que previste. Se a tua tabela tinha outro valor numa linha, procura nela o engano: foi na previsão ou no programa?
+   As quatro linhas de observação são a tabela observada. Compara-as, uma a uma, com as quatro linhas da tabela prevista do passo 2. Se forem iguais, o ciclo fez o que previste. Se a tua previsão tinha outro valor numa linha, procura o engano: foi na previsão ou no programa?
 
 5. Provoca um erro de propósito: o acumulador a começar dentro do ciclo. Corta a linha `total_quilos = 0` de onde está. Cola-a como primeira linha do corpo, logo a seguir à linha do `while`, com quatro espaços. Fica antes do comentário da linha de observação. Guarda, corre e escreve 12, 0, 9 e -1. O que deves ver:
 
@@ -299,7 +298,7 @@ Falta o total de quilos. Para isso não basta contar, é preciso somar. Um acumu
 
 ### Paragem 2
 
-O `campanha.py` conta as turmas e soma os quilos, e as linhas de observação já saíram. Tens no caderno a tabela prevista e a observada do caso 12, 0, 9, -1, e as duas coincidem.
+O `campanha.py` conta as turmas e soma os quilos, e as linhas de observação já saíram. No caso 12, 0, 9, -1, a tabela observada coincidiu com a prevista.
 
 Pensa antes de continuares: com o acumulador dentro do ciclo, o caso 15, -1 dava o total certo, 15. Porquê? A resposta: com uma só volta, o último valor é também a soma de todos. É por isso que se testam sempre várias voltas: um acumulador que recomeça em cada volta só se nota a partir da segunda.
 
@@ -623,7 +622,7 @@ Não é um erro: a divisão não acaba, e o Python mostra as casas todas. Se qui
 
 - [ ] O `campanha.py` dá o resultado certo nos três casos: -1; 15 e -1; 12, 0, 9 e -1.
 - [ ] O `campanha_10ano.py` pergunta as turmas de 1 a 6. Com 12, 0, 9, 15, 6 e 18, dá 60 kg, 10.0 kg e 3 turmas na meta. Se fizeste a fase 6, opcional, também recusa os negativos.
-- [ ] Tens no caderno a tabela de iterações prevista e a observada do caso 12, 0, 9, -1, e as duas coincidem.
+- [ ] Sabes prever a tabela de iterações do caso 12, 0, 9, -1 e confirmá-la com linhas de observação.
 - [ ] Provocaste o ciclo infinito e paraste-o com Ctrl+C, e provocaste o acumulador dentro do ciclo, o fim do `range` errado e a fronteira trocada.
 - [ ] As linhas de observação já saíram dos dois programas.
 - [ ] Sabes dizer porque é que o `campanha.py` usa um `while` e o `campanha_10ano.py` usa um `for`.

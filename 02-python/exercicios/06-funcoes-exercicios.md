@@ -20,7 +20,7 @@ Os exercícios 1 a 5 são obrigatórios e fazem-se por esta ordem, porque cada u
 
 O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios. O exercício de "Para ires mais longe" precisa também do laboratório até à fase 5.
 
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. As tabelas e as respostas escritas ficam no caderno. Cada função que escreves leva documentação, e testa-se sozinha, com linhas de teste, antes de a parte principal a usar. Antes de correres um script, escreve sempre no caderno o que esperas que apareça.
+Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Uma resposta escrita fica num comentário no script, com `#`, no início ou junto da linha a que diz respeito. Cada função que escreves leva documentação, e testa-se sozinha, com linhas de teste, antes de a parte principal a usar. O valor esperado de cada linha de teste tira-se do enunciado, antes de correres, e não do ecrã. Num script com parte principal, os testes que já batem certo ficam no ficheiro, desligados com `#`.
 
 ## Exercício 1: Prever o que as chamadas devolvem
 
@@ -48,52 +48,32 @@ def vida_restante(vida, dano_sofrido):
     return vida - dano_sofrido
 ```
 
-a) Sem correres, escreve no caderno o que devolve cada chamada. Nas chamadas que têm outra lá dentro, escreve também a linha depois de tapado o buraco de dentro.
+Sem correres, prevê o que devolve cada uma destas chamadas:
 
-| Chamada | O que devolve |
-| --- | --- |
-| `dano(30, 10)` | |
-| `dano(10, 30)` | |
-| `dano(25, 25)` | |
-| `vida_restante(100, dano(30, 10))` | |
-| `vida_restante(vida_restante(100, 20), 35)` | |
-| `vida_restante(100, dano(20, 35))` | |
+- `dano(30, 10)`
+- `dano(10, 30)`
+- `dano(25, 25)`
+- `vida_restante(100, dano(30, 10))`
+- `vida_restante(vida_restante(100, 20), 35)`
+- `vida_restante(100, dano(20, 35))`
 
-b) Confirma no computador. Copia as duas funções para o script `combate.py`, com um comentário no topo, e acrescenta, na parte principal, um `print` para cada chamada da tabela. Corre.
-
-c) Para cada chamada em que te enganaste, escreve uma frase a explicar o que a função fez.
+Confirma as tuas previsões no script `combate.py`, com as duas funções, um comentário no topo e um `print` para cada chamada. Em cada chamada em que te enganaste, explica num comentário, junto da linha dela, o que a função fez.
 
 ## Exercício 2: A barra de vida
 
 Num jogo, a vida de uma personagem vai de 0 a 100. A barra de vida pisca a vermelho quando a personagem tem, no máximo, 25 pontos de vida.
 
-a) No script `vida.py`, escreve a função `vida_critica(vida)`, com um comentário no topo e a documentação. A função recebe a vida e devolve `True` quando a barra deve piscar, e `False` quando não deve. Usa uma constante para o 25.
+No script `vida.py`, escreve a função `vida_critica(vida)`, com um comentário no topo e a documentação. A função recebe a vida e devolve `True` quando a barra deve piscar, e `False` quando não deve. Usa uma constante para o 25. Testa a função sozinha com valores à volta da fronteira, escolhidos por ti.
 
-b) Escolhe os valores com que vais testar a função sozinha, à volta da fronteira. Escreve no caderno o que esperas que ela devolva com cada um. Depois escreve as linhas de teste, corre e compara.
-
-c) Quando os testes baterem certo, desliga-os com `#` e escreve a parte principal. Pergunta a vida da personagem e escreve "A barra de vida pisca a vermelho" ou "A barra de vida está normal". Corre o programa com dois valores à tua escolha, um de cada lado da fronteira.
+A parte principal pergunta a vida da personagem e escreve "A barra de vida pisca a vermelho" ou "A barra de vida está normal". Experimenta o programa com dois valores à tua escolha, um de cada lado da fronteira.
 
 ## Exercício 3: O preço do bilhete de cinema
 
 O cinema da tua cidade tem quatro preços, conforme a idade. Até aos 11 anos, o bilhete custa 4 euros. Dos 12 aos 17 anos, custa 6 euros. Dos 18 aos 64 anos, custa 8 euros. A partir dos 65 anos, custa 5 euros.
 
-a) Antes de escreveres código, completa no caderno o preço de cada idade, tirado do enunciado:
+No script `cinema.py`, escreve a função `preco_do_bilhete(idade)`, com a documentação. Recebe a idade e devolve o preço, em euros. Testa-a sozinha com estas nove idades, três à volta de cada fronteira: 10, 11, 12, 16, 17, 18, 63, 64 e 65.
 
-| Idade | Preço, em euros |
-| ---: | ---: |
-| 10 | |
-| 11 | |
-| 12 | |
-| 16 | |
-| 17 | |
-| 18 | |
-| 63 | |
-| 64 | |
-| 65 | |
-
-b) No script `cinema.py`, escreve a função `preco_do_bilhete(idade)`, com a documentação. Recebe a idade e devolve o preço, em euros. Testa-a sozinha com as nove idades da tabela, três à volta de cada fronteira.
-
-c) Desliga os testes e escreve a parte principal. Pergunta a idade e escreve uma linha como "O bilhete custa 6 euros.". A função não pergunta nada nem escreve nada: só recebe a idade e devolve o preço.
+A parte principal pergunta a idade e escreve uma linha como "O bilhete custa 6 euros.". A função não pergunta nada nem escreve nada: só recebe a idade e devolve o preço.
 
 ## Exercício 4: Encontrar o erro
 
@@ -147,7 +127,7 @@ print("Níveis com estrela:", niveis_com_estrela(moedas_por_nivel))
 
 Com a lista `[35, 50, 80, 12, 64]`, o script devia mostrar `Total de moedas: 241` e `Níveis com estrela: 3`.
 
-Copia o script para o ficheiro `moedas_erros.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve no caderno:
+Copia o script para o ficheiro `moedas_erros.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve-a num comentário no fim do script, com `#`:
 
 1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
 2. Numa frase, o que achas que causa o erro.
@@ -155,7 +135,7 @@ Copia o script para o ficheiro `moedas_erros.py` e corre-o. O Python mostra os e
 4. A linha que mudaste, e como ficou. Muda o mínimo possível.
 5. O que aconteceu quando voltaste a correr.
 
-Quando o script mostrar o resultado certo, testa-o também com a lista `[50]` e com a lista vazia, mudando a linha da lista. Antes de correres, calcula o que deve aparecer.
+Quando o script mostrar o resultado certo, testa-o também com a lista `[50]` e com a lista vazia, mudando a linha da lista.
 
 ## Exercício 5: A função mistério
 
@@ -172,25 +152,21 @@ def misterio(pontos, limite):
     return quantos
 ```
 
-a) Sem a correres, diz o que devolve cada chamada:
+a) Sem a correres, que valor devolve cada uma destas chamadas?
 
-| Chamada | O que devolve |
-| --- | --- |
-| `misterio([15, 12, 8, 20], 10)` | |
-| `misterio([5, 30], 10)` | |
-| `misterio([], 10)` | |
+- `misterio([15, 12, 8, 20], 10)`
+- `misterio([5, 30], 10)`
+- `misterio([], 10)`
 
-b) Escreve a função em pseudocódigo, na forma das aulas.
+b) No início do script `misterio.py`, escreve num comentário a função em pseudocódigo, na forma das aulas.
 
-c) Explica numa ou duas frases o que a função faz. Depois escreve a documentação que lhe falta e dá-lhe um nome que diga o que ela faz.
-
-d) Confirma a alínea a) no computador. Copia a função para o script `misterio.py`, com o nome novo e a documentação, acrescenta uma linha de teste para cada chamada e corre.
+c) No mesmo script, copia a função com a documentação que lhe falta e com um nome que diga o que ela faz. Junta uma linha de teste para cada chamada da alínea a), com o valor que previste.
 
 ## Apoio
 
 - Exercício 1: uma chamada que está dentro de outra calcula-se primeiro, e a linha reescreve-se com o valor dela. Lê o corpo de `dano` linha a linha, e lembra-te do que o `return` faz quando se executa.
 - Exercício 2: antes de escreveres a condição, pensa no que quer dizer "no máximo 25", com um exemplo de cada lado. Para os testes, a secção "Testar cada função sozinha" diz quantos valores se escolhem à volta de uma fronteira.
-- Exercício 3: uma cadeia de `if`, `elif` e `else`, com um `return` em cada caminho. Desenha primeiro a reta das idades no caderno, com as regiões e as fronteiras.
+- Exercício 3: uma cadeia de `if`, `elif` e `else`, com um `return` em cada caminho. Pensa primeiro na reta das idades, com as regiões e as fronteiras.
 - Exercício 4: o Python só mostra o erro seguinte depois de corrigires o anterior. Num traceback com várias linhas `File`, a de baixo diz onde o Python parou, e as de cima dizem quem chamou quem. Um dos erros não dá mensagem nenhuma: só o encontras se comparares o resultado com o esperado, ou se testares a função sozinha.
 - Exercício 5: faz a tabela de iterações da primeira chamada. Repara no que o `break` faz na volta em que a condição é falsa.
 
@@ -208,29 +184,25 @@ No corta-mato da escola, há uma prova de apuramento. Fica apurado para a final 
 tempos = [312, 298, 300, 345, 301, 287]
 ```
 
-a) No script `corta_mato.py`, escreve a função `contar_apurados(tempos, limite)`, com a documentação. Recebe a lista dos tempos e o limite, e devolve quantos atletas ficaram apurados. O limite é um parâmetro, e não uma conta fixa, para a mesma função servir noutra prova.
+No script `corta_mato.py`, escreve a função `contar_apurados(tempos, limite)`, com a documentação. Recebe a lista dos tempos e o limite, e devolve quantos atletas ficaram apurados. O limite é um parâmetro, e não uma conta fixa, para a mesma função servir noutra prova. Testa-a sozinha com estas chamadas:
 
-b) Testa a função sozinha com estas chamadas. Antes de correres, calcula no caderno o que cada uma deve devolver.
+- `contar_apurados([], 300)`
+- `contar_apurados([301], 300)`
+- `contar_apurados([300], 300)`
+- `contar_apurados([250, 280, 310], 270)`
 
-| Chamada | O que esperas |
-| --- | --- |
-| `contar_apurados([], 300)` | |
-| `contar_apurados([301], 300)` | |
-| `contar_apurados([300], 300)` | |
-| `contar_apurados([250, 280, 310], 270)` | |
-
-c) Escreve a parte principal, com a lista dos tempos e uma constante para o limite de 300 segundos. Escreve uma linha como "Ficaram apurados X dos Y atletas", com os dois números calculados pelo programa. O número de atletas não se escreve à mão: o programa tem de funcionar para uma lista de qualquer tamanho.
+A parte principal tem a lista dos tempos e uma constante para o limite de 300 segundos. Escreve uma linha como "Ficaram apurados X dos Y atletas", com os dois números calculados pelo programa. O número de atletas não se escreve à mão: o programa tem de funcionar para uma lista de qualquer tamanho.
 
 Pista: a função é um contador, como o `contar_acima` da fase 5 do laboratório. Aqui, quem ganha é quem faz menos tempo.
 
 ## Critérios de conclusão
 
-- O exercício 1 tem a previsão das seis chamadas, a confirmação no computador e uma frase para cada previsão errada.
+- O `combate.py` tem um `print` para cada uma das seis chamadas. Junto de cada chamada em que te enganaste, tem um comentário que explica o que a função fez.
 - Os scripts `vida.py` e `cinema.py` correm, e as funções deles têm documentação e linhas de teste desligadas com `#`.
-- Os valores esperados dos exercícios 2 e 3 foram escritos no caderno antes de correres.
+- As linhas de teste dos exercícios 2 e 3 testam as fronteiras, e o esperado de cada uma vem do enunciado.
 - Nenhuma das tuas funções tem um `print` nem um `input`.
-- O `moedas_erros.py` dá os resultados certos nos três casos. Tens no caderno a rotina de cada um dos três erros, com o tipo de cada um.
-- A função do exercício 5 tem pseudocódigo, uma explicação, documentação e um nome novo, e as três chamadas foram confirmadas no computador.
+- O `moedas_erros.py` dá os resultados certos nos três casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
+- O `misterio.py` tem a função em pseudocódigo, num comentário, e a função com um nome novo e a documentação. Tem também uma linha de teste para cada uma das três chamadas.
 
 ## Autoavaliação
 
