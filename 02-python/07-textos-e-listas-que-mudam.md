@@ -594,7 +594,7 @@ O `pop` também falha quando não há o que tirar. Numa lista vazia, `fila.pop(0
 
 ### Seguir o estado da lista
 
-Com listas que mudam, a pergunta mais importante passa a ser esta: como fica a lista depois de cada linha? Antes de leres as respostas, segue a sequência e escreve no caderno como fica a lista depois de cada linha que a muda.
+Com listas que mudam, a pergunta mais importante passa a ser esta: como fica a lista depois de cada linha? Antes de leres as respostas, segue a sequência e diz, de cabeça, como fica a lista depois de cada linha que a muda.
 
 ```text
 >>> inscritos = ["Rui", "Ana", "Bia"]

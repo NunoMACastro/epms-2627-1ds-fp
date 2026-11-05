@@ -570,7 +570,7 @@ A regra para escolher os casos de teste é a da algoritmia. Para cada fronteira,
 
 A parte mais importante é a ordem do trabalho. Os resultados esperados escrevem-se antes de correr, a partir do enunciado, e não a partir do que o programa mostra. Se escreveres o esperado depois de correr, copias o que o programa fez, certo ou errado, e o teste deixa de servir para nada.
 
-No caderno, uma tabela de casos de teste tem esta forma. As duas primeiras colunas preenchem-se antes de correr. A terceira preenche-se depois, uma linha de cada vez:
+Uma tabela de casos de teste tem esta forma. As duas primeiras colunas preenchem-se antes de correr, de cabeça. A terceira preenche-se depois, uma linha de cada vez. Quando um exercício pede a tabela escrita, ela vai para um comentário no script, com `#`:
 
 | Caso | Resultado esperado | Resultado obtido |
 | ---: | --- | --- |

@@ -303,7 +303,7 @@ Já escreveste chamadas dentro de outras sem dar por isso. Em `print(len(pontos)
 
 Com as tuas funções é igual. Para calcular uma chamada, o Python calcula primeiro os argumentos, da esquerda para a direita. Se um argumento for outra chamada, essa chamada faz as suas quatro fases primeiro. Só quando todos os argumentos são valores é que a chamada de fora começa.
 
-Antes de correres este exemplo, tenta prever as três linhas. Faz as contas no caderno, de dentro para fora.
+Antes de correres este exemplo, tenta prever as três linhas. Faz as contas de cabeça, de dentro para fora.
 
 ```python
 # chamadas.py: chamadas de funções dentro de outras chamadas.
@@ -619,7 +619,7 @@ Testar uma função sozinha é chamá-la com valores escolhidos e comparar o que
 4. Escreve as **linhas de teste**: um `print` com a chamada e o valor esperado, depois das funções e antes da parte principal.
 5. Corre o programa e compara, linha a linha, o devolvido com o esperado.
 
-Esta é a função do PEGI, com as três linhas de teste da fronteira dos 12 anos. Antes de correres, escreve no caderno o que esperas em cada linha.
+Esta é a função do PEGI, com as três linhas de teste da fronteira dos 12 anos. Antes de correres, prevê de cabeça o que a função devolve em cada linha.
 
 ```python
 # pegi_testes.py: a função do PEGI, testada sozinha na fronteira dos 12 anos.
@@ -729,7 +729,7 @@ E há uma coisa que no algoritmo não se escrevia: a documentação de cada fun�
 
 ### Passo 4: as funções, testadas sozinhas
 
-Primeiro escrevem-se as constantes e as três funções, e as linhas de teste. A parte principal ainda não existe. Os casos de teste escolhem-se pela documentação. Para `nota_valida`, são os três valores de cada uma das duas fronteiras, a do 0 e a do 20. Para `media`, que não aceita a lista vazia, são uma lista com um elemento e listas com vários. Para `contar_positivas`, que aceita a lista vazia, são a lista vazia, os valores à volta da fronteira do 10 e a lista do enunciado. Antes de correres, confirma no caderno, à mão, cada valor esperado.
+Primeiro escrevem-se as constantes e as três funções, e as linhas de teste. A parte principal ainda não existe. Os casos de teste escolhem-se pela documentação. Para `nota_valida`, são os três valores de cada uma das duas fronteiras, a do 0 e a do 20. Para `media`, que não aceita a lista vazia, são uma lista com um elemento e listas com vários. Para `contar_positivas`, que aceita a lista vazia, são a lista vazia, os valores à volta da fronteira do 10 e a lista do enunciado. Antes de correres, confirma de cabeça cada valor esperado, que fica escrito na própria linha de teste.
 
 ```python
 # resumo_notas.py: confirma que as notas de um teste estão na escala de 0 a 20

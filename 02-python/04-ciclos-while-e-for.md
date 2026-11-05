@@ -165,7 +165,7 @@ Repara num pormenor da segunda resposta. Depois do ciclo, `vezes` vale 4, e não
 
 Na algoritmia, eras tu que davas as voltas, e por isso sabias o valor de cada variável em cada momento. Agora é o computador, e tu só vês o que ele escreve no ecrã. As variáveis ficam escondidas. Se o ciclo der uma volta a mais, ou terminar com um valor que não esperavas, como sabes?
 
-Faz-se em dois passos. O primeiro é **prever**: antes de correr, fazes no caderno a tabela de iterações, como na algoritmia. Tem uma linha por cada teste da condição, com o valor das variáveis nesse momento. A esta chama-se a **tabela prevista**. Na coluna da condição, o resultado escreve-se `True` ou `False`, como o Python o mostra, no lugar do `true` e do `false` do pseudocódigo.
+Faz-se em dois passos. O primeiro é **prever**: antes de correr, fazes de cabeça a tabela de iterações, como na algoritmia. Tem uma linha por cada teste da condição, com o valor das variáveis nesse momento. A esta chama-se a **tabela prevista**. Na coluna da condição, o resultado escreve-se `True` ou `False`, como o Python o mostra, no lugar do `true` e do `false` do pseudocódigo. Quando um exercício pede a tabela escrita, ela vai para um comentário no script, com `#`. Para a tabuada até 7 x 3, a tabela prevista é esta:
 
 | Teste | vezes | Condição | Durante a volta |
 | --- | ---: | --- | --- |
@@ -987,7 +987,7 @@ Como se corrige: testa sempre o caso de zero voltas, o de uma volta e o de vári
 - Inicialização: a peça do ciclo que dá o valor inicial às variáveis, antes do ciclo.
 - Condição de um ciclo: a peça que decide se se dá mais uma volta; diz quando continuar.
 - Atualização: a instrução do corpo que muda a variável da condição e aproxima o ciclo do fim.
-- Tabela prevista: a tabela de iterações que fazes no caderno antes de correr.
+- Tabela prevista: a tabela de iterações que prevês antes de correr, de cabeça ou num comentário no script.
 - Linha de observação: um `print` provisório que mostra o valor das variáveis num sítio escolhido do programa.
 - Tabela observada: a tabela de iterações que o computador escreve, com as linhas de observação.
 - Zero voltas: o caso em que a condição dá `False` logo no primeiro teste, e o corpo não se executa.
