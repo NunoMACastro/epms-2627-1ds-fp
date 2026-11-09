@@ -2,53 +2,28 @@
 
 # Ficha de exercícios: Do enunciado ao problema delimitado
 
-Ficha do tema Do enunciado ao problema delimitado, do módulo Desenvolver algoritmos. Praticas o que o guia ensinou. Reconheces algoritmos, separas os dados do contexto, escreves o contrato de um problema, segues o estado de uma situação e encontras falhas. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../01-do-enunciado-ao-problema.md).
-
-Antes de começares, deves conseguir explicar:
-
-- as quatro propriedades de um algoritmo: finito, claro, executável, e parte de dados e chega a um resultado (secção "Algoritmo: os passos antes da linguagem");
-- a pergunta que separa um dado do contexto, "se isto mudasse, a resposta mudava?" (secção "Dados relevantes e pormenores do contexto");
-- as quatro partes do contrato: entradas, saídas, restrições e exemplos concretos (secção "O contrato de entrada e saída").
-
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica antes de começares. Vais precisar também de fazer contas simples, da matemática do ensino básico.
-
-## Como trabalhar
-
-Não precisas de computador. Nada nesta ficha se escreve em pseudocódigo nem numa linguagem de programação. Quando te pedirem passos, escreve-os em português, numerados, com uma ação por passo, como no guia. Se uma resposta te sair em frases em vez de passos, também vale, desde que se perceba sem dúvidas o que queres dizer.
-
-Faz os exercícios pela ordem. Cada um usa uma ideia do guia de cada vez, e o último junta várias.
-
-| Exercício | O que treina |
-| --- | --- |
-| 1 | Reconhecer um algoritmo pelas quatro propriedades |
-| 2 | Separar os dados do contexto |
-| 3 | Escrever o contrato de um problema, com os exemplos concretos |
-| 4 | Decompor e seguir o estado numa tabela |
-| 5 | Encontrar uma falha e o exemplo mínimo |
-| Desafio opcional | Os Missionários e Canibais com dois e dois |
-| Para ires mais longe | O dia em que o Tiago acaba o livro |
-
-Os exercícios 1 a 5 são obrigatórios. O desafio e a secção "Para ires mais longe" são opcionais, e nenhum dos dois conta para concluíres a ficha. Servem para quem terminar e quiser mais prática, ou para estudares em casa.
-
-Entregas as respostas em papel ou num ficheiro de texto, com as contas que fizeste, e não só os resultados.
+Praticas o que o guia ensinou: reconheces algoritmos, separas os dados do contexto e escreves o contrato de um problema. Segues também o estado de uma situação e encontras falhas. Os exercícios 1 a 5 são obrigatórios. Não precisas de computador: as respostas ficam em papel ou num ficheiro de texto, com as contas, e os passos escrevem-se em português, numerados. Para rever: o [guia do tema](../01-do-enunciado-ao-problema.md).
 
 ## Exercício 1: Reconhecer um algoritmo
 
-Cada uma das listas seguintes pretende ser um algoritmo. Para cada uma, diz se é mesmo um algoritmo. Se não for, diz qual das quatro propriedades falha e explica porquê numa frase.
+Cada uma das listas seguintes pretende ser um algoritmo. Para cada uma, diz se é mesmo um algoritmo. Se não for, diz o que lhe falta e explica porquê numa frase.
 
 a) Para escrever números: escreve o número 1. Soma 1 ao último número que escreveste e escreve o resultado. Repete o passo anterior sempre.
 
-b) Para fazer arroz: põe arroz q.b. numa panela, junta água e deixa cozer um bocado.
+b) Para fazer arroz: põe arroz quanto baste numa panela, junta água e deixa cozer um bocado.
 
 c) Para saber se um número inteiro é par: divide o número por 2. Se o resto da divisão for 0, a resposta é "par". Se não for, a resposta é "ímpar".
 
 d) Para ganhar o Euromilhões: escolhe os números que vão sair no próximo sorteio e regista a aposta com esses números.
 
-Concluíste quando tiveres uma resposta para as quatro listas e, nas que não são algoritmos, souberes apontar a propriedade que falha.
+Rever: [Um algoritmo é uma sequência de passos claros](../01-do-enunciado-ao-problema.md#um-algoritmo-é-uma-sequência-de-passos-claros).
+
+<details>
+<summary>Pista</summary>
+
+Para cada lista, pergunta-te: isto acaba? Cada passo só se lê de uma maneira? Consigo fazer cada passo com o que tenho?
+
+</details>
 
 ## Exercício 2: Dados e contexto
 
@@ -60,9 +35,14 @@ a) Faz uma tabela com três colunas: o pormenor do enunciado, se é um dado ou c
 
 b) Calcula à mão a resposta ao que o Tiago quer saber e escreve a conta.
 
-Concluíste quando a tua tabela separar bem os dados do contexto e a conta da alínea b) estiver escrita.
+Rever: [Um dado relevante muda a resposta](../01-do-enunciado-ao-problema.md#um-dado-relevante-muda-a-resposta).
 
-Se quiseres continuar com o Tiago, o Mais longe 1, no fim da ficha, muda-lhe a pergunta. É opcional.
+<details>
+<summary>Pista</summary>
+
+Troca mentalmente cada pormenor por outro valor e vê se a resposta à pergunta do Tiago muda.
+
+</details>
 
 ## Exercício 3: Delimitar o problema dos bilhetes
 
@@ -70,7 +50,7 @@ Lê o enunciado:
 
 > A turma vai visitar o Oceanário. O autocarro sai da escola às 8h30 e o almoço é no refeitório do Oceanário, que já está pago. Cada aluno paga o seu bilhete, que custa 9 euros. Os professores não pagam bilhete. Tem de ir um professor por cada 10 alunos. Se sobrarem alunos que não chegam a 10, também é preciso mais um professor para eles. A visita só se faz se se inscreverem pelo menos 15 alunos. A diretora de turma quer saber, a partir do número de alunos inscritos, quanto dinheiro tem de recolher e quantos professores têm de ir.
 
-a) Escreve o contrato deste problema: as entradas, com a unidade e os limites de cada uma, as saídas e as restrições.
+a) Escreve o contrato deste problema: as entradas, com a unidade e os limites de cada uma, as saídas e as restrições. Conta como entrada só o que muda de cada vez que se faz a conta. O mínimo de 15 alunos escreve-se nas restrições.
 
 b) Escreve os exemplos concretos do contrato, numa tabela com quatro colunas:
 
@@ -85,7 +65,14 @@ Um destes quatro casos obriga-te a decidir o que as saídas devem dizer, porque 
 
 c) Delimitar um problema também é dizer o que fica fora dele. Indica dois pormenores do enunciado que não entram na solução e explica porquê.
 
-Concluíste quando outra pessoa conseguir calcular um caso novo, como 31 alunos, só com o teu contrato e sem ler o enunciado.
+Rever: [O contrato diz o que entra, o que sai e que regras há](../01-do-enunciado-ao-problema.md#o-contrato-diz-o-que-entra-o-que-sai-e-que-regras-há).
+
+<details>
+<summary>Pista</summary>
+
+Em cada um dos quatro casos, pergunta-te se todas as regras do enunciado se cumprem.
+
+</details>
 
 ## Exercício 4: O estado do parque de estacionamento
 
@@ -105,9 +92,9 @@ c) Simula esta manhã numa tabela de estado. Às 8h00 há 2 lugares livres. Depo
 4. sai um carro;
 5. entra um carro.
 
-Usa as colunas: momento, o que acontece, lugares livres depois e o que mostra o painel. Na linha do carro que chega à cancela, diz também o que acontece a esse carro.
+Usa as colunas: momento (o número do acontecimento, com 0 para as 8h00), o que acontece, lugares livres depois e o que mostra o painel. Na linha do carro que chega à cancela, diz também o que acontece a esse carro.
 
-Concluíste quando a tua tabela mostrar o estado depois de cada acontecimento e o painel mostrar "CHEIO" sempre, e só, quando deve.
+Rever: [O pensamento computacional tem quatro ideias](../01-do-enunciado-ao-problema.md#o-pensamento-computacional-tem-quatro-ideias) e [O estado é uma fotografia, e a ação muda-o](../01-do-enunciado-ao-problema.md#o-estado-é-uma-fotografia-e-a-ação-muda-o).
 
 ## Exercício 5: Encontrar a falha
 
@@ -120,58 +107,56 @@ b) Alguém escreveu estes passos para contar as pessoas de uma fila:
 3. Repete o passo 2 até não haver ninguém atrás.
 4. O último número que disseste é o número de pessoas da fila.
 
-Experimenta os passos com uma fila de 3 pessoas: funcionam. Agora encontra uma fila para a qual não funcionam. Escolhe o exemplo mínimo, a fila mais pequena e simples que mostra a falha, e explica o que corre mal. Por fim, acrescenta um passo que corrija a falha, e diz em que posição o puseste.
+Experimenta os passos com uma fila de 3 pessoas: funcionam. Agora encontra uma fila para a qual não funcionam. Escolhe o exemplo mínimo, a fila mais pequena e simples que mostra a falha, e explica o que corre mal. Por fim, acrescenta um passo que corrija a falha, e diz em que posição o puseste. Se a numeração mudar, acerta o "Repete o passo 2".
 
-Concluíste quando tiveres as duas contagens dos dias na alínea a) e, na alínea b), o exemplo mínimo e o passo novo.
+Rever: [Reproduzir a falha com um exemplo mínimo](../01-do-enunciado-ao-problema.md#reproduzir-a-falha-com-um-exemplo-mínimo).
 
-## Apoio
+<details>
+<summary>Pista</summary>
 
-Se estiveres encravado, usa estas pistas pela ordem em que aparecem. Passa à seguinte só se a anterior não tiver chegado.
+Na alínea b), segue os passos à letra, como o robô da sandes: faz só o que cada passo diz.
 
-- Exercício 1: para cada lista, faz quatro perguntas, uma por propriedade. Isto acaba? Cada passo só se lê de uma maneira? Consigo fazer cada passo com o que tenho? Sei de onde parto e aonde chego? Basta uma resposta "não" para a lista não ser um algoritmo.
-- Exercício 2: para a alínea a), troca mentalmente cada pormenor por outro valor e vê se a resposta à pergunta do Tiago muda. Por exemplo, um candeeiro verde em vez de azul, ou um livro de banda desenhada em vez de aventuras.
-- Exercício 3: para as entradas, pergunta-te o que muda de cada vez que a diretora de turma faz esta conta. Para os professores, lembra-te dos livros nas caixas do guia: os alunos que sobram também precisam de alguém. Para a decisão, pergunta-te, em cada um dos quatro casos, se todas as regras do enunciado se cumprem.
-- Exercício 4: para a alínea b), olha para o que o painel mostra e pergunta-te se dava para o calcular a partir de outro número. Lembra-te dos Missionários e Canibais: a margem direita não se guardava, porque se deduzia da esquerda.
-- Exercício 5: para a alínea a), escreve os dias a seguir à sexta-feira, um por linha, e pensa em quem faz as entregas. Para a alínea b), experimenta filas cada vez mais pequenas e segue os passos à letra em cada uma, como o robô da sandes.
-- Desafio opcional: para a alínea b), conta quantas pessoas a mais ficam na direita depois de cada ida e volta.
+</details>
 
-## Desafio opcional
+## Desafios
 
-Volta aos Missionários e Canibais, mas agora com dois missionários e dois canibais. O barco continua a levar no máximo duas pessoas e não atravessa sozinho. A regra de segurança é a mesma do guia.
+### Desafio 1: Os Missionários e Canibais com dois e dois
 
-a) Encontra uma solução e mostra-a numa tabela como a do exemplo guiado, na secção "Passo 8: simular até ao fim". Verifica a regra em todas as linhas e nas duas margens.
+Volta aos Missionários e Canibais, com dois missionários e dois canibais. O barco continua a levar no máximo duas pessoas e não atravessa sozinho. A regra de segurança é a mesma do guia.
 
-b) Quantas travessias tem a tua solução? Explica porque é que não é possível fazer com menos.
+a) Encontra uma solução e mostra-a numa tabela como a do exemplo guiado. Verifica a regra em todas as linhas e nas duas margens.
 
-c) No jogo com três e três, o padrão "vão dois, volta um" falhava numa travessia. No jogo com dois e dois, esse padrão funciona do princípio ao fim? Usa a tua tabela para responder.
+b) Quantas travessias tem a tua solução? Se conseguires fazer com menos, refaz a tabela. Explica porque é que não é possível descer abaixo desse número.
 
-## Para ires mais longe
+c) No jogo com três e três, o padrão "vão dois, volta um" falhava numa travessia. No jogo com dois e dois, esse padrão funciona do princípio ao fim? Justifica com a tua tabela.
 
-Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam. Serve para quem terminou a parte obrigatória e quer mais prática, ou para estudares em casa.
+Rever: [Exemplo guiado: os Missionários e Canibais](../01-do-enunciado-ao-problema.md#exemplo-guiado-os-missionários-e-canibais).
 
-### Mais longe 1: O dia em que o Tiago acaba o livro
+<details>
+<summary>Pista</summary>
 
-Continua o exercício 2: usa o mesmo enunciado do Tiago e a conta que fizeste na alínea b). É mais comprido do que os outros, porque cada exemplo se faz dia a dia, com uma linha por dia, até o livro acabar.
+Para a alínea b), conta quantas pessoas a mais ficam na direita depois de cada ida e volta.
 
-A mãe do Tiago acrescenta uma coisa: "Ao domingo ele não lê, porque se deita mais cedo." E o Tiago muda a pergunta. Agora quer saber em que dia da semana vai acabar o livro. Com estas duas mudanças, o enunciado deixa de chegar para responder. Que informação passa a faltar? Mostra que falta mesmo, com dois exemplos em que essa informação é diferente e o livro acaba em dias da semana diferentes.
+</details>
 
-Concluíste quando souberes dizer que informação falta e tiveres os dois exemplos feitos dia a dia.
+### Desafio 2: O dia em que o Tiago acaba o livro
 
-Pista: escolhe um dia da semana para o Tiago começar e faz uma lista dos dias, um por linha. Vai somando as páginas, e salta os domingos. Depois repete com outro dia de início.
+Usa o enunciado do exercício 2. A mãe do Tiago acrescenta: "Ao domingo ele não lê, porque se deita mais cedo." E o Tiago quer saber em que dia da semana vai acabar o livro. Com estas duas mudanças, o enunciado deixa de chegar. Que informação passa a faltar? Mostra que falta mesmo, com dois exemplos em que essa informação é diferente e o livro acaba em dias da semana diferentes.
+
+<details>
+<summary>Pista</summary>
+
+Faz a conta dia a dia, numa lista, e salta os domingos.
+
+</details>
 
 ## Critérios de conclusão
 
-- [ ] Em cada lista do exercício 1 disse se é um algoritmo e, quando não é, que propriedade falha.
-- [ ] Separei os dados do contexto com a pergunta do guia, e não por palpite.
-- [ ] Escrevi um contrato com entradas, saídas, restrições e exemplos concretos calculados à mão. Os exemplos incluem um caso no limite de uma regra e um caso extremo.
-- [ ] Escrevi as decisões que tomei onde o enunciado não dizia o que fazer.
-- [ ] Segui o estado do parque numa tabela, linha a linha.
-- [ ] Encontrei um exemplo mínimo para a falha da fila e corrigi os passos.
-- [ ] Os meus passos não têm palavras vagas: onde há quantidades, há números com unidade.
-
-## Autoavaliação
-
-1. O que já consegues fazer sozinho, sem voltar ao guia?
-2. Que dificuldade tiveste, e o que fizeste para a resolver?
+- Em cada lista do exercício 1, disseste se é um algoritmo e, quando não é, o que lhe falta.
+- No exercício 2, separaste os dados do contexto com a pergunta do guia, e escreveste a conta.
+- O contrato do exercício 3 tem entradas, saídas, restrições e os exemplos calculados à mão.
+- No mesmo exercício, escreveste a decisão que tomaste e os dois pormenores que ficam de fora.
+- No exercício 4, decompuseste o parque, explicaste o estado e seguiste-o numa tabela, linha a linha.
+- No exercício 5, mostraste as duas contagens da mochila, encontraste o exemplo mínimo da fila e corrigiste os passos.
 
 ![Rodapé](../../imagens/rodape.png)

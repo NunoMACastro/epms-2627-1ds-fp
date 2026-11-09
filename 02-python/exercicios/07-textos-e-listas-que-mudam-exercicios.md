@@ -2,27 +2,7 @@
 
 # Ficha de exercícios: Textos e listas que mudam
 
-Ficha do tema Textos e listas que mudam, do módulo Criar aplicações em linguagem de programação Python. Praticas os textos, com os índices, as fatias e os métodos, e as listas que crescem e encolhem. Praticas também a leitura de um script com erros. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../07-textos-e-listas-que-mudam.md) e o [laboratório](../laboratorios/07-textos-e-listas-que-mudam-laboratorio.md).
-
-## Como trabalhar
-
-Os exercícios 1 a 7 são obrigatórios e fazem-se por esta ordem, porque cada um usa o que os anteriores treinaram. Cada um precisa das secções do guia que estão entre parênteses:
-
-1. Exercício 1 (do início até "Os textos não mudam, as listas mudam").
-2. Exercício 2 ("Fatias de um texto" e "Juntar textos e valores com f-strings").
-3. Exercício 3 ("Os métodos dos textos" e "Fatias de um texto").
-4. Exercício 4 ("Um texto é uma sequência de caracteres" e "Os métodos dos textos").
-5. Exercício 5 ("Listas que crescem e encolhem" e "Funções predefinidas para listas").
-6. Exercício 6 ("Listas que crescem e encolhem").
-7. Exercício 7 (o guia todo, e a rotina de cinco passos para procurar um erro).
-
-O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
-
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Quando um exercício pede uma resposta escrita, escreve-a no script, num comentário com `#`, no sítio que o exercício indica. Antes de correres um script, decide que resultado esperas, a partir do enunciado: é com ele que vês se o script está certo. Nas mensagens, usa f-strings ou o `print` com vírgulas, como preferires, desde que o ecrã fique como o enunciado mostra.
+Praticas os textos, com os índices, as fatias e os métodos, e as listas que crescem e encolhem. Os exercícios 1 a 7 são obrigatórios. Os scripts ficam na pasta `fp-python` e abrem com um comentário a dizer o que fazem. Antes de correres, decide o resultado que esperas. Para rever: o [guia do tema](../07-textos-e-listas-que-mudam.md) e o [laboratório](../laboratorios/07-textos-e-listas-que-mudam-laboratorio.md).
 
 ## Exercício 1: Prever na consola
 
@@ -52,9 +32,11 @@ Na consola, não escrevas a letra nem o parêntese: escreve só o que vem a segu
 
 Quando uma previsão falhar, procura no guia a razão do que o Python fez.
 
+Rever: [Uma fatia é um pedaço do texto](../07-textos-e-listas-que-mudam.md#uma-fatia-é-um-pedaço-do-texto), [Os métodos arrumam um texto](../07-textos-e-listas-que-mudam.md#os-métodos-arrumam-um-texto) e [Os textos não mudam, as listas mudam](../07-textos-e-listas-que-mudam.md#os-textos-não-mudam-as-listas-mudam).
+
 ## Exercício 2: O despertador
 
-Um despertador mostra as horas num texto com cinco caracteres, como `"07:45"`: dois algarismos das horas, os dois pontos e dois algarismos dos minutos. Escreve o script `despertador.py`, que lê uma hora nesta forma e diz quantos minutos passaram desde a meia-noite. O script começa com um comentário que diz o que ele faz. O ecrã fica assim:
+Um despertador mostra as horas num texto com cinco caracteres, como `"07:45"`: dois algarismos das horas, os dois pontos e dois algarismos dos minutos. Escreve o script `despertador.py`, que lê uma hora nesta forma e diz quantos minutos passaram desde a meia-noite. O ecrã fica assim:
 
 ```text
 Hora do despertador (hh:mm)? 07:45
@@ -62,6 +44,15 @@ Hora do despertador (hh:mm)? 07:45
 ```
 
 Experimenta-o com `00:00`, `07:45`, `12:00` e `23:59`.
+
+Rever: [Uma fatia é um pedaço do texto](../07-textos-e-listas-que-mudam.md#uma-fatia-é-um-pedaço-do-texto).
+
+<details>
+<summary>Pista</summary>
+
+Conta os índices de `"07:45"`, carácter a carácter, antes de escolheres as fatias.
+
+</details>
 
 ## Exercício 3: O nome de utilizador
 
@@ -71,7 +62,7 @@ O clube cria um nome de utilizador para cada sócio entrar no computador da sala
 - as três primeiras letras do último nome;
 - o ano de nascimento.
 
-As letras ficam todas em minúsculas, e os acentos ficam como estão. Com um só nome, o primeiro e o último nome são o mesmo. Escreve o script `utilizador.py`, que lê o nome completo e o ano, e mostra o nome de utilizador. O ecrã fica assim:
+As letras ficam todas em minúsculas, e os acentos ficam como estão. Um nome com menos de três letras entra inteiro. Com um só nome, o primeiro e o último nome são o mesmo. Escreve o script `utilizador.py`, que lê o nome completo e o ano, e mostra o nome de utilizador. O ecrã fica assim:
 
 ```text
 Nome completo? Ana Sofia Martins
@@ -90,6 +81,15 @@ Experimenta-o com estes casos:
 
 O script tem de servir para nomes com qualquer número de palavras.
 
+Rever: [Os métodos arrumam um texto](../07-textos-e-listas-que-mudam.md#os-métodos-arrumam-um-texto) e [Uma fatia é um pedaço do texto](../07-textos-e-listas-que-mudam.md#uma-fatia-é-um-pedaço-do-texto).
+
+<details>
+<summary>Pista</summary>
+
+Experimenta na consola o método que parte um texto, com os nomes da tabela, para veres a lista que ele dá.
+
+</details>
+
 ## Exercício 4: O PIN do cacifo
 
 Os cacifos do clube abrem com um PIN de quatro algarismos. Um PIN só é aceite se tiver exatamente quatro caracteres, todos algarismos. Os quatro também não podem ser iguais, como em `1111`, que é fácil de adivinhar. Escreve o script `pin.py`, que lê um PIN e mostra uma destas três mensagens:
@@ -101,6 +101,8 @@ O PIN não pode ter os quatro algarismos iguais.
 ```
 
 Experimenta-o com os PIN `2580`, `1111`, `12a4`, `123`, `0000` e `1121`.
+
+Rever: [O `isdigit` confirma que um texto só tem algarismos](../07-textos-e-listas-que-mudam.md#o-isdigit-confirma-que-um-texto-só-tem-algarismos) e [Um texto é uma sequência de caracteres](../07-textos-e-listas-que-mudam.md#um-texto-é-uma-sequência-de-caracteres).
 
 ## Exercício 5: Os lançamentos de dardos
 
@@ -118,6 +120,15 @@ Pior: 5
 
 Experimenta-o com as pontuações 20, 5, 60 e 0, por esta ordem, e com uma só pontuação, 25. Experimenta-o também sem nenhuma pontuação, carregando logo em Enter.
 
+Rever: [O `append` faz uma lista crescer](../07-textos-e-listas-que-mudam.md#o-append-faz-uma-lista-crescer).
+
+<details>
+<summary>Pista</summary>
+
+Faz primeiro a versão que funciona com pontuações, e só depois trata o caso sem nenhuma.
+
+</details>
+
 ## Exercício 6: A lista de tarefas
 
 A lista de tarefas do teu telemóvel começa assim:
@@ -126,7 +137,7 @@ A lista de tarefas do teu telemóvel começa assim:
 tarefas = ["estudar Python", "arrumar o quarto", "treino"]
 ```
 
-Escreve o script `tarefas.py`, que começa com esta linha e faz, por esta ordem, o que cada pedido diz. Cada pedido de a) a d) é uma linha, ou duas. Usa um método diferente das listas em cada um.
+Escreve o script `tarefas.py`, com esta lista, que faz, por esta ordem, o que cada pedido diz. Cada pedido de a) a d) é uma linha, ou duas. Usa um método diferente das listas em cada um.
 
 a) Chegou uma tarefa urgente, `"entregar a ficha"`, que passa para o primeiro lugar da lista.
 
@@ -136,7 +147,9 @@ c) Lembraste-te de `"ligar à avó"`, que fica para o fim.
 
 d) Fizeste a primeira tarefa da lista: sai da lista, e o programa escreve `Feita:` e o nome dela.
 
-e) O programa mostra quantas tarefas faltam e a lista, numerada a partir do 1, uma por linha. A primeira linha diz `Faltam` e o número de tarefas, como `Faltam 5 tarefas:`. Cada tarefa vem numa linha, como `1. fazer a mochila`.
+e) O programa mostra quantas tarefas faltam e a lista, numerada a partir do 1, uma por linha. A primeira linha diz `Faltam` e o número de tarefas, como, por exemplo, `Faltam 5 tarefas:`. Cada tarefa vem numa linha, como, por exemplo, `1. fazer a mochila`.
+
+Rever: [Os textos não mudam, as listas mudam](../07-textos-e-listas-que-mudam.md#os-textos-não-mudam-as-listas-mudam).
 
 ## Exercício 7: Encontrar o erro
 
@@ -166,57 +179,49 @@ A palavra JOGO aparece 2 vezes.
 Última palavra: jogo
 ```
 
-Copia o script para o ficheiro `palavra_do_dia.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina. Escreve o que ela pede num comentário no fim do script, com `#`, para os números das linhas não mudarem:
+Copia o script para o ficheiro `palavra_do_dia.py`, corre-o e corrige-o, mudando o mínimo possível. Para cada erro, diz num comentário no fim do script o que aconteceu e o tipo de erro. Diz também o que achas que o causa, como o confirmaste, a linha que mudaste e o que viste ao correr de novo. Depois, experimenta-o também com `Hoje há JOGO e amanhã há jogo` e com `Não há aulas amanhã`.
 
-1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
-2. Numa frase, o que achas que causa o erro.
-3. Como confirmaste essa frase.
-4. A linha que mudaste, e como ficou. Muda o mínimo possível.
-5. O que aconteceu quando voltaste a correr.
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro).
 
-Quando o script mostrar o resultado certo, experimenta-o também com `Hoje há JOGO e amanhã há jogo` e com `Não há aulas amanhã`.
+<details>
+<summary>Pista</summary>
 
-## Apoio
+Depois de corrigires um erro, volta a correr e compara o ecrã com o esperado.
 
-- Exercício 1: na linha `e)`, lembra-te do que um método de um texto faz ao texto. Nas linhas `h)`, `i)` e `k)`, a consola mostra a lista inteira; pensa em como ela fica depois de cada linha que a muda. A linha `j)` mostra um valor: qual?
-- Exercício 2: conta os índices de `"07:45"`, carácter a carácter, como na tabela da fase 1 do laboratório, antes de escolheres as fatias. Cada fatia é um texto: pensa no que é preciso antes de fazer contas com ela.
-- Exercício 3: há um método que parte o nome numa lista de palavras. Experimenta-o na consola com os nomes da tabela, para veres a lista que ele dá, antes de escolheres o que tiras dela.
-- Exercício 4: o guia tem um método que diz se um texto tem só algarismos. Para os quatro iguais, servem o `for` que percorre um texto carácter a carácter e uma bandeira, como as do tema 05.
-- Exercício 5: é o ciclo da sentinela, com o texto vazio no papel do -1 do laboratório do tema 04. Faz primeiro a versão que funciona com os dois primeiros casos, e só depois trata o caso sem nenhuma pontuação.
-- Exercício 6: para cada pedido, pergunta-te o que sabes: o valor que entra ou sai, ou a posição. A tabela das operações das listas, no fim de "Seguir o estado da lista", no guia, ajuda a escolher o método.
-- Exercício 7: o Python só mostra o erro seguinte depois de corrigires o anterior. A linha que a mensagem aponta pode ter a causa ou não. Um dos erros não dá mensagem nenhuma: só o encontras comparando o ecrã com o esperado.
+</details>
 
-## Desafio opcional
+## Desafios
 
-Uma palavra é um palíndromo quando se lê da mesma maneira nos dois sentidos, do princípio para o fim e do fim para o princípio. São exemplos "radar" e "ana". Escreve o script `palindromo.py`, que lê uma palavra e diz se é um palíndromo, sem ligar às maiúsculas. Testa com `Radar`, `ana`, `Tetris`, `abba` e `a`.
+### Desafio 1: O palíndromo
 
-Há uma forma de o fazer com os índices negativos. Compara o primeiro carácter com o último, o segundo com o penúltimo, e assim por diante.
+Uma palavra é um palíndromo quando se lê da mesma maneira nos dois sentidos, como "radar" e "ana". Escreve o script `palindromo.py`, que lê uma palavra e diz se é um palíndromo, sem ligar às maiúsculas. Testa com `Radar`, `ana`, `Tetris`, `abba` e `a`.
 
-## Para ires mais longe
+Rever: [Um texto é uma sequência de caracteres](../07-textos-e-listas-que-mudam.md#um-texto-é-uma-sequência-de-caracteres).
 
-### Mais longe 1: As iniciais
+### Desafio 2: As iniciais
 
 Escreve o script `iniciais.py`, que lê um nome completo e mostra as iniciais, em maiúsculas, como `Iniciais: ASM` para `ana sofia martins`. Testa também com um nome de uma só palavra.
 
-### Mais longe 2: A palavra mais comprida
+### Desafio 3: A palavra mais comprida
 
-Escreve o script `palavra_comprida.py`, que lê uma frase e diz qual é a palavra mais comprida e quantas letras tem. Se houver duas com o mesmo tamanho, mostra a primeira. Se a frase não tiver palavras, por exemplo só com espaços, diz-o. Testa com `O clube de videojogos abre amanhã`, com `Ana viu Rui`, onde as três palavras têm o mesmo tamanho, e com uma frase só de espaços.
+Escreve o script `palavra_comprida.py`, que lê uma frase e diz qual é a palavra mais comprida e quantas letras tem. Se houver duas com o mesmo tamanho, mostra a primeira. Se a frase não tiver palavras, diz-o. Testa com `O clube de videojogos abre amanhã`, com `Ana viu Rui` e com uma frase só de espaços.
 
-### Mais longe 3: A frase vazia
+<details>
+<summary>Pista</summary>
+
+Guarda numa variável a palavra mais comprida vista até agora.
+
+</details>
+
+### Desafio 4: A frase vazia
 
 Corre o teu `palavra_do_dia.py` corrigido e carrega logo em Enter, sem escrever nenhuma frase. O que acontece, e porquê? Muda o script para que, com uma frase vazia, escreva só `Não escreveste nenhuma frase.`, e confirma que os três casos do exercício 7 continuam certos.
 
 ## Critérios de conclusão
 
-- Correste as linhas do exercício 1 na consola, e percebes cada resultado, também os que não previste.
-- Os scripts `despertador.py`, `utilizador.py`, `pin.py` e `dardos.py` correm e dão o resultado certo em todos os casos do seu exercício.
+- Previste e confirmaste na consola as linhas do exercício 1.
+- Os scripts `despertador.py`, `utilizador.py`, `pin.py` e `dardos.py` dão o resultado certo em todos os casos do seu exercício.
 - O `tarefas.py` usa um método diferente em cada pedido e mostra as tarefas que faltam, numeradas.
-- O `palavra_do_dia.py` dá os resultados certos nos três casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
-
-## Autoavaliação
-
-1. Que operação dos textos ou das listas ainda te faz hesitar na hora de prever o resultado? Porquê?
-2. No exercício 7, qual dos três erros foi o mais difícil de encontrar, e porquê?
-3. Já consegues dizer, antes de correr, se um método muda o valor ou devolve um valor novo?
+- O `palavra_do_dia.py` dá os resultados certos com as três frases, e o comentário do fim explica cada erro.
 
 ![Rodapé](../../imagens/rodape.png)

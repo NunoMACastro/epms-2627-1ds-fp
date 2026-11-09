@@ -2,33 +2,24 @@
 
 # Fundamentos de Programação · 10.º DS
 
-Materiais de Fundamentos de Programação do 10.º ano do Curso Profissional de Técnico/a de Desenvolvimento de Software, em 2026/2027. Podes estudar estes materiais antes de a matéria ser dada na aula.
+Materiais de Fundamentos de Programação do 10.º ano do curso Técnico/a de Desenvolvimento de Software. Podes lê-los antes de serem dados na aula.
 
 ## Por onde começar
 
-Começa pelo guia [Do enunciado ao problema delimitado](01-algoritmos/01-do-enunciado-ao-problema.md), o primeiro da área de algoritmos. Cada tema tem um guia e uma ficha de exercícios, e alguns têm também um laboratório:
+Abre a área [Algoritmos](01-algoritmos/README.md), com os temas pela ordem de estudo. Cada tema tem estes documentos:
 
-- o guia, para ler e estudar;
-- o laboratório, quando o tema o tem, para seguir passo a passo no computador, quando o professor o indicar, sem precisares de abrir o guia;
-- a ficha de exercícios, para praticares sozinho.
+- o guia, com a matéria por escrito, para estudares;
+- o laboratório, para fazeres no computador, passo a passo;
+- a ficha de exercícios, para treinares sozinho;
+- o projeto guiado, para aplicares o processo num problema maior, com cada vez mais autonomia.
 
-Em cada área, os guias estão na pasta da área. Os laboratórios estão na pasta `laboratorios`, as fichas na pasta `exercicios` e os projetos guiados na pasta `projetos-guiados`. Cada uma destas pastas tem um índice que explica o que é esse tipo de documento. Se tinhas guardado a ligação para um laboratório, uma ficha ou um projeto guiado, procura o documento nessas pastas.
-
-O [índice da área de algoritmos](01-algoritmos/README.md) diz que documentos tem cada tema e quais são opcionais.
-
-No fim da área de algoritmos há também dois projetos guiados, que fazes com ajuda, passo a passo, e a avaliação prática, individual.
+Em cada área, os guias estão na pasta da área. Os laboratórios estão na pasta `laboratorios`, as fichas na pasta `exercicios` e os projetos guiados na pasta `projetos-guiados`. Cada uma destas pastas tem um índice que explica o que é esse tipo de documento.
 
 ## As áreas
 
 | Área | Módulo |
 | --- | --- |
-| [Algoritmos](01-algoritmos/README.md) | Desenvolver algoritmos |
-| [Python](02-python/README.md) | Criar aplicações em linguagem de programação Python |
-
-## Como estudar
-
-Lê o guia antes de fazeres os exercícios: primeiro a explicação, depois o exemplo guiado. Antes de seguires um algoritmo, tenta prever o resultado. É aí que percebes se a ideia ficou entendida. As resoluções dos exercícios não estão aqui, porque se trabalham na aula.
-
-Podes ler tudo aqui no GitHub, sem instalar nada. Se encontrares um erro num material, avisa o professor.
+| [Algoritmos](01-algoritmos/README.md) | UC00245, Desenvolver algoritmos |
+| [Python](02-python/README.md) | UC00618, Criar aplicações em linguagem de programação Python |
 
 ![Rodapé](imagens/rodape.png)

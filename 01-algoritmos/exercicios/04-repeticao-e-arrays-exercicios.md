@@ -2,41 +2,7 @@
 
 # Ficha de exercícios: Repetição e arrays
 
-Ficha do tema Repetição e arrays, do módulo Desenvolver algoritmos. Treinas o que aprendeste no guia, uma ideia em cada exercício. Contas as voltas de um ciclo e usas os índices de um array. Contas e somas ao percorrer um array, e calculas uma média sem dividir por zero. Lês também valores até uma sentinela, procuras um valor com `Parar` e encontras o erro de um ciclo. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../04-repeticao-e-arrays.md). Antes de começar, deves conseguir explicar:
-
-- as três peças de um ciclo;
-- porque é que os índices começam em 0;
-- a diferença entre um contador e um acumulador;
-- porque é que a sentinela se lê antes do ciclo e no fim do corpo.
-
-Se alguma destas ideias não estiver clara, volta à secção do guia que a explica. São as secções "As três peças de um ciclo", "O índice", "Contadores e acumuladores" e "A sentinela: ler até aparecer o valor que diz "acabou"". Para o exercício 5 precisas também do `div` e do `resto`, do [guia 02](../02-estado-sequencia-representacoes.md), secção "Operadores aritméticos".
-
-## Como trabalhar
-
-Resolve os exercícios pela ordem. Cada um treina uma ideia do guia:
-
-| Exercício | O que treina |
-| --- | --- |
-| 1 | Contar as voltas de um ciclo, com a tabela de iterações |
-| 2 | Usar os índices de um array |
-| 3 | Contar os valores de um array que cumprem uma regra |
-| 4 | Contar e somar no mesmo ciclo, e calcular uma média sem dividir por zero |
-| 5 | Ler valores até uma sentinela |
-| 6 | Procurar um valor num array, com `Parar` e uma bandeira |
-| 7 | Encontrar e corrigir o erro de um ciclo |
-| Desafio opcional | Percorrer uma tabela com dois `Para` |
-
-Os exercícios 1 a 7 são obrigatórios. Depois do desafio, a secção "Para ires mais longe" tem mais um exercício de encontrar o erro, também opcional. O desafio e essa secção são para quem terminar e quiser mais prática, ou para estudares em casa, e não contam para concluíres a ficha.
-
-Escreve os algoritmos na forma que usamos nas aulas, com a indentação a mostrar o que está dentro de cada ciclo. Um array escreve-se como uma lista de Python, sem tipo à frente. Se souberes a lógica e não te lembrares da forma, escreve frases claras, que também valem. Têm de dizer o que se repete, até quando, e o que muda de uma volta para a seguinte.
-
-Nas tabelas de iterações, segue as regras do guia. Faz uma linha por cada teste da condição, com a fotografia das variáveis nesse momento, e continua até ao teste que dá falso. Num `Para cada`, faz uma linha por volta, com o elemento e as variáveis no fim da volta, como no guia. No exercício 1 a), a tabela já vem começada. Na alínea b), recebes só as colunas, e fazes a tabela toda. Na alínea c), escolhes tu como seguir o ciclo. No exercício 3, a tabela de um `Para cada` vem com as colunas. Nos exercícios seguintes, escolhes tu outra vez.
-
-Precisas de papel, de preferência quadriculado, e de lápis. Entregas as respostas em papel ou num ficheiro de texto, com as tabelas de iterações.
+Contas as voltas de um ciclo, usas índices, contas e somas ao percorrer um array, e calculas uma média, mesmo quando não há valores. Lês valores até uma sentinela, procuras um valor com `Parar` e encontras o erro de um ciclo. Os exercícios 1 a 7 são obrigatórios. Precisas de papel e lápis para as tabelas de iterações, e entregas em papel ou num ficheiro de texto. Os algoritmos podem escrever-se em frases claras, que digam o que se repete e até quando. Para rever: o [guia do tema](../04-repeticao-e-arrays.md).
 
 ## Exercício 1: Quantas voltas?
 
@@ -66,12 +32,21 @@ Para i de 1 até 4
 | Teste | i | Condição | Durante a iteração |
 | --- | ---: | --- | --- |
 
-c) Escolhe tu como seguir este ciclo.
+c) Segue este ciclo sem tabela já feita, como preferires.
 
 ```text
 Para i = 0, i < 3, i++
     Escreve: i
 ```
+
+Rever: [Enquanto: repetir enquanto a condição for verdadeira](../04-repeticao-e-arrays.md#enquanto-repetir-enquanto-a-condição-for-verdadeira) e [Para: o ciclo contado](../04-repeticao-e-arrays.md#para-o-ciclo-contado).
+
+<details>
+<summary>Pista</summary>
+
+Na alínea b), escreve, na coluna da condição, a comparação que o "até" quer dizer.
+
+</details>
 
 ## Exercício 2: Os índices de um array
 
@@ -91,6 +66,15 @@ d) O que acontece com `Escreve: atrasos[5]`?
 
 e) Em que dia é que o autocarro não teve atraso, contando o primeiro dia como dia 1? E qual é o índice desse elemento no array?
 
+Rever: [O índice](../04-repeticao-e-arrays.md#o-índice) e [Percorrer um array com `Para`](../04-repeticao-e-arrays.md#percorrer-um-array-com-para).
+
+<details>
+<summary>Pista</summary>
+
+Escreve os índices por baixo dos elementos. Na alínea e), lembra-te de como o guia passa do índice para o número do jogo.
+
+</details>
+
 ## Exercício 3: Contar num intervalo
 
 As alturas, em centímetros, dos jogadores de uma equipa de voleibol estão neste array:
@@ -108,6 +92,15 @@ b) Diz quando é que o teu ciclo termina, e porquê.
 
 c) Sem mudar o algoritmo, diz o que ele mostra se o array for `[]` e se for `[170]`.
 
+Rever: [O contador](../04-repeticao-e-arrays.md#o-contador) e [Intervalos](../03-decisoes-e-validacao.md#intervalos).
+
+<details>
+<summary>Pista</summary>
+
+Antes de escreveres a condição, marca no array as alturas que devem ser contadas.
+
+</details>
+
 ## Exercício 4: A média de estudo
 
 Uma aluna registou num array os minutos que estudou em cada dia da semana. Nos dias em que não estudou, registou 0:
@@ -116,9 +109,18 @@ Uma aluna registou num array os minutos que estudou em cada dia da semana. Nos d
 minutosDeEstudo = [30, 45, 0, 60, 15]
 ```
 
-a) Escreve um algoritmo que mostre o total de minutos da semana e a média dos dias em que ela estudou. Os dias com 0 minutos não contam para a média. A aluna quer saber quanto tempo estuda, em média, num dia em que se senta a estudar. Não escrevas no algoritmo um 4 fixo para os dias, porque o algoritmo conta-os dentro do ciclo. Antes de seguires o teu algoritmo, calcula à mão o total e a média.
+a) Escreve um algoritmo que mostre o total de minutos da semana e a média dos dias em que ela estudou. Os dias com 0 minutos não contam para a média. Não escrevas no algoritmo um número fixo para os dias, porque o algoritmo conta-os dentro do ciclo. Calcula à mão o total e a média, e depois segue o algoritmo para confirmares.
 
 b) O mesmo algoritmo tem de funcionar se a aluna não tiver estudado em nenhum dia, como em `[0, 0, 0, 0, 0]`. Tem de funcionar também se o array estiver vazio. Em nenhum dos dois casos pode fazer uma conta impossível. O que mostra em cada um?
+
+Rever: [A média só se calcula quando há valores](../04-repeticao-e-arrays.md#a-média-só-se-calcula-quando-há-valores).
+
+<details>
+<summary>Pista</summary>
+
+Que dias deve contar o contador? Qual das formas de percorrer funciona com um array vazio?
+
+</details>
 
 ## Exercício 5: A duração da playlist
 
@@ -129,6 +131,15 @@ a) Escreve um algoritmo que mostre quantas músicas tem a playlist e quanto dura
 b) As músicas duram 200, 185 e 240 segundos. Antes de fazeres a tabela, calcula à mão a duração total, primeiro em segundos e depois em minutos e segundos. Depois faz a tabela de iterações para essas três durações, seguidas do 0, e confirma o que calculaste.
 
 c) O que mostra o algoritmo se o Rui escrever logo 0?
+
+Rever: [A sentinela: ler até aparecer o valor que diz "acabou"](../04-repeticao-e-arrays.md#a-sentinela-ler-até-aparecer-o-valor-que-diz-acabou) e [Operadores aritméticos](../02-estado-sequencia-representacoes.md#operadores-aritméticos).
+
+<details>
+<summary>Pista</summary>
+
+Que contas do guia 02 separam os minutos completos dos segundos que sobram? Em que momento do algoritmo já tens o total todo?
+
+</details>
 
 ## Exercício 6: Procurar um cacifo
 
@@ -142,11 +153,20 @@ a) Escreve um algoritmo que lê um número de cacifo e o procura no array. Se o 
 
 b) Antes de seguires o algoritmo, olha para o array e prevê o que deve acontecer com os cacifos 23, 18 e 40. Para cada um, prevê a posição, ou se está livre, e quantas voltas dá o ciclo. Depois segue o teu algoritmo só com o 18 e com o 40, e confirma as voltas e o que aparece no ecrã.
 
+Rever: [Parar e Continuar](../04-repeticao-e-arrays.md#parar-e-continuar).
+
+<details>
+<summary>Pista</summary>
+
+Com qual das duas formas de percorrer um array sabes a posição de cada elemento? Depois do ciclo, o que te diz se o cacifo foi encontrado?
+
+</details>
+
 ## Exercício 7: Encontrar o erro
 
 Este algoritmo tem um erro. Para o encontrares e corrigires, segue estes passos:
 
-1. Calcula à mão o que o algoritmo devia mostrar, a partir do enunciado. Depois faz a tabela de iterações e escreve o que ele mostra.
+1. Calcula à mão o que o algoritmo devia mostrar, a partir do enunciado e dos dados. Depois faz a tabela de iterações e escreve o que ele mostra.
 2. Escreve numa frase o que achas que causa a diferença.
 3. Aponta na tabela a volta ou o teste que confirma a tua frase.
 4. Corrige a linha que causa o erro, mudando o mínimo possível.
@@ -163,20 +183,18 @@ Para i = 0, i < NUMERO_DE_DIAS, i++
 Escreve: "Chuva total: ", total, " mm"
 ```
 
-## Apoio
+Rever: [A tabela de iterações](../04-repeticao-e-arrays.md#a-tabela-de-iterações).
 
-Se estiveres encravado, usa estas pistas pela ordem em que aparecem, e passa à seguinte só se a anterior não tiver chegado.
+<details>
+<summary>Pista</summary>
 
-- Exercício 1. Na alínea a), não pares quando o ecrã mostra o último número: continua até o teste dar falso. Na alínea b), escreve por extenso, na coluna da condição, o que o "até" quer dizer.
-- Exercício 2. Escreve os índices por baixo dos elementos, a começar em 0. O último índice é o que está por baixo do último elemento. Na alínea e), lembra-te de como o guia passa do índice para o número do jogo.
-- Exercício 3. É o padrão contador, com o aumento dentro de um `Se`. Antes de escreveres a condição, marca no array as alturas que devem ser contadas. Para a c), segue o teu ciclo com o array vazio: quantas voltas dá, e que índices usa?
-- Exercício 4. Precisas de um contador e de um acumulador no mesmo ciclo. A média calcula-se depois do ciclo, dentro de um `Se`. Que dias deve o contador contar?
-- Exercício 5. É o padrão sentinela, com a leitura antes do ciclo e outra no fim do corpo. Que contas do guia 02 separam os minutos completos dos segundos que sobram? Em que momento do algoritmo já tens o total todo?
-- Exercício 6. Precisas de dizer a posição do cacifo. Com qual das duas formas de percorrer um array sabes a posição de cada elemento? A bandeira começa em `false`, e depois do ciclo é ela que diz se o cacifo foi encontrado.
-- Exercício 7. Faz a tabela de iterações com uma coluna para `i` e outra para `total`. Em cada volta, compara o que se somou com o que somaste à mão.
-- Mais longe 1. Faz a tabela de iterações, com uma linha por teste. A variável da condição aproxima-se do valor que faz o ciclo terminar?
+Faz uma coluna para cada variável. No fim de cada volta, compara `total` com a soma que fizeste à mão até esse dia.
 
-## Desafio opcional
+</details>
+
+## Desafios
+
+### Desafio 1: Os pontos de duas equipas
 
 Os pontos de duas equipas em três jogos de um torneio estão guardados numa tabela, uma linha por equipa:
 
@@ -188,13 +206,11 @@ a) Quanto vale `pontos[1][2]`? E `pontos[0][0]`?
 
 b) Escreve um algoritmo com dois `Para`, um dentro do outro, que mostre o total de pontos de cada equipa. O ecrã deve mostrar "Equipa 1: 4 pontos" e "Equipa 2: 5 pontos".
 
-c) No guia viste que um acumulador inicializado dentro do ciclo é um erro. No teu algoritmo, onde é que o total de cada equipa tem de começar em 0? Explica porque é que esse sítio está certo, com a regra do guia.
+c) No guia viste que um acumulador inicializado dentro do ciclo é um erro. No teu algoritmo, onde é que o total de cada equipa tem de começar em 0? Explica a que ciclo se aplica a regra do guia.
 
-## Para ires mais longe
+Rever: [Um array de arrays lê-se como uma tabela](../04-repeticao-e-arrays.md#um-array-de-arrays-lê-se-como-uma-tabela).
 
-Esta secção é opcional e fica fora da parte obrigatória. Não precisas de fazer nada daqui para concluíres a ficha, e os critérios de conclusão não a contam.
-
-### Mais longe 1: A contagem que não acaba
+### Desafio 2: A contagem do lançamento
 
 Este algoritmo devia fazer a contagem decrescente de um lançamento, de 5 até 1. Logo a seguir ao 3, devia escrever "Meio caminho!", e no fim devia escrever "Partida!". Tem um erro. Segue os cinco passos do exercício 7 para o encontrar e corrigir.
 
@@ -208,24 +224,24 @@ Enquanto contagem > 0
 Escreve: "Partida!"
 ```
 
+Rever: [A tabela de iterações](../04-repeticao-e-arrays.md#a-tabela-de-iterações).
+
+<details>
+<summary>Pista</summary>
+
+Compara cada linha com a anterior. O que mudou? Podes parar quando já souberes o que acontece a seguir.
+
+</details>
+
 ## Critérios de conclusão
 
-- [ ] No exercício 1, segui cada ciclo até ao teste que dá falso. Usei a tabela nas alíneas a) e b), e na c) o instrumento que escolhi. Sei o valor da variável nesse teste.
-- [ ] Usei índices a partir de 0, sei qual é o último índice válido de um array e sei explicar como se chega a ele.
-- [ ] No exercício 3, a tabela do meu algoritmo dá o resultado certo para o array do enunciado. Sei o que mostra com `[]` e com `[170]`.
-- [ ] Inicializei os contadores e os acumuladores antes do ciclo.
-- [ ] No exercício 4, o algoritmo dá o total e a média que calculei à mão. Os dois casos da alínea b) dão uma mensagem com sentido, sem nenhuma conta impossível.
-- [ ] Não dividi por um contador que pode ficar a zero.
-- [ ] No exercício 5, a tabela e o ecrã dão o número de músicas e a duração que calculei à mão, em minutos e segundos.
-- [ ] Li a sentinela antes do ciclo e no fim do corpo, sem a tratar como um dado.
-- [ ] No exercício 6, previ as posições, as voltas e as mensagens dos três cacifos, e o meu algoritmo confirma as do 18 e do 40.
-- [ ] Usei `Parar` numa pesquisa, com uma bandeira para saber se o valor foi encontrado.
-- [ ] Testei os meus ciclos com zero voltas, uma volta e várias voltas.
-- [ ] No exercício 7, escrevi numa frase o que achava que causava o erro e apontei a volta que o confirma. A versão corrigida mostra o que calculei à mão, e escrevi o que mudou.
-
-## Autoavaliação
-
-1. O que já consegues fazer sozinho?
-2. Que dificuldade tiveste, e o que fizeste para a resolver?
+- No exercício 1, seguiste cada ciclo até ao teste que dá falso, e disseste as voltas, o ecrã e o valor da variável nesse teste.
+- No exercício 2, explicaste como se chega ao último índice válido, disseste o que acontece com `atrasos[5]` e passaste do índice para o dia.
+- No exercício 3, a tabela dá o resultado certo, e disseste quando o ciclo termina e o que ele mostra com `[]` e com `[170]`.
+- No exercício 4, o algoritmo dá o total e a média que calculaste à mão, só com os dias em que ela estudou. Os dois casos da alínea b) não fazem nenhuma conta impossível.
+- No exercício 5, a tabela e o ecrã dão o que calculaste à mão, sem tratar a sentinela como um dado. Disseste o que aparece com 0 logo de início.
+- No exercício 6, previste os três cacifos, e o algoritmo confirma o 18 e o 40, com `Parar` e uma bandeira.
+- No exercício 7, seguiste os cinco passos, e a versão corrigida mostra o que calculaste à mão.
+- Inicializaste os contadores e os acumuladores antes do ciclo.
 
 ![Rodapé](../../imagens/rodape.png)

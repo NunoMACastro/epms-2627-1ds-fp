@@ -2,26 +2,7 @@
 
 # Ficha de exercícios: Seleção
 
-Ficha do tema Seleção, do módulo Criar aplicações em linguagem de programação Python. Praticas as comparações, as decisões com `if`, `elif` e `else`, o `and` e o `or`, o `match`, e a escolha dos casos de fronteira. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../03-selecao.md) e o [laboratório](../laboratorios/03-selecao-laboratorio.md).
-
-## Como trabalhar
-
-Os exercícios 1 a 6 são obrigatórios e fazem-se por esta ordem, porque cada um usa o que os anteriores treinaram. Cada um precisa das secções do guia que estão entre parênteses:
-
-1. Exercício 1 ("As comparações dão `True` ou `False`" e "Juntar condições com `and`, `or` e `not`").
-2. Exercício 2 ("Dois caminhos: `if` e `else`").
-3. Exercício 3 ("Mais de dois caminhos: a cadeia com `elif`" e "Validar um valor: dentro e fora de um intervalo").
-4. Exercício 4 ("As comparações dão `True` ou `False`" e "Juntar condições com `and`, `or` e `not`").
-5. Exercício 5 ("Escolher entre valores certos com `match`").
-6. Exercício 6 ("Erros frequentes" e a rotina da depuração, do guia 01).
-
-O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
-
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Quando um exercício pede uma resposta escrita, como os casos de teste que acrescentaste, escreve-a num comentário no script, com `#`. Antes de correres cada caso, pensa no resultado que esperas, tirado do enunciado, e compara-o com o que aparece.
+Praticas as comparações, as decisões com `if`, `elif` e `else`, o `and` e o `or`, o `match` e a escolha dos casos de fronteira. Os exercícios 1 a 6 são obrigatórios. Os scripts ficam na pasta `fp-python`, com um comentário inicial a dizer o que fazem. Calcula de cabeça o resultado de cada caso antes de o correres. Para rever: o [guia do tema](../03-selecao.md) e o [laboratório](../laboratorios/03-selecao-laboratorio.md).
 
 ## Exercício 1: Prever na consola
 
@@ -49,17 +30,37 @@ Para cada linha da tabela, prevê o resultado, `True` ou `False`. Depois escreve
 
 Em cada linha em que te enganaste, descobre o que o Python fez e porquê.
 
+Rever: [As comparações dão `True` ou `False`](../03-selecao.md#as-comparações-dão-true-ou-false) e [Juntar condições com `and`, `or` e `not`](../03-selecao.md#juntar-condições-com-and-or-e-not).
+
+<details>
+<summary>Pista</summary>
+
+Com 150 moedas, pensa em qual dos dois sinais, o `>=` ou o `>`, inclui o próprio 150. No `and`, basta uma parte falsa para o resultado ser `False`; no `or`, basta uma verdadeira para ser `True`.
+
+</details>
+
 ## Exercício 2: O tempo de ecrã
 
-O telemóvel deixa marcar um limite diário para uma aplicação. O limite desta é de 120 minutos. Escreve o script `tempo_ecra.py`, que pergunta quantos minutos passaste hoje na aplicação, um número inteiro. Se chegaste ao limite, ou já o passaste, escreve "Chegaste ao limite de hoje. Faz uma pausa.". Se não, escreve quantos minutos ainda podes usar, numa linha como "Minutos que ainda podes usar hoje: 45". O script começa com um comentário que diz o que faz, e guarda o limite numa constante.
+O telemóvel deixa marcar um limite diário para uma aplicação. O limite desta é de 120 minutos. Escreve o script `tempo_ecra.py`, que pergunta quantos minutos passaste hoje na aplicação, um número inteiro. Se chegaste ao limite, ou já o passaste, escreve "Chegaste ao limite de hoje. Faz uma pausa.". Se não, escreve quantos minutos ainda podes usar, numa linha como "Minutos que ainda podes usar hoje: 45". Guarda o limite numa constante.
 
-Experimenta-o com 0, 119, 120 e 150 minutos. Estes casos ainda não chegam para a fronteira, que se testa com o valor de baixo, o da fronteira e o de cima. Acrescenta os que faltam, experimenta-os também e escreve-os num comentário no início do script.
+Experimenta-o com 0, 119, 120 e 150 minutos. Estes casos ainda não chegam para a fronteira, que se testa com o valor de baixo, o da fronteira e o de cima. Acrescenta o que falta, experimenta-o também e escreve-o num comentário no início do script.
+
+Rever: [Dois caminhos, com `if` e `else`](../03-selecao.md#dois-caminhos-com-if-e-else) e [Os casos de fronteira escolhem-se antes de correr](../03-selecao.md#os-casos-de-fronteira-escolhem-se-antes-de-correr).
 
 ## Exercício 3: O escalão do jogador
 
 Num jogo online, o escalão de um jogador depende dos pontos de experiência que tem, um número inteiro. Com menos de 1000 pontos, o escalão é Bronze. De 1000 a 2499 pontos, é Prata. Com 2500 pontos ou mais, é Ouro. Um número negativo de pontos é inválido, e o programa escreve "Pontos inválidos" em vez de um escalão. Escreve o script `escalao.py`, que lê os pontos e escreve o escalão.
 
-Experimenta-o com -1, 0, 999, 1000, 2499 e 2500 pontos. Estes casos ainda não chegam para as fronteiras: cada fronteira testa-se com o valor de baixo, o da fronteira e o de cima. Acrescenta os que faltam e experimenta-os também. Junto de cada ramo da cadeia, escreve num comentário que casos de teste passam por ele.
+Experimenta-o com -1, 0, 999, 1000, 2499 e 2500 pontos. Estes casos ainda não chegam para as fronteiras. Acrescenta os que faltam e experimenta-os também. Junto de cada ramo da cadeia, escreve num comentário que casos de teste passam por ele.
+
+Rever: [Mais de dois caminhos, com a cadeia `elif`](../03-selecao.md#mais-de-dois-caminhos-com-a-cadeia-elif) e [Validar os valores antes de os usar](../03-selecao.md#validar-os-valores-antes-de-os-usar).
+
+<details>
+<summary>Pista</summary>
+
+Desenha primeiro a reta dos pontos, com as regiões e as fronteiras, como no [guia 03 da algoritmia](../../01-algoritmos/03-decisoes-e-validacao.md#desenhar-a-reta-e-marcar-as-regiões). A ordem das condições na cadeia conta.
+
+</details>
 
 ## Exercício 4: O modo difícil
 
@@ -74,9 +75,16 @@ Experimenta-o com estes casos:
 | n | 29 |
 | s | 40 |
 
-A fronteira das estrelas ainda não tem todos os casos: testa-se com o valor de baixo, o da fronteira e o de cima. Acrescenta o caso que falta, experimenta-o também e escreve-o num comentário no início do script.
+A fronteira das estrelas ainda não tem todos os casos. Acrescenta o caso que falta, experimenta-o também e escreve-o num comentário no início do script.
 
-Opcional: experimenta o script com `S`, em maiúscula, e 10 estrelas. Num comentário, explica numa frase o que aconteceu e porquê.
+Rever: [As comparações dão `True` ou `False`](../03-selecao.md#as-comparações-dão-true-ou-false) e [Juntar condições com `and`, `or` e `not`](../03-selecao.md#juntar-condições-com-and-or-e-not).
+
+<details>
+<summary>Pista</summary>
+
+Pensa no tipo de valor de cada resposta e em qual das leituras precisa de conversão. Depois, lê outra vez a frase do enunciado que diz quando o modo fica desbloqueado.
+
+</details>
 
 ## Exercício 5: O robô aspirador
 
@@ -84,9 +92,16 @@ Um robô aspirador recebe um comando de uma letra. O `f` manda andar para a fren
 
 Os casos de teste escolhes tu: cada ramo do `match` tem de se executar pelo menos uma vez, também o do `case _`. Experimenta o script com eles e escreve-os num comentário no início do script.
 
-Opcional: experimenta o script com `F`, em maiúscula. Num comentário, explica o que aconteceu.
+Este exercício precisa do Python 3.10 ou mais recente, por causa do `match`.
 
-Este exercício precisa do Python 3.10 ou mais recente, por causa do `match`. Confirma a tua versão com `python --version`, ou com o teu comando.
+Rever: [Escolher entre valores certos com `match`](../03-selecao.md#escolher-entre-valores-certos-com-match).
+
+<details>
+<summary>Pista</summary>
+
+Se todos os comandos caírem no `case _`, ou se o Python recusar um `case`, compara o teu com os do `outra_vez.py` do guia.
+
+</details>
 
 ## Exercício 6: Encontrar o erro
 
@@ -118,33 +133,39 @@ Com estes quatro casos, o script certo mostra isto:
 | 7 | 50 | Compraste a poção. Ficas com 0 moedas. |
 | 6 | 20 | Não tens moedas que cheguem. |
 
-Copia o script para o ficheiro `pocao.py` e corre-o com os quatro casos. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve, num comentário no fim do script:
+Copia o script para o ficheiro `pocao.py` e corre-o com os quatro casos, até dar estes resultados, mudando o mínimo possível. O Python para no primeiro erro que encontra. A rotina de cada erro fica num comentário no fim do script. Diz o caso que falhou (se o programa nem arranca, são todos), o que devia aparecer e o que apareceu, e o tipo de erro. Diz também a causa que suspeitas, como a confirmaste, a linha que mudaste e o que se viu ao correres de novo os quatro casos.
 
-1. O caso que falhou, o que devia aparecer e o que apareceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
-2. Numa frase, o que achas que causa o erro.
-3. Como confirmaste essa frase.
-4. A linha que mudaste, e como estava antes. Muda o mínimo possível.
-5. O que aconteceu quando voltaste a correr os quatro casos, também os que já passavam.
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro) e [A fronteira trocada](../03-selecao.md#a-fronteira-trocada), um exemplo da rotina escrita.
 
-## Apoio
+<details>
+<summary>Pista</summary>
 
-- Exercício 1: com 150 moedas, pensa em qual dos dois sinais, o `>=` ou o `>`, inclui o próprio 150. No `and`, basta uma parte falsa para o resultado ser `False`; no `or`, basta uma verdadeira para ser `True`.
-- Exercício 2: antes do código, decide o que deve aparecer em cada caso de teste. O 120 é o caso que mais te obriga a pensar.
-- Exercício 3: desenha primeiro a reta dos pontos, com as regiões e as fronteiras, como no guia 03 da algoritmia. Se te ajudar, escreve também o algoritmo em pseudocódigo, e depois traduz. A ordem das condições na cadeia conta.
-- Exercício 4: a resposta à primeira pergunta é um texto, e as estrelas são um número. Pensa em qual das duas leituras precisa de conversão. Depois, lê outra vez a frase do enunciado que diz quando o modo fica desbloqueado.
-- Exercício 5: o comando é uma letra, e não um número, como a resposta do `outra_vez.py` do guia.
-- Exercício 6: o Python só mostra o erro seguinte depois de corrigires o anterior. A mensagem de um erro aponta para onde o Python deu pelo problema, e a causa pode estar noutra linha. Uma mensagem pode pedir os dois pontos numa linha que já os tem: nesse caso, vale a pena olhar para onde aponta o `^`. Um dos erros não dá mensagem nenhuma: só o encontras se comparares o resultado com a tabela.
-- Desafio opcional: "divisível por 4" quer dizer que o resto da divisão por 4 é 0. Vê no guia 02 como se calcula o resto.
+A mensagem de um erro aponta para onde o Python deu pelo problema, e a causa pode estar noutra linha. Uma mensagem pode pedir os dois pontos numa linha que já os tem: nesse caso, olha para onde aponta o `^`. Um dos erros não dá mensagem nenhuma: só o encontras se comparares o resultado com a tabela.
 
-## Desafio opcional
+</details>
+
+## Desafios
+
+### Desafio 1: As maiúsculas
+
+Experimenta o `modo_dificil.py` com `S`, em maiúscula, e 10 estrelas, e o `robo.py` com `F`, em maiúscula. Num comentário em cada script, explica numa frase o que aconteceu e porquê.
+
+### Desafio 2: O ano bissexto
 
 O calendário tem um dia 29 de fevereiro nos anos bissextos. Um ano é bissexto quando é divisível por 4 e não é divisível por 100. Há uma exceção: os anos divisíveis por 400 também são bissextos. Por isso, o ano 2000 foi bissexto, e o 1900 não foi.
 
 Escreve o script `bissexto.py`, que lê um ano e diz se é bissexto. Escreve uma linha como "2024 é bissexto: fevereiro tem 29 dias." ou "2023 não é bissexto: fevereiro tem 28 dias.". Experimenta-o com os anos 2024, 2023, 1900 e 2000.
 
-## Para ires mais longe
+Rever: [Juntar condições com `and`, `or` e `not`](../03-selecao.md#juntar-condições-com-and-or-e-not).
 
-### Mais longe 1: Pedra, papel, tesoura
+<details>
+<summary>Pista</summary>
+
+"Divisível por 4" quer dizer que o resto da divisão por 4 é 0. Rever: [A divisão inteira e o resto](../02-dados-e-interacao.md#a-divisão-inteira-e-o-resto).
+
+</details>
+
+### Desafio 3: Pedra, papel, tesoura
 
 Dois jogadores escrevem, um de cada vez, `pedra`, `papel` ou `tesoura`, em minúsculas. A pedra ganha à tesoura, a tesoura ganha ao papel, e o papel ganha à pedra. Duas jogadas iguais dão empate. Escreve o script `pedra_papel_tesoura.py`, que lê as duas jogadas e escreve "Empate", "Ganha o jogador 1" ou "Ganha o jogador 2".
 
@@ -152,14 +173,8 @@ Experimenta-o com as nove combinações possíveis de jogadas. Podes supor que o
 
 ## Critérios de conclusão
 
-- No exercício 1, experimentaste as nove linhas na consola e sabes explicar o resultado de cada uma, também das que previste mal.
+- No exercício 1, experimentaste as nove linhas na consola.
 - Os scripts `tempo_ecra.py`, `escalao.py`, `modo_dificil.py` e `robo.py` correm e dão o resultado certo em todos os casos de teste. Os casos que acrescentaste ou escolheste estão num comentário em cada script.
-- O `pocao.py` dá os resultados certos nos quatro casos. O comentário do fim tem a rotina de cada erro, com o tipo.
-
-## Autoavaliação
-
-1. Que parte da seleção ainda te faz hesitar? Pode ser a escolha do sinal nas fronteiras, a ordem das condições numa cadeia, o `and` e o `or`, ou outra.
-2. No exercício 6, qual dos três erros foi o mais difícil de encontrar, e porquê?
-3. Antes de correres um script, já consegues dizer que casos de teste vais usar e porquê?
+- O `pocao.py` dá os resultados certos nos quatro casos, e o comentário do fim tem a rotina de cada erro.
 
 ![Rodapé](../../imagens/rodape.png)

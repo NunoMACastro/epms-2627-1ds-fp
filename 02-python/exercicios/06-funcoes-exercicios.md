@@ -2,25 +2,7 @@
 
 # Ficha de exercícios: Funções
 
-Ficha do tema Funções, do módulo Criar aplicações em linguagem de programação Python. Praticas a previsão do que uma chamada devolve e a escrita de funções documentadas e testadas sozinhas. Praticas também a procura de erros em funções e a leitura de uma função que não escreveste. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../06-funcoes.md) e o [laboratório](../laboratorios/06-funcoes-laboratorio.md).
-
-## Como trabalhar
-
-Os exercícios 1 a 5 são obrigatórios e fazem-se por esta ordem, porque cada um usa o que os anteriores treinaram. Cada um precisa das secções do guia que estão entre parênteses:
-
-1. Exercício 1 ("Chamar uma função: parâmetros e argumentos", "O `return` entrega o valor e termina a função" e "Uma chamada dentro de outra").
-2. Exercício 2 (até "A documentação de uma função", e "Testar cada função sozinha").
-3. Exercício 3 ("As funções que calculam devolvem, e a parte principal escreve").
-4. Exercício 4 ("Erros frequentes" e as secções com os erros de cada ideia).
-5. Exercício 5 (o guia todo).
-
-O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios. O exercício de "Para ires mais longe" precisa também do laboratório até à fase 5.
-
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Uma resposta escrita fica num comentário no script, com `#`, no início ou junto da linha a que diz respeito. Cada função que escreves leva documentação, e testa-se sozinha, com linhas de teste, antes de a parte principal a usar. O valor esperado de cada linha de teste tira-se do enunciado, antes de correres, e não do ecrã. Num script com parte principal, os testes que já batem certo ficam no ficheiro, desligados com `#`.
+Praticas a previsão do que uma chamada devolve e a escrita de funções documentadas e testadas sozinhas. Os exercícios 1 a 5 são obrigatórios. Os scripts ficam na pasta `fp-python`, e cada função que escreves leva documentação e linhas de teste, com o esperado calculado antes de correres. Quando os testes baterem certo, desliga-os com `#`. Para rever: o [guia do tema](../06-funcoes.md) e o [laboratório](../laboratorios/06-funcoes-laboratorio.md).
 
 ## Exercício 1: Prever o que as chamadas devolvem
 
@@ -48,7 +30,7 @@ def vida_restante(vida, dano_sofrido):
     return vida - dano_sofrido
 ```
 
-Sem correres, prevê o que devolve cada uma destas chamadas:
+Sem correres, prevê o que devolve cada uma destas chamadas e escreve as previsões num comentário no início do script `combate.py`:
 
 - `dano(30, 10)`
 - `dano(10, 30)`
@@ -57,23 +39,43 @@ Sem correres, prevê o que devolve cada uma destas chamadas:
 - `vida_restante(vida_restante(100, 20), 35)`
 - `vida_restante(100, dano(20, 35))`
 
-Confirma as tuas previsões no script `combate.py`, com as duas funções, um comentário no topo e um `print` para cada chamada. Em cada chamada em que te enganaste, explica num comentário, junto da linha dela, o que a função fez.
+Confirma as tuas previsões nesse script, com as duas funções e um `print` para cada chamada. Em cada chamada em que te enganaste, explica num comentário, junto da linha dela, o que a função fez.
+
+Rever: [Uma função pode chamar outra](../06-funcoes.md#uma-função-pode-chamar-outra) e [O `return` entrega o valor e termina a função](../06-funcoes.md#o-return-entrega-o-valor-e-termina-a-função).
+
+<details>
+<summary>Pista</summary>
+
+Numa chamada dentro de outra, calcula primeiro a de dentro e reescreve a linha com o valor dela.
+
+</details>
 
 ## Exercício 2: A barra de vida
 
 Num jogo, a vida de uma personagem vai de 0 a 100. A barra de vida pisca a vermelho quando a personagem tem, no máximo, 25 pontos de vida.
 
-No script `vida.py`, escreve a função `vida_critica(vida)`, com um comentário no topo e a documentação. A função recebe a vida e devolve `True` quando a barra deve piscar, e `False` quando não deve. Usa uma constante para o 25. Testa a função sozinha com valores à volta da fronteira, escolhidos por ti.
+No script `vida.py`, escreve a função `vida_critica(vida)`. Recebe a vida e devolve `True` quando a barra deve piscar, e `False` quando não deve. Usa uma constante para o 25. Testa a função sozinha com valores à volta da fronteira, escolhidos por ti.
 
 A parte principal pergunta a vida da personagem e escreve "A barra de vida pisca a vermelho" ou "A barra de vida está normal". Experimenta o programa com dois valores à tua escolha, um de cada lado da fronteira.
+
+Rever: [A documentação diz o que a função recebe e devolve](../06-funcoes.md#a-documentação-diz-o-que-a-função-recebe-e-devolve) e [Testar cada função sozinha](../06-funcoes.md#testar-cada-função-sozinha).
 
 ## Exercício 3: O preço do bilhete de cinema
 
 O cinema da tua cidade tem quatro preços, conforme a idade. Até aos 11 anos, o bilhete custa 4 euros. Dos 12 aos 17 anos, custa 6 euros. Dos 18 aos 64 anos, custa 8 euros. A partir dos 65 anos, custa 5 euros.
 
-No script `cinema.py`, escreve a função `preco_do_bilhete(idade)`, com a documentação. Recebe a idade e devolve o preço, em euros. Testa-a sozinha com estas nove idades, três à volta de cada fronteira: 10, 11, 12, 16, 17, 18, 63, 64 e 65.
+No script `cinema.py`, escreve a função `preco_do_bilhete(idade)`, que recebe a idade e devolve o preço, em euros. Usa constantes para as idades que separam os preços. Testa-a sozinha com três idades à volta de cada fronteira.
 
-A parte principal pergunta a idade e escreve uma linha como "O bilhete custa 6 euros.". A função não pergunta nada nem escreve nada: só recebe a idade e devolve o preço.
+A parte principal pergunta a idade e escreve uma linha como "O bilhete custa 6 euros.". A função não pergunta nada nem escreve nada.
+
+Rever: [O `return` entrega o valor e termina a função](../06-funcoes.md#o-return-entrega-o-valor-e-termina-a-função) e [As funções que calculam devolvem, e a parte principal escreve](../06-funcoes.md#as-funções-que-calculam-devolvem-e-a-parte-principal-escreve).
+
+<details>
+<summary>Pista</summary>
+
+Desenha primeiro a reta das idades, com as regiões e as fronteiras.
+
+</details>
 
 ## Exercício 4: Encontrar o erro
 
@@ -125,17 +127,18 @@ print("Total de moedas:", total_de_moedas(moedas_por_nivel))
 print("Níveis com estrela:", niveis_com_estrela(moedas_por_nivel))
 ```
 
-Com a lista `[35, 50, 80, 12, 64]`, o script devia mostrar `Total de moedas: 241` e `Níveis com estrela: 3`.
+Com a lista `[35, 50, 80, 12, 64]`, o script devia mostrar `Total de moedas: 241` e `Níveis com estrela: 3`. Copia-o para o ficheiro `moedas_erros.py`, corre-o e corrige-o, mudando o mínimo possível.
 
-Copia o script para o ficheiro `moedas_erros.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina e escreve-a num comentário no fim do script, com `#`:
+Para cada erro, escreve num comentário no fim do script o que aconteceu e o tipo de erro. Escreve também o que achas que o causa, como o confirmaste, a linha que mudaste e o que viste ao correr de novo. No fim, muda a linha da lista e testa também com `[50]` e com a lista vazia.
 
-1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
-2. Numa frase, o que achas que causa o erro.
-3. Como confirmaste essa frase.
-4. A linha que mudaste, e como ficou. Muda o mínimo possível.
-5. O que aconteceu quando voltaste a correr.
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro) e [Testar cada função sozinha](../06-funcoes.md#testar-cada-função-sozinha).
 
-Quando o script mostrar o resultado certo, testa-o também com a lista `[50]` e com a lista vazia, mudando a linha da lista.
+<details>
+<summary>Pista</summary>
+
+Depois de cada correção, corre outra vez e compara o resultado com o esperado.
+
+</details>
 
 ## Exercício 5: A função mistério
 
@@ -162,52 +165,46 @@ b) No início do script `misterio.py`, escreve num comentário a função em pse
 
 c) No mesmo script, copia a função com a documentação que lhe falta e com um nome que diga o que ela faz. Junta uma linha de teste para cada chamada da alínea a), com o valor que previste.
 
-## Apoio
+Rever: [Parar a pesquisa com `break`](../05-listas.md#parar-a-pesquisa-com-break) e [A documentação diz o que a função recebe e devolve](../06-funcoes.md#a-documentação-diz-o-que-a-função-recebe-e-devolve).
 
-- Exercício 1: uma chamada que está dentro de outra calcula-se primeiro, e a linha reescreve-se com o valor dela. Lê o corpo de `dano` linha a linha, e lembra-te do que o `return` faz quando se executa.
-- Exercício 2: antes de escreveres a condição, pensa no que quer dizer "no máximo 25", com um exemplo de cada lado. Para os testes, a secção "Testar cada função sozinha" diz quantos valores se escolhem à volta de uma fronteira.
-- Exercício 3: uma cadeia de `if`, `elif` e `else`, com um `return` em cada caminho. Pensa primeiro na reta das idades, com as regiões e as fronteiras.
-- Exercício 4: o Python só mostra o erro seguinte depois de corrigires o anterior. Num traceback com várias linhas `File`, a de baixo diz onde o Python parou, e as de cima dizem quem chamou quem. Um dos erros não dá mensagem nenhuma: só o encontras se comparares o resultado com o esperado, ou se testares a função sozinha.
-- Exercício 5: faz a tabela de iterações da primeira chamada. Repara no que o `break` faz na volta em que a condição é falsa.
+<details>
+<summary>Pista</summary>
 
-## Desafio opcional
+Faz a tabela de iterações da primeira chamada.
 
-Traduz para Python o teu algoritmo do [projeto 1, Duelo de dados](../../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md), que está no teu portefólio, no script `duelo.py`. Escreve uma função que recebe os números escolhidos pelos dois jogadores numa ronda e devolve quem ganhou essa ronda. Escreve outra que recebe as rondas ganhas de cada jogador e devolve quem ganhou o duelo. Testa as duas sozinhas antes de escreveres a parte principal. A parte principal lê os números e escreve as mensagens das rondas e do fim. Para o caso em que ninguém ganha, usa a decisão que a turma tomou. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo.
+</details>
 
-## Para ires mais longe
+## Desafios
 
-### Mais longe: O apuramento do corta-mato
+### Desafio 1: O apuramento do corta-mato
 
-No corta-mato da escola, há uma prova de apuramento. Fica apurado para a final quem fizer o percurso em 300 segundos ou menos. Estes são os tempos, em segundos, dos atletas de uma turma:
+No corta-mato da escola, fica apurado para a final quem fizer o percurso em 300 segundos ou menos. Estes são os tempos, em segundos, dos atletas de uma turma:
 
 ```python
 tempos = [312, 298, 300, 345, 301, 287]
 ```
 
-No script `corta_mato.py`, escreve a função `contar_apurados(tempos, limite)`, com a documentação. Recebe a lista dos tempos e o limite, e devolve quantos atletas ficaram apurados. O limite é um parâmetro, e não uma conta fixa, para a mesma função servir noutra prova. Testa-a sozinha com estas chamadas:
+No script `corta_mato.py`, escreve a função `contar_apurados(tempos, limite)`, que devolve quantos atletas ficaram apurados. O limite é um parâmetro, para a mesma função servir noutra prova. Testa-a sozinha com estas chamadas:
 
 - `contar_apurados([], 300)`
 - `contar_apurados([301], 300)`
 - `contar_apurados([300], 300)`
 - `contar_apurados([250, 280, 310], 270)`
 
-A parte principal tem a lista dos tempos e uma constante para o limite de 300 segundos. Escreve uma linha como "Ficaram apurados X dos Y atletas", com os dois números calculados pelo programa. O número de atletas não se escreve à mão: o programa tem de funcionar para uma lista de qualquer tamanho.
+A parte principal tem a lista dos tempos e uma constante para o limite de 300 segundos. Escreve uma linha como "Ficaram apurados X dos Y atletas", com os dois números calculados pelo programa.
 
-Pista: a função é um contador, como o `contar_acima` da fase 5 do laboratório. Aqui, quem ganha é quem faz menos tempo.
+### Desafio 2: O duelo de dados em Python
+
+Traduz para Python o teu algoritmo do [projeto 1, Duelo de dados](../../01-algoritmos/projetos-guiados/05-projeto-1-duelo-de-dados.md), que está no teu portefólio, no script `duelo.py`. Escreve uma função que recebe os números escolhidos pelos dois jogadores numa ronda e devolve quem ganhou essa ronda. Escreve outra que recebe as rondas ganhas de cada jogador e devolve quem ganhou o duelo. Testa as duas sozinhas antes de escreveres a parte principal.
+
+A parte principal lê os números e escreve as mensagens das rondas e do fim. Para o caso em que ninguém ganha o duelo, usa a decisão que a turma tomou. Confirma, com os casos da tua tabela do projeto, que o programa dá o mesmo que o algoritmo.
 
 ## Critérios de conclusão
 
-- O `combate.py` tem um `print` para cada uma das seis chamadas. Junto de cada chamada em que te enganaste, tem um comentário que explica o que a função fez.
+- O `combate.py` tem um `print` para cada uma das seis chamadas.
 - Os scripts `vida.py` e `cinema.py` correm, e as funções deles têm documentação e linhas de teste desligadas com `#`.
-- As linhas de teste dos exercícios 2 e 3 testam as fronteiras, e o esperado de cada uma vem do enunciado.
 - Nenhuma das tuas funções tem um `print` nem um `input`.
-- O `moedas_erros.py` dá os resultados certos nos três casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
-- O `misterio.py` tem a função em pseudocódigo, num comentário, e a função com um nome novo e a documentação. Tem também uma linha de teste para cada uma das três chamadas.
-
-## Autoavaliação
-
-1. O que te custou mais: prever as chamadas, escrever a documentação ou escolher os casos de teste?
-2. No exercício 4, qual dos três erros foi o mais difícil de encontrar, e porquê?
-3. Quando vês um traceback com várias linhas `File`, já consegues dizer onde o programa parou e quem chamou a função?
+- O `moedas_erros.py` dá os resultados certos com as três listas, e o comentário do fim explica cada erro.
+- O `misterio.py` tem o pseudocódigo, a função com um nome novo e a documentação, e uma linha de teste para cada chamada.
 
 ![Rodapé](../../imagens/rodape.png)

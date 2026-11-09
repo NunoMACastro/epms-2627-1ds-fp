@@ -2,29 +2,11 @@
 
 # Ficha de exercícios: Ciclos while e for
 
-Ficha do tema Ciclos while e for, do módulo Criar aplicações em linguagem de programação Python. Praticas a previsão das voltas de um ciclo, a validação repetida, a sentinela, o contador e o acumulador. Praticas também o `for` com `range` e a procura de erros em ciclos. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../04-ciclos-while-e-for.md) e o [laboratório](../laboratorios/04-ciclos-while-e-for-laboratorio.md).
-
-## Como trabalhar
-
-Os exercícios 1 a 5 são obrigatórios e fazem-se por esta ordem, porque cada um usa o que os anteriores treinaram. Cada um precisa das secções do guia que estão entre parênteses:
-
-1. Exercício 1 ("Repetir com `while`", "Ver as voltas: a tabela de iterações prevista e observada" e "As duas formas do `Para` e o `range`").
-2. Exercício 2 ("Validação repetida").
-3. Exercício 3 ("Um `for` com um número lido do teclado" e "Contar só algumas voltas").
-4. Exercício 4 ("Ler até à sentinela" e "O contador e o acumulador").
-5. Exercício 5 (as secções do `for` e "Erros frequentes").
-
-O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
-
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Quando um exercício pede uma tabela ou uma resposta escrita, escreve-a num comentário no script, com `#`. Antes de correres cada caso, pensa no resultado que esperas, tirado do enunciado. É aí que percebes se a ideia ficou entendida.
+Praticas a previsão das voltas de um ciclo, a validação repetida, a sentinela, o contador, o acumulador e o `for` com `range`. Os exercícios 1 a 5 são obrigatórios. Os teus scripts ficam na pasta `fp-python`, e cada um abre com um comentário a dizer o que faz. Antes de correres um caso, decide de cabeça o resultado. Para rever: o [guia do tema](../04-ciclos-while-e-for.md) e o [laboratório](../laboratorios/04-ciclos-while-e-for-laboratorio.md).
 
 ## Exercício 1: Quantas voltas?
 
-Para cada programa, descobre, sem o correr, quantas voltas dá o ciclo e o que aparece no ecrã. Copia o programa para um ficheiro com o nome da primeira linha, e escreve a tua resposta num comentário por cima dele. Depois confirma-a no computador.
+Para cada programa, descobre, sem o correr, quantas voltas dá o ciclo e o que aparece no ecrã. Copia o programa para um ficheiro com o nome da primeira linha, e escreve a tua resposta num comentário a seguir à primeira linha. Depois confirma-a no computador.
 
 a) Completa a tabela de iterações, com as linhas que faltam até ao teste que dá `False`. Diz também quanto vale `vidas` depois do ciclo.
 
@@ -45,7 +27,7 @@ print("Fim do jogo")
 b) Faz a tabela toda, com uma linha por volta. Diz se o número 6 chega a aparecer, e porquê.
 
 ```python
-# niveis.py: escreve os números dos níveis de 2 a 5.
+# niveis.py: escreve os níveis de um jogo.
 for nivel in range(2, 6):
     print("Nível", nivel)
 print("Acabaram os níveis")
@@ -54,15 +36,24 @@ print("Acabaram os níveis")
 | Volta | nivel | Escreve |
 | --- | ---: | --- |
 
-c) Escolhe tu como seguir este ciclo.
+c) Aqui decides tu a forma: uma tabela como as anteriores, ou outra que mostre o que acontece em cada volta.
 
 ```python
-# range_quatro.py: escreve os primeiros quatro múltiplos de 5, a começar no 0.
+# range_quatro.py: escreve múltiplos de 5.
 for i in range(4):
     print(i * 5)
 ```
 
-d) No programa da alínea a), acrescenta uma linha de observação na primeira linha do corpo e outra logo a seguir ao ciclo. Corre-o e confirma que a tabela observada é igual à tua.
+d) No programa da alínea a), com linhas de observação, confirma no computador a tua tabela.
+
+Rever: [Repetir com `while`](../04-ciclos-while-e-for.md#repetir-com-while), [Contar voltas com `for` e `range`](../04-ciclos-while-e-for.md#contar-voltas-com-for-e-range), [As duas formas do `Para` e o `range`](../04-ciclos-while-e-for.md#as-duas-formas-do-para-e-o-range) e [Ver as voltas com linhas de observação](../04-ciclos-while-e-for.md#ver-as-voltas-com-linhas-de-observação).
+
+<details>
+<summary>Pista</summary>
+
+Na alínea b), lembra-te do que acontece ao segundo número do `range`. Na alínea c), um `range` só com um número começa onde?
+
+</details>
 
 ## Exercício 2: O número de jogadores
 
@@ -77,6 +68,15 @@ Experimenta-o com estas entradas:
 | 6 |
 | 1, 7, 4 |
 
+Rever: [A validação repetida pede o valor outra vez](../04-ciclos-while-e-for.md#a-validação-repetida-pede-o-valor-outra-vez) e [O contador e o acumulador](../04-ciclos-while-e-for.md#o-contador-e-o-acumulador).
+
+<details>
+<summary>Pista</summary>
+
+Para contar as respostas recusadas, pensa em que linha do programa sabes que uma resposta foi recusada.
+
+</details>
+
 ## Exercício 3: O treino de lançamentos
 
 Num treino de basquetebol, fazes séries de 10 lançamentos ao cesto. Uma série é boa quando marcas 7 cestos ou mais. Escreve o script `lancamentos.py`, que pergunta quantas séries fizeste e depois quantos cestos marcaste em cada uma, como "Cestos da série 1?". Quem usa o programa escreve sempre um número de 0 a 10. No fim, o script mostra três coisas:
@@ -86,6 +86,15 @@ Num treino de basquetebol, fazes séries de 10 lançamentos ao cesto. Uma série
 - quantos lançamentos falhaste, ao todo.
 
 Experimenta-o com 4 séries de 8, 5, 7 e 10 cestos, com 0 séries, e com 1 série de 6 cestos.
+
+Rever: [Um `for` com um número lido do teclado](../04-ciclos-while-e-for.md#um-for-com-um-número-lido-do-teclado) e [Contar só algumas voltas](../04-ciclos-while-e-for.md#contar-só-algumas-voltas).
+
+<details>
+<summary>Pista</summary>
+
+Quantos lançamentos fizeste, ao todo?
+
+</details>
 
 ## Exercício 4: O carrinho da loja do jogo
 
@@ -101,6 +110,15 @@ Experimenta-o com estes casos:
 | 0 |
 
 Num comentário no início do script, explica numa frase porque é que o 0 pode ser a sentinela deste programa.
+
+Rever: [Ler até à sentinela](../04-ciclos-while-e-for.md#ler-até-à-sentinela) e [O contador e o acumulador](../04-ciclos-while-e-for.md#o-contador-e-o-acumulador).
+
+<details>
+<summary>Pista</summary>
+
+O que muda em relação à bilheteira do guia é o que fazes depois do ciclo.
+
+</details>
 
 ## Exercício 5: Encontrar o erro
 
@@ -133,35 +151,28 @@ Dia 7 dá 70 moedas
 Total da semana: 280 moedas
 ```
 
-Copia o script para o ficheiro `recompensas.py` e corre-o. Para cada erro que encontrares, segue a rotina e escreve, num comentário no fim do script:
-
-1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta. Se não houver, escreve a primeira linha do ecrã que é diferente da esperada.
-2. Numa frase, o que achas que causa o erro.
-3. Como confirmaste essa frase.
-4. A linha que mudaste, e como estava antes. Muda o mínimo possível.
-5. O que aconteceu quando voltaste a correr.
+Copia o script para o ficheiro `recompensas.py` e corrige-o até o ecrã ser igual ao esperado, mudando o mínimo possível. Para cada erro, segue a rotina da depuração e escreve, num comentário no fim do script, o que aconteceu e o tipo de erro. Quando não há mensagem, diz a primeira linha do ecrã que é diferente da esperada. Diz também a causa que suspeitas, como a confirmaste, a linha que mudaste e o que aconteceu ao correr de novo.
 
 Quando o ecrã for igual ao esperado, muda `DIAS` para 3 e confirma que o ecrã é o que esperas.
 
-## Apoio
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro) e [Ver as voltas com linhas de observação](../04-ciclos-while-e-for.md#ver-as-voltas-com-linhas-de-observação).
 
-- Exercício 1: na alínea a), não pares quando o ecrã mostra a última linha das vidas. Continua até o teste dar `False`. Na alínea b), lembra-te do que acontece ao segundo número do `range`. Na alínea c), um `range` só com um número começa onde?
-- Exercício 2: a condição do `while` é a de um número que não dá. Repara que o 2 e o 6 são aceites. Para contar as respostas recusadas, pensa em que linha do programa sabes que uma resposta foi recusada.
-- Exercício 3: o número de séries lido no início serve para duas coisas. Uma é o número de voltas. Qual é a outra? Com 0 séries, confirma que os três resultados fazem sentido e que o script não dá erro.
-- Exercício 4: é o padrão da bilheteira do guia, com a mesma sentinela, o 0. O que muda é o que fazes depois do ciclo. O caso de 500 moedas exatas está nos casos de teste por alguma razão.
-- Exercício 5: o Python só mostra uma mensagem depois de corrigires a anterior. Dois dos erros não dão mensagem nenhuma: só os encontras se comparares o ecrã com o esperado, linha a linha. Uma linha de observação pode ajudar.
+<details>
+<summary>Pista</summary>
 
-## Desafio opcional
+Dois dos erros não dão mensagem nenhuma: só os encontras se comparares o ecrã com o esperado, linha a linha. Uma linha de observação pode ajudar.
 
-Traduz para Python o teu algoritmo do [projeto 2, Adivinha o número](../../01-algoritmos/projetos-guiados/05-projeto-2-adivinha-o-numero.md), que está no teu portefólio, no script `adivinha.py`. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo. Se o teu algoritmo usa `Parar`, troca-o por uma bandeira, porque o `Parar` só chega ao Python no tema seguinte.
+</details>
 
-As mensagens do enunciado têm de aparecer palavra por palavra, como "Acertaste à tentativa 3!", sem nenhum espaço antes do ponto de exclamação. Com o `print` e as vírgulas, isso não acontece. O guia [02 Dados e interação](../02-dados-e-interacao.md) mostra como se junta um número a um texto sem espaços.
+## Desafios
 
-## Para ires mais longe
+### Desafio 1: O adivinha o número em Python
 
-Esta secção é opcional e fica fora da parte obrigatória.
+Escreve o script `adivinha.py`, que traduz para Python o teu algoritmo do [projeto 2, Adivinha o número](../../01-algoritmos/projetos-guiados/05-projeto-2-adivinha-o-numero.md), que tens no portefólio. Usa os casos da tua tabela de casos esperados do projeto, e confirma que o programa dá o mesmo que o algoritmo. Se o teu algoritmo usa `Parar`, troca-o por uma bandeira, porque o `Parar` só chega ao Python no tema seguinte.
 
-### Mais longe 1: O mesmo ciclo com `while`
+As mensagens do enunciado do projeto têm de aparecer palavra por palavra, como "Acertaste à tentativa 3!", sem nenhum espaço antes do ponto de exclamação. Com o `print` e as vírgulas, isso não acontece. Rever: [Juntar textos com `+` e `str`](../02-dados-e-interacao.md#juntar-textos-com--e-str).
+
+### Desafio 2: O mesmo ciclo com `while`
 
 Escreve o `lancamentos_while.py`, que faz o mesmo que o `lancamentos.py` do exercício 3, mas com um ciclo `while` no lugar do `for`. Nos três casos do exercício 3, os dois scripts têm de dar o mesmo. Num comentário no início do `lancamentos_while.py`, responde a duas perguntas.
 
@@ -171,14 +182,9 @@ b) Qual dos dois ciclos preferes para este problema, e porquê? Responde numa ou
 
 ## Critérios de conclusão
 
-- No exercício 1, cada programa tem por cima, num comentário, a tua tabela, ou a forma que escolheste na alínea c). A tabela observada da alínea d) é igual à tua da alínea a).
-- Os scripts `jogadores_ciclo.py`, `lancamentos.py` e `carrinho.py` correm e dão o resultado certo em todos os casos de teste. O `carrinho.py` explica, num comentário, porque é que o 0 pode ser a sentinela.
-- O `recompensas.py` dá o ecrã esperado com 7 dias e com 3 dias. O comentário do fim tem a rotina de cada erro, com o tipo.
-
-## Autoavaliação
-
-1. Que parte dos ciclos ainda te faz hesitar? Pode ser o fim do `range`, o sítio da leitura numa sentinela, a indentação do corpo, ou outra.
-2. No exercício 5, qual dos três erros foi o mais difícil de encontrar, e porquê?
-3. Antes de correres um ciclo, já consegues dizer quantas voltas vai dar?
+- No exercício 1, cada programa tem, num comentário a seguir à primeira linha, a tua tabela, ou a forma que escolheste na alínea c).
+- A tabela observada da alínea d) é igual à tua da alínea a).
+- Os scripts `jogadores_ciclo.py`, `lancamentos.py` e `carrinho.py` correm e dão o resultado certo em todos os casos de teste. O `carrinho.py` tem o comentário sobre a sentinela.
+- O `recompensas.py` dá o ecrã certo, também com `DIAS` a 3, e o comentário do fim tem a rotina de cada erro.
 
 ![Rodapé](../../imagens/rodape.png)

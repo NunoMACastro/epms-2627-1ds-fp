@@ -2,7 +2,11 @@
 
 # Python
 
-Nesta área passas os teus algoritmos para Python, a primeira linguagem de programação do curso. Pões o computador a executá-los e a confirmar os casos de teste. Corresponde ao módulo Criar aplicações em linguagem de programação Python.
+Nesta área passas os teus algoritmos para Python, a primeira linguagem de programação do curso, e pões o computador a executá-los. Corresponde ao módulo UC00618, Criar aplicações em linguagem de programação Python. Cada tema tem estes documentos:
+
+- o guia, com a matéria por escrito, para estudares;
+- o laboratório, para fazeres no computador, passo a passo;
+- a ficha de exercícios, para treinares sozinho.
 
 | Tema | Guia | Laboratório | Ficha |
 | --- | --- | --- | --- |
@@ -16,7 +20,5 @@ Nesta área passas os teus algoritmos para Python, a primeira linguagem de progr
 | 08 Tuplos, dicionários e conjuntos | [guia](08-tuplos-dicionarios-e-conjuntos.md) | [laboratório](laboratorios/08-tuplos-dicionarios-e-conjuntos-laboratorio.md) | [ficha](exercicios/08-tuplos-dicionarios-e-conjuntos-exercicios.md) |
 
 Os guias, com a matéria de cada tema, estão nesta pasta. Os laboratórios estão em [laboratorios](laboratorios/README.md), e as fichas de exercícios, em [exercicios](exercicios/README.md).
-
-Os scripts escrevem-se no VS Code e correm-se no terminal, e o laboratório de cada tema diz como, passo a passo. Começa pelo tema 01, que te mostra onde se programa e com que ferramentas.
 
 ![Rodapé](../imagens/rodape.png)

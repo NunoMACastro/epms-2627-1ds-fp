@@ -2,25 +2,7 @@
 
 # Ficha de exercícios: Do pseudocódigo ao Python
 
-Ficha do tema Do pseudocódigo ao Python, do módulo Criar aplicações em linguagem de programação Python. Praticas a escolha da ferramenta certa, a escrita no ecrã com `print` e a leitura dos erros. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../01-do-pseudocodigo-ao-python.md) e o [laboratório](../laboratorios/01-do-pseudocodigo-ao-python-laboratorio.md).
-
-## Como trabalhar
-
-Os exercícios 1 a 5 são obrigatórios e fazem-se por esta ordem. Cada um precisa das secções do guia que estão entre parênteses:
-
-1. Exercício 1 ("Escrever no ecrã com `print`" e "Comentários: notas para quem lê o código").
-2. Exercício 2 (de "Onde se escreve um programa" a "Quando é preciso um IDE, e quando não").
-3. Exercício 3 (o exemplo guiado).
-4. Exercício 4 ("Os três tipos de erro").
-5. Exercício 5 ("Escrever no ecrã com `print`", "Os três tipos de erro" e "Erros frequentes").
-
-O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
-
-Guarda os teus scripts na pasta `fp-python`, a do laboratório, com os nomes que cada exercício indica. Uma resposta escrita fica num comentário, com `#`, no início do script ou junto da linha a que diz respeito, como cada exercício indica. Antes de correres um script, pensa no resultado que esperas. É aí que percebes se a ideia ficou entendida.
+Praticas a escolha da ferramenta certa, a escrita no ecrã com `print` e a leitura dos erros. Os exercícios 1 a 5 são obrigatórios. Os scripts ficam na pasta `fp-python`, com a primeira linha a dizer o nome do ficheiro e o que ele faz. Para rever: o [guia do tema](../01-do-pseudocodigo-ao-python.md) e o [laboratório](../laboratorios/01-do-pseudocodigo-ao-python-laboratorio.md).
 
 ## Exercício 1: Prever o ecrã
 
@@ -38,6 +20,8 @@ print("Bom jogo!")  # A última linha do ecrã.
 
 Sem o correres, prevê o ecrã, linha a linha, com as linhas em branco e com os espaços exatos, e quantas linhas tem. Depois cria `previsao.py` com este conteúdo e confirma. Para cada linha do ecrã em que te enganaste, explica numa frase porque é que o ecrã é assim. Escreve a frase num comentário, no fim da linha do script a que diz respeito.
 
+Rever: [Escrever no ecrã com `print`](../01-do-pseudocodigo-ao-python.md#escrever-no-ecrã-com-print) e [Os comentários são notas para quem lê o código](../01-do-pseudocodigo-ao-python.md#os-comentários-são-notas-para-quem-lê-o-código).
+
 ## Exercício 2: A ferramenta certa
 
 Para cada uma destas tarefas, diz se usas a consola do Python, o terminal, um editor de texto simples ou o IDE. Justifica numa frase. Há tarefas em que mais do que uma ferramenta serve: nesse caso, diz qual escolhes e porquê. Escreve as respostas num ficheiro `ferramenta_certa.py`, só com comentários, um por tarefa.
@@ -46,6 +30,15 @@ Para cada uma destas tarefas, diz se usas a consola do Python, o terminal, um ed
 2. Mostrar a um colega, num computador da biblioteca que tem o Python mas não tem o VS Code, que o teu `ola.py` corre.
 3. No mesmo computador, mudar uma letra no `ola.py` antes de o mostrar.
 4. Começar um jogo novo, com vários ficheiros, que vais corrigir muitas vezes ao longo das próximas semanas.
+
+Rever: [Quando é preciso um IDE, e quando não](../01-do-pseudocodigo-ao-python.md#quando-é-preciso-um-ide-e-quando-não).
+
+<details>
+<summary>Pista</summary>
+
+Pergunta-te se a tarefa precisa de um ficheiro, de várias tentativas e de procurar erros, ou só de uma resposta rápida.
+
+</details>
 
 ## Exercício 3: O menu do quiz
 
@@ -73,11 +66,20 @@ Pontos por resposta certa: 5
   3. Sair
 ```
 
-Traduz o algoritmo para Python, num script `quiz_menu.py` que escreva este ecrã exatamente. A primeira linha é um comentário com o nome do ficheiro e o que ele faz.
+Traduz o algoritmo para Python, num script `quiz_menu.py` que escreva este ecrã exatamente.
+
+Rever: [Escrever no ecrã com `print`](../01-do-pseudocodigo-ao-python.md#escrever-no-ecrã-com-print) e [Exemplo guiado: o ecrã das regras do duelo de dados](../01-do-pseudocodigo-ao-python.md#exemplo-guiado-o-ecrã-das-regras-do-duelo-de-dados).
+
+<details>
+<summary>Pista</summary>
+
+Compara o ecrã esperado com o pseudocódigo, linha a linha.
+
+</details>
 
 ## Exercício 4: Que tipo de erro é?
 
-Para cada script, diz, só a ler o código, que tipo de erro tem: de sintaxe, de execução ou de lógica. Diz também que linhas aparecem no ecrã antes da mensagem de erro, se aparecer alguma. Escreve a resposta no comentário da primeira linha de cada script, a seguir ao nome, e corre-o para a confirmares.
+Para cada script, diz, só a ler o código, que tipo de erro tem: de sintaxe, de execução ou de lógica. Diz também que linhas aparecem no ecrã, antes da mensagem de erro ou sem nenhuma mensagem. Escreve a resposta no comentário da primeira linha de cada script, a seguir ao nome, e corre-o para a confirmares.
 
 1. Este script devia escrever duas linhas:
 
@@ -104,6 +106,8 @@ Para cada script, diz, só a ler o código, que tipo de erro tem: de sintaxe, de
    print("Ronda", 1)
    ```
 
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro).
+
 ## Exercício 5: Encontrar os erros da corrida
 
 Este script devia escrever o ecrã de partida de uma corrida de karts, num jogo:
@@ -117,7 +121,7 @@ Preparar...
 Partida!
 ```
 
-Mas tem três erros, um de cada tipo:
+Mas tem três erros:
 
 ```python
 # corrida.py: o ecrã de partida de uma corrida de karts num jogo.
@@ -129,19 +133,22 @@ print("Preparar...")
 print(Partida)
 ```
 
-Cria `corrida.py` com este conteúdo e corrige-o até escrever o ecrã esperado, um erro de cada vez. Para cada erro, segue a rotina da depuração, num comentário no fim do script. Escreve o que esperavas e o que obtiveste, o tipo de erro, a tua hipótese, a correção e o resultado de voltares a testar.
+Cria `corrida.py` com este conteúdo e corrige-o até escrever o ecrã esperado, um erro de cada vez. Para cada erro, escreve em comentários no fim do script o que esperavas, o que obtiveste e o tipo de erro. Escreve também a tua hipótese, a correção e o resultado de voltares a testar.
 
-## Apoio
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro).
 
-- Exercício 1: cada vírgula entre valores dá um espaço, e um espaço dentro das aspas fica lá. Uma linha que começa por `#` não se executa.
-- Exercício 2: pergunta-te se a tarefa precisa de um ficheiro, de várias tentativas e de procurar erros, ou só de uma resposta rápida.
-- Exercício 3: compara o ecrã esperado com o pseudocódigo, linha a linha, e olha também para o início de cada linha.
-- Exercício 4: lembra-te de quando o Python dá por cada tipo de erro: antes de executar, a meio, ou nunca.
-- Exercício 5: o Python mostra um erro de cada vez, e os de sintaxe aparecem primeiro. O erro de lógica só se vê comparando o ecrã com o esperado.
+<details>
+<summary>Pista</summary>
 
-## Desafio opcional
+O Python mostra um erro de cada vez. Depois de o corrigires, corre outra vez.
 
-Escreve um script `trofeu.py` que desenhe no ecrã este troféu, feito só com sinais do teclado, e por baixo a frase `Parabéns, campeão!`:
+</details>
+
+## Desafios
+
+### Desafio 1: O troféu
+
+Escreve um script `trofeu.py` que desenhe no ecrã este troféu, feito só com sinais do teclado, e por baixo a frase `Parabéns, campeão!`. Os espaços do início de cada linha também contam.
 
 ```text
   ___
@@ -152,13 +159,9 @@ Escreve um script `trofeu.py` que desenhe no ecrã este troféu, feito só com s
   _|_
 ```
 
-Os espaços do início de cada linha também contam.
+### Desafio 2: Um script do Python 2
 
-## Para ires mais longe
-
-### Mais longe 1: Um script do Python 2
-
-Encontraste numa página da internet este script, escrito para o Python 2:
+Encontraste numa página da internet este script, escrito para o Python 2. No Python 2, um `print` sozinho escrevia uma linha em branco. Prevê o que acontece se o correres no Python 3, e qual é a primeira linha de que o Python se queixa. Depois passa-o para o Python 3, num script `pontos.py`.
 
 ```python
 print "TABELA DE PONTOS"
@@ -167,7 +170,7 @@ print
 print "Boa sorte!"
 ```
 
-Prevê o que acontece se o correres no Python 3, e qual é a primeira linha de que o Python se queixa. Depois passa-o para o Python 3, num script `pontos.py`. Pista para a terceira linha: no Python 2, um `print` sozinho escrevia uma linha em branco.
+Rever: [O Python 3 e o código antigo](../01-do-pseudocodigo-ao-python.md#o-python-3-e-o-código-antigo).
 
 ## Critérios de conclusão
 
@@ -175,12 +178,6 @@ Prevê o que acontece se o correres no Python 3, e qual é a primeira linha de q
 - O `ferramenta_certa.py` tem, para cada uma das quatro tarefas do exercício 2, a ferramenta e a justificação.
 - O `quiz_menu.py` escreve o ecrã do exercício 3, igual ao esperado.
 - Os três scripts do exercício 4 têm, no comentário da primeira linha, o tipo de erro e as linhas que aparecem.
-- O `corrida.py` escreve o ecrã esperado, e o comentário do fim tem a rotina dos três erros.
-
-## Autoavaliação
-
-1. Que tipo de erro te custou mais a encontrar, e porquê?
-2. Numa frase tua, o que é um IDE e quando é que não precisas dele?
-3. Que ferramenta do VS Code usaste mais nesta ficha?
+- O `corrida.py` escreve o ecrã esperado, e o comentário do fim explica os três erros.
 
 ![Rodapé](../../imagens/rodape.png)

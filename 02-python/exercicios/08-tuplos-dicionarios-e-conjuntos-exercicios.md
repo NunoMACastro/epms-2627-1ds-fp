@@ -2,32 +2,11 @@
 
 # Ficha de exercícios: Tuplos, dicionários e conjuntos
 
-Ficha do tema Tuplos, dicionários e conjuntos, do módulo Criar aplicações em linguagem de programação Python. Praticas os tuplos, os dicionários e os conjuntos, e a escolha da coleção que serve cada problema. Fazes sozinho, ao teu ritmo: o que não acabares na aula, acabas em casa ou na aula seguinte.
-
-## O que precisas de saber
-
-O [guia do tema](../08-tuplos-dicionarios-e-conjuntos.md) e o [laboratório](../laboratorios/08-tuplos-dicionarios-e-conjuntos-laboratorio.md).
-
-## Como trabalhar
-
-Os exercícios 1 a 8 são obrigatórios e fazem-se por esta ordem, porque cada um usa o que os anteriores treinaram. Cada um precisa das secções do guia que estão entre parênteses:
-
-1. Exercício 1 (do início até "As chavetas com três papéis").
-2. Exercício 2 ("Tuplos: valores que andam juntos").
-3. Exercício 3 ("Dicionários: procurar por chave").
-4. Exercício 4 ("Contar com um dicionário").
-5. Exercício 5 ("Conjuntos: valores sem repetidos").
-6. Exercício 6 ("Percorrer um dicionário", e a rotina de cinco passos para procurar um erro).
-7. Exercício 7 ("Escolher a representação").
-8. Exercício 8 ("Contar com um dicionário", "Conjuntos: valores sem repetidos" e "Escolher a representação").
-
-O desafio opcional e a secção "Para ires mais longe" são para quem acabar os obrigatórios.
-
-Guarda os teus scripts na pasta `fp-python`, com os nomes que cada exercício indica. Quando um exercício pede uma resposta escrita, escreve-a no script, num comentário com `#`, no sítio que o exercício indica. Antes de correres um script, decide que resultado esperas, a partir do enunciado: é com ele que vês se o script está certo. Nas mensagens, usa f-strings ou o `print` com vírgulas, como preferires, desde que o ecrã fique como o enunciado mostra.
+Praticas os tuplos, os dicionários e os conjuntos, e a escolha da coleção que serve cada problema. Os exercícios 1 a 8 são obrigatórios. Os scripts ficam na pasta `fp-python`, com um comentário no início a dizer o que fazem. As respostas que um exercício pedir por escrito ficam em comentários. Para rever: o [guia do tema](../08-tuplos-dicionarios-e-conjuntos.md) e o [laboratório](../laboratorios/08-tuplos-dicionarios-e-conjuntos-laboratorio.md).
 
 ## Exercício 1: Prever o estado das coleções
 
-Abre a consola do Python, com o teu comando, `python`, `py` ou `python3`. Vais escrever as linhas abaixo, por esta ordem. Antes de cada linha marcada com uma letra, prevê o que a consola vai mostrar. Só depois a escreves e confirmas. As linhas sem letra não mostram nada, mas criam ou mudam as coleções.
+Na consola do Python, escreve as linhas abaixo, por esta ordem. Em cada linha com uma letra, decide primeiro o que vai aparecer, e só depois a escreves. As outras linhas não mostram nada, mas criam ou mudam as coleções.
 
 ```text
 jogo = ("Tetris", "puzzle", 1984)
@@ -50,15 +29,17 @@ j) sorted(cores)
 k) type({})
 ```
 
-Na consola, não escrevas a letra nem o parêntese: escreve só o que vem a seguir, como `jogo[1]`.
+A letra e o parêntese não se escrevem: a linha `a)` é só `jogo[1]`.
 
-Quando uma previsão falhar, procura no guia a razão do que o Python fez.
+Se te enganares, procura no guia a explicação.
+
+Rever: [Um tuplo guarda valores que andam juntos](../08-tuplos-dicionarios-e-conjuntos.md#um-tuplo-guarda-valores-que-andam-juntos), [Um dicionário procura por chave](../08-tuplos-dicionarios-e-conjuntos.md#um-dicionário-procura-por-chave), [Um conjunto guarda valores sem repetidos](../08-tuplos-dicionarios-e-conjuntos.md#um-conjunto-guarda-valores-sem-repetidos) e [As chavetas têm três papéis](../08-tuplos-dicionarios-e-conjuntos.md#as-chavetas-têm-três-papéis).
 
 ## Exercício 2: O caminho até ao tesouro
 
 Num jogo, o mapa é uma quadrícula, e cada posição é um par de números, o x e o y. O jogador só anda na horizontal e na vertical, uma casa de cada vez. O número de passos entre duas posições é a distância entre os dois x mais a distância entre os dois y, sem sinal.
 
-Escreve o script `tesouro.py`, que começa com estas duas linhas:
+Escreve o script `tesouro.py`, com estas duas linhas:
 
 ```python
 jogador = (2, 3)
@@ -76,6 +57,15 @@ a) O script mostra quantos passos separam o jogador do tesouro, numa linha como 
 b) Num comentário no início do script, explica numa frase porque é que cada posição está num tuplo, e não numa lista.
 
 c) O jogador anda uma casa para cima: o y aumenta 1, e o x fica igual. Acrescenta ao fim do script a linha que muda `jogador`, sem escreveres os números à mão, e mostra o `jogador` novo com um `print`.
+
+Rever: [Um tuplo guarda valores que andam juntos](../08-tuplos-dicionarios-e-conjuntos.md#um-tuplo-guarda-valores-que-andam-juntos).
+
+<details>
+<summary>Pista</summary>
+
+Há uma função predefinida que dá a distância de um número a zero.
+
+</details>
 
 ## Exercício 3: Os pontos das palavras
 
@@ -102,6 +92,15 @@ Escreve o script `palavras.py`, que lê uma palavra e mostra quantos pontos ela 
 
 Experimenta-o com `casa`, `Xadrez`, `QUIZ` e `k`.
 
+Rever: [Um dicionário procura por chave](../08-tuplos-dicionarios-e-conjuntos.md#um-dicionário-procura-por-chave).
+
+<details>
+<summary>Pista</summary>
+
+Precisas da palavra de duas formas: uma para fazer as contas, e outra para mostrar.
+
+</details>
+
 ## Exercício 4: As estrelas do jogo do mês
 
 Os sócios do clube dão de 1 a 5 estrelas ao jogo do mês. Este mês, as avaliações foram estas:
@@ -110,7 +109,7 @@ Os sócios do clube dão de 1 a 5 estrelas ao jogo do mês. Este mês, as avalia
 avaliacoes = [5, 4, 5, 3, 5, 4, 1]
 ```
 
-Escreve o script `estrelas_do_mes.py`, que começa com esta linha e conta, com um dicionário, quantas vezes foi dada cada classificação. Depois mostra as classificações de 1 a 5, uma por linha. As cinco aparecem sempre, também as que ninguém deu. O ecrã começa assim:
+Escreve o script `estrelas_do_mes.py`, com esta lista, que conta, com um dicionário, quantas vezes foi dada cada classificação. Depois mostra as classificações de 1 a 5, uma por linha. As cinco aparecem sempre, também as que ninguém deu. O ecrã começa assim:
 
 ```text
 Estrelas: vezes
@@ -118,6 +117,15 @@ Estrelas: vezes
 ```
 
 Experimenta-o também com `avaliacoes = []` e com `avaliacoes = [3, 3, 3]`.
+
+Rever: [Contar com um dicionário](../08-tuplos-dicionarios-e-conjuntos.md#contar-com-um-dicionário).
+
+<details>
+<summary>Pista</summary>
+
+Mostra com um `print` provisório o dicionário que o padrão dá, e compara-o com o ecrã pedido.
+
+</details>
 
 ## Exercício 5: A caderneta de cromos
 
@@ -135,6 +143,8 @@ Escreve o script `cromos.py`, que mostra quatro coisas:
 - que números lhe faltam para completar a caderneta.
 
 O script tem de funcionar com qualquer lista de cromos saídos. Experimenta-o também com `saidos = []` e com uma lista com os 12 números, cada um uma vez.
+
+Rever: [Um conjunto guarda valores sem repetidos](../08-tuplos-dicionarios-e-conjuntos.md#um-conjunto-guarda-valores-sem-repetidos).
 
 ## Exercício 6: Encontrar o erro
 
@@ -164,19 +174,20 @@ print(f"Duração total: {total // SEGUNDOS_POR_MINUTO} min {total % SEGUNDOS_PO
 
 Com estas três músicas, o script devia mostrar `Músicas: 3` e `Duração total: 10 min 0 s`.
 
-Copia o script para o ficheiro `playlist.py` e corre-o. O Python mostra os erros um de cada vez. Para cada erro que encontrares, segue a rotina. Escreve o que ela pede num comentário no fim do script, com `#`, para os números das linhas não mudarem:
+Copia o script para o ficheiro `playlist.py`, corre-o e corrige-o, mudando o mínimo possível. Num comentário no fim do script, regista, para cada erro, o que viste e de que tipo é. Regista também a causa que suspeitas, como a confirmaste, a linha que mudaste e o resultado de voltares a correr. Depois, experimenta-o também com uma playlist de uma só música, `{"Só uma": "0:59"}`, e com a playlist vazia, `{}`.
 
-1. O que aconteceu, e que tipo de erro é: de sintaxe, de execução ou de lógica. Se houver uma mensagem, copia a última linha e a linha que ela aponta.
-2. Numa frase, o que achas que causa o erro.
-3. Como confirmaste essa frase.
-4. A linha que mudaste, e como ficou. Muda o mínimo possível.
-5. O que aconteceu quando voltaste a correr.
+Rever: [Os três tipos de erro](../01-do-pseudocodigo-ao-python.md#os-três-tipos-de-erro).
 
-Quando o script mostrar o resultado certo, experimenta-o também com uma playlist de uma só música, `{"Só uma": "0:59"}`, e com a playlist vazia, `{}`.
+<details>
+<summary>Pista</summary>
+
+Corrige um erro de cada vez, e volta a correr antes de passares ao seguinte.
+
+</details>
 
 ## Exercício 7: Escolher as coleções
 
-Para cada situação da tabela, escolhe a coleção que usavas: lista, tuplo, dicionário ou conjunto. Justifica cada escolha com as quatro perguntas do guia: a ordem, os repetidos, a forma de procurar e se os valores mudam. Escreve as escolhas no ficheiro `colecoes.py`, só com comentários: uma linha por situação, com a coleção e o porquê.
+Para cada situação da tabela, escolhe a coleção que usavas: lista, tuplo, dicionário ou conjunto. Justifica cada escolha com a razão que a decide. As quatro perguntas do guia ajudam: a ordem, os repetidos, a forma de procurar e se os valores mudam. Escreve as escolhas no ficheiro `colecoes.py`, só com comentários: uma linha por situação, com a coleção e o porquê.
 
 | Situação | Coleção | Porquê |
 | --- | --- | --- |
@@ -185,6 +196,8 @@ Para cada situação da tabela, escolhe a coleção que usavas: lista, tuplo, di
 | As vidas que restam a cada personagem de um jogo, para as procurar pelo nome | | |
 | O dia, o mês e o ano de uma data de nascimento | | |
 | As músicas que tocaram numa festa, por ordem, com as que se repetiram | | |
+
+Rever: [Escolher a representação](../08-tuplos-dicionarios-e-conjuntos.md#escolher-a-representação).
 
 ## Exercício 8: As inscrições nos clubes
 
@@ -200,75 +213,49 @@ a) Escreve o script `inscricoes.py`, que mostra:
 - quantos alunos diferentes se inscreveram;
 - quantos inscritos tem cada clube, com os clubes por ordem alfabética.
 
-Experimenta-o também com a lista vazia, `inscricoes = []`.
+Experimenta-o também com a lista vazia, `inscricoes = []`, que não pode parar o programa.
 
 b) Num comentário no início do script, faz a tabela de decisões dele. Tem uma linha para cada coleção que usaste, com os dados, a coleção e porquê.
 
-## Apoio
+Rever: [Escolher a representação](../08-tuplos-dicionarios-e-conjuntos.md#escolher-a-representação).
 
-- Exercício 1: nas linhas `d)` e `j)`, a consola mostra a coleção inteira, com as chavetas ou os parênteses retos. Lembra-te do que faz uma atribuição a uma chave que já existe, e do que o `in` pergunta num dicionário.
-- Exercício 2: há uma função predefinida do tema 02 que dá a distância de um número a zero, sem sinal.
-- Exercício 3: percorre a palavra carácter a carácter. Nem todas as letras são chaves do dicionário, e o guia diz o que acontece quando se lê uma chave que não existe. Precisas da palavra de duas formas: uma para fazer as contas, e outra para mostrar.
-- Exercício 4: o guia tem um padrão para contar com um dicionário. Mostra com um `print` provisório o dicionário que ele dá com as avaliações deste mês, e compara-o com o ecrã que o enunciado pede.
-- Exercício 5: compara o número de cromos saídos com o número de cromos diferentes. Para os que faltam, percorre os números de 1 a 12 com um `range` e pergunta, a cada um, se a Joana o tem.
-- Exercício 6: o Python só mostra o erro seguinte depois de corrigires o anterior. A linha que a mensagem aponta pode não ser a que tem a causa. Um dos erros não dá mensagem nenhuma: só o encontras comparando o resultado com o esperado.
-- Exercício 7: responde às quatro perguntas para cada situação, antes de escolheres a coleção.
-- Exercício 8: um `for` sobre a lista pode desempacotar cada inscrição em duas variáveis. Para os inscritos de cada clube, o guia tem um padrão para contar, e diz como se percorrem as chaves de um dicionário por ordem.
+## Desafios
 
-## Desafio opcional
+### Desafio 1: Os anagramas
 
-Duas palavras são anagramas quando têm as mesmas letras, o mesmo número de vezes, por outra ordem, como "roma" e "amor". Um colega escreveu um programa que diz que duas palavras são anagramas quando `set(primeira) == set(segunda)`.
+Duas palavras são anagramas quando têm as mesmas letras, o mesmo número de vezes, por outra ordem, como "roma" e "amor". Um colega escreveu um programa que diz que duas palavras são anagramas quando `set(primeira) == set(segunda)`. O `set` de um texto dá o conjunto dos seus caracteres, e dois conjuntos são iguais quando têm os mesmos valores.
 
-O `set` de um texto dá o conjunto dos seus caracteres: `set("ola")` dá `{'o', 'l', 'a'}`. Dois conjuntos são iguais quando têm os mesmos valores.
+Escreve o script `anagramas.py`, que lê duas palavras e diz se são anagramas, sem ligar às maiúsculas. Conta as letras de cada palavra num dicionário. Dois dicionários são iguais, com o `==`, quando têm exatamente os mesmos pares. Testa com `Roma` e `amor`, `pedra` e `perda`, `ola` e `olaa`, e `mar` e `sol`. Num comentário no início, diz o que o programa do colega responde com `ola` e `olaa`, e porquê.
 
-a) Sem correr, decide o que o programa do colega responde com `ola` e `olaa`. Está certo? Explica porquê numa frase, num comentário no início do `anagramas.py` da alínea b).
+### Desafio 2: A inscrição repetida
 
-b) Escreve o script `anagramas.py`, que lê duas palavras e diz se são anagramas, sem ligar às maiúsculas. Conta as letras de cada palavra num dicionário. Testa com `Roma` e `amor`, `pedra` e `perda`, `ola` e `olaa`, e `mar` e `sol`.
-
-Dois dicionários são iguais, com o `==`, quando têm exatamente os mesmos pares, seja qual for a ordem em que entraram.
-
-## Para ires mais longe
-
-### Mais longe 1: A inscrição repetida
-
-Uma das inscrições foi registada duas vezes, por engano. Muda a lista do teu `inscricoes.py` para esta, com o `("Rui", "teatro")` duas vezes:
+Uma das inscrições do exercício 8 foi registada duas vezes, por engano. Copia o teu `inscricoes.py` para `inscricoes_repetidas.py`, e muda lá a lista para esta. Muda também o script, para que a inscrição repetida não conte duas vezes: o teatro tem de continuar com 2 inscritos.
 
 ```python
 inscricoes = [("Ana", "xadrez"), ("Rui", "teatro"), ("Ana", "teatro"),
               ("Bia", "xadrez"), ("Rui", "teatro"), ("Tomás", "robótica")]
 ```
 
-Muda também o script, para que a inscrição repetida não conte duas vezes: o teatro tem de continuar com 2 inscritos.
+### Desafio 3: O clube que se pergunta
 
-### Mais longe 2: O clube que se pergunta
+Copia o teu `inscricoes.py` para `inscricoes_clube.py`, e acrescenta-lhe no fim uma pergunta: o nome de um clube. O script diz quantos inscritos tem esse clube, sem ligar às maiúsculas. Um clube sem inscritos, como `música`, não pode parar o programa. Testa com `Teatro`, com `música` e com a lista vazia.
 
-Acrescenta ao fim do teu `inscricoes.py` uma pergunta: o nome de um clube. O script diz quantos inscritos tem esse clube, sem ligar às maiúsculas. Um clube sem inscritos, como `música`, não pode parar o programa: o script diz que o clube não tem inscritos. Testa com `Teatro`, com `música` e com a lista vazia.
+### Desafio 4: Os jogos em comum
 
-### Mais longe 3: Os jogos em comum
-
-O Rui e a Ana disseram que jogos do clube querem experimentar:
+O Rui e a Ana disseram que jogos do clube querem experimentar. Escreve o script `em_comum.py`, que mostra, por ordem alfabética, os jogos que os dois querem experimentar. Se não houver nenhum, diz-o. Testa também com a Ana a querer só o `"EA Sports FC 25"`, e com a Ana sem nenhum jogo.
 
 ```python
 quer_rui = {"Minecraft", "Tetris", "Celeste", "Rocket League"}
 quer_ana = {"Celeste", "Forza Horizon 5", "Minecraft"}
 ```
 
-Escreve o script `em_comum.py`, que mostra, por ordem alfabética, os jogos que os dois querem experimentar. Se não houver nenhum, diz-o. Testa também com a Ana a querer só o `"EA Sports FC 25"`, e com a Ana sem nenhum jogo.
-
 ## Critérios de conclusão
 
-- Correste as linhas do exercício 1 na consola, e percebes cada resultado, também os que não previste.
-- Os scripts `tesouro.py`, `palavras.py` e `estrelas_do_mes.py` correm e dão o resultado certo em todos os casos do seu exercício.
-- O `cromos.py` dá as quatro respostas certas com a lista da Joana e com os outros dois casos.
+- As previsões do exercício 1 foram confirmadas na consola.
+- Os scripts `tesouro.py`, `palavras.py`, `estrelas_do_mes.py` e `cromos.py` dão o resultado certo em todos os casos do seu exercício.
 - O `tesouro.py` tem, no comentário do início, a explicação da escolha do tuplo, e no fim a linha que muda o jogador.
-- O `playlist.py` dá os resultados certos nos três casos. O comentário do fim tem a rotina de cada um dos três erros, com o tipo de cada um.
+- O `playlist.py` dá os resultados certos nos três casos, e o comentário do fim explica cada erro.
 - O `colecoes.py` tem as cinco escolhas do exercício 7, cada uma com o porquê.
 - O `inscricoes.py` funciona nos dois casos do exercício 8, e tem a tabela de decisões no comentário do início.
-
-## Autoavaliação
-
-1. Que coleção ainda te faz hesitar na hora de escolher? Porquê?
-2. No exercício 6, qual dos três erros foi o mais difícil de encontrar, e porquê?
-3. Já consegues prever como fica uma coleção depois de um `add` ou de uma atribuição a uma chave, antes de correr?
 
 ![Rodapé](../../imagens/rodape.png)

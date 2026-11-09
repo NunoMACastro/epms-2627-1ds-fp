@@ -2,7 +2,11 @@
 
 # Algoritmos
 
-Nesta área aprendes a pensar na solução de um problema antes de escrever código. Percebes o que o problema pede, escreves em pseudocódigo os passos que o resolvem e verificas à mão se esses passos funcionam. Corresponde ao módulo Desenvolver algoritmos.
+Nesta área aprendes a pensar na solução de um problema antes de escrever código, com papel e lápis. Corresponde ao módulo UC00245, Desenvolver algoritmos. Cada tema tem estes documentos:
+
+- o guia, com a matéria por escrito, para estudares;
+- a ficha de exercícios, para treinares sozinho;
+- o projeto guiado, para aplicares o processo num problema maior, com cada vez mais autonomia.
 
 | Tema | Guia | Ficha |
 | --- | --- | --- |
@@ -13,12 +17,6 @@ Nesta área aprendes a pensar na solução de um problema antes de escrever cód
 | 05 Funções e modelo integrado | [guia](05-funcoes-e-modelo-integrado.md) | [ficha](exercicios/05-funcoes-e-modelo-integrado-exercicios.md) |
 
 Os guias, com a matéria de cada tema, estão nesta pasta. As fichas de exercícios estão em [exercicios](exercicios/README.md), e os projetos guiados, em [projetos-guiados](projetos-guiados/README.md).
-
-Lê os temas pela ordem, porque cada guia usa o que os anteriores ensinaram.
-
-Tudo nesta área se faz com papel e lápis.
-
-A área fecha com três projetos, todos jogos, cada um mais difícil do que o anterior. Os dois primeiros são projetos guiados, que fazes com ajuda. Guardas os dois no teu portefólio, a pasta ou as páginas do caderno onde ficam os teus projetos. O terceiro é a avaliação prática individual, com um problema novo, e o professor entrega-o no dia.
 
 | Projeto | Tema | Como se faz |
 | --- | --- | --- |
